@@ -83,14 +83,13 @@ The default target branch is `main`; override it with `PUBLISH_BRANCH`.
 User-level systemd templates are also included. They require the user's systemd
 manager to remain active, usually through `loginctl enable-linger`.
 
-For isolation, scheduled runs use `~/.codex-finance` as `CODEX_HOME`. That
-directory should contain only the authentication needed by the digest job.
-
-Copied ChatGPT login files are not reliable long-term automation credentials:
-refresh tokens rotate and another client can invalidate the copied token. Use an
-OpenAI API key or an enterprise Codex Access Token for stable AI summaries.
+Scheduled runs use the machine's default `~/.codex` authentication. Complete a
+direct ChatGPT login on the machine rather than copying an active login file from
+another client. For stricter automation isolation, set `CODEX_HOME` to a
+dedicated directory containing an API key or enterprise Codex Access Token.
 Without valid Codex authentication, the scheduled job still writes the
-rules-based Top 10 and records `mode: rules-fallback` in `var/status/latest.json`.
+rules-based Top 10 and industry sections, and records `mode: rules-fallback` in
+`var/status/latest.json`.
 
 Set `CODEX_REQUIRED=1` only when the scheduler should fail instead of accepting
 the rules-based fallback.

@@ -4,7 +4,7 @@ set -euo pipefail
 PROJECT_ROOT="${PROJECT_ROOT:-$HOME/finance-news-digest}"
 export PATH="$HOME/.local/bin:$PATH"
 export PYTHONPATH="$PROJECT_ROOT/src"
-export CODEX_HOME="${CODEX_HOME:-$HOME/.codex-finance}"
+export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 
 args=(
   run
