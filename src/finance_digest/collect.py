@@ -12,7 +12,7 @@ from .models import Article
 from .ranking import score_articles
 
 
-TIMEZONE = ZoneInfo("Asia/Singapore")
+TIMEZONE = ZoneInfo("Asia/Shanghai")
 
 
 def load_sources(path: Path) -> list[dict[str, Any]]:
@@ -45,4 +45,3 @@ def collect_articles(
             except Exception as exc:  # A failed source must not fail the daily digest.
                 errors.append({"source": source["name"], "error": str(exc)})
     return score_articles(articles), errors
-

@@ -5,6 +5,7 @@ from datetime import date
 from typing import Any
 
 from .models import Article
+from .ranking import SECTORS, sector_top_articles
 
 
 SOURCE_NAMES = {
@@ -18,6 +19,10 @@ SOURCE_NAMES = {
     "Financial Times": "英国《金融时报》",
     "Reuters": "路透社",
     "SEC": "美国证监会",
+    "Trusted Commodities Index": "可信大宗商品索引",
+    "Trusted Consumer Index": "可信消费行业索引",
+    "Trusted Shipping Index": "可信航运索引",
+    "Trusted Technology Index": "可信科技行业索引",
 }
 CATEGORY_NAMES = {
     "business": "商业动态",
@@ -26,6 +31,10 @@ CATEGORY_NAMES = {
     "finance": "财经市场",
     "markets": "市场动态",
     "regulation": "金融监管",
+    "shipping": "航运",
+    "commodities": "大宗商品",
+    "technology": "科技",
+    "consumer": "消费",
 }
 
 
@@ -36,34 +45,49 @@ def truncate(value: str, maximum: int) -> str:
     return value[: maximum - 1].rstrip() + "…"
 
 
+def fallback_item(article: Article, rank: int, section_name: str) -> dict[str, Any]:
+    return {
+        "rank": rank,
+        "title_zh": (
+            f"{section_name}第{rank}条要闻："
+            f"{SOURCE_NAMES.get(article.source, '可信来源')}报道"
+        ),
+        "title_original": article.title,
+        "summary_zh": truncate(
+            f"{SOURCE_NAMES.get(article.source, '可信来源')}发布一则"
+            f"{section_name}消息。该条目规则评分为 {article.score:.1f}，"
+            f"检测到 {article.cluster_size} 条同事件候选报道。"
+            "当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文"
+            "及其他可信来源进一步核实。",
+            200,
+        ),
+        "category": article.category,
+        "source": article.source,
+        "published_at": article.published_at.isoformat(),
+        "url": article.url,
+        "confidence": "medium" if article.cluster_size > 1 else "low",
+    }
+
+
 def fallback_digest(target_date: date, articles: list[Article]) -> dict[str, Any]:
-    items = []
-    for rank, article in enumerate(articles[:10], start=1):
-        items.append(
+    items = [
+        fallback_item(article, rank, "财经")
+        for rank, article in enumerate(articles[:10], start=1)
+    ]
+    sectors = []
+    for key, sector_articles in sector_top_articles(articles).items():
+        name_zh = SECTORS[key]["name_zh"]
+        sectors.append(
             {
-                "rank": rank,
-                "title_zh": (
-                    f"第{rank}条{CATEGORY_NAMES.get(article.category, '财经')}要闻："
-                    f"{SOURCE_NAMES.get(article.source, '可信来源')}报道"
-                ),
-                "title_original": article.title,
-                "summary_zh": truncate(
-                    f"{SOURCE_NAMES.get(article.source, '可信来源')}发布一则"
-                    f"{CATEGORY_NAMES.get(article.category, '财经')}消息。"
-                    f"该条目规则评分为 {article.score:.1f}，"
-                    f"检测到 {article.cluster_size} 条同事件候选报道。"
-                    "当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文"
-                    "及其他可信来源进一步核实。",
-                    200,
-                ),
-                "category": article.category,
-                "source": article.source,
-                "published_at": article.published_at.isoformat(),
-                "url": article.url,
-                "confidence": "medium" if article.cluster_size > 1 else "low",
+                "key": key,
+                "name_zh": name_zh,
+                "items": [
+                    fallback_item(article, rank, name_zh)
+                    for rank, article in enumerate(sector_articles, start=1)
+                ],
             }
         )
-    return {"date": target_date.isoformat(), "items": items}
+    return {"date": target_date.isoformat(), "items": items, "sectors": sectors}
 
 
 def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[str, str]]) -> str:
@@ -73,19 +97,30 @@ def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[
         f"> 生成模式：`{mode}`。新闻链接可能受订阅或付费墙限制。",
         "",
     ]
-    for item in sorted(digest["items"], key=lambda value: value["rank"]):
-        lines.extend(
-            [
-                f"## {item['rank']}. {item['title_zh']}",
-                "",
-                f"- **来源：** {item['source']}",
-                f"- **发布时间：** {item['published_at']}",
-                f"- **原文：** {item['url']}",
-                "",
-                item["summary_zh"],
-                "",
-            ]
-        )
+    def render_items(items: list[dict[str, Any]], heading_level: int) -> None:
+        prefix = "#" * heading_level
+        for item in sorted(items, key=lambda value: value["rank"]):
+            lines.extend(
+                [
+                    f"{prefix} {item['rank']}. {item['title_zh']}",
+                    "",
+                    f"- **来源：** {item['source']}",
+                    f"- **发布时间：** {item['published_at']}",
+                    f"- **原文：** {item['url']}",
+                    "",
+                    item["summary_zh"],
+                    "",
+                ]
+            )
+
+    render_items(digest["items"], 2)
+    lines.extend(["# 行业新闻 Top 3", ""])
+    for sector in digest.get("sectors", []):
+        lines.extend([f"## {sector['name_zh']} Top 3", ""])
+        if sector["items"]:
+            render_items(sector["items"], 3)
+        else:
+            lines.extend(["当日候选新闻不足，未选出符合条件的报道。", ""])
     if source_errors:
         lines.extend(["## 数据源状态", ""])
         for error in source_errors:

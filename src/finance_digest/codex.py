@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from .models import Article
+from .ranking import SECTORS, classify_sectors, sector_top_articles
 
 
 CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
@@ -25,15 +26,14 @@ def validate_text_length(
         )
 
 
-def validate_digest(
-    digest: dict[str, Any], target_date: date, articles: list[Article]
-) -> dict[str, Any]:
-    if digest.get("date") != target_date.isoformat():
-        raise ValueError("Codex returned the wrong digest date")
-    raw_items = digest.get("items")
-    if not isinstance(raw_items, list) or not raw_items or len(raw_items) > 10:
+def validate_items(
+    raw_items: Any,
+    articles: list[Article],
+    maximum: int,
+    allowed_sector: str | None = None,
+) -> list[dict[str, Any]]:
+    if not isinstance(raw_items, list) or len(raw_items) > maximum:
         raise ValueError("Codex returned an invalid item count")
-
     articles_by_url = {article.url: article for article in articles}
     seen_urls: set[str] = set()
     items: list[dict[str, Any]] = []
@@ -46,13 +46,17 @@ def validate_digest(
         if url in seen_urls:
             raise ValueError(f"Codex returned a duplicate candidate URL: {url}")
         seen_urls.add(url)
+        article = articles_by_url[url]
+        if allowed_sector and allowed_sector not in classify_sectors(article):
+            raise ValueError(
+                f"Codex returned an article outside sector {allowed_sector}: {url}"
+            )
         validate_text_length(raw_item, "title_zh", 4, 60)
         validate_text_length(raw_item, "summary_zh", 60, 200)
         if not CJK_RE.search(raw_item["title_zh"]):
             raise ValueError("Codex returned a non-Chinese title_zh")
         if not CJK_RE.search(raw_item["summary_zh"]):
             raise ValueError("Codex returned a non-Chinese summary_zh")
-        article = articles_by_url[url]
         item = dict(raw_item)
         item.update(
             {
@@ -65,7 +69,39 @@ def validate_digest(
             }
         )
         items.append(item)
-    return {"date": target_date.isoformat(), "items": items}
+    return items
+
+
+def validate_digest(
+    digest: dict[str, Any], target_date: date, articles: list[Article]
+) -> dict[str, Any]:
+    if digest.get("date") != target_date.isoformat():
+        raise ValueError("Codex returned the wrong digest date")
+    items = validate_items(digest.get("items"), articles, 10)
+    if not items:
+        raise ValueError("Codex returned no Top 10 items")
+
+    raw_sectors = digest.get("sectors")
+    if not isinstance(raw_sectors, list) or len(raw_sectors) != len(SECTORS):
+        raise ValueError("Codex returned an invalid sector count")
+    sectors = []
+    seen_sector_keys: set[str] = set()
+    for raw_sector in raw_sectors:
+        if not isinstance(raw_sector, dict):
+            raise ValueError("Codex returned a non-object sector")
+        key = raw_sector.get("key")
+        if key not in SECTORS or key in seen_sector_keys:
+            raise ValueError(f"Codex returned an invalid sector key: {key}")
+        seen_sector_keys.add(key)
+        sectors.append(
+            {
+                "key": key,
+                "name_zh": SECTORS[key]["name_zh"],
+                "items": validate_items(raw_sector.get("items"), articles, 3, key),
+            }
+        )
+    sectors.sort(key=lambda sector: list(SECTORS).index(sector["key"]))
+    return {"date": target_date.isoformat(), "items": items, "sectors": sectors}
 
 
 def run_codex(
@@ -75,9 +111,19 @@ def run_codex(
     codex_bin: str = "codex",
 ) -> dict[str, Any]:
     prompt = (project_root / "prompts/select_top10.md").read_text(encoding="utf-8")
+    selected_articles = list(articles[:60])
+    selected_urls = {article.url for article in selected_articles}
+    for sector_articles in sector_top_articles(articles, limit=10).values():
+        for article in sector_articles:
+            if article.url not in selected_urls:
+                selected_articles.append(article)
+                selected_urls.add(article.url)
     candidates = {
         "date": target_date.isoformat(),
-        "candidates": [article.to_dict() for article in articles[:50]],
+        "candidates": [
+            {**article.to_dict(), "sectors": classify_sectors(article)}
+            for article in selected_articles
+        ],
     }
     full_prompt = f"{prompt}\n{json.dumps(candidates, ensure_ascii=False, indent=2)}\n"
     schema = project_root / "schemas/digest.schema.json"
@@ -113,4 +159,4 @@ def run_codex(
                 f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
             )
         digest = json.loads(output_path.read_text(encoding="utf-8"))
-        return validate_digest(digest, target_date, articles[:50])
+        return validate_digest(digest, target_date, selected_articles)

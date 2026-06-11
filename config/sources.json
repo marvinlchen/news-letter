@@ -90,7 +90,34 @@
       "url": "https://news.google.com/rss/search?q=site%3Aapnews.com%20business%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "business",
       "weight": 8
+    },
+    {
+      "name": "Trusted Shipping Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28shipping%20OR%20freight%20OR%20container%20OR%20tanker%20OR%20port%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "shipping",
+      "weight": 9
+    },
+    {
+      "name": "Trusted Commodities Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28commodities%20OR%20oil%20OR%20gold%20OR%20copper%20OR%20iron%20ore%20OR%20natural%20gas%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "commodities",
+      "weight": 9
+    },
+    {
+      "name": "Trusted Technology Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28technology%20OR%20AI%20OR%20semiconductor%20OR%20software%20OR%20cloud%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "technology",
+      "weight": 9
+    },
+    {
+      "name": "Trusted Consumer Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28retail%20OR%20restaurant%20OR%20travel%20OR%20luxury%20OR%20food%20OR%20beverage%20OR%20apparel%20OR%20consumer%20goods%20OR%20consumer%20spending%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "consumer",
+      "weight": 9
     }
   ]
 }
-

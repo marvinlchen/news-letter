@@ -2,11 +2,10 @@
 Description=Run finance news digest every day
 
 [Timer]
-OnCalendar=*-*-* 00:20:00 Asia/Singapore
+OnCalendar=*-*-* 04:00:00 Asia/Shanghai
 Persistent=true
 RandomizedDelaySec=5min
 Unit=finance-news-digest.service
 
 [Install]
 WantedBy=timers.target
-

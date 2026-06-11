@@ -15,7 +15,7 @@ from .collect import collect_articles, load_sources
 from .render import fallback_digest, pretty_json, render_markdown
 
 
-TIMEZONE = ZoneInfo("Asia/Singapore")
+TIMEZONE = ZoneInfo("Asia/Shanghai")
 
 
 def atomic_write(path: Path, content: str) -> None:
@@ -92,6 +92,9 @@ def run(argv: list[str] | None = None) -> int:
         "mode": mode,
         "candidate_count": len(articles),
         "selected_count": len(digest["items"]),
+        "sector_selected_count": sum(
+            len(sector["items"]) for sector in digest.get("sectors", [])
+        ),
         "source_error_count": len(source_errors),
         "codex_error": codex_error,
     }
@@ -112,4 +115,3 @@ def main() -> int:
     except Exception as exc:
         print(f"finance-news-digest: {exc}", file=sys.stderr)
         return 1
-

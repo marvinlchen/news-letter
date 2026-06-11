@@ -56,10 +56,195 @@ LOW_SIGNAL_TITLE_PATTERNS = {
     "transaction in own shares",
     "total voting rights",
 }
+SECTORS = {
+    "shipping": {
+        "name_zh": "航运",
+        "keywords": {
+            "container",
+            "freight",
+            "logistics",
+            "maritime",
+            "ocean carrier",
+            "port",
+            "ports",
+            "red sea",
+            "ship",
+            "ships",
+            "shipping",
+            "strait of hormuz",
+            "suez",
+            "tanker",
+            "tankers",
+            "vessel",
+            "vessels",
+        },
+    },
+    "commodities": {
+        "name_zh": "大宗商品",
+        "keywords": {
+            "agriculture",
+            "coal",
+            "commodity",
+            "commodities",
+            "copper",
+            "corn",
+            "crude",
+            "energy",
+            "gold",
+            "iron ore",
+            "lng",
+            "metal",
+            "mining",
+            "natural gas",
+            "oil",
+            "opec",
+            "soy",
+            "steel",
+            "wheat",
+        },
+    },
+    "technology": {
+        "name_zh": "科技",
+        "keywords": {
+            "ai",
+            "apple",
+            "artificial intelligence",
+            "chip",
+            "chips",
+            "cloud",
+            "cybersecurity",
+            "data center",
+            "google",
+            "meta",
+            "microsoft",
+            "nvidia",
+            "semiconductor",
+            "semiconductors",
+            "software",
+            "tech",
+            "technology",
+        },
+    },
+    "consumer": {
+        "name_zh": "消费",
+        "keywords": {
+            "airline",
+            "apparel",
+            "auto",
+            "automaker",
+            "beverage",
+            "beauty",
+            "beer",
+            "coffee",
+            "cosmetics",
+            "consumer demand",
+            "consumer goods",
+            "consumer spending",
+            "e-commerce",
+            "food",
+            "grocery",
+            "hotel",
+            "hospitality",
+            "luxury",
+            "mini-mart",
+            "restaurant",
+            "restaurants",
+            "retail",
+            "retailer",
+            "retailers",
+            "sales",
+            "shop",
+            "store",
+            "supermarket",
+            "tourism",
+            "travel",
+            "vehicle",
+        },
+    },
+}
+SECTOR_LOW_SIGNAL_TITLE_PATTERNS = {
+    "shipping": {"inflation", "tariff refund"},
+    "technology": {
+        "equities",
+        "inflation",
+        "investment case",
+        "oil",
+        "stocks",
+        "world markets",
+    },
+    "consumer": {
+        "bank account",
+        "cash returns",
+        "inflation",
+        "rate hike",
+        "rewards",
+        "your money",
+    },
+}
 
 
 def title_tokens(title: str) -> set[str]:
     return {token for token in TOKEN_RE.findall(title.lower()) if token not in STOPWORDS}
+
+
+def contains_keyword(text: str, keyword: str) -> bool:
+    if " " in keyword or "-" in keyword:
+        return keyword in text
+    return re.search(rf"\b{re.escape(keyword)}\b", text) is not None
+
+
+def classify_sectors(article: Article) -> list[str]:
+    text = f"{article.title} {article.description}".lower()
+    sectors: list[str] = []
+    for key, config in SECTORS.items():
+        if any(contains_keyword(text, keyword) for keyword in config["keywords"]):
+            sectors.append(key)
+    return sectors
+
+
+def sector_relevance(article: Article, sector: str) -> int:
+    keywords = SECTORS[sector]["keywords"]
+    title = article.title.lower()
+    description = article.description.lower()
+    title_matches = sum(contains_keyword(title, keyword) for keyword in keywords)
+    description_matches = sum(
+        contains_keyword(description, keyword) for keyword in keywords
+    )
+    return title_matches * 3 + description_matches
+
+
+def is_sector_low_signal(article: Article, sector: str) -> bool:
+    title = article.title.lower()
+    return any(
+        pattern in title for pattern in SECTOR_LOW_SIGNAL_TITLE_PATTERNS.get(sector, set())
+    )
+
+
+def sector_top_articles(articles: list[Article], limit: int = 3) -> dict[str, list[Article]]:
+    result = {}
+    for key in SECTORS:
+        matches = [
+            article
+            for article in articles
+            if key in classify_sectors(article) and not is_sector_low_signal(article, key)
+        ]
+        matches.sort(
+            key=lambda article: (
+                article.score + sector_relevance(article, key) * 2,
+                sector_relevance(article, key),
+                article.published_at,
+            ),
+            reverse=True,
+        )
+        selected: list[Article] = []
+        for article in matches:
+            if any(similarity(article, existing) >= 0.34 for existing in selected):
+                continue
+            selected.append(article)
+            if len(selected) == limit:
+                break
+        result[key] = selected
+    return result
 
 
 def similarity(left: Article, right: Article) -> float:

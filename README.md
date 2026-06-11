@@ -7,8 +7,9 @@ The pipeline deliberately separates deterministic work from LLM work:
 1. Python fetches configured RSS feeds and trusted-source indexes.
 2. Python normalizes URLs, filters by publication date, deduplicates stories,
    clusters related headlines, and ranks candidates.
-3. Codex selects the final Top 10 and writes Chinese summaries using only the
-   supplied candidate data.
+3. Codex selects the final Top 10 plus Top 3 stories for shipping, commodities,
+   technology, and consumer sectors, then writes Chinese summaries using only
+   the supplied candidate data.
 4. If Codex fails, the pipeline still writes a deterministic fallback digest.
 
 ## Source Policy
@@ -50,7 +51,9 @@ reports/latest.md
 
 Each story uses a Chinese headline and one Chinese summary paragraph limited to
 200 characters. The output validator rejects non-Chinese headlines and summaries
-outside the configured length range.
+outside the configured length range. Industry sections use keyword classification
+and dedicated trusted-source indexes; a major story may appear in both the
+overall Top 10 and its relevant industry section.
 
 Run tests:
 
@@ -61,8 +64,9 @@ PYTHONPATH=src python3 -m unittest discover -s tests -v
 ## Scheduling
 
 The recommended deployment uses user `crontab` because it keeps running even
-when no interactive user session is active. It runs daily at `00:20` in the
-machine's local timezone and produces the previous calendar day's digest.
+when no interactive user session is active. It runs daily at `04:00` in the
+machine's China Standard Time timezone and produces the previous calendar day's
+digest.
 
 ```bash
 scripts/install-cron.sh
