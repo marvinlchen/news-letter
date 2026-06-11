@@ -171,7 +171,7 @@ class PipelineTest(unittest.TestCase):
         self.assertIn("## 大宗商品 Top 3", report)
         self.assertIn("## 科技 Top 3", report)
         self.assertIn("## 消费 Top 3", report)
-        self.assertIn("- **中文标题：** 财经第1条要闻：可信来源报道", report)
+        self.assertNotIn("- **中文标题：**", report)
         self.assertIn("- **原标题：** Container shipping rates rise", report)
         self.assertIn("- **摘要：** 可信来源发布一则财经消息", report)
 

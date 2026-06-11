@@ -53,8 +53,9 @@ Each story uses a Chinese headline and one Chinese summary paragraph limited to
 200 characters. The output validator rejects non-Chinese headlines and summaries
 outside the configured length range. Industry sections use keyword classification
 and dedicated trusted-source indexes; a major story may appear in both the
-overall Top 10 and its relevant industry section. Markdown reports explicitly
-label the Chinese headline, original headline, and summary for every story.
+overall Top 10 and its relevant industry section. Markdown reports use the
+section heading as the Chinese headline and explicitly label the original
+headline and summary for every story.
 
 Run tests:
 

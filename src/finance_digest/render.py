@@ -104,7 +104,6 @@ def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[
                 [
                     f"{prefix} {item['rank']}. {item['title_zh']}",
                     "",
-                    f"- **中文标题：** {item['title_zh']}",
                     f"- **原标题：** {item['title_original']}",
                     f"- **来源：** {item['source']}",
                     f"- **发布时间：** {item['published_at']}",
