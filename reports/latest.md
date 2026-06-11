@@ -1,189 +1,177 @@
-# 财经新闻 Top 10：2026-06-11
+# 每日专业 Topic 新闻：2026-06-11
 
 > 生成模式：`codex`。新闻链接可能受订阅或付费墙限制。
 
-## 1. 欧洲央行自2023年以来首次加息
+## 宏观经济 Top 3
 
-- **原标题：** ECB raises interest rates for first time since 2023 - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-11T12:15:14+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxOaEVDejVQbXlRX09uS0RHc3FxekVEVnEtcjk0Si1VbUNyU1pZSm1LVHF3a3JaZG44QVE3YzNLTEJFdHl2Y0lCXzFDeWNXY1FTUkFBY3oxbklSaHNCMm5DbzB0M0I2VDc2TDlVUHhXMUVJNmlYcTZLYkRTTElHb2d0ZTN5djE?oc=5
-- **摘要：** 欧洲央行自2023年以来首次上调利率，以应对伊朗战争推高能源成本并扩大通胀风险。此举获路透社、彭博、CNBC及美联社候选报道印证，将影响欧洲融资成本和全球货币政策预期。
+### 1. 中东冲突拖累全球增长至疫情以来最低
 
-## 2. 美国通胀率升破4%，能源价格受战争推动
+- **原标题：** Middle East Conflict Sends Global Growth to Lowest Rate Since COVID-19
+- **来源：** World Bank
+- **发布时间：** 2026-06-11T09:30:00+00:00
+- **原文：** http://www.worldbank.org/en/news/press-release/2026/06/11/global-economic-prospects-june-2026-press-release
+- **摘要：** 世界银行预计，中东冲突将通过推高能源价格、加剧通胀和增加借贷成本，使全球经济增长降至新冠疫情暴发以来最低水平，凸显地缘冲突对增长与融资环境的广泛冲击。
+
+### 2. 欧洲央行加息应对伊朗战争引发的能源通胀
+
+- **原标题：** Europe's central bank raises rates to fight inflation from Iran war, the Fed to decide next week - AP News
+- **来源：** AP News
+- **发布时间：** 2026-06-11T13:15:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiswFBVV95cUxNWWlJRXpjbktvWkZtblRoUTFRYTc3OHBFdU5tLXpqdU4tellOUmVjZUdZNzgxYzYxc2hibXhuX0pmc21pdC1HbU5BdlkwNXZnbkpwenRrNmNSQW8xa3VIaXBOdDkybzZpdWxORWpUdUo2MVJIUWV5RVE0blQ5SGR3T1p3Vk1hSUducXpJdl9QU0U3bV8xT0N6bDJ1dGg2UXJZMVA1dHpnck9VTWQ5dTlWcjF4bw?oc=5
+- **摘要：** 欧洲央行上调利率，以应对伊朗战争推高能源成本所带来的通胀压力；美联储将在下周作出政策决定。候选数据未提供加息幅度及未来利率路径。
+
+### 3. 美国消费者通胀升破4%
 
 - **原标题：** US consumer inflation vaults above 4% as Iran war boosts energy prices - Reuters
 - **来源：** Reuters
 - **发布时间：** 2026-06-10T19:20:09+00:00
 - **原文：** https://news.google.com/rss/articles/CBMijgFBVV95cUxQVWNSSWh5eDBlWmZCYkN5ZjVjSFNVaC1jVmUteC1pelBkR2ltcmpwYUhYa01sV3Y5dGpGUGNFMDZMeTFRT082Wk5yb1BiU3ZQMjZqR2ZpLV9zY25oOU5STURWR2xjZ0dDVTlhQnB4RFNuRTVxd3ZKbVlDVWpvT1pFMmp2Z2JNa2JlTGJsNFN3?oc=5
-- **摘要：** 路透社称，美国消费者通胀率升至4%以上，为三年来最快增速，伊朗战争推高能源价格是重要因素。通胀加速可能影响家庭支出、资产价格以及美联储后续政策决定。
-
-## 3. 特朗普声称要控制伊朗油气市场
-
-- **原标题：** Trump vows to take ‘total control’ of Iran’s oil and gas markets - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-11T12:30:06+00:00
-- **原文：** https://news.google.com/rss/articles/CBMicEFVX3lxTFBHYTVBQjhjV1ZnZFI4bkdKUzFkejZfX0ZoOUdXQ0hGYko1STlTNHJYbDNEZGRuMU83am9ETHdqa1Jzek4tVmtVejlxTkdPbEp3VUFsWjJ0YkZUVWNINGpsMHdGY0VKTmVUZEdobGF3X2c?oc=5
-- **摘要：** 特朗普表示将对伊朗油气市场实施“全面控制”；另一候选报道显示，他还称希望夺取伊朗哈尔克岛石油枢纽。相关表态可能加剧供应、制裁与地缘政治风险，但具体实施方式仍未知。
-
-## 4. 美国拟从战略石油储备出借至多4000万桶原油
-
-- **原标题：** US offers to loan up to 40 million barrels of oil from Strategic Petroleum Reserve - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-10T19:19:52+00:00
-- **原文：** https://news.google.com/rss/articles/CBMivAFBVV95cUxORDdxbFRqQzQ4SmI3VWU2T2d2SU81WWN0TkpyMHJqdS1LSzFMYTZIdkxTb2RrRnpDRFBRQndDRW9XZVdQU1o4eG5NSkdkNG9aamhwT1liVGZ5RldWSmQ3Z2tGNGttUlZVSjhCdEpsaGNpQW9qVVhiNHotanZuck82T3d1NVlkbDliblZJR21xZDFVVDZWc3RZMjZlRUVrbWJleW9UdWtFYkFGdFlnbHM2QXpWdktYWW5Ub0lXaQ?oc=5
-- **摘要：** 美国提出从战略石油储备中出借至多4000万桶原油。此举可能缓解战争背景下的短期供应压力并影响油价，但候选数据未说明借油对象、期限或最终实际投放规模。
-
-## 5. 霍尔木兹海峡油轮隐蔽航行增加五成
-
-- **原标题：** Hormuz Oil Sneakouts Rise 50% as Iran and US Vie for Control - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-06-11T13:45:30+00:00
-- **原文：** https://news.google.com/rss/articles/CBMirwFBVV95cUxNZ3VTakJqelYweXpHOGRrMDVhcDM1NEpLR2lPU1NXUUhKczdFS2lueUR6b2daOUZmOEdGdWpoa3A0b0dZejVFV0U2dUZscm1LaHlPRjcyUGZlTUoyVV90dDZuTXJ6U3NvZHctOUVNU2F4UXZvWGRienkzNFRMeWVpQWZzb1lFQk1vQTllUjg4MHBkc3c2aWFDZDU2T3FsTXNON0RsOVd3UzNENF9WbXJv?oc=5
-- **摘要：** 彭博称，在伊朗与美国争夺控制权之际，经霍尔木兹海峡隐蔸运输石油的活动增加50%。多家候选报道也提及油轮关闭识别信号，反映关键能源航道的运输与监测风险上升。
-
-## 6. OPEC再度下调2026年全球石油需求增速预测
-
-- **原标题：** OPEC again lowers 2026 global oil demand growth forecast - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-11T12:44:09+00:00
-- **原文：** https://news.google.com/rss/articles/CBMirAFBVV95cUxNd2ptb2tWRXBxcFZOUjJ6NXRYUGt4Ynd1VzdzdDlOalhrWGw4WjNWZHNYRUxoenBzYzE1TzNWTnY1NGItZTdXMzE2Ny03RTFmLWltQ2pEVTNwM25peTZPU0dPZG9iMHRzUVQ1VGllQ3lxdEtjMUFFSldpU3paSWJEdHlsS3I5SkZjMHI1ek5nVzQ0eTM1bGkydlRjbElncDJTN09URUlTZjJ5dEFt?oc=5
-- **摘要：** OPEC再次下调2026年全球石油需求增长预测。该调整可能影响产油国政策、能源企业投资及油价预期，但候选数据未提供新的需求增速数值或下调幅度。
-
-## 7. AI热潮推升存储芯片价格并加剧通胀
-
-- **原标题：** AI Boom Stokes Inflation With Memory Chips at ‘Insane’ Prices - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-06-11T14:34:54+00:00
-- **原文：** https://news.google.com/rss/articles/CBMisAFBVV95cUxPUHVGNVZGRnVFcWdIbU5zV2VOYk5zb054ekxlM016amM0V0FmNktMaFhQb1NicUtjTkllMXdwQkFqVG9ZTVBldEt3NUVxR2E5NUZrVk0yUjVuSG83R3dYaXNSeWlTOGtrZlNXdDRDTUhyUHF5cjA3alRvN1Y3TU5sNEZ4enowUmpjMzgzbjI4ME45OFZ6d3NabGhfbG5Da0g2b01hTG5NRDRMWDZET3RKSw?oc=5
-- **摘要：** 彭博称，人工智能热潮推动存储芯片价格升至异常高位，并对通胀形成推动。价格上涨可能影响数据中心建设成本、科技企业利润率及电子产品价格，但候选数据未提供具体涨幅。
-
-## 8. 韩国就大规模数据泄露重罚电商巨头
-
-- **原标题：** Korea fines e-commerce giant $400m over data breach affecting millions
-- **来源：** BBC Business
-- **发布时间：** 2026-06-11T07:32:57+00:00
-- **原文：** https://www.bbc.com/news/articles/cvgj4rgz2n2o?at_medium=RSS&at_campaign=rss
-- **摘要：** 韩国因约3750万名用户私人数据遭泄露，对一家电商巨头处以4亿美元创纪录罚款。事件凸显大型平台的数据保护责任及监管处罚风险，但候选数据未披露涉事公司名称。
-
-## 9. 世界银行警告厄尔尼诺或推高全球食品价格
-
-- **原标题：** World Bank warns El Niño risks driving up global food prices - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-11T13:30:03+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxOUEEtM1dIcmRxckd1Vzh1ZUJ4X1lQb2lKOU5Qd2pYRS1vYllnVW1yV21TWGJXLU1TN3E3YnVaakJtSkNDTkJoWUk1RU1yUDM3UVJxMEhDRmNOQzFEazJVQTgzSU9Ia3RmM0djQTY0RGlFdVR4SF8tX3R1bmhnZkxIdG8tZnk?oc=5
-- **摘要：** 世界银行警告，厄尔尼诺现象可能推动全球食品价格上涨。若风险兑现，将增加消费者生活成本并加重通胀压力，但候选数据未说明受影响最明显的农产品、地区或价格涨幅。
-
-## 10. 美联储发布信息收集数据标准最终规则
-
-- **原标题：** Federal Reserve Board announces final rule that establishes data standards for certain information collections
-- **来源：** Federal Reserve
-- **发布时间：** 2026-06-11T15:00:00+00:00
-- **原文：** https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm
-- **摘要：** 美联储发布最终规则，为部分信息收集工作建立数据标准。作为监管机构的正式公告，该规则将影响相关报送和合规流程，但候选数据未说明适用机构范围、实施日期及具体标准。
-
-# 行业新闻 Top 3
+- **摘要：** 美国消费者通胀升至4%以上，报道将这一变化与伊朗战争推高能源价格联系起来。通胀重新加速可能影响货币政策判断，但候选数据未提供具体指数读数或环比变化。
 
 ## 航运 Top 3
 
-### 1. 美国称秘密运送逾一亿桶石油通过霍尔木兹海峡
+### 1. 国际海事组织回应油轮塞特贝洛号遇袭
 
-- **原标题：** Trump says U.S. secretly moved more than 100 million barrels of oil through Strait of Hormuz - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-06-10T16:49:44+00:00
-- **原文：** https://news.google.com/rss/articles/CBMigwFBVV95cUxQb0xoZjJBSW5CZi1rSFBXQWJGRktiOURwcmtVbGc4aGt0VVZ3aFpxOVo0cjBxZmIwYTdSeW92ekFiTDI5ZDhuOFZ5MDc0UnBDY1JpSGVZbUpHSFVnVDZoaERST1RaNGEwOGxEVzVZbTlfaFJERlNvWWJXa0JKeGI5bHdQVdIBiAFBVV95cUxPUFVMR3VZc0doVkRaQ0tLMU1mbTNKN2F3azJGbWplMkkxb05GS0otYUxnQkQ0UnNpVVc5RDdrR3RQczdfUWhON25XTnRHNENYNXFyUmVtVTRPYXFwUTBBV2RRMm5lU0h2ZUo3bEEyTGVxSjZkUlhqbWNPak1XUFBQTklDaUJtVlZm?oc=5
-- **摘要：** 特朗普称，美国秘密将超过一亿桶石油运过霍尔木兹海峡；另一则CNBC候选报道也提及秘密运油。事件凸显关键航道风险及运输规模，但具体时间、执行方与验证情况仍未知。
+- **原标题：** Statement on the attack on tanker MT Settebello - International Maritime Organization
+- **来源：** International Maritime Organization
+- **发布时间：** 2026-06-10T21:01:20+00:00
+- **原文：** https://news.google.com/rss/articles/CBMimwFBVV95cUxNT0lHY2I3NFRYV2VqVDVubnpCbWxIbXJZdEZTVURoWnFUZTJGR29yaVczNkFsMnd5WmNfM1lRYXhpZnJoblFhVFJGVDFUVHNQUG9qVklhQ3kyaERFdllCRU9fTEg4THZ5UndiQnVma1AwTlQ3QmtsOTJFbFQ3NzdJRS1nUG43ZDRvck5jWXhtUFloNGpENDBDbUdOQQ?oc=5
+- **摘要：** 国际海事组织就油轮塞特贝洛号遇袭发布声明。事件直接涉及油轮航行安全，但候选数据未说明袭击地点、船舶损失、人员伤亡及其对航线运营的具体影响。
 
-### 2. 印度就油轮遇袭致三名海员死亡向美国抗议
-
-- **原标题：** India protests to US after three sailors killed in tanker attack - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-11T13:00:59+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxPaXJaLV9YT2YwaFM1aFNzZUJBUVBLSnFFcWdjU0lnWnVZcXF3N3VoSkwtMFZKX2RrbGx3bVlhM3M3SjZ5WVFvRXlMbFBTR0dPWTdVcURmTG43a0FtUUdodVY1Q2llWjF5eF9JX3NGemplRUljeHBsMWwwMnotRjdzQVZZcm0?oc=5
-- **摘要：** 印度在一次油轮袭击造成三名海员死亡后向美国提出抗议。事件显示地区冲突已直接威胁商船人员安全，可能增加航运风险，但候选数据未说明袭击地点、责任方或船舶状况。
-
-### 3. 霍尔木兹海峡油轮“暗航”增加
+### 2. 霍尔木兹海峡油轮增加隐蔽航行
 
 - **原标题：** Oil tankers increase ‘dark’ transits through Strait of Hormuz - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-10T17:25:19+00:00
 - **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxOSTlRRVJUOHRfR29hM3JXOEZxRjJzbm5PNTVrOVJEQzBTdm1tSVlSWXRlTWZfZ1g0MGZCSURzcDlieVhTTi1lRGFQRDFhLU5fQkF5MnBNTjBRcVBIeU1JSC1YR2p6LUtpQi03WGlTWmZQdXdlVlJuaThHWVZ0Q0R6c0JDSEQ?oc=5
-- **摘要：** 金融时报称，油轮经霍尔木兹海峡进行“暗航”的次数增加；彭博候选报道亦提及油轮关闭识别信号运油。此趋势增加航运监测、保险及供应链风险，具体数量仍未知。
+- **摘要：** 金融时报称，油轮通过霍尔木兹海峡时增加“隐蔽”航行。该趋势反映关键能源航道面临更高风险，但候选数据未提供航次数量、采用方式或相关监管回应。
+
+### 3. 油轮袭击致三名海员死亡，印度向美国抗议
+
+- **原标题：** India protests to US after three sailors killed in tanker attack - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-06-11T13:00:59+00:00
+- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxPaXJaLV9YT2YwaFM1aFNzZUJBUVBLSnFFcWdjU0lnWnVZcXF3N3VoSkwtMFZKX2RrbGx3bVlhM3M3SjZ5WVFvRXlMbFBTR0dPWTdVcURmTG43a0FtUUdodVY1Q2llWjF5eF9JX3NGemplRUljeHBsMWwwMnotRjdzQVZZcm0?oc=5
+- **摘要：** 金融时报称，一起油轮袭击造成三名海员死亡，印度随后向美国提出抗议。事件凸显航运冲突对船员安全和外交关系的影响，但候选数据未说明袭击责任方及地点。
 
 ## 大宗商品 Top 3
 
-### 1. 美国通胀率升破4%，能源价格受战争推动
+### 1. 关键矿产需求激增重塑全球贸易
 
-- **原标题：** US consumer inflation vaults above 4% as Iran war boosts energy prices - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-10T19:20:09+00:00
-- **原文：** https://news.google.com/rss/articles/CBMijgFBVV95cUxQVWNSSWh5eDBlWmZCYkN5ZjVjSFNVaC1jVmUteC1pelBkR2ltcmpwYUhYa01sV3Y5dGpGUGNFMDZMeTFRT082Wk5yb1BiU3ZQMjZqR2ZpLV9zY25oOU5STURWR2xjZ0dDVTlhQnB4RFNuRTVxd3ZKbVlDVWpvT1pFMmp2Z2JNa2JlTGJsNFN3?oc=5
-- **摘要：** 路透社称，美国消费者通胀率升至4%以上，为三年来最快增速，伊朗战争推高能源价格是重要因素。能源冲击正向整体物价传导，并可能影响美联储政策及商品市场。
+- **原标题：** Critical minerals are reshaping global trade as demand surges - UN Trade and Development (UNCTAD)
+- **来源：** UN Trade and Development (UNCTAD)
+- **发布时间：** 2026-06-11T15:30:15+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiigFBVV95cUxOZC1mejhLRG1rbzlIUGZfTzZGYUFINlo4V2J3amkxNDA2R3VDb29YbERVU2c5VHhyU2dDRG8xZ25pLVpQYUpCMXFkRmM0RHlYSFFXUDNwVGRyaDg5REZjc2dXZ05mLWZSTnRWdlhnX2syN2ZHeUlrZ2JfbS1YMHZmX3paakVuS1NqQ0E?oc=5
+- **摘要：** 联合国贸易和发展会议指出，关键矿产需求快速增长正在重塑全球贸易。候选数据未列出具体矿种、贸易流向或增长规模，但这一变化关系到资源供应和贸易格局。
 
-### 2. OPEC再度下调2026年全球石油需求增速预测
+### 2. 美国结束对伊朗打击后油价回落
 
-- **原标题：** OPEC again lowers 2026 global oil demand growth forecast - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-11T12:44:09+00:00
-- **原文：** https://news.google.com/rss/articles/CBMirAFBVV95cUxNd2ptb2tWRXBxcFZOUjJ6NXRYUGt4Ynd1VzdzdDlOalhrWGw4WjNWZHNYRUxoenBzYzE1TzNWTnY1NGItZTdXMzE2Ny03RTFmLWltQ2pEVTNwM25peTZPU0dPZG9iMHRzUVQ1VGllQ3lxdEtjMUFFSldpU3paSWJEdHlsS3I5SkZjMHI1ek5nVzQ0eTM1bGkydlRjbElncDJTN09URUlTZjJ5dEFt?oc=5
-- **摘要：** OPEC再次下调2026年全球石油需求增长预测。该调整可能影响产油国政策、能源企业投资及油价预期，但候选数据未提供新的需求增速数值或下调幅度。
-
-### 3. 伊朗上月石油产量下降19%
-
-- **原标题：** Iran’s Oil Production Slumped 19% Last Month, OPEC Data Show - Bloomberg.com
+- **原标题：** Stocks Bounce, Oil Falls as US Ends Iran Strikes: Markets Wrap - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-06-11T12:10:22+00:00
-- **原文：** https://news.google.com/rss/articles/CBMirgFBVV95cUxNVWVhZ2cwb2ZkYTRfRUx1S1FPNk42ams0RXdwSWR2NWhDbDh4ZUpITE5mdW1NRElIUldsMkpvUVg3VDVWOVdwR3VoMlptSzdfeGN0ajdjSWM0NzJER0w4bUFkRFNrR194MC1jLTN5Z09RZGZNcS1fY1FYRXlTX2xUeDJWd1hmTVVfM1MwQ1RmOURUdHZ4SGJsY0JqUVdSVk9EUDljM3ZicVVxbmRKWEE?oc=5
-- **摘要：** 彭博援引OPEC数据称，伊朗上月石油产量下降19%。这一降幅显示冲突背景下供应受到明显影响，可能支撑油价并改变全球贸易流向，但候选数据未给出具体产量。
+- **发布时间：** 2026-06-10T22:04:43+00:00
+- **原文：** https://news.google.com/rss/articles/CBMilAFBVV95cUxPajM3dWRKeUZBQWNwSThHVkpOQlYxMVNtTTdBam9Nbk5kc3oxZFVzdmMzMDFuMWN4VGFaMzFfS3hxai1JYk9mcE5FVlVxMWNmZjMtQ2dSd3JqcG0tc1haeEdBTTJJOFhhUTB5U2pVMjdfWWJRRDFnZnhaZC0tVUQ5eHdYUzlHWjUwdTY4VVBCZVg3VExn?oc=5
+- **摘要：** 彭博称，美国结束对伊朗的打击后，油价下跌、股市反弹，显示市场风险定价随冲突进展迅速变化。候选数据未提供油价跌幅、基准品种或停火安排细节。
 
-## 科技 Top 3
+### 3. 俄罗斯五月海运石油产品出口小幅下降
 
-### 1. AI热潮推升存储芯片价格并加剧通胀
+- **原标题：** Russian seaborne oil product exports fell slightly in May, data from industry sources shows - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-06-11T10:50:38+00:00
+- **原文：** https://news.google.com/rss/articles/CBMixwFBVV95cUxOMHVxaFJld2U1VXAyb0RHRDl1NURobW5UcFdDZE9DMUZCZVY2NFk3eTRHWUlSVkNINnQ3WFo0VnBfbmNzbnFDOGRYYzFNRTdKZ2NXaHZiSzlxekhQcXpHc3RiMmpSeTY5Sko4Njktd0QzZ1J6Tm5iRDd6QzJBelNsTjJhLTZtckI2ZGxWUzZpVnlQVWZsa2M2NGM2aXFPNmc0Skp4X2xicWJJTE93cVhCajBSTUN4U21JVGZIa3BXOEcxLVVMdnFn?oc=5
+- **摘要：** 路透援引行业来源数据称，俄罗斯五月海运石油产品出口小幅下降。该变化可能影响区域供应流向，但候选数据未提供出口总量、降幅、目的地或具体产品构成。
+
+## 科技产业 Top 3
+
+### 1. 人工智能热潮推高存储芯片价格与通胀压力
 
 - **原标题：** AI Boom Stokes Inflation With Memory Chips at ‘Insane’ Prices - Bloomberg.com
 - **来源：** Bloomberg.com
 - **发布时间：** 2026-06-11T14:34:54+00:00
 - **原文：** https://news.google.com/rss/articles/CBMisAFBVV95cUxPUHVGNVZGRnVFcWdIbU5zV2VOYk5zb054ekxlM016amM0V0FmNktMaFhQb1NicUtjTkllMXdwQkFqVG9ZTVBldEt3NUVxR2E5NUZrVk0yUjVuSG83R3dYaXNSeWlTOGtrZlNXdDRDTUhyUHF5cjA3alRvN1Y3TU5sNEZ4enowUmpjMzgzbjI4ME45OFZ6d3NabGhfbG5Da0g2b01hTG5NRDRMWDZET3RKSw?oc=5
-- **摘要：** 彭博称，人工智能热潮推动存储芯片价格升至异常高位，并对通胀形成推动。价格上涨可能影响数据中心建设成本、科技企业利润率及电子产品价格，但候选数据未提供具体涨幅。
+- **摘要：** 彭博称，人工智能热潮推动存储芯片价格升至极高水平，并加剧通胀压力。候选数据未提供具体价格涨幅、受影响产品类型或供需缺口规模。
 
-### 2. OpenAI称中国宣传活动被用于煽动关税与数据中心争议
+### 2. 半导体生态成为人工智能数据中心基础
 
-- **原标题：** OpenAI says Chinese propaganda is being deployed to foment dissent over tariffs, data centers - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-10T20:07:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMi0AFBVV95cUxQTjlLTDNUNHlnVG01M0FJWU5sTVhHeU41cE85NnlaaV95MWZDSDdBbVUwZkg0ZGdtUTNDWWpvZFpTMlo2XzU1VzFiUHdZMzREUWRXVzhmZ1pRejZyWWg0eHR3d1VoWngyR2xJY1lQT2Q3QnA3MWUzbnZYMUw3alJneUF4RjlsWFVTb2t0WTIzWFhkZTlfclhaZFhvUmt4UjlfVkg3aENNU3dvZGYtMUhsSTFjWjF2aU1DbERlaEtiYVV2bzRQUTRrWjBtQTZGUkdf?oc=5
-- **摘要：** OpenAI表示，中国宣传活动正被用于煽动围绕关税和数据中心的异议。该说法涉及人工智能平台治理与信息安全风险，但候选数据未说明传播规模、使用工具或相关方回应。
-
-### 3. 甲骨文业绩将检验动荡中的AI股行情
-
-- **原标题：** Oracle Earnings Pose Next Test for Suddenly Shaky AI Stock Rally - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-06-10T17:27:45+00:00
-- **原文：** https://news.google.com/rss/articles/CBMitgFBVV95cUxPQjQ1TEo2TmRsdWFPYmxYLUFFTGhnVVF5bV9YYThzR1hwOTFuRFZINXlpUjFMYWRyZmlhMk1VSUpHcmFfeTBNR0h6eERiSWZoRm5lQng5eHpXcWRRZ0tXanBGN1dxaHV4eWhvZGk3TTF1d1NDcld6RHpwYlRDV19XVllTdzF0WTVHRnRXWlVoNHJyWHMxajUzQ05mblFVdGVyTGVkNWVlUDlUdUc3UjFqQXJhUkp1QQ?oc=5
-- **摘要：** 彭博称，甲骨文即将公布的业绩将成为近期转弱的人工智能股票涨势面临的下一项考验。报道反映投资者对AI相关企业基本面的关注上升，但候选数据未提供业绩预测。
+- **原标题：** Powering AI: The Semiconductor Ecosystem at the Foundation of Data Centers - Semiconductor Industry Association | SIA
+- **来源：** Semiconductor Industry Association | SIA
+- **发布时间：** 2026-06-11T09:16:20+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNUtXQnZfaFRLaEVyRkctczRmWWFhQm5NM1RUczMwdlltNGFKWERQRXUtMU5jWWpKSW43RzlTc1N3OXVxV05DTV9vdU5oWlNDVjU5T1UtMWlrelI5UjVEei1HVWNpWEhyNS0wSEcxRXdibkpWYjRZdWsxMEVJSmxsMXBpbTl1SHBsNDVfTDZRSHFGSFhwUHNydlVrMDg0b3p3czBPaW1FNkE?oc=5
+- **摘要：** 美国半导体行业协会发布内容，强调半导体生态是人工智能数据中心的基础。候选数据未说明涉及的芯片类别、投资规模或具体政策建议。
 
 ## 消费 Top 3
 
-### 1. 世界银行警告厄尔尼诺或推高全球食品价格
-
-- **原标题：** World Bank warns El Niño risks driving up global food prices - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-11T13:30:03+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxOUEEtM1dIcmRxckd1Vzh1ZUJ4X1lQb2lKOU5Qd2pYRS1vYllnVW1yV21TWGJXLU1TN3E3YnVaakJtSkNDTkJoWUk1RU1yUDM3UVJxMEhDRmNOQzFEazJVQTgzSU9Ia3RmM0djQTY0RGlFdVR4SF8tX3R1bmhnZkxIdG8tZnk?oc=5
-- **摘要：** 世界银行警告，厄尔尼诺现象可能推动全球食品价格上涨。若风险兑现，将增加消费者生活成本并加重通胀压力，但候选数据未说明受影响最明显的农产品、地区或价格涨幅。
-
-### 2. 韩国就大规模数据泄露重罚电商巨头
+### 1. 韩国就大型电商数据泄露开出4亿美元罚单
 
 - **原标题：** Korea fines e-commerce giant $400m over data breach affecting millions
 - **来源：** BBC Business
 - **发布时间：** 2026-06-11T07:32:57+00:00
 - **原文：** https://www.bbc.com/news/articles/cvgj4rgz2n2o?at_medium=RSS&at_campaign=rss
-- **摘要：** 韩国因约3750万名用户私人数据遭泄露，对一家电商巨头处以4亿美元创纪录罚款。事件凸显大型消费平台的数据保护责任及监管处罚风险，但候选数据未披露涉事公司名称。
+- **摘要：** 韩国因一家大型电商企业发生数据泄露，开出4亿美元创纪录罚款，约3750万名用户的私人数据受到影响。事件凸显消费平台保护大规模用户数据的合规责任。
 
-### 3. Frasers拟收购Hugo Boss剩余股份
+### 2. Frasers出价17.3亿英镑拟全购Hugo Boss
 
 - **原标题：** Mike Ashley's Frasers offers £1.73bn to buy all of Hugo Boss
 - **来源：** BBC Business
 - **发布时间：** 2026-06-10T23:04:46+00:00
 - **原文：** https://www.bbc.com/news/articles/c07y92gplmyo?at_medium=RSS&at_campaign=rss
-- **摘要：** Frasers提出以17.3亿英镑收购德国时装品牌Hugo Boss全部股份；该零售集团目前已持有其略高于四分之一股份。交易若完成将改变品牌控制权，但候选数据未说明董事会回应。
+- **摘要：** Mike Ashley旗下Frasers提出17.3亿英镑报价，拟收购德国时尚品牌Hugo Boss剩余股份。Frasers目前已持有该品牌略高于四分之一的股份。
+
+### 3. 美国汽车工会与Dauch达成协议结束十日罢工
+
+- **原标题：** United Auto Workers reaches deal with Dauch Corp after 10-day strike - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-06-11T01:21:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNWNndG14dmUtOFU3T0JESWhIT3NVMlRtT09zbVM2TXdFVTdoT1UwNWNYRkU1aVVGMWQxTS1UMVlHWFp4VC13ODJEWTNXMmNRSi1qaVVfU3Z0SlNOSndWUmZqSVlpR3BVRWNaZGktY3BDMVBUQ3dMTXpBdXllNDlab0ZJLXYtdXdMQTV6bHI4YkREbHQ3d3J1bDVjZWNuUm5FVkhUOXFxQ0jSAa4BQVVfeXFMT0tKTm04NVpvTkZkUzBnendtZjlBM1JXcy1UV1dtWU5RWG9TRllOMXpSV25JT0FWNTZaVWhCM3dlR085MXhiRGE5c3pjVTBPSnlHWE5SbFBpMldzb3RRZ0VtaTRPNl9naGVDQzRGRlBoQjJ5dENEQ2gyS2F1eE94MTBPZ2F0RjhneTVSdjEzSEpnSVBZTzdYZVU2cVVPUWlneUtkc1RIbk16WnJ1Ty1R?oc=5
+- **摘要：** 美国汽车工人联合会与Dauch公司在持续十天的罢工后达成协议。候选数据未披露协议条款、涉及员工人数以及停工对生产和供应的具体影响。
+
+## Cloud Infra Engineering Top 3
+
+### 1. Dapr 1.18引入可验证执行能力
+
+- **原标题：** Introducing Verifiable Execution in Dapr 1.18 - Cloud Native Computing Foundation
+- **来源：** Cloud Native Computing Foundation
+- **发布时间：** 2026-06-11T13:17:37+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiigFBVV95cUxNR0F4S0xmeV9WMHFxbUF4RjJoQmV5UU9kSk9vdlVIdE9MdmNhbGZLWGRiSER5ZnA1cEhDZ1dsRlZtdkxvQmhjZW1OSzI1UEoyYTlkZlkwYWw2NHpuQWxHT1ExUWpvejVMeEtGcXRrcEFLU1FXUmRjTXlsS3V5SkViTU5HNXkyVHlQd2c?oc=5
+- **摘要：** 云原生计算基金会介绍Dapr 1.18新增的可验证执行能力。该功能面向云原生应用执行可信度，但候选数据未说明其技术机制、适用场景或兼容要求。
+
+### 2. AWS倡导用联合身份认证替代共享数据库账户
+
+- **原标题：** Avoid shared database accounts with federated IAM authentication - Amazon Web Services (AWS)
+- **来源：** Amazon Web Services (AWS)
+- **发布时间：** 2026-06-10T18:15:58+00:00
+- **原文：** https://news.google.com/rss/articles/CBMipgFBVV95cUxNRWdTUXpPUGR4MXl2UWNVb1BjRDR5SGZtY0lTYzlvTmctdkRzajFrX3UzWGNOekM1NkxKWWFrYmwwZXZDaTUyRHkxMGV5YVdlYXR2THlQbWswZ0h3YXBWanYyNVdMNUJPSUxMUnVlVnJFb1lyN0lMWUExU2xBVTFZd3drX0IzNUtreGFjZS1aMFNpemJYRFJjWFFlS1BfbTd1QTV5UzFB?oc=5
+- **摘要：** 亚马逊云科技建议使用联合身份与访问管理认证，避免多人共享数据库账户。该做法涉及数据库访问安全和身份治理，但候选数据未列出配置步骤或支持范围。
+
+### 3. 谷歌云发布Antigravity 2.0多种开发入口指南
+
+- **原标题：** Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK - Google Cloud
+- **来源：** Google Cloud
+- **发布时间：** 2026-06-10T22:22:06+00:00
+- **原文：** https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSzdwTkhZc0FJTTNOdGpCbjU5amQwWFFiWUwzeWFnZjFqVXJQbklvYURSS3RiYXA4QVo3NmxZNWxZdEJURGlfZURfUHVQLXhzMHBJaUpXRnE2UW5wMGxQeDhtSDRodVltdkFfMFVqYTJweGZhUzhXdEs0bHQtYVA5MXJpNlNXVHBvbGRMZVBPSm9KMXNoX00xcDRvMlRJNll5bGVBSE5DdUhXQnJ5X0F6ZVEwTW1Ba0g5ZTNrN0NKZDltOVN5WTBNSUl6VlRDblg0Tm5qM0F1UTdxRHdSOFg4MlNKZw?oc=5
+- **摘要：** 谷歌云介绍Antigravity 2.0及其命令行、集成开发环境和软件开发工具包等使用入口。候选数据未说明各入口的功能差异、定价或可用范围。
+
+## AI 前沿 Top 3
+
+### 1. 谷歌DeepMind投入多智能体人工智能安全研究
+
+- **原标题：** Investing in multi-agent AI safety research - Google DeepMind
+- **来源：** Google DeepMind
+- **发布时间：** 2026-06-11T11:17:28+00:00
+- **原文：** https://news.google.com/rss/articles/CBMifkFVX3lxTFB6ZTIyTWFiOG9PQmJKR0FIVHJ6WlNuMEZFTmFGM2hSb3Vyb3F5N0VmckU5clpMSmFKN1RMYmJPdjctckRseFpwZ2YxeDJmc0Npb0FqcWFLNk1Ma2g5UW1mM2hzUW1IN2NVWU95SmJWRDQ2bDVRdTRvWV8wZG9ZQQ?oc=5
+- **摘要：** 谷歌DeepMind宣布投入多智能体人工智能安全研究，关注多个智能体共同运行时的安全问题。候选数据未披露投资规模、具体项目或研究时间表。
+
+### 2. 研究综述梳理大模型智能体环境工程
+
+- **原标题：** Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application - arXiv
+- **来源：** arXiv
+- **发布时间：** 2026-06-11T04:03:12+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiR0FVX3lxTE9iOE94WS1TOUVsb2hjNXd0MEJydXdxMUNaQzJITHBKMjF2b1FZaDU5TjhJWk9uaDVPb2tzTEtQMGNydUtYV21Z?oc=5
+- **摘要：** 一篇arXiv综述梳理大语言模型智能体环境工程，覆盖环境建模、合成、评估与应用。候选数据未提供作者、主要结论、实验结果或同行评审状态。
+
+### 3. 研究评估大模型在流程系统工程中的应用
+
+- **原标题：** Large Language Models in Process Systems Engineering: Opportunities, Architectures, and Industrial Deployment Challenges - arXiv
+- **来源：** arXiv
+- **发布时间：** 2026-06-11T04:39:27+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiS0FVX3lxTE1JZHBJNmFZQmNDbmtkZW5OMkRqV2xnR0tnc1Ewam4tTl9ZS2pSR1VrcHhDMnhndUdUMzluRE9DUWhBQVFwUkl2Qk44WQ?oc=5
+- **摘要：** 一篇arXiv论文讨论大语言模型在流程系统工程中的机会、架构与工业部署挑战。候选数据未提供具体架构方案、验证结果、作者信息或同行评审状态。
