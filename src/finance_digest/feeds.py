@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import html
+import json
 import re
 import time
 import urllib.error
@@ -143,11 +144,59 @@ def parse_feed(data: bytes, source_config: dict[str, Any]) -> list[Article]:
                 description=description[:1200],
                 category=source_config.get("category", "finance"),
                 source_weight=int(source_config.get("weight", 5)),
+                topics=list(source_config.get("topics", [])),
+            )
+        )
+    return articles
+
+
+def nested_text(value: Any) -> str:
+    if isinstance(value, str):
+        return value
+    if isinstance(value, dict):
+        return clean_text(value.get("cdata!", ""))
+    return ""
+
+
+def parse_world_bank_news(data: bytes, source_config: dict[str, Any]) -> list[Article]:
+    payload = json.loads(data)
+    documents = payload.get("documents", {})
+    if not isinstance(documents, dict):
+        return []
+    articles: list[Article] = []
+    for document in documents.values():
+        if not isinstance(document, dict):
+            continue
+        title = nested_text(document.get("title"))
+        url = normalize_url(document.get("url", ""))
+        published = parse_date(document.get("lnchdt", ""))
+        if not title or not url or published is None:
+            continue
+        description = nested_text(document.get("descr")) or nested_text(
+            document.get("content_1000")
+        )
+        article_id = hashlib.sha256(f"{url}\n{title}".encode()).hexdigest()[:20]
+        articles.append(
+            Article(
+                article_id=article_id,
+                title=title,
+                url=url,
+                source=source_config["name"],
+                published_at=published,
+                description=description[:1200],
+                category=source_config.get("category", "finance"),
+                source_weight=int(source_config.get("weight", 5)),
+                topics=list(source_config.get("topics", [])),
             )
         )
     return articles
 
 
 def fetch_feed(source_config: dict[str, Any]) -> list[Article]:
-    return parse_feed(fetch_bytes(source_config["url"]), source_config)
-
+    data = fetch_bytes(source_config["url"])
+    provider = source_config.get("provider", "rss")
+    if provider == "rss":
+        return parse_feed(data, source_config)
+    if provider == "world_bank_news":
+        return parse_world_bank_news(data, source_config)
+    raise ValueError(f"unsupported source provider: {provider}")

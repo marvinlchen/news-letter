@@ -42,21 +42,24 @@
   },
   "properties": {
     "date": {"type": "string"},
-    "items": {
+    "topics": {
       "type": "array",
-      "maxItems": 10,
-      "items": {"$ref": "#/definitions/newsItem"}
-    },
-    "sectors": {
-      "type": "array",
-      "minItems": 4,
-      "maxItems": 4,
+      "minItems": 7,
+      "maxItems": 7,
       "items": {
         "type": "object",
         "properties": {
           "key": {
             "type": "string",
-            "enum": ["shipping", "commodities", "technology", "consumer"]
+            "enum": [
+              "macroeconomics",
+              "shipping",
+              "commodities",
+              "technology",
+              "consumer",
+              "cloud_infra",
+              "ai_frontier"
+            ]
           },
           "name_zh": {"type": "string"},
           "items": {
@@ -70,6 +73,6 @@
       }
     }
   },
-  "required": ["date", "items", "sectors"],
+  "required": ["date", "topics"],
   "additionalProperties": false
 }

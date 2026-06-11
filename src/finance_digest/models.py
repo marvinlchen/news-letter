@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from typing import Any
 
@@ -15,6 +15,7 @@ class Article:
     description: str
     category: str
     source_weight: int
+    topics: list[str] = field(default_factory=list)
     score: float = 0.0
     cluster_size: int = 1
 
@@ -22,4 +23,3 @@ class Article:
         value = asdict(self)
         value["published_at"] = self.published_at.isoformat()
         return value
-

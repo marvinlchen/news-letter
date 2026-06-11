@@ -36,7 +36,7 @@ def load_successful_digest(path: Path, target_date: date) -> dict[str, Any] | No
         return None
     if digest.get("metadata", {}).get("mode") not in {"codex", "codex-preserved"}:
         return None
-    if not digest.get("items"):
+    if not digest.get("topics"):
         return None
     return digest
 
@@ -113,9 +113,8 @@ def run(argv: list[str] | None = None) -> int:
         "generated_at": datetime.now(TIMEZONE).isoformat(),
         "mode": mode,
         "candidate_count": len(articles),
-        "selected_count": len(digest["items"]),
-        "sector_selected_count": sum(
-            len(sector["items"]) for sector in digest.get("sectors", [])
+        "topic_selected_count": sum(
+            len(topic["items"]) for topic in digest.get("topics", [])
         ),
         "source_error_count": len(source_errors),
         "codex_error": codex_error,

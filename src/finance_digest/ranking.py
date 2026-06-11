@@ -47,16 +47,60 @@ IMPACT_KEYWORDS = {
     "unemployment": 3,
 }
 LOW_SIGNAL_TITLE_PATTERNS = {
+    "activity sheet",
     "company announcement",
+    "concept note",
+    "consumer price index,",
+    "contact form",
     "director/pdmr",
+    "edgar filing documents for",
+    "form 8-k",
+    "gisis",
     "holding(s) in company",
+    "imodocs",
+    "management evaluation",
     "net asset value",
+    "newsroom",
     "notice of results",
+    "programme webinar",
+    "program webinar",
     "result of agm",
+    "social media",
+    "streaming - imohq",
     "transaction in own shares",
     "total voting rights",
 }
-SECTORS = {
+LOW_SIGNAL_FILE_EXTENSIONS = {
+    ".gif",
+    ".jpeg",
+    ".jpg",
+    ".png",
+    ".svg",
+}
+TOPICS = {
+    "macroeconomics": {
+        "name_zh": "宏观经济",
+        "keywords": {
+            "central bank",
+            "consumer price index",
+            "cpi",
+            "employment",
+            "fiscal policy",
+            "gdp",
+            "growth",
+            "inflation",
+            "interest rate",
+            "monetary policy",
+            "payroll",
+            "ppi",
+            "producer price index",
+            "recession",
+            "tariff",
+            "trade",
+            "unemployment",
+            "wages",
+        },
+    },
     "shipping": {
         "name_zh": "航运",
         "keywords": {
@@ -94,6 +138,8 @@ SECTORS = {
             "iron ore",
             "lng",
             "metal",
+            "mineral",
+            "minerals",
             "mining",
             "natural gas",
             "oil",
@@ -104,20 +150,13 @@ SECTORS = {
         },
     },
     "technology": {
-        "name_zh": "科技",
+        "name_zh": "科技产业",
         "keywords": {
-            "ai",
-            "apple",
-            "artificial intelligence",
             "chip",
             "chips",
-            "cloud",
             "cybersecurity",
-            "data center",
-            "google",
-            "meta",
-            "microsoft",
-            "nvidia",
+            "hardware",
+            "operating system",
             "semiconductor",
             "semiconductors",
             "software",
@@ -161,12 +200,71 @@ SECTORS = {
             "vehicle",
         },
     },
+    "cloud_infra": {
+        "name_zh": "Cloud Infra Engineering",
+        "keywords": {
+            "aws",
+            "aurora",
+            "azure",
+            "cloud",
+            "cloud infrastructure",
+            "cloudflare",
+            "containerd",
+            "database",
+            "data center",
+            "distributed system",
+            "kubernetes",
+            "networking",
+            "observability",
+            "platform engineering",
+            "postgres",
+            "postgresql",
+            "serverless",
+            "service mesh",
+        },
+    },
+    "ai_frontier": {
+        "name_zh": "AI 前沿",
+        "keywords": {
+            "agentic",
+            "ai agent",
+            "ai model",
+            "artificial intelligence",
+            "alignment",
+            "benchmark",
+            "diffusion",
+            "evaluation",
+            "foundation model",
+            "frontier model",
+            "inference",
+            "large language model",
+            "llm",
+            "machine learning",
+            "multimodal",
+            "reasoning model",
+            "ai safety",
+            "training",
+            "transformer",
+        },
+    },
 }
-SECTOR_LOW_SIGNAL_TITLE_PATTERNS = {
+TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
+    "macroeconomics": {"consumer price index,"},
     "shipping": {"inflation", "tariff refund"},
+    "commodities": {
+        "activity",
+        "appointment",
+        "conference",
+        "expert group",
+        "nutrition",
+        "procurement",
+        "programme",
+        "varieties",
+        "whistleblower",
+        "workshop",
+    },
     "technology": {
         "equities",
-        "inflation",
         "investment case",
         "oil",
         "stocks",
@@ -179,6 +277,23 @@ SECTOR_LOW_SIGNAL_TITLE_PATTERNS = {
         "rate hike",
         "rewards",
         "your money",
+    },
+    "cloud_infra": {
+        "automate",
+        "how to",
+        "investment case",
+        "shares",
+        "stock",
+    },
+    "ai_frontier": {
+        "cloud commitment",
+        "help center",
+        "investment case",
+        "pricing",
+        "rate card",
+        "shares",
+        "stock",
+        "world markets",
     },
 }
 
@@ -193,17 +308,19 @@ def contains_keyword(text: str, keyword: str) -> bool:
     return re.search(rf"\b{re.escape(keyword)}\b", text) is not None
 
 
-def classify_sectors(article: Article) -> list[str]:
+def classify_topics(article: Article) -> list[str]:
     text = f"{article.title} {article.description}".lower()
-    sectors: list[str] = []
-    for key, config in SECTORS.items():
+    topics: list[str] = [topic for topic in article.topics if topic in TOPICS]
+    if topics:
+        return topics
+    for key, config in TOPICS.items():
         if any(contains_keyword(text, keyword) for keyword in config["keywords"]):
-            sectors.append(key)
-    return sectors
+            topics.append(key)
+    return list(dict.fromkeys(topics))
 
 
-def sector_relevance(article: Article, sector: str) -> int:
-    keywords = SECTORS[sector]["keywords"]
+def topic_keyword_relevance(article: Article, topic: str) -> int:
+    keywords = TOPICS[topic]["keywords"]
     title = article.title.lower()
     description = article.description.lower()
     title_matches = sum(contains_keyword(title, keyword) for keyword in keywords)
@@ -213,39 +330,55 @@ def sector_relevance(article: Article, sector: str) -> int:
     return title_matches * 3 + description_matches
 
 
-def is_sector_low_signal(article: Article, sector: str) -> bool:
+def topic_relevance(article: Article, topic: str) -> int:
+    authority_bonus = 12 if topic in article.topics else 0
+    return authority_bonus + topic_keyword_relevance(article, topic)
+
+
+def is_topic_low_signal(article: Article, topic: str) -> bool:
     title = article.title.lower()
     return any(
-        pattern in title for pattern in SECTOR_LOW_SIGNAL_TITLE_PATTERNS.get(sector, set())
+        pattern in title for pattern in TOPIC_LOW_SIGNAL_TITLE_PATTERNS.get(topic, set())
     )
 
 
-def sector_top_articles(articles: list[Article], limit: int = 3) -> dict[str, list[Article]]:
+def is_article_eligible_for_topic(article: Article, topic: str) -> bool:
+    return (
+        topic in classify_topics(article)
+        and topic_keyword_relevance(article, topic) > 0
+        and not is_topic_low_signal(article, topic)
+    )
+
+
+def topic_top_articles(articles: list[Article], limit: int = 3) -> dict[str, list[Article]]:
     result = {}
-    for key in SECTORS:
+    for key in TOPICS:
         matches = [
             article
             for article in articles
-            if key in classify_sectors(article) and not is_sector_low_signal(article, key)
+            if is_article_eligible_for_topic(article, key)
         ]
         matches.sort(
             key=lambda article: (
-                article.score + sector_relevance(article, key) * 2,
-                sector_relevance(article, key),
+                article.score + topic_relevance(article, key) * 2,
+                topic_relevance(article, key),
                 article.published_at,
             ),
             reverse=True,
         )
         selected: list[Article] = []
+        source_counts: dict[str, int] = defaultdict(int)
         for article in matches:
             if any(similarity(article, existing) >= 0.34 for existing in selected):
                 continue
+            if source_counts[article.source] >= 2:
+                continue
             selected.append(article)
+            source_counts[article.source] += 1
             if len(selected) == limit:
                 break
         result[key] = selected
     return result
-
 
 def similarity(left: Article, right: Article) -> float:
     left_tokens = title_tokens(left.title)
@@ -271,7 +404,13 @@ def deduplicate(articles: list[Article]) -> list[Article]:
 
 def is_low_signal(article: Article) -> bool:
     title = article.title.lower()
-    return any(pattern in title for pattern in LOW_SIGNAL_TITLE_PATTERNS)
+    normalized = title.rsplit(" - ", 1)[0].strip("- ")
+    return (
+        not normalized
+        or title.startswith("- ")
+        or any(pattern in title for pattern in LOW_SIGNAL_TITLE_PATTERNS)
+        or any(extension in title for extension in LOW_SIGNAL_FILE_EXTENSIONS)
+    )
 
 
 def cluster_articles(articles: list[Article], threshold: float = 0.34) -> None:
@@ -300,7 +439,7 @@ def cluster_articles(articles: list[Article], threshold: float = 0.34) -> None:
         article.cluster_size = sizes[find(index)]
 
 
-def score_articles(articles: list[Article], per_source_limit: int = 20) -> list[Article]:
+def score_articles(articles: list[Article], per_source_limit: int = 10) -> list[Article]:
     articles = deduplicate([article for article in articles if not is_low_signal(article)])
     cluster_articles(articles)
     for article in articles:

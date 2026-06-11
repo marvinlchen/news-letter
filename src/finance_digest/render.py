@@ -5,12 +5,13 @@ from datetime import date
 from typing import Any
 
 from .models import Article
-from .ranking import SECTORS, sector_top_articles
+from .ranking import TOPICS, topic_top_articles
 
 
 SOURCE_NAMES = {
     "AP News": "美联社",
     "BBC Business": "英国广播公司商业频道",
+    "Bank of Japan": "日本央行",
     "Bloomberg.com": "彭博社",
     "CNBC": "CNBC",
     "EIA": "美国能源信息署",
@@ -19,6 +20,7 @@ SOURCE_NAMES = {
     "Financial Times": "英国《金融时报》",
     "Reuters": "路透社",
     "SEC": "美国证监会",
+    "World Bank": "世界银行",
     "Trusted Commodities Index": "可信大宗商品索引",
     "Trusted Consumer Index": "可信消费行业索引",
     "Trusted Shipping Index": "可信航运索引",
@@ -70,29 +72,25 @@ def fallback_item(article: Article, rank: int, section_name: str) -> dict[str, A
 
 
 def fallback_digest(target_date: date, articles: list[Article]) -> dict[str, Any]:
-    items = [
-        fallback_item(article, rank, "财经")
-        for rank, article in enumerate(articles[:10], start=1)
-    ]
-    sectors = []
-    for key, sector_articles in sector_top_articles(articles).items():
-        name_zh = SECTORS[key]["name_zh"]
-        sectors.append(
+    topics = []
+    for key, topic_articles in topic_top_articles(articles).items():
+        name_zh = TOPICS[key]["name_zh"]
+        topics.append(
             {
                 "key": key,
                 "name_zh": name_zh,
                 "items": [
                     fallback_item(article, rank, name_zh)
-                    for rank, article in enumerate(sector_articles, start=1)
+                    for rank, article in enumerate(topic_articles, start=1)
                 ],
             }
         )
-    return {"date": target_date.isoformat(), "items": items, "sectors": sectors}
+    return {"date": target_date.isoformat(), "topics": topics}
 
 
 def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[str, str]]) -> str:
     lines = [
-        f"# 财经新闻 Top 10：{digest['date']}",
+        f"# 每日专业 Topic 新闻：{digest['date']}",
         "",
         f"> 生成模式：`{mode}`。新闻链接可能受订阅或付费墙限制。",
         "",
@@ -113,12 +111,10 @@ def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[
                 ]
             )
 
-    render_items(digest["items"], 2)
-    lines.extend(["# 行业新闻 Top 3", ""])
-    for sector in digest.get("sectors", []):
-        lines.extend([f"## {sector['name_zh']} Top 3", ""])
-        if sector["items"]:
-            render_items(sector["items"], 3)
+    for topic in digest.get("topics", []):
+        lines.extend([f"## {topic['name_zh']} Top 3", ""])
+        if topic["items"]:
+            render_items(topic["items"], 3)
         else:
             lines.extend(["当日候选新闻不足，未选出符合条件的报道。", ""])
     if source_errors:

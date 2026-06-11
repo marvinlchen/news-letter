@@ -1,16 +1,26 @@
 # Finance News Digest
 
-A small, auditable daily pipeline for producing a Top 10 finance-news digest.
+A small, auditable daily pipeline for producing a professional topic-based
+finance and technology briefing.
 
 The pipeline deliberately separates deterministic work from LLM work:
 
 1. Python fetches configured RSS feeds and trusted-source indexes.
 2. Python normalizes URLs, filters by publication date, deduplicates stories,
    clusters related headlines, and ranks candidates.
-3. Codex selects the final Top 10 plus Top 3 stories for shipping, commodities,
-   technology, and consumer sectors, then writes Chinese summaries using only
-   the supplied candidate data.
+3. Codex selects up to three consequential stories for each configured topic,
+   then writes Chinese summaries using only the supplied candidate data.
 4. If Codex fails, the pipeline still writes a deterministic fallback digest.
+
+The report contains no overall Top 10. It covers seven topics:
+
+- Macroeconomics
+- Shipping
+- Commodities
+- Technology
+- Consumer
+- Cloud Infra Engineering
+- AI Frontier
 
 ## Source Policy
 
@@ -18,12 +28,24 @@ The default configuration uses publicly accessible sources:
 
 - Professional publications: WSJ Markets and Google News indexes restricted to
   Reuters, Bloomberg, Financial Times, CNBC, and AP.
-- Primary sources: Federal Reserve, SEC, ECB, Bank of England, BIS, and EIA.
+- Macroeconomics: central banks, World Bank, IMF, OECD, BLS, BEA, Eurostat,
+  FRED, China NBS, MAS, and high-quality financial media.
+- Shipping: IMO, UNCTAD, and specialist searches restricted to Reuters,
+  Bloomberg, Financial Times, and CNBC.
+- Commodities: EIA, IEA, USDA, CFTC, UNCTAD, and trusted financial media.
+- Technology and consumer: trusted financial and business publications.
+- Cloud Infra Engineering: first-party engineering sources from major cloud,
+  cloud-native, database, networking, and infrastructure projects.
+- AI Frontier: first-party AI lab and research sources, plus specialist
+  reporting when it adds material context.
 - General business coverage: BBC Business.
 
 Google News entries may link through Google and do not grant access to paid
 article bodies. The pipeline does not bypass paywalls. Add licensed providers
-later through a provider adapter.
+later through a provider adapter. Official sources without stable RSS feeds are
+queried through Google News indexes restricted to their official domains.
+The raw SEC EDGAR index is configured but disabled until a company watchlist and
+filing-event parser can distinguish material filings from routine documents.
 
 ## Run Locally
 
@@ -51,11 +73,10 @@ reports/latest.md
 
 Each story uses a Chinese headline and one Chinese summary paragraph limited to
 200 characters. The output validator rejects non-Chinese headlines and summaries
-outside the configured length range. Industry sections use keyword classification
-and dedicated trusted-source indexes; a major story may appear in both the
-overall Top 10 and its relevant industry section. Markdown reports use the
-section heading as the Chinese headline and explicitly label the original
-headline and summary for every story.
+outside the configured length range. Topic sections combine explicit source
+bindings with keyword relevance and prioritize authoritative specialist sources.
+Markdown reports use the story heading as the Chinese headline and explicitly
+label the original headline and summary for every story.
 
 Run tests:
 
@@ -89,8 +110,8 @@ Scheduled runs use the machine's default `~/.codex` authentication. Complete a
 direct ChatGPT login on the machine rather than copying an active login file from
 another client. For stricter automation isolation, set `CODEX_HOME` to a
 dedicated directory containing an API key or enterprise Codex Access Token.
-Without valid Codex authentication, the scheduled job still writes the
-rules-based Top 10 and industry sections, and records `mode: rules-fallback` in
+Without valid Codex authentication, the scheduled job still writes rules-based
+Topic Top 3 sections and records `mode: rules-fallback` in
 `var/status/latest.json`.
 
 Set `CODEX_REQUIRED=1` only when the scheduler should fail instead of accepting

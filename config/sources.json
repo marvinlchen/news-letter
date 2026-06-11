@@ -19,7 +19,8 @@
       "provider": "rss",
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "category": "central_banks",
-      "weight": 10
+      "weight": 10,
+      "topics": ["macroeconomics"]
     },
     {
       "name": "SEC",
@@ -33,28 +34,56 @@
       "provider": "rss",
       "url": "https://www.ecb.europa.eu/rss/press.html",
       "category": "central_banks",
-      "weight": 10
+      "weight": 10,
+      "topics": ["macroeconomics"]
     },
     {
       "name": "Bank of England",
       "provider": "rss",
       "url": "https://www.bankofengland.co.uk/rss/news",
       "category": "central_banks",
-      "weight": 9
+      "weight": 9,
+      "topics": ["macroeconomics"]
     },
     {
       "name": "BIS",
       "provider": "rss",
       "url": "https://www.bis.org/doclist/all_pressrels.rss",
       "category": "central_banks",
-      "weight": 9
+      "weight": 9,
+      "topics": ["macroeconomics"]
     },
     {
       "name": "EIA",
       "provider": "rss",
       "url": "https://www.eia.gov/rss/todayinenergy.xml",
       "category": "energy",
-      "weight": 9
+      "weight": 9,
+      "topics": ["commodities"]
+    },
+    {
+      "name": "Bank of Japan",
+      "provider": "rss",
+      "url": "https://www.boj.or.jp/en/rss/whatsnew.xml",
+      "category": "central_banks",
+      "weight": 10,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "CFTC",
+      "provider": "rss",
+      "url": "https://www.cftc.gov/RSS/RSSGP/rssgp.xml",
+      "category": "regulation",
+      "weight": 9,
+      "topics": ["commodities"]
+    },
+    {
+      "name": "World Bank",
+      "provider": "world_bank_news",
+      "url": "https://search.worldbank.org/api/v2/news?format=json&rows=50&apilang=en&lang_exact=English&displayconttype_exact=Press%20Release&os=0",
+      "category": "finance",
+      "weight": 9,
+      "topics": ["macroeconomics"]
     },
     {
       "name": "Reuters Finance Index",
@@ -96,28 +125,184 @@
       "provider": "rss",
       "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28shipping%20OR%20freight%20OR%20container%20OR%20tanker%20OR%20port%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "shipping",
-      "weight": 9
+      "weight": 9,
+      "topics": ["shipping"]
     },
     {
       "name": "Trusted Commodities Index",
       "provider": "rss",
       "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28commodities%20OR%20oil%20OR%20gold%20OR%20copper%20OR%20iron%20ore%20OR%20natural%20gas%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "commodities",
-      "weight": 9
+      "weight": 9,
+      "topics": ["commodities"]
     },
     {
       "name": "Trusted Technology Index",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28technology%20OR%20AI%20OR%20semiconductor%20OR%20software%20OR%20cloud%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28technology%20OR%20semiconductor%20OR%20software%20OR%20cybersecurity%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "technology",
-      "weight": 9
+      "weight": 9,
+      "topics": ["technology"]
     },
     {
       "name": "Trusted Consumer Index",
       "provider": "rss",
       "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28retail%20OR%20restaurant%20OR%20travel%20OR%20luxury%20OR%20food%20OR%20beverage%20OR%20apparel%20OR%20consumer%20goods%20OR%20consumer%20spending%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "consumer",
-      "weight": 9
+      "weight": 9,
+      "topics": ["consumer"]
+    },
+    {
+      "name": "IMF Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aimf.org%20%28economy%20OR%20finance%20OR%20markets%20OR%20inflation%20OR%20growth%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "OECD Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aoecd.org%20%28economy%20OR%20trade%20OR%20inflation%20OR%20growth%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 9,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "IEA Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aiea.org%20%28energy%20OR%20oil%20OR%20gas%20OR%20electricity%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "commodities",
+      "weight": 10,
+      "topics": ["commodities"]
+    },
+    {
+      "name": "IMO Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aimo.org%20%28shipping%20OR%20ship%20OR%20tanker%20OR%20maritime%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "shipping",
+      "weight": 10,
+      "topics": ["shipping"]
+    },
+    {
+      "name": "UNCTAD Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aunctad.org%20%28trade%20OR%20shipping%20OR%20commodities%20OR%20investment%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 9,
+      "topics": ["macroeconomics", "shipping", "commodities"]
+    },
+    {
+      "name": "USDA Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Ausda.gov%20%28commodities%20OR%20agriculture%20OR%20crop%20OR%20food%20OR%20market%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "commodities",
+      "weight": 9,
+      "topics": ["commodities"]
+    },
+    {
+      "name": "BLS Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Abls.gov%20%28inflation%20OR%20employment%20OR%20wages%20OR%20prices%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "BEA Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Abea.gov%20%28GDP%20OR%20income%20OR%20trade%20OR%20investment%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "Eurostat Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aec.europa.eu%2Feurostat%20%28inflation%20OR%20GDP%20OR%20employment%20OR%20trade%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 9,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "FRED Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Astlouisfed.org%20%28economy%20OR%20inflation%20OR%20employment%20OR%20finance%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 9,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "SEC EDGAR Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Asec.gov%20%28EDGAR%20OR%208-K%20OR%2010-K%20OR%2010-Q%20OR%20filing%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "regulation",
+      "weight": 9,
+      "enabled": false
+    },
+    {
+      "name": "China NBS Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Astats.gov.cn%20%28CPI%20OR%20PPI%20OR%20PMI%20OR%20economy%20OR%20industrial%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "MAS Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Amas.gov.sg%20%28monetary%20OR%20finance%20OR%20regulation%20OR%20inflation%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "central_banks",
+      "weight": 9,
+      "topics": ["macroeconomics"]
+    },
+    {
+      "name": "Cloud Platform Engineering Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aaws.amazon.com%2Fblogs%20OR%20site%3Acloud.google.com%2Fblog%20OR%20site%3Aazure.microsoft.com%2Fblog%20OR%20site%3Ablog.cloudflare.com%29%20%28infrastructure%20OR%20kubernetes%20OR%20networking%20OR%20database%20OR%20serverless%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "cloud_infra",
+      "weight": 10,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "Semiconductor Industry Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Asemiconductors.org%20OR%20site%3Atsmc.com%20OR%20site%3Aasml.com%2Fen%2Fnews%20OR%20site%3Aintel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fnewsroom%29%20%28semiconductor%20OR%20chip%20OR%20foundry%20OR%20lithography%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "technology",
+      "weight": 10,
+      "topics": ["technology"]
+    },
+    {
+      "name": "Technology Platform News Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Ablogs.microsoft.com%20OR%20site%3Aapple.com%2Fnewsroom%20OR%20site%3Ablog.google%20OR%20site%3Aabout.fb.com%2Fnews%29%20%28software%20OR%20security%20OR%20technology%20OR%20chip%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "technology",
+      "weight": 9,
+      "topics": ["technology"]
+    },
+    {
+      "name": "Cloud Native Engineering Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Akubernetes.io%2Fblog%20OR%20site%3Acncf.io%2Fblog%20OR%20site%3Aistio.io%20OR%20site%3Aenvoyproxy.io%20OR%20site%3Aprometheus.io%29%20when%3A30d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "cloud_infra",
+      "weight": 10,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "AI Frontier Labs Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aopenai.com%20OR%20site%3Aanthropic.com%20OR%20site%3Adeepmind.google%20OR%20site%3Aai.meta.com%20OR%20site%3Anvidia.com%29%20%28model%20OR%20research%20OR%20agent%20OR%20inference%20OR%20reasoning%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "ai_frontier",
+      "weight": 10,
+      "topics": ["ai_frontier"]
+    },
+    {
+      "name": "AI Research Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aarxiv.org%20OR%20site%3Ahuggingface.co%2Fblog%29%20%28large%20language%20model%20OR%20reasoning%20OR%20agent%20OR%20inference%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "ai_frontier",
+      "weight": 8,
+      "topics": ["ai_frontier"]
     }
   ]
 }

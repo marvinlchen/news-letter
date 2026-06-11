@@ -1,5 +1,5 @@
 [Unit]
-Description=Generate daily Top 10 finance news digest
+Description=Generate daily topic-based finance news digest
 After=network-online.target
 Wants=network-online.target
 
@@ -9,4 +9,3 @@ WorkingDirectory=%h/finance-news-digest
 Environment=PROJECT_ROOT=%h/finance-news-digest
 ExecStart=%h/finance-news-digest/scripts/run-daily.sh
 TimeoutStartSec=20min
-
