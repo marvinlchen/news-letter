@@ -16,4 +16,13 @@ if [[ "${CODEX_REQUIRED:-0}" == "1" ]]; then
   args+=(--require-codex)
 fi
 
-exec python3 -m finance_digest "${args[@]}"
+set +e
+python3 -m finance_digest "${args[@]}"
+digest_rc=$?
+set -e
+
+if [[ "$digest_rc" == "0" && "${PUBLISH_TO_GITHUB:-1}" == "1" ]]; then
+  "$PROJECT_ROOT/scripts/publish-report.sh"
+fi
+
+exit "$digest_rc"

@@ -41,6 +41,13 @@ var/digests/YYYY-MM-DD.md
 var/status/latest.json
 ```
 
+Published Markdown reports are tracked in:
+
+```text
+reports/YYYY-MM-DD.md
+reports/latest.md
+```
+
 Run tests:
 
 ```bash
@@ -59,6 +66,11 @@ scripts/install-cron.sh
 
 The cron entry uses `flock` to prevent overlapping runs. Logs are written to
 `var/log/cron.log`.
+
+After a successful digest run, `scripts/publish-report.sh` commits and pushes
+the dated report and `reports/latest.md` to the configured `origin` remote.
+Set `PUBLISH_TO_GITHUB=0` to disable publishing.
+The default target branch is `main`; override it with `PUBLISH_BRANCH`.
 
 User-level systemd templates are also included. They require the user's systemd
 manager to remain active, usually through `loginctl enable-linger`.
