@@ -4,7 +4,6 @@
 
 ## 1. 欧洲央行自2023年以来首次加息
 
-- **中文标题：** 欧洲央行自2023年以来首次加息
 - **原标题：** ECB raises interest rates for first time since 2023 - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-11T12:15:14+00:00
@@ -13,7 +12,6 @@
 
 ## 2. 美国通胀率升破4%，能源价格受战争推动
 
-- **中文标题：** 美国通胀率升破4%，能源价格受战争推动
 - **原标题：** US consumer inflation vaults above 4% as Iran war boosts energy prices - Reuters
 - **来源：** Reuters
 - **发布时间：** 2026-06-10T19:20:09+00:00
@@ -22,7 +20,6 @@
 
 ## 3. 特朗普声称要控制伊朗油气市场
 
-- **中文标题：** 特朗普声称要控制伊朗油气市场
 - **原标题：** Trump vows to take ‘total control’ of Iran’s oil and gas markets - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-11T12:30:06+00:00
@@ -31,7 +28,6 @@
 
 ## 4. 美国拟从战略石油储备出借至多4000万桶原油
 
-- **中文标题：** 美国拟从战略石油储备出借至多4000万桶原油
 - **原标题：** US offers to loan up to 40 million barrels of oil from Strategic Petroleum Reserve - Reuters
 - **来源：** Reuters
 - **发布时间：** 2026-06-10T19:19:52+00:00
@@ -40,7 +36,6 @@
 
 ## 5. 霍尔木兹海峡油轮隐蔽航行增加五成
 
-- **中文标题：** 霍尔木兹海峡油轮隐蔽航行增加五成
 - **原标题：** Hormuz Oil Sneakouts Rise 50% as Iran and US Vie for Control - Bloomberg.com
 - **来源：** Bloomberg.com
 - **发布时间：** 2026-06-11T13:45:30+00:00
@@ -49,7 +44,6 @@
 
 ## 6. OPEC再度下调2026年全球石油需求增速预测
 
-- **中文标题：** OPEC再度下调2026年全球石油需求增速预测
 - **原标题：** OPEC again lowers 2026 global oil demand growth forecast - Reuters
 - **来源：** Reuters
 - **发布时间：** 2026-06-11T12:44:09+00:00
@@ -58,7 +52,6 @@
 
 ## 7. AI热潮推升存储芯片价格并加剧通胀
 
-- **中文标题：** AI热潮推升存储芯片价格并加剧通胀
 - **原标题：** AI Boom Stokes Inflation With Memory Chips at ‘Insane’ Prices - Bloomberg.com
 - **来源：** Bloomberg.com
 - **发布时间：** 2026-06-11T14:34:54+00:00
@@ -67,7 +60,6 @@
 
 ## 8. 韩国就大规模数据泄露重罚电商巨头
 
-- **中文标题：** 韩国就大规模数据泄露重罚电商巨头
 - **原标题：** Korea fines e-commerce giant $400m over data breach affecting millions
 - **来源：** BBC Business
 - **发布时间：** 2026-06-11T07:32:57+00:00
@@ -76,7 +68,6 @@
 
 ## 9. 世界银行警告厄尔尼诺或推高全球食品价格
 
-- **中文标题：** 世界银行警告厄尔尼诺或推高全球食品价格
 - **原标题：** World Bank warns El Niño risks driving up global food prices - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-11T13:30:03+00:00
@@ -85,7 +76,6 @@
 
 ## 10. 美联储发布信息收集数据标准最终规则
 
-- **中文标题：** 美联储发布信息收集数据标准最终规则
 - **原标题：** Federal Reserve Board announces final rule that establishes data standards for certain information collections
 - **来源：** Federal Reserve
 - **发布时间：** 2026-06-11T15:00:00+00:00
@@ -98,7 +88,6 @@
 
 ### 1. 美国称秘密运送逾一亿桶石油通过霍尔木兹海峡
 
-- **中文标题：** 美国称秘密运送逾一亿桶石油通过霍尔木兹海峡
 - **原标题：** Trump says U.S. secretly moved more than 100 million barrels of oil through Strait of Hormuz - CNBC
 - **来源：** CNBC
 - **发布时间：** 2026-06-10T16:49:44+00:00
@@ -107,7 +96,6 @@
 
 ### 2. 印度就油轮遇袭致三名海员死亡向美国抗议
 
-- **中文标题：** 印度就油轮遇袭致三名海员死亡向美国抗议
 - **原标题：** India protests to US after three sailors killed in tanker attack - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-11T13:00:59+00:00
@@ -116,7 +104,6 @@
 
 ### 3. 霍尔木兹海峡油轮“暗航”增加
 
-- **中文标题：** 霍尔木兹海峡油轮“暗航”增加
 - **原标题：** Oil tankers increase ‘dark’ transits through Strait of Hormuz - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-10T17:25:19+00:00
@@ -127,7 +114,6 @@
 
 ### 1. 美国通胀率升破4%，能源价格受战争推动
 
-- **中文标题：** 美国通胀率升破4%，能源价格受战争推动
 - **原标题：** US consumer inflation vaults above 4% as Iran war boosts energy prices - Reuters
 - **来源：** Reuters
 - **发布时间：** 2026-06-10T19:20:09+00:00
@@ -136,7 +122,6 @@
 
 ### 2. OPEC再度下调2026年全球石油需求增速预测
 
-- **中文标题：** OPEC再度下调2026年全球石油需求增速预测
 - **原标题：** OPEC again lowers 2026 global oil demand growth forecast - Reuters
 - **来源：** Reuters
 - **发布时间：** 2026-06-11T12:44:09+00:00
@@ -145,7 +130,6 @@
 
 ### 3. 伊朗上月石油产量下降19%
 
-- **中文标题：** 伊朗上月石油产量下降19%
 - **原标题：** Iran’s Oil Production Slumped 19% Last Month, OPEC Data Show - Bloomberg.com
 - **来源：** Bloomberg.com
 - **发布时间：** 2026-06-11T12:10:22+00:00
@@ -156,7 +140,6 @@
 
 ### 1. AI热潮推升存储芯片价格并加剧通胀
 
-- **中文标题：** AI热潮推升存储芯片价格并加剧通胀
 - **原标题：** AI Boom Stokes Inflation With Memory Chips at ‘Insane’ Prices - Bloomberg.com
 - **来源：** Bloomberg.com
 - **发布时间：** 2026-06-11T14:34:54+00:00
@@ -165,7 +148,6 @@
 
 ### 2. OpenAI称中国宣传活动被用于煽动关税与数据中心争议
 
-- **中文标题：** OpenAI称中国宣传活动被用于煽动关税与数据中心争议
 - **原标题：** OpenAI says Chinese propaganda is being deployed to foment dissent over tariffs, data centers - Reuters
 - **来源：** Reuters
 - **发布时间：** 2026-06-10T20:07:00+00:00
@@ -174,7 +156,6 @@
 
 ### 3. 甲骨文业绩将检验动荡中的AI股行情
 
-- **中文标题：** 甲骨文业绩将检验动荡中的AI股行情
 - **原标题：** Oracle Earnings Pose Next Test for Suddenly Shaky AI Stock Rally - Bloomberg.com
 - **来源：** Bloomberg.com
 - **发布时间：** 2026-06-10T17:27:45+00:00
@@ -185,7 +166,6 @@
 
 ### 1. 世界银行警告厄尔尼诺或推高全球食品价格
 
-- **中文标题：** 世界银行警告厄尔尼诺或推高全球食品价格
 - **原标题：** World Bank warns El Niño risks driving up global food prices - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-11T13:30:03+00:00
@@ -194,7 +174,6 @@
 
 ### 2. 韩国就大规模数据泄露重罚电商巨头
 
-- **中文标题：** 韩国就大规模数据泄露重罚电商巨头
 - **原标题：** Korea fines e-commerce giant $400m over data breach affecting millions
 - **来源：** BBC Business
 - **发布时间：** 2026-06-11T07:32:57+00:00
@@ -203,7 +182,6 @@
 
 ### 3. Frasers拟收购Hugo Boss剩余股份
 
-- **中文标题：** Frasers拟收购Hugo Boss剩余股份
 - **原标题：** Mike Ashley's Frasers offers £1.73bn to buy all of Hugo Boss
 - **来源：** BBC Business
 - **发布时间：** 2026-06-10T23:04:46+00:00
