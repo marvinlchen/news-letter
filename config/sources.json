@@ -1,0 +1,96 @@
+{
+  "sources": [
+    {
+      "name": "WSJ Markets",
+      "provider": "rss",
+      "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
+      "category": "markets",
+      "weight": 10
+    },
+    {
+      "name": "BBC Business",
+      "provider": "rss",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "category": "business",
+      "weight": 7
+    },
+    {
+      "name": "Federal Reserve",
+      "provider": "rss",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "category": "central_banks",
+      "weight": 10
+    },
+    {
+      "name": "SEC",
+      "provider": "rss",
+      "url": "https://www.sec.gov/news/pressreleases.rss",
+      "category": "regulation",
+      "weight": 9
+    },
+    {
+      "name": "European Central Bank",
+      "provider": "rss",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "category": "central_banks",
+      "weight": 10
+    },
+    {
+      "name": "Bank of England",
+      "provider": "rss",
+      "url": "https://www.bankofengland.co.uk/rss/news",
+      "category": "central_banks",
+      "weight": 9
+    },
+    {
+      "name": "BIS",
+      "provider": "rss",
+      "url": "https://www.bis.org/doclist/all_pressrels.rss",
+      "category": "central_banks",
+      "weight": 9
+    },
+    {
+      "name": "EIA",
+      "provider": "rss",
+      "url": "https://www.eia.gov/rss/todayinenergy.xml",
+      "category": "energy",
+      "weight": 9
+    },
+    {
+      "name": "Reuters Finance Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Areuters.com%20(finance%20OR%20markets%20OR%20economy%20OR%20business)%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10
+    },
+    {
+      "name": "Bloomberg Finance Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Abloomberg.com%20(finance%20OR%20markets%20OR%20economy%20OR%20business)%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10
+    },
+    {
+      "name": "Financial Times Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aft.com%20(markets%20OR%20economy%20OR%20companies)%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10
+    },
+    {
+      "name": "CNBC Finance Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Acnbc.com%20(markets%20OR%20economy%20OR%20business)%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 8
+    },
+    {
+      "name": "AP Business Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aapnews.com%20business%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "business",
+      "weight": 8
+    }
+  ]
+}
+

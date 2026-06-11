@@ -1,0 +1,12 @@
+[Unit]
+Description=Generate daily Top 10 finance news digest
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/finance-news-digest
+Environment=PROJECT_ROOT=%h/finance-news-digest
+ExecStart=%h/finance-news-digest/scripts/run-daily.sh
+TimeoutStartSec=20min
+

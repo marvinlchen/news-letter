@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "date": {"type": "string"},
+    "items": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {"type": "integer"},
+          "title_zh": {"type": "string"},
+          "title_original": {"type": "string"},
+          "summary_zh": {"type": "string"},
+          "why_it_matters_zh": {"type": "string"},
+          "category": {"type": "string"},
+          "source": {"type": "string"},
+          "published_at": {"type": "string"},
+          "url": {"type": "string"},
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          }
+        },
+        "required": [
+          "rank",
+          "title_zh",
+          "title_original",
+          "summary_zh",
+          "why_it_matters_zh",
+          "category",
+          "source",
+          "published_at",
+          "url",
+          "confidence"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["date", "items"],
+  "additionalProperties": false
+}
+
