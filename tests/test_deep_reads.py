@@ -9,6 +9,7 @@ from finance_digest.deep_reads import (
     is_deep_eligible,
     render_deep_markdown,
     top_deep_articles,
+    validate_deep_items,
 )
 from finance_digest.models import Article
 
@@ -100,6 +101,30 @@ class DeepReadsTest(unittest.TestCase):
             source="Another Research Group",
         )
         self.assertEqual(len(top_deep_articles([first, duplicate])["cloud_infra"]), 1)
+
+    def test_codex_selection_rejects_more_than_two_items_from_one_source(self) -> None:
+        articles = [
+            self.article(
+                f"same-source-{index}",
+                f"Distributed system architecture benchmark number {index}",
+                "cloud_infra",
+            )
+            for index in range(3)
+        ]
+        raw_items = [
+            {
+                "url": article.url,
+                "title_zh": "分布式系统架构基准分析",
+                "why_read_zh": "文章包含系统架构、性能基准和工程权衡，适合用于理解大规模系统实践。",
+                "core_problem_zh": "文章研究分布式系统在规模扩大后的性能与可靠性问题。",
+                "key_ideas_zh": "文章通过架构分析和性能实验比较不同设计方案及其工程权衡。",
+                "engineering_takeaway_zh": "工程团队可据此评估类似系统设计，但需要结合自身负载验证。",
+                "limitations_zh": "候选摘要未提供完整实验配置，结论仍需通过原文进一步核查。",
+            }
+            for article in articles
+        ]
+        with self.assertRaises(ValueError):
+            validate_deep_items(raw_items, articles, "cloud_infra")
 
 
 if __name__ == "__main__":

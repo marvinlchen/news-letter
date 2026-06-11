@@ -18,6 +18,7 @@ Rules:
   cannot be established from the candidate data.
 - Select an article only when its `matched_topics` contains the section key.
 - Avoid selecting multiple articles covering effectively the same contribution.
+- Select at most two articles from the same source in each topic section.
 - Return both topic sections even if fewer than 5 articles qualify.
 - Preserve the supplied source, publication time, and URL.
 - Write all analysis fields in Chinese.
