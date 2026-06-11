@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "deepReadItem": {
+      "type": "object",
+      "properties": {
+        "rank": {"type": "integer"},
+        "title_zh": {"type": "string", "minLength": 4, "maxLength": 80},
+        "title_original": {"type": "string"},
+        "why_read_zh": {"type": "string", "minLength": 30, "maxLength": 220},
+        "core_problem_zh": {"type": "string", "minLength": 20, "maxLength": 220},
+        "key_ideas_zh": {"type": "string", "minLength": 30, "maxLength": 320},
+        "engineering_takeaway_zh": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 240
+        },
+        "limitations_zh": {"type": "string", "minLength": 20, "maxLength": 220},
+        "source": {"type": "string"},
+        "published_at": {"type": "string"},
+        "url": {"type": "string"}
+      },
+      "required": [
+        "rank",
+        "title_zh",
+        "title_original",
+        "why_read_zh",
+        "core_problem_zh",
+        "key_ideas_zh",
+        "engineering_takeaway_zh",
+        "limitations_zh",
+        "source",
+        "published_at",
+        "url"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "date": {"type": "string"},
+    "topics": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "enum": ["cloud_infra", "ai_frontier"]
+          },
+          "name_zh": {"type": "string"},
+          "items": {
+            "type": "array",
+            "maxItems": 5,
+            "items": {"$ref": "#/definitions/deepReadItem"}
+          }
+        },
+        "required": ["key", "name_zh", "items"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["date", "topics"],
+  "additionalProperties": false
+}

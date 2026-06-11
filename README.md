@@ -22,6 +22,12 @@ The report contains no overall Top 10. It covers seven topics:
 - Cloud Infra Engineering
 - AI Frontier
 
+The repository also produces a separate weekly technical deep-reading report
+for Cloud Infra Engineering and AI Frontier. It is intentionally not mixed into
+the daily news report. The deep-reading pipeline uses a 45-day candidate window
+and selects up to five professional articles per topic based on technical depth,
+evidence, source authority, and engineering value.
+
 ## Source Policy
 
 The default configuration uses publicly accessible sources:
@@ -71,6 +77,23 @@ reports/YYYY-MM-DD.md
 reports/latest.md
 ```
 
+Generate the standalone technical deep-reading report:
+
+```bash
+PYTHONPATH=src python3 -m finance_digest.deep_reads --use-codex
+```
+
+Deep-reading artifacts are written to:
+
+```text
+var/deep-raw/YYYY-MM-DD-candidates.json
+var/deep-reads/YYYY-MM-DD.json
+var/deep-reads/YYYY-MM-DD.md
+var/deep-status/latest.json
+deep-reports/YYYY-MM-DD.md
+deep-reports/latest.md
+```
+
 Each story uses a Chinese headline and one Chinese summary paragraph limited to
 200 characters. The output validator rejects non-Chinese headlines and summaries
 outside the configured length range. Topic sections combine explicit source
@@ -96,7 +119,8 @@ scripts/install-cron.sh
 ```
 
 The cron entry uses `flock` to prevent overlapping runs. Logs are written to
-`var/log/cron.log`.
+`var/log/cron.log`. The separate technical deep-reading report runs every Sunday
+at `05:00` China Standard Time and writes logs to `var/log/deep-reads.log`.
 
 After a successful digest run, `scripts/publish-report.sh` commits and pushes
 the dated report and `reports/latest.md` to the configured `origin` remote.

@@ -1,0 +1,100 @@
+{
+  "sources": [
+    {
+      "name": "ACM Queue",
+      "provider": "rss",
+      "url": "https://queue.acm.org/rss/feeds/queuecontent.xml",
+      "category": "cloud_infra",
+      "weight": 10,
+      "topics": ["cloud_infra", "ai_frontier"]
+    },
+    {
+      "name": "AWS Architecture Blog",
+      "provider": "rss",
+      "url": "https://aws.amazon.com/blogs/architecture/feed/",
+      "category": "cloud_infra",
+      "weight": 9,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "Cloudflare Blog",
+      "provider": "rss",
+      "url": "https://blog.cloudflare.com/rss/",
+      "category": "cloud_infra",
+      "weight": 9,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "Netflix TechBlog",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Anetflixtechblog.com%20%28architecture%20OR%20distributed%20OR%20performance%20OR%20reliability%20OR%20database%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "cloud_infra",
+      "weight": 10,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "CNCF Blog",
+      "provider": "rss",
+      "url": "https://www.cncf.io/feed/",
+      "category": "cloud_infra",
+      "weight": 8,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "Google Cloud Blog",
+      "provider": "rss",
+      "url": "https://cloudblog.withgoogle.com/rss/",
+      "category": "cloud_infra",
+      "weight": 8,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "Meta Engineering",
+      "provider": "rss",
+      "url": "https://engineering.fb.com/feed/",
+      "category": "cloud_infra",
+      "weight": 9,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "Systems Research Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Ausenix.org%20OR%20site%3Aaws.amazon.com%2Fbuilders-library%29%20%28distributed%20systems%20OR%20reliability%20OR%20database%20OR%20networking%20OR%20operating%20systems%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "cloud_infra",
+      "weight": 10,
+      "topics": ["cloud_infra", "ai_frontier"]
+    },
+    {
+      "name": "Google Research",
+      "provider": "rss",
+      "url": "https://research.google/blog/rss/",
+      "category": "ai_frontier",
+      "weight": 10,
+      "topics": ["ai_frontier"]
+    },
+    {
+      "name": "arXiv AI",
+      "provider": "rss",
+      "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.AI%20OR%20cat%3Acs.LG%20OR%20cat%3Acs.CL&start=0&max_results=75&sortBy=submittedDate&sortOrder=descending",
+      "category": "ai_frontier",
+      "weight": 7,
+      "topics": ["ai_frontier"]
+    },
+    {
+      "name": "AI Lab Research Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aanthropic.com%2Fresearch%20OR%20site%3Aopenai.com%2Fresearch%20OR%20site%3Adeepmind.google%20OR%20site%3Aai.meta.com%2Fresearch%29%20%28research%20OR%20evaluation%20OR%20interpretability%20OR%20model%20OR%20reasoning%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "ai_frontier",
+      "weight": 10,
+      "topics": ["ai_frontier"]
+    },
+    {
+      "name": "AI Systems Research Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aproceedings.mlsys.org%20OR%20site%3Aopenreview.net%29%20%28inference%20OR%20training%20OR%20evaluation%20OR%20language%20model%20OR%20machine%20learning%20systems%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "ai_frontier",
+      "weight": 9,
+      "topics": ["cloud_infra", "ai_frontier"]
+    }
+  ]
+}
