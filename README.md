@@ -48,9 +48,9 @@ reports/YYYY-MM-DD.md
 reports/latest.md
 ```
 
-Each Codex-generated story contains a multi-paragraph event overview, concrete
-key facts, market and industry impact analysis, and specific follow-up items.
-The output validator rejects short or incomplete summaries.
+Each story uses a Chinese headline and one Chinese summary paragraph limited to
+200 characters. The output validator rejects non-Chinese headlines and summaries
+outside the configured length range.
 
 Run tests:
 

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import tempfile
 from datetime import date
@@ -9,6 +10,9 @@ from pathlib import Path
 from typing import Any
 
 from .models import Article
+
+
+CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 
 
 def validate_text_length(
@@ -42,16 +46,12 @@ def validate_digest(
         if url in seen_urls:
             raise ValueError(f"Codex returned a duplicate candidate URL: {url}")
         seen_urls.add(url)
-        validate_text_length(raw_item, "summary_zh", 180, 500)
-        validate_text_length(raw_item, "why_it_matters_zh", 120, 350)
-        validate_text_length(raw_item, "what_to_watch_zh", 80, 250)
-        key_facts = raw_item.get("key_facts_zh")
-        if (
-            not isinstance(key_facts, list)
-            or not 2 <= len(key_facts) <= 5
-            or any(not isinstance(fact, str) or not 12 <= len(fact) <= 160 for fact in key_facts)
-        ):
-            raise ValueError("Codex returned invalid key_facts_zh")
+        validate_text_length(raw_item, "title_zh", 4, 60)
+        validate_text_length(raw_item, "summary_zh", 60, 200)
+        if not CJK_RE.search(raw_item["title_zh"]):
+            raise ValueError("Codex returned a non-Chinese title_zh")
+        if not CJK_RE.search(raw_item["summary_zh"]):
+            raise ValueError("Codex returned a non-Chinese summary_zh")
         article = articles_by_url[url]
         item = dict(raw_item)
         item.update(
