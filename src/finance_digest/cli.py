@@ -25,6 +25,22 @@ def atomic_write(path: Path, content: str) -> None:
     temporary.replace(path)
 
 
+def load_successful_digest(path: Path, target_date: date) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    try:
+        digest = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    if digest.get("date") != target_date.isoformat():
+        return None
+    if digest.get("metadata", {}).get("mode") not in {"codex", "codex-preserved"}:
+        return None
+    if not digest.get("items"):
+        return None
+    return digest
+
+
 def default_target_date() -> date:
     return datetime.now(TIMEZONE).date() - timedelta(days=1)
 
@@ -72,14 +88,20 @@ def run(argv: list[str] | None = None) -> int:
         except Exception as exc:
             codex_error = str(exc)
 
+    digest_dir = output_root / "digests"
+    digest_json = digest_dir / f"{args.date.isoformat()}.json"
+    if args.use_codex and codex_error:
+        successful_digest = load_successful_digest(digest_json, args.date)
+        if successful_digest is not None:
+            digest = successful_digest
+            mode = "codex-preserved"
+
     digest["metadata"] = {
         "mode": mode,
         "candidate_count": len(articles),
         "source_errors": source_errors,
         "codex_error": codex_error,
     }
-    digest_dir = output_root / "digests"
-    digest_json = digest_dir / f"{args.date.isoformat()}.json"
     digest_md = digest_dir / f"{args.date.isoformat()}.md"
     atomic_write(digest_json, pretty_json(digest))
     atomic_write(digest_md, render_markdown(digest, mode, source_errors))

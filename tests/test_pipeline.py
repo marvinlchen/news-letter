@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import unittest
+import json
 from datetime import date
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from finance_digest.codex import validate_digest
+from finance_digest.cli import load_successful_digest
 from finance_digest.collect import in_target_date
 from finance_digest.feeds import parse_feed
 from finance_digest.models import Article
@@ -69,6 +72,38 @@ class PipelineTest(unittest.TestCase):
             source_weight=10,
         )
         self.assertEqual(classify_sectors(article), [])
+
+    def test_successful_digest_can_be_preserved_after_codex_failure(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "digest.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "date": "2026-06-10",
+                        "items": [{"title_zh": "已有标题"}],
+                        "metadata": {"mode": "codex"},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            digest = load_successful_digest(path, date(2026, 6, 10))
+            self.assertIsNotNone(digest)
+            self.assertEqual(digest["items"][0]["title_zh"], "已有标题")
+
+    def test_fallback_digest_is_not_preserved(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "digest.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "date": "2026-06-10",
+                        "items": [{"title_zh": "模板标题"}],
+                        "metadata": {"mode": "rules-fallback"},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertIsNone(load_successful_digest(path, date(2026, 6, 10)))
 
     def test_industry_ranking_ignores_incidental_macro_mentions(self) -> None:
         direct = Article(
