@@ -11,6 +11,16 @@ from typing import Any
 from .models import Article
 
 
+def validate_text_length(
+    item: dict[str, Any], field: str, minimum: int, maximum: int
+) -> None:
+    value = item.get(field)
+    if not isinstance(value, str) or not minimum <= len(value) <= maximum:
+        raise ValueError(
+            f"Codex returned invalid {field} length; expected {minimum}-{maximum}"
+        )
+
+
 def validate_digest(
     digest: dict[str, Any], target_date: date, articles: list[Article]
 ) -> dict[str, Any]:
@@ -32,6 +42,16 @@ def validate_digest(
         if url in seen_urls:
             raise ValueError(f"Codex returned a duplicate candidate URL: {url}")
         seen_urls.add(url)
+        validate_text_length(raw_item, "summary_zh", 180, 500)
+        validate_text_length(raw_item, "why_it_matters_zh", 120, 350)
+        validate_text_length(raw_item, "what_to_watch_zh", 80, 250)
+        key_facts = raw_item.get("key_facts_zh")
+        if (
+            not isinstance(key_facts, list)
+            or not 2 <= len(key_facts) <= 5
+            or any(not isinstance(fact, str) or not 12 <= len(fact) <= 160 for fact in key_facts)
+        ):
+            raise ValueError("Codex returned invalid key_facts_zh")
         article = articles_by_url[url]
         item = dict(raw_item)
         item.update(

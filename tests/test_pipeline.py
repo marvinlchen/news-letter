@@ -52,6 +52,9 @@ class PipelineTest(unittest.TestCase):
 
     def test_codex_metadata_must_match_a_candidate(self) -> None:
         article = self.articles[0]
+        summary = "这是用于验证扩展财经摘要长度与元数据覆盖逻辑的事件概述。" * 8
+        impact = "该事件可能通过利率预期、资产估值与企业融资成本影响市场参与者。" * 6
+        watch = "后续需要关注官方公告、市场价格变化、政策时间表以及其他独立来源的确认。" * 4
         digest = {
             "date": "2026-06-10",
             "items": [
@@ -59,8 +62,13 @@ class PipelineTest(unittest.TestCase):
                     "rank": 99,
                     "title_zh": "降息",
                     "title_original": "fabricated",
-                    "summary_zh": "摘要",
-                    "why_it_matters_zh": "重要",
+                    "summary_zh": summary,
+                    "key_facts_zh": [
+                        "候选新闻明确提供了可验证的原始标题和来源信息。",
+                        "候选新闻明确提供了发布时间和原始链接信息。",
+                    ],
+                    "why_it_matters_zh": impact,
+                    "what_to_watch_zh": watch,
                     "category": "fabricated",
                     "source": "fabricated",
                     "published_at": "fabricated",
@@ -73,6 +81,23 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(validated["items"][0]["rank"], 1)
         self.assertEqual(validated["items"][0]["source"], article.source)
         self.assertEqual(validated["items"][0]["title_original"], article.title)
+
+    def test_codex_short_summary_is_rejected(self) -> None:
+        article = self.articles[0]
+        digest = {
+            "date": "2026-06-10",
+            "items": [
+                {
+                    "url": article.url,
+                    "summary_zh": "太短",
+                    "key_facts_zh": ["这是第一条足够长的关键事实。", "这是第二条足够长的关键事实。"],
+                    "why_it_matters_zh": "影响太短",
+                    "what_to_watch_zh": "观察太短",
+                }
+            ],
+        }
+        with self.assertRaises(ValueError):
+            validate_digest(digest, date(2026, 6, 10), [article])
 
     def test_codex_unknown_url_is_rejected(self) -> None:
         digest = {

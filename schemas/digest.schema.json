@@ -12,8 +12,31 @@
           "rank": {"type": "integer"},
           "title_zh": {"type": "string"},
           "title_original": {"type": "string"},
-          "summary_zh": {"type": "string"},
-          "why_it_matters_zh": {"type": "string"},
+          "summary_zh": {
+            "type": "string",
+            "minLength": 180,
+            "maxLength": 500
+          },
+          "key_facts_zh": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 5,
+            "items": {
+              "type": "string",
+              "minLength": 12,
+              "maxLength": 160
+            }
+          },
+          "why_it_matters_zh": {
+            "type": "string",
+            "minLength": 120,
+            "maxLength": 350
+          },
+          "what_to_watch_zh": {
+            "type": "string",
+            "minLength": 80,
+            "maxLength": 250
+          },
           "category": {"type": "string"},
           "source": {"type": "string"},
           "published_at": {"type": "string"},
@@ -28,7 +51,9 @@
           "title_zh",
           "title_original",
           "summary_zh",
+          "key_facts_zh",
           "why_it_matters_zh",
+          "what_to_watch_zh",
           "category",
           "source",
           "published_at",
@@ -42,4 +67,3 @@
   "required": ["date", "items"],
   "additionalProperties": false
 }
-
