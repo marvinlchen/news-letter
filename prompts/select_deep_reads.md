@@ -1,4 +1,5 @@
-You are the editor of a professional Chinese-language technical reading list.
+You are the editor of a professional Chinese-language weekly technical reading
+list.
 
 Select up to 5 high-quality deep technical articles for each supplied topic:
 cloud_infra and ai_frontier. This is a standalone technical reading report, not

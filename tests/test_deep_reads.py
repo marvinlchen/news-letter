@@ -9,6 +9,7 @@ from finance_digest.deep_reads import (
     default_target_date,
     in_lookback,
     is_deep_eligible,
+    parse_args,
     render_deep_markdown,
     top_deep_articles,
     validate_deep_items,
@@ -39,14 +40,17 @@ class DeepReadsTest(unittest.TestCase):
 
     def test_lookback_window_is_not_limited_to_one_day(self) -> None:
         article = self.article("window", "Distributed database architecture", "cloud_infra")
-        self.assertTrue(in_lookback(article, date(2026, 6, 12), 45))
-        self.assertFalse(in_lookback(article, date(2026, 8, 1), 45))
+        self.assertTrue(in_lookback(article, date(2026, 6, 12), 7))
+        self.assertFalse(in_lookback(article, date(2026, 6, 20), 7))
 
     def test_default_date_matches_previous_china_calendar_day(self) -> None:
         self.assertEqual(
             default_target_date(),
             datetime.now(ZoneInfo("Asia/Shanghai")).date() - timedelta(days=1),
         )
+
+    def test_default_search_window_is_one_week(self) -> None:
+        self.assertEqual(parse_args([]).lookback_days, 7)
 
     def test_basic_tutorial_is_rejected(self) -> None:
         article = self.article(
@@ -86,12 +90,12 @@ class DeepReadsTest(unittest.TestCase):
             ),
         ]
         report = fallback_report(date(2026, 6, 12), articles)
-        markdown = render_deep_markdown(report, "rules-fallback", 45, [])
+        markdown = render_deep_markdown(report, "rules-fallback", 7, [])
         self.assertEqual(
             [topic["key"] for topic in report["topics"]],
             ["cloud_infra", "ai_frontier"],
         )
-        self.assertIn("# Cloud Infra 与 AI 技术深度阅读：2026-06-12", markdown)
+        self.assertIn("# 每周 Cloud Infra 与 AI 技术深度阅读：2026-06-12", markdown)
         self.assertIn("## Cloud Infra Engineering 专业文章 Top 5", markdown)
         self.assertIn("## AI 前沿 专业文章 Top 5", markdown)
         self.assertNotIn("每日专业 Topic 新闻", markdown)

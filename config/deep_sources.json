@@ -27,7 +27,7 @@
     {
       "name": "Netflix TechBlog",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site%3Anetflixtechblog.com%20%28architecture%20OR%20distributed%20OR%20performance%20OR%20reliability%20OR%20database%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=site%3Anetflixtechblog.com%20%28architecture%20OR%20distributed%20OR%20performance%20OR%20reliability%20OR%20database%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "cloud_infra",
       "weight": 10,
       "topics": ["cloud_infra"]
@@ -59,7 +59,7 @@
     {
       "name": "Systems Research Index",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=%28site%3Ausenix.org%20OR%20site%3Aaws.amazon.com%2Fbuilders-library%29%20%28distributed%20systems%20OR%20reliability%20OR%20database%20OR%20networking%20OR%20operating%20systems%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%28site%3Ausenix.org%20OR%20site%3Aaws.amazon.com%2Fbuilders-library%29%20%28distributed%20systems%20OR%20reliability%20OR%20database%20OR%20networking%20OR%20operating%20systems%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "cloud_infra",
       "weight": 10,
       "topics": ["cloud_infra", "ai_frontier"]
@@ -83,7 +83,7 @@
     {
       "name": "AI Lab Research Index",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=%28site%3Aanthropic.com%2Fresearch%20OR%20site%3Aopenai.com%2Fresearch%20OR%20site%3Adeepmind.google%20OR%20site%3Aai.meta.com%2Fresearch%29%20%28research%20OR%20evaluation%20OR%20interpretability%20OR%20model%20OR%20reasoning%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aanthropic.com%2Fresearch%20OR%20site%3Aopenai.com%2Fresearch%20OR%20site%3Adeepmind.google%20OR%20site%3Aai.meta.com%2Fresearch%29%20%28research%20OR%20evaluation%20OR%20interpretability%20OR%20model%20OR%20reasoning%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "ai_frontier",
       "weight": 10,
       "topics": ["ai_frontier"]
@@ -91,7 +91,7 @@
     {
       "name": "AI Systems Research Index",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=%28site%3Aproceedings.mlsys.org%20OR%20site%3Aopenreview.net%29%20%28inference%20OR%20training%20OR%20evaluation%20OR%20language%20model%20OR%20machine%20learning%20systems%29%20when%3A45d&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aproceedings.mlsys.org%20OR%20site%3Aopenreview.net%29%20%28inference%20OR%20training%20OR%20evaluation%20OR%20language%20model%20OR%20machine%20learning%20systems%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "ai_frontier",
       "weight": 9,
       "topics": ["cloud_infra", "ai_frontier"]

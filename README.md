@@ -26,9 +26,9 @@ covers eight topics:
 
 The repository also produces a separate weekly technical deep-reading report
 for Cloud Infra Engineering and AI Frontier. It is intentionally not mixed into
-the daily news report. The deep-reading pipeline uses a 45-day candidate window
-and selects up to five professional articles per topic based on technical depth,
-evidence, source authority, and engineering value.
+the daily news report. The deep-reading pipeline searches only the previous
+seven days and selects up to five professional articles per topic based on
+technical depth, evidence, source authority, and engineering value.
 
 ## Source Policy
 
@@ -125,7 +125,8 @@ scripts/install-cron.sh
 Both scheduled reports use the previous China Standard Time calendar day as
 their report date. The cron entry uses `flock` to prevent overlapping runs. Logs are written to
 `var/log/cron.log`. The separate technical deep-reading report runs every Sunday
-at `05:00` China Standard Time and writes logs to `var/log/deep-reads.log`.
+at `05:00` China Standard Time, searches the previous seven days, and writes
+logs to `var/log/deep-reads.log`.
 
 After a successful digest run, `scripts/publish-report.sh` commits and pushes
 the dated report and `reports/latest.md` to the configured `origin` remote.

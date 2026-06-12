@@ -423,7 +423,7 @@ def render_deep_markdown(
     report: dict[str, Any], mode: str, lookback_days: int, source_errors: list[dict[str, str]]
 ) -> str:
     lines = [
-        f"# Cloud Infra 与 AI 技术深度阅读：{report['date']}",
+        f"# 每周 Cloud Infra 与 AI 技术深度阅读：{report['date']}",
         "",
         f"> 候选窗口：最近 {lookback_days} 天。生成模式：`{mode}`。"
         "本报告与每日新闻报告独立。",
@@ -474,13 +474,20 @@ def load_successful_report(path: Path, target_date: date) -> dict[str, Any] | No
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate a technical deep-reading report")
+    parser = argparse.ArgumentParser(
+        description="Generate a weekly technical deep-reading report"
+    )
     parser.add_argument(
         "--date",
         type=date.fromisoformat,
         default=default_target_date(),
     )
-    parser.add_argument("--lookback-days", type=int, default=45)
+    parser.add_argument(
+        "--lookback-days",
+        type=int,
+        default=7,
+        help="candidate publication window in days (default: 7)",
+    )
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     parser.add_argument("--output-root", type=Path)
     parser.add_argument("--use-codex", action="store_true")
