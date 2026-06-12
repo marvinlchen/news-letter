@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import unittest
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 from finance_digest.deep_reads import (
     fallback_report,
+    default_target_date,
     in_lookback,
     is_deep_eligible,
     render_deep_markdown,
@@ -39,6 +41,12 @@ class DeepReadsTest(unittest.TestCase):
         article = self.article("window", "Distributed database architecture", "cloud_infra")
         self.assertTrue(in_lookback(article, date(2026, 6, 12), 45))
         self.assertFalse(in_lookback(article, date(2026, 8, 1), 45))
+
+    def test_default_date_matches_previous_china_calendar_day(self) -> None:
+        self.assertEqual(
+            default_target_date(),
+            datetime.now(ZoneInfo("Asia/Shanghai")).date() - timedelta(days=1),
+        )
 
     def test_basic_tutorial_is_rejected(self) -> None:
         article = self.article(

@@ -77,6 +77,15 @@ LOW_SIGNAL_FILE_EXTENSIONS = {
     ".png",
     ".svg",
 }
+STOCK_MOVEMENT_RE = re.compile(
+    r"\b(?:"
+    r"bounce[ds]?|climb(?:s|ed)?|drop(?:s|ped)?|fall(?:s|ing)?|fell|"
+    r"gain(?:s|ed)?|jump(?:s|ed)?|plunge[ds]?|rall(?:y|ies|ied)|"
+    r"rebound(?:s|ed)?|rise[sd]?|rose|sank|sink(?:s|ing)?|"
+    r"slid(?:e|es)?|slump(?:s|ed)?|snap(?:s|ped)?|soar(?:s|ed)?|"
+    r"surge[ds]?|tumble[ds]?"
+    r")\b|\bhit(?:s)? record\b|\bsell-?off\b"
+)
 TOPICS = {
     "macroeconomics": {
         "name_zh": "宏观经济",
@@ -147,6 +156,27 @@ TOPICS = {
             "soy",
             "steel",
             "wheat",
+        },
+    },
+    "stock_market": {
+        "name_zh": "股票市场",
+        "keywords": {
+            "dow jones",
+            "equities",
+            "equity",
+            "ftse",
+            "hang seng",
+            "market cap",
+            "nasdaq",
+            "nikkei",
+            "s&p 500",
+            "share price",
+            "shares",
+            "sell-off",
+            "selloff",
+            "stock",
+            "stocks",
+            "stoxx",
         },
     },
     "technology": {
@@ -263,6 +293,14 @@ TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
         "whistleblower",
         "workshop",
     },
+    "stock_market": {
+        "best stocks",
+        "crude stocks",
+        "investment case",
+        "market outlook",
+        "stock picks",
+        "stocks to buy",
+    },
     "technology": {
         "equities",
         "investment case",
@@ -280,12 +318,19 @@ TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
     },
     "cloud_infra": {
         "automate",
+        "benchmarking",
+        "deep dive",
+        "guide",
+        "how ",
         "how to",
         "investment case",
+        "propaganda",
         "shares",
         "stock",
+        "tutorial",
     },
     "ai_frontier": {
+        "arxiv",
         "cloud commitment",
         "help center",
         "investment case",
@@ -293,6 +338,7 @@ TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
         "rate card",
         "shares",
         "stock",
+        "survey",
         "world markets",
     },
 }
@@ -343,11 +389,15 @@ def is_topic_low_signal(article: Article, topic: str) -> bool:
 
 
 def is_article_eligible_for_topic(article: Article, topic: str) -> bool:
-    return (
+    eligible = (
         topic in classify_topics(article)
         and topic_keyword_relevance(article, topic) > 0
         and not is_topic_low_signal(article, topic)
     )
+    if topic == "stock_market":
+        text = f"{article.title} {article.description}".lower()
+        return eligible and STOCK_MOVEMENT_RE.search(text) is not None
+    return eligible
 
 
 def topic_top_articles(articles: list[Article], limit: int = 3) -> dict[str, list[Article]]:
@@ -368,8 +418,12 @@ def topic_top_articles(articles: list[Article], limit: int = 3) -> dict[str, lis
         )
         selected: list[Article] = []
         source_counts: dict[str, int] = defaultdict(int)
+        similarity_threshold = 0.10 if key == "stock_market" else 0.34
         for article in matches:
-            if any(similarity(article, existing) >= 0.34 for existing in selected):
+            if any(
+                similarity(article, existing) >= similarity_threshold
+                for existing in selected
+            ):
                 continue
             if source_counts[article.source] >= 2:
                 continue
@@ -439,7 +493,7 @@ def cluster_articles(articles: list[Article], threshold: float = 0.34) -> None:
         article.cluster_size = sizes[find(index)]
 
 
-def score_articles(articles: list[Article], per_source_limit: int = 10) -> list[Article]:
+def score_articles(articles: list[Article], per_source_limit: int = 20) -> list[Article]:
     articles = deduplicate([article for article in articles if not is_low_signal(article)])
     cluster_articles(articles)
     for article in articles:

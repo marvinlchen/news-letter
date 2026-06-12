@@ -24,6 +24,8 @@ SOURCE_NAMES = {
     "Trusted Commodities Index": "可信大宗商品索引",
     "Trusted Consumer Index": "可信消费行业索引",
     "Trusted Shipping Index": "可信航运索引",
+    "Trusted Company Share Movers Index": "可信个股涨跌索引",
+    "Trusted Global Equity Index Movers": "可信全球股指涨跌索引",
     "Trusted Technology Index": "可信科技行业索引",
 }
 CATEGORY_NAMES = {
@@ -35,6 +37,7 @@ CATEGORY_NAMES = {
     "regulation": "金融监管",
     "shipping": "航运",
     "commodities": "大宗商品",
+    "stock_market": "股票市场",
     "technology": "科技",
     "consumer": "消费",
 }

@@ -265,6 +265,7 @@ class PipelineTest(unittest.TestCase):
         self.assertIn("## 宏观经济 Top 3", report)
         self.assertIn("## 航运 Top 3", report)
         self.assertIn("## 大宗商品 Top 3", report)
+        self.assertIn("## 股票市场 Top 3", report)
         self.assertIn("## 科技产业 Top 3", report)
         self.assertIn("## 消费 Top 3", report)
         self.assertIn("## Cloud Infra Engineering Top 3", report)
@@ -273,19 +274,93 @@ class PipelineTest(unittest.TestCase):
         self.assertIn("- **原标题：** Container shipping rates rise", report)
         self.assertIn("- **摘要：** 可信来源发布一则航运消息", report)
 
-    def test_all_seven_topics_are_configured(self) -> None:
+    def test_all_eight_topics_are_configured(self) -> None:
         self.assertEqual(
             list(TOPICS),
             [
                 "macroeconomics",
                 "shipping",
                 "commodities",
+                "stock_market",
                 "technology",
                 "consumer",
                 "cloud_infra",
                 "ai_frontier",
             ],
         )
+
+    def test_stock_market_topic_selects_daily_market_move(self) -> None:
+        article = Article(
+            article_id="stock-move",
+            title="Nvidia shares jump 12% after earnings beat estimates",
+            url="https://example.com/stock-move",
+            source="Example Markets",
+            published_at=self.articles[0].published_at,
+            description="The stock recorded its largest daily gain this year.",
+            category="stock_market",
+            source_weight=10,
+            topics=["stock_market"],
+        )
+        ranked = score_articles([article])
+        self.assertEqual(topic_top_articles(ranked)["stock_market"], [article])
+
+    def test_stock_market_topic_rejects_ipo_commentary_without_a_move(self) -> None:
+        article = Article(
+            article_id="stock-ipo",
+            title="Space company prepares for stock market debut",
+            url="https://example.com/stock-ipo",
+            source="Example Markets",
+            published_at=self.articles[0].published_at,
+            description="The IPO could transform the company.",
+            category="stock_market",
+            source_weight=10,
+            topics=["stock_market"],
+        )
+        ranked = score_articles([article])
+        self.assertEqual(topic_top_articles(ranked)["stock_market"], [])
+
+    def test_stock_market_topic_rejects_crude_inventory_move(self) -> None:
+        article = Article(
+            article_id="crude-stocks",
+            title="US crude stocks fall sharply as refiners increase activity",
+            url="https://example.com/crude-stocks",
+            source="Example Markets",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="stock_market",
+            source_weight=10,
+            topics=["stock_market"],
+        )
+        ranked = score_articles([article])
+        self.assertEqual(topic_top_articles(ranked)["stock_market"], [])
+
+    def test_stock_market_topic_deduplicates_same_market_move(self) -> None:
+        articles = [
+            Article(
+                article_id="market-rally-one",
+                title="Equities rally as Trump cancels Iran attacks",
+                url="https://example.com/market-rally-one",
+                source="Example One",
+                published_at=self.articles[0].published_at,
+                description="",
+                category="stock_market",
+                source_weight=10,
+                topics=["stock_market"],
+            ),
+            Article(
+                article_id="market-rally-two",
+                title="Stocks bounce after Trump ends Iran strikes",
+                url="https://example.com/market-rally-two",
+                source="Example Two",
+                published_at=self.articles[0].published_at,
+                description="",
+                category="stock_market",
+                source_weight=9,
+                topics=["stock_market"],
+            ),
+        ]
+        ranked = score_articles(articles)
+        self.assertEqual(len(topic_top_articles(ranked)["stock_market"]), 1)
 
     def test_low_signal_company_announcements_are_filtered(self) -> None:
         article = Article(
@@ -354,6 +429,7 @@ class PipelineTest(unittest.TestCase):
                 },
                 {"key": "shipping", "name_zh": "航运", "items": []},
                 {"key": "commodities", "name_zh": "大宗商品", "items": []},
+                {"key": "stock_market", "name_zh": "股票市场", "items": []},
                 {"key": "technology", "name_zh": "科技产业", "items": []},
                 {"key": "consumer", "name_zh": "消费", "items": []},
                 {

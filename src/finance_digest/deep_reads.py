@@ -130,6 +130,10 @@ def atomic_write(path: Path, content: str) -> None:
     temporary.replace(path)
 
 
+def default_target_date() -> date:
+    return datetime.now(TIMEZONE).date() - timedelta(days=1)
+
+
 def in_lookback(article: Article, target_date: date, lookback_days: int) -> bool:
     end = datetime.combine(target_date + timedelta(days=1), time.min, tzinfo=TIMEZONE)
     start = end - timedelta(days=lookback_days)
@@ -471,7 +475,11 @@ def load_successful_report(path: Path, target_date: date) -> dict[str, Any] | No
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate a technical deep-reading report")
-    parser.add_argument("--date", type=date.fromisoformat, default=datetime.now(TIMEZONE).date())
+    parser.add_argument(
+        "--date",
+        type=date.fromisoformat,
+        default=default_target_date(),
+    )
     parser.add_argument("--lookback-days", type=int, default=45)
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     parser.add_argument("--output-root", type=Path)

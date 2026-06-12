@@ -12,11 +12,13 @@ The pipeline deliberately separates deterministic work from LLM work:
    then writes Chinese summaries using only the supplied candidate data.
 4. If Codex fails, the pipeline still writes a deterministic fallback digest.
 
-The report contains no overall Top 10. It covers seven topics:
+The daily report contains time-sensitive news only, with no overall Top 10. It
+covers eight topics:
 
 - Macroeconomics
 - Shipping
 - Commodities
+- Stock Market
 - Technology
 - Consumer
 - Cloud Infra Engineering
@@ -39,6 +41,8 @@ The default configuration uses publicly accessible sources:
 - Shipping: IMO, UNCTAD, and specialist searches restricted to Reuters,
   Bloomberg, Financial Times, and CNBC.
 - Commodities: EIA, IEA, USDA, CFTC, UNCTAD, and trusted financial media.
+- Stock market: trusted financial media coverage of consequential daily index,
+  sector, and individual-stock moves and their reported catalysts.
 - Technology and consumer: trusted financial and business publications.
 - Cloud Infra Engineering: first-party engineering sources from major cloud,
   cloud-native, database, networking, and infrastructure projects.
@@ -118,7 +122,8 @@ digest.
 scripts/install-cron.sh
 ```
 
-The cron entry uses `flock` to prevent overlapping runs. Logs are written to
+Both scheduled reports use the previous China Standard Time calendar day as
+their report date. The cron entry uses `flock` to prevent overlapping runs. Logs are written to
 `var/log/cron.log`. The separate technical deep-reading report runs every Sunday
 at `05:00` China Standard Time and writes logs to `var/log/deep-reads.log`.
 

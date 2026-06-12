@@ -137,6 +137,22 @@
       "topics": ["commodities"]
     },
     {
+      "name": "Trusted Company Share Movers Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28%22shares%20jump%22%20OR%20%22shares%20fall%22%20OR%20%22stock%20jumps%22%20OR%20%22stock%20falls%22%20OR%20%22stocks%20rise%22%20OR%20%22stocks%20fall%22%20OR%20%22markets%20rally%22%20OR%20%22markets%20slide%22%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "stock_market",
+      "weight": 10,
+      "topics": ["stock_market"]
+    },
+    {
+      "name": "Trusted Global Equity Index Movers",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28S%26P%20500%20OR%20Nasdaq%20OR%20Nikkei%20OR%20Hang%20Seng%20OR%20Stoxx%29%20%28rise%20OR%20fall%20OR%20rally%20OR%20slide%20OR%20record%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "stock_market",
+      "weight": 10,
+      "topics": ["stock_market"]
+    },
+    {
       "name": "Trusted Technology Index",
       "provider": "rss",
       "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28technology%20OR%20semiconductor%20OR%20software%20OR%20cybersecurity%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -257,9 +273,9 @@
       "topics": ["macroeconomics"]
     },
     {
-      "name": "Cloud Platform Engineering Index",
+      "name": "Cloud Platform News Index",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=%28site%3Aaws.amazon.com%2Fblogs%20OR%20site%3Acloud.google.com%2Fblog%20OR%20site%3Aazure.microsoft.com%2Fblog%20OR%20site%3Ablog.cloudflare.com%29%20%28infrastructure%20OR%20kubernetes%20OR%20networking%20OR%20database%20OR%20serverless%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%28site%3Aaws.amazon.com%2Fblogs%20OR%20site%3Acloud.google.com%2Fblog%20OR%20site%3Aazure.microsoft.com%2Fblog%20OR%20site%3Ablog.cloudflare.com%29%20%28launch%20OR%20announces%20OR%20outage%20OR%20incident%20OR%20security%20OR%20vulnerability%20OR%20acquisition%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "cloud_infra",
       "weight": 10,
       "topics": ["cloud_infra"]
@@ -286,6 +302,7 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Akubernetes.io%2Fblog%20OR%20site%3Acncf.io%2Fblog%20OR%20site%3Aistio.io%20OR%20site%3Aenvoyproxy.io%20OR%20site%3Aprometheus.io%29%20when%3A30d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "cloud_infra",
       "weight": 10,
+      "enabled": false,
       "topics": ["cloud_infra"]
     },
     {
@@ -302,6 +319,23 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Aarxiv.org%20OR%20site%3Ahuggingface.co%2Fblog%29%20%28large%20language%20model%20OR%20reasoning%20OR%20agent%20OR%20inference%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "ai_frontier",
       "weight": 8,
+      "enabled": false,
+      "topics": ["ai_frontier"]
+    },
+    {
+      "name": "Trusted Cloud Infrastructure News Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28cloud%20infrastructure%20OR%20data%20center%20OR%20cloud%20outage%20OR%20cybersecurity%20OR%20database%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "cloud_infra",
+      "weight": 9,
+      "topics": ["cloud_infra"]
+    },
+    {
+      "name": "Trusted AI News Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%29%20%28AI%20model%20OR%20artificial%20intelligence%20OR%20AI%20agent%20OR%20AI%20safety%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "ai_frontier",
+      "weight": 9,
       "topics": ["ai_frontier"]
     }
   ]
