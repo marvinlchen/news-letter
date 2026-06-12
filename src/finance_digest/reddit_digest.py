@@ -110,6 +110,16 @@ def load_topics(path: Path) -> dict[str, dict[str, Any]]:
     return topics
 
 
+def reddit_time_filter(lookback_days: int) -> str:
+    if lookback_days <= 1:
+        return "day"
+    if lookback_days <= 7:
+        return "week"
+    if lookback_days <= 31:
+        return "month"
+    return "year"
+
+
 def strip_reddit_footer(value: str) -> str:
     value = clean_text(value)
     value = re.split(r"\s+submitted by\s+", value, maxsplit=1, flags=re.IGNORECASE)[0]
@@ -246,7 +256,9 @@ class RedditRSSClient:
         joined = "+".join(subreddits)
         url = (
             f"https://www.reddit.com/r/{joined}/top/.rss?"
-            + urllib.parse.urlencode({"t": "week", "limit": limit})
+            + urllib.parse.urlencode(
+                {"t": reddit_time_filter(lookback_days), "limit": limit}
+            )
         )
         request = urllib.request.Request(
             url,
@@ -307,7 +319,11 @@ class RedditOAuthClient:
     ) -> list[RedditPost]:
         payload = self.get_json(
             f"/r/{'+'.join(subreddits)}/top",
-            {"t": "week", "limit": limit, "raw_json": 1},
+            {
+                "t": reddit_time_filter(lookback_days),
+                "limit": limit,
+                "raw_json": 1,
+            },
         )
         posts: list[RedditPost] = []
         for rank, child in enumerate(payload["data"]["children"], start=1):
@@ -475,7 +491,7 @@ def collect_reddit_posts(
 def fallback_item(post: RedditPost, rank: int) -> dict[str, Any]:
     return {
         "rank": rank,
-        "title_zh": f"r/{post.subreddit} 本周重点讨论第{rank}项",
+        "title_zh": f"r/{post.subreddit} 当日重点讨论第{rank}项",
         "title_original": post.title,
         "subreddit": post.subreddit,
         "published_at": post.published_at.isoformat(),
@@ -484,7 +500,7 @@ def fallback_item(post: RedditPost, rank: int) -> dict[str, Any]:
         "num_comments": post.num_comments,
         "sampled_comment_count": len(post.sampled_comments),
         "summary_zh": (
-            "该帖子进入相关社区本周高热度候选。当前未能调用 Codex 生成具体摘要，"
+            "该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，"
             "需要结合原帖和高质量评论进一步判断其事实依据与专业价值。"
         ),
         "consensus_zh": (
@@ -494,7 +510,7 @@ def fallback_item(post: RedditPost, rank: int) -> dict[str, Any]:
             "规则模式无法可靠识别主要分歧，不能把单个高热度帖子视为社区整体意见。"
         ),
         "why_it_matters_zh": (
-            "该讨论在相关专业社区的周榜中排名靠前，可作为观察从业者关注点的线索。"
+            "该讨论在相关专业社区的日榜中排名靠前，可作为观察从业者关注点的线索。"
         ),
         "signals_and_limits_zh": (
             "Reddit 热度不代表事实正确；样本受社区规模、排序机制和评论抓取范围影响。"
@@ -661,10 +677,16 @@ def render_reddit_markdown(
     lookback_days: int,
     source_errors: list[dict[str, str]],
 ) -> str:
+    range_description = (
+        "报告日期当天（中国时区）"
+        if lookback_days == 1
+        else f"报告日期及此前共 {lookback_days} 个中国自然日"
+    )
     lines = [
-        f"# 每周 Reddit 社区 Topic 观察：{report['date']}",
+        f"# 每日 Reddit 社区 Topic 观察：{report['date']}",
         "",
-        f"> 候选窗口：最近 {lookback_days} 天。生成模式：`{mode}`。"
+        f"> 候选范围：{range_description}。"
+        f"生成模式：`{mode}`。"
         f"抓取模式：`{collector}`。Reddit 热度与评论不代表事实正确。",
         "",
     ]
@@ -674,7 +696,7 @@ def render_reddit_markdown(
             lines.extend(["本期没有选出达到质量要求的社区讨论。", ""])
             continue
         for item in sorted(topic["items"], key=lambda value: value["rank"]):
-            metrics = [f"周榜来源 r/{item['subreddit']}"]
+            metrics = [f"日榜来源 r/{item['subreddit']}"]
             if item.get("score") is not None:
                 metrics.append(f"{item['score']} 分")
             if item.get("num_comments") is not None:
@@ -719,9 +741,9 @@ def load_successful_report(path: Path, target_date: date) -> dict[str, Any] | No
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate a weekly Reddit topic digest")
+    parser = argparse.ArgumentParser(description="Generate a daily Reddit topic digest")
     parser.add_argument("--date", type=date.fromisoformat, default=default_target_date())
-    parser.add_argument("--lookback-days", type=int, default=7)
+    parser.add_argument("--lookback-days", type=int, default=1)
     parser.add_argument("--candidate-limit", type=int, default=5)
     parser.add_argument("--comment-limit", type=int, default=8)
     parser.add_argument("--project-root", type=Path, default=Path.cwd())

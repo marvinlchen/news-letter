@@ -30,7 +30,7 @@ the daily news report. The deep-reading pipeline searches only the previous
 seven days and selects up to five professional articles per topic based on
 technical depth, evidence, source authority, and engineering value.
 
-It also produces a separate weekly Reddit community intelligence report across
+It also produces a separate daily Reddit community intelligence report across
 the same eight topics. The Reddit report selects up to three substantive
 discussions per topic, samples comments, and separates community consensus,
 disagreement, professional signal, and limitations. Reddit content is treated
@@ -121,7 +121,7 @@ reddit-reports/YYYY-MM-DD.md
 reddit-reports/latest.md
 ```
 
-Without credentials, the collector uses Reddit's public Topic `top/week` RSS
+Without credentials, the collector uses Reddit's public Topic `top/day` RSS
 feeds at a deliberately conservative request rate. RSS mode does not fetch
 thread comments. For accurate scores, total comment counts, sampled Top
 comments, and official OAuth access, configure an approved Reddit Data API
@@ -175,8 +175,8 @@ their report date. The cron entry uses `flock` to prevent overlapping runs. Logs
 `var/log/cron.log`. The separate technical deep-reading report runs every Sunday
 at `05:00` China Standard Time, searches the previous seven days, and writes
 logs to `var/log/deep-reads.log`.
-The Reddit community report runs every Sunday at `06:00` China Standard Time,
-searches the previous seven days, and writes logs to
+The Reddit community report runs every day at `04:30` China Standard Time,
+searches the previous China calendar day, and writes logs to
 `var/log/reddit-digest.log`.
 
 After a successful digest run, `scripts/publish-report.sh` commits and pushes

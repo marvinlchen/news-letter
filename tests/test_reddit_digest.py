@@ -6,10 +6,12 @@ from datetime import date, datetime, timezone
 from finance_digest.reddit_digest import (
     RedditPost,
     fallback_report,
+    in_lookback,
     parse_args,
     parse_reddit_comment_feed,
     parse_reddit_listing_feed,
     render_reddit_markdown,
+    reddit_time_filter,
     select_candidates,
     validate_reddit_items,
 )
@@ -22,7 +24,7 @@ LISTING = b"""<?xml version="1.0" encoding="UTF-8"?>
     <content type="html">&lt;div&gt;Production reliability lessons.&lt;/div&gt; submitted by /u/example</content>
     <id>t3_post1</id>
     <link href="https://www.reddit.com/r/kubernetes/comments/post1/example/"/>
-    <published>2026-06-10T03:00:00+00:00</published>
+    <published>2026-06-11T03:00:00+00:00</published>
     <title>Production Kubernetes reliability lessons</title>
   </entry>
 </feed>"""
@@ -48,12 +50,33 @@ class RedditDigestTest(unittest.TestCase):
             listing_rank=rank,
         )
 
-    def test_default_window_is_weekly(self) -> None:
-        self.assertEqual(parse_args([]).lookback_days, 7)
+    def test_default_window_is_daily(self) -> None:
+        self.assertEqual(parse_args([]).lookback_days, 1)
+
+    def test_reddit_sort_window_matches_report_window(self) -> None:
+        self.assertEqual(reddit_time_filter(1), "day")
+        self.assertEqual(reddit_time_filter(7), "week")
+
+    def test_daily_window_uses_target_china_calendar_day(self) -> None:
+        target = date(2026, 6, 11)
+        self.assertTrue(
+            in_lookback(datetime(2026, 6, 10, 16, tzinfo=timezone.utc), target, 1)
+        )
+        self.assertTrue(
+            in_lookback(
+                datetime(2026, 6, 11, 15, 59, tzinfo=timezone.utc), target, 1
+            )
+        )
+        self.assertFalse(
+            in_lookback(datetime(2026, 6, 10, 15, 59, tzinfo=timezone.utc), target, 1)
+        )
+        self.assertFalse(
+            in_lookback(datetime(2026, 6, 11, 16, tzinfo=timezone.utc), target, 1)
+        )
 
     def test_listing_parser_discards_username_footer(self) -> None:
         posts = parse_reddit_listing_feed(
-            LISTING, "cloud_infra", date(2026, 6, 11), 7
+            LISTING, "cloud_infra", date(2026, 6, 11), 1
         )
         self.assertEqual(len(posts), 1)
         self.assertEqual(posts[0].subreddit, "kubernetes")
@@ -107,8 +130,8 @@ class RedditDigestTest(unittest.TestCase):
     def test_fallback_report_and_markdown_are_separate(self) -> None:
         topics = {"cloud_infra": {"name_zh": "Cloud Infra Engineering"}}
         report = fallback_report(date(2026, 6, 11), topics, {"cloud_infra": [self.post("one", "Example")]})
-        markdown = render_reddit_markdown(report, "rules-fallback", "rss", 7, [])
-        self.assertIn("# 每周 Reddit 社区 Topic 观察：2026-06-11", markdown)
+        markdown = render_reddit_markdown(report, "rules-fallback", "rss", 1, [])
+        self.assertIn("# 每日 Reddit 社区 Topic 观察：2026-06-11", markdown)
         self.assertIn("## Cloud Infra Engineering 社区讨论 Top 3", markdown)
         self.assertNotIn("每日专业 Topic 新闻", markdown)
 

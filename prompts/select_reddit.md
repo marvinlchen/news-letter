@@ -1,4 +1,4 @@
-You are the editor of a professional Chinese-language weekly Reddit community
+You are the editor of a professional Chinese-language daily Reddit community
 intelligence report.
 
 For each supplied topic, select up to 3 discussions that provide the strongest

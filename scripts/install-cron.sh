@@ -30,7 +30,7 @@ printf '0 4 * * * %s >> %s/var/log/cron.log 2>&1 %s\n' \
   "$COMMAND" "$PROJECT_ROOT" "$MARKER" >> "$tmp"
 printf '0 5 * * 0 %s >> %s/var/log/deep-reads.log 2>&1 %s\n' \
   "$DEEP_COMMAND" "$PROJECT_ROOT" "$DEEP_MARKER" >> "$tmp"
-printf '0 6 * * 0 %s >> %s/var/log/reddit-digest.log 2>&1 %s\n' \
+printf '30 4 * * * %s >> %s/var/log/reddit-digest.log 2>&1 %s\n' \
   "$REDDIT_COMMAND" "$PROJECT_ROOT" "$REDDIT_MARKER" >> "$tmp"
 crontab "$tmp"
 crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest'
