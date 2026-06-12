@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 
 from .codex import run_codex
 from .collect import collect_articles, load_sources
+from .ranking import TOPICS
 from .render import fallback_digest, pretty_json, render_markdown
 
 
@@ -36,7 +37,10 @@ def load_successful_digest(path: Path, target_date: date) -> dict[str, Any] | No
         return None
     if digest.get("metadata", {}).get("mode") not in {"codex", "codex-preserved"}:
         return None
-    if not digest.get("topics"):
+    topics = digest.get("topics")
+    if not isinstance(topics, list):
+        return None
+    if [topic.get("key") for topic in topics if isinstance(topic, dict)] != list(TOPICS):
         return None
     return digest
 

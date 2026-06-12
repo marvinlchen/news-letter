@@ -137,7 +137,10 @@ class PipelineTest(unittest.TestCase):
                 json.dumps(
                     {
                         "date": "2026-06-10",
-                        "topics": [{"key": "shipping", "items": []}],
+                        "topics": [
+                            {"key": key, "items": []}
+                            for key in TOPICS
+                        ],
                         "metadata": {"mode": "codex"},
                     }
                 ),
@@ -145,7 +148,25 @@ class PipelineTest(unittest.TestCase):
             )
             digest = load_successful_digest(path, date(2026, 6, 10))
             self.assertIsNotNone(digest)
-            self.assertEqual(digest["topics"][0]["key"], "shipping")
+            self.assertEqual(
+                [topic["key"] for topic in digest["topics"]],
+                list(TOPICS),
+            )
+
+    def test_incompatible_old_digest_is_not_preserved(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "digest.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "date": "2026-06-10",
+                        "topics": [{"key": "shipping", "items": []}],
+                        "metadata": {"mode": "codex"},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertIsNone(load_successful_digest(path, date(2026, 6, 10)))
 
     def test_fallback_digest_is_not_preserved(self) -> None:
         with TemporaryDirectory() as temp_dir:
