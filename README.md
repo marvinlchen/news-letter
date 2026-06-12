@@ -30,6 +30,12 @@ the daily news report. The deep-reading pipeline searches only the previous
 seven days and selects up to five professional articles per topic based on
 technical depth, evidence, source authority, and engineering value.
 
+It also produces a separate weekly Reddit community intelligence report across
+the same eight topics. The Reddit report selects up to three substantive
+discussions per topic, samples comments, and separates community consensus,
+disagreement, professional signal, and limitations. Reddit content is treated
+as unverified community discussion rather than a factual news source.
+
 ## Source Policy
 
 The default configuration uses publicly accessible sources:
@@ -98,6 +104,48 @@ deep-reports/YYYY-MM-DD.md
 deep-reports/latest.md
 ```
 
+Generate the standalone Reddit community report:
+
+```bash
+PYTHONPATH=src python3 -m finance_digest.reddit_digest --use-codex
+```
+
+Reddit artifacts are written to:
+
+```text
+var/reddit-raw/YYYY-MM-DD-candidates.json
+var/reddit-digests/YYYY-MM-DD.json
+var/reddit-digests/YYYY-MM-DD.md
+var/reddit-status/latest.json
+reddit-reports/YYYY-MM-DD.md
+reddit-reports/latest.md
+```
+
+Without credentials, the collector uses Reddit's public Topic `top/week` RSS
+feeds at a deliberately conservative request rate. RSS mode does not fetch
+thread comments. For accurate scores, total comment counts, sampled Top
+comments, and official OAuth access, configure an approved Reddit Data API
+application:
+
+```bash
+export REDDIT_CLIENT_ID=...
+export REDDIT_CLIENT_SECRET=...
+export REDDIT_USER_AGENT='linux:finance-news-digest:v1.0.0 (by /u/your-account)'
+```
+
+For scheduled runs, place those assignments in
+`~/.config/finance-news-digest/reddit.env` and restrict the file to the user:
+
+```bash
+chmod 600 ~/.config/finance-news-digest/reddit.env
+```
+
+The pipeline never stores usernames or sampled comment bodies in raw artifacts
+or published reports.
+The scheduled Reddit job defaults to `REDDIT_CODEX_REQUIRED=1`, so it records
+diagnostics but does not publish a rules-only placeholder report when Codex is
+unavailable. Set `REDDIT_CODEX_REQUIRED=0` only for diagnostics.
+
 Each story uses a Chinese headline and one Chinese summary paragraph limited to
 200 characters. The output validator rejects non-Chinese headlines and summaries
 outside the configured length range. Topic sections combine explicit source
@@ -127,6 +175,9 @@ their report date. The cron entry uses `flock` to prevent overlapping runs. Logs
 `var/log/cron.log`. The separate technical deep-reading report runs every Sunday
 at `05:00` China Standard Time, searches the previous seven days, and writes
 logs to `var/log/deep-reads.log`.
+The Reddit community report runs every Sunday at `06:00` China Standard Time,
+searches the previous seven days, and writes logs to
+`var/log/reddit-digest.log`.
 
 After a successful digest run, `scripts/publish-report.sh` commits and pushes
 the dated report and `reports/latest.md` to the configured `origin` remote.

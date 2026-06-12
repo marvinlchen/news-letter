@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "item": {
+      "type": "object",
+      "properties": {
+        "title_zh": {"type": "string", "minLength": 4, "maxLength": 80},
+        "summary_zh": {"type": "string", "minLength": 40, "maxLength": 260},
+        "consensus_zh": {"type": "string", "minLength": 25, "maxLength": 240},
+        "disagreements_zh": {"type": "string", "minLength": 25, "maxLength": 240},
+        "why_it_matters_zh": {"type": "string", "minLength": 25, "maxLength": 220},
+        "signals_and_limits_zh": {
+          "type": "string",
+          "minLength": 25,
+          "maxLength": 220
+        },
+        "url": {"type": "string"}
+      },
+      "required": [
+        "title_zh",
+        "summary_zh",
+        "consensus_zh",
+        "disagreements_zh",
+        "why_it_matters_zh",
+        "signals_and_limits_zh",
+        "url"
+      ],
+      "additionalProperties": false
+    },
+    "topic": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "enum": [
+            "macroeconomics",
+            "shipping",
+            "commodities",
+            "stock_market",
+            "technology",
+            "consumer",
+            "cloud_infra",
+            "ai_frontier"
+          ]
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {"$ref": "#/definitions/item"}
+        }
+      },
+      "required": ["key", "items"],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "date": {"type": "string"},
+    "topics": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {"$ref": "#/definitions/topic"}
+    }
+  },
+  "required": ["date", "topics"],
+  "additionalProperties": false
+}
