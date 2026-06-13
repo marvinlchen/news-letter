@@ -287,6 +287,7 @@ COUNTRIES = {
             "sgx",
             "singapore",
             "singaporean",
+            "s'pore",
             "straits times index",
         },
     },
@@ -311,6 +312,7 @@ COUNTRIES = {
             "federal reserve",
             "nasdaq",
             "s&p 500",
+            "u.s.",
             "united states",
             "wall street",
             "washington",
@@ -338,7 +340,8 @@ COUNTRY_NEWS_KEYWORDS = {
     "inflation",
     "investment",
     "licensing",
-    "market",
+    "market cap",
+    "markets",
     "monetary",
     "oil",
     "policy",
@@ -355,14 +358,21 @@ COUNTRY_NEWS_KEYWORDS = {
 }
 COUNTRY_LOW_SIGNAL_TITLE_PATTERNS = {
     "academic rankings",
+    "citizen science",
     "county employment and wages",
+    "data from:",
     "dies at",
     "dog abuse",
     "faqs",
+    "food and nutrition administration",
+    "lifestyle",
     "opening bell",
     "parish employment and wages",
     "temperature",
+    "training requirement",
+    "waivers",
     "weather",
+    "wet market",
 }
 TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
     "macroeconomics": {"consumer price index,"},
@@ -445,7 +455,7 @@ def title_tokens(title: str) -> set[str]:
 
 
 def contains_keyword(text: str, keyword: str) -> bool:
-    if " " in keyword or "-" in keyword:
+    if " " in keyword or "-" in keyword or "." in keyword:
         return keyword in text
     return re.search(rf"\b{re.escape(keyword)}\b", text) is not None
 

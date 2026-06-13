@@ -483,6 +483,19 @@ class PipelineTest(unittest.TestCase):
         )
         self.assertFalse(is_article_eligible_for_country(article, "singapore"))
 
+    def test_country_ranking_matches_us_abbreviation(self) -> None:
+        article = Article(
+            article_id="us-payroll",
+            title="U.S. payroll growth accelerates",
+            url="https://example.com/us-payroll",
+            source="Example Wire",
+            published_at=self.articles[0].published_at,
+            description="Employment growth exceeded expectations.",
+            category="finance",
+            source_weight=10,
+        )
+        self.assertTrue(is_article_eligible_for_country(article, "united_states"))
+
     def test_deduplicate_merges_country_and_topic_bindings(self) -> None:
         topic_copy = Article(
             article_id="topic-copy",
