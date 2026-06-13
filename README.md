@@ -8,8 +8,9 @@ The pipeline deliberately separates deterministic work from LLM work:
 1. Python fetches configured RSS feeds and trusted-source indexes.
 2. Python normalizes URLs, filters by publication date, deduplicates stories,
    clusters related headlines, and ranks candidates.
-3. Codex selects up to three consequential stories for each configured topic,
-   then writes Chinese summaries using only the supplied candidate data.
+3. Codex selects up to three consequential stories for each configured topic
+   and country section, then writes Chinese summaries using only the supplied
+   candidate data.
 4. If Codex fails, the pipeline still writes a deterministic fallback digest.
 
 The daily report contains time-sensitive news only, with no overall Top 10. It
@@ -23,6 +24,11 @@ covers eight topics:
 - Consumer
 - Cloud Infra Engineering
 - AI Frontier
+
+It also contains an independent country-news section with up to three
+consequential stories each for Singapore, China, and the United States. Country
+selection prioritizes economic, business, policy, market, and corporate events
+with durable implications for investors.
 
 The repository also produces a separate weekly technical deep-reading report
 for Cloud Infra Engineering and AI Frontier. It is intentionally not mixed into

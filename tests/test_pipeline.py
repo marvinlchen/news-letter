@@ -12,8 +12,11 @@ from finance_digest.collect import in_target_date
 from finance_digest.feeds import parse_feed, parse_world_bank_news
 from finance_digest.models import Article
 from finance_digest.ranking import (
+    COUNTRIES,
     TOPICS,
     classify_topics,
+    country_top_articles,
+    is_article_eligible_for_country,
     is_article_eligible_for_topic,
     is_low_signal,
     score_articles,
@@ -37,6 +40,21 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(len(self.articles), 2)
         self.assertEqual(self.articles[0].source, "Example Wire")
         self.assertEqual(self.articles[0].url, "https://example.com/rates")
+
+    def test_parse_preserves_country_binding(self) -> None:
+        data = (ROOT / "tests/fixtures/sample.xml").read_bytes()
+        articles = parse_feed(
+            data,
+            {
+                "name": "Singapore Authority",
+                "weight": 10,
+                "category": "finance",
+                "countries": ["singapore"],
+                "country_binding": "authoritative",
+            },
+        )
+        self.assertEqual(articles[0].countries, ["singapore"])
+        self.assertEqual(articles[0].country_binding, "authoritative")
 
     def test_parse_world_bank_news_api(self) -> None:
         data = json.dumps(
@@ -200,6 +218,10 @@ class PipelineTest(unittest.TestCase):
                             {"key": key, "items": []}
                             for key in TOPICS
                         ],
+                        "countries": [
+                            {"key": key, "items": []}
+                            for key in COUNTRIES
+                        ],
                         "metadata": {"mode": "codex"},
                     }
                 ),
@@ -210,6 +232,10 @@ class PipelineTest(unittest.TestCase):
             self.assertEqual(
                 [topic["key"] for topic in digest["topics"]],
                 list(TOPICS),
+            )
+            self.assertEqual(
+                [country["key"] for country in digest["countries"]],
+                list(COUNTRIES),
             )
 
     def test_incompatible_old_digest_is_not_preserved(self) -> None:
@@ -350,6 +376,10 @@ class PipelineTest(unittest.TestCase):
         self.assertIn("## 消费 Top 3", report)
         self.assertIn("## Cloud Infra Engineering Top 3", report)
         self.assertIn("## AI 前沿 Top 3", report)
+        self.assertIn("## 国家新闻", report)
+        self.assertIn("### 新加坡 Top 3", report)
+        self.assertIn("### 中国 Top 3", report)
+        self.assertIn("### 美国 Top 3", report)
         self.assertNotIn("- **中文标题：**", report)
         self.assertIn("- **原标题：** Container shipping rates rise", report)
         self.assertIn("- **摘要：** 可信来源发布一则航运消息", report)
@@ -367,6 +397,67 @@ class PipelineTest(unittest.TestCase):
                 "cloud_infra",
                 "ai_frontier",
             ],
+        )
+
+    def test_three_country_sections_are_configured(self) -> None:
+        self.assertEqual(
+            list(COUNTRIES),
+            ["singapore", "china", "united_states"],
+        )
+
+    def test_authoritative_country_source_bindings_do_not_cross_countries(
+        self,
+    ) -> None:
+        sources = json.loads((ROOT / "config/sources.json").read_text())["sources"]
+        by_name = {source["name"]: source for source in sources}
+        self.assertNotIn("countries", by_name["IMF Official Index"])
+        self.assertNotIn("countries", by_name["Eurostat Official Index"])
+        self.assertEqual(by_name["BEA Official Index"]["countries"], ["united_states"])
+        self.assertEqual(by_name["FRED Official Index"]["countries"], ["united_states"])
+        self.assertEqual(by_name["China NBS Official Index"]["countries"], ["china"])
+        self.assertEqual(by_name["MAS Official Index"]["countries"], ["singapore"])
+
+    def test_country_ranking_supports_keyword_and_authoritative_binding(self) -> None:
+        keyword_match = Article(
+            article_id="singapore-keyword",
+            title="Singapore raises its economic growth forecast",
+            url="https://example.com/singapore-keyword",
+            source="Example Wire",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="finance",
+            source_weight=9,
+        )
+        authoritative = Article(
+            article_id="singapore-authority",
+            title="New monetary policy statement",
+            url="https://example.com/singapore-authority",
+            source="MAS",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="central_banks",
+            source_weight=10,
+            countries=["singapore"],
+            country_binding="authoritative",
+        )
+        unrelated = Article(
+            article_id="unrelated-country",
+            title="European factory output rises",
+            url="https://example.com/unrelated-country",
+            source="Example Wire",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="finance",
+            source_weight=9,
+        )
+        ranked = score_articles([keyword_match, authoritative, unrelated])
+        self.assertTrue(is_article_eligible_for_country(authoritative, "singapore"))
+        self.assertEqual(
+            {
+                article.article_id
+                for article in country_top_articles(ranked)["singapore"]
+            },
+            {"singapore-keyword", "singapore-authority"},
         )
 
     def test_stock_market_topic_selects_daily_market_move(self) -> None:
@@ -518,6 +609,11 @@ class PipelineTest(unittest.TestCase):
                     "items": [],
                 },
                 {"key": "ai_frontier", "name_zh": "AI 前沿", "items": []},
+            ],
+            "countries": [
+                {"key": "singapore", "name_zh": "新加坡", "items": []},
+                {"key": "china", "name_zh": "中国", "items": []},
+                {"key": "united_states", "name_zh": "美国", "items": []},
             ],
         }
         validated = validate_digest(digest, date(2026, 6, 10), [article])

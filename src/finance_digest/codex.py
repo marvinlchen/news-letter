@@ -10,7 +10,14 @@ from pathlib import Path
 from typing import Any
 
 from .models import Article
-from .ranking import TOPICS, is_article_eligible_for_topic, topic_top_articles
+from .ranking import (
+    COUNTRIES,
+    TOPICS,
+    country_top_articles,
+    is_article_eligible_for_country,
+    is_article_eligible_for_topic,
+    topic_top_articles,
+)
 
 
 CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
@@ -31,6 +38,7 @@ def validate_items(
     articles: list[Article],
     maximum: int,
     allowed_topic: str | None = None,
+    allowed_country: str | None = None,
 ) -> list[dict[str, Any]]:
     if not isinstance(raw_items, list) or len(raw_items) > maximum:
         raise ValueError("Codex returned an invalid item count")
@@ -50,6 +58,12 @@ def validate_items(
         if allowed_topic and not is_article_eligible_for_topic(article, allowed_topic):
             raise ValueError(
                 f"Codex returned an article outside topic {allowed_topic}: {url}"
+            )
+        if allowed_country and not is_article_eligible_for_country(
+            article, allowed_country
+        ):
+            raise ValueError(
+                f"Codex returned an article outside country {allowed_country}: {url}"
             )
         validate_text_length(raw_item, "title_zh", 4, 60)
         validate_text_length(raw_item, "summary_zh", 60, 200)
@@ -97,7 +111,36 @@ def validate_digest(
             }
         )
     topics.sort(key=lambda topic: list(TOPICS).index(topic["key"]))
-    return {"date": target_date.isoformat(), "topics": topics}
+    raw_countries = digest.get("countries")
+    if not isinstance(raw_countries, list) or len(raw_countries) != len(COUNTRIES):
+        raise ValueError("Codex returned an invalid country count")
+    countries = []
+    seen_country_keys: set[str] = set()
+    for raw_country in raw_countries:
+        if not isinstance(raw_country, dict):
+            raise ValueError("Codex returned a non-object country")
+        key = raw_country.get("key")
+        if key not in COUNTRIES or key in seen_country_keys:
+            raise ValueError(f"Codex returned an invalid country key: {key}")
+        seen_country_keys.add(key)
+        countries.append(
+            {
+                "key": key,
+                "name_zh": COUNTRIES[key]["name_zh"],
+                "items": validate_items(
+                    raw_country.get("items"),
+                    articles,
+                    3,
+                    allowed_country=key,
+                ),
+            }
+        )
+    countries.sort(key=lambda country: list(COUNTRIES).index(country["key"]))
+    return {
+        "date": target_date.isoformat(),
+        "topics": topics,
+        "countries": countries,
+    }
 
 
 def run_codex(
@@ -114,6 +157,11 @@ def run_codex(
             if article.url not in selected_urls:
                 selected_articles.append(article)
                 selected_urls.add(article.url)
+    for country_articles in country_top_articles(articles, limit=12).values():
+        for article in country_articles:
+            if article.url not in selected_urls:
+                selected_articles.append(article)
+                selected_urls.add(article.url)
     candidates = {
         "date": target_date.isoformat(),
         "candidates": [
@@ -123,6 +171,11 @@ def run_codex(
                     topic
                     for topic in TOPICS
                     if is_article_eligible_for_topic(article, topic)
+                ],
+                "matched_countries": [
+                    country
+                    for country in COUNTRIES
+                    if is_article_eligible_for_country(article, country)
                 ],
             }
             for article in selected_articles

@@ -20,14 +20,18 @@
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "category": "central_banks",
       "weight": 10,
-      "topics": ["macroeconomics"]
+      "topics": ["macroeconomics"],
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "SEC",
       "provider": "rss",
       "url": "https://www.sec.gov/news/pressreleases.rss",
       "category": "regulation",
-      "weight": 9
+      "weight": 9,
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "European Central Bank",
@@ -59,7 +63,9 @@
       "url": "https://www.eia.gov/rss/todayinenergy.xml",
       "category": "energy",
       "weight": 9,
-      "topics": ["commodities"]
+      "topics": ["commodities"],
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "Bank of Japan",
@@ -75,7 +81,9 @@
       "url": "https://www.cftc.gov/RSS/RSSGP/rssgp.xml",
       "category": "regulation",
       "weight": 9,
-      "topics": ["commodities"]
+      "topics": ["commodities"],
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "World Bank",
@@ -214,7 +222,9 @@
       "url": "https://news.google.com/rss/search?q=site%3Ausda.gov%20%28commodities%20OR%20agriculture%20OR%20crop%20OR%20food%20OR%20market%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "commodities",
       "weight": 9,
-      "topics": ["commodities"]
+      "topics": ["commodities"],
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "BLS Official Index",
@@ -222,7 +232,9 @@
       "url": "https://news.google.com/rss/search?q=site%3Abls.gov%20%28inflation%20OR%20employment%20OR%20wages%20OR%20prices%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "finance",
       "weight": 10,
-      "topics": ["macroeconomics"]
+      "topics": ["macroeconomics"],
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "BEA Official Index",
@@ -230,7 +242,9 @@
       "url": "https://news.google.com/rss/search?q=site%3Abea.gov%20%28GDP%20OR%20income%20OR%20trade%20OR%20investment%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "finance",
       "weight": 10,
-      "topics": ["macroeconomics"]
+      "topics": ["macroeconomics"],
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "Eurostat Official Index",
@@ -246,7 +260,9 @@
       "url": "https://news.google.com/rss/search?q=site%3Astlouisfed.org%20%28economy%20OR%20inflation%20OR%20employment%20OR%20finance%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "finance",
       "weight": 9,
-      "topics": ["macroeconomics"]
+      "topics": ["macroeconomics"],
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "SEC EDGAR Official Index",
@@ -262,7 +278,9 @@
       "url": "https://news.google.com/rss/search?q=site%3Astats.gov.cn%20%28CPI%20OR%20PPI%20OR%20PMI%20OR%20economy%20OR%20industrial%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "finance",
       "weight": 10,
-      "topics": ["macroeconomics"]
+      "topics": ["macroeconomics"],
+      "countries": ["china"],
+      "country_binding": "authoritative"
     },
     {
       "name": "MAS Official Index",
@@ -270,7 +288,36 @@
       "url": "https://news.google.com/rss/search?q=site%3Amas.gov.sg%20%28monetary%20OR%20finance%20OR%20regulation%20OR%20inflation%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "central_banks",
       "weight": 9,
-      "topics": ["macroeconomics"]
+      "topics": ["macroeconomics"],
+      "countries": ["singapore"],
+      "country_binding": "authoritative"
+    },
+    {
+      "name": "Trusted Singapore Finance Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%20OR%20site%3Achannelnewsasia.com%20OR%20site%3Astraitstimes.com%29%20Singapore%20%28economy%20OR%20business%20OR%20markets%20OR%20trade%20OR%20company%20OR%20regulation%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10,
+      "countries": ["singapore"],
+      "country_binding": "authoritative"
+    },
+    {
+      "name": "Trusted China Finance Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%20OR%20site%3Acaixinglobal.com%20OR%20site%3Ascmp.com%29%20China%20%28economy%20OR%20business%20OR%20markets%20OR%20trade%20OR%20company%20OR%20regulation%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10,
+      "countries": ["china"],
+      "country_binding": "authoritative"
+    },
+    {
+      "name": "Trusted United States Finance Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%20OR%20site%3Aapnews.com%29%20%28%22U.S.%22%20OR%20%22United%20States%22%20OR%20American%29%20%28economy%20OR%20business%20OR%20markets%20OR%20trade%20OR%20company%20OR%20regulation%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 10,
+      "countries": ["united_states"],
+      "country_binding": "authoritative"
     },
     {
       "name": "Cloud Platform News Index",

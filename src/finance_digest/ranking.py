@@ -278,6 +278,46 @@ TOPICS = {
         },
     },
 }
+COUNTRIES = {
+    "singapore": {
+        "name_zh": "新加坡",
+        "keywords": {
+            "mas",
+            "monetary authority of singapore",
+            "sgx",
+            "singapore",
+            "singaporean",
+            "straits times index",
+        },
+    },
+    "china": {
+        "name_zh": "中国",
+        "keywords": {
+            "beijing",
+            "china",
+            "chinese",
+            "hang seng",
+            "hong kong",
+            "pboc",
+            "people's bank of china",
+            "shanghai",
+            "shenzhen",
+        },
+    },
+    "united_states": {
+        "name_zh": "美国",
+        "keywords": {
+            "american",
+            "federal reserve",
+            "nasdaq",
+            "s&p 500",
+            "united states",
+            "wall street",
+            "washington",
+            "white house",
+        },
+    },
+}
 TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
     "macroeconomics": {"consumer price index,"},
     "shipping": {"inflation", "tariff refund"},
@@ -446,6 +486,60 @@ def topic_top_articles(articles: list[Article], limit: int = 3) -> dict[str, lis
                 break
         result[key] = selected
     return result
+
+
+def country_keyword_relevance(article: Article, country: str) -> int:
+    keywords = COUNTRIES[country]["keywords"]
+    title = article.title.lower()
+    description = article.description.lower()
+    title_matches = sum(contains_keyword(title, keyword) for keyword in keywords)
+    description_matches = sum(
+        contains_keyword(description, keyword) for keyword in keywords
+    )
+    return title_matches * 3 + description_matches
+
+
+def is_article_eligible_for_country(article: Article, country: str) -> bool:
+    authoritative_binding = (
+        country in article.countries and article.country_binding == "authoritative"
+    )
+    return country_keyword_relevance(article, country) > 0 or authoritative_binding
+
+
+def country_top_articles(
+    articles: list[Article], limit: int = 3
+) -> dict[str, list[Article]]:
+    result = {}
+    for key in COUNTRIES:
+        matches = [
+            article
+            for article in articles
+            if is_article_eligible_for_country(article, key)
+        ]
+        matches.sort(
+            key=lambda article: (
+                article.score
+                + country_keyword_relevance(article, key) * 2
+                + (12 if key in article.countries else 0),
+                country_keyword_relevance(article, key),
+                article.published_at,
+            ),
+            reverse=True,
+        )
+        selected: list[Article] = []
+        source_counts: dict[str, int] = defaultdict(int)
+        for article in matches:
+            if any(similarity(article, existing) >= 0.34 for existing in selected):
+                continue
+            if source_counts[article.source] >= 2:
+                continue
+            selected.append(article)
+            source_counts[article.source] += 1
+            if len(selected) == limit:
+                break
+        result[key] = selected
+    return result
+
 
 def similarity(left: Article, right: Article) -> float:
     left_tokens = title_tokens(left.title)

@@ -17,6 +17,8 @@ class Article:
     source_weight: int
     topics: list[str] = field(default_factory=list)
     topic_binding: str = "keyword_required"
+    countries: list[str] = field(default_factory=list)
+    country_binding: str = "keyword_required"
     score: float = 0.0
     cluster_size: int = 1
 

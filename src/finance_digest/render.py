@@ -5,7 +5,7 @@ from datetime import date
 from typing import Any
 
 from .models import Article
-from .ranking import TOPICS, topic_top_articles
+from .ranking import COUNTRIES, TOPICS, country_top_articles, topic_top_articles
 
 
 SOURCE_NAMES = {
@@ -88,7 +88,24 @@ def fallback_digest(target_date: date, articles: list[Article]) -> dict[str, Any
                 ],
             }
         )
-    return {"date": target_date.isoformat(), "topics": topics}
+    countries = []
+    for key, country_articles in country_top_articles(articles).items():
+        name_zh = COUNTRIES[key]["name_zh"]
+        countries.append(
+            {
+                "key": key,
+                "name_zh": name_zh,
+                "items": [
+                    fallback_item(article, rank, name_zh)
+                    for rank, article in enumerate(country_articles, start=1)
+                ],
+            }
+        )
+    return {
+        "date": target_date.isoformat(),
+        "topics": topics,
+        "countries": countries,
+    }
 
 
 def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[str, str]]) -> str:
@@ -118,6 +135,13 @@ def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[
         lines.extend([f"## {topic['name_zh']} Top 3", ""])
         if topic["items"]:
             render_items(topic["items"], 3)
+        else:
+            lines.extend(["当日候选新闻不足，未选出符合条件的报道。", ""])
+    lines.extend(["## 国家新闻", ""])
+    for country in digest.get("countries", []):
+        lines.extend([f"### {country['name_zh']} Top 3", ""])
+        if country["items"]:
+            render_items(country["items"], 4)
         else:
             lines.extend(["当日候选新闻不足，未选出符合条件的报道。", ""])
     if source_errors:

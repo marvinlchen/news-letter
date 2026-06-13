@@ -72,8 +72,30 @@
         "required": ["key", "name_zh", "items"],
         "additionalProperties": false
       }
+    },
+    "countries": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "enum": ["singapore", "china", "united_states"]
+          },
+          "name_zh": {"type": "string"},
+          "items": {
+            "type": "array",
+            "maxItems": 3,
+            "items": {"$ref": "#/definitions/newsItem"}
+          }
+        },
+        "required": ["key", "name_zh", "items"],
+        "additionalProperties": false
+      }
     }
   },
-  "required": ["date", "topics"],
+  "required": ["date", "topics", "countries"],
   "additionalProperties": false
 }

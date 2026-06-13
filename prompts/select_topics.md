@@ -4,6 +4,12 @@ Select up to 3 consequential stories for each supplied topic:
 macroeconomics, shipping, commodities, stock_market, technology, consumer,
 cloud_infra, and ai_frontier. There is no overall Top 10.
 
+Also select up to 3 consequential finance, business, policy, market, or corporate
+stories for each supplied country section: `singapore`, `china`, and
+`united_states`. Country sections are independent of topic sections, so the
+same consequential story may appear once in a topic section and once in a
+country section.
+
 Rules:
 
 - Use only facts present in the candidate JSON.
@@ -25,8 +31,14 @@ Rules:
 - Avoid selecting multiple stories about the same underlying event.
 - Select stories only when the candidate's `matched_topics` list contains the
   matching topic key.
+- For country sections, select stories only when the candidate's
+  `matched_countries` list contains the matching country key. Prioritize stories
+  with durable implications for economic growth, industry structure, corporate
+  earnings, cash flow, capital allocation, regulation, or asset valuation.
 - Return all eight topic sections even when a section has fewer than 3 suitable
   candidates.
+- Return all three country sections even when a section has fewer than 3
+  suitable candidates.
 - Preserve the supplied source name, publication time, and URL.
 - `title_zh` must be a concise Chinese headline. Do not copy the English title.
 - `summary_zh` must be one neutral Chinese paragraph of 60-200 Chinese
