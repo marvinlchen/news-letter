@@ -318,6 +318,52 @@ COUNTRIES = {
         },
     },
 }
+COUNTRY_NEWS_KEYWORDS = {
+    "acquisition",
+    "bank",
+    "business",
+    "capital",
+    "company",
+    "corporate",
+    "currency",
+    "earnings",
+    "economic",
+    "economy",
+    "employment",
+    "energy",
+    "finance",
+    "financial",
+    "gdp",
+    "industry",
+    "inflation",
+    "investment",
+    "licensing",
+    "market",
+    "monetary",
+    "oil",
+    "policy",
+    "port",
+    "regulation",
+    "regulator",
+    "sanctions",
+    "semiconductor",
+    "shares",
+    "shipping",
+    "stock",
+    "trade",
+    "wages",
+}
+COUNTRY_LOW_SIGNAL_TITLE_PATTERNS = {
+    "academic rankings",
+    "county employment and wages",
+    "dies at",
+    "dog abuse",
+    "faqs",
+    "opening bell",
+    "parish employment and wages",
+    "temperature",
+    "weather",
+}
 TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
     "macroeconomics": {"consumer price index,"},
     "shipping": {"inflation", "tariff refund"},
@@ -503,7 +549,16 @@ def is_article_eligible_for_country(article: Article, country: str) -> bool:
     authoritative_binding = (
         country in article.countries and article.country_binding == "authoritative"
     )
-    return country_keyword_relevance(article, country) > 0 or authoritative_binding
+    text = f"{article.title} {article.description}".lower()
+    country_match = country_keyword_relevance(article, country) > 0
+    finance_match = any(
+        contains_keyword(text, keyword) for keyword in COUNTRY_NEWS_KEYWORDS
+    ) or any(topic_keyword_relevance(article, topic) > 0 for topic in TOPICS)
+    low_signal = any(
+        pattern in article.title.lower()
+        for pattern in COUNTRY_LOW_SIGNAL_TITLE_PATTERNS
+    )
+    return (country_match or authoritative_binding) and finance_match and not low_signal
 
 
 def country_top_articles(
@@ -550,15 +605,26 @@ def similarity(left: Article, right: Article) -> float:
 
 
 def deduplicate(articles: list[Article]) -> list[Article]:
-    seen_urls: set[str] = set()
-    seen_titles: set[str] = set()
+    by_url: dict[str, Article] = {}
+    by_title: dict[str, Article] = {}
     result: list[Article] = []
     for article in sorted(articles, key=lambda item: item.source_weight, reverse=True):
         normalized_title = " ".join(sorted(title_tokens(article.title)))
-        if article.url in seen_urls or normalized_title in seen_titles:
+        existing = by_url.get(article.url) or by_title.get(normalized_title)
+        if existing is not None:
+            existing.topics = list(dict.fromkeys([*existing.topics, *article.topics]))
+            existing.countries = list(
+                dict.fromkeys([*existing.countries, *article.countries])
+            )
+            if article.topic_binding == "authoritative":
+                existing.topic_binding = "authoritative"
+            if article.country_binding == "authoritative":
+                existing.country_binding = "authoritative"
+            if len(article.description) > len(existing.description):
+                existing.description = article.description
             continue
-        seen_urls.add(article.url)
-        seen_titles.add(normalized_title)
+        by_url[article.url] = article
+        by_title[normalized_title] = article
         result.append(article)
     return result
 

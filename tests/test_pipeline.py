@@ -19,6 +19,7 @@ from finance_digest.ranking import (
     is_article_eligible_for_country,
     is_article_eligible_for_topic,
     is_low_signal,
+    deduplicate,
     score_articles,
     topic_top_articles,
 )
@@ -416,6 +417,13 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(by_name["FRED Official Index"]["countries"], ["united_states"])
         self.assertEqual(by_name["China NBS Official Index"]["countries"], ["china"])
         self.assertEqual(by_name["MAS Official Index"]["countries"], ["singapore"])
+        self.assertNotIn(
+            "country_binding", by_name["Trusted Singapore Finance Index"]
+        )
+        self.assertNotIn("country_binding", by_name["Trusted China Finance Index"])
+        self.assertNotIn(
+            "country_binding", by_name["Trusted United States Finance Index"]
+        )
 
     def test_country_ranking_supports_keyword_and_authoritative_binding(self) -> None:
         keyword_match = Article(
@@ -459,6 +467,53 @@ class PipelineTest(unittest.TestCase):
             },
             {"singapore-keyword", "singapore-authority"},
         )
+
+    def test_country_ranking_rejects_non_financial_local_news(self) -> None:
+        article = Article(
+            article_id="singapore-weather",
+            title="Sweater weather in Singapore as temperature falls",
+            url="https://example.com/singapore-weather",
+            source="Example Singapore Source",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="finance",
+            source_weight=10,
+            countries=["singapore"],
+            country_binding="authoritative",
+        )
+        self.assertFalse(is_article_eligible_for_country(article, "singapore"))
+
+    def test_deduplicate_merges_country_and_topic_bindings(self) -> None:
+        topic_copy = Article(
+            article_id="topic-copy",
+            title="Semiconductor company expands Singapore investment",
+            url="https://example.com/shared",
+            source="Topic Index",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="technology",
+            source_weight=10,
+            topics=["technology"],
+            topic_binding="authoritative",
+        )
+        country_copy = Article(
+            article_id="country-copy",
+            title="Semiconductor company expands Singapore investment",
+            url="https://example.com/shared",
+            source="Country Index",
+            published_at=self.articles[0].published_at,
+            description="Additional context about the investment.",
+            category="finance",
+            source_weight=9,
+            countries=["singapore"],
+            country_binding="authoritative",
+        )
+        merged = deduplicate([topic_copy, country_copy])
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged[0].topics, ["technology"])
+        self.assertEqual(merged[0].countries, ["singapore"])
+        self.assertEqual(merged[0].country_binding, "authoritative")
+        self.assertEqual(merged[0].description, country_copy.description)
 
     def test_stock_market_topic_selects_daily_market_move(self) -> None:
         article = Article(

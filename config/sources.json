@@ -298,8 +298,7 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%20OR%20site%3Achannelnewsasia.com%20OR%20site%3Astraitstimes.com%29%20Singapore%20%28economy%20OR%20business%20OR%20markets%20OR%20trade%20OR%20company%20OR%20regulation%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "finance",
       "weight": 10,
-      "countries": ["singapore"],
-      "country_binding": "authoritative"
+      "countries": ["singapore"]
     },
     {
       "name": "Trusted China Finance Index",
@@ -307,8 +306,7 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%20OR%20site%3Acaixinglobal.com%20OR%20site%3Ascmp.com%29%20China%20%28economy%20OR%20business%20OR%20markets%20OR%20trade%20OR%20company%20OR%20regulation%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "finance",
       "weight": 10,
-      "countries": ["china"],
-      "country_binding": "authoritative"
+      "countries": ["china"]
     },
     {
       "name": "Trusted United States Finance Index",
@@ -316,8 +314,7 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Aft.com%20OR%20site%3Acnbc.com%20OR%20site%3Aapnews.com%29%20%28%22U.S.%22%20OR%20%22United%20States%22%20OR%20American%29%20%28economy%20OR%20business%20OR%20markets%20OR%20trade%20OR%20company%20OR%20regulation%29%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "finance",
       "weight": 10,
-      "countries": ["united_states"],
-      "country_binding": "authoritative"
+      "countries": ["united_states"]
     },
     {
       "name": "Cloud Platform News Index",
