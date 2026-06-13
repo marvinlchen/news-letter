@@ -496,6 +496,19 @@ class PipelineTest(unittest.TestCase):
         )
         self.assertTrue(is_article_eligible_for_country(article, "united_states"))
 
+    def test_country_ranking_matches_singapore_local_marker(self) -> None:
+        article = Article(
+            article_id="pasir-panjang",
+            title="Supply boat collision off Pasir Panjang Terminal",
+            url="https://example.com/pasir-panjang",
+            source="Example Wire",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="shipping",
+            source_weight=10,
+        )
+        self.assertTrue(is_article_eligible_for_country(article, "singapore"))
+
     def test_deduplicate_merges_country_and_topic_bindings(self) -> None:
         topic_copy = Article(
             article_id="topic-copy",
