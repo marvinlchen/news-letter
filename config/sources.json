@@ -278,7 +278,8 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Aaws.amazon.com%2Fblogs%20OR%20site%3Acloud.google.com%2Fblog%20OR%20site%3Aazure.microsoft.com%2Fblog%20OR%20site%3Ablog.cloudflare.com%29%20%28launch%20OR%20announces%20OR%20outage%20OR%20incident%20OR%20security%20OR%20vulnerability%20OR%20acquisition%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "cloud_infra",
       "weight": 10,
-      "topics": ["cloud_infra"]
+      "topics": ["cloud_infra"],
+      "topic_binding": "authoritative"
     },
     {
       "name": "Semiconductor Industry Index",
@@ -286,7 +287,8 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Asemiconductors.org%20OR%20site%3Atsmc.com%20OR%20site%3Aasml.com%2Fen%2Fnews%20OR%20site%3Aintel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fnewsroom%29%20%28semiconductor%20OR%20chip%20OR%20foundry%20OR%20lithography%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "technology",
       "weight": 10,
-      "topics": ["technology"]
+      "topics": ["technology"],
+      "topic_binding": "authoritative"
     },
     {
       "name": "Technology Platform News Index",
@@ -294,7 +296,8 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Ablogs.microsoft.com%20OR%20site%3Aapple.com%2Fnewsroom%20OR%20site%3Ablog.google%20OR%20site%3Aabout.fb.com%2Fnews%29%20%28software%20OR%20security%20OR%20technology%20OR%20chip%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "technology",
       "weight": 9,
-      "topics": ["technology"]
+      "topics": ["technology"],
+      "topic_binding": "authoritative"
     },
     {
       "name": "Cloud Native Engineering Index",
@@ -303,7 +306,8 @@
       "category": "cloud_infra",
       "weight": 10,
       "enabled": false,
-      "topics": ["cloud_infra"]
+      "topics": ["cloud_infra"],
+      "topic_binding": "authoritative"
     },
     {
       "name": "AI Frontier Labs Index",
@@ -311,7 +315,8 @@
       "url": "https://news.google.com/rss/search?q=%28site%3Aopenai.com%20OR%20site%3Aanthropic.com%20OR%20site%3Adeepmind.google%20OR%20site%3Aai.meta.com%20OR%20site%3Anvidia.com%29%20%28model%20OR%20research%20OR%20agent%20OR%20inference%20OR%20reasoning%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
       "category": "ai_frontier",
       "weight": 10,
-      "topics": ["ai_frontier"]
+      "topics": ["ai_frontier"],
+      "topic_binding": "authoritative"
     },
     {
       "name": "AI Research Index",
@@ -320,7 +325,8 @@
       "category": "ai_frontier",
       "weight": 8,
       "enabled": false,
-      "topics": ["ai_frontier"]
+      "topics": ["ai_frontier"],
+      "topic_binding": "authoritative"
     },
     {
       "name": "Trusted Cloud Infrastructure News Index",

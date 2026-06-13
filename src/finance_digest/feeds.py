@@ -145,6 +145,7 @@ def parse_feed(data: bytes, source_config: dict[str, Any]) -> list[Article]:
                 category=source_config.get("category", "finance"),
                 source_weight=int(source_config.get("weight", 5)),
                 topics=list(source_config.get("topics", [])),
+                topic_binding=source_config.get("topic_binding", "keyword_required"),
             )
         )
     return articles
@@ -187,6 +188,7 @@ def parse_world_bank_news(data: bytes, source_config: dict[str, Any]) -> list[Ar
                 category=source_config.get("category", "finance"),
                 source_weight=int(source_config.get("weight", 5)),
                 topics=list(source_config.get("topics", [])),
+                topic_binding=source_config.get("topic_binding", "keyword_required"),
             )
         )
     return articles

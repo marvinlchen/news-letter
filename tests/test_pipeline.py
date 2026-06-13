@@ -101,6 +101,35 @@ class PipelineTest(unittest.TestCase):
         )
         self.assertEqual(classify_topics(article), ["ai_frontier"])
 
+    def test_authoritative_topic_binding_does_not_require_title_keyword(self) -> None:
+        article = Article(
+            article_id="authoritative-bound",
+            title="The machines behind the machines",
+            url="https://example.com/authoritative-bound",
+            source="Example Semiconductor Authority",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="technology",
+            source_weight=10,
+            topics=["technology"],
+            topic_binding="authoritative",
+        )
+        self.assertTrue(is_article_eligible_for_topic(article, "technology"))
+
+    def test_keyword_required_binding_still_rejects_irrelevant_index_result(self) -> None:
+        article = Article(
+            article_id="noisy-bound",
+            title="Central bank holds interest rates",
+            url="https://example.com/noisy-bound",
+            source="Example Broad Index",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="shipping",
+            source_weight=10,
+            topics=["shipping"],
+        )
+        self.assertFalse(is_article_eligible_for_topic(article, "shipping"))
+
     def test_authoritative_source_does_not_cross_classify_topics(self) -> None:
         article = Article(
             article_id="authoritative-cloud",

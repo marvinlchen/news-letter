@@ -7,7 +7,9 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from finance_digest.reddit_digest import (
+    RedditRSSClient,
     RedditPost,
+    collect_reddit_posts,
     fallback_report,
     in_lookback,
     investment_relevance,
@@ -42,6 +44,25 @@ COMMENTS = b"""<?xml version="1.0" encoding="UTF-8"?>
 </feed>"""
 
 
+def listing_feed(
+    subreddit: str,
+    post_id: str,
+    title: str,
+    body: str = "Production reliability discussion.",
+) -> bytes:
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <category term="{subreddit}"/>
+    <content type="html">{body}</content>
+    <id>t3_{post_id}</id>
+    <link href="https://www.reddit.com/r/{subreddit}/comments/{post_id}/example/"/>
+    <published>2026-06-11T03:00:00+00:00</published>
+    <title>{title}</title>
+  </entry>
+</feed>""".encode()
+
+
 class RedditDigestTest(unittest.TestCase):
     def post(self, post_id: str, title: str, rank: int = 1) -> RedditPost:
         return RedditPost(
@@ -56,7 +77,9 @@ class RedditDigestTest(unittest.TestCase):
         )
 
     def test_default_window_is_daily(self) -> None:
-        self.assertEqual(parse_args([]).lookback_days, 1)
+        args = parse_args([])
+        self.assertEqual(args.lookback_days, 1)
+        self.assertEqual(args.candidate_limit, 12)
 
     def test_reddit_sort_window_matches_report_window(self) -> None:
         self.assertEqual(reddit_time_filter(1), "day")
@@ -88,6 +111,41 @@ class RedditDigestTest(unittest.TestCase):
         self.assertEqual(posts[0].body, "Production reliability lessons.")
         self.assertNotIn("/u/", posts[0].body)
 
+    def test_rss_listing_fetches_each_subreddit_and_preserves_partial_results(
+        self,
+    ) -> None:
+        class FakeHTTP:
+            def __init__(self) -> None:
+                self.urls: list[str] = []
+
+            def request(self, request: object, retries: int = 5) -> bytes:
+                url = request.full_url
+                self.urls.append(url)
+                if "/r/sysadmin/" in url:
+                    raise OSError("temporary feed failure")
+                return listing_feed(
+                    "kubernetes",
+                    "kubernetes-post",
+                    "Kubernetes infrastructure cost and reliability",
+                )
+
+        client = RedditRSSClient()
+        fake_http = FakeHTTP()
+        client.http = fake_http
+        posts = client.listing(
+            "cloud_infra",
+            ["kubernetes", "sysadmin"],
+            date(2026, 6, 11),
+            1,
+            20,
+        )
+
+        self.assertEqual([post.post_id for post in posts], ["kubernetes-post"])
+        self.assertEqual(len(fake_http.urls), 2)
+        self.assertTrue(any("/r/kubernetes/top/" in url for url in fake_http.urls))
+        self.assertTrue(any("/r/sysadmin/top/" in url for url in fake_http.urls))
+        self.assertEqual(client.errors[0]["source"], "r/sysadmin")
+
     def test_comment_parser_does_not_persist_authors(self) -> None:
         comments = parse_reddit_comment_feed(COMMENTS, "post1", 8)
         self.assertEqual(len(comments), 2)
@@ -113,16 +171,65 @@ class RedditDigestTest(unittest.TestCase):
         )
         self.assertEqual(selected, [post])
 
-    def test_candidate_selection_limits_one_subreddit_to_two_items(self) -> None:
+    def test_candidate_selection_limits_one_subreddit_to_three_items(self) -> None:
         posts = [
             self.post("same-1", "Kubernetes networking outage", 1),
             self.post("same-2", "Database replication failure", 2),
             self.post("same-3", "Observability alert fatigue", 3),
+            self.post("same-4", "Cloud storage capacity planning", 4),
         ]
         selected = select_candidates(
             posts, {"subreddit_weights": {"kubernetes": 10}}, 5
         )
-        self.assertEqual(len(selected), 2)
+        self.assertEqual(len(selected), 3)
+
+    def test_collection_reports_candidate_pool_and_subreddit_distribution(
+        self,
+    ) -> None:
+        class FakeClient:
+            mode = "rss"
+
+            def __init__(self, posts: list[RedditPost]) -> None:
+                self.posts = posts
+                self.errors = [{"source": "r/sysadmin", "error": "feed unavailable"}]
+
+            def listing(self, *args: object) -> list[RedditPost]:
+                return self.posts
+
+        kubernetes = self.post(
+            "kubernetes", "Kubernetes infrastructure cost and reliability"
+        )
+        sysadmin = self.post("sysadmin", "Cloud capacity planning and capex", 2)
+        sysadmin.subreddit = "sysadmin"
+        low_signal = self.post("career", "My cloud certification career journey", 3)
+        client = FakeClient([kubernetes, sysadmin, low_signal])
+
+        candidates, errors, stats = collect_reddit_posts(
+            client,
+            {
+                "cloud_infra": {
+                    "subreddits": ["kubernetes", "sysadmin"],
+                    "subreddit_weights": {"kubernetes": 10, "sysadmin": 9},
+                }
+            },
+            date(2026, 6, 11),
+            1,
+            12,
+            0,
+        )
+
+        self.assertEqual(len(candidates["cloud_infra"]), 2)
+        self.assertEqual(errors[0]["source"], "r/sysadmin")
+        self.assertEqual(
+            stats["cloud_infra"],
+            {
+                "fetched_count": 3,
+                "eligible_count": 2,
+                "candidate_count": 2,
+                "subreddit_counts": {"kubernetes": 2, "sysadmin": 1},
+            },
+        )
+        self.assertEqual(client.errors, [])
 
     def test_value_investing_signal_outranks_generic_popularity(self) -> None:
         generic = self.post("generic", "Interesting Kubernetes discussion", 1)

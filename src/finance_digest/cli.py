@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 from .codex import run_codex
 from .collect import collect_articles, load_sources
-from .ranking import TOPICS
+from .ranking import TOPICS, topic_top_articles
 from .render import fallback_digest, pretty_json, render_markdown
 
 
@@ -120,6 +120,13 @@ def run(argv: list[str] | None = None) -> int:
         "topic_selected_count": sum(
             len(topic["items"]) for topic in digest.get("topics", [])
         ),
+        "topic_candidate_counts": {
+            key: len(items)
+            for key, items in topic_top_articles(articles, limit=12).items()
+        },
+        "topic_selected_counts": {
+            topic["key"]: len(topic["items"]) for topic in digest.get("topics", [])
+        },
         "source_error_count": len(source_errors),
         "codex_error": codex_error,
     }

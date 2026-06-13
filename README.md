@@ -47,15 +47,21 @@ similar speculative content. Popularity alone is not sufficient for selection.
 
 Reddit Top 3 selection uses two stages:
 
-1. Deterministic ranking combines the subreddit weight, daily listing rank,
-   available engagement metrics, and a value-investing relevance score. The
-   relevance score gives the largest boosts to free cash flow, return on
-   invested capital, pricing power, moat, capital allocation, and unit
-   economics, plus topic-specific industry signals.
+1. The collector fetches each configured subreddit independently so large
+   communities cannot crowd specialist communities out of a combined daily
+   listing. Deterministic ranking then combines the subreddit weight, daily
+   listing rank, available engagement metrics, and a value-investing relevance
+   score. Up to twelve diverse candidates per topic are sent to Codex.
 2. Codex selects up to three discussions only when the supplied evidence has a
    plausible long-term fundamental implication. It may return fewer than three
    or an empty topic. Each selected item must explain fundamental impact, the
    value-investor takeaway, key risks, and evidence still required.
+
+For daily news, specialist semiconductor, technology-platform, cloud-platform,
+cloud-native, and AI-lab indexes use an authoritative topic binding. Their
+stories can enter the topic candidate pool even when a concise headline does not
+repeat a generic topic keyword. Broad search indexes still require keyword
+relevance, preventing unrelated search results from entering a topic.
 
 ## Source Policy
 

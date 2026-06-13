@@ -365,6 +365,7 @@ class RedditRSSClient:
     def __init__(self) -> None:
         # Reddit's unauthenticated RSS endpoint applies aggressive per-IP limits.
         self.http = RedditHTTPClient(minimum_interval=30.0)
+        self.errors: list[dict[str, str]] = []
 
     def listing(
         self,
@@ -374,20 +375,30 @@ class RedditRSSClient:
         lookback_days: int,
         limit: int,
     ) -> list[RedditPost]:
-        joined = "+".join(subreddits)
-        url = (
-            f"https://www.reddit.com/r/{joined}/top/.rss?"
-            + urllib.parse.urlencode(
-                {"t": reddit_time_filter(lookback_days), "limit": limit}
+        posts: list[RedditPost] = []
+        for subreddit in subreddits:
+            url = (
+                f"https://www.reddit.com/r/{subreddit}/top/.rss?"
+                + urllib.parse.urlencode(
+                    {"t": reddit_time_filter(lookback_days), "limit": limit}
+                )
             )
-        )
-        request = urllib.request.Request(
-            url,
-            headers={"User-Agent": USER_AGENT, "Accept": "application/atom+xml"},
-        )
-        return parse_reddit_listing_feed(
-            self.http.request(request, retries=3), topic, target_date, lookback_days
-        )
+            request = urllib.request.Request(
+                url,
+                headers={"User-Agent": USER_AGENT, "Accept": "application/atom+xml"},
+            )
+            try:
+                posts.extend(
+                    parse_reddit_listing_feed(
+                        self.http.request(request, retries=3),
+                        topic,
+                        target_date,
+                        lookback_days,
+                    )
+                )
+            except Exception as exc:
+                self.errors.append({"source": f"r/{subreddit}", "error": str(exc)})
+        return posts
 
     def comments(self, post: RedditPost, limit: int) -> list[str]:
         url = post.url.rstrip("/") + "/.rss"
@@ -417,6 +428,7 @@ class RedditOAuthClient:
         )
         payload = json.loads(self.http.request(request))
         self.token = payload["access_token"]
+        self.errors: list[dict[str, str]] = []
 
     def get_json(self, path: str, parameters: dict[str, Any]) -> Any:
         url = f"https://oauth.reddit.com{path}?{urllib.parse.urlencode(parameters)}"
@@ -438,34 +450,41 @@ class RedditOAuthClient:
         lookback_days: int,
         limit: int,
     ) -> list[RedditPost]:
-        payload = self.get_json(
-            f"/r/{'+'.join(subreddits)}/top",
-            {
-                "t": reddit_time_filter(lookback_days),
-                "limit": limit,
-                "raw_json": 1,
-            },
-        )
         posts: list[RedditPost] = []
-        for rank, child in enumerate(payload["data"]["children"], start=1):
-            data = child.get("data", {})
-            published = datetime.fromtimestamp(data.get("created_utc", 0), timezone.utc)
-            if not in_lookback(published, target_date, lookback_days):
-                continue
-            posts.append(
-                RedditPost(
-                    post_id=data["id"],
-                    topic=topic,
-                    title=clean_text(data.get("title", "")),
-                    subreddit=data.get("subreddit", ""),
-                    url="https://www.reddit.com" + data.get("permalink", ""),
-                    published_at=published,
-                    body=clean_text(data.get("selftext", "")),
-                    listing_rank=rank,
-                    score=int(data.get("score", 0)),
-                    num_comments=int(data.get("num_comments", 0)),
+        for subreddit in subreddits:
+            try:
+                payload = self.get_json(
+                    f"/r/{subreddit}/top",
+                    {
+                        "t": reddit_time_filter(lookback_days),
+                        "limit": limit,
+                        "raw_json": 1,
+                    },
                 )
-            )
+            except Exception as exc:
+                self.errors.append({"source": f"r/{subreddit}", "error": str(exc)})
+                continue
+            for rank, child in enumerate(payload["data"]["children"], start=1):
+                data = child.get("data", {})
+                published = datetime.fromtimestamp(
+                    data.get("created_utc", 0), timezone.utc
+                )
+                if not in_lookback(published, target_date, lookback_days):
+                    continue
+                posts.append(
+                    RedditPost(
+                        post_id=data["id"],
+                        topic=topic,
+                        title=clean_text(data.get("title", "")),
+                        subreddit=data.get("subreddit", ""),
+                        url="https://www.reddit.com" + data.get("permalink", ""),
+                        published_at=published,
+                        body=clean_text(data.get("selftext", "")),
+                        listing_rank=rank,
+                        score=int(data.get("score", 0)),
+                        num_comments=int(data.get("num_comments", 0)),
+                    )
+                )
         return posts
 
     def comments(self, post: RedditPost, limit: int) -> list[str]:
@@ -558,7 +577,7 @@ def select_candidates(
     )
     selected: list[RedditPost] = []
     subreddit_counts: dict[str, int] = {}
-    per_subreddit_limit = int(topic_config.get("per_subreddit_limit", 2))
+    per_subreddit_limit = int(topic_config.get("per_subreddit_limit", 3))
     for post in eligible:
         subreddit = post.subreddit.lower()
         if subreddit_counts.get(subreddit, 0) >= per_subreddit_limit:
@@ -579,9 +598,14 @@ def collect_reddit_posts(
     lookback_days: int,
     candidate_limit: int,
     comment_limit: int,
-) -> tuple[dict[str, list[RedditPost]], list[dict[str, str]]]:
+) -> tuple[
+    dict[str, list[RedditPost]],
+    list[dict[str, str]],
+    dict[str, dict[str, Any]],
+]:
     result: dict[str, list[RedditPost]] = {}
     errors: list[dict[str, str]] = []
+    pool_stats: dict[str, dict[str, Any]] = {}
     for topic, config in topics.items():
         try:
             posts = client.listing(
@@ -591,11 +615,32 @@ def collect_reddit_posts(
                 lookback_days,
                 int(config.get("listing_limit", 35)),
             )
+            eligible = [post for post in posts if is_eligible(post, config)]
             candidates = select_candidates(posts, config, candidate_limit)
         except Exception as exc:
             errors.append({"source": topic, "error": str(exc)})
             result[topic] = []
+            pool_stats[topic] = {
+                "fetched_count": 0,
+                "eligible_count": 0,
+                "candidate_count": 0,
+                "subreddit_counts": {},
+            }
             continue
+        if client.errors:
+            errors.extend(client.errors)
+            client.errors.clear()
+        subreddit_counts: dict[str, int] = {}
+        for post in posts:
+            subreddit_counts[post.subreddit] = (
+                subreddit_counts.get(post.subreddit, 0) + 1
+            )
+        pool_stats[topic] = {
+            "fetched_count": len(posts),
+            "eligible_count": len(eligible),
+            "candidate_count": len(candidates),
+            "subreddit_counts": subreddit_counts,
+        }
         # RSS is a degraded fallback. Avoid one request per thread because Reddit
         # heavily throttles unauthenticated feeds; OAuth mode supplies comments.
         comment_candidates = (
@@ -620,7 +665,7 @@ def collect_reddit_posts(
             key=lambda post: (post.ranking_score, post.published_at), reverse=True
         )
         result[topic] = candidates
-    return result, errors
+    return result, errors, pool_stats
 
 
 def fallback_item(post: RedditPost, rank: int) -> dict[str, Any]:
@@ -905,7 +950,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate a daily Reddit topic digest")
     parser.add_argument("--date", type=date.fromisoformat, default=default_target_date())
     parser.add_argument("--lookback-days", type=int, default=1)
-    parser.add_argument("--candidate-limit", type=int, default=5)
+    parser.add_argument("--candidate-limit", type=int, default=12)
     parser.add_argument("--comment-limit", type=int, default=8)
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     parser.add_argument("--output-root", type=Path)
@@ -921,7 +966,7 @@ def run(argv: list[str] | None = None) -> int:
     output_root = (args.output_root or project_root / "var").resolve()
     topics = load_topics(project_root / "config/reddit_topics.json")
     client = create_client()
-    candidates, source_errors = collect_reddit_posts(
+    candidates, source_errors, pool_stats = collect_reddit_posts(
         client,
         topics,
         args.date,
@@ -938,6 +983,7 @@ def run(argv: list[str] | None = None) -> int:
         "lookback_days": args.lookback_days,
         "candidate_count": candidate_count,
         "source_errors": source_errors,
+        "topic_pool_stats": pool_stats,
         "topics": {
             key: [post.public_dict() for post in posts]
             for key, posts in candidates.items()
@@ -974,6 +1020,7 @@ def run(argv: list[str] | None = None) -> int:
         "lookback_days": args.lookback_days,
         "candidate_count": candidate_count,
         "source_errors": source_errors,
+        "topic_pool_stats": pool_stats,
         "codex_error": codex_error,
     }
     report_md = report_dir / f"{args.date.isoformat()}.md"
@@ -1001,6 +1048,7 @@ def run(argv: list[str] | None = None) -> int:
                     len(topic["items"]) for topic in report.get("topics", [])
                 ),
                 "source_error_count": len(source_errors),
+                "topic_pool_stats": pool_stats,
                 "codex_error": codex_error,
             }
         ),
