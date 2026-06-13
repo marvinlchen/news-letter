@@ -116,6 +116,36 @@ class PipelineTest(unittest.TestCase):
         )
         self.assertTrue(is_article_eligible_for_topic(article, "technology"))
 
+    def test_authoritative_binding_still_rejects_low_signal_source(self) -> None:
+        article = Article(
+            article_id="authoritative-status",
+            title="Elevated error rates for a frontier model",
+            url="https://example.com/authoritative-status",
+            source="OpenAI Status",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="ai_frontier",
+            source_weight=10,
+            topics=["ai_frontier"],
+            topic_binding="authoritative",
+        )
+        self.assertFalse(is_article_eligible_for_topic(article, "ai_frontier"))
+
+    def test_authoritative_binding_rejects_non_industry_community_story(self) -> None:
+        article = Article(
+            article_id="authoritative-community",
+            title="New community investments support local jobs",
+            url="https://example.com/authoritative-community",
+            source="Example Technology Platform",
+            published_at=self.articles[0].published_at,
+            description="",
+            category="technology",
+            source_weight=10,
+            topics=["technology"],
+            topic_binding="authoritative",
+        )
+        self.assertFalse(is_article_eligible_for_topic(article, "technology"))
+
     def test_keyword_required_binding_still_rejects_irrelevant_index_result(self) -> None:
         article = Article(
             article_id="noisy-bound",

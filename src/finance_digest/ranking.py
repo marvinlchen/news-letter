@@ -302,10 +302,13 @@ TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
         "stocks to buy",
     },
     "technology": {
+        "community investment",
         "equities",
         "investment case",
+        "local jobs",
         "oil",
         "stocks",
+        "tsmc online",
         "world markets",
     },
     "consumer": {
@@ -330,14 +333,21 @@ TOPIC_LOW_SIGNAL_TITLE_PATTERNS = {
         "tutorial",
     },
     "ai_frontier": {
+        "academy",
         "arxiv",
+        "careers",
         "cloud commitment",
+        "developer forums",
+        "error",
         "help center",
         "investment case",
         "pricing",
         "rate card",
+        "recipe",
+        "risk analyst",
         "shares",
         "stock",
+        "status",
         "survey",
         "world markets",
     },
@@ -382,9 +392,9 @@ def topic_relevance(article: Article, topic: str) -> int:
 
 
 def is_topic_low_signal(article: Article, topic: str) -> bool:
-    title = article.title.lower()
+    text = f"{article.title} {article.source}".lower()
     return any(
-        pattern in title for pattern in TOPIC_LOW_SIGNAL_TITLE_PATTERNS.get(topic, set())
+        pattern in text for pattern in TOPIC_LOW_SIGNAL_TITLE_PATTERNS.get(topic, set())
     )
 
 
