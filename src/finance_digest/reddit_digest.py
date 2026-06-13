@@ -23,10 +23,12 @@ from zoneinfo import ZoneInfo
 
 from .codex import CJK_RE, validate_text_length
 from .feeds import clean_text, local_name, parse_date
+from .ranking import contains_keyword
 from .render import pretty_json, truncate
 
 
 TIMEZONE = ZoneInfo("Asia/Shanghai")
+SELECTION_PROFILE = "multi-industry-value-investing"
 USER_AGENT = os.environ.get(
     "REDDIT_USER_AGENT",
     "linux:finance-news-digest:v1.0.0 (by /u/marvinlchen)",
@@ -48,6 +50,124 @@ LOW_SIGNAL_PATTERNS = {
     "roast",
     "salary",
 }
+SPECULATION_PATTERNS = {
+    "day trade",
+    "day trading",
+    "price prediction",
+    "short squeeze",
+    "technical analysis",
+    "to the moon",
+    "what are you buying",
+    "yolo",
+}
+VALUE_INVESTING_TERMS = {
+    "backlog": 3,
+    "balance sheet": 4,
+    "bankruptcy": 4,
+    "buyback": 4,
+    "cash burn": 4,
+    "capital allocation": 5,
+    "capital expenditure": 4,
+    "capex": 4,
+    "cash flow": 5,
+    "competition": 3,
+    "competitive advantage": 5,
+    "contract": 3,
+    "cost": 2,
+    "customer acquisition": 3,
+    "customer retention": 3,
+    "debt": 4,
+    "dilution": 4,
+    "demand": 3,
+    "dividend": 4,
+    "earnings": 4,
+    "free cash flow": 6,
+    "gross margin": 5,
+    "inventory": 3,
+    "leverage": 4,
+    "margin": 4,
+    "market share": 4,
+    "moat": 6,
+    "operating leverage": 5,
+    "operating margin": 5,
+    "pricing power": 6,
+    "profit": 4,
+    "regulation": 3,
+    "return on capital": 6,
+    "roic": 6,
+    "revenue": 4,
+    "supply": 3,
+    "unit economics": 6,
+    "valuation": 5,
+}
+TOPIC_INVESTMENT_TERMS = {
+    "macroeconomics": {
+        "credit": 3,
+        "employment": 3,
+        "gdp": 4,
+        "inflation": 4,
+        "interest rate": 4,
+        "productivity": 4,
+        "recession": 4,
+        "tariff": 3,
+    },
+    "shipping": {
+        "charter rate": 5,
+        "container rate": 5,
+        "fleet": 3,
+        "freight rate": 5,
+        "orderbook": 4,
+        "port": 2,
+        "utilization": 4,
+    },
+    "commodities": {
+        "capacity": 4,
+        "commodity price": 4,
+        "mine": 3,
+        "production": 3,
+        "reserve": 4,
+        "storage": 3,
+    },
+    "stock_market": {
+        "annual report": 4,
+        "discounted cash flow": 6,
+        "intrinsic value": 6,
+        "multiple": 4,
+        "s-1": 4,
+        "sec filing": 4,
+    },
+    "technology": {
+        "data center": 3,
+        "licensing": 3,
+        "semiconductor": 3,
+        "switching cost": 5,
+        "total addressable market": 4,
+    },
+    "consumer": {
+        "advertising cost": 4,
+        "average order value": 4,
+        "brand": 3,
+        "repeat purchase": 5,
+        "return rate": 4,
+        "same-store sales": 5,
+    },
+    "cloud_infra": {
+        "cloud spend": 5,
+        "downtime": 3,
+        "infrastructure cost": 5,
+        "lock-in": 4,
+        "reliability": 2,
+        "utilization": 4,
+    },
+    "ai_frontier": {
+        "adoption": 3,
+        "compute cost": 5,
+        "inference cost": 5,
+        "licensing": 3,
+        "model efficiency": 4,
+        "training cost": 5,
+    },
+}
 
 
 @dataclass
@@ -63,6 +183,7 @@ class RedditPost:
     score: int | None = None
     num_comments: int | None = None
     sampled_comments: list[str] = field(default_factory=list)
+    investment_score: int = 0
     ranking_score: float = 0.0
 
     def public_dict(self) -> dict[str, Any]:
@@ -384,7 +505,11 @@ def create_client() -> RedditRSSClient | RedditOAuthClient:
 
 def is_eligible(post: RedditPost, topic_config: dict[str, Any]) -> bool:
     text = f"{post.title} {post.body}".lower()
-    excluded = set(topic_config.get("exclude_patterns", [])) | LOW_SIGNAL_PATTERNS
+    excluded = (
+        set(topic_config.get("exclude_patterns", []))
+        | LOW_SIGNAL_PATTERNS
+        | SPECULATION_PATTERNS
+    )
     return not any(pattern.lower() in text for pattern in excluded)
 
 
@@ -396,6 +521,13 @@ def title_similarity(left: RedditPost, right: RedditPost) -> float:
     return len(left_tokens & right_tokens) / len(left_tokens | right_tokens)
 
 
+def investment_relevance(post: RedditPost) -> int:
+    text = f"{post.title} {post.body}".lower()
+    terms = dict(VALUE_INVESTING_TERMS)
+    terms.update(TOPIC_INVESTMENT_TERMS.get(post.topic, {}))
+    return sum(weight for term, weight in terms.items() if contains_keyword(text, term))
+
+
 def score_post(post: RedditPost, subreddit_weight: int) -> float:
     score = 120 - post.listing_rank * 4 + subreddit_weight * 3
     if post.score is not None:
@@ -404,6 +536,7 @@ def score_post(post: RedditPost, subreddit_weight: int) -> float:
         score += math.log1p(max(post.num_comments, 0)) * 7
     score += min(len(post.body) / 300, 5)
     score += min(len(post.sampled_comments), 8) * 1.5
+    score += post.investment_score * 10
     return round(score, 2)
 
 
@@ -418,6 +551,7 @@ def select_candidates(
     }
     eligible = [post for post in posts if is_eligible(post, topic_config)]
     for post in eligible:
+        post.investment_score = investment_relevance(post)
         post.ranking_score = score_post(post, weights.get(post.subreddit.lower(), 5))
     eligible.sort(
         key=lambda post: (post.ranking_score, post.published_at), reverse=True
@@ -470,6 +604,7 @@ def collect_reddit_posts(
         for post in comment_candidates:
             try:
                 post.sampled_comments = client.comments(post, comment_limit)
+                post.investment_score = investment_relevance(post)
                 weights = {
                     name.lower(): int(weight)
                     for name, weight in config.get("subreddit_weights", {}).items()
@@ -503,17 +638,20 @@ def fallback_item(post: RedditPost, rank: int) -> dict[str, Any]:
             "该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，"
             "需要结合原帖和高质量评论进一步判断其事实依据与专业价值。"
         ),
-        "consensus_zh": (
-            "规则模式无法可靠提炼社区共识；报告已保留原帖入口，建议核查高赞评论。"
+        "community_signal_zh": (
+            "规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。"
         ),
-        "disagreements_zh": (
-            "规则模式无法可靠识别主要分歧，不能把单个高热度帖子视为社区整体意见。"
+        "fundamental_impact_zh": (
+            "规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。"
         ),
-        "why_it_matters_zh": (
-            "该讨论在相关专业社区的日榜中排名靠前，可作为观察从业者关注点的线索。"
+        "value_investor_takeaway_zh": (
+            "当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。"
         ),
-        "signals_and_limits_zh": (
-            "Reddit 热度不代表事实正确；样本受社区规模、排序机制和评论抓取范围影响。"
+        "key_risks_zh": (
+            "主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。"
+        ),
+        "evidence_to_verify_zh": (
+            "投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。"
         ),
     }
 
@@ -548,10 +686,11 @@ def validate_reddit_items(
     text_fields = {
         "title_zh": (4, 80),
         "summary_zh": (40, 260),
-        "consensus_zh": (25, 240),
-        "disagreements_zh": (25, 240),
-        "why_it_matters_zh": (25, 220),
-        "signals_and_limits_zh": (25, 220),
+        "community_signal_zh": (25, 240),
+        "fundamental_impact_zh": (30, 260),
+        "value_investor_takeaway_zh": (30, 260),
+        "key_risks_zh": (25, 240),
+        "evidence_to_verify_zh": (25, 240),
     }
     result: list[dict[str, Any]] = []
     seen: set[str] = set()
@@ -578,6 +717,7 @@ def validate_reddit_items(
                 "score": post.score,
                 "num_comments": post.num_comments,
                 "sampled_comment_count": len(post.sampled_comments),
+                "investment_score": post.investment_score,
             }
         )
         result.append(item)
@@ -686,6 +826,7 @@ def render_reddit_markdown(
         f"# 每日 Reddit 社区 Topic 观察：{report['date']}",
         "",
         f"> 候选范围：{range_description}。"
+        "筛选视角：`多行业长期价值投资`。"
         f"生成模式：`{mode}`。"
         f"抓取模式：`{collector}`。Reddit 热度与评论不代表事实正确。",
         "",
@@ -702,6 +843,7 @@ def render_reddit_markdown(
             if item.get("num_comments") is not None:
                 metrics.append(f"{item['num_comments']} 条评论")
             metrics.append(f"摘要采样 {item['sampled_comment_count']} 条评论")
+            metrics.append(f"价值投资相关度 {item.get('investment_score', 0)}")
             lines.extend(
                 [
                     f"### {item['rank']}. {item['title_zh']}",
@@ -711,10 +853,11 @@ def render_reddit_markdown(
                     f"- **发布时间：** {item['published_at']}",
                     f"- **原帖：** {item['url']}",
                     f"- **讨论摘要：** {item['summary_zh']}",
-                    f"- **主要共识：** {item['consensus_zh']}",
-                    f"- **主要分歧：** {item['disagreements_zh']}",
-                    f"- **为何值得关注：** {item['why_it_matters_zh']}",
-                    f"- **信号与局限：** {item['signals_and_limits_zh']}",
+                    f"- **社区信号：** {item['community_signal_zh']}",
+                    f"- **基本面影响：** {item['fundamental_impact_zh']}",
+                    f"- **价值投资者视角：** {item['value_investor_takeaway_zh']}",
+                    f"- **关键风险：** {item['key_risks_zh']}",
+                    f"- **待验证数据：** {item['evidence_to_verify_zh']}",
                     "",
                 ]
             )
@@ -737,7 +880,25 @@ def load_successful_report(path: Path, target_date: date) -> dict[str, Any] | No
         return None
     if report.get("metadata", {}).get("mode") not in {"codex", "codex-preserved"}:
         return None
-    return report if report.get("topics") else None
+    required_fields = {
+        "community_signal_zh",
+        "fundamental_impact_zh",
+        "value_investor_takeaway_zh",
+        "key_risks_zh",
+        "evidence_to_verify_zh",
+    }
+    topics = report.get("topics")
+    if not isinstance(topics, list):
+        return None
+    for topic in topics:
+        if not isinstance(topic, dict) or not isinstance(topic.get("items"), list):
+            return None
+        if any(
+            not isinstance(item, dict) or not required_fields <= set(item)
+            for item in topic["items"]
+        ):
+            return None
+    return report
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -773,6 +934,7 @@ def run(argv: list[str] | None = None) -> int:
         "date": args.date.isoformat(),
         "generated_at": datetime.now(TIMEZONE).isoformat(),
         "collector": client.mode,
+        "selection_profile": SELECTION_PROFILE,
         "lookback_days": args.lookback_days,
         "candidate_count": candidate_count,
         "source_errors": source_errors,
@@ -808,6 +970,7 @@ def run(argv: list[str] | None = None) -> int:
     report["metadata"] = {
         "mode": mode,
         "collector": client.mode,
+        "selection_profile": SELECTION_PROFILE,
         "lookback_days": args.lookback_days,
         "candidate_count": candidate_count,
         "source_errors": source_errors,
@@ -831,6 +994,7 @@ def run(argv: list[str] | None = None) -> int:
                 "generated_at": datetime.now(TIMEZONE).isoformat(),
                 "mode": mode,
                 "collector": client.mode,
+                "selection_profile": SELECTION_PROFILE,
                 "lookback_days": args.lookback_days,
                 "candidate_count": candidate_count,
                 "selected_count": sum(

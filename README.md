@@ -31,10 +31,31 @@ seven days and selects up to five professional articles per topic based on
 technical depth, evidence, source authority, and engineering value.
 
 It also produces a separate daily Reddit community intelligence report across
-the same eight topics. The Reddit report selects up to three substantive
-discussions per topic, samples comments, and separates community consensus,
-disagreement, professional signal, and limitations. Reddit content is treated
-as unverified community discussion rather than a factual news source.
+the same eight topics for a multi-industry, long-term value investor. The Reddit
+report selects up to three discussions per topic based on their relevance to
+fundamentals, industry economics, capital allocation, competitive advantage,
+valuation, and long-term cash flows. Each item separates community signal,
+fundamental impact, the value-investor takeaway, key risks, and evidence still
+required. Reddit content is treated as unverified community discussion rather
+than a factual news source.
+
+The Reddit candidate ranker boosts discussions that mention durable fundamental
+signals such as revenue, margins, free cash flow, capital allocation, pricing
+power, competitive advantage, industry supply and demand, regulation, and
+valuation. It rejects day-trading, technical-analysis, price-prediction, and
+similar speculative content. Popularity alone is not sufficient for selection.
+
+Reddit Top 3 selection uses two stages:
+
+1. Deterministic ranking combines the subreddit weight, daily listing rank,
+   available engagement metrics, and a value-investing relevance score. The
+   relevance score gives the largest boosts to free cash flow, return on
+   invested capital, pricing power, moat, capital allocation, and unit
+   economics, plus topic-specific industry signals.
+2. Codex selects up to three discussions only when the supplied evidence has a
+   plausible long-term fundamental implication. It may return fewer than three
+   or an empty topic. Each selected item must explain fundamental impact, the
+   value-investor takeaway, key risks, and evidence still required.
 
 ## Source Policy
 

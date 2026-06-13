@@ -1,12 +1,17 @@
 from __future__ import annotations
 
 import unittest
+import json
 from datetime import date, datetime, timezone
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from finance_digest.reddit_digest import (
     RedditPost,
     fallback_report,
     in_lookback,
+    investment_relevance,
+    load_successful_report,
     parse_args,
     parse_reddit_comment_feed,
     parse_reddit_listing_feed,
@@ -119,6 +124,28 @@ class RedditDigestTest(unittest.TestCase):
         )
         self.assertEqual(len(selected), 2)
 
+    def test_value_investing_signal_outranks_generic_popularity(self) -> None:
+        generic = self.post("generic", "Interesting Kubernetes discussion", 1)
+        fundamental = self.post(
+            "fundamental",
+            "Cloud capex and pricing power reshape free cash flow",
+            10,
+        )
+        selected = select_candidates(
+            [generic, fundamental],
+            {"subreddit_weights": {"kubernetes": 10}},
+            1,
+        )
+        self.assertEqual(selected, [fundamental])
+        self.assertGreater(investment_relevance(fundamental), 0)
+
+    def test_speculative_trading_content_is_rejected(self) -> None:
+        post = self.post("speculation", "Technical analysis price prediction to the moon")
+        selected = select_candidates(
+            [post], {"subreddit_weights": {"kubernetes": 10}}, 5
+        )
+        self.assertEqual(selected, [])
+
     def test_public_candidate_data_excludes_post_and_comment_content(self) -> None:
         post = self.post("private", "Production reliability discussion")
         post.sampled_comments = ["A detailed comment that is used only during summarization."]
@@ -133,6 +160,9 @@ class RedditDigestTest(unittest.TestCase):
         markdown = render_reddit_markdown(report, "rules-fallback", "rss", 1, [])
         self.assertIn("# 每日 Reddit 社区 Topic 观察：2026-06-11", markdown)
         self.assertIn("## Cloud Infra Engineering 社区讨论 Top 3", markdown)
+        self.assertIn("**基本面影响：**", markdown)
+        self.assertIn("**价值投资者视角：**", markdown)
+        self.assertIn("**待验证数据：**", markdown)
         self.assertNotIn("每日专业 Topic 新闻", markdown)
 
     def test_validator_rejects_unknown_url(self) -> None:
@@ -141,14 +171,57 @@ class RedditDigestTest(unittest.TestCase):
                 "url": "https://example.com/unknown",
                 "title_zh": "专业讨论摘要",
                 "summary_zh": "这是一段用于测试的中文讨论摘要，长度足以通过字段长度校验并说明主题内容。",
-                "consensus_zh": "样本评论对主要技术方向形成了一定共识，但仍需要验证。",
-                "disagreements_zh": "评论对具体实现成本和适用范围存在明显分歧，需要进一步核查。",
-                "why_it_matters_zh": "该讨论反映从业者当前关注的工程问题和潜在实践变化。",
-                "signals_and_limits_zh": "社区样本存在选择偏差，讨论热度也不能代表事实正确。",
+                "community_signal_zh": "样本评论对主要技术方向形成了一定共识，但仍需要验证。",
+                "fundamental_impact_zh": "该讨论可能影响企业成本、资本开支和长期现金流，但具体幅度需要验证。",
+                "value_investor_takeaway_zh": "价值投资者应把它作为研究线索，结合公司基本面和估值进一步判断。",
+                "key_risks_zh": "社区样本存在选择偏差，短期讨论热度也不能代表趋势能够持续。",
+                "evidence_to_verify_zh": "需要核查公司披露、行业需求、竞争格局、资本回报和估值数据。",
             }
         ]
         with self.assertRaises(ValueError):
             validate_reddit_items(raw, [self.post("one", "Example")])
+
+    def test_validator_adds_value_investing_metadata(self) -> None:
+        post = self.post(
+            "fundamental",
+            "Cloud capex and pricing power reshape free cash flow",
+        )
+        post.investment_score = investment_relevance(post)
+        raw = [
+            {
+                "url": post.url,
+                "title_zh": "云资本开支与定价权影响长期现金流",
+                "summary_zh": "讨论聚焦云基础设施资本开支、定价能力与自由现金流之间的长期关系，并提出行业竞争可能改变回报结构。",
+                "community_signal_zh": "帖子提供了行业关注方向，但没有评论样本支持其代表广泛共识。",
+                "fundamental_impact_zh": "若资本开支增速长期超过收入增速，企业自由现金流与资本回报率可能承压。",
+                "value_investor_takeaway_zh": "价值投资者应重点比较增长投入带来的增量回报，而不是只关注收入增速。",
+                "key_risks_zh": "帖子未提供公司数据，成本上升也可能被规模效应和定价权抵消。",
+                "evidence_to_verify_zh": "需要核查资本开支、自由现金流、增量资本回报率、客户留存和价格变化。",
+            }
+        ]
+        items = validate_reddit_items(raw, [post])
+        self.assertEqual(items[0]["investment_score"], post.investment_score)
+        self.assertGreater(items[0]["investment_score"], 0)
+
+    def test_old_report_shape_is_not_preserved(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "report.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "date": "2026-06-11",
+                        "topics": [
+                            {
+                                "key": "cloud_infra",
+                                "items": [{"consensus_zh": "old shape"}],
+                            }
+                        ],
+                        "metadata": {"mode": "codex"},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertIsNone(load_successful_report(path, date(2026, 6, 11)))
 
 
 if __name__ == "__main__":

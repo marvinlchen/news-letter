@@ -7,23 +7,29 @@
       "properties": {
         "title_zh": {"type": "string", "minLength": 4, "maxLength": 80},
         "summary_zh": {"type": "string", "minLength": 40, "maxLength": 260},
-        "consensus_zh": {"type": "string", "minLength": 25, "maxLength": 240},
-        "disagreements_zh": {"type": "string", "minLength": 25, "maxLength": 240},
-        "why_it_matters_zh": {"type": "string", "minLength": 25, "maxLength": 220},
-        "signals_and_limits_zh": {
+        "community_signal_zh": {"type": "string", "minLength": 25, "maxLength": 240},
+        "fundamental_impact_zh": {
           "type": "string",
-          "minLength": 25,
-          "maxLength": 220
+          "minLength": 30,
+          "maxLength": 260
         },
+        "value_investor_takeaway_zh": {
+          "type": "string",
+          "minLength": 30,
+          "maxLength": 260
+        },
+        "key_risks_zh": {"type": "string", "minLength": 25, "maxLength": 240},
+        "evidence_to_verify_zh": {"type": "string", "minLength": 25, "maxLength": 240},
         "url": {"type": "string"}
       },
       "required": [
         "title_zh",
         "summary_zh",
-        "consensus_zh",
-        "disagreements_zh",
-        "why_it_matters_zh",
-        "signals_and_limits_zh",
+        "community_signal_zh",
+        "fundamental_impact_zh",
+        "value_investor_takeaway_zh",
+        "key_risks_zh",
+        "evidence_to_verify_zh",
         "url"
       ],
       "additionalProperties": false
