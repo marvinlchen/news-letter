@@ -207,6 +207,230 @@
       "topics": [
         "stock_market"
       ]
+    },
+    {
+      "name": "21世纪经济报道",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3A21jingji.com%20%28%E7%BB%8F%E6%B5%8E%20OR%20%E8%B4%A2%E7%BB%8F%20OR%20%E4%BA%A7%E4%B8%9A%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 9,
+      "topics": [
+        "macroeconomics",
+        "stock_market"
+      ]
+    },
+    {
+      "name": "经济观察报",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aeeo.com.cn%20%28%E7%BB%8F%E6%B5%8E%20OR%20%E4%BA%A7%E4%B8%9A%20OR%20%E6%94%BF%E7%AD%96%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 9,
+      "topics": [
+        "macroeconomics"
+      ]
+    },
+    {
+      "name": "财经杂志 Caijing",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Acaijing.com.cn%20%28finance%20OR%20stock%20OR%20economy%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 10,
+      "topics": [
+        "macroeconomics",
+        "stock_market"
+      ]
+    },
+    {
+      "name": "每日经济新闻 NBD",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Anbd.com.cn%20%28finance%20OR%20stock%20OR%20market%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 9,
+      "topics": [
+        "macroeconomics",
+        "stock_market"
+      ]
+    },
+    {
+      "name": "中国经营报",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Actimes.com.cn%20%28%E7%BB%8F%E6%B5%8E%20OR%20%E4%BC%81%E4%B8%9A%20OR%20%E4%BA%A7%E4%B8%9A%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 8,
+      "topics": [
+        "macroeconomics",
+        "consumer"
+      ]
+    },
+    {
+      "name": "中国信通院 CAICT",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Acaict.ac.cn%20%28%E4%BA%91%E8%AE%A1%E7%AE%97%20OR%20%5G%20OR%20%E4%BF%A1%E6%81%AF%E9%80%9A%E4%BF%A1%20OR%20%E6%95%B0%E5%AD%97%E7%BB%8F%E6%B5%8E%29%20when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "cloud_infra",
+      "weight": 10,
+      "topics": [
+        "cloud_infra",
+        "technology"
+      ]
+    },
+    {
+      "name": "工信部 MIIT",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Amiit.gov.cn%20%28%E5%B7%A5%E4%B8%9A%20OR%20%E4%BA%92%E8%81%94%E7%BD%91%20OR%20%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%29%20when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "technology",
+      "weight": 10,
+      "topics": [
+        "technology",
+        "cloud_infra"
+      ],
+      "countries": [
+        "china"
+      ],
+      "country_binding": "authoritative"
+    },
+    {
+      "name": "国家能源局 NEA",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Anea.gov.cn%20%28%E8%83%BD%E6%BA%90%20OR%20%E7%94%B5%E5%8A%9B%20OR%20%E6%96%B0%E8%83%BD%E6%BA%90%29%20when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "commodities",
+      "weight": 10,
+      "topics": [
+        "commodities"
+      ],
+      "countries": [
+        "china"
+      ],
+      "country_binding": "authoritative"
+    },
+    {
+      "name": "住建部 MOHURD",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Amohurd.gov.cn%20%28%E6%88%BF%E5%9C%B0%E4%BA%A7%20OR%20%E5%9F%8E%E5%BB%BA%20OR%20%E4%BD%8F%E6%88%BF%29%20when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "consumer",
+      "weight": 9,
+      "topics": [
+        "consumer"
+      ]
+    },
+    {
+      "name": "中国互联网协会 ISC",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aisc.org.cn%20%28%E4%BA%92%E8%81%94%E7%BD%91%20OR%20%E7%BD%91%E7%BB%9C%20OR%20%E6%95%B0%E5%AD%97%E7%BB%8F%E6%B5%8E%29%20when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "technology",
+      "weight": 8,
+      "topics": [
+        "technology",
+        "cloud_infra"
+      ]
+    },
+    {
+      "name": "赛迪研究院 CCID",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Accid.cn%20%28%E7%94%B5%E5%AD%90%E4%BF%A1%E6%81%AF%20OR%20%E5%8D%8A%E5%AF%BC%E4%BD%93%20OR%20%E4%BA%A7%E4%B8%9A%E7%A0%94%E7%A9%B6%29%20when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "technology",
+      "weight": 9,
+      "topics": [
+        "technology",
+        "ai_frontier"
+      ]
+    },
+    {
+      "name": "艾瑞咨询 iResearch",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Airesearch.com.cn%20%28%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%20OR%20%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90%20OR%20%E5%B8%82%E5%9C%BA%E6%95%B0%E6%8D%AE%29%20when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "consumer",
+      "weight": 8,
+      "topics": [
+        "consumer",
+        "technology"
+      ]
+    },
+    {
+      "name": "易观分析 Analysys",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aanalysys.cn%20%28%E7%A7%BB%8F%E6%B5%8E%20OR%20%E6%95%B0%E5%AD%97%E5%8C%96%20OR%20%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90%29%20when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "technology",
+      "weight": 8,
+      "topics": [
+        "technology",
+        "consumer"
+      ]
+    },
+    {
+      "name": "Wind资讯 Wind Info",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Awind.com.cn%20%28%E8%82%A1%E5%B8%82%20OR%20%E5%9F%BA%E9%87%91%20OR%20%E4%BA%A7%E5%88%80%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "stock_market",
+      "weight": 10,
+      "topics": [
+        "stock_market",
+        "commodities"
+      ]
+    },
+    {
+      "name": "Choice数据东方财富",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Achoice.eastmoney.com%20%28%E6%95%B0%E6%8D%AE%20OR%20%E8%B4%A2%E7%BB%8F%20OR%20%E7%A0%94%E7%A9%B6%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 9,
+      "topics": [
+        "stock_market",
+        "commodities",
+        "macroeconomics"
+      ]
+    },
+    {
+      "name": "中国金融信息网",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Acfci.cn%20%28%E9%87%91%E8%9E%8D%20OR%20%E8%B4%A2%E7%BB%8F%20OR%20stock%20OR%20market%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 9,
+      "topics": [
+        "macroeconomics",
+        "stock_market"
+      ]
+    },
+    {
+      "name": "证券日报",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Azqrb.com.cn%20%28%E8%AF%81%E5%88%B8%20OR%20stock%20OR%20%E8%82%A1%E7%A5%A8%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "stock_market",
+      "weight": 8,
+      "topics": [
+        "stock_market"
+      ]
+    },
+    {
+      "name": "经济日报",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Aeconomy.gov.cn%20%28%E7%BB%8F%E6%B5%8E%20OR%20%E6%94%BF%E7%AD%96%20OR%20%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 9,
+      "topics": [
+        "macroeconomics"
+      ]
+    },
+    {
+      "name": "中国日报财经 China Daily",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Achinadaily.com.cn%20%28business%20OR%20economy%20OR%20finance%20OR%20market%29%20when%3A2d&hl=en&gl=CN&ceid=CN%3Aen",
+      "category": "finance",
+      "weight": 8,
+      "topics": [
+        "macroeconomics",
+        "stock_market"
+      ]
+    },
+    {
+      "name": "南方周末财经",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Ainfzm.com%20%28finance%20OR%20economy%20OR%20business%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "finance",
+      "weight": 8,
+      "topics": [
+        "macroeconomics",
+        "consumer"
+      ]
     }
   ]
 }
