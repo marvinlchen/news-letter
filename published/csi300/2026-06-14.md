@@ -2,33 +2,33 @@
 
 ## 📈 涨幅 Top 10
 
-| 排名 | 股票代码 | 股票名称 | 最新价 | 涨跌幅 | 涨跌额 |
-|------|----------|----------|--------|--------|--------|
-| 1 | 603993 | 洛阳钼业 | 19.11 | +10.02% | +1.74 |
-| 2 | 000768 | 中航西飞 | 22.86 | +10.01% | +2.08 |
-| 3 | 002812 | 恩捷股份 | 67.54 | +10.00% | +6.14 |
-| 4 | 601872 | 招商轮船 | 15.60 | +8.18% | +1.18 |
-| 5 | 300033 | 同花顺 | 207.46 | +7.47% | +14.42 |
-| 6 | 600362 | 江西铜业 | 43.05 | +7.25% | +2.91 |
-| 7 | 688363 | 华熙生物 | 37.20 | +7.21% | +2.50 |
-| 8 | 600760 | 中航沈飞 | 44.61 | +7.18% | +2.99 |
-| 9 | 600346 | 恒力石化 | 17.46 | +7.18% | +1.17 |
-| 10 | 600309 | 万华化学 | 71.67 | +6.73% | +4.52 |
+| 排名 | 股票代码 | 股票名称 | 最新价 | 涨跌幅 |
+|------|----------|----------|--------|--------|
+| 1 | 603993 | 洛阳钼业 | 19.11 | +10.02% |
+| 2 | 000768 | 中航西飞 | 22.86 | +10.01% |
+| 3 | 002812 | 恩捷股份 | 67.54 | +10.00% |
+| 4 | 601872 | 招商轮船 | 15.60 | +8.18% |
+| 5 | 300033 | 同花顺 | 207.46 | +7.47% |
+| 6 | 600362 | 江西铜业 | 43.05 | +7.25% |
+| 7 | 688363 | 华熙生物 | 37.20 | +7.21% |
+| 8 | 600760 | 中航沈飞 | 44.61 | +7.18% |
+| 9 | 600346 | 恒力石化 | 17.46 | +7.18% |
+| 10 | 600309 | 万华化学 | 71.67 | +6.73% |
 
 ## 📉 跌幅 Top 10
 
-| 排名 | 股票代码 | 股票名称 | 最新价 | 涨跌幅 | 涨跌额 |
-|------|----------|----------|--------|--------|--------|
-| 1 | 688126 | 沪硅产业 | 29.59 | -8.95% | -2.91 |
-| 2 | 601100 | 恒立液压 | 114.54 | -6.51% | -7.97 |
-| 3 | 000733 | 振华科技 | 47.16 | -5.21% | -2.59 |
-| 4 | 000725 | 京东方Ａ | 5.57 | -4.46% | -0.26 |
-| 5 | 688303 | 大全能源 | 20.95 | -4.38% | -0.96 |
-| 6 | 600584 | 长电科技 | 68.92 | -4.21% | -3.03 |
-| 7 | 300408 | 三环集团 | 126.50 | -3.90% | -5.13 |
-| 8 | 000063 | 中兴通讯 | 36.35 | -3.86% | -1.46 |
-| 9 | 002938 | 鹏鼎控股 | 101.52 | -3.77% | -3.98 |
-| 10 | 300433 | 蓝思科技 | 41.14 | -3.61% | -1.54 |
+| 排名 | 股票代码 | 股票名称 | 最新价 | 涨跌幅 |
+|------|----------|----------|--------|--------|
+| 1 | 688126 | 沪硅产业 | 29.59 | -8.95% |
+| 2 | 601100 | 恒立液压 | 114.54 | -6.51% |
+| 3 | 000733 | 振华科技 | 47.16 | -5.21% |
+| 4 | 000725 | 京东方Ａ | 5.57 | -4.46% |
+| 5 | 688303 | 大全能源 | 20.95 | -4.38% |
+| 6 | 600584 | 长电科技 | 68.92 | -4.21% |
+| 7 | 300408 | 三环集团 | 126.50 | -3.90% |
+| 8 | 000063 | 中兴通讯 | 36.35 | -3.86% |
+| 9 | 002938 | 鹏鼎控股 | 101.52 | -3.77% |
+| 10 | 300433 | 蓝思科技 | 41.14 | -3.61% |
 
 ## 🔍 涨跌原因分析
 
@@ -38,8 +38,8 @@
 
 **相关新闻：**
 
-- [异动快报：洛阳钼业（603993）6月12日10点41分触及涨停板_股市直击 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9aellwWmYzZzJDdVVDZVoxT3dfZkxHdE4yckRmYTBDNFNZeW93UWxxZDhBWEZHVHVJNFR4Wk5XRlZDZlMxQlZiTFVuTXdyYUliX3hjOXhjRTZVeGwweFBmN1pn?oc=5)
 - [洛阳钼业（603993）6月12日主力资金净买入16.86亿元 - Sohu](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVFoyU2tvRnhsdV9fM3Q1T0xSUUl6SHM5QTY2ODFCTTZMcnVaVi1NXzZtYU05NkFYODB2VUUxbXk1RENieFRMT2tNZEdWNldaUFUycVdvTUFmLUdXcFVSS0t5ZG5tNm5DQ21pcy1ObDRKM0RnV1pBN2xUTk5QTmdZVlNOZThUdXRY?oc=5)
+- [异动快报：洛阳钼业（603993）6月12日10点41分触及涨停板_股市直击 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9aellwWmYzZzJDdVVDZVoxT3dfZkxHdE4yckRmYTBDNFNZeW93UWxxZDhBWEZHVHVJNFR4Wk5XRlZDZlMxQlZiTFVuTXdyYUliX3hjOXhjRTZVeGwweFBmN1pn?oc=5)
 - [洛阳钼业2026年第一季度报告 - Moomoo](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQTdPZUtyNmVhSVZSbFFQMS1MUS12VU5RNEhHdGFtQzhNd29naGdSdHRTbVlqVTBMSVl6ZjZFYTBXVGVleElvTHFSZ2tzU0NyQTBUYzlHLWljYkVCaUkxNDJzY1Z3M1F2MWhwX0ptYUZfS0kyZmJhSFRQNkg3NnlGZkFwQkR5VWM2Vzc5WXFFZHpGYnpDcmplbGFwR2FZdjB0ajhyUWYyeXJFUQ?oc=5)
 
 #### 2. 中航西飞 (000768) - +10.01%
@@ -62,9 +62,9 @@
 
 **相关新闻：**
 
-- [招商轮船(601872)因子公司会计差错致定期报告不准确，遭上交所监管警示 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE5kZVRHQTlKamo5Vk4tWTBCTkhHQldIWVNUTkdXZXhLckdsdXkzV3hYbW5MR2hYU1NKWmE2WUNxT0UtTVJJTFFTTlhxWVNFZmt6a1lSbmZObkJTc1dNd2RkbQ?oc=5)
 - [股票行情快报：招商轮船（601872）6月8日主力资金净卖出1.75亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBSUVJvVW1rc05jNVloTlp1bmhPdF9mcEw2LWhYOTNnQzZQM2pkbjRRbHNzeDgxamNqYXlld2o5QVl5aGNIM1dQV3BHZ0hBdS1hUVJLLUh3eXJ1TlFBZzlPeUZR?oc=5)
-- [招商轮船(601872.SH)：董事余志良辞职 - Moomoo](https://news.google.com/rss/articles/CBMiU0FVX3lxTE5mT19WY1JOM0ZSVGRCUDFGYl84X1FMSGpDc0RMOWpPU0Q0RElWX2VYUzAtZ0pIUjFVVWhabUl6VURwRDlmd2NsWEhBZjNvaGNmcTkw?oc=5)
+- [6月12日上证中盘（000044）指数涨117%，成份股招商轮船（601872）领涨_指数综合_数据解析 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJUkxMcnZGVExWZjlpYzBKT2hOZVUzVWNJUnZRWUdxd1A4SU54RUhtcjZwMHlld1dlN1BUZVYydi1nYzN4WWp4WWdYbndwRGZlcFVLekdPXzVtSl9vdHI4MW1R?oc=5)
+- [6月12日央企股东回报（932039）指数涨114%，成份股招商轮船（601872）领涨_指数综合_数据解析 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5TTnlpREwzMmp3UEhqYzdFTzNFbEh6b2l4T0dyNnFlV1VPd21XUG5fT3l2aHd2LW5iOEE4UnkwODNYM1NnODVyWEE0QzJNTmpuM0JYaExKRk9WS1JQQzVfRV9B?oc=5)
 
 #### 5. 同花顺 (300033) - +7.47%
 
@@ -90,7 +90,7 @@
 
 - [恒立液压（601100）6月12日主力资金净买入2.93亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9YT0kwNG00cTR1NXBNbzdDZG50OVdJQ2NmWWR3aVVIWGpCMDlXZ3ZlNXZBSWM3bkptSE9lbWQ1RXJ6M0NfeW5Xc3NHZHBSSllacFZBUFlWZGcwbHJGSWgyVkpR?oc=5)
 - [恒立液压（601100）6月12日主力资金净买入2.93亿元 - Sohu](https://news.google.com/rss/articles/CBMiUkFVX3lxTE9RWUg0c0FJR0ZEaDlNaUFWdVVtVk9yaGo1bndnaEdWOVF4WTdLdEFrWDJrSHI0cWJKZW91SHNEVTgyRXgtQjFBV0pjb1RGa2ctaGc?oc=5)
-- [恒立液压董事长已正常履职 此前被留置 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE11ZEMzN1gyY0RINXNoaEU5eE5XQzlZYzFkTGNQOE9Hd1gtQ0RsaG9VNjlBMUJYeTJPRlV5QWJRZGtzdnFVR1NPZ3dSVzlldHVIa0l2MkZhTXczTXd0V0FlOQ?oc=5)
+- [恒立液压（601100）6月8日主力资金净买入31.90万元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9RNG15enczNTdMTFc4MldWR3F5TURJb2szdDVLdG52STJOTDlWM3RFcGNTUTdfOWRYd042ekgwRTgwOUgzNnU2aHNIbHRmejNGMnRMV2dudExmMjl6cVVTWENR?oc=5)
 
 #### 3. 振华科技 (000733) - -5.21%
 
@@ -114,8 +114,8 @@
 
 - [大全能源（688303）6月11日主力资金净买入8083.65万元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE43blR1Z0trRm53VkdPa2VoT1ZZUjE2WTJUS09lYkF2QWVpMC1uWW5HRHY4U0UtQ29VYkxPU3FLLWkwV19scUJ5Znoxd0ZIdmVRZEVYZzZTMXZWZURNbFVJbVZ3?oc=5)
 - [大全能源（688303）6月12日主力资金净卖出977.77万元 - Sohu](https://news.google.com/rss/articles/CBMiUkFVX3lxTE0wLXctYUVJeXg2MnFRRGc5aWpuZElJRzM1aW5ILWxYYlRQVXJTSTFpdWVYQnNDMl8yVW9Jc0RNX3FIRkhFT0VFNDZtNHctOWJZeHc?oc=5)
-- [688303，拟60亿元布局AIDC配电新赛道！ - 证券时报](https://news.google.com/rss/articles/CBMiXEFVX3lxTFB3NVk4NW5vNEpKYjlSUDVaMmpyazYtUnA2c0hNR3c0R2FiTlAzNkE5SHlBYjJZSUlBTGthLVBVUWtuOEFMVzczSVNwR0tFR1VJellNMDQtSnBCYjNo?oc=5)
+- [大全能源斥资60亿元跨界储能 - 铁合金在线](https://news.google.com/rss/articles/CBMiY0FVX3lxTE5jc1F1WTRBc2RaN0pnMG9hdWk4TkY1TE9Gdng4Nm91eWljNXF0bTJMeGpmdHJvOFNYalpJMVYybkJvMmlmUU12WnJrNGZYS2QwNFlnNnFQVkJvY1JtazYwRDF0aw?oc=5)
 
 
 ---
-*报告生成时间: 2026-06-14 17:13:10*
+*报告生成时间: 2026-06-14 17:16:12*
