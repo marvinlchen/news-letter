@@ -4,39 +4,39 @@
 
 ## 宏观经济 Top 3
 
-### 1. 央行6个月期买断式逆回购暂别净回笼
+### 1. SpaceX上市首日上涨19%，市值突破2.1万亿美元
 
-- **原标题：** 央行不再“收水”！6个月期买断式逆回购暂别净回笼 - 东方财富
-- **来源：** 东方财富
-- **发布时间：** 2026-06-13T02:53:58+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiZkFVX3lxTE5lWjJKbE5zY20wNW8zYzV2c3E3YUxzSnR2UFpNR1ZKVTh3OHRrcGRFZk10WHZiU1p3ek41ZVYzYWQ2MTNhcUN3RS1mR3UtejMzZmFDVG5tOGMyVjF3dk5vdEpmcTFEdw?oc=5
-- **摘要：** 央行6个月期买断式逆回购操作暂别净回笼，显示相关期限流动性操作不再继续回收资金，可能影响银行体系流动性预期；候选数据未披露操作规模及具体政策原因。
+- **原标题：** SpaceX上市首日涨19% 市值突破2.1万亿美元 - 财新
+- **来源：** 财新
+- **发布时间：** 2026-06-12T23:58:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiYkFVX3lxTE5YdFFpMzJNX3FRcjg4aFBzMWgzeHZuSzB2YWhVM3RPSzhCUHZFWHE1UVJJMUlnVmk4X1ROYkZJTjduUkkwZi01VU5WVjEwUzBWTFlOcV83Z3docmNKWGZ6LXJR?oc=5
+- **摘要：** SpaceX上市首日股价上涨19%，市值突破2.1万亿美元。此次上市规模及首日表现显示资本市场对商业航天资产给予高估值，但候选数据未说明发行规模及上涨原因。
 
-### 2. 欧洲和中亚逾一亿人经历粮食短缺
-
-- **原标题：** 联合国粮农组织：欧洲和中亚逾1亿人经历粮食短缺 - 新华网
-- **来源：** 新华网
-- **发布时间：** 2026-06-13T10:34:03+00:00
-- **原文：** https://news.google.com/rss/articles/CBMif0FVX3lxTFBWeFFaZ0RPVFhqODBXV0ZDTFpIOEJNN0NXTlJvOU5sWDNaeUd6bDhNd0h3TEROTmhwWDhPa3pUcUs3Nl9ISVNTaDMwalJ0U21BeE4zeUlNVjRYZVpyZi1vajFFMDVqRkk3ZVZ0SHM3X2FBYjM2a0FScEx5ZEhxN1k?oc=5
-- **摘要：** 联合国粮农组织称，欧洲和中亚超过一亿人经历粮食短缺，凸显区域粮食安全压力及其对居民生活和经济稳定的影响；候选数据未说明统计周期、涉及国家及短缺程度。
-
-### 3. A股投资者数量突破2.5亿
+### 2. A股投资者数量突破2.5亿
 
 - **原标题：** A股投资者，已超2.5亿！ - 新浪财经
 - **来源：** 新浪财经
 - **发布时间：** 2026-06-13T15:04:00+00:00
 - **原文：** https://news.google.com/rss/articles/CBMieEFVX3lxTFBQc2NzTjl1RkI0LUNLOXlEelIzc1lPM3BhMFg4b1pQcXlRVWtYX3N5M3ZuUFViQVZHUHJhWm9FTUQtbVBQak5IRWx6R09QeVhydEFOSWdiOTliWFJhTFQxSWJzeWZVVjNBTjY0ZXMweWJvZ1A1ekhhMw?oc=5
-- **摘要：** A股投资者数量已超过2.5亿，反映资本市场参与者规模进一步扩大，可能影响市场流动性和居民资产配置结构；候选数据未提供新增投资者数量、统计口径及时间跨度。
+- **摘要：** A股投资者数量已超过2.5亿，反映中国股票市场参与群体进一步扩大。候选数据未提供新增投资者数量、统计周期及其对市场交易活跃度的具体影响。
+
+### 3. 六家A股公司集中撤销风险警示
+
+- **原标题：** 6家A股集中“摘帽”，9万股东“熬出头”？ - 新浪财经
+- **来源：** 新浪财经
+- **发布时间：** 2026-06-13T15:48:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMieEFVX3lxTFBobTBqSlp0OXhiSFc1N19hb1Y1bnh1bGNNMkNJWFk4ODBzSzczSTdOZU5WZndCMHZ5NlZ1RmJSTHd1UXVWbW1RT0QtOXRqcVVqQmg1U2c4Z2RlOE1tQ2U3eXplbDVOeUQxYjNmNzF1aS1tdGZmTTlyTQ?oc=5
+- **摘要：** 六家A股公司集中撤销风险警示，涉及约9万名股东，可能改善相关公司的融资和估值环境。候选数据未说明公司名单、撤销原因及恢复正常交易后的股价表现。
 
 ## 航运 Top 3
 
-### 1. 郑州至布达佩斯航线前五月进出口货值增80.9%
+### 1. 郑州至布达佩斯航线前五月进出口货值增长80.9%
 
 - **原标题：** 今年前5个月进出口货值同比增长80.9% 郑州—布达佩斯航线飞出新高度 - 新华网
 - **来源：** 新华网
 - **发布时间：** 2026-06-12T23:08:17+00:00
 - **原文：** https://news.google.com/rss/articles/CBMiggFBVV95cUxNUVRqWXVMQXdkaVlrMXBqVDlxb0tBMnA2bkczR3A2QjhSQUNkeXJhWW9pcExleUppdURlZmlSNjB0OHB4SUllSFpKOEUtekJGZFR6bmFZS2JOWU1lT1ViZ0V2LTJHLWV2c0V3SjA4VzFIZWZZcGYtcVZhRDVDU3daSVBn?oc=5
-- **摘要：** 今年前五个月，郑州至布达佩斯航线进出口货值同比增长80.9%，显示该航空物流通道贸易活动显著扩张；候选数据未披露货值总额、货运量及增长的具体驱动因素。
+- **摘要：** 今年前五个月，郑州至布达佩斯航线进出口货值同比增长80.9%，显示该航空物流通道贸易活动显著扩张。候选数据未提供货值总额、货运量及增长驱动因素。
 
 ## 大宗商品 Top 3
 
@@ -48,39 +48,33 @@
 
 ## 科技产业 Top 3
 
-### 1. OpenClaw发生服务崩溃
-
-- **原标题：** OpenClaw，崩了 - 36Kr
-- **来源：** 36Kr
-- **发布时间：** 2026-06-13T15:10:10+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiTkFVX3lxTFBJWVhjMmxhYVhacHk1bUlXQzlHUDdrMmRkd0F0d2JOM1J2bGxOckdNNGVlSFRieDZrZFdPckIza0RRb3JpdzVtUTdRbHlSdw?oc=5
-- **摘要：** OpenClaw发生服务崩溃，事件可能影响用户使用及平台运营稳定性；候选数据未披露故障持续时间、影响范围、事故原因及恢复进展，实际业务影响仍无法判断。
-
-### 2. 机器人领域出现94亿元年度最大单笔融资
+### 1. 机器人领域出现年内最大单笔融资
 
 - **原标题：** 惊！机器人领域今年最大单笔融资达94亿！ - 36 Kr
 - **来源：** 36 Kr
 - **发布时间：** 2026-06-13T11:44:00+00:00
 - **原文：** https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xRDl6TjZFYllMRllyMUNfS0EtQkozSHZNVHVQQmNLeVFVT1I1UjlzcC1iVmZhdFBJem9wMnluTlpaZWtvbFQyaVpFVEpiaGUxYjRj?oc=5
-- **摘要：** 机器人领域出现一笔规模达94亿元的融资，被称为今年该领域最大单笔融资，显示资本对机器人产业的投入力度；候选数据未披露融资企业、投资方、币种及资金用途。
+- **摘要：** 机器人领域出现今年最大单笔融资，金额达到94亿元，显示资本继续大规模投入机器人产业。候选数据未披露融资企业、投资方、融资用途及币种等关键信息。
 
-### 3. 北京智源大会聚焦人工智能与物理及生命科学互动
+### 2. 智源研究院推动人工智能与物理及生命科学互动
 
 - **原标题：** 2026北京智源大会开幕| 从“悟道”到“悟界”，智源研究院推动人工智能、物理世界和生命科学“三体互动” - 雷峰网
 - **来源：** 雷峰网
 - **发布时间：** 2026-06-13T00:07:00+00:00
 - **原文：** https://news.google.com/rss/articles/CBMickFVX3lxTE5GWmRHZGE2Mnp1Vk4xMFFzTHc4RXhURm1fNjJhNFVrMUtBbmRxRDdlVjFTcG9qQjYyUXkzdVF0TWtDOHhRUmtxUlpJRHFnbVEzdUgzSF9oaGJXbUhLcml6MUNyeWxmMm5JeFRsZ0JVTWtSZw?oc=5
-- **摘要：** 2026北京智源大会开幕，智源研究院提出推动人工智能、物理世界和生命科学“三体互动”。候选数据未披露具体技术发布、合作项目或商业化安排，产业影响尚待观察。
+- **摘要：** 2026北京智源大会开幕，智源研究院提出推动人工智能、物理世界和生命科学之间的互动。该方向可能拓展人工智能应用边界，但候选数据未提供具体产品或落地计划。
+
+### 3. 蔚来称建立新品牌难度被低估
+
+- **原标题：** 李斌：建立新品牌难度被低估，乐道知名度相当于6年前的蔚来 - 新浪财经
+- **来源：** 新浪财经
+- **发布时间：** 2026-06-13T14:03:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMieEFVX3lxTE8wM2ZuWlh0Wk1XcHNZbkwzTGJfdFh1VzVQNFlRemFzRHg2MXVHQzRueVhVYmtpRHhrY1hoVTAyXzZ4czRrYTVmT080b2J4SGk4c3YtOS1DZFljQ1VzMmdMWFhuYVpoX012Tm1JVDd5aldiRGM4UzUwUA?oc=5
+- **摘要：** 蔚来创始人李斌表示，建立新品牌的难度被低估，乐道当前知名度相当于六年前的蔚来。这反映新汽车品牌面临较高市场教育成本，但候选数据未披露相关投入和销售影响。
 
 ## 消费 Top 3
 
-### 1. 2010年后婚姻成本快速增长
-
-- **原标题：** 人口学者靳小怡：东部重婚房西部重彩礼，2010年后婚姻成本爆发增长 - china.caixin.com
-- **来源：** china.caixin.com
-- **发布时间：** 2026-06-13T08:22:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiX0FVX3lxTFBDb0d1bDREa1dOTmducGdtdzBPWUFUZTV0eExXYXJpbUtZUkVKYkREWUdBUGpNa1ZfSFEycDNTU3RjMF81VXlyRkxQWHpVRktXMDkzVFFhZnY5ZzNrckNj?oc=5
-- **摘要：** 人口学者靳小怡表示，2010年后婚姻成本快速增长，东部地区更重视婚房，西部地区更重视彩礼，反映区域家庭支出结构差异；候选数据未披露具体金额和调查范围。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## Cloud Infra Engineering Top 3
 
@@ -88,29 +82,21 @@
 
 ## AI 前沿 Top 3
 
-### 1. 机器人领域出现94亿元年度最大单笔融资
+### 1. 机器人领域年内最大单笔融资达94亿元
 
 - **原标题：** 惊！机器人领域今年最大单笔融资达94亿！ - 36 Kr
 - **来源：** 36 Kr
 - **发布时间：** 2026-06-13T11:44:00+00:00
 - **原文：** https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xRDl6TjZFYllMRllyMUNfS0EtQkozSHZNVHVQQmNLeVFVT1I1UjlzcC1iVmZhdFBJem9wMnluTlpaZWtvbFQyaVpFVEpiaGUxYjRj?oc=5
-- **摘要：** 机器人领域出现一笔规模达94亿元的融资，被称为今年该领域最大单笔融资，显示资本对机器人及人工智能相关产业的投入力度；候选数据未披露融资企业、投资方和资金用途。
+- **摘要：** 机器人领域出现今年最大单笔融资，金额达到94亿元，表明资本对机器人及相关人工智能技术保持高投入。候选数据未披露融资企业、投资方、币种和具体技术路线。
 
-### 2. 北京智源大会提出“三体互动”方向
+### 2. 智源大会聚焦人工智能与物理及生命科学协同
 
 - **原标题：** 2026北京智源大会开幕| 从“悟道”到“悟界”，智源研究院推动人工智能、物理世界和生命科学“三体互动” - 雷峰网
 - **来源：** 雷峰网
 - **发布时间：** 2026-06-13T00:07:00+00:00
 - **原文：** https://news.google.com/rss/articles/CBMickFVX3lxTE5GWmRHZGE2Mnp1Vk4xMFFzTHc4RXhURm1fNjJhNFVrMUtBbmRxRDdlVjFTcG9qQjYyUXkzdVF0TWtDOHhRUmtxUlpJRHFnbVEzdUgzSF9oaGJXbUhLcml6MUNyeWxmMm5JeFRsZ0JVTWtSZw?oc=5
-- **摘要：** 2026北京智源大会开幕，智源研究院提出推动人工智能、物理世界和生命科学“三体互动”，体现人工智能跨领域融合方向；候选数据未披露具体模型、研究成果或落地计划。
-
-### 3. OpenClaw发生服务崩溃
-
-- **原标题：** OpenClaw，崩了 - 36Kr
-- **来源：** 36Kr
-- **发布时间：** 2026-06-13T15:10:10+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiTkFVX3lxTFBJWVhjMmxhYVhacHk1bUlXQzlHUDdrMmRkd0F0d2JOM1J2bGxOckdNNGVlSFRieDZrZFdPckIza0RRb3JpdzVtUTdRbHlSdw?oc=5
-- **摘要：** OpenClaw发生服务崩溃，可能影响相关人工智能服务的可用性及用户体验；候选数据未说明故障持续时间、影响范围、事故原因和恢复情况，实际影响仍无法判断。
+- **摘要：** 2026北京智源大会开幕，智源研究院提出推动人工智能、物理世界和生命科学协同互动。该方向可能拓宽前沿人工智能研究范围，但候选数据未披露具体模型或成果。
 
 ## 国家新闻
 
