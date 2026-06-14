@@ -3,3 +3,12 @@ __pycache__/
 .venv/
 var/
 
+
+# Backup files
+*.bak
+
+# Old report directories (now under published/)
+reports/
+reddit-reports/
+chinese-reports/
+deep-reports/
