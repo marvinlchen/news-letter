@@ -514,9 +514,10 @@ def is_article_eligible_for_topic(article: Article, topic: str) -> bool:
     authoritative_binding = (
         topic in article.topics and article.topic_binding == "authoritative"
     )
+    has_topic_assignment = topic in article.topics
     eligible = (
         topic in classify_topics(article)
-        and (topic_keyword_relevance(article, topic) > 0 or authoritative_binding)
+        and (topic_keyword_relevance(article, topic) > 0 or authoritative_binding or has_topic_assignment)
         and not is_topic_low_signal(article, topic)
     )
     if topic == "stock_market":

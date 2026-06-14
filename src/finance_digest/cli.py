@@ -65,6 +65,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--use-codex", action="store_true")
     parser.add_argument("--require-codex", action="store_true")
     parser.add_argument("--codex-bin", default=os.environ.get("CODEX_BIN", "codex"))
+    parser.add_argument("--sources-file", type=Path, help="Path to sources JSON file (default: config/sources.json)")
     return parser.parse_args(argv)
 
 
@@ -72,7 +73,8 @@ def run(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     project_root = args.project_root.resolve()
     output_root = (args.output_root or project_root / "var").resolve()
-    sources = load_sources(project_root / "config/sources.json")
+    sources_file = args.sources_file if args.sources_file else project_root / "config/sources.json"
+    sources = load_sources(sources_file)
     articles, source_errors = collect_articles(sources, args.date)
 
     candidates_payload: dict[str, Any] = {
