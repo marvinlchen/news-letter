@@ -114,7 +114,7 @@ class DeepReadsTest(unittest.TestCase):
         )
         self.assertEqual(len(top_deep_articles([first, duplicate])["cloud_infra"]), 1)
 
-    def test_codex_selection_rejects_more_than_two_items_from_one_source(self) -> None:
+    def test_codex_selection_skips_more_than_two_items_from_one_source(self) -> None:
         articles = [
             self.article(
                 f"same-source-{index}",
@@ -123,20 +123,32 @@ class DeepReadsTest(unittest.TestCase):
             )
             for index in range(3)
         ]
+        articles.append(
+            self.article(
+                "another-source",
+                "Distributed system reliability experiment",
+                "cloud_infra",
+                source="Another Research Group",
+            )
+        )
         raw_items = [
             {
                 "url": article.url,
                 "title_zh": "分布式系统架构基准分析",
                 "why_read_zh": "文章包含系统架构、性能基准和工程权衡，适合用于理解大规模系统实践。",
                 "core_problem_zh": "文章研究分布式系统在规模扩大后的性能与可靠性问题。",
-                "key_ideas_zh": "文章通过架构分析和性能实验比较不同设计方案及其工程权衡。",
+                "key_ideas_zh": "文章通过架构分析和性能实验比较不同设计方案及其工程权衡，并说明各方案适用的系统规模与负载条件。",
                 "engineering_takeaway_zh": "工程团队可据此评估类似系统设计，但需要结合自身负载验证。",
                 "limitations_zh": "候选摘要未提供完整实验配置，结论仍需通过原文进一步核查。",
             }
             for article in articles
         ]
-        with self.assertRaises(ValueError):
-            validate_deep_items(raw_items, articles, "cloud_infra")
+        selected = validate_deep_items(raw_items, articles, "cloud_infra")
+        self.assertEqual(
+            [item["url"] for item in selected],
+            [articles[0].url, articles[1].url, articles[3].url],
+        )
+        self.assertEqual([item["rank"] for item in selected], [1, 2, 3])
 
 
 if __name__ == "__main__":

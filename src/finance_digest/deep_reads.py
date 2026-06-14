@@ -289,7 +289,7 @@ def validate_deep_items(
     result: list[dict[str, Any]] = []
     seen_urls: set[str] = set()
     source_counts: dict[str, int] = defaultdict(int)
-    for rank, raw_item in enumerate(raw_items, start=1):
+    for raw_item in raw_items:
         if not isinstance(raw_item, dict):
             raise ValueError("Codex returned a non-object deep-read item")
         url = raw_item.get("url")
@@ -300,10 +300,7 @@ def validate_deep_items(
             raise ValueError(f"Codex returned a duplicate deep-read URL: {url}")
         seen_urls.add(url)
         if source_counts[article.source] >= 2:
-            raise ValueError(
-                f"Codex returned too many deep reads from source {article.source}"
-            )
-        source_counts[article.source] += 1
+            continue
         for field, (minimum, maximum) in text_fields.items():
             validate_text_length(raw_item, field, minimum, maximum)
             if not CJK_RE.search(raw_item[field]):
@@ -311,7 +308,7 @@ def validate_deep_items(
         item = dict(raw_item)
         item.update(
             {
-                "rank": rank,
+                "rank": len(result) + 1,
                 "title_original": article.title,
                 "source": article.source,
                 "published_at": article.published_at.isoformat(),
@@ -319,6 +316,7 @@ def validate_deep_items(
             }
         )
         result.append(item)
+        source_counts[article.source] += 1
     return result
 
 
