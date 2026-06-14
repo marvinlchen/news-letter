@@ -125,6 +125,46 @@
       "category": "finance",
       "weight": 8,
       "topics": ["macroeconomics", "stock_market"]
+    },
+    {
+      "name": "雪球网 Stock Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Axueqiu.com%20%28stock%20OR%20%E8%82%A1%E7%A5%A8%20OR%20market%20OR%20invest%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "stock_market",
+      "weight": 9,
+      "topics": ["stock_market"]
+    },
+    {
+      "name": "同花顺 Stock Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3A10jqka.com.cn%20%28stock%20OR%20%E8%82%A1%E7%A5%A8%20OR%20quote%20OR%20trading%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "stock_market",
+      "weight": 9,
+      "topics": ["stock_market"]
+    },
+    {
+      "name": "金十数据 Commodities Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Ajin10.com%20%28commodities%20OR%20%E5%A4%A7%E5%AE%97%E5%95%86%E5%93%81%20OR%20gold%20OR%20oil%20OR%20finance%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "commodities",
+      "weight": 9,
+      "topics": ["commodities"]
+    },
+    {
+      "name": "机器之心 AI Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Ajiqizhixin.com%20%28AI%20OR%20%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20OR%20machine%20learning%20OR%20deep%20learning%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "ai_frontier",
+      "weight": 10,
+      "topics": ["ai_frontier"]
+    },
+    {
+      "name": "InfoQ 中文 Cloud Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Ainfoq.cn%20%28cloud%20OR%20%E4%BA%91%E8%AE%A1%E7%AE%97%20OR%20microservices%20OR%20kubernetes%29%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "cloud_infra",
+      "weight": 9,
+      "topics": ["cloud_infra"]
     }
   ]
 }
