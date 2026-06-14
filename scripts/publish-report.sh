@@ -31,11 +31,11 @@ if git remote get-url origin >/dev/null 2>&1; then
   git pull --rebase --autostash origin "$PUBLISH_BRANCH"
 fi
 
-mkdir -p reports
-cp "$source_report" "reports/$report_date.md"
-cp "$source_report" "reports/latest.md"
+mkdir -p published/daily
+cp "$source_report" "published/daily/$report_date.md"
+cp "$source_report" "published/daily/latest.md"
 
-git add "reports/$report_date.md" reports/latest.md
+git add "published/daily/$report_date.md" published/daily/latest.md
 if git diff --cached --quiet; then
   echo "publish-report: report is unchanged"
   exit 0

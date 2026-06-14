@@ -10,9 +10,9 @@ PUBLISH_BRANCH="${PUBLISH_BRANCH:-main}"
 export PATH="$HOME/.local/bin:$PATH"
 cd "$PROJECT_ROOT"
 
-status_file="$PROJECT_ROOT/var/chinese/status/latest.json"
+status_file="$PROJECT_ROOT/var/deep-status/latest.json"
 if [[ ! -f "$status_file" ]]; then
-  echo "publish-chinese-report: missing $status_file" >&2
+  echo "publish-deep-report: missing $status_file" >&2
   exit 1
 fi
 
@@ -23,9 +23,9 @@ import sys
 print(json.loads(pathlib.Path(sys.argv[1]).read_text())["date"])
 PY
 )"
-source_report="$PROJECT_ROOT/var/chinese/digests/$report_date.md"
+source_report="$PROJECT_ROOT/var/deep-reports/$report_date.md"
 if [[ ! -f "$source_report" ]]; then
-  echo "publish-chinese-report: missing $source_report" >&2
+  echo "publish-deep-report: missing $source_report" >&2
   exit 1
 fi
 
@@ -34,17 +34,17 @@ if git remote get-url origin >/dev/null 2>&1; then
   git pull --rebase --autostash origin "$PUBLISH_BRANCH"
 fi
 
-mkdir -p published/chinese
-cp "$source_report" "published/chinese/$report_date.md"
-cp "$source_report" "published/chinese/latest.md"
+mkdir -p published/deep
+cp "$source_report" "published/deep/$report_date.md"
+cp "$source_report" "published/deep/latest.md"
 
-git add "published/chinese/$report_date.md" published/chinese/latest.md
+git add "published/deep/$report_date.md" published/deep/latest.md
 if git diff --cached --quiet; then
-  echo "publish-chinese-report: report is unchanged"
+  echo "publish-deep-report: report is unchanged"
   exit 0
 fi
 
-git commit -m "Publish Chinese finance digest $report_date"
+git commit -m "Publish deep reads $report_date"
 git push origin "HEAD:$PUBLISH_BRANCH"
 
-echo "Published Chinese report for $report_date"
+echo "Published deep reads for $report_date"
