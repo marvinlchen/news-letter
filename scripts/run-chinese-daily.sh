@@ -4,7 +4,7 @@ set -euo pipefail
 PROJECT_ROOT="${PROJECT_ROOT:-$HOME/finance-news-digest}"
 export PATH="$HOME/.local/bin:$PATH"
 export PYTHONPATH="$PROJECT_ROOT/src"
-export CODEX_BIN="${CODEX_BIN:-codex}"
+export CODEX_BIN="${CODEX_BIN:-codebuddy}"
 export CODEX_HOME="${CODEX_HOME:-$HOME/.codebuddy}"
 
 # Use a separate output root for Chinese reports

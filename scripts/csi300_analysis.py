@@ -10,7 +10,7 @@ import json, sys, time, subprocess, re, urllib.request, urllib.parse
 from datetime import datetime, timedelta
 from pathlib import Path
 
-CODEX_BIN = "codex"
+CODEX_BIN = "codebuddy"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
