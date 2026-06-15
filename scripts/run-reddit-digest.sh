@@ -4,7 +4,8 @@ set -euo pipefail
 PROJECT_ROOT="${PROJECT_ROOT:-$HOME/finance-news-digest}"
 export PATH="$HOME/.local/bin:$PATH"
 export PYTHONPATH="$PROJECT_ROOT/src"
-export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+export CODEX_BIN="${CODEX_BIN:-codex}"
+export CODEX_HOME="${CODEX_HOME:-$HOME/.codebuddy}"
 
 REDDIT_ENV_FILE="${REDDIT_ENV_FILE:-$HOME/.config/finance-news-digest/reddit.env}"
 if [[ -f "$REDDIT_ENV_FILE" ]]; then
@@ -29,7 +30,7 @@ report_rc=$?
 set -e
 
 if [[ "$report_rc" == "0" && "${PUBLISH_TO_GITHUB:-1}" == "1" ]]; then
-  "$PROJECT_ROOT/scripts/publish-reddit-digest.sh"
+  "$PROJECT_ROOT/scripts/publish-reddit-report.sh"
 fi
 
 exit "$report_rc"
