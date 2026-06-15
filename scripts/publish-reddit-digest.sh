@@ -32,10 +32,10 @@ if git remote get-url origin >/dev/null 2>&1; then
 fi
 
 mkdir -p reddit-reports
-cp "$source_report" "reddit-reports/$report_date.md"
-cp "$source_report" "reddit-reports/latest.md"
+cp "$source_report" "published/reddit/$report_date.md"
+cp "$source_report" "published/reddit/latest.md"
 
-git add "reddit-reports/$report_date.md" reddit-reports/latest.md
+git add "published/reddit/$report_date.md" published/reddit/latest.md
 if git diff --cached --quiet; then
   echo "publish-reddit-digest: report is unchanged"
   exit 0

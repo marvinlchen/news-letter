@@ -32,10 +32,10 @@ if git remote get-url origin >/dev/null 2>&1; then
 fi
 
 mkdir -p deep-reports
-cp "$source_report" "deep-reports/$report_date.md"
-cp "$source_report" "deep-reports/latest.md"
+cp "$source_report" "published/deep/$report_date.md"
+cp "$source_report" "published/deep/latest.md"
 
-git add "deep-reports/$report_date.md" deep-reports/latest.md
+git add "published/deep/$report_date.md" published/deep/latest.md
 if git diff --cached --quiet; then
   echo "publish-deep-reads: report is unchanged"
   exit 0
