@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 import sys
+import socket
 import tempfile
 import time
 import urllib.error
@@ -340,6 +341,7 @@ class RedditHTTPClient:
             if wait > 0:
                 time.sleep(wait)
             try:
+                socket.setdefaulttimeout(35)
                 with urllib.request.urlopen(request, timeout=35) as response:
                     self.last_request_at = time.monotonic()
                     return response.read()
