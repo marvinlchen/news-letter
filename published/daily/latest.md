@@ -1,214 +1,120 @@
 # 每日专业 Topic 新闻：2026-06-14
 
-> 生成模式：`rules-fallback`。新闻链接可能受订阅或付费墙限制。
+> 生成模式：`codex`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 宏观经济第1条要闻：可信来源报道
+### 1. 国家统计局发布6月上旬流通领域重要生产资料市场价格
 
-- **原标题：** Veröffentlichungen - European Commission
-- **来源：** European Commission
-- **发布时间：** 2026-06-14T15:51:10+00:00
-- **原文：** https://news.google.com/rss/articles/CBMi-gdBVV95cUxOZG42TmlzVVRyWmt0UndmVHljc0ZsNi1UVWZmdFVsc3JWLVZPWW1OMW1oWmlldnl0dEFiY0xQQjNvOGhhZHVzTGlEV09URjBNTWVFcmJwcFVzUTRRVUFJVEhVdjdjdU0xTnFFd0dLeFZfM2ZmYlo5bnJNYTJtb1QwR1Nuc0N1ajRFWEhsYlZTNXF2Q2tDazYteVc3NDZEM2RRdmdrTVVVUDMtS3dFeTMyN0J2OGdUQ2ZQLU1yT0FPWWdSa21nWXk3UWpaMHIzbkkybzFmVDJtZ0pkNjg3U3lfTHhOaUxLOW43Q05KaVNtQlpraUdXOU1SS1V4ZG1SanNnM1lVMlVyMDB4bS02M1kzSVFwYVcyMTdQOFBaS3JvM2x3aEhYeUtyMTRhVFZIbWVIRU1IQkgteHE4WGV2ZUJlT0dxWU9OU2VfaXU3S3BvQkgzUTBrcGlHNVVUTjFKanh4VElMUTBpUlNTakp3a1RXcEo2djh2MTk1c2RYd2pzX0NlOFNGaDhuVHVBSDYtUGlzY3U0VWtDQ3czTm5ZcmZGdG9IdERZa3hXSXM4MWRsQ2JzQkFIRHJoN0hzQUptcURhbW5QQ3hQT0FDeFhkbUhoUnpuWkh2OG5UZU9WWjZwbG1nWEJ4ZWdHdm5xclNPVzZOWWlmdGE4am45UE9fRjhXNUFfUEtaLUhXTmRDMV9ld1pTa1YwM1NZSURxZVVmWWszVmtwMk1CbUxuZDBhMjFnYmxoU19BMnMzOUZ3U0t5TU1tengtb3JEUkwyV2dVSURfamliQ0QtUmhKTkpiU2RJU1dGaFpYNUUxNW5BSFJFcldjOURHOXRlYmx5YVhWZUxNbEJxS3JrRlZ0c1c1VXBVdWtaaTNHRXZ6elBRV1BvT2NBWFBSODlrellLcERCd3B4bWVtbU5wQ1I2WkZXRVl2SWJyek9iNU5GQjhOME8zNm9mdmN1anpPMFExYkFNWTJQTDlYNThXTlFTWElaM1Ytb1VCXy1mdUpFY1hhdVBaaXRyREVucHF3a200cmw2cEhHTWZGV1RuYTA4cEwtdU1MZ29jWkFKNlVGNzBuWlBreW9tTW1QQVdpLXJ5Z1hQSWh1ZG9GUUdYZElQUXc1aUs4bWlGX29PUGlRNWxZWkJaWEIzSGhJYjk0d0ZQQVd5MVFEVWJVUE9oWEozRVRMOVNjcDUxQWY4RHh6U09scTJFbkpNNUNhdUlwMm90ajNCQWw1cWNzN0JvNjZ3MzlIdVBEem1iSDlaWEhKdGNZMFBkVTVjR0x3a1NWYTR0cnYyMUlIUWRuWFVYb3d5Wi1KRTFUa29UeDlUWWpWWks2U0xDVlBtTXFJQy1HWDVR?oc=5
-- **摘要：** 可信来源发布一则宏观经济消息。该条目规则评分为 15.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 宏观经济第2条要闻：可信来源报道
-
-- **原标题：** Search results - European Commission
-- **来源：** European Commission
-- **发布时间：** 2026-06-14T13:28:17+00:00
-- **原文：** https://news.google.com/rss/articles/CBMijwZBVV95cUxPS2w5T2F2UHVreFV4aDlxandaU01PSmpBX0p6SHA1MnlsMkM3YWd4cTlCcDduNkxKZUhTZDdjdjlhaUlVYkpiUTM0YlVBWjRUNnVKSlBXSmg5Q2VVcS14bXllak9mQy1PdXpQbmgwY3BkVFFGdUtNMXo2MlUwZ0xnNXJfcHN2VG9wVjFtRkJtc3htamtwb2ZxTnItcEV0NmxnZG9UOUxpWDVlb2pqOFphaEFSNjVCWGNxdHh4MFJPV052WE5PUmpCV1JLeFNDb0h6M2stdjllQ3owRDZfWFIyczZBWlRadkVOQ0tHeFY4Qi1IcHZaMHFFbC1Da1VwZ2pfNHBUQ0NSanhDVEpucFJhLUFIY3BMZ1poR3hqY3E3V1pQYjYxQU45QzEwWHBLMFJRaXQ5MjdlNmJMVVA1ZUIyNmpEZGFVYmFNazQtWWVzTFNVUHdTS29XWGdSemNTekUzLWNDZTF4N01VV0Vfa1dfYWpXeVBKUExBRWFwNlFKQzgtS1gyUzlnaHhxbTJqRk1mYzV6U3VhOEkxa19haFpIRzZyblFfQWVKanlvMEotbnFHZDhCWDBmaUp0Y2dOdi1hbHJvRmFRZHNmVC13b2FOaTI0MWRrWVNvRjNYWHRsaDhhMWNpMkN3MUJNWVozRUxoRGZSMFV2Vkx2emVqd1FGYVZvOFVGTlNnNkpqS0JGN1ROSHRLM1M4ekNtV2FPRlk0TURUdVVoVEk2YmRhVkk0QUMyMHktazg3bDdLX0c2TmhvdFJnVVdqeE5TbVZ4Z0VsQlFoY09LbFFNSG1PX1pXQ1loTnhQcmpWQS15dXh5ejh4TWtTMFZlMlZsbXRaLS1OeHJoWU1MWjlSajBGRkJDQ29ycWdCcVlYRzJ1R1R2bGxMTkxsaUcwY19TYmM3OUYyVE1OX0JfMTdwNnczNF9Lb2FRWDhDRmtjMC1vaG9Eb1VJNVRZVl91UFoxOWRQR204UXNXRmxjb1ZfNmtvT2x6WjZvb1B2RmoyZjFqLVdzTFBBbUVKZFlWbVNTaGVNVzg?oc=5
-- **摘要：** 可信来源发布一则宏观经济消息。该条目规则评分为 15.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 宏观经济第3条要闻：可信来源报道
-
-- **原标题：** All Employees: Financial Activities: Finance and Insurance in West Palm Beach-Boca Raton-Delray Beach, FL (MD) - Federal Reserve Bank of St. Louis
-- **来源：** Federal Reserve Bank of St. Louis
-- **发布时间：** 2026-06-14T11:44:35+00:00
-- **原文：** https://news.google.com/rss/articles/CBMimwFBVV95cUxQVjkwaHNzR3hOcFJxdnJGTy1HTi15a3pKTk5Hc3VXdHhqMmJkMnhKdTVfWnFzXzJWaUl5cnVoc3picXBDWU5oSXpRQ2RkQVVxTHkzSnE1dHlYYVYzQTcwQmxpc2FuQmVMSHBEd2lSVU1CZ095STF2UDFGcXZBNXlKNzVwSmRfQVltVHVJQzRUcXAzVVVnR3RPVHp0QQ?oc=5
-- **摘要：** 可信来源发布一则宏观经济消息。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Market Prices of Important Means of Production in Circulation, June 1-10, 2026 - stats.gov.cn
+- **来源：** stats.gov.cn
+- **发布时间：** 2026-06-14T01:30:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMigAFBVV95cUxObkJWQ2EwNl9tSG5NWjlCVkJ6eWszRWxPWEVxazVlc3NralRvR2s3RWEydENxLW9iMEc2TmFlNThIVGlIbUxNNS15cWZkaE9sdmJyR1pKMVRuR2JxbTlpZk9TbDRXbmZMWWM3a19jM3ZxTFMtdmxKOUhuNlZ5SHZTWQ?oc=5
+- **摘要：** 中国国家统计局发布2026年6月1—10日流通领域重要生产资料市场价格变动情况。该数据是观察中国工业品价格走势和通胀压力的重要高频指标，对判断PPI趋势及宏观政策走向具有参考价值。
 
 ## 航运 Top 3
 
-### 1. 航运第1条要闻：英国《金融时报》报道
+### 1. 英国在英吉利海峡拦截俄罗斯影子舰队油轮
 
 - **原标题：** UK intercepts Russian shadow fleet oil tanker in English Channel - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-14T08:57:34+00:00
 - **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxOcF94Q2M0bGVDY3dsc1JpcXVCMUYyVUxqNjdFcTVsMThsNXNtb3JZQ2MtaDhfZDhwVVRCcWFCX09qUkQ0TmJLZzRkWGNrTm0wcDZFTG43LVZoRGE4Q2R3MVFETGd1MzlIaHU0QUtTWFZHM0NISXk1bFVjcngtd25HUkE5eWE?oc=5
-- **摘要：** 英国《金融时报》发布一则航运消息。该条目规则评分为 22.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **摘要：** 英国在英吉利海峡拦截一艘属于俄罗斯影子舰队的油轮。影子舰队是俄罗斯为规避西方制裁而使用的非正规航运力量，此次拦截标志着西方对俄石油贸易执法力度升级，可能推高相关航线运费及保险成本。
 
-### 2. 航运第2条要闻：彭博社报道
+### 2. 伊朗称美方草案包含石油制裁豁免、核限制及资产解冻
 
-- **原标题：** UK Forces Board Sanctioned Tanker in Russian Shadow-Fleet Raid - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-06-14T08:40:11+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZGRvTjZpZWNTdmNpT3NjbmdPV2NuUk83LUNHYW8zeThpMlItZDRTNmltYXZQcEE3RkpNTEpsVFNiY21hQXFQNk9lSkx0TTZoUUc0TEJ4N29adWZZZVg1ZEJiTGdlTUJ5dzBneUZaVndQQm42Mlc4cnk3eUZ5R1BxZnNXTWZzOXp5cWM3QWtxT1lNQXNlMVpOd0drc0MzOU1wZzM5dnJLZFVMcUlTUV9JVC11U21WYUdnbG1Pd2p2ZW5Fdw?oc=5
-- **摘要：** 彭博社发布一则航运消息。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 航运第3条要闻：路透社报道
-
-- **原标题：** British forces intercept Russian shadow fleet tanker in the Channel - Reuters
+- **原标题：** Iran says draft US deal includes oil sanctions waiver, nuclear limits and asset release - Reuters
 - **来源：** Reuters
-- **发布时间：** 2026-06-14T06:18:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmNiNnZ0V2F3TGUxOFVraE14eEZPdUV2ZzlxVEdMN3lJUkh5X1hrdkNOLVBvX215dEctb3A1TW9xZ1BYeWxweU9yb3UyamtwVE5aTEFCYWN0RVVjUzB1dWlFSlRncGh5dFpvS0lyQ2U2eHRrVTFEQzdyLVFJTUhGX0J3bGJLZEZyWTB3ZjF1MjZWUmthbEdyT0ZWQm1KeUp6Sk4wUzE0QmhGeHhMb2F1VXpCdTM2OGdGN1NWS25KMA?oc=5
-- **摘要：** 路透社发布一则航运消息。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-06-14T10:24:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMixAFBVV95cUxQTHJ5S3lQbnk2ck1TeGlCeGh2V0k3cXJQSnVwLVNSUEM3cDNIcUVFazFZazBSLW1oQzJQWHJldGo4RHp3b2NaQXQ2OUxJTjdPTVNjZEZQdUxPT1ZfaGVLWWt1MmtQa0taaUNfZnIzUVRqS3R4WFp2UUM1dFFUZlNkY3ZtZ2xOaDE3UW1uQVpFcGQ4MThHUGs4X3JETmg3SWRWdmEwa28zazRGR0dJX0VWMDBJWXd3Z2Izd19OLUNDb01OejE2?oc=5
+- **摘要：** 伊朗表示美方提出的协议草案包含石油制裁豁免条款、核活动限制以及资产解冻安排。若协议达成，伊朗原油将重返国际市场，可能改变全球油运格局并压低油价，对航运需求和运价产生深远影响。
 
 ## 大宗商品 Top 3
 
-### 1. 大宗商品第1条要闻：可信来源报道
+### 1. 澳大利亚仲裁庭驳回日本INPEX阻止LNG罢工的申请
 
-- **原标题：** Newsletter Editor - Financial Times - ep.ft.com
-- **来源：** ep.ft.com
-- **发布时间：** 2026-06-14T10:17:35+00:00
-- **原文：** https://news.google.com/rss/articles/CBMi_wJBVV95cUxNTnRvWlJ3MDVQNmtScDA1TUZVNVdZSTNGZklJajdqdWhSYlB6QzFqbjltY3gtdlpPUWJEYVMtV2NzRUxjN2dvbndtWG1qU3NmUGQybENRVVRram4xeUNVSUVLMDBOb0J0cTQ5TUk1N0h3RmJfZjZ4OHdBVFQ2X3JVbjVHS2ZfRzlTSVpSMzNzaGZQaHFvQ29sUHB6WGNLTnViSFdNZW1FSUNIM3VnanFEdXVaT1lSa01seWpSOXN1cXZ1ajExbkpqU1Zzd2oyRkZGX0R1ajBkYmFjdFU1NUhiOHd6QjBKcjNhZjA2bmJUY2V3MWZ0R19FRkFhZ28xeXhWdkVrQWJ4Uk1NNTZQb3NVd3hrMWNlMDUyUHEySlZzZVUzMVczS2l4aGl6Z3BETllndFhtWWU2bFRLWDBob1VIbW1jYXJZbE1TUGc0UnJZcldsaGJxWEI0aFdiNkdOSFNESVV3RkZhd1p1T3NxUjY0ekRNbDVOOU9fN294dDBXMA?oc=5
-- **摘要：** 可信来源发布一则大宗商品消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 大宗商品第2条要闻：英国《金融时报》报道
-
-- **原标题：** How Israel’s ‘trampoline’ economy has adapted to war - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-14T08:09:41+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxPVTYwZjYxRGlINGl1ZFhYWktjcUVwd0NnemtLLTZ3aHpUdDBSWVhSYlFJSnNqZE90SWlRdXZObi04SXpWeDRXbHBZZWJTU2lUUE1sN08yT05sTVFRbE1QNm83X2pqdHFGNWFDc2o5ZGRFbTJVSE1IZGRSa0ZkZWJ6S2dIbW4?oc=5
-- **摘要：** 英国《金融时报》发布一则大宗商品消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 大宗商品第3条要闻：可信来源报道
-
-- **原标题：** Science, technology and innovation parks: Policies and practices e-learning course, summer session 2026 - UNCTAD e-learning Portal
-- **来源：** UNCTAD e-learning Portal
-- **发布时间：** 2026-06-14T03:59:37+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiYEFVX3lxTE1scXRleDN5cVJmR0lhVHJEQlFoLVdKWkV6ak4xa2VfYTM5SGZKbW5yanN4X010UVZnQjF0NTEtTVMzNUQtcFZ5VVFRLWd5bjM3eThvRkJoOEJRc2JXcnZsVA?oc=5
-- **摘要：** 可信来源发布一则大宗商品消息。该条目规则评分为 9.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Australia tribunal rejects move by Japan's Inpex to stop LNG strike - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-06-14T05:15:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMivwFBVV95cUxPLW9zY1RzSWNMeXFibVdLelBvRGpvUkoxTF9GSEpHSlF1VXhwOE5hVXZjekpLTTZLZ0lNRFh4RTZDdngyZ1J4dC1WWFNhZzZ3cEwyVlhoMXdqbEFhek54aXdlZkFzOUxYbnJQb3BIUHROeGJ1Um81YjRzZHBNTWRadUxzcTZ2SVpGZlhicTNrRGV3Z25FQWJod0tlR2dmaWVVU3d4UklKSVA1a0ttZno3S2lkVVliTEFEbDg3T3lITQ?oc=5
+- **摘要：** 澳大利亚仲裁庭驳回日本INPEX公司试图阻止LNG工厂工人罢工的申请。INPEX运营的Ichthys LNG项目是澳大利亚重要液化天然气出口设施，罢工若持续将影响亚太LNG供应，可能推高现货价格并波及日本能源进口成本。
 
 ## 股票市场 Top 3
 
-### 1. 股票市场第1条要闻：路透社报道
+### 1. 全球最热股市关注MSCI纳入时刻
 
-- **原标题：** 9168.T - | Stock Price & Latest News - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-14T01:51:07+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiiAFBVV95cUxNanh6bEJKdmtta3pUcGtnRUpDZS1CNUdERTRyQk1DRWE2SFVwX3pQZEpyX2F5QzIwVFNzV1JWYlI5eTFVWjM4V0FTTWNNTHJfblVjT1JfdGs0bjYtcEVGS0ZJMVpiR200WWc2UVRpM2xjLXRfOWRscHhUNVdEYjJ2dDdCN0ZWTFNC?oc=5
-- **摘要：** 路透社发布一则股票市场消息。该条目规则评分为 19.0，检测到 6 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 股票市场第2条要闻：可信来源报道
-
-- **原标题：** Newsletter Editor - Financial Times - ep.ft.com
-- **来源：** ep.ft.com
-- **发布时间：** 2026-06-14T10:17:35+00:00
-- **原文：** https://news.google.com/rss/articles/CBMi_wJBVV95cUxNTnRvWlJ3MDVQNmtScDA1TUZVNVdZSTNGZklJajdqdWhSYlB6QzFqbjltY3gtdlpPUWJEYVMtV2NzRUxjN2dvbndtWG1qU3NmUGQybENRVVRram4xeUNVSUVLMDBOb0J0cTQ5TUk1N0h3RmJfZjZ4OHdBVFQ2X3JVbjVHS2ZfRzlTSVpSMzNzaGZQaHFvQ29sUHB6WGNLTnViSFdNZW1FSUNIM3VnanFEdXVaT1lSa01seWpSOXN1cXZ1ajExbkpqU1Zzd2oyRkZGX0R1ajBkYmFjdFU1NUhiOHd6QjBKcjNhZjA2bmJUY2V3MWZ0R19FRkFhZ28xeXhWdkVrQWJ4Uk1NNTZQb3NVd3hrMWNlMDUyUHEySlZzZVUzMVczS2l4aGl6Z3BETllndFhtWWU2bFRLWDBob1VIbW1jYXJZbE1TUGc0UnJZcldsaGJxWEI0aFdiNkdOSFNESVV3RkZhd1p1T3NxUjY0ekRNbDVOOU9fN294dDBXMA?oc=5
-- **摘要：** 可信来源发布一则股票市场消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 股票市场第3条要闻：CNBC报道
-
-- **原标题：** This Chinese consumer stock could double if its global industrial pivot succeeds, JPMorgan says - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-06-14T12:35:26+00:00
-- **原文：** https://news.google.com/rss/articles/CBMisgFBVV95cUxPTzlwMkwzTHpYYm0tMTNjMnlrdS1hRmJocFpwb0ozVmJmUkxjM1NFdGtxSzJ2QmpPZTBSTmNxaGd3b0JBN1dZSEpHSm9BNmZKTnFPbTdhb0ZlVkJ2MnBjVzM0VFo3Z1hQVWJPSXBibl9wUkpucTc4c2d1SWJORFNncHFHMmFFMU1Ld2hacXhZLUtqRnlDSXV0TTRTM1U0MGVEZVNKVEFrSEt2OUhMdGpBS1p3?oc=5
-- **摘要：** CNBC发布一则股票市场消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** World’s Hottest Stock Market Turns Attention to MSCI Moment - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-06-14T00:00:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMirwFBVV95cUxOMVVoR2ZZa0FaZXB1dVBmVFJIclFicm80M1B0NUtGQ1hjTnNEUW1JNUNZbnRFTl8wQWFGdTZYb1duUnY0bXg0S0xVelduNW1HWkFvWGlKaWt2Q09uczFqRDB4eVNtV3h5MFZpQkh5VFpOdEFUaXBQdFEyZzBNbkRERGxnV1c1dmdINHdEWWFiQjczRGltZDRhUS04QVNTelZEQ2Z4YkI1NGZQR3oyQkhB?oc=5
+- **摘要：** 彭博报道，当前全球表现最为强劲的股市正将焦点转向MSCI指数纳入预期。MSCI纳入通常将带来大量被动资金流入，提升市场流动性与国际配置权重，对该市场的资金面和估值体系具有结构性影响。
 
 ## 科技产业 Top 3
 
-### 1. 科技产业第1条要闻：彭博社报道
+### 1. Anthropic因美国政府安全关切暂停新AI工具
 
-- **原标题：** Iran Signals No Deal Will Be Signed by Trump’s Sunday Timeline - Bloomberg.com
+- **原标题：** Anthropic suspends new AI tools over US government security concerns
+- **来源：** BBC Business
+- **发布时间：** 2026-06-13T16:28:38+00:00
+- **原文：** https://www.bbc.com/news/articles/c932g3v3e13o?at_medium=RSS&at_campaign=rss
+- **摘要：** Anthropic本周公开发布的Claude Fable 5模型引发网络安全和黑客攻击方面的担忧，公司随后暂停相关新AI工具。此举凸显AI能力前沿与国家安全之间的张力，可能影响行业对高能力模型发布的节奏和监管态度。
+
+### 2. AI行情与SpaceX IPO推动的融资热潮令银行承压
+
+- **原标题：** Equity Funding Squeeze Driven By AI Rally, SpaceX IPO Stretches Banks - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-06-14T14:21:18+00:00
-- **原文：** https://news.google.com/rss/articles/CBMitgFBVV95cUxPRmhYRUJSWTQ4VGF3R2RPTmh4dERNS3k5SEN1VmtmOHR6NUJCdUJIV2FkTkh4azUtZUQ3dnlXclNDc3hPSXBzcDRFQ0tmenZMQ29fRHcwY2FvN3YtMW1pZ2VnT2ZTTHViUjN2RHpKQVpuTVpwajRfa0o0MTJoN0ZZWlVScTBYUWJIS1Z0d1hvanhYZVhyOTlIWUJpVGg3WHJTWDdCVm1lZHFybTVXbS03b05maTY5QQ?oc=5
-- **摘要：** 彭博社发布一则科技产业消息。该条目规则评分为 19.0，检测到 6 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-06-14T14:00:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMivAFBVV95cUxPLTFsYWxpVmpJQUJ3RlQ0UWtlNEpPVGJPYmNGcmxTS2NST3hSVmxONnlURENBQW9ZNmRIN2JRS2tEQjRvNzBHM3FHM1p1SnA3VWx6VEJlVDV0VTg4c015MkZVTUprOWFUY3YxNVNoc01CSUl2ZTNNUTZDM01mbjgya1FSV1pHZXVLSERMTkRCYzBIMWs5UmJ3akRfQVN3T1VVR0wyYXY5NVJuY0NRVWUzVllVaHhkVjRhVTh5dw?oc=5
+- **摘要：** 彭博报道，AI板块持续上涨叠加SpaceX大规模IPO，推动股权融资需求创纪录，令承销银行面临资本和风险敞口压力。这一融资集中度上升反映科技领域资本配置的结构性变化，也引发对市场流动性的关注。
 
-### 2. 科技产业第2条要闻：彭博社报道
+### 3. 世界杯期间墨西哥依赖中国科技和交通运输方案
 
-- **原标题：** UK Forces Board Sanctioned Tanker in Russian Shadow-Fleet Raid - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-06-14T08:40:11+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZGRvTjZpZWNTdmNpT3NjbmdPV2NuUk83LUNHYW8zeThpMlItZDRTNmltYXZQcEE3RkpNTEpsVFNiY21hQXFQNk9lSkx0TTZoUUc0TEJ4N29adWZZZVg1ZEJiTGdlTUJ5dzBneUZaVndQQm42Mlc4cnk3eUZ5R1BxZnNXTWZzOXp5cWM3QWtxT1lNQXNlMVpOd0drc0MzOU1wZzM5dnJLZFVMcUlTUV9JVC11U21WYUdnbG1Pd2p2ZW5Fdw?oc=5
-- **摘要：** 彭博社发布一则科技产业消息。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 科技产业第3条要闻：英国《金融时报》报道
-
-- **原标题：** Defence tech start-up Anduril calls for reset of US arms export controls - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-14T04:00:59+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxPSU5DQzNrQ3RjemhTWVRzUURKcm5GR1lxYm52RHRtTS01Znh1VHNXWWw4aDAzZTVOYnd0ZFBHUFJPOFBueHRnOFpKNi1mWjVxNTFFRXR4RDRYQTUzNHljUUNpYXdPUjczNnVPSm5RdkVTSnJkSlFWY3VVT2RURHA5RHBuM3M?oc=5
-- **摘要：** 英国《金融时报》发布一则科技产业消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** At World Cup, Mexico leans on China tech and transport to meet logistical needs - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-06-14T13:00:06+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiywFBVV95cUxPTGdPSW1NRjlRYXdCSGNSYlAxTEtPbWVvX294bENtYVc0azdIeTZ6R19uV2I2RnpFUmlQTlZBN2loMEF2RmZ4SFpkWUJqRGkxMjB2MzczWnhiYU82cUNncHJkZTc0WWZmOFA5ZVhscE1mMjFtMmVlQVFOaXAxbXM5ZlduMEMxWkJRVUNadGVqdkRaVnlpMm12OGtGZmVEV3ZfSHpaa0hNaTFXemVoQkFSMzlBb20yTFQzSGNQV2IxTTltdlFoUFktT0VNa9IBywFBVV95cUxPcjc1UlltSGpZcUtlTUs4ck5ReHN3OXpaTVBpcFI0QUJ1bzNzN2s3SGFmYUF4TmwtcjJzaTVzVlFBem9oMnVWN0xGOTcwaWw4Z1RBYlhOMW1IUm9fbklvZEhXWkJ6LTJYVlhKbmxIaXd6WGFBanhJS0g0eDFxRkxOOWZ4NFF0T3hCNkNadVFsRFVFaXFndDJkSER3dDAtR1dIMktIZnQ1TEF4VlhBNTV6LWJkYU5yLW5CNHNzMDFGcUxjLUdjMVptV21iWQ?oc=5
+- **摘要：** 南华早报报道，墨西哥在世界杯赛事后勤保障中大量采用中国科技和交通运输方案。这反映中国科技和基础设施出口在拉美市场的渗透加速，对全球技术供应链格局和中外科技竞争态势具有标志性意义。
 
 ## 消费 Top 3
 
-### 1. 消费第1条要闻：英国《金融时报》报道
-
-- **原标题：** UK intercepts Russian shadow fleet oil tanker in English Channel - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-06-14T08:57:34+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxOcF94Q2M0bGVDY3dsc1JpcXVCMUYyVUxqNjdFcTVsMThsNXNtb3JZQ2MtaDhfZDhwVVRCcWFCX09qUkQ0TmJLZzRkWGNrTm0wcDZFTG43LVZoRGE4Q2R3MVFETGd1MzlIaHU0QUtTWFZHM0NISXk1bFVjcngtd25HUkE5eWE?oc=5
-- **摘要：** 英国《金融时报》发布一则消费消息。该条目规则评分为 22.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 消费第2条要闻：英国《金融时报》报道
+### 1. 瑞士公投否决人口上限1000万提案
 
 - **原标题：** Swiss voters reject proposal to cap population at 10mn - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-14T13:01:25+00:00
 - **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxNOE9MZ0F5N0pEM0JZaWNuWlBQc3NNRGFCQ2RaYUNKOEh3a2JPeS1SeWVWdm9fR3FiQ2dIdDc0RVlzOXhPeGxKM2dGM3BzcWdDMEszQnpjLTgyenUxdWlOdHJKc0cxb3MyR1BCcjZFYlgzNDZ5anZ3eFU1VUc4bGVGb3gtRXc?oc=5
-- **摘要：** 英国《金融时报》发布一则消费消息。该条目规则评分为 19.0，检测到 4 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **摘要：** 瑞士选民在公投中否决将人口上限定为1000万的提案。该提案若通过将限制移民流入，可能引发与欧盟的冲突并冲击劳动力市场。否决结果使瑞士避免了对企业用工和消费市场的紧缩冲击，商业界对此表示欢迎。
 
-### 3. 消费第3条要闻：路透社报道
+### 2. 燃油食品价格上涨侵蚀特朗普农村支持率
 
-- **原标题：** British forces intercept Russian shadow fleet tanker in the Channel - Reuters
+- **原标题：** Trump's support in rural America slips as fuel and food prices climb, Reuters/Ipsos poll shows - Reuters
 - **来源：** Reuters
-- **发布时间：** 2026-06-14T06:18:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmNiNnZ0V2F3TGUxOFVraE14eEZPdUV2ZzlxVEdMN3lJUkh5X1hrdkNOLVBvX215dEctb3A1TW9xZ1BYeWxweU9yb3UyamtwVE5aTEFCYWN0RVVjUzB1dWlFSlRncGh5dFpvS0lyQ2U2eHRrVTFEQzdyLVFJTUhGX0J3bGJLZEZyWTB3ZjF1MjZWUmthbEdyT0ZWQm1KeUp6Sk4wUzE0QmhGeHhMb2F1VXpCdTM2OGdGN1NWS25KMA?oc=5
-- **摘要：** 路透社发布一则消费消息。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-06-14T10:10:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMivAFBVV95cUxOOGNGbW1FWnpRa3BkcF9tUW90bzlmQVprRlVsRmRWZThFM0toVmJ2RFJTTDJmS3dfYXF4M25EZzRsQThpeTZQMnVoOURXekJYQkhPTmxTUk5pTkMybjF0d2VSUC13aV9Kd3JGOGoyUl9QUC1ubzNzR2NaSVlfQjNyTjNtaVZuRkoyVTJiSGwxZVdiSzAxblhVV0Q0dUkyb1Q3WldGVU5xVmR3VThRbDFFR1VqMlB0dVBZWGpsVw?oc=5
+- **摘要：** 路透/益普索民调显示，随着燃油和食品价格持续攀升，特朗普在美国农村地区的支持率出现下滑。生活成本上升正改变关键选民群体的政治倾向，反映通胀压力对消费信心和社会稳定的深层影响。
+
+### 3. 中国推出数字支付系统与美元竞争
+
+- **原标题：** China tees up digital payments system to compete with dollar - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-06-14T09:29:02+00:00
+- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxPcXF1LUVMRkUzUFB4TWJVaElxN2JsSjI4Q1FYZmZuUFZCRnVLcFNnUEtxaF9TVGVlODh1aGFweTQyVklsZDJ5UTd0cEJsOUFqRG8yRDJHNVZpOWhVa0M3UlNkdEtSTUNlNERWaXoxVno5azdZVGxiZnUwcjdsMnVFTDJCTmg?oc=5
+- **摘要：** 金融时报报道，中国正在推进一套旨在与美元竞争的数字支付系统。此举若取得进展，将挑战美元在国际贸易结算中的主导地位，对全球支付基础设施和跨境消费金融产生结构性影响，可能加速去美元化进程。
 
 ## Cloud Infra Engineering Top 3
 
-### 1. Cloud Infra Engineering第1条要闻：路透社报道
-
-- **原标题：** British forces intercept Russian shadow fleet tanker in the Channel - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-14T06:18:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmNiNnZ0V2F3TGUxOFVraE14eEZPdUV2ZzlxVEdMN3lJUkh5X1hrdkNOLVBvX215dEctb3A1TW9xZ1BYeWxweU9yb3UyamtwVE5aTEFCYWN0RVVjUzB1dWlFSlRncGh5dFpvS0lyQ2U2eHRrVTFEQzdyLVFJTUhGX0J3bGJLZEZyWTB3ZjF1MjZWUmthbEdyT0ZWQm1KeUp6Sk4wUzE0QmhGeHhMb2F1VXpCdTM2OGdGN1NWS25KMA?oc=5
-- **摘要：** 路透社发布一则Cloud Infra Engineering消息。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. Cloud Infra Engineering第2条要闻：路透社报道
-
-- **原标题：** Swiss reject population cap in referendum, avoiding EU clash and cheering business - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-14T00:02:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiowFBVV95cUxQcVJVNS03Zm5DX1hjNDlHcV9fcDVlaUNSUW94Y2JHVnVDVVI5QU9pTllnNTdqT3Ruc0xSQ1RSRlY2ckZ0YlNQMC1HZHZacjZFV2puazNzejhaVWZBVGZ2NkhkdlAyZ01OWi1acFMydnlkcnVGMVRaNC05WFVJWGNMX3QwVi1wdmRDY0syMzcxdW1sLXBuQ3h6dkY3RzdDcWZlVC1v?oc=5
-- **摘要：** 路透社发布一则Cloud Infra Engineering消息。该条目规则评分为 19.0，检测到 4 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. Cloud Infra Engineering第3条要闻：CNBC报道
-
-- **原标题：** A year after Meta tapped Alexandr Wang to build a new AI model, Zuckerberg has to sell it - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-06-14T12:00:02+00:00
-- **原文：** https://news.google.com/rss/articles/CBMipwFBVV95cUxPM1N2TjhCLXhKUEVfUl9RUEYtWHRDUjk1VmY5U05GUXpKenczbThfSlUtNExrYkVTMkw2YlNhdlFpTFdKV01yUElsejZzc3RieWhOV0o3ZmRGdTRKYUhXSUgzTGxjeTBYSmM2WmV3MU9qVUVsb3dBVVgtajgtckpkSTdvQVlSQVg3YU1CbVhndW1tNFhjMHZnOEUzTXdqN1EzV2pXaUNGVdIBrAFBVV95cUxPUlZCb19ObnlKTTJubG9qMnhFR24ydk1ralZlNWt4VmNpYTlyLUozeUl0eUxaVi1SZzdOWVJ3WGw5TWg5WDFuV3NIM0RxV1VXdDhJbzYxSTl2cnhQS0hmdU1yYW9rbEw5ajE3NGJrb3hYYjFCUzFPa0t2c3pOY3NFWGlYYlJ5N3VZMHp5R0dBbWlEaUtNM205d2Y0elVxUzBSR1UwZ19Jc0s5a3Ux?oc=5
-- **摘要：** CNBC发布一则Cloud Infra Engineering消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## AI 前沿 Top 3
 
-### 1. AI 前沿第1条要闻：路透社报道
+### 2. 马斯克与佩奇分道扬镳十余年后，旗下公司联系日趋紧密
 
-- **原标题：** British forces intercept Russian shadow fleet tanker in the Channel - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-14T06:18:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmNiNnZ0V2F3TGUxOFVraE14eEZPdUV2ZzlxVEdMN3lJUkh5X1hrdkNOLVBvX215dEctb3A1TW9xZ1BYeWxweU9yb3UyamtwVE5aTEFCYWN0RVVjUzB1dWlFSlRncGh5dFpvS0lyQ2U2eHRrVTFEQzdyLVFJTUhGX0J3bGJLZEZyWTB3ZjF1MjZWUmthbEdyT0ZWQm1KeUp6Sk4wUzE0QmhGeHhMb2F1VXpCdTM2OGdGN1NWS25KMA?oc=5
-- **摘要：** 路透社发布一则AI 前沿消息。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. AI 前沿第2条要闻：路透社报道
-
-- **原标题：** Swiss reject population cap in referendum, avoiding EU clash and cheering business - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-06-14T00:02:00+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiowFBVV95cUxQcVJVNS03Zm5DX1hjNDlHcV9fcDVlaUNSUW94Y2JHVnVDVVI5QU9pTllnNTdqT3Ruc0xSQ1RSRlY2ckZ0YlNQMC1HZHZacjZFV2puazNzejhaVWZBVGZ2NkhkdlAyZ01OWi1acFMydnlkcnVGMVRaNC05WFVJWGNMX3QwVi1wdmRDY0syMzcxdW1sLXBuQ3h6dkY3RzdDcWZlVC1v?oc=5
-- **摘要：** 路透社发布一则AI 前沿消息。该条目规则评分为 19.0，检测到 4 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. AI 前沿第3条要闻：CNBC报道
-
-- **原标题：** A year after Meta tapped Alexandr Wang to build a new AI model, Zuckerberg has to sell it - CNBC
+- **原标题：** Elon Musk drifted from Larry Page over a decade ago, but their companies are closer than ever - CNBC
 - **来源：** CNBC
-- **发布时间：** 2026-06-14T12:00:02+00:00
-- **原文：** https://news.google.com/rss/articles/CBMipwFBVV95cUxPM1N2TjhCLXhKUEVfUl9RUEYtWHRDUjk1VmY5U05GUXpKenczbThfSlUtNExrYkVTMkw2YlNhdlFpTFdKV01yUElsejZzc3RieWhOV0o3ZmRGdTRKYUhXSUgzTGxjeTBYSmM2WmV3MU9qVUVsb3dBVVgtajgtckpkSTdvQVlSQVg3YU1CbVhndW1tNFhjMHZnOEUzTXdqN1EzV2pXaUNGVdIBrAFBVV95cUxPUlZCb19ObnlKTTJubG9qMnhFR24ydk1ralZlNWt4VmNpYTlyLUozeUl0eUxaVi1SZzdOWVJ3WGw5TWg5WDFuV3NIM0RxV1VXdDhJbzYxSTl2cnhQS0hmdU1yYW9rbEw5ajE3NGJrb3hYYjFCUzFPa0t2c3pOY3NFWGlYYlJ5N3VZMHp5R0dBbWlEaUtNM205d2Y0elVxUzBSR1UwZ19Jc0s5a3Ux?oc=5
-- **摘要：** CNBC发布一则AI 前沿消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-06-14T11:30:01+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUVJVdkQ3amRINFByRFJVVld2V3Fwc1JoMWlBSnBscFA3elMxNy1zalVXOWRzdFZCanBjc2pxQ0Y0eDh2c0E0SDNzM3I1YS1ScG9SRTI2bkcwSDVUTGxielZobU1EbzBZZmY2SlhXMm5tQktETlV6c29NbE5BVXJmbmVZcWtUMHhXX0NSN3Y0OWh2bkZTdjFFR0QyLVVrc2tWUkc0c3ZVRm7SAa4BQVVfeXFMUEFGbXQtLWhSbmVqU1lyVThDeWE2YUd5TFZtQ045djVPMDRuMGxGVVI4SkJ4Q3FuU2dxMF9rWEhCV3QyX09uYlhFaVVxU2dubk0yWFFka0VaeXhjdFVBbzA5Vm5Pc0MwNXlxY1FjNkJWMjhOeG9aY0FQYXVRNk1rOTRtQ0MzWEdKekxGNmp1RzRvZFFiTU1odlFLQ2JlSjVnbW5QWG5NSWp4YkxiQkZR?oc=5
+- **摘要：** CNBC报道，尽管Elon Musk与Larry Page十多年前产生分歧，但两人旗下公司（特斯拉/SpaceX与Alphabet）合作日益密切。AI和云计算领域的竞争与融合正重塑科技巨头关系，对AI前沿研发方向和产业链格局产生深远影响。
 
 ## 国家新闻
 
@@ -218,52 +124,44 @@
 
 ### 中国 Top 3
 
-#### 1. 中国第1条要闻：可信来源报道
-
-- **原标题：** HK$751,000 worth of jewellery stolen while owners dine at Hong Kong luxury home - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-06-14T14:46:07+00:00
-- **原文：** https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMFNib1BtZmMzc2g3Q2s0cXZsZGNHekRNM3ZWczdaMHRnUWM1YW4xbGx4NVdGZVhvU21rRHFFY2lvRVY0bTMxeHA1VUd6bkI4aUd4aEVMbDlPRG4zTTBxdU54bVpvYktOZUN0RElhcGhURkFVX0NZN3JfUFlZZmpjcVBvVHNYQzNEbndueVVpcE5aV0dnNVBJRFJIRnhXd1BuYjdxUGluWExQZXpWenJ4ejAxbnYwLXRaeXNmRUhCVzJ1UU5fY0tUblFGeWtnVVJUTXpF0gHTAUFVX3lxTFBpWE5KMkRuS1ZObEpPaW1QUy1LaW54VmpUZWhNSU9mSWtDT3dUaEZfODV6Z1IxN1p4VjBjNEdRRWM3Q25tblJrWHVrSmVwSWh3SGZjclgyMUozRzVZUkFEX3ZLdGdOdVFCcHVKZDlWdW5MVVRzQkhSZEwtY2VJenlkdjV3Z0w1dTd5MDJUU2U3b0JrMUFXenlHaFhkeGxWc1VObG9iUVd6dE1nVno3MXlEWmk1eWo1UTN4SkRnVVZ1dUQtbV9jSUlFWm5kTlNCS3B5LTQ?oc=5
-- **摘要：** 可信来源发布一则中国消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 2. 中国第2条要闻：可信来源报道
-
-- **原标题：** At World Cup, Mexico leans on China tech and transport to meet logistical needs - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-06-14T13:00:06+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiywFBVV95cUxPTGdPSW1NRjlRYXdCSGNSYlAxTEtPbWVvX294bENtYVc0azdIeTZ6R19uV2I2RnpFUmlQTlZBN2loMEF2RmZ4SFpkWUJqRGkxMjB2MzczWnhiYU82cUNncHJkZTc0WWZmOFA5ZVhscE1mMjFtMmVlQVFOaXAxbXM5ZlduMEMxWkJRVUNadGVqdkRaVnlpMm12OGtGZmVEV3ZfSHpaa0hNaTFXemVoQkFSMzlBb20yTFQzSGNQV2IxTTltdlFoUFktT0VNa9IBywFBVV95cUxPcjc1UlltSGpZcUtlTUs4ck5ReHN3OXpaTVBpcFI0QUJ1bzNzN2s3SGFmYUF4TmwtcjJzaTVzVlFBem9oMnVWN0xGOTcwaWw4Z1RBYlhOMW1IUm9fbklvZEhXWkJ6LTJYVlhKbmxIaXd6WGFBanhJS0g0eDFxRkxOOWZ4NFF0T3hCNkNadVFsRFVFaXFndDJkSER3dDAtR1dIMktIZnQ1TEF4VlhBNTV6LWJkYU5yLW5CNHNzMDFGcUxjLUdjMVptV21iWQ?oc=5
-- **摘要：** 可信来源发布一则中国消息。该条目规则评分为 13.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 3. 中国第3条要闻：英国《金融时报》报道
+#### 1. 中国推出数字支付系统与美元竞争
 
 - **原标题：** China tees up digital payments system to compete with dollar - Financial Times
 - **来源：** Financial Times
 - **发布时间：** 2026-06-14T09:29:02+00:00
 - **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxPcXF1LUVMRkUzUFB4TWJVaElxN2JsSjI4Q1FYZmZuUFZCRnVLcFNnUEtxaF9TVGVlODh1aGFweTQyVklsZDJ5UTd0cEJsOUFqRG8yRDJHNVZpOWhVa0M3UlNkdEtSTUNlNERWaXoxVno5azdZVGxiZnUwcjdsMnVFTDJCTmg?oc=5
-- **摘要：** 英国《金融时报》发布一则中国消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **摘要：** 金融时报报道，中国正在推进一套旨在与美元竞争的数字支付系统。此举若取得进展，将挑战美元在国际贸易结算中的主导地位，对中国金融基础设施自主性和跨境支付格局具有深远影响，可能加速全球去美元化进程。
+
+#### 2. 世界杯期间墨西哥依赖中国科技与交通运输方案
+
+- **原标题：** At World Cup, Mexico leans on China tech and transport to meet logistical needs - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-06-14T13:00:06+00:00
+- **原文：** https://news.google.com/rss/articles/CBMiywFBVV95cUxPTGdPSW1NRjlRYXdCSGNSYlAxTEtPbWVvX294bENtYVc0azdIeTZ6R19uV2I2RnpFUmlQTlZBN2loMEF2RmZ4SFpkWUJqRGkxMjB2MzczWnhiYU82cUNncHJkZTc0WWZmOFA5ZVhscE1mMjFtMmVlQVFOaXAxbXM5ZlduMEMxWkJRVUNadGVqdkRaVnlpMm12OGtGZmVEV3ZfSHpaa0hNaTFXemVoQkFSMzlBb20yTFQzSGNQV2IxTTltdlFoUFktT0VNa9IBywFBVV95cUxPcjc1UlltSGpZcUtlTUs4ck5ReHN3OXpaTVBpcFI0QUJ1bzNzN2s3SGFmYUF4TmwtcjJzaTVzVlFBem9oMnVWN0xGOTcwaWw4Z1RBYlhOMW1IUm9fbklvZEhXWkJ6LTJYVlhKbmxIaXd6WGFBanhJS0g0eDFxRkxOOWZ4NFF0T3hCNkNadVFsRFVFaXFndDJkSER3dDAtR1dIMktIZnQ1TEF4VlhBNTV6LWJkYU5yLW5CNHNzMDFGcUxjLUdjMVptV21iWQ?oc=5
+- **摘要：** 南华早报报道，墨西哥世界杯赛事后勤保障大量采用中国科技和交通运输方案。这标志着中国技术和基础设施出口在拉美市场的渗透加深，对中国产业出海和全球供应链布局具有战略意义。
+
+#### 3. 蒙古国在会晤中重申一个中国原则
+
+- **原标题：** Mongolia Reaffirms One China Policy at Meeting, China Says - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-06-14T04:17:00+00:00
+- **原文：** https://news.google.com/rss/articles/CBMirAFBVV95cUxPa3dPMk15M2NEV2trRVYwNy1PYlJFTE5yd1E1U2VxNUItSFRISGg0eVQwZGdxWk83dEx0NDJrN1BTUW51RkxQWXlyTmdvVFBzLTl3d2ZkOGpjMDVOZnViZldBQmZsel9qcThIUVVTTnlPTUhMX3doaUdIODJFdTZBRFROdW1ydjNDRkM1ZXVleWdoT2ZRcktxSEZYUjc3VEViQTA3c0N3MmtDN2Iw?oc=5
+- **摘要：** 彭博报道，蒙古国在与中方的会晤中重申一个中国原则。此类外交表态有助于巩固中国在地缘政治中的核心利益框架，对周边外交环境和区域投资信心具有稳定作用。
 
 ### 美国 Top 3
 
-#### 1. 美国第1条要闻：可信来源报道
+#### 1. AI竞赛升温下华尔街消化创纪录融资规模
 
-- **原标题：** All Employees: Financial Activities: Finance and Insurance in West Palm Beach-Boca Raton-Delray Beach, FL (MD) - Federal Reserve Bank of St. Louis
-- **来源：** Federal Reserve Bank of St. Louis
-- **发布时间：** 2026-06-14T11:44:35+00:00
-- **原文：** https://news.google.com/rss/articles/CBMimwFBVV95cUxQVjkwaHNzR3hOcFJxdnJGTy1HTi15a3pKTk5Hc3VXdHhqMmJkMnhKdTVfWnFzXzJWaUl5cnVoc3picXBDWU5oSXpRQ2RkQVVxTHkzSnE1dHlYYVYzQTcwQmxpc2FuQmVMSHBEd2lSVU1CZ095STF2UDFGcXZBNXlKNzVwSmRfQVltVHVJQzRUcXAzVVVnR3RPVHp0QQ?oc=5
-- **摘要：** 可信来源发布一则美国消息。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Wall Street digests record fundraising haul as AI race intensifies - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-06-14T04:00:59+00:00
+- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxNbVpHVTNkSGhjRGs1eXA1VVB1MTNDR1hocU8zQzNqZEVRMUhSLTNtd29LSDJad1JQNEtPaDVleWM1anBRUXJLMHFYZm9jdVNmM25lTUtfcGJHbk85S1lxSGNnVzZWYU1fbFprTHE4TDRxeVdhOGZsRVJQYWVhMEhrcUU4RlE?oc=5
+- **摘要：** 金融时报报道，随着AI竞赛加剧，华尔街正消化创纪录的融资规模。大量资本涌入AI相关企业，推高股权融资需求，对美国资本市场的资源配置和风险分布产生结构性影响。
 
-#### 2. 美国第2条要闻：CNBC报道
+#### 2. 美国经济为何持续超越预期
 
-- **原标题：** Top Wall Street analysts are confident about the growth prospects of these 3 stocks - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-06-14T12:49:35+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiowFBVV95cUxOQzVYYlBYOXhXbFR0c25XN1hEaTRVUlQzNTRfMGRCT3lLNzc0Y1hjWDM1M1BrSnNOMUpxZ3JsRWMxRmFhd3BMR3ZUU3dXRERvU0lfNWpPZ1F4eVZVNjFPajhhYm9GVk1QWnZMOTByQ1VIa0FvcGZMdUhuVW9fM29qZUhjRkJVSmItZXM0aEVFcXJCa0gxR3Z0bXRFTUJlX0Q4b1hv0gGoAUFVX3lxTE1qeWE2dDhJeGN1VTBCMTVrcEJJUEQ1LTNOYU5pUnV0M09lOEo0djk0SGNIeEExTUNzM1hRMmRJdFR3XzBnT2pEQ2p3WlNPLXNpSzk5Q2gyVUlnTlE3bVVBRHFLZTd2V25DZWktUzRqMnNSbU9ZUlFvOVFnODV0SXd1R2hiU2dyWjF4eFJmbmlScVBmeXJrNTkyUzhNX3NDRlB5LXpmdzRwWg?oc=5
-- **摘要：** CNBC发布一则美国消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 3. 美国第3条要闻：CNBC报道
-
-- **原标题：** The World Cup could add $17 billion to the U.S. economy. Here are the stocks set to benefit - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-06-14T12:45:03+00:00
-- **原文：** https://news.google.com/rss/articles/CBMihAFBVV95cUxNMmZybW5OZHdtbVpnVXMtYkxyVFczSUxjUnJOblN3YmlseXppZ3ZsQWlsRThpMGxmaXp1aGliRUVxS1ZTcWwxdFdWTXJteVFNN0dGQUQ5RDFqNmtoczJraHhTcUs2dUZmWHo1QkxMVHNPMU9hc1BaenNlRE00S2lHS2g2WWg?oc=5
-- **摘要：** CNBC发布一则美国消息。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Why the US economy keeps defying the odds
+- **来源：** BBC Business
+- **发布时间：** 2026-06-14T05:14:17+00:00
+- **原文：** https://www.bbc.com/news/articles/cwy031el03po?at_medium=RSS&at_campaign=rss
+- **摘要：** BBC报道分析美国经济在面临同样全球冲击的情况下仍持续跑赢多数发达经济体。尽管具体驱动因素尚待进一步数据验证，但美国经济韧性对全球资本流动和美联储政策路径具有重要指示意义。
