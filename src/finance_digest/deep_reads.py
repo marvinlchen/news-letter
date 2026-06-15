@@ -383,38 +383,56 @@ def run_codex_deep_reads(
     prompt = (project_root / "prompts/select_deep_reads.md").read_text(encoding="utf-8")
     schema = project_root / "schemas/deep_reads.schema.json"
     full_prompt = f"{prompt}\n{json.dumps(payload, ensure_ascii=False, indent=2)}\n"
-    with tempfile.TemporaryDirectory(prefix="finance-deep-reads-") as temp_dir:
-        output_path = Path(temp_dir) / "deep-reads.json"
-        completed = subprocess.run(
-            [
-                codex_bin,
-                "exec",
-                "--ephemeral",
-                "--ignore-user-config",
-                "--sandbox",
-                "read-only",
-                "--skip-git-repo-check",
-                "--output-schema",
-                str(schema),
-                "--output-last-message",
-                str(output_path),
-                "-",
-            ],
-            cwd=project_root,
-            env=os.environ.copy(),
-            input=full_prompt,
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=1200,
-            check=False,
+    completed = subprocess.run(
+        [
+            codex_bin,
+            "exec",
+            "--experimental-json",
+            "--sandbox",
+            "read-only",
+            "--skip-git-repo-check",
+            "-",
+        ],
+        cwd=project_root,
+        env=os.environ.copy(),
+        input=full_prompt,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        timeout=1200,
+        check=False,
+    )
+    if completed.returncode != 0:
+        raise RuntimeError(
+            f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
         )
-        if completed.returncode != 0:
-            raise RuntimeError(
-                f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
-            )
-        report = json.loads(output_path.read_text(encoding="utf-8"))
-        return validate_deep_report(report, target_date, candidates)
+    # Parse --experimental-json output: one JSON object per line
+    report_json_str = ""
+    for line in (completed.stdout or "").strip().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            obj = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if obj.get("type") == "item.completed" and obj.get("item", {}).get("type") == "agent_message":
+            text = obj["item"].get("text", "")
+            report_json_str = text
+    if not report_json_str:
+        raise RuntimeError(f"codex returned no agent_message: {completed.stdout[-1000:]}")
+    # Extract JSON from the text (may be wrapped in markdown)
+    match = re.search(r"```json\s*([\s\S]*?)\s*```", report_json_str)
+    if match:
+        report_json_str = match.group(1)
+    else:
+        # Try to find JSON object boundaries
+        start_idx = report_json_str.find("{")
+        end_idx = report_json_str.rfind("}")
+        if start_idx != -1 and end_idx != -1:
+            report_json_str = report_json_str[start_idx:end_idx+1]
+    report = json.loads(report_json_str)
+    return validate_deep_report(report, target_date, candidates)
 
 
 def render_deep_markdown(

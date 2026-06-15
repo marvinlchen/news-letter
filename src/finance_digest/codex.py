@@ -183,36 +183,54 @@ def run_codex(
     }
     full_prompt = f"{prompt}\n{json.dumps(candidates, ensure_ascii=False, indent=2)}\n"
     schema = project_root / "schemas/digest.schema.json"
-    with tempfile.TemporaryDirectory(prefix="finance-digest-codex-") as temp_dir:
-        output_path = Path(temp_dir) / "digest.json"
-        command = [
+    schema = project_root / "schemas/digest.schema.json"
+    completed = subprocess.run(
+        [
             codex_bin,
             "exec",
-            "--ephemeral",
-            "--ignore-user-config",
+            "--experimental-json",
             "--sandbox",
             "read-only",
             "--skip-git-repo-check",
-            "--output-schema",
-            str(schema),
-            "--output-last-message",
-            str(output_path),
             "-",
-        ]
-        completed = subprocess.run(
-            command,
-            cwd=project_root,
-            env=os.environ.copy(),
-            input=full_prompt,
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=900,
-            check=False,
+        ],
+        cwd=project_root,
+        env=os.environ.copy(),
+        input=full_prompt,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        timeout=900,
+        check=False,
+    )
+    if completed.returncode != 0:
+        raise RuntimeError(
+            f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
         )
-        if completed.returncode != 0:
-            raise RuntimeError(
-                f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
-            )
-        digest = json.loads(output_path.read_text(encoding="utf-8"))
-        return validate_digest(digest, target_date, selected_articles)
+    # Parse --experimental-json output: one JSON object per line
+    report_json_str = ""
+    for line in (completed.stdout or "").strip().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            obj = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if obj.get("type") == "item.completed" and obj.get("item", {}).get("type") == "agent_message":
+            text = obj["item"].get("text", "")
+            report_json_str = text
+    if not report_json_str:
+        raise RuntimeError(f"codex returned no agent_message: {completed.stdout[-1000:]}")
+    # Extract JSON from the text (may be wrapped in markdown)
+    match = re.search(r"", report_json_str)
+    if match:
+        report_json_str = match.group(1)
+    else:
+        # Try to find JSON object boundaries
+        start_idx = report_json_str.find("{")
+        end_idx = report_json_str.rfind("}")
+        if start_idx != -1 and end_idx != -1:
+            report_json_str = report_json_str[start_idx:end_idx+1]
+    report = json.loads(report_json_str)
+    return validate_digest(report, target_date, selected_articles)
