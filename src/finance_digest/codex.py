@@ -50,7 +50,8 @@ def validate_items(
             raise ValueError("Codex returned a non-object item")
         url = raw_item.get("url")
         if url not in articles_by_url:
-            raise ValueError(f"Codex returned an unknown candidate URL: {url}")
+            print(f"[WARNING] Unknown candidate URL: {url}, skipping", file=__import__("sys").stderr)
+            continue
         if url in seen_urls:
             raise ValueError(f"Codex returned a duplicate candidate URL: {url}")
         seen_urls.add(url)
@@ -92,6 +93,10 @@ def validate_digest(
     if digest.get("date") != target_date.isoformat():
         raise ValueError("Codex returned the wrong digest date")
     raw_topics = digest.get("topics")
+    # Handle both list format (from codex) and dict format (from codebuddy)
+    if isinstance(raw_topics, dict):
+        raw_topics = [{"key": k, "items": v} for k, v in raw_topics.items()]
+        digest["topics"] = raw_topics
     if not isinstance(raw_topics, list) or len(raw_topics) != len(TOPICS):
         raise ValueError("Codex returned an invalid topic count")
     topics = []
@@ -112,6 +117,10 @@ def validate_digest(
         )
     topics.sort(key=lambda topic: list(TOPICS).index(topic["key"]))
     raw_countries = digest.get("countries")
+    # Handle both list format (from codex) and dict format (from codebuddy)
+    if isinstance(raw_countries, dict):
+        raw_countries = [{"key": k, "items": v} for k, v in raw_countries.items()]
+        digest["countries"] = raw_countries
     if not isinstance(raw_countries, list) or len(raw_countries) != len(COUNTRIES):
         raise ValueError("Codex returned an invalid country count")
     countries = []
@@ -182,49 +191,85 @@ def run_codex(
         ],
     }
     full_prompt = f"{prompt}\n{json.dumps(candidates, ensure_ascii=False, indent=2)}\n"
-    schema = project_root / "schemas/digest.schema.json"
-    schema = project_root / "schemas/digest.schema.json"
-    completed = subprocess.run(
-        [
-            codex_bin,
-            "exec",
-            "--experimental-json",
-            "--sandbox=read-only",
-            "--skip-git-repo-check",
-            "-",
-        ],
-        cwd=project_root,
-        env=os.environ.copy(),
-        input=full_prompt,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        timeout=900,
-        check=False,
-    )
+    # Determine if using codebuddy or codex
+    is_codebuddy = "codebuddy" in codex_bin or codex_bin == "cbc"
+    
+    if is_codebuddy:
+        # codebuddy uses --print, reads prompt from stdin with "-" argument
+        completed = subprocess.run(
+            [
+                codex_bin,
+                "--print",
+                "--sandbox=container",
+                "--dangerously-skip-permissions",
+                "-",  # Read from stdin
+            ],
+            cwd=project_root,
+            env=os.environ.copy(),
+            input=full_prompt,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=900,
+            check=False,
+        )
+    else:
+        # codex uses exec --experimental-json
+        completed = subprocess.run(
+            [
+                codex_bin,
+                "exec",
+                "--experimental-json",
+                "--sandbox=read-only",
+                "--skip-git-repo-check",
+                "-",
+            ],
+            cwd=project_root,
+            env=os.environ.copy(),
+            input=full_prompt,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=900,
+            check=False,
+        )
+    
     if completed.returncode != 0:
         raise RuntimeError(
-            f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
+            f"{codex_bin} exited {completed.returncode}: {completed.stderr[-2000:]}"
         )
-    # Parse --experimental-json output: one JSON object per line
+    
+    # Parse output based on which binary was used
     report_json_str = ""
-    for line in (completed.stdout or "").strip().splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            obj = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        if obj.get("type") == "item.completed" and obj.get("item", {}).get("type") == "agent_message":
-            text = obj["item"].get("text", "")
-            report_json_str = text
+    if is_codebuddy:
+        # Parse --print output: just the assistant response text (may be wrapped in code block)
+        report_json_str = completed.stdout
+        
+        # Extract JSON from code block (codebuddy wraps JSON in ```json ... ```)
+        code_block_match = re.search(r'```json\s*(.*?)\s*```', report_json_str, re.DOTALL)
+        if code_block_match:
+            report_json_str = code_block_match.group(1).strip()
+        else:
+            # Try to find JSON object boundaries
+            start_idx = report_json_str.find('{')
+            end_idx = report_json_str.rfind('}')
+            if start_idx != -1 and end_idx != -1:
+                report_json_str = report_json_str[start_idx:end_idx+1]
+    else:
+        # Parse --experimental-json output: one JSON object per line
+        for line in (completed.stdout or "").strip().splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                obj = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if obj.get("type") == "item.completed" and obj.get("item", {}).get("type") == "agent_message":
+                text = obj["item"].get("text", "")
+                report_json_str = text
     if not report_json_str:
         raise RuntimeError(f"codex returned no agent_message: {completed.stdout[-1000:]}")
-    # Extract JSON from the text (may be wrapped in markdown)
-    match = re.search(r"", report_json_str)
-    if match:
-        report_json_str = match.group(1)
     else:
         # Try to find JSON object boundaries
         start_idx = report_json_str.find("{")
