@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CSI300 Daily Analysis Report",
+  "type": "object",
+  "properties": {
+    "date": {"type": "string", "description": "报告日期 YYYY-MM-DD"},
+    "summary": {"type": "string", "description": "当日沪深300整体走势一句话总结"},
+    "gainers_analysis": {
+      "type": "object",
+      "properties": {
+        "sector_summary": {"type": "string", "description": "涨幅板块共性分析"},
+        "key_drivers": {"type": "array", "items": {"type": "string"}, "description": "核心驱动因素列表"},
+        "stocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {"type": "string"},
+              "name": {"type": "string"},
+              "reason": {"type": "string", "description": "涨跌原因分析"}
+            },
+            "required": ["code", "name", "reason"]
+          }
+        }
+      },
+      "required": ["sector_summary", "key_drivers", "stocks"]
+    },
+    "losers_analysis": {
+      "type": "object",
+      "properties": {
+        "sector_summary": {"type": "string", "description": "跌幅板块共性分析"},
+        "key_drivers": {"type": "array", "items": {"type": "string"}, "description": "核心驱动因素列表"},
+        "stocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {"type": "string"},
+              "name": {"type": "string"},
+              "reason": {"type": "string", "description": "涨跌原因分析"}
+            },
+            "required": ["code", "name", "reason"]
+          }
+        }
+      },
+      "required": ["sector_summary", "key_drivers", "stocks"]
+    }
+  },
+  "required": ["date", "summary", "gainers_analysis", "losers_analysis"]
+}
