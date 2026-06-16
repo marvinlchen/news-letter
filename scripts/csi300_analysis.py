@@ -14,13 +14,14 @@ import subprocess
 import re
 import random
 import argparse
+import urllib.request
 import urllib.parse
 from datetime import datetime, timedelta
 from email.utils import parsedate_to_datetime
 
 # ── 配置 ────────────────────────────────────────────────────────────────────────
 
-AI_MODEL = "codebuddy"   # "codex" or "codebuddy"
+AI_MODEL = "codex"   # "codex" or "codebuddy"
 EASTMONEY_PUSH2 = "https://push2.eastmoney.com/api/qt/clist/get"
 EASTMONEY_KLINE = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
 
@@ -41,27 +42,95 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
     """调用 AI 模型（codex 或 codebuddy）"""
     if AI_MODEL == "codex":
         cmd = [
-            "codex", "chat", "prompt",
-            "--model", "o4-mini",
-            "--max-output-tokens", str(max_tokens),
+            "codex", "exec",
+            "--skip-git-repo-check",
         ]
-        if expect_json:
-            cmd.append("--format")
-            cmd.append("json")
         cmd.append(prompt)
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
         text = result.stdout.strip()
+        
+        # codex exec 输出格式：
+        # 第一行是 "codex"，然后是 AI 响应，最后是 metadata
+        # 需要提取 JSON 部分
         if expect_json:
-            clean = text.strip()
-            if clean.startswith("```"):
-                clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.IGNORECASE)
-                clean = re.sub(r"\s*```$", "", clean)
-            return clean
+            # 查找 JSON 字符串（从第一个 { 或 [ 开始）
+            lines = text.split("\n")
+            json_started = False
+            json_lines = []
+            for line in lines:
+                if not json_started and (line.strip().startswith("{") or line.strip().startswith("[")):
+                    json_started = True
+                if json_started:
+                    # 如果遇到 metadata 行（如 "tokens used"），停止
+                    if line.strip().startswith("tokens") or line.strip() == "":
+                        if json_started:
+                            break
+                    json_lines.append(line)
+            if json_lines:
+                clean = "\n".join(json_lines).strip()
+                # 移除可能的 Markdown 代码块标记
+                if clean.startswith("```"):
+                    clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.IGNORECASE)
+                    clean = re.sub(r"\s*```$", "", clean)
+                return clean
+            else:
+                # 如果没找到 JSON，返回原始文本
+                return text
         return text
     else:
-        cmd = ["codebuddy", "chat", "prompt", "--json", prompt]
+        # 尝试多个可能的 codebuddy 路径
+        codebuddy_paths = [
+            "codebuddy",  # 默认 PATH
+            "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/lib/node_modules/@tencent-ai/codebuddy-code/bin/codebuddy",
+            "/usr/local/bin/codebuddy",
+            "/home/ME/.local/bin/codebuddy",
+        ]
+        cmd = None
+        for cb_path in codebuddy_paths:
+            try:
+                # 测试路径是否存在（使用 node 的完整路径）
+                node_path = "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/bin/node"
+                test_cmd = [node_path, cb_path, "--version"]
+                subprocess.run(test_cmd, capture_output=True, timeout=5)
+                # 如果成功，使用 node 直接运行 codebuddy
+                cmd = [node_path, cb_path, "-p", "--output-format", "json", prompt]
+                break
+            except Exception:
+                continue
+        
+        if cmd is None:
+            # 如果都找不到，使用默认命令（会失败并抛出错误）
+            cmd = ["codebuddy", "-p", "--output-format", "json", prompt]
+        
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
         text = result.stdout.strip()
+        
+        # 尝试解析 codebuddy 的输出格式
+        # 格式1：纯 JSON 字符串（AI 的直接响应）
+        # 格式2：JSON 数组（对话历史）
+        try:
+            parsed = json.loads(text)
+            if isinstance(parsed, list):
+                # 是对话历史数组，找到最后一个 assistant 消息
+                for msg in reversed(parsed):
+                    if isinstance(msg, dict):
+                        role = msg.get("role", "")
+                        if role == "assistant":
+                            content = msg.get("content", "")
+                            if isinstance(content, list):
+                                # content 是数组，提取 text
+                                for item in content:
+                                    if isinstance(item, dict) and item.get("type") == "text":
+                                        text = item.get("text", "")
+                                        break
+                            elif isinstance(content, str):
+                                text = content
+                            break
+                # 现在 text 应该是纯文本 JSON
+        except json.JSONDecodeError:
+            # 不是 JSON 数组，假设是纯文本
+            pass
+        
         clean = text.strip()
         if clean.startswith("```"):
             clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.IGNORECASE)
@@ -88,45 +157,46 @@ def get_stock_history(stock_code, market="0", target_date="2026-06-14", max_retr
     """
     获取股票历史K线数据，过滤到目标日期
     返回: list[dict] 包含 date, open, close, high, low, volume, amount
+    使用新浪财经API
     """
-    start_date = "20250101"  # 从2025年开始
-    end_date = "20261231"
-    
-    url = (
-        f"{EASTMONEY_KLINE}?"
-        f"secid={market}.{stock_code}&"
-        f"fields1=f1,f2,f3,f4,f5,f6&"
-        f"fields2=f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61&"
-        f"klt=101&fqt=1&"
-        f"beg={start_date}&end={end_date}"
-    )
+    # 新浪财经 API
+    sina_market = "sh" if market == "1" else "sz"
+    url = f"https://money.finance.sina.com.cn/quotes_service/api/json_v2.php/CN_MarketData.getKLineData?symbol={sina_market}{stock_code}&scale=240&ma=no&datalen=1023"
     
     for attempt in range(max_retries):
         try:
             req = urllib.request.Request(url, headers={
                 "User-Agent": "Mozilla/5.0",
-                "Referer": "https://quote.eastmoney.com/"
+                "Referer": "https://finance.sina.com.cn/"
             })
             with urllib.request.urlopen(req, timeout=15) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
-                klines = data.get("data", {}).get("klines", [])
+                if not data or not isinstance(data, list):
+                    if attempt < max_retries - 1:
+                        time.sleep(2 * (attempt + 1))
+                        continue
+                    return None
+                
                 result = []
-                for kl in klines:
-                    parts = kl.split(",")
-                    date_str = parts[0]
+                for item in data:
+                    date_str = item.get("day", "")
                     # 只保留目标日期之前的数据
                     if date_str > target_date:
                         continue
                     result.append({
                         "date": date_str,
-                        "open": float(parts[1]),
-                        "close": float(parts[2]),
-                        "high": float(parts[3]),
-                        "low": float(parts[4]),
-                        "volume": int(parts[5]),
-                        "amount": float(parts[6]),
+                        "open": float(item.get("open", 0)),
+                        "close": float(item.get("close", 0)),
+                        "high": float(item.get("high", 0)),
+                        "low": float(item.get("low", 0)),
+                        "volume": int(float(item.get("volume", 0))),
+                        "amount": float(item.get("amount", 0)),
                     })
-                return result
+                
+                if result:
+                    return result
+                else:
+                    return None
         except Exception as e:
             if attempt < max_retries - 1:
                 time.sleep(2 * (attempt + 1))  # 指数退避
@@ -186,7 +256,7 @@ def calc_extended_changes(stock_code, stock_name, target_date="2026-06-14"):
     return week_change_pct, ytd_change_pct
 
 
-def get_csi300_top_gainers(date_str, top_n=10):
+def get_csi300_top_gainers(date_str, top_n=10, max_retries=3):
     """
     获取沪深300成分股中涨幅最大的 top_n 只股票。
     返回 list[dict]，包含：code, name, price, change_pct,
@@ -198,61 +268,75 @@ def get_csi300_top_gainers(date_str, top_n=10):
         f"fs=m:0+t:6,m:0+t:13,m:1+t:2,m:1+t:23&"
         f"fields=f12,f14,f2,f3"
     )
+    
+    for attempt in range(max_retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                raw = data.get("data", {}).get("diff", [])
+                result = []
+                for item in raw:
+                    result.append({
+                        "code":        item.get("f12", ""),
+                        "name":        item.get("f14", ""),
+                        "price":       item.get("f2",  None),
+                        "change_pct":  item.get("f3",  None),
+                        "week_change": None,  # 稍后计算
+                        "ytd_change":  None,  # 稍后计算
+                    })
+                return result
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_time = 2 * (attempt + 1)
+                print(f"[WARN] 获取涨幅榜失败（尝试 {attempt+1}/{max_retries}）: {e}，{wait_time}秒后重试...", file=sys.stderr)
+                time.sleep(wait_time)
+            else:
+                print(f"[WARN] 获取涨幅榜失败: {e}", file=sys.stderr)
+                return []
+    return []
 
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            raw = data.get("data", {}).get("diff", [])
-            result = []
-            for item in raw:
-                result.append({
-                    "code":        item.get("f12", ""),
-                    "name":        item.get("f14", ""),
-                    "price":       item.get("f2",  None),
-                    "change_pct":  item.get("f3",  None),
-                    "week_change": None,  # 稍后计算
-                    "ytd_change":  None,  # 稍后计算
-                })
-            return result
-    except Exception as e:
-        print(f"[WARN] 获取涨幅榜失败: {e}", file=sys.stderr)
-        return []
 
-
-def get_csi300_top_losers(date_str, top_n=10):
+def get_csi300_top_losers(date_str, top_n=10, max_retries=3):
     """
     获取沪深300成分股中跌幅最大的 top_n 只股票。
     返回 list[dict]，字段同 get_csi300_top_gainers。
     """
     url = (
         f"{EASTMONEY_PUSH2}?"
-        f"pn=1&pz={top_n}&po=1&np=1&fltt=2&invt=2&fid=f3&"
+        f"pn=1&pz=100&po=1&np=1&fltt=2&invt=2&fid=f3&"
         f"fs=m:0+t:6,m:0+t:13,m:1+t:2,m:1+t:23&"
         f"fields=f12,f14,f2,f3"
     )
-
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            raw = data.get("data", {}).get("diff", [])
-            # 按涨幅升序排列（取跌幅最大的）
-            raw_sorted = sorted(raw, key=lambda x: x.get("f3", 0))
-            result = []
-            for item in raw_sorted[:top_n]:
-                result.append({
-                    "code":        item.get("f12", ""),
-                    "name":        item.get("f14", ""),
-                    "price":       item.get("f2",  None),
-                    "change_pct":  item.get("f3",  None),
-                    "week_change": None,  # 稍后计算
-                    "ytd_change":  None,  # 稍后计算
-                })
-            return result
-    except Exception as e:
-        print(f"[WARN] 获取跌幅榜失败: {e}", file=sys.stderr)
-        return []
+    
+    for attempt in range(max_retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                raw = data.get("data", {}).get("diff", [])
+                # 按涨幅升序排列（取跌幅最大的）
+                raw_sorted = sorted(raw, key=lambda x: x.get("f3", 0))
+                result = []
+                for item in raw_sorted[:top_n]:
+                    result.append({
+                        "code":        item.get("f12", ""),
+                        "name":        item.get("f14", ""),
+                        "price":       item.get("f2", None),
+                        "change_pct":  item.get("f3", None),
+                        "week_change": None,  # 稍后计算
+                        "ytd_change":  None,  # 稍后计算
+                    })
+                return result
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_time = 2 * (attempt + 1)
+                print(f"[WARN] 获取跌幅榜失败（尝试 {attempt+1}/{max_retries}）: {e}，{wait_time}秒后重试...", file=sys.stderr)
+                time.sleep(wait_time)
+            else:
+                print(f"[WARN] 获取跌幅榜失败: {e}", file=sys.stderr)
+                return []
+    return []
 
 
 def enrich_with_extended_changes(stocks, target_date, max_workers=5):
@@ -513,6 +597,8 @@ def main():
     parser.add_argument("--date", default=None, help="分析日期 (YYYY-MM-DD)，默认前一天")
     parser.add_argument("--top", type=int, default=10, help="涨跌榜选取数量 (default: 10)")
     parser.add_argument("--skip-extended", action="store_true", help="跳过扩展数据获取（本周、YTD）")
+    parser.add_argument("--skip-ai", action="store_true", help="跳过 AI 分析（快速生成基础报告）")
+    parser.add_argument("--input-json", default=None, help="从JSON文件读取预计算数据（跳过API调用）")
     args = parser.parse_args()
 
     if args.date:
@@ -523,36 +609,60 @@ def main():
     print(f"[INFO] 开始分析 {target_date} ...", file=sys.stderr)
 
     # 1. 获取基础数据
-    gainers = get_csi300_top_gainers(target_date, args.top)
-    losers  = get_csi300_top_losers(target_date, args.top)
-
-    if not gainers or not losers:
-        print("[ERROR] 获取涨跌榜数据失败，退出。", file=sys.stderr)
-        sys.exit(1)
-
-    print(f"[INFO] 获取到涨幅榜 {len(gainers)} 只、跌幅榜 {len(losers)} 只", file=sys.stderr)
-
-    # 2. 获取扩展数据（本周涨幅、年初至今涨幅）
-    if not args.skip_extended:
-        gainers = enrich_with_extended_changes(gainers, target_date)
-        losers  = enrich_with_extended_changes(losers, target_date)
+    if args.input_json:
+        # 从JSON文件读取
+        print(f"[INFO] 从JSON文件读取数据: {args.input_json}", file=sys.stderr)
+        with open(args.input_json, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        gainers = data.get("gainers", [])[:args.top]
+        losers  = data.get("losers", [])[:args.top]
+        print(f"[INFO] 读取到涨幅榜 {len(gainers)} 只、跌幅榜 {len(losers)} 只", file=sys.stderr)
     else:
-        print("[INFO] 跳过扩展数据获取", file=sys.stderr)
+        # 从API获取
+        gainers = get_csi300_top_gainers(target_date, args.top)
+        losers  = get_csi300_top_losers(target_date, args.top)
 
-    # 3. 构建 prompt 并调用 AI
-    prompt = build_prompt(target_date, gainers, losers)
-    print(f"[INFO] 调用 AI ({AI_MODEL}) ...", file=sys.stderr)
+        if not gainers or not losers:
+            print("[ERROR] 获取涨跌榜数据失败，退出。", file=sys.stderr)
+            sys.exit(1)
 
-    raw = call_ai(prompt, max_tokens=4096, expect_json=True)
+        print(f"[INFO] 获取到涨幅榜 {len(gainers)} 只、跌幅榜 {len(losers)} 只", file=sys.stderr)
 
-    # 4. 解析 JSON（带预处理）
-    try:
-        cleaned = preprocess_json(raw)
-        result = json.loads(cleaned)
-    except Exception as e:
-        print(f"[ERROR] JSON 解析失败: {e}", file=sys.stderr)
-        print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
-        sys.exit(1)
+        # 2. 获取扩展数据（本周涨幅、年初至今涨幅）
+        if not args.skip_extended:
+            gainers = enrich_with_extended_changes(gainers, target_date)
+            losers  = enrich_with_extended_changes(losers, target_date)
+        else:
+            print("[INFO] 跳过扩展数据获取", file=sys.stderr)
+
+    # 3. 构建 prompt 并调用 AI（或跳过）
+    if args.skip_ai:
+        print(f"[INFO] 跳过 AI 分析，生成基础报告...", file=sys.stderr)
+        result = {
+            "gainers_analysis": {
+                "summary": "（AI 分析跳过，请手动补充）",
+                "stocks": [{"code": st["code"], "name": st["name"], "reason": "（AI 分析跳过）", "evidence": []} for st in gainers]
+            },
+            "losers_analysis": {
+                "summary": "（AI 分析跳过，请手动补充）",
+                "stocks": [{"code": st["code"], "name": st["name"], "reason": "（AI 分析跳过）", "evidence": []} for st in losers]
+            },
+            "market_summary": "（AI 分析跳过，请手动补充）"
+        }
+    else:
+        prompt = build_prompt(target_date, gainers, losers)
+        print(f"[INFO] 调用 AI ({AI_MODEL}) ...", file=sys.stderr)
+
+        raw = call_ai(prompt, max_tokens=4096, expect_json=True)
+
+        # 4. 解析 JSON（带预处理）
+        try:
+            cleaned = preprocess_json(raw)
+            result = json.loads(cleaned)
+        except Exception as e:
+            print(f"[ERROR] JSON 解析失败: {e}", file=sys.stderr)
+            print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
+            sys.exit(1)
 
     # 5. 生成报告
     report = format_report(result, target_date, gainers=gainers, losers=losers)
