@@ -1,46 +1,46 @@
 # 沪深300涨跌分析 — 2026-06-14
 
-**生成时间：** 2026-06-16 10:20  
+**生成时间：** 2026-06-16 10:59  
 **分析基于：** 沪深300指数成分股涨跌幅 top20
 
 ---
 
 ## 一、指数概况
 
-沪深300呈现显著的结构性分化：半导体、新能源（光伏+锂电+储能）及AI产业链板块强势领涨，亿纬锂能业绩预增超预期带动锂电板块走强，PCB/半导体涨价周期推动士兰微、生益科技等涨停；跌幅端则集中在化工、煤炭、消费及地产板块，新奥股份私有化告吹领跌，维生素涨价潮后新和成高位回调，煤炭受监管收严拖累整体走低。
+沪深300呈现显著的结构性行情，半导体/芯片、光伏新能源、PCB/MLCC等科技制造板块集体走强，AI算力需求升温与半导体涨价潮构成核心驱动力；而传统消费（白酒/快递）、房地产、化工等周期性板块承压下行，市场资金明显从防御性品种流向科技成长方向
 
 ---
 
 ## 二、涨幅分析（Top 20）
 
-**板块共性：** 半导体涨价周期与AI算力需求共振，新能源（光伏+储能+锂电）受政策利好与业绩预增驱动，稀土板块受益于涨价预期，整体呈现科技成长风格占优
+**板块共性：** 半导体涨价周期与AI算力需求共振，叠加光伏产业政策利好，科技制造板块领涨；半导体（士兰微、华润微、圣邦股份、长电科技）、光伏储能（亿纬锂能、锦浪科技、迈为股份、阳光电源）、PCB/MLCC（生益科技、振华科技）三大主线清晰
 
 | 排名 | 股票代码 | 股票名称 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
 |------|----------|----------|--------|----------|--------------|
-| 1 | 300014 | 亿纬锂能 | 上半年净利润预增95%-110%超市场预期，叠加二次递表港交所催化 | 待补充 | 待补充 |
-| 2 | 600460 | 士兰微 | 半导体涨价传导至终端，AI算力需求升温叠加AI终端国标落地利好 | 待补充 | 待补充 |
-| 3 | 603290 | XD斯达半 | 半导体板块整体走强，IGBT龙头受益于国产替代与涨价周期 | 待补充 | 待补充 |
-| 4 | 600183 | 生益科技 | AI服务器升级打开PCB产业空间，MLCC/PCB板块领涨 | 待补充 | 待补充 |
-| 5 | 300763 | 锦浪科技 | 光伏产业迎政策利好，绿电直连政策推动逆变器需求 | 待补充 | 待补充 |
-| 6 | 600176 | 中国巨石 | 电子布再度提价，玻纤概念集体走高，资金净流入居前 | 待补充 | 待补充 |
-| 7 | 300433 | 蓝思科技 | iPhone18带来果链量价齐升新周期，并购巨腾国际拓展AI硬件版图 | 待补充 | 待补充 |
-| 8 | 000733 | 振华科技 | 钽电容产能10亿只，机构密集调研，军工电子需求稳健 | 待补充 | 待补充 |
-| 9 | 688396 | 华润微 | 一季报净利润同比增296.56%，半导体涨价周期受益显著 | 待补充 | 待补充 |
-| 10 | 603806 | 福斯特 | 光伏胶膜企业提价酝酿，EVA粒子成本传导预期升温 | 待补充 | 待补充 |
-| 11 | 300751 | 迈为股份 | 光伏概念股集体上涨，太空光伏概念催化HJT设备龙头估值 | 待补充 | 待补充 |
-| 12 | 688187 | 时代电气 | 国内动车牵引变流系统市占率约50%，轨交装备龙头地位稳固 | 待补充 | 待补充 |
-| 13 | 605117 | 德业股份 | 绿电直连政策利好与光伏产业政策共振，储能逆变器龙头受益 | 待补充 | 待补充 |
-| 14 | 600111 | 北方稀土 | 一季度业绩同比大增，稀土精矿价格持续上调，'牛散'章建平加仓 | 待补充 | 待补充 |
-| 15 | 600010 | 包钢股份 | 稀土精矿二季度交易价环比大涨45%至3.88万元/吨，资源品涨价受益 | 待补充 | 待补充 |
-| 16 | 300274 | 阳光电源 | 储能龙头市值突破3000亿，全年业绩创新高但Q4净利腰斩引发分歧 | 待补充 | 待补充 |
-| 17 | 300033 | 同花顺 | 市场成交活跃带动金融IT需求，机构给出买入评级 | 待补充 | 待补充 |
-| 18 | 600745 | *ST闻泰 | 超跌反弹，实控人增持50万股终结11连跌 | 待补充 | 待补充 |
-| 19 | 300059 | 东方财富 | 市场成交活跃提振券商龙头，金融科技平台流量变现预期增强 | 待补充 | 待补充 |
-| 20 | 603799 | 华友钴业 | 钴价易涨难跌，刚果(金)出口禁令延期叠加供给下滑需求回暖 | 待补充 | 待补充 |
+| 1 | 300014 | 亿纬锂能 | +12.23% | 待补充 | 待补充 |
+| 2 | 600460 | 士兰微 | +10.01% | 待补充 | 待补充 |
+| 3 | 300433 | 蓝思科技 | +8.66% | 待补充 | 待补充 |
+| 4 | 600183 | 生益科技 | +7.93% | 待补充 | 待补充 |
+| 5 | 603290 | XD斯达半 | +7.27% | 待补充 | 待补充 |
+| 6 | 600176 | 中国巨石 | +7.04% | 待补充 | 待补充 |
+| 7 | 300763 | 锦浪科技 | +6.94% | 待补充 | 待补充 |
+| 8 | 000733 | 振华科技 | +6.79% | 待补充 | 待补充 |
+| 9 | 688396 | 华润微 | +6.07% | 待补充 | 待补充 |
+| 10 | 300751 | 迈为股份 | +5.86% | 待补充 | 待补充 |
+| 11 | 688187 | 时代电气 | +4.95% | 待补充 | 待补充 |
+| 12 | 300450 | 先导智能 | +4.22% | 待补充 | 待补充 |
+| 13 | 000725 | 京东方A | +4.22% | 待补充 | 待补充 |
+| 14 | 603806 | 福斯特 | +3.99% | 待补充 | 待补充 |
+| 15 | 300661 | 圣邦股份 | +3.96% | 待补充 | 待补充 |
+| 16 | 002202 | 金风科技 | +3.94% | 待补充 | 待补充 |
+| 17 | 600111 | 北方稀土 | +3.92% | 待补充 | 待补充 |
+| 18 | 600584 | 长电科技 | +3.85% | 待补充 | 待补充 |
+| 19 | 300274 | 阳光电源 | +3.76% | 待补充 | 待补充 |
+| 20 | 601615 | 明阳智能 | +3.31% | 待补充 | 待补充 |
 
 ### 亿纬锂能（300014）
 
-**原因：** 上半年净利润预增95%-110%超市场预期，叠加二次递表港交所催化
+**原因：** 上半年净利润预增95%-110%远超预期，叠加二次递表港交所及百亿储能扩产利好
 
 **证据：**
 - [千亿锂电龙头，300014，上半年业绩预增95%至110%](https://news.google.com/rss/articles/CBMijgFBVV95cUxPSDRaWmRYY1VmUmozMnVZc3RRZklFcGlfeGxaNGpsVUlUcDliOTluZmVJVzZuT1FaT0RXV2FxOS1IRExYWUNIaTlIY0ozb0I3aGFqbHVibGw1TUtGUV9MUEFLYnJHT0xsNzVacWY4VWxYbEFFamVjQ0tDb3BBU1VLLUpBQlFKb0hOUzN2eEt3?oc=5) （2026-06-15 13:36）
@@ -48,15 +48,19 @@
 
 ### 士兰微（600460）
 
-**原因：** 半导体涨价传导至终端，AI算力需求升温叠加AI终端国标落地利好
+**原因：** 半导体涨价潮蔓延至终端，AI算力需求持续升温催化芯片板块估值修复
 
 **证据：**
 - [半导体涨价攻入终端：手机率先调价，家电汽车亦承压](https://news.google.com/rss/articles/CBMijwFBVV95cUxPRzUySjF1NEZQWkFtLUZYTHFHZWhGV2tKbUd1ME1hUHR5eVQxcmxyNHNxOWdwTlRESHFWUEl3UE53YlJ1anJFOUhOMHpTd2VrSWRsSjFOTjZ4TWZ4QjZtMG9fUDZlLUhaYnBlUG5RZncwVTJqekxKYUxpakVsakZzb3hpQXEwc2ZyVDJxU2o1NA?oc=5) （2026-03-17 07:00）
 - [AI算力需求升温，芯片ETF易方达涨1.40%](https://news.google.com/rss/articles/CBMiVkFVX3lxTE15REloTHdQRGg3VFpsV0doekJjcFU4SVh6NE11SV95d2t2M0NJSjhPb1NyTnNSQ05xbTNIcDZJVG1LQm50aFVtT0xFaEFNN3hUUWVpTWlR?oc=5) （2026-05-25 07:00）
 
-### XD斯达半（603290）
+### 蓝思科技（300433）
 
-**原因：** 半导体板块整体走强，IGBT龙头受益于国产替代与涨价周期
+**原因：** iPhone18驱动果链量价齐升新周期，并购巨腾国际布局AI硬件
+
+**证据：**
+- [iPhone18 带来A股果链量价齐升新周期，但这一次红利不会平均分配](https://news.google.com/rss/articles/CBMia0FVX3lxTE5rUVdVcC1mYXJocEdyTlpKQUxWWHZ3eFlpWk1BeS1JbDFuRzlFbUY0SDB5Qmp0dUEyQUFmN1V6bWNDSEdWQnBPNkRDeWdtNHluZE52WjFmeEdTbHcyVDFFQkJJUklnRDNnUWtN?oc=5) （2026-06-10 15:00）
+- [蓝思科技（06613.HK）并购巨腾国际，AI硬件野心浮现](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9aZnBoSzJaeVNkUXR4VXJtekFvMENVNi1LNHJENDl5ZmN6UzlrUGljc09YVGppZXJIYjM1RHROT01TaUFwX2ZMNE1jQnFPNXJOakJyWnBvdHRVdw?oc=5) （2026-05-18 07:00）
 
 ### 生益科技（600183）
 
@@ -64,58 +68,44 @@
 
 **证据：**
 - [AI服务器升级打开产业空间 A股PCB概念股强势 生益电子、生益科技等多股涨停](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQU19nVTRFVFBzVGF6Z1ZwcXRIR2NDMzdlNmR2WHNPQXVfMWV3WV94VV96a1JVS3pLakZJZ2YzaExvTURoMW1fZTZjdzVkOXBKOHkwVXNfWFk1eGZ1eS1TNTJTcUp2ajNjdk82VEdtMV92UVNPYXBFN2IzTGNhYmhNakd1QVdWeE1h?oc=5) （2026-05-26 07:00）
-- [A股收评：深成指、创业板指涨超3%！沪指收复4000点，MLCC、PCB板块领涨](https://news.google.com/rss/articles/CBMib0FVX3lxTE56ZUk1R2JCSWJIUHJ3a054QkNSU0NmODYxOGpqbGpWLVJ5MlJLcGdwZHI2ZENtN3A4WW9tQ1dXMGVzdmJpZ2NoS3BGMkoxUndEOHRCY0NrRlNXc1hMUVV5Ykc4bmtYMk5aSGtLWkE5QQ?oc=5) （2026-06-09 07:23）
+- [异动快报：生益科技（600183）6月15日10点1分触及涨停板](https://news.google.com/rss/articles/CBMia0FVX3lxTE96Nmk4ZDY4bUo5ZGgxZlJKbVgzV1RCSmNabHlNVnJfMzduY1dPSWxHTm04dXZZY1pqYUZiLVdQdmFva1hwSFFZSnJxWnN5MDVpRFFNNVNUbEhZMEtlVU5NazU5d1Z3aElRU2dR?oc=5) （2026-06-15 02:15）
+
+### XD斯达半（603290）
+
+**原因：** 半导体IGBT龙头，受益半导体涨价周期与新能源车需求
+
+### 中国巨石（600176）
+
+**原因：** 电子布/玻纤再度提价，行业景气度回升
+
+**证据：**
+- [盘中必读|电子布再度提价！玻纤概念集体走高，国际复材20CM涨停](https://news.google.com/rss/articles/CBMiWEFVX3lxTE9IbFVfMHZmTXdMZ2lwRnZudFJfVjBDQUYtLTdvM200QXViVDM4dGNuRmlubi1RNEZWLUJ4V3k0d0ZqOGxIMGFJOWtNMnllS0FfdlA1UjFlcG0?oc=5) （2026-02-10 08:00）
 
 ### 锦浪科技（300763）
 
-**原因：** 光伏产业迎政策利好，绿电直连政策推动逆变器需求
+**原因：** 光伏产业迎政策利好，板块整体回暖
 
 **证据：**
 - [光伏产业迎政策利好，光伏ETF易方达涨3.34%](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UTHRFRlB3MHhITHIyRzF1eUQteDU1MG5XQi0zaFJIZi1Jek5WV2trdllZQjUxVGNMSXd2dkgxRzVzMWxxdUtIUE00WHY4ZXNSSzZWNXp3?oc=5) （2026-05-27 02:17）
 
-### 中国巨石（600176）
-
-**原因：** 电子布再度提价，玻纤概念集体走高，资金净流入居前
-
-**证据：**
-- [盘中必读|电子布再度提价！玻纤概念集体走高，国际复材20CM涨停](https://news.google.com/rss/articles/CBMiWEFVX3lxTE9IbFVfMHZmTXdMZ2lwRnZudFJfVjBDQUYtLTdvM200QXViVDM4dGNuRmlubi1RNEZWLUJ4V3k0d0ZqOGxIMGFJOWtNMnllS0FfdlA1UjFlcG0?oc=5) （2026-02-10 08:00）
-- [【财富晚茶】潜龙浮出水面：06.09收盘主力：资金净流入前20股票](https://news.google.com/rss/articles/CBMia0FVX3lxTE5vdzNBb0ZzMk53YVNfQ0lmTFhjbGRncmxLYnFjRkNmSFd0MDk4OXhIYzlKTHBvaGM4YXNZX184N3JUbk42cUdXYjZXMkZtNEU4S09hTFllejlXSXVnUVVOclpjNWRubXNoaWxz?oc=5) （2026-06-09 17:00）
-
-### 蓝思科技（300433）
-
-**原因：** iPhone18带来果链量价齐升新周期，并购巨腾国际拓展AI硬件版图
-
-**证据：**
-- [iPhone18 带来A股果链量价齐升新周期，但这一次红利不会平均分配](https://news.google.com/rss/articles/CBMia0FVX3lxTE5rUVdVcC1mYXJocEdyTlpKQUxWWHZ3eFlpWk1BeS1JbDFuRzlFbUY0SDB5Qmp0dUEyQUFmN1V6bWNDSEdWQnBPNkRDeWdtNHluZE52WjFmeEdTbHcyVDFFQkJJUklnRDNnUWtN?oc=5) （2026-06-10 15:00）
-- [【IPO追踪】蓝思科技（06613.HK）并购巨腾国际，AI硬件野心浮现](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9aZnBoSzJaeVNkUXR4VXJtekFvMENVNi1LNHJENDl5ZmN6UzlrUGljc09YVGppZXJIYjM1RHROT01TaUFwX2ZMNE1jQnFPNXJOakJyWnBvdHRVdw?oc=5) （2026-05-18 07:00）
-
 ### 振华科技（000733）
 
-**原因：** 钽电容产能10亿只，机构密集调研，军工电子需求稳健
+**原因：** MLCC/超级电容概念走强，军用电子元器件景气上行
 
 **证据：**
-- [振华科技：公司目前整体钽电容产能10亿只](https://news.google.com/rss/articles/CBMihgFBVV95cUxQMFpfYzRsenBveVd1UFJkSGdjNzV5WDhDRGd6WWkyOUFYQUJxSzU1akhic1FBRkNJX080U2FPZmhUM29OQmpiN2hLelc2eVVKNEY1WlVEM1VzdVFEME5DRGpxb1JoS1lPNGRzU291MjYzdEFPbTd1Ym9hVVdrZWNORnpqODV3Zw?oc=5) （2026-06-04 07:00）
-- [振华科技：国元证券、阳光资产等多家机构于5月25日调研我司](https://news.google.com/rss/articles/CBMibkFVX3lxTE9nNzZXcnNIbEF3RjFMRl9IVjk0U0N1QU5xb0FtVm5kcE1IRy1hVmU5VUVFV2J3WVFxNExuWVZuUVc3TTJ2aThtVWVZcjNrQ0RMeVBoallnaFUyMWRUSWRLemc1VWQ5SzlmTmM5dkt3?oc=5) （2026-05-29 03:06）
+- [科创50逆市飘红！半导体、超级电容涨嗨了](https://news.google.com/rss/articles/CBMibkFVX3lxTE0tYkhDR0t1QXR1WlVHRHNiUGl2VERaQXJPV0luZE5WZ2RLM1F1TlBwSFpsTGlzU2tzTzdaUk1iajc0WURyTEh5VTNZXzRsdE05TTJBUERYRTMwT1V2V2JfSUdDRWdqOHFLTkFxa1d3?oc=5) （2026-06-04 07:00）
 
 ### 华润微（688396）
 
-**原因：** 一季报净利润同比增296.56%，半导体涨价周期受益显著
+**原因：** 德州仪器涨价催化国产替代逻辑，一季度净利大增296%印证景气拐点
 
 **证据：**
+- [重大突发！德州仪器宣布涨价！华润微：深度受益三重催化+四大成长曲线，国产IDM龙头迎来翻倍拐点](https://news.google.com/rss/articles/CBMia0FVX3lxTE1Ma2tmaDBnN0Utb05CRjVNSXlNRUk2aDhuRFNMdEcxS3NoOTI1Tkp4MnZlNl9DSUdvaXlLVTdvRlBFLWpOWlg5Qlduemh5S2RRbUlJUTFWMGNNZXFwMFVPNFpDSnVJQXZ0ck5V?oc=5) （2026-05-26 07:00）
 - [华润微(688396.SH)：2026年一季报净利润为3.30亿元、同比较去年同期上涨296.56%](https://news.google.com/rss/articles/CBMihwFBVV95cUxPNk5xT0JsM1VyWEJQMTNZbmhQdVI4T0JoLWt0b0J4azBicFhrRjUzYU9hMXg5cVFaZXFxZlhFcW9yamU5OTFCUEppSHNGeUxiamZXZ3dkWGU0dW1YbTBZd3dYcFQ3UXpiLXI0UjhlLUNiWGVnUnBSczVaN3I4QW02WXVBTzhRYVk?oc=5) （2026-04-25 07:00）
-- [半导体涨价攻入终端：手机率先调价，家电汽车亦承压](https://news.google.com/rss/articles/CBMijwFBVV95cUxPRzUySjF1NEZQWkFtLUZYTHFHZWhGV2tKbUd1ME1hUHR5eVQxcmxyNHNxOWdwTlRESHFWUEl3UE53YlJ1anJFOUhOMHpTd2VrSWRsSjFOTjZ4TWZ4QjZtMG9fUDZlLUhaYnBlUG5RZncwVTJqekxKYUxpakVsakZzb3hpQXEwc2ZyVDJxU2o1NA?oc=5) （2026-03-17 07:00）
-
-### 福斯特（603806）
-
-**原因：** 光伏胶膜企业提价酝酿，EVA粒子成本传导预期升温
-
-**证据：**
-- [EVA粒子再度提价推高成本 光伏胶膜企业提价酝酿中 低成本库存有望带来Q1业绩改善](https://news.google.com/rss/articles/CBMiRkFVX3lxTE9UQkVGYWo0OGpoUFVLQTIwM0gtWWZLdFd5ZWxSTk9Ga2NnT1ViV0xGR25nOHFGbXpxWGRrOEVMa216OWhJTVE?oc=5) （2024-02-22 08:00）
-- [福斯特(603806):杭州福斯特应用材料股份有限公司公开发行可转换公司债券2026年跟踪评级报告](https://news.google.com/rss/articles/CBMiVkFVX3lxTFAzVTNOYnlpbDRIdDZvRUlaZzI3VnVKVV9vbGx5ckNNQi0wU19zOXp1cm96U2tRVC1LMUVNcFFJQ0FBTUtzcmZ5a1Q3QWRLREJ3SHFmRDdn?oc=5) （2026-06-08 11:05）
 
 ### 迈为股份（300751）
 
-**原因：** 光伏概念股集体上涨，太空光伏概念催化HJT设备龙头估值
+**原因：** 光伏板块集体上涨，太空光伏概念催化千亿市值预期
 
 **证据：**
 - [A股光伏概念股集体上涨，迈为股份大涨超11%，TCL中环10CM涨停](https://news.google.com/rss/articles/CBMihwFBVV95cUxNdU5wdnl3ZmhFcGdQdzgyRzI3UVVwb3BidnBSZGZPVEJQZEhQVEFwSjJudXJEUjh4RU8wUm03RmFraElIOFdJZzhQQXJjczh2d0NGVmhJM0pLY1lfTTFTVXBMQWYyLXdwbmFWcVh3UWNETl95Nzlpb0E5WThHaFVERGpndmRqYkE?oc=5) （2026-06-12 01:40）
@@ -123,113 +113,160 @@
 
 ### 时代电气（688187）
 
-**原因：** 国内动车牵引变流系统市占率约50%，轨交装备龙头地位稳固
+**原因：** 国内动车牵引变流系统市占率约50%，轨道交通装备龙头地位稳固
 
 **证据：**
 - [时代电气(688187.SH)：公司2025年国内动车牵引变流系统市占率大约在50%左右](https://news.google.com/rss/articles/CBMibEFVX3lxTFBqUWtSNUVvZDd2QUplR0pwS0RpTkNvSGptVGVBSkFQS0UxcXJjeFZsYUpIY011S2xaLXRDdUppNkN0VU1oZ1lWQ3k5allKQUpCZFUzMklFaXJwTmY2UlFGcnZwTW1ET2ZHeUs4OA?oc=5) （2026-05-22 08:07）
 
-### 德业股份（605117）
+### 先导智能（300450）
 
-**原因：** 绿电直连政策利好与光伏产业政策共振，储能逆变器龙头受益
+**原因：** 主力资金净买入近亿元，智能汽车产业链迎多重催化
 
 **证据：**
-- [绿电直连政策利好，新能源ETF易方达涨2.57%](https://news.google.com/rss/articles/CBMijAFBVV95cUxPc0ZfeDllQlhQMXd0a2lGaG1ib2dnbkNVV0FlVU0yTERwZXE3RDB1bzBUM05OalhXa0JJZGhfM29hQmlObzRJdzJmcGJGcUY2SFYwTEVldEVoc1VpcGZ6MVRMUEZpWk9QbnBCLUh1d3dUQ1FXU0s0WWxXSGNWUXJJdTBXeUJXelRjek55dg?oc=5) （2026-05-27 02:17）
-- [光伏产业迎政策利好，光伏ETF易方达涨3.34%](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UTHRFRlB3MHhITHIyRzF1eUQteDU1MG5XQi0zaFJIZi1Jek5WV2trdllZQjUxVGNMSXd2dkgxRzVzMWxxdUtIUE00WHY4ZXNSSzZWNXp3?oc=5) （2026-05-27 02:17）
+- [股票行情快报：先导智能（300450）6月12日主力资金净买入9761.12万元](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1ER1MtdzRNamYyWjBTLVdsanV0alZsYjhpV0Zqc3UwbFAxLWVVb0diX2tqdllXQXVJY2FkVFBiZXhrNkZidTB4OC1Nem5oV0pia3FUdW9PbVlaT2J2TERLWXdR?oc=5) （2026-06-12 12:17）
+- [智能汽车产业链迎多重催化，智能汽车ETF易方达涨1.40%](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1zajczNnExUmhNZ0JlRnp6OXo1OWx4Y0NaWHlCSlRuNlRWQmIwS1RiNGd1MlpiVU0xRlUyY1FkMkdfVFhOR3NZZVFDYjlqcXdtdVNBbUtn?oc=5) （2026-05-27 07:00）
+
+### 京东方A（000725）
+
+**原因：** MLCC/PCB板块领涨带动面板龙头，单日主力资金净流入超55亿元
+
+**证据：**
+- [多股午后拉升涨停！000725，一天获超55亿元主力资金净流入！](https://news.google.com/rss/articles/CBMi6gFBVV95cUxNWXpmVFR6dUVndGc5d0hJV1dKOE1hSndRNGZMcVVtY09EQW9RWjhsdngwSWJzWjJmMUZoV2lKelB6Zi1GbTcwNUJpdUZSa25obVNnd3RWc19kSkdSZjE1bUpUVmNzWVh0V05kVjQyYzlVVTRWUmdRMGtpTXFjVDVQSzN6c211WGhQYXNJeHc1LVJOU29ROFhUT0NpNkRaeXVFZHVHMDFpWkJEOGsxR0RPc3hfRU9tcUkzS3UtWmtlcXFyemlVUUxpZkkzRzUwSkMyQ3AwQ0J2a3MtTi1yUWt4eDRCTlp0dTZiaVE?oc=5) （2026-06-04 09:17）
+
+### 福斯特（603806）
+
+**原因：** 光伏胶膜龙头受益光伏板块整体上涨，跟踪评级报告落地消除不确定性
+
+**证据：**
+- [福斯特(603806):杭州福斯特应用材料股份有限公司公开发行可转换公司债券2026年跟踪评级报告](https://news.google.com/rss/articles/CBMiVkFVX3lxTFAzVTNOYnlpbDRIdDZvRUlaZzI3VnVKVV9vbGx5ckNNQi0wU19zOXp1cm96U2tRVC1LMUVNcFFJQ0FBTUtzcmZ5a1Q3QWRLREJ3SHFmRDdn?oc=5) （2026-06-08 11:05）
+
+### 圣邦股份（300661）
+
+**原因：** 模拟芯片龙头受益半导体涨价与AI算力硬件需求扩张
+
+**证据：**
+- [存储芯片板块接连受挫 高盛称存储市场供应短缺情况将持续至2028年](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9EdnR2OWNxSEtJNFZvVGRyRmpFOHY3SzBjRHNiU0ZwdUpOeGtzeENCb3FnRTJreERmN0tpMmFlRXZoekdTbUNzT2dQSEQzbTByYmVfeU13?oc=5) （2026-06-01 07:00）
+
+### 金风科技（002202）
+
+**原因：** 首次回购567万股A股提振信心，风电板块受商业航天概念外溢
+
+**证据：**
+- [金风科技(002202.SZ)：首次回购567.11万股A股股份](https://news.google.com/rss/articles/CBMimAFBVV95cUxNWWZUa0o5bW12WDVIRGcxT3ExWFZsVHN1Z3BTZFNRYkxZc3Z0X25yWVM2TXhOM2w5YVI3akVfSnRZWmxTaXh4NExLU203cjN2UmVuSV9yU1dHTnM1NmtiZElNRGVtXzlPWk4wUGdGWHUySW1leExCSGNBZHppX0h1Q09hRU1XcmZZYkpGSk44b0xYbWc3X2w0dA?oc=5) （2026-05-29 07:00）
 
 ### 北方稀土（600111）
 
-**原因：** 一季度业绩同比大增，稀土精矿价格持续上调，'牛散'章建平加仓
+**原因：** 稀土概念爆发，一季度业绩同比大增叠加2025年净利预增117%-135%
 
 **证据：**
-- [600111，一季度业绩同比大增！'超级牛散'章建平出手](https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ST0ZnOERzQjM3Y2tORmJ3LUdHZ3FVTi1ZTjlLMGV4RERLel9hX2ZYdVMxT1hCdDhkVl9ZS3dma29lbWpyaktBYV8zSkxLeW5BZVNVQUVMTEgtWEFs?oc=5) （2026-04-28 07:00）
-- [两大稀土巨头价格七连涨，原料价一年半狂飙130%](https://news.google.com/rss/articles/CBMijwFBVV95cUxNRk9IZ1Nsa1B6VUw4ODF4RWdPRUpYVzJaNjhiME1NdUk4SXpvRUYzb0pmQzk2VWhGaWpXMlhHbEI4ZG1zSlBRRGp0b3VSejNRRkhlTThiTGlLVVdaSDhjRGt5SUwtdWpNcXlMWVlJamppZGVBSGlBSzQwOGlwUzZQNnllZkRNZUtRM0d4djBuSQ?oc=5) （2026-04-11 07:00）
+- [稀土概念爆发，有色金属ETF华夏（516650）回调或迎布局机会](https://news.google.com/rss/articles/CBMijAFBVV95cUxOZTV6bUdGU2dpanhKNzAtN2FYMVJLamVsTHRZX05feVhzTzNPNDluVXpPQmJTWUlOSTFfLVVCdEg0ekRsN0VfaG14TFFlT09EVmR6QlVfSkhsMUVkTkFtUjZzV0lMZWdPcl8wQ01JNTh6dWpXcE1hY2o1bUNvNlVYcWFFVXR4SDgxb1hfMA?oc=5) （2026-06-16 02:27）
+- [600111，一季度业绩同比大增！](https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ST0ZnOERzQjM3Y2tORmJ3LUdHZ3FVTi1ZTjlLMGV4RERLel9hX2ZYdVMxT1hCdDhkVl9ZS2dma29lbWpyaktBYV8zSkxLeW5BZVNVQUVMTEgtWEFs?oc=5) （2026-04-28 07:00）
 
-### 包钢股份（600010）
+### 长电科技（600584）
 
-**原因：** 稀土精矿二季度交易价环比大涨45%至3.88万元/吨，资源品涨价受益
+**原因：** 半导体封测龙头受益板块飙升，存储芯片涨价带动封测需求
 
 **证据：**
-- [环比大涨45%！包钢股份、北方稀土二季度稀土精矿交易价格调整为3.88万元/吨](https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SczFtTmJRRzllbmdGSGZmbzZlcUNfTlp3ODRIZXExOWV4aVpJUkdjNmgwVmxPeEU5M04xUHdYODktcXh0dlZOalJBLW9WOGV0WVM3TzA3OXBxN1h1?oc=5) （2026-04-10 07:00）
-- [两大稀土巨头价格七连涨，原料价一年半狂飙130%](https://news.google.com/rss/articles/CBMijwFBVV95cUxNRk9IZ1Nsa1B6VUw4ODF4RWdPRUpYVzJaNjhiME1NdUk4SXpvRUYzb0pmQzk2VWhGaWpXMlhHbEI4ZG1zSlBRRGp0b3VSejNRRkhlTThiTGlLVVdaSDhjRGt5SUwtdWpNcXlMWVlJamppZGVBSGlBSzQwOGlwUzZQNnllZkRNZUtRM0d4djBuSQ?oc=5) （2026-04-11 07:00）
+- [电科技大涨！半导体板块飙升6.03%，月周共振突破+主力高度控盘](https://news.google.com/rss/articles/CBMi_wFBVV95cUxOWk16R1VqeUJPcDBrVVFkcmRnel9zOUlmS0g1QkZsZ2NhV0hyb2lldlcwRWU4RDhBM3J5UUdCVjd3a1hwWHhtTXlNdXkxRHI4dzVyaHJDUVpIeG5qMlNTZzNoY01vYy1IQWtRd1VOM2FJY0F1RnNtVnpWb01GOV9JMHZrcVRUclZzZ2xyeEtOM0dSVHV1TWVuRzRONUFKV2JYc2NvakptVFJ6VWpBTU9qMVdncXRUOW15VEpoaFlLVFNOcTM2bkNxSUdyazBPZVlJalBlUzJFMVN6ZVQ1c19PMXdJWDdycU03ZkFLMU1OYlhSSHktOVpKY3NSR0lHcDg?oc=5) （2026-06-15 14:31）
+- [单季最高涨价75%！存储芯片2026年行业景气度全面上行](https://news.google.com/rss/articles/CBMijwFBVV95cUxQWWdoelJmaG9XaU1KbE1ZZ2t4SThZbEFabFhBN1NQWkZyeWtQLVFZenJPdFV0eEd0WUlYX1c2WEtibFJkNTRYaFRBZkNQM0gtTHBTM3JJeU52RmZ3TWVjU09ESnpvSEMyNFoxOXJkZjctbEdGeFNxZVpxc0VJZEIxQzRhbktfVzVsUGdUUUprQQ?oc=5) （2026-05-11 07:00）
 
 ### 阳光电源（300274）
 
-**原因：** 储能龙头市值突破3000亿，全年业绩创新高但Q4净利腰斩引发分歧
+**原因：** 光伏储能龙头市值突破3000亿，受益光伏板块集体上涨
 
 **证据：**
-- [阳光电源的高光与隐忧：全年双增背后，四季度净利'腰斩'](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9meTlibnFULTFFb3o0WXdtM0xVVTF3WXpHMURZMkpwZF83SEhfa0pmMEl4VEY0NVJ5V091cTctUkpzT3o0Qzh0QVhldHdvWk9JanNF?oc=5) （2026-06-14 05:22）
-- [储能概念'龙头'异动拉升！300274，市值突破3000亿元！](https://news.google.com/rss/articles/CBMiV0FVX3lxTE0zTXloSUkyU1pqdkFQMkVzaHh6MU5vZ2lNS3JYYl9aNFZHajYyR09tc2J2ZF9iMHhpcG1NRzM4bE5kUkJ1bXliQUpDZERScWxKczhtZTRidw?oc=5) （2025-09-24 07:00）
+- [阳光电源的高光与隐忧：全年双增背后，四季度净利腰斩](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9meTlibnFULTFFb3o0WXdtM0xVVTF3WXpHMURZMkpwZF83SEhfa0pmMEl4VEY0NVJ5V091cTctUkpzT3o0Qzh0QVhldHdvWk9JanNF?oc=5) （2026-06-14 05:22）
 
-### 同花顺（300033）
+### 明阳智能（601615）
 
-**原因：** 市场成交活跃带动金融IT需求，机构给出买入评级
-
-**证据：**
-- [6月12日，同花顺上涨7.47%，解码当前机构状态](https://news.google.com/rss/articles/CBMigwFBVV95cUxNT3hpNHFfMzdjNUdMdjlfY2xNa3RxNmlYc2x1Y2prRE1SNUtPZ0oyRVlkVjhUbWNMOEpMVkxxUUNyZW5NWmtwZXNLUktYaU9FOXVRcHNyalg3R2ttNlhKVW9wUXVMUmdpOUQ5YVVqakYweUVfcTM0eF9fN2FlbjlhQ3RGQQ?oc=5) （2026-06-12 17:04）
-- [同花顺涨7.47%，东吴证券一个月前给出'买入'评级](https://news.google.com/rss/articles/CBMibkFVX3lxTE5OLWlnU2Vxd1NGWGRGdndHZTBqZjRtV1llRjBCLTczYmVwX0xwMkRfMEloRGNKcDMyOW1XZ3RDSzFMb2hVOXVTT2lQNFpuWEhvLUxrU1lyQWM0czRCZTZoTzBuTzRncFhNU2Q4UUVR?oc=5) （2026-06-12 08:36）
-
-### *ST闻泰（600745）
-
-**原因：** 超跌反弹，实控人增持50万股终结11连跌
+**原因：** 风电+商业航天双重概念叠加，前期布局太空光伏获市场关注
 
 **证据：**
-- [*ST闻泰实控人张学政增持50万股终结11连跌，荷兰安世半导体声明回应股东关切](https://news.google.com/rss/articles/CBMiXEFVX3lxTE5qYUVleE0yWjhDZ3N5eTZUTTEyWFdGa1dUTDRmVVVFdnVaZ3VKSmlBZHdYYmptblp5V25mUzdSZk5LdTlhQ29VNHN4bkhIS09UeEx0YTNsQUM2S21Y?oc=5) （2026-05-22 07:00）
-- [昔日1600亿半导体巨头，如今*ST四天三板：闻泰的生死局到底卡在哪？](https://news.google.com/rss/articles/CBMia0FVX3lxTE1Lc1NORTRuX3pyMVI1c0hPZTZVRlRoVldGaW1TNDBOMXoyVHpHQWFEdmkxQkJUanVYWmxlYXd0aGE5TWo3bnNfc3pjRXZwMVpPcU8xTHpiZW9xOVl1UmdGLW9JWWpnWmRTWDFj?oc=5) （2026-05-27 07:00）
-
-### 东方财富（300059）
-
-**原因：** 市场成交活跃提振券商龙头，金融科技平台流量变现预期增强
-
-**证据：**
-- [东方财富(SZ300059)股票股价_股价行情_讨论_资讯_财报_数据报告](https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1JSTJobHdad1F1TnJWU3BONV9jU3FmckVPRWI0Yi1RbWlwRG90SmZaMllBckhkSmcyWElaenpJMEhlRVk?oc=5) （2026-06-14 17:02）
-
-### 华友钴业（603799）
-
-**原因：** 钴价易涨难跌，刚果(金)出口禁令延期叠加供给下滑需求回暖
-
-**证据：**
-- [生意社：供给下滑需求回暖不及预期 后市钴价易涨难跌](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1hV1phMFJFNF84TEJLVk5iZkUzbDUwTy1HNzdjaEVJOTNUVnE1VVpjN2ZWaGwyOFpmNEdiVTZaZFc5SmFGSmphdEJ5MWZXVV95N21fY3o5Wl9UaTBKMi0w?oc=5) （2026-05-29 07:00）
-- [深水炸弹！刚果(金)钴出口禁令至少再延期两个月？国内有厂商因缺料已停产](https://news.google.com/rss/articles/CBMiSEFVX3lxTFA2dFJ2clFsVWJ1eERpNnFrcU1PUXltSTM0UzBSU2h0SG5NSWlXM0dURUFndU5Fck5FVkJfV1JBNHpMQ0NoWXRlbg?oc=5) （2025-09-21 07:00）
+- [提前涨停！风电龙头布局太空光伏 明阳智能计划收购卫星续航电池生产商](https://news.google.com/rss/articles/CBMiSEFVX3lxTE9SUEpkenJ2elpqYWJTWHpVTUxITEFiTDV2U2RsWlpkUExaeXozckQ0NjFoUzRBbEdjLU9kM2VSRGNjMzhieURHbA?oc=5) （2026-01-13 08:00）
 
 ---
 
 ## 三、跌幅分析（Top 20）
 
-**板块共性：** 化工板块集体回调，煤炭受监管收严拖累，消费（白酒+啤酒）与地产板块延续低迷，新奥股份私有化告吹引发市场失望性抛售
+**板块共性：** 传统消费（白酒/快递/饲料）、房地产、化工等周期与防御性板块集体承压，获利回吐叠加基本面疲软（地产销售低迷、化工品需求偏弱、消费复苏不及预期）是主因
 
 | 排名 | 股票代码 | 股票名称 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
 |------|----------|----------|--------|----------|--------------|
-| 1 | 002001 | 新和成 | 维生素涨价潮后高位回调，前期涨幅较大引发获利了结 | 待补充 | 待补充 |
-| 2 | 601600 | 中国铝业 | 前期涨停后获利回吐，有色板块冲高回落 | 待补充 | 待补充 |
-| 3 | 600803 | 新奥股份 | 私有化新奥能源计划告吹，市场失望性抛售 | 待补充 | 待补充 |
-| 4 | 000408 | 藏格矿业 | 子公司被责令停产影响产能预期，锂盐价格波动承压 | 待补充 | 待补充 |
-| 5 | 002352 | 顺丰控股 | 百亿股权激励引发股价震荡，供应链及国际业务降近四成 | 待补充 | 待补充 |
-| 6 | 600309 | 万华化学 | 化工板块整体回调，前期大涨后获利了结 | 待补充 | 待补充 |
-| 7 | 002648 | 卫星化学 | 主力资金持续净卖出，化工板块整体回调拖累 | 待补充 | 待补充 |
-| 8 | 000338 | 潍柴动力 | 工程机械板块回调，前期大跌后延续弱势 | 待补充 | 待补充 |
-| 9 | 603260 | 合盛硅业 | 大股东拟减持不超3%股份，市值从2800亿缩水至600亿引发信心危机 | 待补充 | 待补充 |
-| 10 | 603369 | 今世缘 | 消费板块整体下挫，白酒行业竞争加剧 | 待补充 | 待补充 |
-| 11 | 600188 | 兖矿能源 | 煤炭监管收严压制板块情绪，拟超160亿元收购注入电力资产存分歧 | 待补充 | 待补充 |
-| 12 | 002252 | 上海莱士 | 血液制品行业多家龙头净利下滑，板块整体承压 | 待补充 | 待补充 |
-| 13 | 001979 | 招商蛇口 | 存货跌价33亿、归母净利降75%，地产行业持续低迷 | 待补充 | 待补充 |
-| 14 | 002311 | 海大集团 | 增收不增利，养殖业务拖后腿，拟分拆赴港上市 | 待补充 | 待补充 |
-| 15 | 601225 | 陕西煤业 | 煤炭板块整体回调，监管收严叠加焦煤期货下跌 | 待补充 | 待补充 |
-| 16 | 688065 | 凯赛生物 | 生物基材料板块回调，长周期诉讼影响市场情绪 | 待补充 | 待补充 |
-| 17 | 601155 | 新城控股 | 房地产行业持续低迷，1-5月合同销售仅54亿元同比大幅下滑 | 待补充 | 待补充 |
-| 18 | 600600 | 青岛啤酒 | 营收增速转负、销量下降，啤酒行业整体承压 | 待补充 | 待补充 |
-| 19 | 000800 | 一汽解放 | 商用车行业整体承压，传统燃油重卡需求偏弱 | 待补充 | 待补充 |
-| 20 | 601808 | 中海油服 | 中东地缘风险溢价消退，油气板块全线杀跌 | 待补充 | 待补充 |
+| 1 | 002001 | 新和成 | -6.05% | 待补充 | 待补充 |
+| 2 | 603260 | 合盛硅业 | -4.46% | 待补充 | 待补充 |
+| 3 | 600233 | 圆通速递 | -3.92% | 待补充 | 待补充 |
+| 4 | 603369 | 今世缘 | -3.86% | 待补充 | 待补充 |
+| 5 | 601155 | 新城控股 | -3.41% | 待补充 | 待补充 |
+| 6 | 000408 | 藏格矿业 | -3.38% | 待补充 | 待补充 |
+| 7 | 600309 | 万华化学 | -3.37% | 待补充 | 待补充 |
+| 8 | 601600 | 中国铝业 | -3.37% | 待补充 | 待补充 |
+| 9 | 600803 | 新奥股份 | -3.29% | 待补充 | 待补充 |
+| 10 | 000338 | 潍柴动力 | -3.27% | 待补充 | 待补充 |
+| 11 | 002311 | 海大集团 | -3.13% | 待补充 | 待补充 |
+| 12 | 002352 | 顺丰控股 | -3.10% | 待补充 | 待补充 |
+| 13 | 002648 | 卫星化学 | -3.01% | 待补充 | 待补充 |
+| 14 | 001979 | 招商蛇口 | -2.87% | 待补充 | 待补充 |
+| 15 | 300979 | 华利集团 | -2.84% | 待补充 | 待补充 |
+| 16 | 000800 | 一汽解放 | -2.74% | 待补充 | 待补充 |
+| 17 | 688065 | 凯赛生物 | -2.70% | 待补充 | 待补充 |
+| 18 | 002252 | 上海莱士 | -2.64% | 待补充 | 待补充 |
+| 19 | 002027 | 分众传媒 | -2.62% | 待补充 | 待补充 |
+| 20 | 601225 | 陕西煤业 | -2.61% | 待补充 | 待补充 |
 
 ### 新和成（002001）
 
-**原因：** 维生素涨价潮后高位回调，前期涨幅较大引发获利了结
+**原因：** 维生素涨价预期兑现后获利回吐，缺乏新增催化
 
 **证据：**
 - [突发涨价潮！维生素价格跳涨超35%，盈利拐点真的来了？](https://news.google.com/rss/articles/CBMijwFBVV95cUxPYlI5ZjBNTnF1SVFlcEpwbDV0TGNLSmx0bTdWUDRfUUJjUWZtSUZyNWpuTS12VGJleEI1X0ExdjAxSWhxbnctMG1XVnRBZXhWRFRYUDh6V25OcUZxdWJkanpOcTVUSDVPLVUycC1CT2xrTWJ6SGk3UXZZMzJFN3JtZTUyR01MNTAtVkRyc2RYQQ?oc=5) （2026-03-20 07:00）
 
+### 合盛硅业（603260）
+
+**原因：** 大股东拟减持不超3%股份，行业景气下行叠加减持压力
+
+**证据：**
+- [每周股票复盘：合盛硅业（603260）合盛集团拟减持不超3%股份](https://news.google.com/rss/articles/CBMibkFVX3lxTFB2Y1JhSjFVNVI2cU1yeFhQeVB3SGJvZ3NDcXlydV9leHlhY2dyQmVTUE5fN3lPZWRpUXRLNFNMWHFObUZYSl9nbmhoVEJKZC1HWS0tV2x0SmNrRDJDREoyM3FFZm16ZExKd3hMbjhR?oc=5) （2026-05-17 07:00）
+- [800亿豪赌大结局！合盛硅业：2800亿市值跌剩600亿，大股东无奈套现114亿先溜为敬](https://news.google.com/rss/articles/CBMic0FVX3lxTE9ONUotcE1aaFFKODVBb25ORWhfTWhzVjJwUzVpYXNpcmtFUWMzTWszMVd3Y2JNSjRza19zQllqWGxZcVhrSmxqTWRreVZ2bTdtREY4VGVZTWJhTzlJZnU3Y3hwd3NfSlR0NU9taTB6dzFGMFk?oc=5) （2025-08-01 07:00）
+
+### 圆通速递（600233）
+
+**原因：** 快递行业价格战持续，竞争格局恶化压制估值
+
+**证据：**
+- [极兔股价两月内已涨逾两成创新高 出海能力重新定义快递企业价值](https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jWWVYbDlMSENzWHhkN0JpYXpPc1ZRSE02al9lQjcwNlZYa091Qy0wTjlNZkoyMlBYNzNvMDk4T2hyQWxHTVE?oc=5) （2023-12-28 08:00）
+
+### 今世缘（603369）
+
+**原因：** 白酒消费板块整体下挫，市场风格切换至科技成长
+
+**证据：**
+- [6月9日中证消费（000932）指数跌50%，成份股今世缘（603369）领跌](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mS0Q4YlVNcnFXclBHUDB1WU9Xa05rMVlfTzNSNTdHTEljVDhYRTJaSzh4ZTNaWVhlU1F1SnNZQnRBZWZTdVFzaWtQdXVUcXpqZDhGVTZBWjJMSDg3bmRoNVln?oc=5) （2026-06-09 10:27）
+
+### 新城控股（601155）
+
+**原因：** 地产销售持续低迷，1-5月合同销售仅54亿元，现金流压力凸显
+
+**证据：**
+- [新城控股(601155.SH)：1-5月公司累计实现合同销售金额约54.00亿元](https://news.google.com/rss/articles/CBMipwFBVV95cUxORWtkUGVnTjlmdjItYlc2U0lYQzlyT19MYk9PSlNOSmlxY3g1QTVVMXNhV1VMcTE5bUJrSS1mUHVSTWNTMnE5TlJIVWpZMFBzb2xlelNYdzR3aUdZR3F1UThSQmMwLXR0ajdqa2VRNUVvZjJZRkktbnRfd3hVNUlTZFpYUFVyTEdDbDdIR1VYejA4WDFxZjhOQTBpd1R5czRvcWhJX3I4VQ?oc=5) （2026-06-10 08:40）
+- [新城控股业绩再次暴跌，审计提示注意现金流和资金错配风险](https://news.google.com/rss/articles/CBMifkFVX3lxTFBITkxFa09XQmJaMjNZZEJZWnJBS1o5cmNWUDAybVVSWVFiMTl2R3hyajVhR0E4QUxWS1pCbkI0Rld5S1h3MkN4OVJYVlBfVDk4YmI0ZnVGbk44Z3R1cTg2LUVlbkNrSGlhNzc4LXUySDk2NG55eVlMd3psUmVFZw?oc=5) （2025-04-16 07:00）
+
+### 藏格矿业（000408）
+
+**原因：** 子公司被责令停产影响供给，锂矿价格波动加剧不确定性
+
+**证据：**
+- [盐湖提锂龙头000408，子公司被责令停产](https://news.google.com/rss/articles/CBMiVEFVX3lxTE9jRmxLZVdzNXRKVndtclNqNUFwQmpwOEFGZHRVX3YyU05kSGwzRzJmYS01RmJoSnZucHBCQU1yem52aHlYcFNlQUFJUEp3UFBFWGJ2Ng?oc=5) （2025-07-17 07:00）
+
+### 万华化学（600309）
+
+**原因：** 化工品需求偏弱，电池科技增资49亿引发资本开支担忧
+
+**证据：**
+- [万华化学集团电池科技公司增资至49亿，增幅约43%](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU25yTWp1RlM4TjVpdkttLTNoYkdSMjlJTXFSdWdveW9XNDhuTVpDaWlWNnRkRlNqWTY5YnlKME9NNERIck9Ga1FYM3ExQ3FaX2padElIT2NxbW9IUnk2Wkg0S0JUVTJKWHZreXd4b1RWZFpEYlFwYjZISGFwRnhkQ2diM05DcXFkaS1F?oc=5) （2026-06-12 11:57）
+
 ### 中国铝业（601600）
 
-**原因：** 前期涨停后获利回吐，有色板块冲高回落
+**原因：** 有色金属前期大涨后技术性回调，短期获利盘涌出
 
 **证据：**
 - [A股震荡整理，有色板块突然爆发！中国铝业午后涨停](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPWDRSRFItNjJhNVZCWTJDT05oOS1oMXVOWG9SSVpRWlhTS1M0aGNCcFdEQU00eTJkMDlzVE9BVWRsc2ZUQml0N2had3BKRWo2ZmdIaHhNN1FOQV9h?oc=5) （2026-05-26 07:00）
@@ -237,139 +274,91 @@
 
 ### 新奥股份（600803）
 
-**原因：** 私有化新奥能源计划告吹，市场失望性抛售
+**原因：** 私有化新奥能源计划告吹，市场信心受挫
 
 **证据：**
 - [传新奥股份(600803.SH)考虑放弃新奥能源(02688.HK)私有化计划](https://news.google.com/rss/articles/CBMimgFBVV95cUxNVmp3NVVCbUJsSmVtMzdiZjBQN0ZELVNTT3NfaGstVkI0dzBVejZGdUFpVjRuVU51NnpQLVRtR2hMaXpmMmRYeTBYY0lCcDNTM1kxY0pWMks4dUNkaDZESnh5YjFrUzRfS0tNWUliTEpBcjZtTmJzcENob2ItVVJXSnpqcXZPbkNhd244RVQzUTFtSnBQcS1wQTNR?oc=5) （2026-06-12 09:13）
 - [新奥能源(02688)私有化告吹曾挫8.7% 新奥股份现跌2%](https://news.google.com/rss/articles/CBMingFBVV95cUxNeE8yR3JpMUlYR1NXc3hlY1A4eHhuc1UzZThlbnF5aUowZ3FXZUw5cEtHdndrWEtzU0VXUTlvX3NRaF90cWFibUJMb0dUNHMwclZ0SHhCT05TVkdNaTRwcjd3NVROY1lQS0xWWmN1eTNXZEdVTVptMGdUUUdydmt4YUFSZEdVMjJzZ1JUQ251eVVURDJ0a2pHWFpscEtZQQ?oc=5) （2026-06-15 01:57）
 
-### 藏格矿业（000408）
-
-**原因：** 子公司被责令停产影响产能预期，锂盐价格波动承压
-
-**证据：**
-- [盐湖提锂龙头000408，子公司被责令停产](https://news.google.com/rss/articles/CBMiVEFVX3lxTE9jRmxLZVdzNXRKVndtclNqNUFwQmpwOEFGZHRVX3YyU05kSGwzRzJmYS01RmJoSnZucHBCQU1yem52aHlYcFNlQUFJUEp3UFBFWGJ2Ng?oc=5) （2025-07-17 07:00）
-
-### 顺丰控股（002352）
-
-**原因：** 百亿股权激励引发股价震荡，供应链及国际业务降近四成
-
-**证据：**
-- [观察｜顺丰百亿股权激励引股价震荡，是股东利益受损还是长期共赢布局？](https://news.google.com/rss/articles/CBMieEFVX3lxTE8wZW9QUG05dndEc0lQNk42WkFJcGFBWFVOcjRBa3VRRUdVRGdteXBrYVRzLXk4dnR1VE5MVTlza1kxMlRCR2NYZ3ZWampSZUh1T2hYZGQtOHU1NVppRjVQcVVFRGdlUGRRbEM4WjB4ekVaTWRYVWoxbg?oc=5) （2025-09-04 07:00）
-- [顺丰控股上半年净利增六成：营收微跌，供应链及国际业务降近四成](https://news.google.com/rss/articles/CBMiW0FVX3lxTE9fdG5JeTV0anMwQ0R1RTZNQ3pBSk9xZXFGc0w0TVRaZlZkbVd5V0NQckotamtlRDduaGRJYVctVVE4cG51ektjT3Y0bTNtSzR6QUZJdFdyWk5sTE0?oc=5) （2023-08-29 07:00）
-
-### 万华化学（600309）
-
-**原因：** 化工板块整体回调，前期大涨后获利了结
-
-**证据：**
-- [6月12日万华化学涨6.73%，化工ETF 鹏华基金重仓该股](https://news.google.com/rss/articles/CBMitwJBVV95cUxNXzlNQy1pUHl6QUZVcEFzTGNXN2tTS3JoRXV4Zk1EYWZuQUZHSVZhUWxwRkEwajFuUVluMFlET2ZVT3B3a1FBcXZMYzVsV29OcGI5enVQZTRUR18tdnlpVkc1bUYzTEd1X3A3ZjVwNld6WURrcThBaHFDME9VUi15UmNteHlWOWJORzBramw0TTVqWmRfdDRHMXkwQUxhdDVlZ1R1aHdwRkFVdEI4NG4wZWVTMzE1ZV9TSkREWV9ycmRSc01oNlZXYTRSdkRFdm5hYlNmUlFTYkpuVEhsZWJ4Ql9QQno4aEwzN1JkNmhGWHRzU3hzRU9HYXhmblFNdjdRSGk3V0cyN1kyek8wdTJvam5BY2VGUGZrU3pHQzRGUUlQeVdVb3R4R3pTc3B2a1QxRTQ5LVB5MA?oc=5) （2026-06-15 01:46）
-
-### 卫星化学（002648）
-
-**原因：** 主力资金持续净卖出，化工板块整体回调拖累
-
-**证据：**
-- [股票行情快报：卫星化学（002648）6月11日主力资金净卖出4877.24万元](https://news.google.com/rss/articles/CBMiYkFVX3lxTE54WHU1UzNVZnpUMDRheGtmOXZoaWN2TDVLYkhBYlFyanAybVVINnVvQnhyWmdkMmVncE0wRldhVDJIMG03WWtZTDJjVDdJWHc5TTk3S2dQSGZQeFlsZ0Z6bHlR?oc=5) （2026-06-11 13:18）
-- [股票行情快报：卫星化学（002648）5月14日主力资金净卖出1.13亿元](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBFRHFOYmczSGtPWEdRSFdHOHJlQmhGLUdEdFZDRG9MS0R0dkFNbWZic0RqblFpYlNyenhFS3VmZHJScFo1MFN1S1kyNjUtLXFGUTZaQ3JhOHQ0b3Q5dElUZXpR?oc=5) （2026-05-14 12:36）
-
 ### 潍柴动力（000338）
 
-**原因：** 工程机械板块回调，前期大跌后延续弱势
+**原因：** 工程机械板块调整，前期6月10日大跌7.12%延续弱势
 
 **证据：**
 - [6月10日潍柴动力跌7.12%，工程机械ETF广发基金重仓该股](https://news.google.com/rss/articles/CBMif0FVX3lxTE9hVHBtNWRLa1cwcDg1Y28zcjVSbXU5R1JUSVY2eWlSQk5NQVh5QW9MVE1NWkg3cWVSRkczdVQxSmdmLU4wcjR1OG5xaTJfRUlzb1piamFucVZHTmlIN1hGZFpCa0lGV004OVhJNVlCYkJpY3pNVjZMMXRYWnl3SXM?oc=5) （2026-06-10 08:42）
 
-### 合盛硅业（603260）
+### 海大集团（002311）
 
-**原因：** 大股东拟减持不超3%股份，市值从2800亿缩水至600亿引发信心危机
-
-**证据：**
-- [每周股票复盘：合盛硅业（603260）合盛集团拟减持不超3%股份](https://news.google.com/rss/articles/CBMibkFVX3lxTFB2Y1JhSjFVNVI2cU1yeFhQeVB3SGJvZ3NDcXlydV9leHlhY2dyQmVTUE5fN3lPZWRpUXRLNFNMWHFObUZYSl9nbmhoVEJKZC1HWS0tV2x0SmNrRDJDREoyM3FFZm16ZExKd3hMbjhR?oc=5) （2026-05-17 07:00）
-- [800亿豪赌大结局！合盛硅业：2800亿市值跌剩600亿，大股东'无奈'套现114亿先溜为敬](https://news.google.com/rss/articles/CBMic0FVX3lxTE9ONUotcE1aaFFKODVBb25ORWhfTWhzVjJwUzVpYXNpcmtFUWMzTWszMVd3Y2JNSjRza19zQllqWGxZcVhrSmxqTWRreVZ2bTdtREY0VGVZTWJhTzlJZnU3Y3hwd3NfSlR0NU9taTB6dzFGMFk?oc=5) （2025-08-01 07:00）
-
-### 今世缘（603369）
-
-**原因：** 消费板块整体下挫，白酒行业竞争加剧
+**原因：** 增收不增利，养殖业务拖累整体盈利能力
 
 **证据：**
-- [6月9日中证消费（000932）指数跌50%，成份股今世缘（603369）领跌](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mS0Q0YlVNcnFXclBHUDB1WU9Xa05rMVlfTzNSNTdHTEljVDhYRTJaSzh4ZTNaWVhlU1F1SnNZQnRBZWZTdVFzaWtQdXVUcXpqZDhGVTZBWjJMSDg3bmRoNVln?oc=5) （2026-06-09 10:27）
+- [成本费用高企侵蚀利润，养殖业务拖后腿，海大集团去年增收不增利](https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Na2szYUFGb2dVXzdETVhrWWJQRzJILXU5aVZVLWpGUXpHek9VZklWU0lpdXYyMWF6cUdLMWJsTkpXU3QyMjBmRUItdjEwZw?oc=5) （2026-06-09 10:05）
 
-### 兖矿能源（600188）
+### 顺丰控股（002352）
 
-**原因：** 煤炭监管收严压制板块情绪，拟超160亿元收购注入电力资产存分歧
-
-**证据：**
-- [国内煤炭监管收严，煤炭股走低，焦煤期货继续下跌](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FMk9zdzNnb0RGUk9ja0lLMlBrUmZhblg1a29TbFp4djlNeUxvMG1fb0RyTUEzd2ZTRkU5RVdyb0VpU2hvYVBadjdMOHRxcnUzbTljTExB?oc=5) （2026-06-09 02:04）
-- [兖矿能源，拟超160亿元重大收购！注入电力资产](https://news.google.com/rss/articles/CBMiXEFVX3lxTE12aHhWX1N1WkJLOW5wSGJNenMxTDl2S3pmWVhod1NxMWhpWHVqYUI2ZnFGWWpwWGdyNGJSVk54Tk02Q204ekttWEV3eEpNakdVbUxmeEt0RzVEZ0NC?oc=5) （2026-06-03 11:29）
-
-### 上海莱士（002252）
-
-**原因：** 血液制品行业多家龙头净利下滑，板块整体承压
+**原因：** 物流板块整体承压，供应链及国际业务降近四成拖累预期
 
 **证据：**
-- [血液制品业绩'大考'：多家龙头净利下滑 上海莱士'逆袭'](https://news.google.com/rss/articles/CBMijwFBVV95cUxNb1ltTnhtNlg3THplemw2RjNOQnpOVG9fS0lLd1RzMnpJb3lrM0lZZDBYRW1CYUxiQi1fVjNhc0FoZVVnVTRTa2ZIRzc5ek5jNjRXaUYzVlJULThVMmVLUGo5dVJPT1VYU0xsNll5S1FyaEFiSU1yVmpPajZDWGU0dk9hV05nVm1Kam43eGVqOA?oc=5) （2026-04-29 07:00）
+- [海量财经丨营收双增、大手笔分红的顺丰控股为何股价走跌？](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9neUhFTWdrMVZfOE9fWThHd2xmLWFkMVU3cVZDNXU2QndlLWdLRHlsTDNQTFE4VDV2dEIwUUNjTnA1cVFMc3UybER3WVZOSlM2ZTU4UGln?oc=5) （2025-09-04 07:00）
+
+### 卫星化学（002648）
+
+**原因：** 主力资金持续净卖出，化工板块整体回调
+
+**证据：**
+- [股票行情快报：卫星化学（002648）6月11日主力资金净卖出4877.24万元](https://news.google.com/rss/articles/CBMiYkFVX3lxTE54WHU1UzNVZnpUMDRheGtmOXZoaWN2TDVLYkhBYlFyanAybVVINnVvQnhyWmdkMmVncE0wRldhVDJIMG03WWtZTDJjVDdJWHc5TTk3S2dQSGZQeFlsZ0Z6bHlR?oc=5) （2026-06-11 13:18）
 
 ### 招商蛇口（001979）
 
-**原因：** 存货跌价33亿、归母净利降75%，地产行业持续低迷
+**原因：** 存货跌价33亿致归母净利降75%，地产基本面持续恶化
 
 **证据：**
 - [招商蛇口存货跌价33亿归母净利降75% 员工年薪降7%多位高管涨薪逾20%](https://news.google.com/rss/articles/CBMiV0FVX3lxTE1DQVVneE1HLWw3emN5NEhVd0hoTU93Y1dFWkw5LUpBX0x1M19JWEtBb1dndDkxRWJkalhLQ3lRbXJJTURmbHI2M0dBRk14aUZrOFRYLUdOUQ?oc=5) （2026-04-13 07:00）
 - [招商蛇口年销售额跻身全国四强，净利润跌超七成](https://news.google.com/rss/articles/CBMic0FVX3lxTFA5Y0ZmbmNkQjhELU1zYVZsc29XenI1YnBzQWN4RzNDN1NHZUtLenhMM19hSk9rTEo2UGJQXzFvdWpWdHhfWC1sOFJCN3RDMWM5UjdpUlZqYXVScE0tc2lXZnd6QUdodk1xSjhBUjRSeWQ1aTg?oc=5) （2026-03-19 07:00）
 
-### 海大集团（002311）
+### 华利集团（300979）
 
-**原因：** 增收不增利，养殖业务拖后腿，拟分拆赴港上市
-
-**证据：**
-- [成本费用高企侵蚀利润，养殖业务'拖后腿'，海大集团去年'增收不增利'](https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Na2szYUFGb2dVXzdETVhrWWJQRzJILXU5aVZVLWpGUXpHek9VZklWU0lpdXYyMWF6cUdLMWJsTkpXU3QyMjBmRUItdjEwZw?oc=5) （2026-06-09 10:05）
-- [海大集团(002311)拟分拆「海大国际控股」，赴香港上市](https://news.google.com/rss/articles/CBMihgFBVV95cUxNN1BMcmlzdEhUNmRfOFd3OHIyYXlwSXM4dGJNUXVhZ3NoVHFta2FfTXZaUDZZWkUySEZaTFFZaVNkNGRXZlI1WEtBUGo0NTlCcHZ5ak91anBaQlk1QlpXUnFGMmdhenc3cEk4ZkZTZGhJZFlrdC1kUnJhOXVFNmo4Tl92dmNCQQ?oc=5) （2025-10-18 07:00）
-
-### 陕西煤业（601225）
-
-**原因：** 煤炭板块整体回调，监管收严叠加焦煤期货下跌
+**原因：** 消费制造板块随大消费整体回调，缺乏独立催化
 
 **证据：**
-- [国内煤炭监管收严，煤炭股走低，焦煤期货继续下跌](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FMk9zdzNnb0RGUk9ja0lLMlBrUmZhblg1a29TbFp4djlNeUxvMG1fb0RyTUEzd2ZTRkU5RVdyb0VpU2hvYVBadjdMOHRxcnUzbTljTExB?oc=5) （2026-06-09 02:04）
-- [煤炭板块近期大涨，陕西煤业去年净利润221.96亿元！](https://news.google.com/rss/articles/CBMijwFBVV95cUxOdXAwbHNzVEhMWVVvWThNb1FlWGMyQm5MV1h1VEFDYm5fY2pMV1ZEUVZVc1hFNEZzVm80d2diRk5Fa3pfNXM0QlpRY3pKcVBGZFVPSTNWUWZpbnNpdFFXSkNtS2l3UEF5ZXl2QzFUR2xyZVA5M0drWUdIVDF2b2hQMDBOZVRoWkZfVDU0VE9fbw?oc=5) （2025-03-14 07:00）
-
-### 凯赛生物（688065）
-
-**原因：** 生物基材料板块回调，长周期诉讼影响市场情绪
-
-**证据：**
-- [16个寒暑，40多场官司 凯赛瀚霖大战启示录](https://news.google.com/rss/articles/CBMidkFVX3lxTFB5aUNFd0JSdlhMLWlrQWo2a2dfOGRkLWtJdnhRaEg5ZktELW00SDUzRjQybW9tLWxNSWE2U3UtU3BaNWk3RGJJa3RONG5uN1Y5bVduMGh6VFptaUt1dV9QX01NSzZmYWZTMFhVaG50MnY2RVFwZlE?oc=5) （2026-06-04 03:22）
-
-### 新城控股（601155）
-
-**原因：** 房地产行业持续低迷，1-5月合同销售仅54亿元同比大幅下滑
-
-**证据：**
-- [新城控股(601155.SH)：1-5月公司累计实现合同销售金额约54.00亿元](https://news.google.com/rss/articles/CBMipwFBVV95cUxORWtkUGVnTjlmdjItYlc2U0lYQzlyT19MYk9PSlNOSmlxY3g1QTVVMXNhV1VMcTE5bUJrSS1mUHVSTWNTMnE5TlJIVWpZMFBzb2xlelNYdzR3aUdZR3F1UThSQmMwLXR0ajdqa2VRNUVvZjJZRkktbnRfd3hVNUlTZFpYUFVyTEdDbDdIR1VYejA4WDFxZjhOQTBpd1R5czRvcWhJX3I4VQ?oc=5) （2026-06-10 08:40）
-- [新城控股业绩再次暴跌，审计提示注意现金流和资金错配风险](https://news.google.com/rss/articles/CBMifkFVX3lxTFBITkxFa09XQmJaMjNZZEJZWnJBS1o5cmNWUDAybVVSWVFiMTl2R3hyajVhR0E4QUxWS1pCbkI4Rld5S1h3MkN4OVJYVlBfVDk4YmI0ZnVGbk44Z3R1cTg2LUVlbkNrSGlhNzc4LXUySDk2NG55eVlMd3psUmVFZw?oc=5) （2025-04-16 07:00）
-
-### 青岛啤酒（600600）
-
-**原因：** 营收增速转负、销量下降，啤酒行业整体承压
-
-**证据：**
-- [营收增速转负，销量下降，青岛啤酒站在十字路口](https://news.google.com/rss/articles/CBMi1AFBVV95cUxPci1YVngxV1pQLUdBV25IRGVDZWk5bTBsVWFxempMVVcteHRyRlBKYV9DME01eVFITU9yUkVwVjlCTDZQdkVndG9taktncElleTRJSHNHcW9xREplakNHNmxVMnlxY1d6TEozdXA3NVJwYTBYZDNFcjRZaWNCVVJYZXpacVZxQS1PVUt4WDZvdjBEemRIMnA5NDlBc0ZYRVdsSnhzd3ViTlR3OGFFN2VhZVl6ZXBOcWc3YUhUelc1ZzBxMHZnc0liT3Bna01vR3RYNzJ5cA?oc=5) （2026-06-09 09:21）
-- [五大啤酒巨头去年业绩分化：燕京啤酒净利增近六成，百威亚太中国市场销量连跌两年](https://news.google.com/rss/articles/CBMiYEFVX3lxTFA0aldmRmltVWxZaFh4NXpSeGFnY19PUHQ3aXo4bmtwNk5WanBCSEtSTWlzdFNLSXpBQkNQMXE3ekVHcG5TaDI3alkyTU1FajBxSm5YekpNV2d3cVJub2lsSA?oc=5) （2026-04-15 07:00）
+- [研报掘金丨东方证券：维持华利集团买入评级，目标价47.92元](https://news.google.com/rss/articles/CBMihgFBVV95cUxPZ2FyanVkSXFySGFyTVptUFI3azhvVlZ6SGZES3ROSTNkS2pHVXJLX3hyR3NTZFlhU1BsTlRKd2ZqS01TYmZ3c195YUJCeHloM0NVS1ZNajFUdEFkLW5WUVZMckxyeGNKR3VuLTFGMnpsM21FZWE4WVlGV280b3JlTkVjU3FLQQ?oc=5) （2026-04-14 07:00）
 
 ### 一汽解放（000800）
 
-**原因：** 商用车行业整体承压，传统燃油重卡需求偏弱
+**原因：** 商用车需求偏弱，板块整体调整
 
 **证据：**
 - [一汽解放(000800.SZ)：目前解放绿动已完成500kW发电机组样机点火](https://news.google.com/rss/articles/CBMia0FVX3lxTE1xYWd4TDdKQnBDd0xnSDVfaTN0WDlpMHpwNzV0UTJhemJJTDJBM2gwTXVKM1UyQ0FrbUpDZGRmYXRBc1E1c2hiYUJKazNqRENQajdxNlp0UmpTRnVDOWxBT3RsZDhBTTluZVlN?oc=5) （2026-06-09 07:55）
 
-### 中海油服（601808）
+### 凯赛生物（688065）
 
-**原因：** 中东地缘风险溢价消退，油气板块全线杀跌
+**原因：** 生物基材料概念前期涨幅较大后技术性回调
 
 **证据：**
-- [中东地缘风险溢价消退 油气板块全线杀跌](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9KRXdyeGhLMUZJeEZlRXdjYXg4UUtjbXlFSURmNV9IclVKVWJYcGNCU2F3TTFwNjVnWFRleVZLZ2lORlhmdERQMGQ1UjFJYmJLcDltVE13?oc=5) （2026-06-09 06:14）
+- [年营收破30亿，凯赛生物是否真稀缺标的？](https://news.google.com/rss/articles/CBMiigFBVV95cUxNQ2ZMMDdXV1dZdDJOdkRPSThaR0xXelVyYnM3bFBnbmVsQm5jeDRXWFhqMjJWN2swcVpodDN2V3h2S1g3T2hqN2plRnBPMVZtVWVBMUwwdEkyR1pORmJ6ZE41Ul94cEJncVVZcVd3X2ZWYmY2MTdTcUJBcUpPVGp6Tkw5dC1aNGxsb2c?oc=5) （2026-05-11 07:00）
+
+### 上海莱士（002252）
+
+**原因：** 血液制品行业多家龙头净利下滑，行业周期拐点尚未确认
+
+**证据：**
+- [血液制品业绩大考：多家龙头净利下滑 上海莱士逆袭](https://news.google.com/rss/articles/CBMijwFBVV95cUxNb1ltTnhtNlg3THplemw2RjNOQnpOVG9fS0lLd1RzMnpJb3lrM0lZZDBYRW1CYUxiQi1fVjNhc0FoZVVnVTRTa2ZIRzc5ek5jNjRXaUYzVlJULThVMmVLUGo5dVJPT1VYU0xsNll5S1FyaEFiSU1yVmpPajZDWGU0dk9hV05nVm1Kam43eGVqOA?oc=5) （2026-04-29 07:00）
+
+### 分众传媒（002027）
+
+**原因：** 21.5亿减值重创去年业绩，主力资金持续净卖出
+
+**证据：**
+- [分众传媒出局中证A100指数 21.5亿元减值重创去年业绩](https://news.google.com/rss/articles/CBMieEFVX3lxTFBGM0tmdDRZdzdoTFVyZmljX1h3LU1XR2lGY2NpYmxRcTZ6czlVcndaVGN4MUxDNE5UMG9RbTBVYnFHY1pCM1IwU0pQLVZZUkdYYnN3cjFoZExLeUp1c1F5dWoxdms0NExDdnZDbjZSZi1aRV9uWThOcg?oc=5) （2026-06-08 01:00）
+- [分众传媒（002027）6月11日主力资金净卖出3819.14万元](https://news.google.com/rss/articles/CBMiqAJBVV95cUxOMHI4Rk83eUdQcElQZElVOGpSRXlWaFBsdWJudk1tRFk0QVFTelJmREVpSF9uTmdfZ1dLREwyWEJEMWpQTVJPZlk5UTJZeUEyM25NYm5GTEFQN0JWaDYzVVJad0RjdzA2aXNYd09Ibi01YkdXVGZTaHlRY0tUU1ZVekFPYXB1V0hBZEw3YnVPZnFYdEZ1SGJQX1BXQ3ktLUxyVFMxd3BUY0VERUwyRlhlRThzd0xwelEyLUdqOWF4cTU1Znlzbl9PWHhwdXVxTlpCbjVLWXBpTHEyeER3TlpwN0NNT0ZJc25sdWJwOGZoeTl0dUNid3N0Nm5OaTVjaTlkUXRoUFA2T01MY3VqU180aTRVMFVNZXN1RGZsTDBsWUE3VUhsaWxlLQ?oc=5) （2026-06-11 07:00）
+
+### 陕西煤业（601225）
+
+**原因：** 煤炭板块前期大涨后获利回吐，短期技术性调整
+
+**证据：**
+- [煤炭板块近期大涨，陕西煤业去年净利润221.96亿元！机构：板块利润、估值均有望回升](https://news.google.com/rss/articles/CBMijwFBVV95cUxOdXAwbHNzVEhMWVVvWThNb1FlWGMyQm5MV1h1VEFDYm5fY2pMV1ZEUVZVc1hFNEZzVm80d2diRk5Fa3pfNXM0QlpRY3pKcVBGZFVPSTNWUWZpbnNpdFFXSkNtS2l3UEF5ZXl2QzFUR2xyZVA5M0drWUdIVDF2b2hQMDBOZVRoWkZfVDU0VE9fbw?oc=5) （2025-03-14 07:00）
+- [沪指跌1.7%，创指跌3.69%：两市成交不足2.8万亿元，煤炭股强势](https://news.google.com/rss/articles/CBMieEFVX3lxTE1yWTFkRHJmT2sxN01qa2ZrUGxLV2pYUTlGUnBSVzlfMEdDOERJSkg0T3hFNUpjRVpaOS0yWHpqaFN2Z0ZTUlBMRXcxbDh3dlNSVkl3NXhTYnpkY0doNzJBSEJLYVBCM2t6MkhWalI3S0lidGU3ek51VA?oc=5) （2026-06-08 07:40）
 
 ---
 

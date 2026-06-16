@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """
-沪深300每日涨跌分析 v4
-- 涨跌幅各取 top20
-- 每个股票先检索互联网新闻（包含发布时间），作为证据
-- 调用 codebuddy 综合分析，输出原因 + 证据链接（含发布时间）
+沪深300每日涨跌分析 v6
+- 修复：JSON 解析前预处理，替换中文引号
 """
 
 import json, sys, time, subprocess, re, urllib.request, urllib.parse
@@ -13,6 +11,18 @@ from email.utils import parsedate_to_datetime
 
 CODEX_BIN = "codebuddy"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+
+def preprocess_json(s):
+    """
+    预处理 JSON 字符串，修复常见格式问题：
+    1. 将中文引号替换为 ASCII 引号
+    2. 转义字符串值中的未转义双引号
+    """
+    # 替换中文引号为 ASCII 引号
+    s = s.replace('"', '"').replace('"', '"')
+    s = s.replace(''', "'").replace(''', "'")
+    return s
 
 
 def fetch_url(url, headers=None, timeout=10):
@@ -151,8 +161,8 @@ def build_prompt(target_date, gainers, losers, gainers_news, losers_news):
     lines += [
         "",
         "2. 重要：输出必须是**有效的 JSON**，确保可以被 Python json.loads() 解析。",
-        "   - 所有字符串中的双引号必须转义为 \\",
-        "   - 不要使用弯引号（U+201C/U+201D）",
+        "   - 所有字符串值中不要使用中文引号（" " " "）",
+        "   - 如果需要在字符串中使用引号，使用转义的 ASCII 双引号(\"\")",
         "   - 每个键值对后用逗号，最后一个不用",
         "",
         "3. 在 evidence 中必须包含 pub_date 字段（新闻发布时间）。",
@@ -222,21 +232,16 @@ def run_codex(prompt, project_root, codex_bin="codebuddy"):
         with open(debug_dir / "csi300_extracted_json.txt", "w") as f:
             f.write(report_json_str)
         
+        # 预处理：替换中文引号
+        report_json_str = preprocess_json(report_json_str)
+        
         # 尝试解析 JSON
         try:
             result = json.loads(report_json_str)
             return result
         except json.JSONDecodeError as e:
             print(f"[WARNING] JSON 解析失败: {e}", file=sys.stderr)
-            
-            # 尝试使用 json5 库（如果可用）
-            try:
-                import json5
-                result = json5.loads(report_json_str)
-                print(f"[DEBUG] 使用 json5 解析成功", file=sys.stderr)
-                return result
-            except ImportError:
-                raise RuntimeError(f"codebuddy 未返回有效 JSON: {e}\n\n提取的 JSON 前500字符:\n{report_json_str[:500]}")
+            raise RuntimeError(f"codebuddy 未返回有效 JSON: {e}\n\n提取的 JSON 前500字符:\n{report_json_str[:500]}")
     else:
         # codex 格式
         for line in (completed.stdout or "").strip().splitlines():
@@ -269,7 +274,20 @@ def run_codex(prompt, project_root, codex_bin="codebuddy"):
     return json.loads(report_json_str)
 
 
-def format_report(result, target_date):
+def format_report(result, target_date, gainers=None, losers=None):
+    """
+    生成报告 Markdown。
+    如果传入 gainers/losers，则从原始数据获取涨跌幅百分比。
+    """
+    # 创建 code -> change_pct 映射
+    change_map = {}
+    if gainers:
+        for s in gainers:
+            change_map[s["code"]] = s["change_pct"]
+    if losers:
+        for s in losers:
+            change_map[s["code"]] = s["change_pct"]
+    
     lines = [
         f"# 沪深300涨跌分析 — {target_date}",
         "",
@@ -296,8 +314,10 @@ def format_report(result, target_date):
     for i, st in enumerate(result.get("gainers_analysis", {}).get("stocks", []), 1):
         code = st.get('code', '')
         name = st.get('name', '')
-        reason = st.get('reason', '')
-        lines.append(f"| {i} | {code} | {name} | {reason} | 待补充 | 待补充 |")
+        # 从原始数据获取涨跌幅
+        change_pct = change_map.get(code, None)
+        change_str = f"{change_pct:+.2f}%" if change_pct is not None else "（暂无）"
+        lines.append(f"| {i} | {code} | {name} | {change_str} | 待补充 | 待补充 |")
     lines.append("")
     
     # 涨幅详细分析
@@ -334,8 +354,10 @@ def format_report(result, target_date):
     for i, st in enumerate(result.get("losers_analysis", {}).get("stocks", []), 1):
         code = st.get('code', '')
         name = st.get('name', '')
-        reason = st.get('reason', '')
-        lines.append(f"| {i} | {code} | {name} | {reason} | 待补充 | 待补充 |")
+        # 从原始数据获取涨跌幅
+        change_pct = change_map.get(code, None)
+        change_str = f"{change_pct:+.2f}%" if change_pct is not None else "（暂无）"
+        lines.append(f"| {i} | {code} | {name} | {change_str} | 待补充 | 待补充 |")
     lines.append("")
     
     # 跌幅详细分析
@@ -418,7 +440,8 @@ def main():
     result = run_codex(prompt, PROJECT_ROOT, CODEX_BIN)
     
     print(f"[{datetime.now().strftime('%H:%M:%S')}] 生成报告...")
-    report = format_report(result, target_date)
+    # 传入 gainers/losers 以获取涨跌幅数据
+    report = format_report(result, target_date, gainers=gainers, losers=losers)
     
     out_path = output_dir / f"{target_date}_with_table.md"
     out_path.write_text(report, encoding="utf-8")
