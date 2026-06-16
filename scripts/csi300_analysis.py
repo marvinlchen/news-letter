@@ -256,11 +256,61 @@ def calc_extended_changes(stock_code, stock_name, target_date="2026-06-14"):
     return week_change_pct, ytd_change_pct
 
 
+def get_csi300_stocks(date_str, sort_ascending=False, max_retries=3):
+    """
+    获取沪深300成分股的全部数据。
+    参数:
+        sort_ascending: True=按涨幅升序（获取跌幅榜），False=按涨幅降序（获取涨幅榜）
+    返回 list[dict]，包含：code, name, price, change_pct
+    """
+    all_stocks = []
+    page_size = 100  # 每次获取100只
+    
+    # 如果获取跌幅榜，需要按涨幅升序排列
+    sort_param = "&sc=1" if sort_ascending else ""
+    
+    for page in range(1, 4):  # 获取3页，共300只
+        url = (
+            f"{EASTMONEY_PUSH2}?"
+            f"pn={page}&pz={page_size}&po=1&np=1&fltt=2&invt=2&fid=f3{sort_param}&"
+            f"fs=m:0+t:6,m:0+t:13,m:1+t:2,m:1+t:23&"
+            f"fields=f12,f14,f2,f3"
+        )
+        
+        for attempt in range(max_retries):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=15) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    raw = data.get("data", {}).get("diff", [])
+                    if not raw:
+                        break
+                    for item in raw:
+                        all_stocks.append({
+                            "code":        item.get("f12", ""),
+                            "name":        item.get("f14", ""),
+                            "price":       item.get("f2",  None),
+                            "change_pct":  item.get("f3",  None),
+                            "week_change": None,
+                            "ytd_change":  None,
+                        })
+                    break
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    time.sleep(2 * (attempt + 1))
+                else:
+                    print(f"[WARN] 获取第{page}页失败: {e}", file=sys.stderr)
+        
+        if page < 3:
+            time.sleep(0.5)  # 避免请求过快
+    
+    return all_stocks
+
+
 def get_csi300_top_gainers(date_str, top_n=10, max_retries=3):
     """
     获取沪深300成分股中涨幅最大的 top_n 只股票。
-    返回 list[dict]，包含：code, name, price, change_pct,
-                      week_change（本周涨幅）, ytd_change（年初至今涨幅）
+    使用降序排序（默认）。
     """
     url = (
         f"{EASTMONEY_PUSH2}?"
@@ -282,8 +332,8 @@ def get_csi300_top_gainers(date_str, top_n=10, max_retries=3):
                         "name":        item.get("f14", ""),
                         "price":       item.get("f2",  None),
                         "change_pct":  item.get("f3",  None),
-                        "week_change": None,  # 稍后计算
-                        "ytd_change":  None,  # 稍后计算
+                        "week_change": None,
+                        "ytd_change":  None,
                     })
                 return result
         except Exception as e:
@@ -300,11 +350,11 @@ def get_csi300_top_gainers(date_str, top_n=10, max_retries=3):
 def get_csi300_top_losers(date_str, top_n=10, max_retries=3):
     """
     获取沪深300成分股中跌幅最大的 top_n 只股票。
-    返回 list[dict]，字段同 get_csi300_top_gainers。
+    使用升序排序（sc=1）。
     """
     url = (
         f"{EASTMONEY_PUSH2}?"
-        f"pn=1&pz=100&po=1&np=1&fltt=2&invt=2&fid=f3&"
+        f"pn=1&pz={top_n}&po=1&np=1&fltt=2&invt=2&fid=f3&sc=1&"
         f"fs=m:0+t:6,m:0+t:13,m:1+t:2,m:1+t:23&"
         f"fields=f12,f14,f2,f3"
     )
@@ -315,17 +365,15 @@ def get_csi300_top_losers(date_str, top_n=10, max_retries=3):
             with urllib.request.urlopen(req, timeout=15) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
                 raw = data.get("data", {}).get("diff", [])
-                # 按涨幅升序排列（取跌幅最大的）
-                raw_sorted = sorted(raw, key=lambda x: x.get("f3", 0))
                 result = []
-                for item in raw_sorted[:top_n]:
+                for item in raw:
                     result.append({
                         "code":        item.get("f12", ""),
                         "name":        item.get("f14", ""),
-                        "price":       item.get("f2", None),
-                        "change_pct":  item.get("f3", None),
-                        "week_change": None,  # 稍后计算
-                        "ytd_change":  None,  # 稍后计算
+                        "price":       item.get("f2",  None),
+                        "change_pct":  item.get("f3",  None),
+                        "week_change": None,
+                        "ytd_change":  None,
                     })
                 return result
         except Exception as e:
