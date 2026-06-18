@@ -34,6 +34,82 @@ PUSH2_HEADERS = {
     "Referer": "https://quote.eastmoney.com/",
     "Accept": "application/json,text/plain,*/*",
 }
+AI_RESPONSE_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["gainers_analysis", "losers_analysis", "market_summary"],
+    "properties": {
+        "gainers_analysis": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["summary", "stocks"],
+            "properties": {
+                "summary": {"type": "string"},
+                "stocks": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": False,
+                        "required": ["code", "name", "reason", "evidence"],
+                        "properties": {
+                            "code": {"type": "string"},
+                            "name": {"type": "string"},
+                            "reason": {"type": "string"},
+                            "evidence": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "additionalProperties": False,
+                                    "required": ["title", "url", "pub_date"],
+                                    "properties": {
+                                        "title": {"type": "string"},
+                                        "url": {"type": "string"},
+                                        "pub_date": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        "losers_analysis": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["summary", "stocks"],
+            "properties": {
+                "summary": {"type": "string"},
+                "stocks": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": False,
+                        "required": ["code", "name", "reason", "evidence"],
+                        "properties": {
+                            "code": {"type": "string"},
+                            "name": {"type": "string"},
+                            "reason": {"type": "string"},
+                            "evidence": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "additionalProperties": False,
+                                    "required": ["title", "url", "pub_date"],
+                                    "properties": {
+                                        "title": {"type": "string"},
+                                        "url": {"type": "string"},
+                                        "pub_date": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        "market_summary": {"type": "string"},
+    },
+}
 
 # ── 工具函数 ─────────────────────────────────────────────────────────────────────
 
@@ -63,9 +139,7 @@ def extract_json_response(text):
     start = clean.find("{")
     end = clean.rfind("}")
     if start != -1 and end != -1 and end > start:
-        candidate = clean[start:end + 1]
-        json.loads(candidate)
-        return candidate
+        return clean[start:end + 1]
     return clean
 
 
@@ -73,15 +147,22 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
     """调用 AI 模型（codex 或 codebuddy）"""
     if AI_MODEL == "codex":
         output_path = None
+        schema_path = None
         try:
             with tempfile.NamedTemporaryFile("w", delete=False) as tmp:
                 output_path = tmp.name
+            if expect_json:
+                with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as schema_file:
+                    json.dump(AI_RESPONSE_SCHEMA, schema_file, ensure_ascii=False)
+                    schema_path = schema_file.name
             cmd = [
                 "codex", "exec",
                 "--skip-git-repo-check",
                 "--output-last-message", output_path,
-                prompt,
             ]
+            if schema_path:
+                cmd.extend(["--output-schema", schema_path])
+            cmd.append(prompt)
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
             if result.returncode != 0:
                 raise RuntimeError((result.stderr or result.stdout).strip())
@@ -93,6 +174,11 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
             if output_path:
                 try:
                     os.unlink(output_path)
+                except OSError:
+                    pass
+            if schema_path:
+                try:
+                    os.unlink(schema_path)
                 except OSError:
                     pass
     else:
