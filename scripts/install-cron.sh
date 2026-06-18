@@ -5,6 +5,7 @@ PROJECT_ROOT="${PROJECT_ROOT:-$HOME/finance-news-digest}"
 MARKER="# finance-news-digest"
 DEEP_MARKER="# finance-deep-reads"
 REDDIT_MARKER="# finance-reddit-digest"
+CSI300_MARKER="# finance-csi300-analysis"
 mkdir -p "$PROJECT_ROOT/var/log"
 
 if command -v flock >/dev/null 2>&1; then
@@ -22,15 +23,28 @@ if command -v flock >/dev/null 2>&1; then
 else
   REDDIT_COMMAND="$PROJECT_ROOT/scripts/run-reddit-digest.sh"
 fi
+if command -v flock >/dev/null 2>&1; then
+  CSI300_COMMAND="/usr/bin/flock -n $PROJECT_ROOT/var/csi300-run.lock $PROJECT_ROOT/scripts/run-csi300-analysis.sh"
+else
+  CSI300_COMMAND="$PROJECT_ROOT/scripts/run-csi300-analysis.sh"
+fi
 
 tmp="$(mktemp)"
 trap 'rm -f "$tmp"' EXIT
-crontab -l 2>/dev/null | grep -vF "$MARKER" | grep -vF "$DEEP_MARKER" | grep -vF "$REDDIT_MARKER" > "$tmp" || true
+crontab -l 2>/dev/null \
+  | grep -vF "$MARKER" \
+  | grep -vF "$DEEP_MARKER" \
+  | grep -vF "$REDDIT_MARKER" \
+  | grep -vF "$CSI300_MARKER" \
+  | grep -v 'run-csi300-analysis.sh' \
+  | grep -v 'csi300-analysis.log' > "$tmp" || true
 printf '0 4 * * * %s >> %s/var/log/cron.log 2>&1 %s\n' \
   "$COMMAND" "$PROJECT_ROOT" "$MARKER" >> "$tmp"
 printf '0 5 * * 0 %s >> %s/var/log/deep-reads.log 2>&1 %s\n' \
   "$DEEP_COMMAND" "$PROJECT_ROOT" "$DEEP_MARKER" >> "$tmp"
 printf '30 4 * * * %s >> %s/var/log/reddit-digest.log 2>&1 %s\n' \
   "$REDDIT_COMMAND" "$PROJECT_ROOT" "$REDDIT_MARKER" >> "$tmp"
+printf '30 15 * * 1-5 %s >> %s/var/log/csi300-analysis.log 2>&1 %s\n' \
+  "$CSI300_COMMAND" "$PROJECT_ROOT" "$CSI300_MARKER" >> "$tmp"
 crontab "$tmp"
-crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest'
+crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest|finance-csi300-analysis'

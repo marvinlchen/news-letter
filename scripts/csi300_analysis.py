@@ -14,16 +14,26 @@ import subprocess
 import re
 import random
 import argparse
+import tempfile
 import urllib.request
 import urllib.parse
+from pathlib import Path
 from datetime import datetime, timedelta
 from email.utils import parsedate_to_datetime
 
 # ── 配置 ────────────────────────────────────────────────────────────────────────
 
-AI_MODEL = "codex"   # "codex" or "codebuddy"
+AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codex")   # "codex" or "codebuddy"
 EASTMONEY_PUSH2 = "https://push2.eastmoney.com/api/qt/clist/get"
+EASTMONEY_PUSH2_FALLBACK = "https://push2delay.eastmoney.com/api/qt/clist/get"
 EASTMONEY_KLINE = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
+CSI300_BOARD_FS = "b:BK0500"
+HISTORICAL_RANK_CACHE = {}
+PUSH2_HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+    "Referer": "https://quote.eastmoney.com/",
+    "Accept": "application/json,text/plain,*/*",
+}
 
 # ── 工具函数 ─────────────────────────────────────────────────────────────────────
 
@@ -38,45 +48,53 @@ def preprocess_json(s):
     return s
 
 
+def extract_json_response(text):
+    """Return a JSON object string, tolerating code fences and surrounding chatter."""
+    clean = text.strip()
+    if clean.startswith("```"):
+        clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.IGNORECASE)
+        clean = re.sub(r"\s*```$", "", clean)
+    try:
+        json.loads(clean)
+        return clean
+    except json.JSONDecodeError:
+        pass
+
+    start = clean.find("{")
+    end = clean.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        candidate = clean[start:end + 1]
+        json.loads(candidate)
+        return candidate
+    return clean
+
+
 def call_ai(prompt, max_tokens=4096, expect_json=True):
     """调用 AI 模型（codex 或 codebuddy）"""
     if AI_MODEL == "codex":
-        cmd = [
-            "codex", "exec",
-            "--skip-git-repo-check",
-        ]
-        cmd.append(prompt)
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-        text = result.stdout.strip()
-        
-        # codex exec 输出格式：
-        # 第一行是 "codex"，然后是 AI 响应，最后是 metadata
-        # 需要提取 JSON 部分
-        if expect_json:
-            # 查找 JSON 字符串（从第一个 { 或 [ 开始）
-            lines = text.split("\n")
-            json_started = False
-            json_lines = []
-            for line in lines:
-                if not json_started and (line.strip().startswith("{") or line.strip().startswith("[")):
-                    json_started = True
-                if json_started:
-                    # 如果遇到 metadata 行（如 "tokens used"），停止
-                    if line.strip().startswith("tokens") or line.strip() == "":
-                        if json_started:
-                            break
-                    json_lines.append(line)
-            if json_lines:
-                clean = "\n".join(json_lines).strip()
-                # 移除可能的 Markdown 代码块标记
-                if clean.startswith("```"):
-                    clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.IGNORECASE)
-                    clean = re.sub(r"\s*```$", "", clean)
-                return clean
-            else:
-                # 如果没找到 JSON，返回原始文本
-                return text
-        return text
+        output_path = None
+        try:
+            with tempfile.NamedTemporaryFile("w", delete=False) as tmp:
+                output_path = tmp.name
+            cmd = [
+                "codex", "exec",
+                "--skip-git-repo-check",
+                "--output-last-message", output_path,
+                prompt,
+            ]
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+            if result.returncode != 0:
+                raise RuntimeError((result.stderr or result.stdout).strip())
+            text = Path(output_path).read_text(encoding="utf-8").strip()
+            if not text:
+                text = result.stdout.strip()
+            return extract_json_response(text) if expect_json else text
+        finally:
+            if output_path:
+                try:
+                    os.unlink(output_path)
+                except OSError:
+                    pass
     else:
         # 尝试多个可能的 codebuddy 路径
         codebuddy_paths = [
@@ -102,7 +120,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
             # 如果都找不到，使用默认命令（会失败并抛出错误）
             cmd = ["codebuddy", "-p", "--output-format", "json", prompt]
         
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+        if result.returncode != 0:
+            raise RuntimeError((result.stderr or result.stdout).strip())
         text = result.stdout.strip()
         
         # 尝试解析 codebuddy 的输出格式
@@ -131,11 +151,7 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
             # 不是 JSON 数组，假设是纯文本
             pass
         
-        clean = text.strip()
-        if clean.startswith("```"):
-            clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.IGNORECASE)
-            clean = re.sub(r"\s*```$", "", clean)
-        return clean
+        return extract_json_response(text) if expect_json else text
 
 
 def get_trading_dates(count=1, include_today=False):
@@ -256,135 +272,175 @@ def calc_extended_changes(stock_code, stock_name, target_date="2026-06-14"):
     return week_change_pct, ytd_change_pct
 
 
-def get_csi300_stocks(date_str, sort_ascending=False, max_retries=3):
-    """
-    获取沪深300成分股的全部数据。
-    参数:
-        sort_ascending: True=按涨幅升序（获取跌幅榜），False=按涨幅降序（获取涨幅榜）
-    返回 list[dict]，包含：code, name, price, change_pct
-    """
-    all_stocks = []
-    page_size = 100  # 每次获取100只
-    
-    # 如果获取跌幅榜，需要按涨幅升序排列
-    sort_param = "&sc=1" if sort_ascending else ""
-    
-    for page in range(1, 4):  # 获取3页，共300只
-        url = (
-            f"{EASTMONEY_PUSH2}?"
-            f"pn={page}&pz={page_size}&po=1&np=1&fltt=2&invt=2&fid=f3{sort_param}&"
-            f"fs=m:0+t:6,m:0+t:13,m:1+t:2,m:1+t:23&"
-            f"fields=f12,f14,f2,f3"
+def fetch_csi300_constituents(max_retries=3):
+    """获取当前沪深300成分股代码和名称。"""
+    page_size = 100
+    page = 1
+    total = None
+    result = []
+    seen = set()
+
+    while total is None or len(result) < total:
+        query = (
+            f"pn={page}&pz={page_size}&po=1&np=1&fltt=2&invt=2&fid=f3&"
+            f"fs={CSI300_BOARD_FS}&"
+            f"fields=f12,f14"
         )
-        
+        page_data = None
         for attempt in range(max_retries):
+            last_error = None
             try:
-                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                with urllib.request.urlopen(req, timeout=15) as resp:
-                    data = json.loads(resp.read().decode("utf-8"))
-                    raw = data.get("data", {}).get("diff", [])
-                    if not raw:
+                for endpoint in (EASTMONEY_PUSH2, EASTMONEY_PUSH2_FALLBACK):
+                    try:
+                        req = urllib.request.Request(f"{endpoint}?{query}", headers=PUSH2_HEADERS)
+                        with urllib.request.urlopen(req, timeout=15) as resp:
+                            page_data = json.loads(resp.read().decode("utf-8"))
                         break
-                    for item in raw:
-                        all_stocks.append({
+                    except Exception as e:
+                        last_error = e
+                if page_data is None:
+                    raise last_error
+                break
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    wait_time = 2 * (attempt + 1)
+                    print(f"[WARN] 获取沪深300成分股第 {page} 页失败（尝试 {attempt+1}/{max_retries}）: {e}，{wait_time}秒后重试...", file=sys.stderr)
+                    time.sleep(wait_time)
+                else:
+                    print(f"[WARN] 获取沪深300成分股第 {page} 页失败: {e}", file=sys.stderr)
+                    return result
+
+        data = page_data.get("data") or {}
+        total = data.get("total") or total or 0
+        raw = data.get("diff", [])
+        if not raw:
+            break
+        for item in raw:
+            code = item.get("f12", "")
+            if code and code not in seen:
+                seen.add(code)
+                result.append({"code": code, "name": item.get("f14", "")})
+        page += 1
+
+    return result[:total] if total else result
+
+
+def calc_daily_change(stock_code, stock_name, target_date):
+    """根据历史 K 线计算指定日期的单日涨跌幅。"""
+    market = "1" if stock_code.startswith(("6", "5", "9")) else "0"
+    history = get_stock_history(stock_code, market, target_date)
+    if not history or len(history) < 2:
+        return None
+
+    idx = None
+    for i in range(len(history) - 1, -1, -1):
+        if history[i]["date"] == target_date:
+            idx = i
+            break
+    if idx is None or idx == 0:
+        return None
+
+    current = history[idx]
+    previous = history[idx - 1]
+    prev_close = previous.get("close")
+    close = current.get("close")
+    if not prev_close or not close:
+        return None
+    return {
+        "code": stock_code,
+        "name": stock_name,
+        "price": close,
+        "change_pct": (close - prev_close) / prev_close * 100,
+        "week_change": None,
+        "ytd_change": None,
+    }
+
+
+def fetch_csi300_historical_rank(date_str, top_n=20, ascending=False):
+    """按指定历史交易日重算沪深300涨跌幅排行。"""
+    if date_str in HISTORICAL_RANK_CACHE:
+        ranked = list(HISTORICAL_RANK_CACHE[date_str])
+        ranked.sort(key=lambda x: x.get("change_pct", 0), reverse=not ascending)
+        return ranked[:top_n]
+
+    constituents = fetch_csi300_constituents()
+    ranked = []
+    print(f"[INFO] 计算 {len(constituents)} 只沪深300成分股的 {date_str} 历史涨跌幅...", file=sys.stderr)
+    for i, stock in enumerate(constituents, 1):
+        if i % 25 == 0 or i == 1:
+            print(f"  [rank {i}/{len(constituents)}]", file=sys.stderr)
+        item = calc_daily_change(stock["code"], stock["name"], date_str)
+        if item is not None:
+            ranked.append(item)
+        time.sleep(0.05)
+    HISTORICAL_RANK_CACHE[date_str] = list(ranked)
+    ranked.sort(key=lambda x: x.get("change_pct", 0), reverse=not ascending)
+    return ranked[:top_n]
+
+
+def fetch_csi300_live_rank(top_n=20, ascending=False, max_retries=3):
+    """
+    获取沪深300成分股实时涨跌幅排行。
+    返回 list[dict]，包含：code, name, price, change_pct,
+                      week_change（本周涨幅）, ytd_change（年初至今涨幅）
+    """
+    order = "0" if ascending else "1"
+    query = (
+        f"pn=1&pz={top_n}&po={order}&np=1&fltt=2&invt=2&fid=f3&"
+        f"fs={CSI300_BOARD_FS}&"
+        f"fields=f12,f14,f2,f3"
+    )
+    
+    for attempt in range(max_retries):
+        last_error = None
+        try:
+            for endpoint in (EASTMONEY_PUSH2, EASTMONEY_PUSH2_FALLBACK):
+                try:
+                    req = urllib.request.Request(f"{endpoint}?{query}", headers=PUSH2_HEADERS)
+                    with urllib.request.urlopen(req, timeout=15) as resp:
+                        data = json.loads(resp.read().decode("utf-8"))
+                    raw = data.get("data", {}).get("diff", [])
+                    if ascending:
+                        raw = sorted(raw, key=lambda x: x.get("f3", 0))
+                    else:
+                        raw = sorted(raw, key=lambda x: x.get("f3", 0), reverse=True)
+                    result = []
+                    for item in raw[:top_n]:
+                        result.append({
                             "code":        item.get("f12", ""),
                             "name":        item.get("f14", ""),
                             "price":       item.get("f2",  None),
                             "change_pct":  item.get("f3",  None),
-                            "week_change": None,
-                            "ytd_change":  None,
+                            "week_change": None,  # 稍后计算
+                            "ytd_change":  None,  # 稍后计算
                         })
-                    break
-            except Exception as e:
-                if attempt < max_retries - 1:
-                    time.sleep(2 * (attempt + 1))
-                else:
-                    print(f"[WARN] 获取第{page}页失败: {e}", file=sys.stderr)
-        
-        if page < 3:
-            time.sleep(0.5)  # 避免请求过快
-    
-    return all_stocks
-
-
-def get_csi300_top_gainers(date_str, top_n=10, max_retries=3):
-    """
-    获取沪深300成分股中涨幅最大的 top_n 只股票。
-    使用降序排序（默认）。
-    """
-    url = (
-        f"{EASTMONEY_PUSH2}?"
-        f"pn=1&pz={top_n}&po=1&np=1&fltt=2&invt=2&fid=f3&"
-        f"fs=m:0+t:6,m:0+t:13,m:1+t:2,m:1+t:23&"
-        f"fields=f12,f14,f2,f3"
-    )
-    
-    for attempt in range(max_retries):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-                raw = data.get("data", {}).get("diff", [])
-                result = []
-                for item in raw:
-                    result.append({
-                        "code":        item.get("f12", ""),
-                        "name":        item.get("f14", ""),
-                        "price":       item.get("f2",  None),
-                        "change_pct":  item.get("f3",  None),
-                        "week_change": None,
-                        "ytd_change":  None,
-                    })
-                return result
+                    return result
+                except Exception as e:
+                    last_error = e
+            raise last_error
         except Exception as e:
             if attempt < max_retries - 1:
                 wait_time = 2 * (attempt + 1)
-                print(f"[WARN] 获取涨幅榜失败（尝试 {attempt+1}/{max_retries}）: {e}，{wait_time}秒后重试...", file=sys.stderr)
+                print(f"[WARN] 获取沪深300排行失败（尝试 {attempt+1}/{max_retries}）: {e}，{wait_time}秒后重试...", file=sys.stderr)
                 time.sleep(wait_time)
             else:
-                print(f"[WARN] 获取涨幅榜失败: {e}", file=sys.stderr)
+                print(f"[WARN] 获取沪深300排行失败: {e}", file=sys.stderr)
                 return []
     return []
 
 
-def get_csi300_top_losers(date_str, top_n=10, max_retries=3):
-    """
-    获取沪深300成分股中跌幅最大的 top_n 只股票。
-    使用升序排序（sc=1）。
-    """
-    url = (
-        f"{EASTMONEY_PUSH2}?"
-        f"pn=1&pz={top_n}&po=1&np=1&fltt=2&invt=2&fid=f3&sc=1&"
-        f"fs=m:0+t:6,m:0+t:13,m:1+t:2,m:1+t:23&"
-        f"fields=f12,f14,f2,f3"
-    )
-    
-    for attempt in range(max_retries):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-                raw = data.get("data", {}).get("diff", [])
-                result = []
-                for item in raw:
-                    result.append({
-                        "code":        item.get("f12", ""),
-                        "name":        item.get("f14", ""),
-                        "price":       item.get("f2",  None),
-                        "change_pct":  item.get("f3",  None),
-                        "week_change": None,
-                        "ytd_change":  None,
-                    })
-                return result
-        except Exception as e:
-            if attempt < max_retries - 1:
-                wait_time = 2 * (attempt + 1)
-                print(f"[WARN] 获取跌幅榜失败（尝试 {attempt+1}/{max_retries}）: {e}，{wait_time}秒后重试...", file=sys.stderr)
-                time.sleep(wait_time)
-            else:
-                print(f"[WARN] 获取跌幅榜失败: {e}", file=sys.stderr)
-                return []
-    return []
+def get_csi300_top_gainers(date_str, top_n=20, max_retries=3):
+    """获取沪深300成分股中涨幅最大的 top_n 只股票。"""
+    if date_str == datetime.now().strftime("%Y-%m-%d"):
+        return fetch_csi300_live_rank(top_n=top_n, ascending=False, max_retries=max_retries)
+    return fetch_csi300_historical_rank(date_str, top_n=top_n, ascending=False)
+
+
+def get_csi300_top_losers(date_str, top_n=20, max_retries=3):
+    """获取沪深300成分股中跌幅最大的 top_n 只股票。"""
+    if date_str == datetime.now().strftime("%Y-%m-%d"):
+        return fetch_csi300_live_rank(top_n=top_n, ascending=True, max_retries=max_retries)
+    return fetch_csi300_historical_rank(date_str, top_n=top_n, ascending=True)
 
 
 def enrich_with_extended_changes(stocks, target_date, max_workers=5):
@@ -441,6 +497,15 @@ def search_stock_news(stock_name, stock_code, limit=5):
         return []
 
 
+def attach_news_candidates(stocks, limit=3):
+    """为股票列表附加 Google News RSS 候选证据，供 AI 选择和归因。"""
+    for i, stock in enumerate(stocks, 1):
+        print(f"  [news {i}/{len(stocks)}] {stock['code']} {stock['name']}", file=sys.stderr)
+        stock["news"] = search_stock_news(stock["name"], stock["code"], limit=limit)
+        time.sleep(0.2)
+    return stocks
+
+
 # ── Prompt 构建 ──────────────────────────────────────────────────────────────────
 
 def build_prompt(date_str, gainers, losers):
@@ -448,13 +513,16 @@ def build_prompt(date_str, gainers, losers):
     构建发送给 AI 的 prompt。
     包含：当日涨跌幅、本周涨幅、年初至今涨幅。
     """
+    top_n = max(len(gainers), len(losers))
     lines = [
-        f"# 任务",
-        f"你是专业财经分析师。请分析 {date_str} 沪深300指数Top10涨幅和Top10跌幅股票。",
-        f"",
-        f"## 数据",
-        f"",
-        f"### Top10 涨幅股",
+        "# 任务",
+        f"你是专业财经分析师。请分析 {date_str} 沪深300指数成分股涨跌幅 Top {top_n}。",
+        "只能基于下方行情数据和新闻候选做归因；证据链接必须从新闻候选中选取，不要编造链接。",
+        "最终只输出一个 JSON 对象，不要输出 Markdown 代码块或额外说明。",
+        "",
+        "## 数据",
+        "",
+        f"### Top {len(gainers)} 涨幅股",
     ]
 
     for i, st in enumerate(gainers, 1):
@@ -466,12 +534,17 @@ def build_prompt(date_str, gainers, losers):
             f"- 当日涨跌幅：{chg}",
             f"- 本周涨幅：{week}",
             f"- 年初至今涨幅：{ytd}",
-            f"",
+            "- 新闻候选：",
         ]
+        for news in st.get("news", []):
+            lines.append(f"  - {news.get('title')} | {news.get('link')} | {news.get('pub_date')}")
+        if not st.get("news"):
+            lines.append("  - （暂无候选新闻）")
+        lines.append("")
 
     lines += [
-        f"",
-        f"### Top10 跌幅股",
+        "",
+        f"### Top {len(losers)} 跌幅股",
     ]
 
     for i, st in enumerate(losers, 1):
@@ -483,20 +556,24 @@ def build_prompt(date_str, gainers, losers):
             f"- 当日涨跌幅：{chg}",
             f"- 本周涨幅：{week}",
             f"- 年初至今涨幅：{ytd}",
-            f"",
+            "- 新闻候选：",
         ]
+        for news in st.get("news", []):
+            lines.append(f"  - {news.get('title')} | {news.get('link')} | {news.get('pub_date')}")
+        if not st.get("news"):
+            lines.append("  - （暂无候选新闻）")
+        lines.append("")
 
     lines += [
-        f"",
-        f"## 要求",
-        f"1. 分析涨跌幅居前个股的驱动因素",
-        f"2. 总结当日市场主线",
-        f"3. 输出格式为 Markdown",
-        f"4. 每个股票提供2-3条相关证据链接（含发布时间）",
-        f"",
-        f"## 输出格式（严格 JSON）",
-        f"```json",
-        f"{{",
+        "",
+        "## 要求",
+        "1. market_summary 写成一段指数概况，概括板块分化、资金主线和核心驱动力。",
+        "2. gainers_analysis.summary 和 losers_analysis.summary 分别总结板块共性。",
+        "3. 每只股票给出一句直接原因。原因要结合行业、公司事件、资金风格或基本面，不要泛泛而谈。",
+        "4. evidence 最多 2 条，只能使用该股票新闻候选里的标题、链接和发布时间；没有合适证据时返回空数组。",
+        "",
+        "## 输出 JSON Schema",
+        "{",
         f'  "gainers_analysis": {{',
         f'    "summary": "涨幅板总结",',
         f'    "stocks": [{{"code": "000001", "name": "平安银行", "reason": "…", "evidence": [{{"title": "…", "url": "…", "pub_date": "YYYY-MM-DD HH:MM"}}]}}]',
@@ -506,8 +583,7 @@ def build_prompt(date_str, gainers, losers):
         f'    "stocks": [{{"code": "000002", "name": "万科A", "reason": "…", "evidence": [{{"title": "…", "url": "…", "pub_date": "YYYY-MM-DD HH:MM"}}]}}]',
         f'  }},',
         f'  "market_summary": "当日市场主线总结"',
-        f"}}",
-        f"```",
+        "}",
     ]
 
     return "\n".join(lines)
@@ -520,36 +596,79 @@ def format_report(result, target_date, gainers=None, losers=None):
     生成报告 Markdown。
     如果传入 gainers/losers，则从原始数据获取涨跌幅百分比和扩展数据。
     """
-    # 创建 code -> data 映射
+    top_n = max(len(gainers or []), len(losers or []))
+
     change_map = {}
     week_map = {}
     ytd_map = {}
+    news_map = {}
     if gainers:
         for s in gainers:
             change_map[s["code"]] = s["change_pct"]
             week_map[s["code"]] = s.get("week_change")
             ytd_map[s["code"]] = s.get("ytd_change")
+            news_map[s["code"]] = s.get("news", [])
     if losers:
         for s in losers:
             change_map[s["code"]] = s["change_pct"]
             week_map[s["code"]] = s.get("week_change")
             ytd_map[s["code"]] = s.get("ytd_change")
+            news_map[s["code"]] = s.get("news", [])
+
+    def fmt_pct(value):
+        return f"{value:+.2f}%" if value is not None else "（暂无）"
+
+    def analysis_by_code(section):
+        return {
+            item.get("code", ""): item
+            for item in result.get(section, {}).get("stocks", [])
+        }
+
+    def append_stock_details(lines, stocks, section):
+        ai_items = analysis_by_code(section)
+        for stock in stocks or []:
+            code = stock.get("code", "")
+            name = stock.get("name", "")
+            item = ai_items.get(code, {})
+            evidence = item.get("evidence") or []
+            if not evidence:
+                evidence = [
+                    {"title": news.get("title"), "url": news.get("link"), "pub_date": news.get("pub_date")}
+                    for news in news_map.get(code, [])[:2]
+                ]
+
+            lines += [
+                "",
+                f"### {name}（{code}）",
+                "",
+                f"**原因：** {item.get('reason') or '暂无明确新闻归因，需人工复核'}",
+            ]
+            if evidence:
+                lines += ["", "**证据：**"]
+                for ev in evidence[:2]:
+                    title = ev.get("title", "链接")
+                    url = ev.get("url") or ev.get("link") or "#"
+                    pub_date = ev.get("pub_date", "")
+                    if pub_date:
+                        lines.append(f"- [{title}]({url}) （{pub_date}）")
+                    else:
+                        lines.append(f"- [{title}]({url})")
 
     lines = [
         f"# 沪深300涨跌分析 — {target_date}",
         f"",
         f"**生成时间：** {datetime.now().strftime('%Y-%m-%d %H:%M')}  ",
-        f"**分析基于：** 沪深300指数成分股涨跌幅 top20",
+        f"**分析基于：** 沪深300指数成分股涨跌幅 top{top_n}",
         f"",
         f"---",
         f"",
         f"## 一、指数概况",
         f"",
-        f"（由AI自动生成的市场概况）",
+        result.get("market_summary", ""),
         f"",
         f"---",
         f"",
-        f"## 二、涨幅分析（Top 20）",
+        f"## 二、涨幅分析（Top {len(gainers or [])}）",
         f"",
         f"**板块共性：** {result.get('gainers_analysis', {}).get('summary', '')}",
         f"",
@@ -557,24 +676,21 @@ def format_report(result, target_date, gainers=None, losers=None):
         f"|------|----------|----------|--------|----------|--------------|",
     ]
 
-    for i, st in enumerate(result.get("gainers_analysis", {}).get("stocks", []), 1):
+    for i, st in enumerate(gainers or [], 1):
         code = st.get("code", "")
         name = st.get("name", "")
-        change_pct = change_map.get(code, None)
-        week_pct   = week_map.get(code, None)
-        ytd_pct    = ytd_map.get(code, None)
+        lines.append(
+            f"| {i} | {code} | {name} | {fmt_pct(change_map.get(code))} | "
+            f"{fmt_pct(week_map.get(code))} | {fmt_pct(ytd_map.get(code))} |"
+        )
 
-        chg_str  = f"{change_pct:+.2f}%" if change_pct is not None else "（暂无）"
-        week_str = f"{week_pct:+.2f}%" if week_pct is not None else "（暂无）"
-        ytd_str  = f"{ytd_pct:+.2f}%" if ytd_pct is not None else "（暂无）"
-
-        lines.append(f"| {i} | {code} | {name} | {chg_str} | {week_str} | {ytd_str} |")
+    append_stock_details(lines, gainers, "gainers_analysis")
 
     lines += [
         f"",
         f"---",
         f"",
-        f"## 三、跌幅分析（Top 20）",
+        f"## 三、跌幅分析（Top {len(losers or [])}）",
         f"",
         f"**板块共性：** {result.get('losers_analysis', {}).get('summary', '')}",
         f"",
@@ -582,58 +698,17 @@ def format_report(result, target_date, gainers=None, losers=None):
         f"|------|----------|----------|--------|----------|--------------|",
     ]
 
-    for i, st in enumerate(result.get("losers_analysis", {}).get("stocks", []), 1):
+    for i, st in enumerate(losers or [], 1):
         code = st.get("code", "")
         name = st.get("name", "")
-        change_pct = change_map.get(code, None)
-        week_pct   = week_map.get(code, None)
-        ytd_pct    = ytd_map.get(code, None)
+        lines.append(
+            f"| {i} | {code} | {name} | {fmt_pct(change_map.get(code))} | "
+            f"{fmt_pct(week_map.get(code))} | {fmt_pct(ytd_map.get(code))} |"
+        )
 
-        chg_str  = f"{change_pct:+.2f}%" if change_pct is not None else "（暂无）"
-        week_str = f"{week_pct:+.2f}%" if week_pct is not None else "（暂无）"
-        ytd_str  = f"{ytd_pct:+.2f}%" if ytd_pct is not None else "（暂无）"
+    append_stock_details(lines, losers, "losers_analysis")
 
-        lines.append(f"| {i} | {code} | {name} | {chg_str} | {week_str} | {ytd_str} |")
-
-    lines += [
-        f"",
-        f"---",
-        f"",
-        f"## 四、当日市场主线",
-        f"",
-        result.get("market_summary", ""),
-        f"",
-        f"---",
-        f"",
-        f"## 五、证据来源",
-        f"",
-    ]
-
-    # 证据列表（涨幅板）
-    for st in result.get("gainers_analysis", {}).get("stocks", []):
-        lines.append(f"**{st.get('name')}（{st.get('code')}）**")
-        for ev in st.get("evidence", []):
-            title = ev.get("title", "链接")
-            url = ev.get("url", "#")
-            pub_date = ev.get("pub_date", "")
-            if pub_date:
-                lines.append(f"- [{title}]({url}) （{pub_date}）")
-            else:
-                lines.append(f"- [{title}]({url})")
-        lines.append("")
-
-    # 证据列表（跌幅板）
-    for st in result.get("losers_analysis", {}).get("stocks", []):
-        lines.append(f"**{st.get('name')}（{st.get('code')}）**")
-        for ev in st.get("evidence", []):
-            title = ev.get("title", "链接")
-            url = ev.get("url", "#")
-            pub_date = ev.get("pub_date", "")
-            if pub_date:
-                lines.append(f"- [{title}]({url}) （{pub_date}）")
-            else:
-                lines.append(f"- [{title}]({url})")
-        lines.append("")
+    lines += ["", "---", "", "*报告由 AI 生成，仅供参考。*"]
 
     return "\n".join(lines)
 
@@ -642,17 +717,20 @@ def format_report(result, target_date, gainers=None, losers=None):
 
 def main():
     parser = argparse.ArgumentParser(description="沪深300涨跌分析")
-    parser.add_argument("--date", default=None, help="分析日期 (YYYY-MM-DD)，默认前一天")
-    parser.add_argument("--top", type=int, default=10, help="涨跌榜选取数量 (default: 10)")
+    parser.add_argument("output_dir", nargs="?", default=None, help="报告输出目录（兼容旧 run 脚本）")
+    parser.add_argument("--date", default=None, help="分析日期 (YYYY-MM-DD)，默认最近交易日")
+    parser.add_argument("--top", type=int, default=20, help="涨跌榜选取数量 (default: 20)")
+    parser.add_argument("--output-dir", dest="output_dir_opt", default=None, help="报告输出目录")
     parser.add_argument("--skip-extended", action="store_true", help="跳过扩展数据获取（本周、YTD）")
     parser.add_argument("--skip-ai", action="store_true", help="跳过 AI 分析（快速生成基础报告）")
+    parser.add_argument("--no-news", action="store_true", help="跳过新闻候选获取")
     parser.add_argument("--input-json", default=None, help="从JSON文件读取预计算数据（跳过API调用）")
     args = parser.parse_args()
 
     if args.date:
         target_date = args.date
     else:
-        target_date = get_trading_dates(1)[0]
+        target_date = get_trading_dates(1, include_today=True)[0]
 
     print(f"[INFO] 开始分析 {target_date} ...", file=sys.stderr)
 
@@ -682,6 +760,14 @@ def main():
             losers  = enrich_with_extended_changes(losers, target_date)
         else:
             print("[INFO] 跳过扩展数据获取", file=sys.stderr)
+
+    if not args.no_news:
+        print("[INFO] 开始获取新闻候选...", file=sys.stderr)
+        gainers = attach_news_candidates(gainers)
+        losers  = attach_news_candidates(losers)
+        print("[INFO] 新闻候选获取完成", file=sys.stderr)
+    else:
+        print("[INFO] 跳过新闻候选获取", file=sys.stderr)
 
     # 3. 构建 prompt 并调用 AI（或跳过）
     if args.skip_ai:
@@ -714,7 +800,16 @@ def main():
 
     # 5. 生成报告
     report = format_report(result, target_date, gainers=gainers, losers=losers)
-    print(report)
+    output_dir = args.output_dir_opt or args.output_dir
+    if output_dir:
+        out_dir = Path(output_dir)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        report_path = out_dir / f"{target_date}.md"
+        report_path.write_text(report + "\n", encoding="utf-8")
+        (out_dir / "latest.md").write_text(report + "\n", encoding="utf-8")
+        print(f"[INFO] 已写入报告: {report_path}", file=sys.stderr)
+    else:
+        print(report)
 
 
 if __name__ == "__main__":
