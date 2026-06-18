@@ -17,7 +17,8 @@ mkdir -p "$PROJECT_DIR/var/log"
 echo "=== 开始生成沪深300涨跌分析 ==="
 echo "时间: $(date)"
 
-python3 "$SCRIPT" --output-dir "$REPORTS_DIR" --top "${CSI300_TOP:-20}"
+CSI300_AI_MODEL="${CSI300_AI_MODEL:-codebuddy}" \
+  python3 "$SCRIPT" --output-dir "$REPORTS_DIR" --top "${CSI300_TOP:-20}"
 
 echo "=== 分析完成 ==="
 echo "报告保存在: $REPORTS_DIR"

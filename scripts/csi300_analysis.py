@@ -15,6 +15,7 @@ import re
 import random
 import argparse
 import tempfile
+import shutil
 import urllib.request
 import urllib.parse
 from pathlib import Path
@@ -23,7 +24,7 @@ from email.utils import parsedate_to_datetime
 
 # ── 配置 ────────────────────────────────────────────────────────────────────────
 
-AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codex")   # "codex" or "codebuddy"
+AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codebuddy")   # "codex" or "codebuddy"
 EASTMONEY_PUSH2 = "https://push2.eastmoney.com/api/qt/clist/get"
 EASTMONEY_PUSH2_FALLBACK = "https://push2delay.eastmoney.com/api/qt/clist/get"
 EASTMONEY_KLINE = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
@@ -176,25 +177,32 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
                 except OSError:
                     pass
     else:
-        # 尝试多个可能的 codebuddy 路径
+        codebuddy_executable = shutil.which("codebuddy")
+        if codebuddy_executable:
+            cmd = [codebuddy_executable, "-p", "--output-format", "json", prompt]
+        else:
+            cmd = None
+
+        # 尝试多个可能的 codebuddy JS 路径
         codebuddy_paths = [
-            "codebuddy",  # 默认 PATH
             "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/lib/node_modules/@tencent-ai/codebuddy-code/bin/codebuddy",
             "/usr/local/bin/codebuddy",
             "/home/ME/.local/bin/codebuddy",
         ]
-        cmd = None
-        for cb_path in codebuddy_paths:
-            try:
-                # 测试路径是否存在（使用 node 的完整路径）
-                node_path = "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/bin/node"
-                test_cmd = [node_path, cb_path, "--version"]
-                subprocess.run(test_cmd, capture_output=True, timeout=5)
-                # 如果成功，使用 node 直接运行 codebuddy
-                cmd = [node_path, cb_path, "-p", "--output-format", "json", prompt]
-                break
-            except Exception:
-                continue
+        if cmd is None:
+            for cb_path in codebuddy_paths:
+                try:
+                    # 测试路径是否存在（使用 node 的完整路径）
+                    node_path = "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/bin/node"
+                    test_cmd = [node_path, cb_path, "--version"]
+                    test_result = subprocess.run(test_cmd, capture_output=True, timeout=5)
+                    if test_result.returncode != 0:
+                        continue
+                    # 如果成功，使用 node 直接运行 codebuddy
+                    cmd = [node_path, cb_path, "-p", "--output-format", "json", prompt]
+                    break
+                except Exception:
+                    continue
         
         if cmd is None:
             # 如果都找不到，使用默认命令（会失败并抛出错误）
@@ -220,7 +228,7 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
                             if isinstance(content, list):
                                 # content 是数组，提取 text
                                 for item in content:
-                                    if isinstance(item, dict) and item.get("type") == "text":
+                                    if isinstance(item, dict) and item.get("type") in ("text", "output_text"):
                                         text = item.get("text", "")
                                         break
                             elif isinstance(content, str):
