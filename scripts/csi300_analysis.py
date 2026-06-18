@@ -208,7 +208,7 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
             # 如果都找不到，使用默认命令（会失败并抛出错误）
             cmd = ["codebuddy", "-p", "--output-format", "json", prompt]
         
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         if result.returncode != 0:
             raise RuntimeError((result.stderr or result.stdout).strip())
         text = result.stdout.strip()
