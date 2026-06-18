@@ -4,10 +4,11 @@ import json
 import os
 import re
 import subprocess
+import sys
 import tempfile
 from datetime import date
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from .models import Article
 from .ranking import (
@@ -21,6 +22,211 @@ from .ranking import (
 
 
 CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
+
+
+def is_codebuddy_bin(codex_bin: str) -> bool:
+    name = Path(codex_bin).name.lower()
+    return name in {"codebuddy", "cbc"} or "codebuddy" in name
+
+
+def extract_text_from_content(content: Any) -> str:
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: list[str] = []
+        for item in content:
+            if isinstance(item, str):
+                parts.append(item)
+            elif isinstance(item, dict) and item.get("type") in {
+                "text",
+                "output_text",
+            }:
+                text = item.get("text")
+                if isinstance(text, str):
+                    parts.append(text)
+        return "\n".join(part for part in parts if part)
+    if isinstance(content, dict):
+        for key in ("text", "content", "result", "message"):
+            text = extract_text_from_content(content.get(key))
+            if text:
+                return text
+    return ""
+
+
+def extract_codebuddy_text(output: str) -> str:
+    text = output.strip()
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError:
+        return text
+    if isinstance(payload, list):
+        for message in reversed(payload):
+            if isinstance(message, dict) and message.get("role") == "assistant":
+                content = extract_text_from_content(message.get("content"))
+                if content:
+                    return content.strip()
+        for message in reversed(payload):
+            content = extract_text_from_content(message)
+            if content:
+                return content.strip()
+    if isinstance(payload, dict):
+        for key in ("result", "response", "text", "content", "message"):
+            content = extract_text_from_content(payload.get(key))
+            if content:
+                return content.strip()
+        messages = payload.get("messages")
+        if isinstance(messages, list):
+            return extract_codebuddy_text(json.dumps(messages, ensure_ascii=False))
+    return text
+
+
+def extract_codex_exec_text(output: str) -> str:
+    report_text = ""
+    for line in (output or "").strip().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            obj = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if (
+            obj.get("type") == "item.completed"
+            and obj.get("item", {}).get("type") == "agent_message"
+        ):
+            report_text = obj["item"].get("text", "")
+    return report_text.strip()
+
+
+def run_agent_text(
+    project_root: Path,
+    prompt: str,
+    codex_bin: str,
+    timeout: int,
+) -> str:
+    if is_codebuddy_bin(codex_bin):
+        completed = subprocess.run(
+            [
+                codex_bin,
+                "-p",
+                "--output-format",
+                "json",
+                "--tools",
+                "",
+                prompt,
+            ],
+            cwd=project_root,
+            env=os.environ.copy(),
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=timeout,
+            check=False,
+        )
+        if completed.returncode != 0:
+            raise RuntimeError(
+                f"{codex_bin} exited {completed.returncode}: {completed.stderr[-2000:]}"
+            )
+        text = extract_codebuddy_text(completed.stdout)
+        if not text:
+            raise RuntimeError(f"{codex_bin} returned empty text")
+        return text
+
+    output_path = None
+    try:
+        with tempfile.NamedTemporaryFile("w", delete=False) as output_file:
+            output_path = output_file.name
+        completed = subprocess.run(
+            [
+                codex_bin,
+                "exec",
+                "--skip-git-repo-check",
+                "--output-last-message",
+                output_path,
+                prompt,
+            ],
+            cwd=project_root,
+            env=os.environ.copy(),
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=timeout,
+            check=False,
+        )
+        if completed.returncode != 0:
+            raise RuntimeError(
+                f"{codex_bin} exited {completed.returncode}: {completed.stderr[-2000:]}"
+            )
+        text = Path(output_path).read_text(encoding="utf-8").strip()
+        if not text:
+            text = extract_codex_exec_text(completed.stdout)
+        if not text:
+            raise RuntimeError(f"{codex_bin} returned empty text")
+        return text
+    finally:
+        if output_path:
+            try:
+                os.unlink(output_path)
+            except OSError:
+                pass
+
+
+def protocol_field(value: Any, limit: int = 700) -> str:
+    text = str(value or "")
+    text = re.sub(r"[\t\r\n]+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) > limit:
+        return text[: limit - 1].rstrip() + "…"
+    return text
+
+
+def protocol_lines(raw: str) -> list[str]:
+    text = raw.strip()
+    match = re.search(r"```(?:text|tsv)?\s*([\s\S]*?)\s*```", text, re.IGNORECASE)
+    if match:
+        text = match.group(1)
+    lines: list[str] = []
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if line.startswith("- "):
+            line = line[2:].strip()
+        if not line or line.startswith("```"):
+            continue
+        lines.append(line)
+    return lines
+
+
+def run_protocol_with_retry(
+    project_root: Path,
+    prompt: str,
+    codex_bin: str,
+    timeout: int,
+    parser: Callable[[str], dict[str, Any]],
+    label: str,
+    max_attempts: int = 2,
+) -> dict[str, Any]:
+    last_error: Exception | None = None
+    current_prompt = prompt
+    for attempt in range(max_attempts):
+        raw = run_agent_text(project_root, current_prompt, codex_bin, timeout)
+        try:
+            return parser(raw)
+        except Exception as exc:
+            last_error = exc
+            print(
+                f"[WARN] {label} protocol parse failed on attempt {attempt + 1}: {exc}",
+                file=sys.stderr,
+            )
+            if attempt + 1 < max_attempts:
+                current_prompt = (
+                    prompt
+                    + "\n\n## Retry output requirements\n"
+                    + "The previous output could not be parsed. Output the complete report again as pure TAB-separated text records only. "
+                    + "Do not output JSON, Markdown, code fences, explanations, or blank lines. "
+                    + "Use only candidate IDs from the candidate lines."
+                )
+    assert last_error is not None
+    raise last_error
 
 
 def validate_text_length(
@@ -85,6 +291,172 @@ def validate_items(
         )
         items.append(item)
     return items
+
+
+def build_daily_protocol_prompt(
+    project_root: Path,
+    target_date: date,
+    articles: list[Article],
+) -> tuple[str, dict[str, tuple[str, str, Article]]]:
+    prompt = (project_root / "prompts/select_topics.md").read_text(encoding="utf-8")
+    topic_candidates = topic_top_articles(articles, limit=12)
+    country_candidates = country_top_articles(articles, limit=12)
+    catalog: dict[str, tuple[str, str, Article]] = {}
+    lines = [
+        prompt.strip(),
+        "",
+        f"REPORT_DATE\t{target_date.isoformat()}",
+        "",
+        "Candidate lines follow. They are inputs, not output records.",
+    ]
+    for key in TOPICS:
+        for index, article in enumerate(topic_candidates.get(key, []), start=1):
+            candidate_id = f"T-{key}-{index}"
+            catalog[candidate_id] = ("topic", key, article)
+            lines.append(
+                "\t".join(
+                    [
+                        "TOPIC_CANDIDATE",
+                        candidate_id,
+                        key,
+                        article.published_at.isoformat(),
+                        protocol_field(article.source, 120),
+                        protocol_field(article.title, 220),
+                        protocol_field(article.description, 800),
+                    ]
+                )
+            )
+    for key in COUNTRIES:
+        for index, article in enumerate(country_candidates.get(key, []), start=1):
+            candidate_id = f"C-{key}-{index}"
+            catalog[candidate_id] = ("country", key, article)
+            lines.append(
+                "\t".join(
+                    [
+                        "COUNTRY_CANDIDATE",
+                        candidate_id,
+                        key,
+                        article.published_at.isoformat(),
+                        protocol_field(article.source, 120),
+                        protocol_field(article.title, 220),
+                        protocol_field(article.description, 800),
+                    ]
+                )
+            )
+    return "\n".join(lines) + "\n", catalog
+
+
+def append_daily_protocol_item(
+    items: list[dict[str, Any]],
+    seen_ids: set[str],
+    section_type: str,
+    section_key: str,
+    candidate_id: str,
+    title_zh: str,
+    summary_zh: str,
+    catalog: dict[str, tuple[str, str, Article]],
+    maximum: int,
+) -> bool:
+    if len(items) >= maximum:
+        return False
+    entry = catalog.get(candidate_id)
+    if entry is None:
+        raise ValueError(f"model returned unknown candidate ID: {candidate_id}")
+    candidate_type, candidate_key, article = entry
+    if candidate_type != section_type or candidate_key != section_key:
+        raise ValueError(
+            f"model returned candidate {candidate_id} outside {section_type} {section_key}"
+        )
+    if candidate_id in seen_ids:
+        raise ValueError(f"model returned duplicate candidate ID: {candidate_id}")
+    raw_item = {"title_zh": title_zh, "summary_zh": summary_zh}
+    validate_text_length(raw_item, "title_zh", 4, 60)
+    validate_text_length(raw_item, "summary_zh", 60, 200)
+    if not CJK_RE.search(title_zh):
+        raise ValueError("model returned a non-Chinese title_zh")
+    if not CJK_RE.search(summary_zh):
+        raise ValueError("model returned a non-Chinese summary_zh")
+    seen_ids.add(candidate_id)
+    items.append(
+        {
+            "rank": len(items) + 1,
+            "title_zh": title_zh,
+            "summary_zh": summary_zh,
+            "title_original": article.title,
+            "category": article.category,
+            "source": article.source,
+            "published_at": article.published_at.isoformat(),
+            "url": article.url,
+        }
+    )
+    return True
+
+
+def parse_daily_protocol(
+    raw: str,
+    target_date: date,
+    catalog: dict[str, tuple[str, str, Article]],
+) -> dict[str, Any]:
+    topic_items: dict[str, list[dict[str, Any]]] = {key: [] for key in TOPICS}
+    country_items: dict[str, list[dict[str, Any]]] = {key: [] for key in COUNTRIES}
+    seen_by_section: dict[tuple[str, str], set[str]] = {}
+    parsed_count = 0
+    for line in protocol_lines(raw):
+        if line.startswith("TOPIC\t"):
+            parts = line.split("\t", 4)
+            if len(parts) != 5:
+                raise ValueError(f"invalid TOPIC protocol line: {line}")
+            _, key, candidate_id, title_zh, summary_zh = parts
+            if key not in TOPICS:
+                raise ValueError(f"invalid topic key: {key}")
+            if append_daily_protocol_item(
+                topic_items[key],
+                seen_by_section.setdefault(("topic", key), set()),
+                "topic",
+                key,
+                candidate_id,
+                title_zh,
+                summary_zh,
+                catalog,
+                3,
+            ):
+                parsed_count += 1
+        elif line.startswith("COUNTRY\t"):
+            parts = line.split("\t", 4)
+            if len(parts) != 5:
+                raise ValueError(f"invalid COUNTRY protocol line: {line}")
+            _, key, candidate_id, title_zh, summary_zh = parts
+            if key not in COUNTRIES:
+                raise ValueError(f"invalid country key: {key}")
+            if append_daily_protocol_item(
+                country_items[key],
+                seen_by_section.setdefault(("country", key), set()),
+                "country",
+                key,
+                candidate_id,
+                title_zh,
+                summary_zh,
+                catalog,
+                3,
+            ):
+                parsed_count += 1
+    if parsed_count == 0:
+        raise ValueError("model returned no parseable daily protocol records")
+    return {
+        "date": target_date.isoformat(),
+        "topics": [
+            {"key": key, "name_zh": TOPICS[key]["name_zh"], "items": topic_items[key]}
+            for key in TOPICS
+        ],
+        "countries": [
+            {
+                "key": key,
+                "name_zh": COUNTRIES[key]["name_zh"],
+                "items": country_items[key],
+            }
+            for key in COUNTRIES
+        ],
+    }
 
 
 def validate_digest(
@@ -158,123 +530,12 @@ def run_codex(
     articles: list[Article],
     codex_bin: str = "codex",
 ) -> dict[str, Any]:
-    prompt = (project_root / "prompts/select_topics.md").read_text(encoding="utf-8")
-    selected_articles: list[Article] = []
-    selected_urls = {article.url for article in selected_articles}
-    for topic_articles in topic_top_articles(articles, limit=12).values():
-        for article in topic_articles:
-            if article.url not in selected_urls:
-                selected_articles.append(article)
-                selected_urls.add(article.url)
-    for country_articles in country_top_articles(articles, limit=12).values():
-        for article in country_articles:
-            if article.url not in selected_urls:
-                selected_articles.append(article)
-                selected_urls.add(article.url)
-    candidates = {
-        "date": target_date.isoformat(),
-        "candidates": [
-            {
-                **article.to_dict(),
-                "matched_topics": [
-                    topic
-                    for topic in TOPICS
-                    if is_article_eligible_for_topic(article, topic)
-                ],
-                "matched_countries": [
-                    country
-                    for country in COUNTRIES
-                    if is_article_eligible_for_country(article, country)
-                ],
-            }
-            for article in selected_articles
-        ],
-    }
-    full_prompt = f"{prompt}\n{json.dumps(candidates, ensure_ascii=False, indent=2)}\n"
-    # Determine if using codebuddy or codex
-    is_codebuddy = "codebuddy" in codex_bin or codex_bin == "cbc"
-    
-    if is_codebuddy:
-        # codebuddy uses --print, reads prompt from stdin with "-" argument
-        completed = subprocess.run(
-            [
-                codex_bin,
-                "--print",
-                "--sandbox=container",
-                "--dangerously-skip-permissions",
-                "-",  # Read from stdin
-            ],
-            cwd=project_root,
-            env=os.environ.copy(),
-            input=full_prompt,
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=900,
-            check=False,
-        )
-    else:
-        # codex uses exec --experimental-json
-        completed = subprocess.run(
-            [
-                codex_bin,
-                "exec",
-                "--experimental-json",
-                "--sandbox=read-only",
-                "--skip-git-repo-check",
-                "-",
-            ],
-            cwd=project_root,
-            env=os.environ.copy(),
-            input=full_prompt,
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=900,
-            check=False,
-        )
-    
-    if completed.returncode != 0:
-        raise RuntimeError(
-            f"{codex_bin} exited {completed.returncode}: {completed.stderr[-2000:]}"
-        )
-    
-    # Parse output based on which binary was used
-    report_json_str = ""
-    if is_codebuddy:
-        # Parse --print output: just the assistant response text (may be wrapped in code block)
-        report_json_str = completed.stdout
-        
-        # Extract JSON from code block (codebuddy wraps JSON in ```json ... ```)
-        code_block_match = re.search(r'```json\s*(.*?)\s*```', report_json_str, re.DOTALL)
-        if code_block_match:
-            report_json_str = code_block_match.group(1).strip()
-        else:
-            # Try to find JSON object boundaries
-            start_idx = report_json_str.find('{')
-            end_idx = report_json_str.rfind('}')
-            if start_idx != -1 and end_idx != -1:
-                report_json_str = report_json_str[start_idx:end_idx+1]
-    else:
-        # Parse --experimental-json output: one JSON object per line
-        for line in (completed.stdout or "").strip().splitlines():
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                obj = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if obj.get("type") == "item.completed" and obj.get("item", {}).get("type") == "agent_message":
-                text = obj["item"].get("text", "")
-                report_json_str = text
-    if not report_json_str:
-        raise RuntimeError(f"codex returned no agent_message: {completed.stdout[-1000:]}")
-    else:
-        # Try to find JSON object boundaries
-        start_idx = report_json_str.find("{")
-        end_idx = report_json_str.rfind("}")
-        if start_idx != -1 and end_idx != -1:
-            report_json_str = report_json_str[start_idx:end_idx+1]
-    report = json.loads(report_json_str)
-    return validate_digest(report, target_date, selected_articles)
+    prompt, catalog = build_daily_protocol_prompt(project_root, target_date, articles)
+    return run_protocol_with_retry(
+        project_root,
+        prompt,
+        codex_bin,
+        900,
+        lambda raw: parse_daily_protocol(raw, target_date, catalog),
+        "daily digest",
+    )

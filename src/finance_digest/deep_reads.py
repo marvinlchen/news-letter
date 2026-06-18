@@ -15,7 +15,13 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from .codex import CJK_RE, validate_text_length
+from .codex import (
+    CJK_RE,
+    protocol_field,
+    protocol_lines,
+    run_protocol_with_retry,
+    validate_text_length,
+)
 from .collect import load_sources
 from .feeds import fetch_feed
 from .models import Article
@@ -348,90 +354,166 @@ def validate_deep_report(
     return {"date": target_date.isoformat(), "topics": topics}
 
 
+def build_deep_protocol_prompt(
+    project_root: Path,
+    target_date: date,
+    articles: list[Article],
+) -> tuple[str, dict[str, tuple[str, Article]]]:
+    prompt = (project_root / "prompts/select_deep_reads.md").read_text(encoding="utf-8")
+    topic_candidates = top_deep_articles(articles)
+    catalog: dict[str, tuple[str, Article]] = {}
+    lines = [
+        prompt.strip(),
+        "",
+        f"REPORT_DATE\t{target_date.isoformat()}",
+        "",
+        "Candidate lines follow. They are inputs, not output records.",
+    ]
+    for key in DEEP_TOPICS:
+        for index, article in enumerate(topic_candidates.get(key, []), start=1):
+            candidate_id = f"D-{key}-{index}"
+            catalog[candidate_id] = (key, article)
+            lines.append(
+                "\t".join(
+                    [
+                        "DEEP_CANDIDATE",
+                        candidate_id,
+                        key,
+                        article.published_at.isoformat(),
+                        protocol_field(article.source, 120),
+                        str(round(depth_score(article, key), 2)),
+                        protocol_field(article.title, 240),
+                        protocol_field(article.description, 900),
+                    ]
+                )
+            )
+    return "\n".join(lines) + "\n", catalog
+
+
+def append_deep_protocol_item(
+    items: list[dict[str, Any]],
+    seen_ids: set[str],
+    source_counts: dict[str, int],
+    topic: str,
+    candidate_id: str,
+    raw_item: dict[str, str],
+    catalog: dict[str, tuple[str, Article]],
+) -> bool:
+    if len(items) >= 5:
+        return False
+    entry = catalog.get(candidate_id)
+    if entry is None:
+        raise ValueError(f"model returned unknown deep-read candidate ID: {candidate_id}")
+    candidate_topic, article = entry
+    if candidate_topic != topic or not is_deep_eligible(article, topic):
+        raise ValueError(
+            f"model returned candidate {candidate_id} outside deep-read topic {topic}"
+        )
+    if candidate_id in seen_ids:
+        raise ValueError(f"model returned duplicate deep-read candidate ID: {candidate_id}")
+    if source_counts[article.source] >= 2:
+        return False
+    text_fields = {
+        "title_zh": (4, 80),
+        "why_read_zh": (30, 220),
+        "core_problem_zh": (20, 220),
+        "key_ideas_zh": (30, 320),
+        "engineering_takeaway_zh": (20, 240),
+        "limitations_zh": (20, 220),
+    }
+    for field, (minimum, maximum) in text_fields.items():
+        validate_text_length(raw_item, field, minimum, maximum)
+        if not CJK_RE.search(raw_item[field]):
+            raise ValueError(f"model returned non-Chinese {field}")
+    seen_ids.add(candidate_id)
+    items.append(
+        {
+            "rank": len(items) + 1,
+            **raw_item,
+            "title_original": article.title,
+            "source": article.source,
+            "published_at": article.published_at.isoformat(),
+            "url": article.url,
+        }
+    )
+    source_counts[article.source] += 1
+    return True
+
+
+def parse_deep_protocol(
+    raw: str,
+    target_date: date,
+    catalog: dict[str, tuple[str, Article]],
+) -> dict[str, Any]:
+    topic_items: dict[str, list[dict[str, Any]]] = {key: [] for key in DEEP_TOPICS}
+    seen_by_topic: dict[str, set[str]] = {key: set() for key in DEEP_TOPICS}
+    source_counts_by_topic: dict[str, dict[str, int]] = {
+        key: defaultdict(int) for key in DEEP_TOPICS
+    }
+    parsed_count = 0
+    for line in protocol_lines(raw):
+        if not line.startswith("DEEP\t"):
+            continue
+        parts = line.split("\t", 8)
+        if len(parts) != 9:
+            raise ValueError(f"invalid DEEP protocol line: {line}")
+        (
+            _record_type,
+            key,
+            candidate_id,
+            title_zh,
+            why_read_zh,
+            core_problem_zh,
+            key_ideas_zh,
+            engineering_takeaway_zh,
+            limitations_zh,
+        ) = parts
+        if key not in DEEP_TOPICS:
+            raise ValueError(f"invalid deep-read topic key: {key}")
+        raw_item = {
+            "title_zh": title_zh,
+            "why_read_zh": why_read_zh,
+            "core_problem_zh": core_problem_zh,
+            "key_ideas_zh": key_ideas_zh,
+            "engineering_takeaway_zh": engineering_takeaway_zh,
+            "limitations_zh": limitations_zh,
+        }
+        if append_deep_protocol_item(
+            topic_items[key],
+            seen_by_topic[key],
+            source_counts_by_topic[key],
+            key,
+            candidate_id,
+            raw_item,
+            catalog,
+        ):
+            parsed_count += 1
+    if parsed_count == 0:
+        raise ValueError("model returned no parseable deep-read protocol records")
+    return {
+        "date": target_date.isoformat(),
+        "topics": [
+            {"key": key, "name_zh": DEEP_TOPICS[key]["name_zh"], "items": topic_items[key]}
+            for key in DEEP_TOPICS
+        ],
+    }
+
+
 def run_codex_deep_reads(
     project_root: Path,
     target_date: date,
     articles: list[Article],
     codex_bin: str,
 ) -> dict[str, Any]:
-    candidates: list[Article] = []
-    seen_urls: set[str] = set()
-    for topic_articles in top_deep_articles(articles).values():
-        for article in topic_articles:
-            if article.url not in seen_urls:
-                candidates.append(article)
-                seen_urls.add(article.url)
-    payload = {
-        "date": target_date.isoformat(),
-        "candidates": [
-            {
-                **article.to_dict(),
-                "matched_topics": [
-                    topic
-                    for topic in DEEP_TOPICS
-                    if is_deep_eligible(article, topic)
-                ],
-                "depth_scores": {
-                    topic: round(depth_score(article, topic), 2)
-                    for topic in DEEP_TOPICS
-                    if is_deep_eligible(article, topic)
-                },
-            }
-            for article in candidates
-        ],
-    }
-    prompt = (project_root / "prompts/select_deep_reads.md").read_text(encoding="utf-8")
-    schema = project_root / "schemas/deep_reads.schema.json"
-    full_prompt = f"{prompt}\n{json.dumps(payload, ensure_ascii=False, indent=2)}\n"
-    completed = subprocess.run(
-        [
-            codex_bin,
-            "exec",
-            "--experimental-json",
-            "--sandbox=read-only",
-            "--skip-git-repo-check",
-            "-",
-        ],
-        cwd=project_root,
-        env=os.environ.copy(),
-        input=full_prompt,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        timeout=1200,
-        check=False,
+    prompt, catalog = build_deep_protocol_prompt(project_root, target_date, articles)
+    return run_protocol_with_retry(
+        project_root,
+        prompt,
+        codex_bin,
+        1200,
+        lambda raw: parse_deep_protocol(raw, target_date, catalog),
+        "deep reads",
     )
-    if completed.returncode != 0:
-        raise RuntimeError(
-            f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
-        )
-    # Parse --experimental-json output: one JSON object per line
-    report_json_str = ""
-    for line in (completed.stdout or "").strip().splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            obj = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        if obj.get("type") == "item.completed" and obj.get("item", {}).get("type") == "agent_message":
-            text = obj["item"].get("text", "")
-            report_json_str = text
-    if not report_json_str:
-        raise RuntimeError(f"codex returned no agent_message: {completed.stdout[-1000:]}")
-    # Extract JSON from the text (may be wrapped in markdown)
-    match = re.search(r"```json\s*([\s\S]*?)\s*```", report_json_str)
-    if match:
-        report_json_str = match.group(1)
-    else:
-        # Try to find JSON object boundaries
-        start_idx = report_json_str.find("{")
-        end_idx = report_json_str.rfind("}")
-        if start_idx != -1 and end_idx != -1:
-            report_json_str = report_json_str[start_idx:end_idx+1]
-    report = json.loads(report_json_str)
-    return validate_deep_report(report, target_date, candidates)
 
 
 def render_deep_markdown(

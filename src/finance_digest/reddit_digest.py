@@ -22,7 +22,13 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from .codex import CJK_RE, validate_text_length
+from .codex import (
+    CJK_RE,
+    protocol_field,
+    protocol_lines,
+    run_protocol_with_retry,
+    validate_text_length,
+)
 from .feeds import clean_text, local_name, parse_date
 from .ranking import contains_keyword
 from .render import pretty_json, truncate
@@ -802,6 +808,156 @@ def validate_reddit_report(
     }
 
 
+def build_reddit_protocol_prompt(
+    project_root: Path,
+    target_date: date,
+    topics: dict[str, dict[str, Any]],
+    candidates: dict[str, list[RedditPost]],
+) -> tuple[str, dict[str, tuple[str, RedditPost]]]:
+    prompt = (project_root / "prompts/select_reddit.md").read_text(encoding="utf-8")
+    catalog: dict[str, tuple[str, RedditPost]] = {}
+    lines = [
+        prompt.strip(),
+        "",
+        f"REPORT_DATE\t{target_date.isoformat()}",
+        f"SELECTION_PROFILE\t{SELECTION_PROFILE}",
+        "",
+        "Candidate lines follow. They are inputs, not output records.",
+    ]
+    for key in topics:
+        for index, post in enumerate(candidates.get(key, []), start=1):
+            candidate_id = f"R-{key}-{index}"
+            catalog[candidate_id] = (key, post)
+            comments = " || ".join(post.sampled_comments[:5])
+            lines.append(
+                "\t".join(
+                    [
+                        "REDDIT_CANDIDATE",
+                        candidate_id,
+                        key,
+                        post.published_at.isoformat(),
+                        f"r/{protocol_field(post.subreddit, 80)}",
+                        str(post.score if post.score is not None else ""),
+                        str(post.num_comments if post.num_comments is not None else ""),
+                        str(post.investment_score),
+                        protocol_field(post.title, 240),
+                        protocol_field(post.body, 900),
+                        protocol_field(comments, 1000),
+                    ]
+                )
+            )
+    return "\n".join(lines) + "\n", catalog
+
+
+def append_reddit_protocol_item(
+    items: list[dict[str, Any]],
+    seen_ids: set[str],
+    topic: str,
+    candidate_id: str,
+    raw_item: dict[str, str],
+    catalog: dict[str, tuple[str, RedditPost]],
+) -> bool:
+    if len(items) >= 3:
+        return False
+    entry = catalog.get(candidate_id)
+    if entry is None:
+        raise ValueError(f"model returned unknown Reddit candidate ID: {candidate_id}")
+    candidate_topic, post = entry
+    if candidate_topic != topic:
+        raise ValueError(
+            f"model returned candidate {candidate_id} outside Reddit topic {topic}"
+        )
+    if candidate_id in seen_ids:
+        raise ValueError(f"model returned duplicate Reddit candidate ID: {candidate_id}")
+    text_fields = {
+        "title_zh": (4, 80),
+        "summary_zh": (40, 260),
+        "community_signal_zh": (25, 240),
+        "fundamental_impact_zh": (30, 260),
+        "value_investor_takeaway_zh": (30, 260),
+        "key_risks_zh": (25, 240),
+        "evidence_to_verify_zh": (25, 240),
+    }
+    for field, limits in text_fields.items():
+        validate_text_length(raw_item, field, *limits)
+        if not CJK_RE.search(raw_item[field]):
+            raise ValueError(f"model returned non-Chinese {field}")
+    seen_ids.add(candidate_id)
+    items.append(
+        {
+            "rank": len(items) + 1,
+            **raw_item,
+            "title_original": post.title,
+            "subreddit": post.subreddit,
+            "published_at": post.published_at.isoformat(),
+            "url": post.url,
+            "score": post.score,
+            "num_comments": post.num_comments,
+            "sampled_comment_count": len(post.sampled_comments),
+            "investment_score": post.investment_score,
+        }
+    )
+    return True
+
+
+def parse_reddit_protocol(
+    raw: str,
+    target_date: date,
+    topics: dict[str, dict[str, Any]],
+    catalog: dict[str, tuple[str, RedditPost]],
+) -> dict[str, Any]:
+    topic_items: dict[str, list[dict[str, Any]]] = {key: [] for key in topics}
+    seen_by_topic: dict[str, set[str]] = {key: set() for key in topics}
+    parsed_count = 0
+    for line in protocol_lines(raw):
+        if not line.startswith("REDDIT\t"):
+            continue
+        parts = line.split("\t", 9)
+        if len(parts) != 10:
+            raise ValueError(f"invalid REDDIT protocol line: {line}")
+        (
+            _record_type,
+            key,
+            candidate_id,
+            title_zh,
+            summary_zh,
+            community_signal_zh,
+            fundamental_impact_zh,
+            value_investor_takeaway_zh,
+            key_risks_zh,
+            evidence_to_verify_zh,
+        ) = parts
+        if key not in topics:
+            raise ValueError(f"invalid Reddit topic key: {key}")
+        raw_item = {
+            "title_zh": title_zh,
+            "summary_zh": summary_zh,
+            "community_signal_zh": community_signal_zh,
+            "fundamental_impact_zh": fundamental_impact_zh,
+            "value_investor_takeaway_zh": value_investor_takeaway_zh,
+            "key_risks_zh": key_risks_zh,
+            "evidence_to_verify_zh": evidence_to_verify_zh,
+        }
+        if append_reddit_protocol_item(
+            topic_items[key],
+            seen_by_topic[key],
+            key,
+            candidate_id,
+            raw_item,
+            catalog,
+        ):
+            parsed_count += 1
+    if parsed_count == 0:
+        raise ValueError("model returned no parseable Reddit protocol records")
+    return {
+        "date": target_date.isoformat(),
+        "topics": [
+            {"key": key, "name_zh": config["name_zh"], "items": topic_items[key]}
+            for key, config in topics.items()
+        ],
+    }
+
+
 def run_codex_reddit(
     project_root: Path,
     target_date: date,
@@ -809,70 +965,17 @@ def run_codex_reddit(
     candidates: dict[str, list[RedditPost]],
     codex_bin: str,
 ) -> dict[str, Any]:
-    payload = {
-        "date": target_date.isoformat(),
-        "topics": [
-            {
-                "key": key,
-                "name_zh": config["name_zh"],
-                "candidates": [post.codex_dict() for post in candidates.get(key, [])],
-            }
-            for key, config in topics.items()
-        ],
-    }
-    prompt = (project_root / "prompts/select_reddit.md").read_text(encoding="utf-8")
-    schema = project_root / "schemas/reddit_digest.schema.json"
-    full_prompt = f"{prompt}\n{json.dumps(payload, ensure_ascii=False, indent=2)}\n"
-    completed = subprocess.run(
-        [
-            codex_bin,
-            "exec",
-            "--experimental-json",
-            "--sandbox=read-only",
-            "--skip-git-repo-check",
-            "-",
-        ],
-        cwd=project_root,
-        env=os.environ.copy(),
-        input=full_prompt,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        timeout=1800,
-        check=False,
+    prompt, catalog = build_reddit_protocol_prompt(
+        project_root, target_date, topics, candidates
     )
-    if completed.returncode != 0:
-        raise RuntimeError(
-            f"codex exited {completed.returncode}: {completed.stderr[-2000:]}"
-        )
-    # Parse --experimental-json output: one JSON object per line
-    report_json_str = ""
-    for line in (completed.stdout or "").strip().splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            obj = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        if obj.get("type") == "item.completed" and obj.get("item", {}).get("type") == "agent_message":
-            text = obj["item"].get("text", "")
-            # The agent output may contain the JSON report
-            report_json_str = text
-    if not report_json_str:
-        raise RuntimeError(f"codex returned no agent_message: {completed.stdout[-1000:]}")
-    # Extract JSON from the text (may be wrapped in markdown)
-    match = re.search(r"", report_json_str)
-    if match:
-        report_json_str = match.group(1)
-    else:
-        # Try to find JSON object boundaries
-        start = report_json_str.find("{")
-        end = report_json_str.rfind("}")
-        if start != -1 and end != -1:
-            report_json_str = report_json_str[start:end+1]
-    report = json.loads(report_json_str)
-    return validate_reddit_report(report, target_date, topics, candidates)
+    return run_protocol_with_retry(
+        project_root,
+        prompt,
+        codex_bin,
+        1800,
+        lambda raw: parse_reddit_protocol(raw, target_date, topics, catalog),
+        "reddit digest",
+    )
 
 
 def render_reddit_markdown(
