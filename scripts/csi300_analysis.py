@@ -119,6 +119,20 @@ def preprocess_json(s):
     return s.strip()
 
 
+def strip_code_fences(text):
+    """Remove surrounding Markdown code fences if present."""
+    clean = text.strip()
+    if clean.startswith("```"):
+        clean = re.sub(r"^```[^\n]*\n?", "", clean)
+        clean = re.sub(r"\n?```$", "", clean)
+    return clean.strip()
+
+
+def normalize_inline_text(text):
+    """Collapse multiline AI text into a single clean line."""
+    return re.sub(r"\s+", " ", (text or "").replace("\t", " ")).strip()
+
+
 def repair_unescaped_string_quotes(text):
     """Escape bare double quotes that appear inside JSON string values."""
     chars = []
@@ -160,7 +174,7 @@ def repair_unescaped_string_quotes(text):
 
 def parse_ai_json(raw):
     """Parse AI JSON output, repairing common CodeBuddy quote escaping mistakes."""
-    cleaned = preprocess_json(raw)
+    cleaned = strip_code_fences(preprocess_json(raw))
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
@@ -168,6 +182,162 @@ def parse_ai_json(raw):
         if repaired != cleaned:
             return json.loads(repaired)
         raise
+
+
+def build_result(
+    gainers,
+    losers,
+    market_summary,
+    gainers_summary,
+    losers_summary,
+    gainer_reasons=None,
+    loser_reasons=None,
+    default_reason="暂无明确新闻归因，需人工复核",
+):
+    """Assemble the report structure expected by format_report()."""
+    gainer_reasons = gainer_reasons or {}
+    loser_reasons = loser_reasons or {}
+    return {
+        "gainers_analysis": {
+            "summary": gainers_summary,
+            "stocks": [
+                {
+                    "code": st["code"],
+                    "name": st["name"],
+                    "reason": gainer_reasons.get(st["code"], default_reason),
+                    "evidence": [],
+                }
+                for st in gainers
+            ],
+        },
+        "losers_analysis": {
+            "summary": losers_summary,
+            "stocks": [
+                {
+                    "code": st["code"],
+                    "name": st["name"],
+                    "reason": loser_reasons.get(st["code"], default_reason),
+                    "evidence": [],
+                }
+                for st in losers
+            ],
+        },
+        "market_summary": market_summary,
+    }
+
+
+def build_fallback_reason(stock, direction_label):
+    """Return a readable fallback reason when AI output is missing or partial."""
+    news = stock.get("news", [])
+    if news:
+        title = normalize_inline_text(news[0].get("title", ""))
+        if title:
+            return f"{direction_label}，可先参考候选新闻《{title}》，具体催化需人工复核。"
+    return f"{direction_label}，但 AI 输出不完整，需结合候选新闻人工复核。"
+
+
+def build_fallback_result(gainers, losers):
+    """Produce a report even when AI output cannot be parsed reliably."""
+    return build_result(
+        gainers,
+        losers,
+        "AI 输出未完整返回，以下内容基于行情与候选新闻自动整理，需人工复核。",
+        "涨幅股已按当日表现列出，板块共性需结合候选新闻进一步确认。",
+        "跌幅股已按当日表现列出，板块共性需结合候选新闻进一步确认。",
+        {
+            st["code"]: build_fallback_reason(st, "当日涨幅居前")
+            for st in gainers
+        },
+        {
+            st["code"]: build_fallback_reason(st, "当日跌幅居前")
+            for st in losers
+        },
+    )
+
+
+def parse_codebuddy_protocol(raw, gainers, losers):
+    """Parse compact line-oriented CodeBuddy output."""
+    cleaned = strip_code_fences(raw)
+    market_summary = ""
+    gainers_summary = ""
+    losers_summary = ""
+    gainer_reasons = {}
+    loser_reasons = {}
+    summary_pattern = re.compile(
+        r"^(MARKET_SUMMARY|GAINERS_SUMMARY|LOSERS_SUMMARY)\s*(?:\t|\||:|：)\s*(.+)$",
+        re.IGNORECASE,
+    )
+    stock_pattern = re.compile(
+        r"^(GAINER|LOSER)\s*(?:\t|\||:|：)\s*([0-9]{6})\s*(?:\t|\||:|：)\s*(.+)$",
+        re.IGNORECASE,
+    )
+
+    for raw_line in cleaned.splitlines():
+        line = re.sub(r"^\s*(?:[-*]|\d+[.)])\s*", "", raw_line.strip())
+        if not line:
+            continue
+
+        match = summary_pattern.match(line)
+        if match:
+            tag = match.group(1).upper()
+            value = normalize_inline_text(match.group(2))
+            if tag == "MARKET_SUMMARY":
+                market_summary = value
+            elif tag == "GAINERS_SUMMARY":
+                gainers_summary = value
+            elif tag == "LOSERS_SUMMARY":
+                losers_summary = value
+            continue
+
+        match = stock_pattern.match(line)
+        if match:
+            tag = match.group(1).upper()
+            code = match.group(2)
+            reason = normalize_inline_text(match.group(3))
+            if tag == "GAINER":
+                gainer_reasons[code] = reason
+            else:
+                loser_reasons[code] = reason
+
+    if not market_summary or not gainers_summary or not losers_summary:
+        raise ValueError("missing summary lines in CodeBuddy output")
+    if not gainer_reasons and not loser_reasons:
+        raise ValueError("no stock reason lines parsed from CodeBuddy output")
+
+    return build_result(
+        gainers,
+        losers,
+        market_summary,
+        gainers_summary,
+        losers_summary,
+        gainer_reasons,
+        loser_reasons,
+    )
+
+
+def run_codebuddy_analysis(prompt, gainers, losers, max_attempts=2):
+    """Call CodeBuddy with a compact protocol and tolerate partial outputs."""
+    last_error = None
+    attempts = [
+        prompt,
+        (
+            prompt
+            + "\n\n## 重新输出要求\n"
+            + "上一次输出未能被脚本解析。请重新输出完整结果："
+            + "只允许纯文本记录、TAB 分隔、不要 JSON、不要 Markdown、不要代码块、不要空行。"
+        ),
+    ]
+    for attempt in range(max_attempts):
+        raw = call_ai(attempts[min(attempt, len(attempts) - 1)], max_tokens=4096, expect_json=False)
+        try:
+            return parse_codebuddy_protocol(raw, gainers, losers)
+        except Exception as exc:
+            last_error = exc
+            print(f"[WARN] CodeBuddy 输出解析失败，第 {attempt + 1} 次尝试: {exc}", file=sys.stderr)
+            print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
+
+    print(f"[WARN] CodeBuddy 多次输出失败，使用兜底报告: {last_error}", file=sys.stderr)
+    return build_fallback_result(gainers, losers)
 
 
 def extract_json_response(text):
@@ -652,6 +822,9 @@ def build_prompt(date_str, gainers, losers):
     构建发送给 AI 的 prompt。
     包含：当日涨跌幅、本周涨幅、年初至今涨幅。
     """
+    if AI_MODEL == "codebuddy":
+        return build_codebuddy_prompt(date_str, gainers, losers)
+
     top_n = max(len(gainers), len(losers))
     lines = [
         "# 任务",
@@ -725,6 +898,62 @@ def build_prompt(date_str, gainers, losers):
         f'  "market_summary": "当日市场主线总结"',
         "}",
     ]
+
+    return "\n".join(lines)
+
+
+def build_codebuddy_prompt(date_str, gainers, losers):
+    """Build a compact line-based prompt for CodeBuddy."""
+    top_n = max(len(gainers), len(losers))
+    lines = [
+        "# 任务",
+        f"你是专业财经分析师。请分析 {date_str} 沪深300指数成分股涨跌幅 Top {top_n}。",
+        "只能基于下方行情数据和新闻候选做归因，不要编造信息。",
+        "最终输出必须是纯文本记录，每行一条，不要 JSON，不要 Markdown，不要代码块，不要空行。",
+        "字段分隔符统一使用 TAB。",
+        "summary 和 reason 必须是单行文本，不能包含 TAB 或换行。",
+        "严格按照以下顺序输出：",
+        "MARKET_SUMMARY<TAB>指数概况",
+        "GAINERS_SUMMARY<TAB>涨幅板块共性",
+        "LOSERS_SUMMARY<TAB>跌幅板块共性",
+        f"随后输出 {len(gainers)} 行涨幅股：GAINER<TAB>股票代码<TAB>原因",
+        f"随后输出 {len(losers)} 行跌幅股：LOSER<TAB>股票代码<TAB>原因",
+        "每个代码只能出现一次，必须覆盖所有给定代码。",
+        "",
+        "## 数据",
+        "",
+        f"### Top {len(gainers)} 涨幅股",
+    ]
+
+    for i, st in enumerate(gainers, 1):
+        chg = f"{st['change_pct']:+.2f}%" if st.get("change_pct") is not None else "（暂无）"
+        week = f"{st['week_change']:+.2f}%" if st.get("week_change") is not None else "（暂无）"
+        ytd = f"{st['ytd_change']:+.2f}%" if st.get("ytd_change") is not None else "（暂无）"
+        lines.append(f"{i}. {st['code']} {st['name']} 当日{chg} 本周{week} 年初至今{ytd}")
+        for news in st.get("news", [])[:2]:
+            title = normalize_inline_text(news.get("title", ""))
+            pub_date = normalize_inline_text(news.get("pub_date", ""))
+            lines.append(f"NEWS {pub_date} {title}".strip())
+        if not st.get("news"):
+            lines.append("NEWS （暂无候选新闻）")
+        lines.append("")
+
+    lines += [
+        f"### Top {len(losers)} 跌幅股",
+    ]
+
+    for i, st in enumerate(losers, 1):
+        chg = f"{st['change_pct']:+.2f}%" if st.get("change_pct") is not None else "（暂无）"
+        week = f"{st['week_change']:+.2f}%" if st.get("week_change") is not None else "（暂无）"
+        ytd = f"{st['ytd_change']:+.2f}%" if st.get("ytd_change") is not None else "（暂无）"
+        lines.append(f"{i}. {st['code']} {st['name']} 当日{chg} 本周{week} 年初至今{ytd}")
+        for news in st.get("news", [])[:2]:
+            title = normalize_inline_text(news.get("title", ""))
+            pub_date = normalize_inline_text(news.get("pub_date", ""))
+            lines.append(f"NEWS {pub_date} {title}".strip())
+        if not st.get("news"):
+            lines.append("NEWS （暂无候选新闻）")
+        lines.append("")
 
     return "\n".join(lines)
 
@@ -912,30 +1141,29 @@ def main():
     # 3. 构建 prompt 并调用 AI（或跳过）
     if args.skip_ai:
         print(f"[INFO] 跳过 AI 分析，生成基础报告...", file=sys.stderr)
-        result = {
-            "gainers_analysis": {
-                "summary": "（AI 分析跳过，请手动补充）",
-                "stocks": [{"code": st["code"], "name": st["name"], "reason": "（AI 分析跳过）", "evidence": []} for st in gainers]
-            },
-            "losers_analysis": {
-                "summary": "（AI 分析跳过，请手动补充）",
-                "stocks": [{"code": st["code"], "name": st["name"], "reason": "（AI 分析跳过）", "evidence": []} for st in losers]
-            },
-            "market_summary": "（AI 分析跳过，请手动补充）"
-        }
+        result = build_result(
+            gainers,
+            losers,
+            "（AI 分析跳过，请手动补充）",
+            "（AI 分析跳过，请手动补充）",
+            "（AI 分析跳过，请手动补充）",
+            default_reason="（AI 分析跳过）",
+        )
     else:
         prompt = build_prompt(target_date, gainers, losers)
         print(f"[INFO] 调用 AI ({AI_MODEL}) ...", file=sys.stderr)
+        if AI_MODEL == "codebuddy":
+            result = run_codebuddy_analysis(prompt, gainers, losers)
+        else:
+            raw = call_ai(prompt, max_tokens=4096, expect_json=True)
 
-        raw = call_ai(prompt, max_tokens=4096, expect_json=True)
-
-        # 4. 解析 JSON（带预处理）
-        try:
-            result = parse_ai_json(raw)
-        except Exception as e:
-            print(f"[ERROR] JSON 解析失败: {e}", file=sys.stderr)
-            print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
-            sys.exit(1)
+            # 4. 解析 JSON（带预处理）
+            try:
+                result = parse_ai_json(raw)
+            except Exception as e:
+                print(f"[ERROR] JSON 解析失败: {e}", file=sys.stderr)
+                print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
+                sys.exit(1)
 
     # 5. 生成报告
     report = format_report(result, target_date, gainers=gainers, losers=losers)
