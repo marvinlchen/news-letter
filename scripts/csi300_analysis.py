@@ -25,6 +25,9 @@ from email.utils import parsedate_to_datetime
 # ── 配置 ────────────────────────────────────────────────────────────────────────
 
 AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codebuddy")   # "codex" or "codebuddy"
+NEWS_FETCH_LIMIT = int(os.environ.get("CSI300_NEWS_FETCH_LIMIT", "8"))
+NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_NEWS_PROMPT_LIMIT", "5"))
+NEWS_EVIDENCE_LIMIT = int(os.environ.get("CSI300_NEWS_EVIDENCE_LIMIT", "2"))
 EASTMONEY_PUSH2 = "https://push2.eastmoney.com/api/qt/clist/get"
 EASTMONEY_PUSH2_FALLBACK = "https://push2delay.eastmoney.com/api/qt/clist/get"
 EASTMONEY_KLINE = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
@@ -35,6 +38,12 @@ PUSH2_HEADERS = {
     "Referer": "https://quote.eastmoney.com/",
     "Accept": "application/json,text/plain,*/*",
 }
+NEWS_RELEVANCE_KEYWORDS = (
+    "业绩", "净利润", "营收", "增长", "亏损", "订单", "合同", "扩产", "投产",
+    "回购", "减持", "增持", "分红", "定增", "并购", "收购", "重组", "上市",
+    "指数", "调入", "调出", "ETF", "资金", "主力", "北向", "龙虎榜",
+    "评级", "买入", "目标价", "涨", "跌", "涨停", "跌停", "需求", "价格",
+)
 AI_RESPONSE_SCHEMA = {
     "type": "object",
     "additionalProperties": False,
@@ -133,6 +142,80 @@ def normalize_inline_text(text):
     return re.sub(r"\s+", " ", (text or "").replace("\t", " ")).strip()
 
 
+def parse_report_datetime(value):
+    """Parse compact report/news timestamps used by the RSS collector."""
+    if not value:
+        return None
+    for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(value[:16] if fmt.endswith("%M") else value[:10], fmt)
+        except ValueError:
+            continue
+    return None
+
+
+def compact_news_title(title):
+    """Normalize titles for deduping, keeping source suffixes for display elsewhere."""
+    text = normalize_inline_text(title)
+    text = re.sub(r"\s+-\s+[^-]+$", "", text)
+    return text.lower()
+
+
+def news_candidate_score(news, stock_name, stock_code, target_date=None):
+    """Rank candidate news before sending a compact set to the model."""
+    title = normalize_inline_text(news.get("title", ""))
+    if not title:
+        return -100
+
+    score = 0
+    if stock_name and stock_name in title:
+        score += 20
+    if stock_code and stock_code in title:
+        score += 10
+    if "沪深300" in title:
+        score += 3
+    for keyword in NEWS_RELEVANCE_KEYWORDS:
+        if keyword in title:
+            score += 2
+
+    news_dt = parse_report_datetime(news.get("pub_date", ""))
+    target_dt = parse_report_datetime(target_date or "")
+    if news_dt and target_dt:
+        age_days = (target_dt.date() - news_dt.date()).days
+        if age_days < -2:
+            score -= 8
+        elif age_days <= 7:
+            score += 8
+        elif age_days <= 30:
+            score += 5
+        elif age_days <= 180:
+            score += 2
+        elif age_days > 365:
+            score -= 5
+
+    return score
+
+
+def rank_news_candidates(news_list, stock_name, stock_code, target_date=None, limit=NEWS_PROMPT_LIMIT):
+    """Deduplicate and keep the strongest news candidates for evidence selection."""
+    ranked = []
+    seen = set()
+    for original_index, news in enumerate(news_list):
+        title_key = compact_news_title(news.get("title", ""))
+        link_key = news.get("link", "")
+        dedupe_key = title_key or link_key
+        if not dedupe_key or dedupe_key in seen:
+            continue
+        seen.add(dedupe_key)
+        ranked.append((
+            news_candidate_score(news, stock_name, stock_code, target_date),
+            -original_index,
+            news,
+        ))
+    ranked.sort(key=lambda item: (item[0], item[1]), reverse=True)
+    return [item[2] for item in ranked[:limit]]
+
+
 def repair_unescaped_string_quotes(text):
     """Escape bare double quotes that appear inside JSON string values."""
     chars = []
@@ -192,11 +275,15 @@ def build_result(
     losers_summary,
     gainer_reasons=None,
     loser_reasons=None,
+    gainer_evidence=None,
+    loser_evidence=None,
     default_reason="暂无明确新闻归因，需人工复核",
 ):
     """Assemble the report structure expected by format_report()."""
     gainer_reasons = gainer_reasons or {}
     loser_reasons = loser_reasons or {}
+    gainer_evidence = gainer_evidence or {}
+    loser_evidence = loser_evidence or {}
     return {
         "gainers_analysis": {
             "summary": gainers_summary,
@@ -205,7 +292,7 @@ def build_result(
                     "code": st["code"],
                     "name": st["name"],
                     "reason": gainer_reasons.get(st["code"], default_reason),
-                    "evidence": [],
+                    "evidence": gainer_evidence.get(st["code"], []),
                 }
                 for st in gainers
             ],
@@ -217,7 +304,7 @@ def build_result(
                     "code": st["code"],
                     "name": st["name"],
                     "reason": loser_reasons.get(st["code"], default_reason),
-                    "evidence": [],
+                    "evidence": loser_evidence.get(st["code"], []),
                 }
                 for st in losers
             ],
@@ -255,6 +342,59 @@ def build_fallback_result(gainers, losers):
     )
 
 
+def build_evidence_catalog(gainers, losers):
+    """Map prompt evidence IDs back to script-owned news candidates."""
+    catalog = {}
+    for prefix, stocks in (("G", gainers), ("L", losers)):
+        for stock_index, stock in enumerate(stocks, 1):
+            code = stock.get("code", "")
+            for news_index, news in enumerate(stock.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
+                evidence_id = f"{prefix}{stock_index}-{news_index}"
+                catalog[evidence_id] = {
+                    "code": code,
+                    "title": news.get("title"),
+                    "url": news.get("link"),
+                    "pub_date": news.get("pub_date"),
+                }
+    return catalog
+
+
+def parse_evidence_ids(text):
+    """Extract model-selected evidence IDs from the protocol field."""
+    return [item.upper() for item in re.findall(r"\b[GL]\d+-\d+\b", text or "", flags=re.IGNORECASE)]
+
+
+def resolve_evidence_ids(stock, selected_ids, evidence_catalog):
+    """Return at most NEWS_EVIDENCE_LIMIT evidence items owned by this stock."""
+    code = stock.get("code", "")
+    result = []
+    seen = set()
+    for evidence_id in selected_ids:
+        if evidence_id in seen:
+            continue
+        seen.add(evidence_id)
+        item = evidence_catalog.get(evidence_id)
+        if not item or item.get("code") != code:
+            continue
+        result.append({
+            "title": item.get("title"),
+            "url": item.get("url"),
+            "pub_date": item.get("pub_date"),
+        })
+        if len(result) >= NEWS_EVIDENCE_LIMIT:
+            break
+    return result
+
+
+def split_protocol_fields(line):
+    """Split a CodeBuddy protocol line, preferring tabs but tolerating pipes."""
+    if "\t" in line:
+        return [part.strip() for part in line.split("\t")]
+    if "|" in line:
+        return [part.strip() for part in line.split("|")]
+    return []
+
+
 def parse_codebuddy_protocol(raw, gainers, losers):
     """Parse compact line-oriented CodeBuddy output."""
     cleaned = strip_code_fences(raw)
@@ -263,6 +403,8 @@ def parse_codebuddy_protocol(raw, gainers, losers):
     losers_summary = ""
     gainer_reasons = {}
     loser_reasons = {}
+    gainer_evidence_ids = {}
+    loser_evidence_ids = {}
     summary_pattern = re.compile(
         r"^(MARKET_SUMMARY|GAINERS_SUMMARY|LOSERS_SUMMARY)\s*(?:\t|\||:|：)\s*(.+)$",
         re.IGNORECASE,
@@ -271,6 +413,7 @@ def parse_codebuddy_protocol(raw, gainers, losers):
         r"^(GAINER|LOSER)\s*(?:\t|\||:|：)\s*([0-9]{6})\s*(?:\t|\||:|：)\s*(.+)$",
         re.IGNORECASE,
     )
+    evidence_catalog = build_evidence_catalog(gainers, losers)
 
     for raw_line in cleaned.splitlines():
         line = re.sub(r"^\s*(?:[-*]|\d+[.)])\s*", "", raw_line.strip())
@@ -289,15 +432,51 @@ def parse_codebuddy_protocol(raw, gainers, losers):
                 losers_summary = value
             continue
 
-        match = stock_pattern.match(line)
-        if match:
+        fields = split_protocol_fields(line)
+        if len(fields) >= 3 and fields[0].upper() in {"GAINER", "LOSER"} and re.fullmatch(r"[0-9]{6}", fields[1]):
+            tag = fields[0].upper()
+            code = fields[1]
+            reason = normalize_inline_text(fields[2])
+            selected_ids = parse_evidence_ids(fields[3]) if len(fields) >= 4 else []
+        else:
+            match = stock_pattern.match(line)
+            if not match:
+                continue
             tag = match.group(1).upper()
             code = match.group(2)
             reason = normalize_inline_text(match.group(3))
-            if tag == "GAINER":
-                gainer_reasons[code] = reason
-            else:
-                loser_reasons[code] = reason
+            selected_ids = parse_evidence_ids(reason)
+            if selected_ids:
+                reason = normalize_inline_text(re.sub(
+                    r"(?:\t|\||[,，;；])?\s*(?:[GL]\d+-\d+\s*[,，;；]?\s*)+$",
+                    "",
+                    reason,
+                    flags=re.IGNORECASE,
+                ))
+
+        if tag == "GAINER":
+            gainer_reasons[code] = reason
+            gainer_evidence_ids[code] = selected_ids
+        else:
+            loser_reasons[code] = reason
+            loser_evidence_ids[code] = selected_ids
+
+    gainer_evidence = {
+        stock.get("code", ""): resolve_evidence_ids(
+            stock,
+            gainer_evidence_ids.get(stock.get("code", ""), []),
+            evidence_catalog,
+        )
+        for stock in gainers
+    }
+    loser_evidence = {
+        stock.get("code", ""): resolve_evidence_ids(
+            stock,
+            loser_evidence_ids.get(stock.get("code", ""), []),
+            evidence_catalog,
+        )
+        for stock in losers
+    }
 
     if not market_summary or not gainers_summary or not losers_summary:
         raise ValueError("missing summary lines in CodeBuddy output")
@@ -312,6 +491,8 @@ def parse_codebuddy_protocol(raw, gainers, losers):
         losers_summary,
         gainer_reasons,
         loser_reasons,
+        gainer_evidence,
+        loser_evidence,
     )
 
 
@@ -325,6 +506,7 @@ def run_codebuddy_analysis(prompt, gainers, losers, max_attempts=2):
             + "\n\n## 重新输出要求\n"
             + "上一次输出未能被脚本解析。请重新输出完整结果："
             + "只允许纯文本记录、TAB 分隔、不要 JSON、不要 Markdown、不要代码块、不要空行。"
+            + "股票行第四列必须填写 0-2 个候选证据 ID，用逗号分隔；没有合适证据时留空。"
         ),
     ]
     for attempt in range(max_attempts):
@@ -774,7 +956,7 @@ def enrich_with_extended_changes(stocks, target_date, max_workers=5):
     return stocks
 
 
-def search_stock_news(stock_name, stock_code, limit=5):
+def search_stock_news(stock_name, stock_code, limit=NEWS_FETCH_LIMIT):
     """通过 Google News RSS 搜索个股相关新闻，并提取发布时间"""
     query = urllib.parse.quote(f"{stock_name} {stock_code} 沪深300")
     rss_url = f"https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
@@ -806,11 +988,19 @@ def search_stock_news(stock_name, stock_code, limit=5):
         return []
 
 
-def attach_news_candidates(stocks, limit=3):
-    """为股票列表附加 Google News RSS 候选证据，供 AI 选择和归因。"""
+def attach_news_candidates(stocks, target_date=None, fetch_limit=NEWS_FETCH_LIMIT, prompt_limit=NEWS_PROMPT_LIMIT):
+    """Attach ranked Google News RSS candidates for evidence selection."""
     for i, stock in enumerate(stocks, 1):
         print(f"  [news {i}/{len(stocks)}] {stock['code']} {stock['name']}", file=sys.stderr)
-        stock["news"] = search_stock_news(stock["name"], stock["code"], limit=limit)
+        raw_news = search_stock_news(stock["name"], stock["code"], limit=fetch_limit)
+        stock["news"] = rank_news_candidates(
+            raw_news,
+            stock["name"],
+            stock["code"],
+            target_date=target_date,
+            limit=prompt_limit,
+        )
+        stock["raw_news_count"] = len(raw_news)
         time.sleep(0.2)
     return stocks
 
@@ -916,9 +1106,10 @@ def build_codebuddy_prompt(date_str, gainers, losers):
         "MARKET_SUMMARY<TAB>指数概况",
         "GAINERS_SUMMARY<TAB>涨幅板块共性",
         "LOSERS_SUMMARY<TAB>跌幅板块共性",
-        f"随后输出 {len(gainers)} 行涨幅股：GAINER<TAB>股票代码<TAB>原因",
-        f"随后输出 {len(losers)} 行跌幅股：LOSER<TAB>股票代码<TAB>原因",
+        f"随后输出 {len(gainers)} 行涨幅股：GAINER<TAB>股票代码<TAB>原因<TAB>证据ID列表",
+        f"随后输出 {len(losers)} 行跌幅股：LOSER<TAB>股票代码<TAB>原因<TAB>证据ID列表",
         "每个代码只能出现一次，必须覆盖所有给定代码。",
+        "证据ID列表最多 2 个，用英文逗号分隔；只能从该股票下方 NEWS 行选择，不要编造 ID；没有合适证据时第四列留空。",
         "",
         "## 数据",
         "",
@@ -930,10 +1121,11 @@ def build_codebuddy_prompt(date_str, gainers, losers):
         week = f"{st['week_change']:+.2f}%" if st.get("week_change") is not None else "（暂无）"
         ytd = f"{st['ytd_change']:+.2f}%" if st.get("ytd_change") is not None else "（暂无）"
         lines.append(f"{i}. {st['code']} {st['name']} 当日{chg} 本周{week} 年初至今{ytd}")
-        for news in st.get("news", [])[:2]:
+        for news_index, news in enumerate(st.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
+            evidence_id = f"G{i}-{news_index}"
             title = normalize_inline_text(news.get("title", ""))
             pub_date = normalize_inline_text(news.get("pub_date", ""))
-            lines.append(f"NEWS {pub_date} {title}".strip())
+            lines.append(f"NEWS\t{evidence_id}\t{pub_date}\t{title}".strip())
         if not st.get("news"):
             lines.append("NEWS （暂无候选新闻）")
         lines.append("")
@@ -947,10 +1139,11 @@ def build_codebuddy_prompt(date_str, gainers, losers):
         week = f"{st['week_change']:+.2f}%" if st.get("week_change") is not None else "（暂无）"
         ytd = f"{st['ytd_change']:+.2f}%" if st.get("ytd_change") is not None else "（暂无）"
         lines.append(f"{i}. {st['code']} {st['name']} 当日{chg} 本周{week} 年初至今{ytd}")
-        for news in st.get("news", [])[:2]:
+        for news_index, news in enumerate(st.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
+            evidence_id = f"L{i}-{news_index}"
             title = normalize_inline_text(news.get("title", ""))
             pub_date = normalize_inline_text(news.get("pub_date", ""))
-            lines.append(f"NEWS {pub_date} {title}".strip())
+            lines.append(f"NEWS\t{evidence_id}\t{pub_date}\t{title}".strip())
         if not st.get("news"):
             lines.append("NEWS （暂无候选新闻）")
         lines.append("")
@@ -1132,8 +1325,8 @@ def main():
 
     if not args.no_news:
         print("[INFO] 开始获取新闻候选...", file=sys.stderr)
-        gainers = attach_news_candidates(gainers)
-        losers  = attach_news_candidates(losers)
+        gainers = attach_news_candidates(gainers, target_date=target_date)
+        losers  = attach_news_candidates(losers, target_date=target_date)
         print("[INFO] 新闻候选获取完成", file=sys.stderr)
     else:
         print("[INFO] 跳过新闻候选获取", file=sys.stderr)
