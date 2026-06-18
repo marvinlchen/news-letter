@@ -119,6 +119,57 @@ def preprocess_json(s):
     return s.strip()
 
 
+def repair_unescaped_string_quotes(text):
+    """Escape bare double quotes that appear inside JSON string values."""
+    chars = []
+    in_string = False
+    escaped = False
+
+    for i, ch in enumerate(text):
+        if escaped:
+            chars.append(ch)
+            escaped = False
+            continue
+
+        if in_string and ch == "\\":
+            chars.append(ch)
+            escaped = True
+            continue
+
+        if ch == '"':
+            if not in_string:
+                in_string = True
+                chars.append(ch)
+                continue
+
+            j = i + 1
+            while j < len(text) and text[j].isspace():
+                j += 1
+            next_ch = text[j] if j < len(text) else ""
+            if next_ch in {":", ",", "}", "]", ""}:
+                in_string = False
+                chars.append(ch)
+            else:
+                chars.append('\\"')
+            continue
+
+        chars.append(ch)
+
+    return "".join(chars)
+
+
+def parse_ai_json(raw):
+    """Parse AI JSON output, repairing common CodeBuddy quote escaping mistakes."""
+    cleaned = preprocess_json(raw)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        repaired = repair_unescaped_string_quotes(cleaned)
+        if repaired != cleaned:
+            return json.loads(repaired)
+        raise
+
+
 def extract_json_response(text):
     """Return a JSON object string, tolerating code fences and surrounding chatter."""
     clean = text.strip()
@@ -659,6 +710,7 @@ def build_prompt(date_str, gainers, losers):
         "2. gainers_analysis.summary 和 losers_analysis.summary 分别总结板块共性。",
         "3. 每只股票给出一句直接原因。原因要结合行业、公司事件、资金风格或基本面，不要泛泛而谈。",
         "4. evidence 最多 2 条，只能使用该股票新闻候选里的标题、链接和发布时间；没有合适证据时返回空数组。",
+        "5. 必须输出可被 json.loads 直接解析的合法 JSON；字符串内部不要使用未转义的英文双引号，可改用中文引号。",
         "",
         "## 输出 JSON Schema",
         "{",
@@ -879,8 +931,7 @@ def main():
 
         # 4. 解析 JSON（带预处理）
         try:
-            cleaned = preprocess_json(raw)
-            result = json.loads(cleaned)
+            result = parse_ai_json(raw)
         except Exception as e:
             print(f"[ERROR] JSON 解析失败: {e}", file=sys.stderr)
             print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
