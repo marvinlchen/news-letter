@@ -114,14 +114,8 @@ AI_RESPONSE_SCHEMA = {
 # ── 工具函数 ─────────────────────────────────────────────────────────────────────
 
 def preprocess_json(s):
-    """
-    预处理 JSON 字符串，修复常见格式问题：
-    1. 将中文引号替换为 ASCII 引号
-    2. 转义字符串值中的未转义双引号
-    """
-    s = s.replace('\u201c', '"').replace('\u201d', '"')
-    s = s.replace('\u2018', "'").replace('\u2019', "'")
-    return s
+    """保留 AI 返回内容原样，避免破坏 JSON 字符串中的中文引号。"""
+    return s.strip()
 
 
 def extract_json_response(text):
