@@ -1,19 +1,19 @@
 # 沪深300涨跌分析 — 2026-06-18
 
-**生成时间：** 2026-06-18 17:31  
+**生成时间：** 2026-06-18 17:34  
 **分析基于：** 沪深300指数成分股涨跌幅 top20
 
 ---
 
 ## 一、指数概况
 
-2026-06-18沪深300指数呈现强结构性分化，AI算力产业链全面爆发领涨，寒武纪、昆仑万维、中际旭创、海光信息等科技股集体走强，沪指上涨1.61%、创指上涨5.3%情绪提振；保险板块领跌，中国太保、新华保险、中国平安、中国人寿、中国人保五大险企齐跌，基建央企与石化板块同步回调，资金从防御性价值股明显流向成长科技股。
+沪深300指数2026-06-18分化加剧，AI算力产业链全线走强：国产AI芯片(寒武纪、海光、芯原、兆易、中芯)、光模块(中际旭创、新易盛、东山精密)、AI基建(工业富联、润泽科技)多股涨超5%，DeepSeek V4适配国产芯片、AI眼镜密集发布等催化；而保险、银行、基建、化工、电力、黄金等防御与周期权重板块集体回调，五只保险股跌幅均超5%，资金明显从低beta权重股流向科技成长。
 
 ---
 
 ## 二、涨幅分析（Top 20）
 
-**板块共性：** 涨幅居前股集中在三大方向：一是AI算力链（芯片设计：寒武纪、海光信息、中芯国际、芯原股份、兆易创新；半导体设备：盛美上海；光模块：中际旭创、新易盛、东山精密；AI算力服务器：工业富联；AI应用：昆仑万维；数据中心：润泽科技），二是AI眼镜消费电子（蓝思科技、领益智造），三是有色金属（江西铜业、厦门钨业、中钨高新），AI叙事、国产替代与DeepSeek V4适配国产芯片为主线。
+**板块共性：** 涨幅居前股高度集中于AI算力链：芯片设计端(寒武纪、海光信息、芯原股份、兆易创新、中芯国际)受DeepSeek V4适配国产芯片与AI存储需求提振催化；光模块与光芯片端(中际旭创、新易盛、东山精密)受益于两倍做多ETF及海外扩建项目；AI基建(工业富联、润泽科技)受算力服务器订单与香港数据中心建设驱动；此外铜钨有色(江西铜业、中钨高新、厦门钨业)与消费电子(蓝思科技、领益智造)联动走强，反映AI+有色双主线。
 
 | 排名 | 股票代码 | 股票名称 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
 |------|----------|----------|--------|----------|--------------|
@@ -40,7 +40,7 @@
 
 ### 寒武纪（688256）
 
-**原因：** 寒武纪大涨14.20%领涨，DeepSeek V4适配国产芯片消息与AI芯片国产替代叙事推动，定增解禁多空博弈中多头占优。
+**原因：** DeepSeek V4适配国产芯片催化，国产AI芯片"中国英伟达"估值叙事延续，定增解禁多空博弈后多头占优
 
 **证据：**
 - [「中国英伟达」们的估值叙事：从寒武纪走势看摩尔线程、沐曦股份 - 36 Kr](https://news.google.com/rss/articles/CBMiTkFVX3lxTE5qRW0zOGVNamVUdC01dXI3SGxwZGVnNVRtVjRIVG5CWmJlWlA2bnRTSm1hOHlLLXhNQkdfREJCQkNwWDZ5NTNQcEFidDZHQQ?oc=5) （2025-12-11 08:00）
@@ -48,7 +48,7 @@
 
 ### 昆仑万维（300418）
 
-**原因：** 昆仑万维涨10.97%，尽管2025年报亏损15.93亿元、两年巨亏30亿，但AI豪赌执念获资金追捧，AI应用情绪回暖。
+**原因：** AI板块情绪带动反弹，资金博弈AI主线，尽管2025年报净利润-15.93亿、两年巨亏30亿仍受AI豪赌预期推动
 
 **证据：**
 - [昆仑万维(300418.SZ)：2025年年报净利润为-15.93亿元 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE02cmxmbk13dkpQU0FWTDRVcWFJdmR1aXNxa0lRcEVxT3pDR29MdS1CZWQ4X1pSQ1JJc0lsQko4X1VjcEk5VEdRTEgzNGpvRlN5WmJ0RmlKV0NReWg0VWxVeg?oc=5) （2026-04-24 07:00）
@@ -56,7 +56,7 @@
 
 ### 江西铜业（600362）
 
-**原因：** 江西铜业涨10.01%，有色板块走强叠加沪指上涨1.61%大盘情绪带动，铜价预期支撑。
+**原因：** 6月15日A股高开高走沪指涨1.61%，有色板块跟随大盘放量上涨，铜价预期支撑
 
 **证据：**
 - [A股高开高走，尾盘涨幅扩大：沪指涨1.61%，创指涨5.3% - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTFBMVm44ZTdocWZ1Ti1zd0dqLTg2QnpGZW9SclBvd1hnMTVxZE9Id3hTR2VsMnhoVmRmVWNra29fMXpEMWJmdUsxbWltTjBSOVVjNGdmbXBXWU93UnNjMHFBaE92dnVnSjNzMl9rYTlTMWk0eEkxUTNIbw?oc=5) （2026-06-15 07:30）
@@ -64,7 +64,7 @@
 
 ### 中钨高新（000657）
 
-**原因：** 中钨高新涨停+10.00%，年内累计涨幅199.42%，钨价景气与新材料题材持续催化。
+**原因：** 钨价概念延续本周累计+13.33%动能，虽公司澄清无六氟化钨计划但板块情绪持续
 
 **证据：**
 - [金鹰鑫瑞混合A净值上涨0.75% - 新浪财经](https://news.google.com/rss/articles/CBMihAFBVV95cUxPWDJYazQzVEM2TXh0RC1hNFVBb3RnYi14WGtqQW9Jbmo2MXVPeURfbHRHeXBmcW9YcDBnSjJ2OHo4RElVR3Vyd3N1cXZISHhSU2VVVHZZZXVlb1B0YXg1SVlfTkUzZkgxSTBBNE5NOXJxUzZlWlNtYXM2RmNlWm40anhfUFU?oc=5) （2026-06-17 21:16）
@@ -72,7 +72,7 @@
 
 ### 蓝思科技（300433）
 
-**原因：** 蓝思科技涨8.90%，全球巨头密集发布AI眼镜带动消费电子供应链预期，本周累计涨幅21.29%。
+**原因：** 5月底全球巨头密集发布AI眼镜，消费电子结构件龙头受益于AI眼镜产业链催化
 
 **证据：**
 - [A股震荡，如何布局？ - 财富号](https://news.google.com/rss/articles/CBMiggJBVV95cUxPOWVvcFpCV2hpT0xkdWhuRVZFOGI2UWJ2MFpORzdscUdLQ1hyTHRpa0NzYzJaeFdCRGhtaWFwY3B2cXFaSl85WS1MUlVoSHFWbk5Ud3NpVHoxTGNsa0dQZGw1X0xHZVQwNUszRTRycUN1dk1hZFB5Ty1WYnJhTjlmYUpHaVg1OExjZVlpbnpLcFM0SFhZMkdVeGVDVlZRcjFqVjlyUVRTX2dSVGNheUVqS19xZTl5ME44S0g1ZGdnUWxJeEdnd2RZdFpDQmtMOHlxWldSVEtwNE5MUGFXdkdIS2I0YUdmWWE5WUs4enN3S3kzZ2p4Q18tRHV3aUVVQ1ZFSGc?oc=5) （2026-05-19 07:00）
@@ -80,15 +80,15 @@
 
 ### 工业富联（601138）
 
-**原因：** 工业富联涨7.49%，云计算收入6027亿贡献67%营收，AI算力服务器需求持续，信达证券维持买入评级。
+**原因：** 信达证券一个月前给出"买入"评级发酵，AI算力服务器需求叠加职工董事选举完成
 
 **证据：**
+- [工业富联(601138.SH)：林奂汝当选第四届董事会职工代表董事 - AASTOCKS.com](https://news.google.com/rss/articles/CBMinwFBVV95cUxPS3F6SGhmOTdBUUZHdDI0QW5mSkRFZ01aU2ZKRURDN2Y0WUdYMnVqcnBoVksyVlZsUDcwWFdQMUJuRmQ3b0puMzFRUC1LdUhncUpLT1ZZS1EwUDNXZzN3cjhpWWpKRlZFRVZyaEVOOTA0MTJQS3llM1ZnclNaWHk3amZUUnQ2LU1rRm12dmVsbnZkUXZrSWRCX3VZVXZqeVk?oc=5) （2026-06-15 09:04）
 - [工业富联涨8.49%，信达证券一个月前给出“买入”评级 - 新浪财经](https://news.google.com/rss/articles/CBMibkFVX3lxTE5wZmlmVWp4b040bHI2MlRxOGkyMWxvVzN6d1h2RlAycGVEc0Nwa3RLQWlHRzR0dzllcW16OUdjZVFjb0N2Rk9wRFphN3BhekFoQjJnY1A3RU91eDBWcDRBUjlkdzdIamZHOXNTRDZn?oc=5) （2026-06-02 07:00）
-- [工业富联分红增至195亿高管减薪 云计算收入6027亿贡献67%营收 - Sina finance](https://news.google.com/rss/articles/CBMieEFVX3lxTFBFU2lTQ3hvR1plUU1xXzZvLUpQQVpjYmFCWHA1U3F4dnpBV2ZkOUNacHA2YTNvanFIRGNWeFloZTlzTGFxc0hpUG5INmgwbU1IdkRKWjNTRzRpSXVianIwVVVtS1c3d2JvbURGSkJiWEJoclBZYXBwRw?oc=5) （2026-03-12 07:00）
 
 ### 兆易创新（603986）
 
-**原因：** 兆易创新涨7.33%，AI需求提振存储概念股，港股存储板块联动带动A股同步走强，本周累计涨幅21.43%。
+**原因：** 6月12日AI需求提振港股存储概念股大涨超4%，A股存储龙头联动走强
 
 **证据：**
 - [永赢沪深300ETF发起联接A净值上涨0.92% - 新浪财经](https://news.google.com/rss/articles/CBMihAFBVV95cUxQd2JfWVIwUUtsQzNMREhLUWVwQ1pjQVdpLTRIWHQ1M2txZ1JXbGZNZFRBaDNVcWgxVFYyYzBmdGNJenF4bVhXcV9kZzc4QzlxeHVXaXlib09JVlBtZlBBeHpPUnNETnB0T21JQnFCYkYxYktJT2cyd1BRaHdIWjdCUGpYZmk?oc=5) （2026-06-17 21:32）
@@ -96,7 +96,7 @@
 
 ### 中际旭创（300308）
 
-**原因：** 中际旭创涨7.19%，作为沪深300第一大权重股获资金配置，美机构拟推两倍做多ETF提振情绪，光模块景气延续。
+**原因：** 沪深300第一大权重股地位强化，美机构拟推两倍做多中际旭创ETF催化资金关注
 
 **证据：**
 - [沪深300指数“含科量”再提升，中际旭创登顶第一大权重股 - Sina finance](https://news.google.com/rss/articles/CBMidkFVX3lxTE8yOWpaUE1oU25SY2JDNnJTczV3S1RXQTdpc1I3WmJqdXpjNEdCVl9xN0FTY1RxcFg0d1BwMU1zaTBMNmxKeEtvel9wQ1IyNEFLbWtwajBoaEZFelFHNTAyM09oYW5Ba0t1M25EdGFRbFNxUHI1SUE?oc=5) （2026-06-02 07:00）
@@ -104,7 +104,7 @@
 
 ### 芯原股份（688521）
 
-**原因：** 芯原股份涨6.42%，半导体IP国产替代主线受关注，芯片设计板块联动上涨。
+**原因：** 国产芯片IP与AI算力链联动上涨，半导体板块整体情绪带动
 
 **证据：**
 - [万家汽车新趋势混合A净值下跌2.59% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTE5XWlZOWFZiYm5uVERUd3BGUmFZZF9SQWlKN0YwVHcwV0QzTE03cTd3YUsxdFpPTjRiTFhDSFVtMmtkY0VxX1VXTzhjdDdUdG5hd205ai1IQ3FOQVNnMTFEZ0h2dm9nMzNNV0ZoMHNMeTFpTVVsQnJCOFVxd2hLZw?oc=5) （2026-06-12 21:27）
@@ -112,7 +112,7 @@
 
 ### 海光信息（688041）
 
-**原因：** 海光信息涨6.42%，国产CPU/GPU受益于AI算力国产化与DeepSeek适配国产芯片叙事。
+**原因：** PCB、MLCC等热门赛道持续上涨，国产AI芯片/CPU板块情绪带动沪深300含科量提升
 
 **证据：**
 - [PCB、MLCC等热门赛道大牛股紧急降温！沪深300ETF华夏（510330）真业绩成分股持续上涨 - 富途牛牛](https://news.google.com/rss/articles/CBMiTkFVX3lxTE5KSkdzdkhXVEh0MzdVWHp0SjltWmxMbS12bTBXWFREeDJhV3hQbUNKSWE4cXNDNzNaTTNaMUtOa0NiQWRCdmFzb3dxanRaQQ?oc=5) （2026-06-18 02:01）
@@ -120,7 +120,7 @@
 
 ### 厦门钨业（600549）
 
-**原因：** 厦门钨业涨6.27%，北向资金净买入17.99亿元推动，钨价景气与有色板块共振，本周累计涨幅20.52%。
+**原因：** 6月17日北向资金净买入17.99亿元催化，钨有色板块情绪高涨，本周累计+20.52%
 
 **证据：**
 - [龙虎榜|厦门钨业涨3.10%，北向资金净买入17.99亿元 - Sina finance](https://news.google.com/rss/articles/CBMijgFBVV95cUxQLVRDa09lYzVObWhnRTdVOHpidXhWeGFQR2k3VUxGNk1PUFR0a2tRNnU1YTZQSkpwUWpEMzl5Mkx5UXFxSmcwbjZnd2JURVNnVjFNNGJITFBhTXRRaktDZmVfZFNHYXZpZ2ZVcEk3OHVlQ1ZvOFVkN3NLY0t0MjBRa1FpTENocEU0VEU1Tnh3?oc=5) （2026-06-17 09:29）
@@ -128,7 +128,7 @@
 
 ### 东山精密（002384）
 
-**原因：** 东山精密涨6.26%，子公司拟12亿美元实施光芯片及光模块扩建项目，切入AI光通信赛道。
+**原因：** 子公司拟12亿美元实施光芯片及光模块扩建项目，AI光通信产业链加码利好
 
 **证据：**
 - [机构风向标 | 东山精密(002384)2025年四季度已披露持股减少机构超120家 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE4xWTdra2l5VkdndXg1VWZZSGZRZHplZm5NQXZrSXRRUVZFZFFIRUhITTRXVV80MXdBX0pBUkFjd25jdWpPYXlBYm9OeXllYURPdmlQVDhJQXNnRjgyc3VxX3NjbVEtQQ?oc=5) （2026-04-22 07:00）
@@ -136,7 +136,7 @@
 
 ### 领益智造（002600）
 
-**原因：** 领益智造涨6.12%，AI眼镜消费电子产业链联动，公司推进香港上市获证监会备案。
+**原因：** 消费电子+AI硬件产业链联动，证监会备案通知书下发、港股上市预期提振
 
 **证据：**
 - [领益智造业绩增长背后：毛利率承压，单季环比数据现隐忧 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTFBVS0Z3OHRBVnhyT05KdFVUcURfdlVWalZMVXRZUXVPMWw0Z1B0UDM2TjltSFRXbi1mQVROa3k2RjJsM1hNYWRxM2xWRHExMC1JbEJaZmExdVg1bDMzeVpad3Vzd1B3MUU4bVEwcUhlSjF3c0tCWkdxbQ?oc=5) （2025-08-31 07:00）
@@ -144,11 +144,11 @@
 
 ### 中航光电（002179）
 
-**原因：** 中航光电涨5.05%，军工连接器板块联动，无明确新闻催化，跟随科技成长股上涨。
+**原因：** 军工连接器板块情绪联动，无明确个股新闻，跟随科技成长风格上涨
 
 ### 润泽科技（300442）
 
-**原因：** 润泽科技涨4.94%，据报寻求200亿港元贷款建设香港北部都会区数据中心，AIDC扩张预期。
+**原因：** 6月5日据报寻求200亿港元贷款建设香港北部都会区数据中心，AI算力基建扩张利好
 
 **证据：**
 - [润泽科技据报寻求200亿港元贷款，建设香港北部都会区数据中心 - AASTOCKS.com](https://news.google.com/rss/articles/CBMihgFBVV95cUxPcE44dFJLSXJjVEluZEdjMmRGVjBQRUFaN29fOG4weXN3dTNzb0pfZ29RMG1ES0hDSkNsZzd0MUUzTlVra1hsZzBoaHpYelNwX3I3bWFDRk5TX2MyRWVpRXpLQjRmVWlPbGdLNHlHLUNaR0JhTlRDREV0azQtMDMxd1NBX1l1Zw?oc=5) （2026-06-05 07:00）
@@ -156,7 +156,7 @@
 
 ### 长城汽车（601633）
 
-**原因：** 长城汽车涨4.93%，汽车板块分化中领涨，本周微跌0.51%但当日反弹修复。
+**原因：** 汽车板块情绪修复，2026年一季度净利润9.45亿元，本周回调后反弹
 
 **证据：**
 - [长城汽车：2026年一季度净利润9.45亿元 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE1EQVVSdFY1VnlBN2Z0WjZCblc4NGNlc0YydHBhcVBtVTd2N01wczVQUlNRWnpjOElyUnJodXZMRWw2NkFzZnJQNUV3MUotbTJNaDljdGZuNGNPVFliM3Nac3MtX0pjZw?oc=5) （2026-04-25 07:00）
@@ -164,7 +164,7 @@
 
 ### 盛美上海（688082）
 
-**原因：** 盛美上海涨4.86%，半导体设备国产替代主线，本周累计涨幅20.24%反映资金持续流入。
+**原因：** 半导体设备板块联动上涨，本周累计+20.24%，AI算力扩产预期支撑
 
 **证据：**
 - [智能制造行业周报：宇树科技IPO获受理，出货放量可期_行业研究_研报 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9pQmR6WHM5Z2JQclJHWUd6XzlPcnA0SGxldnZWSk9QenotTWVUa3U1a1lmWWd5QlFBM2JIV0hkX2EwVUtOR1ZLYlRyempld2c5dlNDNGZ5T1QtYXpNOEZZRndB?oc=5) （2026-03-24 07:00）
@@ -172,7 +172,7 @@
 
 ### 药明康德（603259）
 
-**原因：** 药明康德涨4.60%，回购A股股份提振市场信心，CXO板块情绪修复。
+**原因：** A股回购事项推进提振信心，CXO板块反弹，沪深300指增ETF资金流入带动
 
 **证据：**
 - [药明康德(603259):回购A股股份事项前十大股东和前十大无限售条件股东持股情况 - 中财网](https://news.google.com/rss/articles/CBMiVkFVX3lxTFB1UFRfZG9PZlprbTFmci1QVFR4V1dvbHV6dnJqTC1MSzFPUTh2T1I4MUlWUWVpY01hdFdQTVpXeGZuOHZ4T2Vjdk1SMHhabXd3RHFBRmNR?oc=5) （2026-06-11 10:00）
@@ -180,7 +180,7 @@
 
 ### 中芯国际（688981）
 
-**原因：** 中芯国际涨4.45%，晶圆代工国产替代受益，半导体板块整体走强联动。
+**原因：** 国产芯片/晶圆代工板块联动，沪深300指数增强产品资金流入推动权重股
 
 **证据：**
 - [国泰沪深300指数增强A净值上涨2.41% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTFBYeHNxV0lER1NrcURRanc1Ym5mRlc2czR6MU5VU2d2SldYaUxpRVJ0dWpaVWFfQkoxaGlQek9Fa2FXdm56YmNSVy1fTTRSQnlqVDhSNFZqQktnVG1hTkQ5UzJwQ3JPNFMzc0Y4Z0RlNXMwbFZNazRVOWtiemM5UQ?oc=5) （2026-06-15 21:02）
@@ -188,7 +188,7 @@
 
 ### 新易盛（300502）
 
-**原因：** 新易盛涨4.23%，光模块景气延续，公司拟冲刺港股上市，年营收248亿、市值7693亿。
+**原因：** 光模块龙头拟冲刺港股，年营收248亿、市值7693亿，AI光通信高景气延续
 
 **证据：**
 - [新易盛拟冲刺港股：年营收248亿 市值7693亿 黄晓雷身价547亿 - 财富号](https://news.google.com/rss/articles/CBMia0FVX3lxTE5UWVVpejRPdVB2c3ZGR3N2YUdMWlJSazZoOFNSVUVHOGFwYXJLRHZsYXlmRV9ocVVpWWdVU2RaYTFaSXB2N0VmMWJGa2MzYjRXbnZodmFJQ0poZU96T1lkbHRIMEZOUjUxUkY0?oc=5) （2026-06-10 15:29）
@@ -198,7 +198,7 @@
 
 ## 三、跌幅分析（Top 20）
 
-**板块共性：** 跌幅居前股集中在保险板块（中国太保、新华保险、中国平安、中国人寿、中国人保）集体杀跌，基建央企（中国能建、中国电建）、石化（荣盛石化、东方盛虹）、贵金属有色（山东黄金、中国铝业）、公用事业新能源（华电新能、浙能电力）、银行（渝农商行）、券商（中国银河）等防御性价值板块普遍回调，反映资金切换至成长股的轮动压力。
+**板块共性：** 跌幅居前股集中于金融与周期权重：保险板块(中国太保、新华保险、中国平安、中国人寿、中国人保)在"成也权益、败也权益"业绩承压下集体杀跌；银行券商(渝农商行、中国银河)开年以来持续走弱；基建电力(中国能建、中国电建、华电新能、浙能电力)与化工(巨化股份、荣盛石化、东方盛虹)同步回调；黄金有色(山东黄金、中国铝业)及指数样本调整个股(光启技术、华电新能)亦受资金流出与调仓影响。
 
 | 排名 | 股票代码 | 股票名称 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
 |------|----------|----------|--------|----------|--------------|
@@ -225,7 +225,7 @@
 
 ### 光启技术（002625）
 
-**原因：** 光启技术跌9.92%领跌，超材料军工题材回调，前期高位股获利了结压力，年初至今累计跌38.37%。
+**原因：** 2025年12月12日沪深300等指数样本股调整生效，调出预期与资金撤离持续压制
 
 **证据：**
 - [中证指数公司：调整沪深300、中证500、中证1000、中证A500等指数样本 12月12日收市后生效 - Sina finance](https://news.google.com/rss/articles/CBMilAFBVV95cUxQcTVkcTg0Wk0xOGdhVnFkV1ZQVk1jVDRTVkhYN294M3VEWWFxOUFkOXlLd1FuREdnX282OE1ONjU4TWRsQnZocmVuWEdnRWVObnRMUjZELVNPcVpuQWIyMGlhUGMtSmJXTUlxeUxnc1gwSXlORVc0Qy1JZzVieHBrY2RlR0hGNV9QenRROUNoVF9YS1Jz?oc=5) （2025-11-28 08:00）
@@ -233,23 +233,23 @@
 
 ### 巨化股份（600160）
 
-**原因：** 巨化股份跌7.51%，化工板块走弱，氟化工高位回调压力，尽管6月12日主力资金净买入2.11亿元。
+**原因：** 化工板块回调，无明确个股利好，跟随周期权重股集体走弱
 
 **证据：**
-- [股票行情快报：巨化股份（600160）6月12日主力资金净买入2.11亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE04S1hBTXNXalNZRzM4M3BObElSb0lxTUc1MGh0MU5PWGlJZ2VuekZJdWw2eU9GUU1pUnBrdzRvcEpIdUhEZ1lEYWFqWk9UUy03S1p6bVczcWdwV2VpTWc5YzFR?oc=5) （2026-06-12 12:06）
 - [万家瑞兴A净值上涨6.06% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTE16bHlVU3VPU19yR1VXRzVlYkRXSzBvaU94Ym9yeG5OVXVzMXZYUjg4eHVPdC1BVFdPbUp4YlBfWlR6ZjVwOWhmV0F2d0JMeGY3aVVnelFoYmJKYzhmRzJxak51T2hKUUdPQkdlMktFRDJZRkZJY1NrRG1rejJHQQ?oc=5) （2026-06-15 21:09）
+- [万家瑞兴A净值下跌1.78% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTFBVZlFMY2Y0Wlp4NmhTWGRvTHBmNldnYTBuUlVtQWRabDRMWU5TMUZlTlk5blRiRXhHR2E1MXM0YU9iMnhVbmtUNFFmWlNObGVQck42U1owY1ZoMldhR1ppZFBaZzFPQUNSTG9HcGlpRE04NFpvQ3J0d0o5Nlh6Zw?oc=5) （2026-06-10 21:08）
 
 ### 中国太保（601601）
 
-**原因：** 中国太保跌6.87%，保险板块集体杀跌，险企"成也权益败也权益"业绩承压，估值修复受阻。
+**原因：** 保险板块今年跌超9%延续回调，基本面稳健难挡权益市场波动压力
 
 **证据：**
-- [国金证券：资负两端高景气延续 保险板块估值修复可期 - Moomoo](https://news.google.com/rss/articles/CBMisgFBVV95cUxOTEJJamtPNE84amI1Sy1vSGxoVW1oRUtVRldJZHJMb1JhNFZkUVlvSUw0dXBQT2M4a1NqSGN5Rk9JTWpnUzgxay1SMjQteU81TzV3SGxLWHBYS1QzUno0LVQ0WjBNeTNzUTkxWll5OExNOHVwZXl2enN0cktTU1RsV2Q1c2w1VldWNm9KdHU5WUZhR1QwVUw3WWlvUjhYWFB1SXJ5S0F0ejgySk1WVWRVZWdn?oc=5) （2026-06-08 07:00）
+- [中国平安股价创近一年新高，摩根士丹利将其调入重点观察名单 - Jiemian.com](https://news.google.com/rss/articles/CBMiWEFVX3lxTFBzT0dYRHJIOWN3RjVadVI5Rk5qRW5rMG9Sc2dhLTZzQzBUWkhYNkxyNmhyNWJiRms3eUtpeWljNG1TV0tWOGVKVUFpX1hFSmgzcnprZFdBZTc?oc=5) （2025-12-08 08:00）
 - [保险板块今年跌超9%！基本面稳健为何难挡回调 - 21财经](https://news.google.com/rss/articles/CBMijwFBVV95cUxQNGp1Y0RMOXBEaTFGLVR3WlhrR1lsSWYtdEp0eXlOV0hOWS03cjMyc09BbUE2NmM0WlpwaTFSd3JuUXhTeG5HUHZPbU5hYU95cXFuQkpnQ056UkJOUXd4NE1teFJ2dF96T0xiNkdqdm9PSm82WTR5SUdMeTAzVUU4ZVdmV0xIU0Z5WDdhTDMwTQ?oc=5) （2026-03-09 07:00）
 
 ### 新华保险（601336）
 
-**原因：** 新华保险跌6.80%，保险板块联动下跌，权益市场波动拖累险企投资端预期。
+**原因：** 险企"成也权益、败也权益"业绩承压，卖得多却赚得少，板块情绪恶化
 
 **证据：**
 - [卖得多了却赚得少了 险企业绩“成也权益，败也权益” - eeo.com.cn](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBweGJsbV95eVBVWGdyQUNTbFp6bEVOXzFhcHo5emE1ZHp3Qi1SNzVTaDJ6ZE5adkpTcV95YVFTeV8yWTNZekFid3lsTkhxN0ZTRjJFcg?oc=5) （2026-05-07 07:00）
@@ -257,15 +257,15 @@
 
 ### 中国平安（601318）
 
-**原因：** 中国平安跌6.41%，五大险企齐跌中权重领跌，保险板块整体回调压力，前期高位回调。
+**原因：** 近1000亿沪深300ETF遭抛售拖累权重股，保险板块整体回调压制
 
 **证据：**
-- [沪深300价值ETF申万菱信（560330）涨1.17%，成交额48.95万元 - 新浪财经](https://news.google.com/rss/articles/CBMihAFBVV95cUxOLUNsSmNnUzNHTnUyYWdnMDFVbDR0cmNsQmtCb29KZXluUzYzaUcxWlFOR1haUFVGYVlxOFN0RHdCck9DU0hUVkw2RndYX2V1SjYtbFZzMkNxblVfZHhQdWhlN1RtTmsxdTlyMjVXcXp5OHBBWndnMUU1TTZPUVBYTWgtaGY?oc=5) （2026-06-12 07:04）
 - [中国平安股价创近一年新高，摩根士丹利将其调入重点观察名单 - Jiemian.com](https://news.google.com/rss/articles/CBMiWEFVX3lxTFBzT0dYRHJIOWN3RjVadVI5Rk5qRW5rMG9Sc2dhLTZzQzBUWkhYNkxyNmhyNWJiRms3eUtpeWljNG1TV0tWOGVKVUFpX1hFSmgzcnprZFdBZTc?oc=5) （2025-12-08 08:00）
+- [近1000亿沪深300ETF遭抛售，普通投资者怎么办？ - caiwennews.com](https://news.google.com/rss/articles/CBMiXEFVX3lxTE1LTno1OFc3WFZIaUlyemJ3VnRaMVk5Z3VLWWc4WXZzN0VGd0VxMXNBU3pma3VybFZhUXZ1WXV3amFPV3dtRW01UldhZmhvekN4TnNLblZJbWFfSVB3?oc=5) （2026-01-20 08:00）
 
 ### 联影医疗（688271）
 
-**原因：** 联影医疗跌5.99%，医疗器械板块回调，医药ETF走平反映板块缺乏催化。
+**原因：** 医药板块回调，虽6月12日主力资金净买入6897万元仍难挡板块整体走弱
 
 **证据：**
 - [医药ETF易方达（512010）涨0.00%，成交额3.97亿元 - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTE5wRXdWVGJsWkZxbU9vcEFRNzdmWTI3aEhmRnZGSlJYZXplZDhJSlppUGhUMHhuMzVrbC11RXN0ZmRrNE8wc3d1ZG13LTkyeGphdmo0Q18tNlBJR1YzWGp2Y0pUWndUY3otX0xDcjU0bDBHSWo0NjlBWldqenRGUQ?oc=5) （2026-06-11 07:01）
@@ -273,15 +273,15 @@
 
 ### 中国铝业（601600）
 
-**原因：** 中国铝业跌5.92%，有色板块内部分化，铝业股回调，本周累计跌12.09%。
+**原因：** 有色铝板块回调，本周累计-12.09%跌幅扩大，周期股资金流出
 
 **证据：**
-- [华商未来主题混合净值上涨3.60% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTFByWGF0cTB1NVA0Tk5Pdk1yR2dqWWJsSU5UUTdGVVhwZWcwdUt0bmE0dGx5Q3ZaUzgta3RieFVGUW5BUTBoTEZUQ1N4MlNZWnpNOXBqbGpGOURhZ1JTemU3M2tjT1BqdkRoMGZtUzRvWlRMM01KSFZKRFZaSHRvQQ?oc=5) （2026-06-15 21:03）
 - [黄金股ETF华夏 (159562): 华夏基金管理有限公司关于旗下基金投资关联方承销证券 - 中财网](https://news.google.com/rss/articles/CBMiVkFVX3lxTE0xOUI3RFJqTmloNVpvNi1GVHRIbVdKZUsxbC1rUHIwUU1KX09CdjdtNnNBXzkybkZuRWtsUzJrQWZNd2FlOEVpbDBrcVZjbGRYbVN5Wjl3?oc=5) （2026-06-03 09:20）
+- [孔明直播：《6月1日热点信息+个股公告》 - 财经号](https://news.google.com/rss/articles/CBMia0FVX3lxTE1LYnNCUmJwc0JGZll1UmlYU1VrWEhVc1pPVVJJSEhSOEQyMjNwN2hFcl9OZXFBNHBMVjBLLVM0SEk0ZVhhWDhsOU1fMjg3bERBRkptR29ISFBJSE9Ob3Y3OEtxMjViVUo1eEJR?oc=5) （2026-05-31 11:14）
 
 ### 中国人寿（601628）
 
-**原因：** 中国人寿跌5.89%，保险板块集体下跌，权益资产波动拖累投资收益预期。
+**原因：** 保险板块今年跌超9%延续回调，权益资产波动拖累投资端
 
 **证据：**
 - [中国平安股价创近一年新高，摩根士丹利将其调入重点观察名单 - Jiemian.com](https://news.google.com/rss/articles/CBMiWEFVX3lxTFBzT0dYRHJIOWN3RjVadVI5Rk5qRW5rMG9Sc2dhLTZzQzBUWkhYNkxyNmhyNWJiRms3eUtpeWljNG1TV0tWOGVKVUFpX1hFSmgzcnprZFdBZTc?oc=5) （2025-12-08 08:00）
@@ -289,15 +289,15 @@
 
 ### 荣盛石化（002493）
 
-**原因：** 荣盛石化跌5.80%，石化板块走弱，油价预期与需求疲软拖累。
+**原因：** 石化化工板块回调，无明确个股利好，广发系基金重仓股调整压力
 
 **证据：**
-- [2026年A股市场3月策略-月度投资策略报告 - 证券市场周刊](https://news.google.com/rss/articles/CBMiZEFVX3lxTE03QU1YZW51QTZib1NsZE1taGs1UEdBMDMtZzcwSV9QMm00OUxIRG1VWnFNenFGWHFVWmtvaFNTYXpsckdOLWVwZkFnb3dkREpoWHhpY2xWanpmZGtRQlBDbVZPUkk?oc=5) （2026-03-03 08:00）
-- [嘉实新趋势混合C净值下跌0.74% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTE5GQkJPQ1hlN2JFUnZNUWt2U0FGc01rankxRlVNOTREYUU2d1pMYnpQMXVLTEFLeWxFYVZyVzZYTlpxVlQtOVlVTDlLWkhnaTBzdGRhVlVncTJZU3RJQTZJRF8wbTloaWktLUUzVkpsR3lSSkNvU25WeWxrMXVHQQ?oc=5) （2026-06-10 21:17）
+- [广发聚丰混合C净值下跌1.82% - 新浪财经](https://news.google.com/rss/articles/CBMihAFBVV95cUxPTlFJejZxdGYxbmlnOHlmSHEyWDE0ZHV1Rm9NVElwNnZFc3pTSkszRU5rOGp6SzkzT2FfdGdxZGxVaDdremhjdWxoSm43Q3IyR0pCeG1xWHBQZzF6LWU3TlpwVWE0TnpoRjVmWjNuaUpqbTNrUTdRRGw2aTRQZ2FhYWR3RGc?oc=5) （2026-05-30 07:00）
+- [广发优势成长股票A净值下跌1.37% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTE1xWWV4SmlzNHFiTXBHenVyeTdOaGptSjR6b0JUcWE2R29Ld0htMFpuRFNvdjhSMlJfTG1zeFdOUTZCVEpxUlpVSVdKajB1NnVOaHNEcG5QbXpnWVpLNm5sTzYwWkFZY1ZKNVNnUXAxSVk5NGJzMlBUTnQzVzF5dw?oc=5) （2026-05-30 07:00）
 
 ### 东方盛虹（000301）
 
-**原因：** 东方盛虹跌5.54%，石化产业链联动下跌，本周累计跌9.17%。
+**原因：** 石化化工板块回调，本周累计-9.17%，周期权重股集体走弱
 
 **证据：**
 - [广发优势成长股票C净值上涨2.76% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTFBEUTUwYmsyUHI5bE1pNk9TdXBpelBUckE3ZUxBeVppc2ZPSFdTT2VtTGxSUGR4RDJfcG1pcDNZaEFkUVB1Q1o1d0c1cFpwemVTQXRaSVAyT2cxWEl2YU5YMVpZd1RldU9wdkVEeVpMSk5BZE42N3hLdlQ4RTlHQQ?oc=5) （2026-06-12 21:54）
@@ -305,7 +305,7 @@
 
 ### 海尔智家（600690）
 
-**原因：** 海尔智家跌5.08%，家电板块回调，消费股资金流出流向科技成长。
+**原因：** 家电板块回调，无明确个股利好，消费权重股资金流出
 
 **证据：**
 - [天弘新活力混合发起C净值下跌1.69% - 新浪财经](https://news.google.com/rss/articles/CBMihAFBVV95cUxQY196MF9Vd2xnQ2lrbXJZVURacWtvajRiWXVKTFdiNlllZkhuNWgzSWxZSzgxcGVqTDA2eFVtYTJ4THptSjNDVmFmMkRLb1VTeVB1TkxURElKZXZJTlFqWGNvNHo2YU1EQ2I3blNsbk4wRGp4RzlrU2h1TFpPUWZ5S1dvRzE?oc=5) （2026-06-16 22:27）
@@ -313,7 +313,7 @@
 
 ### 圆通速递（600233）
 
-**原因：** 圆通速递跌5.05%，物流板块走弱，缺乏催化跟随大盘价值股回调。
+**原因：** 物流板块回调，无明确个股利好，跟随防御性板块走弱
 
 **证据：**
 - [博时新收益混合A净值上涨4.33% - 新浪财经](https://news.google.com/rss/articles/CBMihAFBVV95cUxPSWM4M1FwSEZfYlhkT1FyaWVPdlFzTHl1d2xWUFUwalk1V0FlSWk3UENNLUhwWU16Qk1fdWY4NEZqaVVGUG5yNklzWl85a0swWURBaVBiaTl2RVpYRnhMV2FhTVFpelp1djZ0WWZpZDB0ckNvZjRacVR3X2pqN1BIMWFsR3E?oc=5) （2026-06-17 21:11）
@@ -321,7 +321,7 @@
 
 ### 华电新能（600930）
 
-**原因：** 华电新能跌5.04%，新能源发电板块回调，资金从防御性公用事业切换至成长股。
+**原因：** 指数样本股调整涉及成分股变化，电力新能源板块回调叠加调仓压力
 
 **证据：**
 - [涉及中际旭创、胜宏科技等，A股多条重要指数样本股调整 - 财联社](https://news.google.com/rss/articles/CBMiSEFVX3lxTE9mRXJvZERub0dRaW5FSkZPRFVtZFIySzREaDgxMmNMV2VOSG9CcGZLVjRLc2RqOEEwcDZKZnVDTl9NOGtJWE1CMw?oc=5) （2025-11-28 12:19）
@@ -329,7 +329,7 @@
 
 ### 中国人保（601319）
 
-**原因：** 中国人保跌5.00%，保险板块联动下跌，险企业绩承压。
+**原因：** 保险板块今年跌超9%延续回调，虽2025年利润股价双高仍受板块情绪拖累
 
 **证据：**
 - [保险板块今年跌超9%！基本面稳健为何难挡回调 - 21财经](https://news.google.com/rss/articles/CBMijwFBVV95cUxQNGp1Y0RMOXBEaTFGLVR3WlhrR1lsSWYtdEp0eXlOV0hOWS03cjMyc09BbUE2NmM0WlpwaTFSd3JuUXhTeG5HUHZPbU5hYU95cXFuQkpnQ056UkJOUXd4NE1teFJ2dF96T0xiNkdqdm9PSm82WTR5SUdMeTAzVUU4ZVdmV0xIU0Z5WDdhTDMwTQ?oc=5) （2026-03-09 07:00）
@@ -337,15 +337,15 @@
 
 ### 中国银河（601881）
 
-**原因：** 中国银河跌4.80%，券商板块走弱，金融股整体回调，尽管2025年净利润增24.81%。
+**原因：** 券商板块回调，虽2025年净利润125.2亿元同比+24.81%仍受金融权重集体走弱影响
 
 **证据：**
+- [中国银河等在黑龙江新设创投基金 - 新浪财经](https://news.google.com/rss/articles/CBMibkFVX3lxTE0wNjAxVHV6ek5ETlVzSFVjS1JNRWlfMVMzS1BfVXh5dUF3V1VBUGFZa09TUldxVjJQRU5vVGk3R3hjcFZKZWRnb0h4dW9hRndyZDBrc0oyMlVLX0VGSjVHT0t5SjhCWHp1S1F5eURR?oc=5) （2026-06-17 08:05）
 - [中国银河：2025年净利润125.2亿元 同比增长24.81% 拟10派2.25元 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTFAwYlp6ejZHU1FQdjlKMThjUFJHeGdKYnhoTkR1UlhRb0xoM3BoUTRfMmNwZDhsbmFEX2JUazBpNkZTVmRrOW5NWl9pMzE3cXVSREljVVQ0c0NjQk8wWm16anZlR21aZw?oc=5) （2026-04-01 07:00）
-- [香港交易所(00388)_香港交易所怎么样 - 热门讨论 - 雪球](https://news.google.com/rss/articles/CBMiUEFVX3lxTE92aUhDQkpoSW4welNmMVJHWEwtWFRmODdfa1NObUZxX2xFNWlrMTZkNWljVGFyLTNUYTA2ZUpSMUR2a3FXVEIzRHJfQlRCdjR4?oc=5) （2016-11-30 05:36）
 
 ### 山东黄金（600547）
 
-**原因：** 山东黄金跌4.78%，黄金股回调，尽管净利增61%但股价已跌25%，避险情绪降温。
+**原因：** 黄金股回调，年内累计-38.51%，虽净利增61%但股价已大跌25%，获利了结压力
 
 **证据：**
 - [净利增61%！这家黄金有色龙头股价跌25%，受券商看好 - 证券市场周刊](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9qa0NWX01XaEF1WEM1dl96SS1wbGFMS05GME5Rb1hheFVYZHZIX3h4Uk50XzRfREU1RmNYYVI1VHJMTXo5NUQ4emRKZ1ZSMlZqUTRDTkc0MHJhN2p6azhWX0hVY18?oc=5) （2026-05-28 08:52）
@@ -353,15 +353,15 @@
 
 ### 浙能电力（600023）
 
-**原因：** 浙能电力跌4.64%，电力公用事业板块回调，资金轮动至成长股。
+**原因：** 电力板块回调，富时中国A50指数季度调整资金再平衡，防御股走弱
 
 **证据：**
-- [富时中国A50指数季度调整：纳入中国船舶、天孚通信、万华化学 - 新浪财经](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPR2VKVndjeDZrZURLN0UxaGo4XzJ5UjBhVzM4Ry01SEhkOTRuNTBnSUZLMFVHaVhYemxyUEdlM0RCY3ktWWhfLVoxNGNRd3Rfb0k2WEZYQ1lRM01peXpwNC1OWVNpamJtZ1l2aG5IX0hINW5KclNCY0lTRnZTckZzbHJVTmFwX0cxTFlObE5TdGRjLUJLclVJWGJKSWFJZWQ0VF9udnBUY2JUV3BIcVhPc1BoQm5KNHVvYUdiV2owd1VVemtwUjRiYndELThScUtNS0E?oc=5) （2026-05-17 19:35）
-- [政策支持优质证券公司适度拓展资本空间，沪深300ETF平安(510390)冲击4连涨，跟踪指数估值处于历史低位 - FX168财经](https://news.google.com/rss/articles/CBMiUkFVX3lxTE9mcDdsX1VVa05uRG50RUpvYUs3NFAzR29YTTNNVGhYZkNvdkpGR2Vrb2h4RS16Rm1zQldyb0NsM29uT0RQRzc5VWVNT0Y5X1hwNnc?oc=5) （2024-09-23 07:00）
+- [富时中国A50指数季度调整：纳入中国船舶、天孚通信、万华化学 - 新浪财经](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPR2VKVndjeDZrZURLN0UxaGo4XzJ5UjBhVzM4Ry01SEhkOTRuNTBnSUZLMFVHaVhYemxyUEdlM0RCY3ktWWhfLVoxNGNRd3Rfb0k2WEZYQ1lRM01peXpwNC1OWVNpamJtZ1l2aG5IX0hINW5KclNCY0lTRnZTckZzbHJVTmFwX0cxTFlObE5TdGRjLUJLclVJWGJKSWFJZWQ0VF9udnBUY2JUV3BIcVhPc1BoQm5KNHVvYUdiV2owd1VVemtwUjRiYndELThScUtNS0E?oc=5) （2026-03-04 08:00）
+- [万家颐和A净值下跌0.99% - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTE1ua2NLcDAwVWpoU2VNdDdNeVg3bDJQU2dPZEV0YjRjdkNFbU9nbkYwMVVvcHBCTEZiZ2FPZ3BNeVRyczY0VTY0bEJWQmJPeUhJUmIxUkk1UXBYOWl1Mm9QMXdKUFBrVG5Md3BaQXhhWWpBSWZrcldxQjFnNkVPZw?oc=5) （2026-06-10 23:09）
 
 ### 中国能建（601868）
 
-**原因：** 中国能建跌4.50%，基建央企回调，尽管算电协同与氢能投产题材但资金流出。
+**原因：** 基建板块回调，虽算电协同+氢能投产+央企储能利好兑现，资金切换至科技成长
 
 **证据：**
 - [中国能建：算电协同+氢能投产+央企储能 - 财富号](https://news.google.com/rss/articles/CBMia0FVX3lxTE4ycWJ3Q04xVmVjQm80MGItamFuamVpbUJ1SzdSNnRLZ3RMWGVIUE5qS1FjQjdDSnVVSWk2SnFCYzJJOXhuS3N1WHpCX0tnWFFFVF9uWjdlazFyLXd5akk4RlJ6X3BfSGk3Mko0?oc=5) （2026-05-18 07:00）
@@ -369,7 +369,7 @@
 
 ### 中国电建（601669）
 
-**原因：** 中国电建跌4.45%，基建央企联动下跌，资金流出周期价值股。
+**原因：** 基建板块回调，基建ETF盘中涨超2.4%但中国化学领涨下中国电建资金流出
 
 **证据：**
 - [财中ETF风向标｜基建ETF广发(516970)盘中涨超2.4% 中国化学等成分股领涨 - 财中社](https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKdTBrZUE0dzR6bFVoODROWjJQZTN3U0oyaVlZeUhySFdRU01xaUE2b2J5TlhMdlJFb1luLVhkU1RZWDhZVGZmYTdra1JoMl9JNHZBSTdXU0ZLYnVoM3N2cUtJNzY?oc=5) （2026-06-17 07:04）
@@ -377,11 +377,11 @@
 
 ### 渝农商行（601077）
 
-**原因：** 渝农商行跌4.43%，银行板块回调，年初以来银行股"速冻"行情延续。
+**原因：** 银行板块开年"速冻"延续，年初10天跌近5%登顶跌幅榜，板块情绪持续低迷
 
 **证据：**
-- [沪深300红利ETF建信（512530）跌0.25%，成交额640.13万元 - 新浪财经](https://news.google.com/rss/articles/CBMifkFVX3lxTE5ZZGowTWp3eXlVU0Rpd0pZOWREQW84djJvYjlzcG5rR0xlSUZkR3Ewek5DaXlKeUZjeERqeGgtNnlLN1ZVdjlmRVVzaDhRbHZFMlc1RTJQU3FEWkFMcWxkSm8xblVRQ2NiZDFqbWxTT0hvWlczY3NjMEFaVFNfdw?oc=5) （2026-06-11 07:02）
 - [银行股开年“速冻”！10天跌近 5%登顶跌幅榜，超4800亿市值蒸发，业绩预喜白给？ - 时代在线](https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YMzZET0trMDJ3bFN2bWRjVXVIM2h6TGJKY0gwQmNIS0twRTVuajJ0XzhXTGdiTG05MWtBVjhaZnJPcjhtZXlKakJDUDUydHJ6NUhiZA?oc=5) （2026-01-16 08:00）
+- [2025年A股银行股超八成上涨：农行涨超50%居榜首，7只下跌 - Jiemian.com](https://news.google.com/rss/articles/CBMiWEFVX3lxTE53akNORWQ1Sk1kRTUyY0gwYXBkQlQ1Qkg3M1hrdUpLTjJJRHBsVnNIYk1hZUhfV2cwRUg1YndLTU1QbzhkOUg2NndSb2dHNzdnNjFkRVFrVEs?oc=5) （2025-12-31 08:00）
 
 ---
 
