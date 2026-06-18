@@ -28,6 +28,10 @@ AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codebuddy")   # "codex" or "codebu
 NEWS_FETCH_LIMIT = int(os.environ.get("CSI300_NEWS_FETCH_LIMIT", "8"))
 NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_NEWS_PROMPT_LIMIT", "5"))
 NEWS_EVIDENCE_LIMIT = int(os.environ.get("CSI300_NEWS_EVIDENCE_LIMIT", "2"))
+# Score returned for candidates that must not enter the model evidence pool
+# (empty title, or title that does not reference the stock at all). Chosen
+# below any plausible relevant score so rank_news_candidates can drop them.
+REJECT_SCORE = -100
 EASTMONEY_PUSH2 = "https://push2.eastmoney.com/api/qt/clist/get"
 EASTMONEY_PUSH2_FALLBACK = "https://push2delay.eastmoney.com/api/qt/clist/get"
 EASTMONEY_KLINE = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
@@ -162,15 +166,31 @@ def compact_news_title(title):
 
 
 def news_candidate_score(news, stock_name, stock_code, target_date=None):
-    """Rank candidate news before sending a compact set to the model."""
+    """Rank candidate news before sending a compact set to the model.
+
+    Hard relevance gate: a candidate whose title mentions neither the stock
+    name nor the stock code is rejected with REJECT_SCORE. This prevents
+    broad-market wrap-ups and unrelated fund NAV announcements (which Google
+    News RSS returns via full-text matching) from entering the model's
+    evidence pool simply because they happen to contain generic finance
+    keywords like "涨" and are recent.
+    """
     title = normalize_inline_text(news.get("title", ""))
     if not title:
-        return -100
+        return REJECT_SCORE
+
+    name_hit = bool(stock_name) and stock_name in title
+    code_hit = bool(stock_code) and stock_code in title
+    if not name_hit and not code_hit:
+        # Full-text RSS noise: title does not reference this stock at all.
+        # Penalize below any plausible relevant score so rank_news_candidates
+        # drops it unless the entire pool is equally irrelevant.
+        return REJECT_SCORE
 
     score = 0
-    if stock_name and stock_name in title:
+    if name_hit:
         score += 20
-    if stock_code and stock_code in title:
+    if code_hit:
         score += 10
     if "沪深300" in title:
         score += 3
@@ -197,7 +217,14 @@ def news_candidate_score(news, stock_name, stock_code, target_date=None):
 
 
 def rank_news_candidates(news_list, stock_name, stock_code, target_date=None, limit=NEWS_PROMPT_LIMIT):
-    """Deduplicate and keep the strongest news candidates for evidence selection."""
+    """Deduplicate and keep the strongest news candidates for evidence selection.
+
+    Candidates scoring REJECT_SCORE (title does not reference this stock) are
+    dropped entirely rather than re-ranked, so the model never sees irrelevant
+    full-text RSS noise. If every candidate is rejected the pool may be shorter
+    than ``limit`` (possibly empty); the caller treats an empty pool as "no
+    evidence available" instead of fabricating unrelated evidence.
+    """
     ranked = []
     seen = set()
     for original_index, news in enumerate(news_list):
@@ -207,8 +234,12 @@ def rank_news_candidates(news_list, stock_name, stock_code, target_date=None, li
         if not dedupe_key or dedupe_key in seen:
             continue
         seen.add(dedupe_key)
+        score = news_candidate_score(news, stock_name, stock_code, target_date)
+        if score <= REJECT_SCORE:
+            # Hard reject: title does not mention this stock at all.
+            continue
         ranked.append((
-            news_candidate_score(news, stock_name, stock_code, target_date),
+            score,
             -original_index,
             news,
         ))
