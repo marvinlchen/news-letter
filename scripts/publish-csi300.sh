@@ -23,11 +23,12 @@ if git remote get-url origin >/dev/null 2>&1; then
 fi
 
 git add "published/csi300/${REPORT_DATE}.md" published/csi300/latest.md
-if git diff --cached --quiet; then
+if git diff --cached --quiet -- "published/csi300/${REPORT_DATE}.md" published/csi300/latest.md; then
   echo "publish-csi300: report is unchanged"
   exit 0
 fi
 
-git commit -m "Publish CSI300 analysis ${REPORT_DATE}"
+git commit --only "published/csi300/${REPORT_DATE}.md" published/csi300/latest.md \
+  -m "Publish CSI300 analysis ${REPORT_DATE}"
 git push origin "HEAD:$PUBLISH_BRANCH"
 echo "Published CSI300 report for $REPORT_DATE"
