@@ -16,18 +16,24 @@ import random
 import argparse
 import tempfile
 import shutil
+import html
 import urllib.request
 import urllib.parse
 from pathlib import Path
 from datetime import datetime, timedelta
 from email.utils import parsedate_to_datetime
+from xml.etree import ElementTree as ET
 
 # ── 配置 ────────────────────────────────────────────────────────────────────────
 
 AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codebuddy")   # "codex" or "codebuddy"
 NEWS_FETCH_LIMIT = int(os.environ.get("CSI300_NEWS_FETCH_LIMIT", "8"))
-NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_NEWS_PROMPT_LIMIT", "5"))
+NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_NEWS_PROMPT_LIMIT", "6"))
 NEWS_EVIDENCE_LIMIT = int(os.environ.get("CSI300_NEWS_EVIDENCE_LIMIT", "2"))
+NEWS_LOOKBACK_DAYS = int(os.environ.get("CSI300_NEWS_LOOKBACK_DAYS", "7"))
+NEWS_SOURCE_LIMIT = int(os.environ.get("CSI300_NEWS_SOURCE_LIMIT", "6"))
+ANNOUNCEMENT_FETCH_LIMIT = int(os.environ.get("CSI300_ANNOUNCEMENT_FETCH_LIMIT", "6"))
+CNINFO_LOOKBACK_DAYS = int(os.environ.get("CSI300_CNINFO_LOOKBACK_DAYS", str(NEWS_LOOKBACK_DAYS)))
 # Score returned for candidates that must not enter the model evidence pool
 # (empty title, or title that does not reference the stock at all). Chosen
 # below any plausible relevant score so rank_news_candidates can drop them.
@@ -37,6 +43,7 @@ EASTMONEY_PUSH2_FALLBACK = "https://push2delay.eastmoney.com/api/qt/clist/get"
 EASTMONEY_KLINE = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
 CSI300_BOARD_FS = "b:BK0500"
 HISTORICAL_RANK_CACHE = {}
+CNINFO_STOCK_INDEX_CACHE = None
 PUSH2_HEADERS = {
     "User-Agent": "Mozilla/5.0",
     "Referer": "https://quote.eastmoney.com/",
@@ -47,6 +54,15 @@ NEWS_RELEVANCE_KEYWORDS = (
     "回购", "减持", "增持", "分红", "定增", "并购", "收购", "重组", "上市",
     "指数", "调入", "调出", "ETF", "资金", "主力", "北向", "龙虎榜",
     "评级", "买入", "目标价", "涨", "跌", "涨停", "跌停", "需求", "价格",
+)
+TRUSTED_STOCK_NEWS_SITES = (
+    ("东方财富", "site:eastmoney.com"),
+    ("新浪财经", "site:finance.sina.com.cn"),
+    ("证券时报", "site:stcn.com"),
+    ("财联社", "site:cls.cn"),
+    ("21财经", "site:21jingji.com"),
+    ("每日经济新闻", "site:nbd.com.cn"),
+    ("第一财经", "site:yicai.com"),
 )
 AI_RESPONSE_SCHEMA = {
     "type": "object",
@@ -192,6 +208,10 @@ def news_candidate_score(news, stock_name, stock_code, target_date=None):
         score += 20
     if code_hit:
         score += 10
+    if news.get("source_type") == "announcement":
+        score += 1
+    elif news.get("source_type") == "trusted_news":
+        score += 3
     if "沪深300" in title:
         score += 3
     for keyword in NEWS_RELEVANCE_KEYWORDS:
@@ -228,6 +248,8 @@ def rank_news_candidates(news_list, stock_name, stock_code, target_date=None, li
     ranked = []
     seen = set()
     for original_index, news in enumerate(news_list):
+        if not news_candidate_in_window(news, target_date=target_date):
+            continue
         title_key = compact_news_title(news.get("title", ""))
         link_key = news.get("link", "")
         dedupe_key = title_key or link_key
@@ -245,6 +267,18 @@ def rank_news_candidates(news_list, stock_name, stock_code, target_date=None, li
         ))
     ranked.sort(key=lambda item: (item[0], item[1]), reverse=True)
     return [item[2] for item in ranked[:limit]]
+
+
+def news_candidate_in_window(news, target_date=None, lookback_days=NEWS_LOOKBACK_DAYS):
+    """Keep dated candidates inside the unified CSI300 news lookback window."""
+    if not target_date:
+        return True
+    news_dt = parse_report_datetime(news.get("pub_date", ""))
+    target_dt = parse_report_datetime(target_date or "")
+    if not news_dt or not target_dt:
+        return True
+    age_days = (target_dt.date() - news_dt.date()).days
+    return -1 <= age_days <= lookback_days
 
 
 def repair_unescaped_string_quotes(text):
@@ -987,43 +1021,234 @@ def enrich_with_extended_changes(stocks, target_date, max_workers=5):
     return stocks
 
 
-def search_stock_news(stock_name, stock_code, limit=NEWS_FETCH_LIMIT):
-    """通过 Google News RSS 搜索个股相关新闻，并提取发布时间"""
-    query = urllib.parse.quote(f"{stock_name} {stock_code} 沪深300")
-    rss_url = f"https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+def format_rss_pub_date(pub_date):
+    """Format RSS/announcement timestamps as compact report time."""
+    if not pub_date:
+        return ""
     try:
-        req = urllib.request.Request(rss_url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            xml = resp.read().decode("utf-8", errors="ignore")
-            items = re.split(r"<item>", xml)[1:]
-            news_list = []
-            for item in items[:limit]:
-                t = re.search(r"<title>(.*?)</title>", item, re.DOTALL)
-                l = re.search(r"<link>(.*?)</link>", item, re.DOTALL)
-                d = re.search(r"<pubDate>(.*?)</pubDate>", item, re.DOTALL)
-                if t and l:
-                    title = re.sub(r"<!\[CDATA\[(.*?)\]\]>", r"\1", t.group(1)).strip()
-                    link  = l.group(1).strip()
-                    pub_date = d.group(1).strip() if d else ""
-                    # 格式化时间：RFC 822 → YYYY-MM-DD HH:MM
-                    if pub_date:
-                        try:
-                            dt = parsedate_to_datetime(pub_date)
-                            pub_date = dt.strftime("%Y-%m-%d %H:%M")
-                        except Exception:
-                            pass
-                    news_list.append({"title": title, "link": link, "pub_date": pub_date})
-            return news_list
+        dt = parsedate_to_datetime(str(pub_date))
+        return dt.strftime("%Y-%m-%d %H:%M")
     except Exception as e:
-        print(f"[WARN] 搜索新闻失败 ({stock_name}): {e}", file=sys.stderr)
+        return str(pub_date)
+
+
+def parse_google_rss_items(xml, limit=NEWS_FETCH_LIMIT, source_type="google_news"):
+    """Parse Google News RSS items into stock-news candidate dicts."""
+    news_list = []
+    try:
+        root = ET.fromstring(xml)
+        items = root.findall("./channel/item")
+        for item in items[:limit]:
+            title = normalize_inline_text(html.unescape(item.findtext("title") or ""))
+            link = normalize_inline_text(html.unescape(item.findtext("link") or ""))
+            pub_date = format_rss_pub_date(item.findtext("pubDate") or "")
+            if title and link:
+                news_list.append(
+                    {
+                        "title": title,
+                        "link": link,
+                        "pub_date": pub_date,
+                        "source_type": source_type,
+                    }
+                )
+        return news_list
+    except Exception:
+        pass
+
+    items = re.split(r"<item>", xml)[1:]
+    for item in items[:limit]:
+        t = re.search(r"<title>(.*?)</title>", item, re.DOTALL)
+        l = re.search(r"<link>(.*?)</link>", item, re.DOTALL)
+        d = re.search(r"<pubDate>(.*?)</pubDate>", item, re.DOTALL)
+        if t and l:
+            title = re.sub(r"<!\[CDATA\[(.*?)\]\]>", r"\1", t.group(1)).strip()
+            title = normalize_inline_text(html.unescape(title))
+            link = normalize_inline_text(html.unescape(l.group(1).strip()))
+            pub_date = format_rss_pub_date(d.group(1).strip() if d else "")
+            news_list.append(
+                {
+                    "title": title,
+                    "link": link,
+                    "pub_date": pub_date,
+                    "source_type": source_type,
+                }
+            )
+    return news_list
+
+
+def fetch_google_news_rss(query, limit=NEWS_FETCH_LIMIT, source_type="google_news"):
+    """Fetch a Google News RSS query and parse candidate items."""
+    rss_url = (
+        "https://news.google.com/rss/search?q="
+        + urllib.parse.quote(query)
+        + "&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+    )
+    req = urllib.request.Request(rss_url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        xml = resp.read().decode("utf-8", errors="ignore")
+    return parse_google_rss_items(xml, limit=limit, source_type=source_type)
+
+
+def stock_news_queries(stock_name, stock_code):
+    """Build broad and trusted-site stock news queries."""
+    trusted_sites = " OR ".join(site_query for _, site_query in TRUSTED_STOCK_NEWS_SITES)
+    return [
+        (
+            f"{stock_name} {stock_code} 沪深300 when:{NEWS_LOOKBACK_DAYS}d",
+            NEWS_FETCH_LIMIT,
+            "google_news",
+        ),
+        (
+            f"{stock_name} {stock_code} ({trusted_sites}) when:{NEWS_LOOKBACK_DAYS}d",
+            NEWS_SOURCE_LIMIT,
+            "trusted_news",
+        ),
+    ]
+
+
+def cninfo_headers():
+    return {
+        "User-Agent": "Mozilla/5.0",
+        "Referer": "http://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search",
+        "Accept": "application/json,text/plain,*/*",
+    }
+
+
+def load_cninfo_stock_index():
+    """Load and cache CNInfo stock code to orgId mapping."""
+    global CNINFO_STOCK_INDEX_CACHE
+    if CNINFO_STOCK_INDEX_CACHE is not None:
+        return CNINFO_STOCK_INDEX_CACHE
+
+    url = "http://www.cninfo.com.cn/new/data/szse_stock.json"
+    req = urllib.request.Request(url, headers=cninfo_headers())
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        payload = json.loads(resp.read().decode("utf-8", errors="ignore"))
+
+    stock_map = {}
+    for item in payload.get("stockList", []):
+        code = item.get("code")
+        org_id = item.get("orgId")
+        if code and org_id:
+            stock_map[code] = {
+                "org_id": org_id,
+                "name": item.get("zwjc", ""),
+            }
+    CNINFO_STOCK_INDEX_CACHE = stock_map
+    return stock_map
+
+
+def cninfo_market_params(stock_code):
+    if stock_code.startswith("6"):
+        return "sse", "sh"
+    return "szse", "sz"
+
+
+def cninfo_date_window(target_date):
+    target_dt = parse_report_datetime(target_date or "") or datetime.now()
+    start = (target_dt - timedelta(days=CNINFO_LOOKBACK_DAYS)).strftime("%Y-%m-%d")
+    end = (target_dt + timedelta(days=1)).strftime("%Y-%m-%d")
+    return f"{start}~{end}"
+
+
+def format_cninfo_timestamp(value):
+    if not value:
+        return ""
+    try:
+        return datetime.fromtimestamp(int(value) / 1000).strftime("%Y-%m-%d")
+    except Exception:
+        return ""
+
+
+def clean_cninfo_title(title):
+    title = re.sub(r"</?em>", "", title or "")
+    return normalize_inline_text(html.unescape(title))
+
+
+def search_cninfo_announcements(stock_name, stock_code, target_date=None, limit=ANNOUNCEMENT_FETCH_LIMIT):
+    """Fetch official company announcements from CNInfo."""
+    try:
+        stock_meta = load_cninfo_stock_index().get(stock_code)
+        if not stock_meta:
+            return []
+
+        column, plate = cninfo_market_params(stock_code)
+        params = {
+            "pageNum": "1",
+            "pageSize": str(limit),
+            "column": column,
+            "tabName": "fulltext",
+            "plate": plate,
+            "stock": f"{stock_code},{stock_meta['org_id']}",
+            "searchkey": "",
+            "secid": "",
+            "category": "",
+            "trade": "",
+            "seDate": cninfo_date_window(target_date),
+            "sortName": "",
+            "sortType": "",
+            "isHLtitle": "true",
+        }
+        req = urllib.request.Request(
+            "http://www.cninfo.com.cn/new/hisAnnouncement/query",
+            data=urllib.parse.urlencode(params).encode(),
+            headers=cninfo_headers(),
+        )
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            payload = json.loads(resp.read().decode("utf-8", errors="ignore"))
+
+        news_list = []
+        for item in (payload.get("announcements") or [])[:limit]:
+            title = clean_cninfo_title(item.get("announcementTitle", ""))
+            adjunct_url = item.get("adjunctUrl", "")
+            if not title or not adjunct_url:
+                continue
+            news_list.append(
+                {
+                    "title": f"{stock_name}：{title} - 巨潮资讯公告",
+                    "link": "http://static.cninfo.com.cn/" + adjunct_url.lstrip("/"),
+                    "pub_date": format_cninfo_timestamp(item.get("announcementTime")),
+                    "source_type": "announcement",
+                }
+            )
+        return news_list
+    except Exception as e:
+        print(f"[WARN] 搜索巨潮公告失败 ({stock_name}): {e}", file=sys.stderr)
         return []
 
 
+def search_stock_news(stock_name, stock_code, target_date=None, limit=NEWS_FETCH_LIMIT):
+    """Search stock news from Google News plus trusted stock-news sites."""
+    news_list = []
+    for query, query_limit, source_type in stock_news_queries(stock_name, stock_code):
+        try:
+            news_list.extend(
+                fetch_google_news_rss(query, limit=query_limit, source_type=source_type)
+            )
+        except Exception as e:
+            print(f"[WARN] 搜索新闻失败 ({stock_name}, {source_type}): {e}", file=sys.stderr)
+
+    news_list.extend(
+        search_cninfo_announcements(
+            stock_name,
+            stock_code,
+            target_date=target_date,
+            limit=ANNOUNCEMENT_FETCH_LIMIT,
+        )
+    )
+    return news_list
+
+
 def attach_news_candidates(stocks, target_date=None, fetch_limit=NEWS_FETCH_LIMIT, prompt_limit=NEWS_PROMPT_LIMIT):
-    """Attach ranked Google News RSS candidates for evidence selection."""
+    """Attach ranked news and announcement candidates for evidence selection."""
     for i, stock in enumerate(stocks, 1):
         print(f"  [news {i}/{len(stocks)}] {stock['code']} {stock['name']}", file=sys.stderr)
-        raw_news = search_stock_news(stock["name"], stock["code"], limit=fetch_limit)
+        raw_news = search_stock_news(
+            stock["name"],
+            stock["code"],
+            target_date=target_date,
+            limit=fetch_limit,
+        )
         stock["news"] = rank_news_candidates(
             raw_news,
             stock["name"],
