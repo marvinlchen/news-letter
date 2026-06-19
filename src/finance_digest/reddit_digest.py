@@ -964,6 +964,7 @@ def run_codex_reddit(
     topics: dict[str, dict[str, Any]],
     candidates: dict[str, list[RedditPost]],
     codex_bin: str,
+    model: str = "",
 ) -> dict[str, Any]:
     prompt, catalog = build_reddit_protocol_prompt(
         project_root, target_date, topics, candidates
@@ -975,6 +976,7 @@ def run_codex_reddit(
         1800,
         lambda raw: parse_reddit_protocol(raw, target_date, topics, catalog),
         "reddit digest",
+        model,
     )
 
 
@@ -1077,6 +1079,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--use-codex", action="store_true")
     parser.add_argument("--require-codex", action="store_true")
     parser.add_argument("--codex-bin", default=os.environ.get("CODEX_BIN", "codex"))
+    parser.add_argument("--codex-model", default=os.environ.get("CODEX_MODEL", ""))
     return parser.parse_args(argv)
 
 
@@ -1120,7 +1123,7 @@ def run(argv: list[str] | None = None) -> int:
     if args.use_codex and candidate_count:
         try:
             report = run_codex_reddit(
-                project_root, args.date, topics, candidates, args.codex_bin
+                project_root, args.date, topics, candidates, args.codex_bin, args.codex_model
             )
             mode = "codex"
         except Exception as exc:

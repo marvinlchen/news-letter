@@ -103,6 +103,7 @@ def run_agent_text(
     prompt: str,
     codex_bin: str,
     timeout: int,
+    model: str = "",
 ) -> str:
     if is_codebuddy_bin(codex_bin):
         completed = subprocess.run(
@@ -113,6 +114,7 @@ def run_agent_text(
                 "json",
                 "--tools",
                 "",
+                *([f"--model={model}"] if model else []),
                 prompt,
             ],
             cwd=project_root,
@@ -204,11 +206,12 @@ def run_protocol_with_retry(
     parser: Callable[[str], dict[str, Any]],
     label: str,
     max_attempts: int = 2,
+    model: str = "",
 ) -> dict[str, Any]:
     last_error: Exception | None = None
     current_prompt = prompt
     for attempt in range(max_attempts):
-        raw = run_agent_text(project_root, current_prompt, codex_bin, timeout)
+        raw = run_agent_text(project_root, current_prompt, codex_bin, timeout, model)
         try:
             return parser(raw)
         except Exception as exc:
