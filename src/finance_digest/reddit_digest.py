@@ -679,8 +679,8 @@ def collect_reddit_posts(
 def fallback_item(post: RedditPost, rank: int) -> dict[str, Any]:
     return {
         "rank": rank,
-        "title_zh": f"r/{post.subreddit} 当日重点讨论第{rank}项",
-        "title_original": post.title,
+"title_zh": post.title,
+"title_original": "",
         "subreddit": post.subreddit,
         "published_at": post.published_at.isoformat(),
         "url": post.url,
@@ -1012,23 +1012,20 @@ def render_reddit_markdown(
                 metrics.append(f"{item['num_comments']} 条评论")
             metrics.append(f"摘要采样 {item['sampled_comment_count']} 条评论")
             metrics.append(f"价值投资相关度 {item.get('investment_score', 0)}")
-            lines.extend(
-                [
-                    f"### {item['rank']}. {item['title_zh']}",
-                    "",
-                    f"- **原标题：** {item['title_original']}",
-                    f"- **社区热度：** {' / '.join(metrics)}",
-                    f"- **发布时间：** {item['published_at']}",
-                    f"- **原帖：** {item['url']}",
-                    f"- **讨论摘要：** {item['summary_zh']}",
-                    f"- **社区信号：** {item['community_signal_zh']}",
-                    f"- **基本面影响：** {item['fundamental_impact_zh']}",
-                    f"- **价值投资者视角：** {item['value_investor_takeaway_zh']}",
-                    f"- **关键风险：** {item['key_risks_zh']}",
-                    f"- **待验证数据：** {item['evidence_to_verify_zh']}",
-                    "",
-                ]
-            )
+            lines.append(f"### {item['rank']}. {item['title_zh']}")
+            lines.append("")
+            if item.get('title_original'):
+                lines.append(f"- **原标题：** {item['title_original']}")
+            lines.append(f"- **社区热度：** {' / '.join(metrics)}")
+            lines.append(f"- **发布时间：** {item['published_at']}")
+            lines.append(f"- **原帖：** {item['url']}")
+            lines.append(f"- **讨论摘要：** {item['summary_zh']}")
+            lines.append(f"- **社区信号：** {item['community_signal_zh']}")
+            lines.append(f"- **基本面影响：** {item['fundamental_impact_zh']}")
+            lines.append(f"- **价值投资者视角：** {item['value_investor_takeaway_zh']}")
+            lines.append(f"- **关键风险：** {item['key_risks_zh']}")
+            lines.append(f"- **待验证数据：** {item['evidence_to_verify_zh']}")
+            lines.append("")
     if source_errors:
         lines.extend(["## 数据源状态", ""])
         for error in source_errors:
