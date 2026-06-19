@@ -1045,7 +1045,7 @@ def load_successful_report(path: Path, target_date: date) -> dict[str, Any] | No
         return None
     if report.get("date") != target_date.isoformat():
         return None
-    if report.get("metadata", {}).get("mode") not in {"codex", "codex-preserved"}:
+    if report.get("metadata", {}).get("mode") == "rules-fallback":
         return None
     required_fields = {
         "community_signal_zh",
@@ -1125,7 +1125,7 @@ def run(argv: list[str] | None = None) -> int:
             report = run_codex_reddit(
                 project_root, args.date, topics, candidates, args.codex_bin, args.codex_model
             )
-            mode = "codex"
+            mode = Path(args.codex_bin).stem
         except Exception as exc:
             codex_error = str(exc)
 
@@ -1135,7 +1135,7 @@ def run(argv: list[str] | None = None) -> int:
         successful = load_successful_report(report_json, args.date)
         if successful is not None:
             report = successful
-            mode = "codex-preserved"
+            mode = f"{Path(args.codex_bin).stem}-preserved"
     report["metadata"] = {
         "mode": mode,
         "collector": client.mode,

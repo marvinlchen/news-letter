@@ -1,0 +1,673 @@
+{
+  "date": "2026-06-14",
+  "summary": "沪深300呈现显著结构性分化：半导体涨价周期与AI算力需求共振推动士兰微、生益科技等涨停，新能源（光伏+锂电+储能）受业绩预增与政策利好驱动强势领涨，亿纬锂能上半年业绩预增95%-110%带动锂电板块走强；跌幅端集中在化工、消费、地产及能源板块，新奥股份私有化告吹引发失望性抛售，维生素涨价潮后新和成高位回调，煤炭受监管收严拖累整体走低。",
+  "gainers_analysis": {
+    "sector_summary": "半导体涨价周期与AI算力需求共振，新能源（光伏+储能+锂电）受政策利好与业绩预增驱动，稀土板块受益于涨价预期，整体呈现科技成长风格占优",
+    "stocks": [
+      {
+        "code": "300014",
+        "name": "亿纬锂能",
+        "reason": "上半年净利润预增95%-110%超市场预期，叠加二次递表港交所催化",
+        "evidence": [
+          {
+            "title": "千亿锂电龙头，300014，上半年业绩预增95%至110%",
+            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSDRaWmRYY1VmUmozMnVZc3RRZklFcGlfeGxaNGpsVUlUcDliOTluZmVJVzZuT1FaT0RXV2FxOS1IRExYWUNIaTlIY0ozb0I3aGFqbHVibGw1TUtGUV9MUEFLYnJHT0xsNzVacWY4VWxYbEFFamVjQ0tDb3BBU1VLLUpBQlFKb0hOUzN2eEt3?oc=5",
+            "pub_date": "2026-06-15 13:36"
+          },
+          {
+            "title": "亿纬锂能上半年净利润预计增长95.00%~110.00%",
+            "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBvU3p1dnY0N25ZeEk2YW9vTzU3STBiTzVVeXJodVN4R0MzbF8wVW9MejUwS2E4X2xpM0Z5eV9JY0lIdDZxSzRzUEowNFhSZw?oc=5",
+            "pub_date": "2026-06-15 13:13"
+          },
+          {
+            "title": "新股消息 | 亿纬锂能(300014.SZ)二次递表港交所",
+            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE05NmlsakRJcjhKakc0MExud1l4dG5jQVZvV1pIQmR6azB5WmR3V2QwQzQyXzBxQnZsUTB2TnBSVndmdkFWdldWV21xM3BQZDVacnd4UUxYaVNiSzB5RXJiSllvMDU2X2xkYW12VA?oc=5",
+            "pub_date": "2026-01-04 08:00"
+          },
+          {
+            "title": "亿纬锂能一日连推两储能项目 拟总投资110亿元新增110GWh产能",
+            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE94cEEtbmhXV0hPZWU0QldpSVlTWEFLc0hqM1BqMGV2QmZycXNEdDR5dUlTdk5aeS1PcW41ZXBrcVNGbW5td00zcDB6SHoxVlMxUGJiMlBpcV9kcmtucDZuOHJlb2dfR3Z3eklRMDdn?oc=5",
+            "pub_date": "2026-04-07 07:00"
+          }
+        ]
+      },
+      {
+        "code": "600460",
+        "name": "士兰微",
+        "reason": "半导体涨价传导至终端市场，AI算力需求升温叠加AI终端分级国标落地利好",
+        "evidence": [
+          {
+            "title": "半导体涨价攻入终端：手机率先调价，家电汽车亦承压",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPRzUySjF1NEZQWkFtLUZYTHFHZWhGV2tKbUd1ME1hUHR5eVQxcmxyNHNxOWdwTlRESHFWUEl3UE53YlJ1anJFOUhOMHpTd2VrSWRsSjFOTjZ4TWZ4QjZtMG9fUDZlLUhaYnBlUG5RZncwVTJqekxKYUxpakVsakZzb3hpQXEwc2ZyVDJxU2o1NA?oc=5",
+            "pub_date": "2026-03-17 07:00"
+          },
+          {
+            "title": "AI算力需求升温，芯片ETF易方达涨1.40%",
+            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE15REloTHdQRGg3VFpsV0doekJjcFU4SVh6NE11SV95d2t2M0NJSjhPb1NyTnNSQ05xbTNIcDZJVG1LQm50aFVtT0xFaEFNN3hUUWVpTWlR?oc=5",
+            "pub_date": "2026-05-25 07:00"
+          },
+          {
+            "title": "AI终端分级国标落地，消费电子ETF易方达涨1.40%",
+            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5DVkRjaG13TlVuXzVHXzlZeHJpNlM1S2VLSVpndHBLWWVqMFIwQmxiTEJvaTJMWkJJVElNR2tMUmxmWUhFS1QwUVVsdjFSWmFVbE5aVlln?oc=5",
+            "pub_date": "2026-05-27 07:00"
+          }
+        ]
+      },
+      {
+        "code": "603290",
+        "name": "XD斯达半",
+        "reason": "半导体板块整体走强，IGBT龙头受益于国产替代与涨价周期",
+        "evidence": []
+      },
+      {
+        "code": "300763",
+        "name": "锦浪科技",
+        "reason": "光伏产业迎政策利好，绿电直连政策推动逆变器需求回暖",
+        "evidence": [
+          {
+            "title": "光伏产业迎政策利好，光伏ETF易方达涨3.34%",
+            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UTHRFRlB3MHhITHIyRzF1eUQteDU1MG5XQi0zaFJIZi1Jek5WV2trdllZQjUxVGNMSXd2dkgxRzVzMWxxdUtIUE00WHY4ZXNSSzZWNXp3?oc=5",
+            "pub_date": "2026-05-27 02:17"
+          }
+        ]
+      },
+      {
+        "code": "600183",
+        "name": "生益科技",
+        "reason": "AI服务器升级打开PCB产业空间，MLCC/PCB板块领涨推动涨停",
+        "evidence": [
+          {
+            "title": "异动快报：生益科技（600183）6月15日10点1分触及涨停板",
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96Nmk4ZDY4bUo5ZGgxZlJKbVgzV1RCSmNabHlNVnJfMzduY1dPSWxHTm04dXZZY1pqYUZiLVdQdmFva1hwSFFZSnJxWnN5MDVpRFFNNVNUbEhZMEtlVU5NazU5d1Z3aElRU2dR?oc=5",
+            "pub_date": "2026-06-15 02:15"
+          },
+          {
+            "title": "AI服务器升级打开产业空间 A股PCB概念股强势 生益电子、生益科技等多股涨停",
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQU19nVTRFVFBzVGF6Z1ZwcXRIR2NDMzdlNmR2WHNPQXVfMWV3WV94VV96a1JVS3pLakZJZ2YzaExvTURoMW1fZTZjdzVkOXBKOHkwVXNfWFk1eGZ1eS1TNTJTcUp2ajNjdk82VEdtMV92UVNPYXBFN2IzTGNhYmhNakd1QVdWeE1h?oc=5",
+            "pub_date": "2026-05-26 07:00"
+          },
+          {
+            "title": "A股收评：深成指、创业板指涨超3%！沪指收复4000点，MLCC、PCB板块领涨",
+            "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE56ZUk1R2JCSWJIUHJ3a054QkNSU0NmODYxOGpqbGpWLVJ5MlJLcGdwZHI2ZENtN3A4WW9tQ1dXMGVzdmJpZ2NoS3BGMkoxUndEOHRCY0NrRlNXc1hMUVV5Ykc4bmtYMk5aSGtLWkE5QQ?oc=5",
+            "pub_date": "2026-06-09 07:23"
+          }
+        ]
+      },
+      {
+        "code": "300433",
+        "name": "蓝思科技",
+        "reason": "iPhone18带来果链量价齐升新周期，并购巨腾国际拓展AI硬件版图",
+        "evidence": [
+          {
+            "title": "iPhone18 带来A股果链量价齐升新周期，但这一次红利不会平均分配",
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5rUVdVcC1mYXJocEdyTlpKQUxWWHZ3eFlpWk1BeS1JbDFuRzlFbUY0SDB5Qmp0dUEyQUFmN1V6bWNDSEdWQnBPNkRDeWdtNHluZE52WjFmeEdTbHcyVDFFQkJJUklnRDNnUWtN?oc=5",
+            "pub_date": "2026-06-10 15:00"
+          },
+          {
+            "title": "蓝思科技（06613.HK）并购巨腾国际，AI硬件野心浮现",
+            "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9aZnBoSzJaeVNkUXR4VXJtekFvMENVNi1LNHJENDl5ZmN6UzlrUGljc09YVGppZXJIYjM1RHROT01TaUFwX2ZMNE1jQnFPNXJOakJyWnBvdHRVdw?oc=5",
+            "pub_date": "2026-05-18 07:00"
+          }
+        ]
+      },
+      {
+        "code": "000733",
+        "name": "振华科技",
+        "reason": "MLCC、超级电容板块逆势走高，军工电子需求稳健叠加主力资金博弈",
+        "evidence": [
+          {
+            "title": "振华科技（000733）6月12日主力资金净卖出2.55亿元",
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5LZFhCRHR6ZTB2TllBZ01kU1paMndNVjhVVk9KOVhNZVh6c1A4V0l2cVgwVVV3UDB3bUFyYU9oTHlzV0c0WVFHOFZET2hTVElfbjdtbmNMYjdtbUZDc2pzX3picVBpREJVR1VF?oc=5",
+            "pub_date": "2026-06-15 01:24"
+          },
+          {
+            "title": "A股收评：缩量下跌！MLCC、工业气体及存储芯片股逆市走高",
+            "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1CX2dwc2pEMWJOOFZGa0M2d2pHOXotWXM0MHZKRHVXd0gwZmNOYlpwRDF0SjF0bTBQWk43OXhYdjExTGVPLVMwcVBaN2pKZDZLZUhETW5Ra1pQRnlXdXZsc29yTjg5bW44SGhVbFF0dw?oc=5",
+            "pub_date": "2026-06-04 07:39"
+          }
+        ]
+      },
+      {
+        "code": "600176",
+        "name": "中国巨石",
+        "reason": "电子布再度提价，玻纤概念集体走高，资金净流入居前",
+        "evidence": [
+          {
+            "title": "盘中必读|电子布再度提价！玻纤概念集体走高，国际复材20CM涨停",
+            "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9IbFVfMHZmTXdMZ2lwRnZudFJfVjBDQUYtLTdvM200QXViVDM4dGNuRmlubi1RNEZWLUJ4V3k0d0ZqOGxIMGFJOWtNMnllS0FfdlA1UjFlcG0?oc=5",
+            "pub_date": "2026-02-10 08:00"
+          },
+          {
+            "title": "潜龙浮出水面：06.09收盘主力：资金净流入前20股票",
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5vdzNBb0ZzMk53YVNfQ0lmTFhjbGRncmxLYnFjRkNmSFd0MDk4OXhIYzlKTHBvaGM4YXNZX184N3JUbk42cUdXYjZXMkZtNEU4S09hTFllejlXSXVnUVVOclpjNWRubXNoaWxz?oc=5",
+            "pub_date": "2026-06-09 17:00"
+          }
+        ]
+      },
+      {
+        "code": "300751",
+        "name": "迈为股份",
+        "reason": "光伏概念股集体上涨，太空光伏概念催化HJT设备龙头估值",
+        "evidence": [
+          {
+            "title": "A股光伏概念股集体上涨，迈为股份大涨超11%，TCL中环10CM涨停",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdU5wdnl3ZmhFcGdQdzgyRzI3UVVwb3BidnBSZGZPVEJQZEhQVEFwSjJudXJEUjh4RU8wUm03RmFraElIOFdJZzhQQXJjczh2d0NGVmhJM0pLY1lfTTFTVXBMQWYyLXdwbmFWcVh3UWNETl95Nzlpb0E5WThHaFVERGpndmRqYkE?oc=5",
+            "pub_date": "2026-06-12 01:40"
+          },
+          {
+            "title": "两月股价增两倍，太空光伏点燃迈为股份千亿市值",
+            "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9vNFdScm5MY3NWdEtrTzI2aG1LMDBhTWFpNHI0bzRjZTh2eXE1MmdSb0tEMlBtRGtpVFN5Ri1ESjlOUUlVeW4xS2ZPUF9nQUlfck56c0lLcFI?oc=5",
+            "pub_date": "2026-01-26 08:00"
+          }
+        ]
+      },
+      {
+        "code": "688396",
+        "name": "华润微",
+        "reason": "一季报净利润同比增296.56%超预期，半导体涨价周期受益显著",
+        "evidence": [
+          {
+            "title": "华润微(688396.SH)：2026年一季报净利润为3.30亿元、同比较去年同期上涨296.56%",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNk5xT0JsM1VyWEJQMTNZbmhQdVI4T0JoLWt0b0J4azBicFhrRjUzYU9hMXg5cVFaZXFxZlhFcW9yamU5OTFCUEppSHNGeUxiamZXZ3dkWGU0dW1YbTBZd3dYcFQ3UXpiLXI0UjhlLUNiWGVnUnBSczVaN3I4QW02WXVBTzhRYVk?oc=5",
+            "pub_date": "2026-04-25 07:00"
+          },
+          {
+            "title": "半导体涨价攻入终端：手机率先调价，家电汽车亦承压",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPRzUySjF1NEZQWkFtLUZYTHFHZWhGV2tKbUd1ME1hUHR5eVQxcmxyNHNxOWdwTlRESHFWUEl3UE53YlJ1anJFOUhOMHpTd2VrSWRsSjFOTjZ4TWZ4QjZtMG9fUDZlLUhaYnBlUG5RZncwVTJqekxKYUxpakVsakZzb3hpQXEwc2ZyVDJxU2o1NA?oc=5",
+            "pub_date": "2026-03-17 07:00"
+          }
+        ]
+      },
+      {
+        "code": "688187",
+        "name": "时代电气",
+        "reason": "国内动车牵引变流系统市占率约50%，轨交装备龙头地位稳固",
+        "evidence": [
+          {
+            "title": "时代电气(688187.SH)：公司2025年国内动车牵引变流系统市占率大约在50%左右",
+            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBqUWtSNUVvZDd2QUplR0pwS0RpTkNvSGptVGVBSkFQS0UxcXJjeFZsYUpIY011S2xaLXRDdUppNkN0VU1oZ1lWQ3k5allKQUpCZFUzMklFaXJwTmY2UlFGcnZwTW1ET2ZHeUs4OA?oc=5",
+            "pub_date": "2026-05-22 08:07"
+          }
+        ]
+      },
+      {
+        "code": "000725",
+        "name": "京东方A",
+        "reason": "面板行业景气上行，子公司终止北交所上市申请聚焦主业，主力资金大幅净流入",
+        "evidence": [
+          {
+            "title": "京东方A(000725.SZ)：控股子公司能源科技拟终止公开发行股票并在北京证券交易所上市申请并撤回申请文件",
+            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5mc0xTdEszYWhZc1h6WElzazFUNXFMeWJtMlhaYVFGcWdjOC1lVTNNaVF1SFhBYmR5cnlLbmFHb2NNemZiekhlOVJtVDZJUVZsSjdOVHFxWGdLZG9xMGRSVHdTbjJvWE1KUUVHNg?oc=5",
+            "pub_date": "2026-06-09 11:47"
+          },
+          {
+            "title": "多股午后拉升涨停！000725，一天获超55亿元主力资金净流入！",
+            "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNWXpmVFR6dUVndGc5d0hJV1dKOE1hSndRNGZMcVVtY09EQW9RWjhsdngwSWJzWjJmMUZoV2lKelB6Zi1GbTcwNUJpdUZSa25obVNnd3RWc19kSkdSZjE1bUpUVmNzWVh0V05kVjQyYzlVVTRWUmdRMGtpTXFjVDVQSzN6c211WGhQYXNJeHc1LVJOU29ROFhUT0NpNkRaeXVFZHVHMDFpWkJEOGsxR0RPc3hfRU9tcUkzS3UtWmtlcXFyemlVUUxpZkkzRzUwSkMyQ3AwQ0J2a3MtTi1yUWt4eDRCTlp0dTZiaVE?oc=5",
+            "pub_date": "2026-06-04 09:17"
+          }
+        ]
+      },
+      {
+        "code": "300450",
+        "name": "先导智能",
+        "reason": "锂电设备订单回暖，主力资金净买入9761万元，智能汽车产业链多重催化",
+        "evidence": [
+          {
+            "title": "股票行情快报：先导智能（300450）6月12日主力资金净买入9761.12万元",
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1ER1MtdzRNamYyWjBTLVdsanV0alZsYjhpV0Zqc3UwbFAxLWVVb0diX2tqdllXQXVJY2FkVFBiZXhrNkZidTB4OC1Nem5oV0pia3FUdW9PbVlaT2J2TERLWXdR?oc=5",
+            "pub_date": "2026-06-12 12:17"
+          },
+          {
+            "title": "智能汽车产业链迎多重催化，智能汽车ETF易方达涨1.40%",
+            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1zajczNnExUmhNZ0JlRnp6OXo1OWx4Y0NaWHlCSlRuNlRWQmIwS1RiNGd1MlpiVU0xRlUyY1FkMkdfVFhOR3NZZVFDYjlqcXdtdVNBbUtn?oc=5",
+            "pub_date": "2026-05-27 07:00"
+          }
+        ]
+      },
+      {
+        "code": "603806",
+        "name": "福斯特",
+        "reason": "光伏胶膜企业提价酝酿，EVA粒子成本传导预期升温，跟踪评级报告维持稳定",
+        "evidence": [
+          {
+            "title": "福斯特(603806):杭州福斯特应用材料股份有限公司公开发行可转换公司债券2026年跟踪评级报告",
+            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAzVTNOYnlpbDRIdDZvRUlaZzI3VnVKVV9vbGx5ckNNQi0wU19zOXp1cm96U2tRVC1LMUVNcFFJQ0FBTUtzcmZ5a1Q3QWRLREJ3SHFmRDdn?oc=5",
+            "pub_date": "2026-06-08 11:05"
+          },
+          {
+            "title": "EVA粒子再度提价推高成本 光伏胶膜企业提价酝酿中",
+            "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9UQkVGYWo0OGpoUFVLQTIwM0gtWWZLdFd5ZWxSTk9Ga2NnT1ViV0xGR25nOHFGbXpxWGRrOEVMa216OWhJTVE?oc=5",
+            "pub_date": "2024-02-22 08:00"
+          }
+        ]
+      },
+      {
+        "code": "300274",
+        "name": "阳光电源",
+        "reason": "储能龙头全年业绩创新高但Q4净利腰斩引发分歧，市场对长期成长性仍有信心",
+        "evidence": [
+          {
+            "title": "阳光电源的高光与隐忧：全年双增背后，四季度净利腰斩",
+            "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9meTlibnFULTFFb3o0WXdtM0xVVTF3WXpHMURZMkpwZF83SEhfa0pmMEl4VEY0NVJ5V091cTctUkpzT3o0Qzh0QVhldHdvWk9JanNF?oc=5",
+            "pub_date": "2026-06-14 05:22"
+          },
+          {
+            "title": "业绩创新高，股价却逆市大跌！千亿光伏龙头盘中跌超13%",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWWNkZEd2ZEFuajhDVHZoRGxlQnVSMFRzaEp4OVJGSDVhZDRDLU1FdmR1LVdWTnRVZElaaDZRWEcxME1leHFmNkRoZXJVM3R1SEZzdmd5eXFwMDRXdU9ydFRuLXFtQ2p0V1JadDZjRjliejltOGtwRG04TktYUHYxRkxYNHJwMmQ2MG52S1FCZw?oc=5",
+            "pub_date": "2026-04-01 07:00"
+          }
+        ]
+      },
+      {
+        "code": "002709",
+        "name": "天赐材料",
+        "reason": "锂电材料涨价引爆业绩，第四季度利润暴增546%，一体化布局拓展产业链",
+        "evidence": [
+          {
+            "title": "天赐材料的2025年：涨价引爆业绩，第四季度利润暴增546%",
+            "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBMaWR2SGJiZk9LWDNCdFBOeU8xNVlBdHBrSmh0TUVDX3c3M18tV2hmVE1HRnFfWFFDbHRPZlNpTG11aWdZT1AyQkxKaw?oc=5",
+            "pub_date": "2026-03-19 07:00"
+          },
+          {
+            "title": "政策支撑绿色转型，新能源ETF易方达涨1.59%",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNzdRWU82T0ZmM0R3a3hLa1VMaFlQWHNfM0lleld1M09RVDRraWNSQXRXekwwazU4bmpNVDFnOTFsZTN0WURxQnU1dDRRWUl0R0dWazd2b3FvMHJOT0oxMDFLLTB3eVRDV0VuLWJJcHU2aEF4WkRRd3BIWEdVVG9CZmVfRUZvUGd1T3ZtYQ?oc=5",
+            "pub_date": "2026-05-20 07:00"
+          }
+        ]
+      },
+      {
+        "code": "600584",
+        "name": "长电科技",
+        "reason": "半导体板块飙升6.03%，存储芯片2026年行业景气度全面上行叠加涨价预期",
+        "evidence": [
+          {
+            "title": "长电科技大涨！半导体板块飙升6.03%，月周共振突破+主力高度控盘",
+            "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOWk16R1VqeUJPcDBrVVFkcmRnel9zOUlmS0g1QkZsZ2NhV0hyb2lldlcwRWU4RDhBM3J5UUdCVjd3a1hwWHhtTXlNdXkxRHI4dzVyaHJDUVpIeG5qMlNTZzNoY01vYy1IQWtRd1VOM2FJY0F1RnNtVnpWb01GOV9JMHZrcVRUclZzZ2xyeEtOM0dSVHV1TWVuRzRONUFKV2JYc2NvakptVFJ6VWpBTU9qMVdncXRUOW15VEpoaFlLVFNOcTM2bkNxSUdyazBPZVlJalBlUzJFMVN6ZVQ1c19PMXdJWDdycU03ZkFLMU1OYlhSSHktOVpKY3NSR0lHcDg?oc=5",
+            "pub_date": "2026-06-15 14:31"
+          },
+          {
+            "title": "单季最高涨价75%！存储芯片2026年行业景气度全面上行",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWWdoelJmaG9XaU1KbE1ZZ2t4SThZbEFabFhBN1NQWkZyeWtQLVFZenJPdFV0eEd0WUlYX1c2WEtibFJkNTRYaFRBZkNQM0gtTHBTM3JJeU52RmZ3TWVjU09ESnpvSEMyNFoxOXJkZjctbEdGeFNxZVpxc0VJZEIxQzRhbktfVzVsUGdUUUprQQ?oc=5",
+            "pub_date": "2026-05-11 07:00"
+          }
+        ]
+      },
+      {
+        "code": "605117",
+        "name": "德业股份",
+        "reason": "绿电直连政策利好与光伏产业政策共振，储能逆变器龙头受益",
+        "evidence": [
+          {
+            "title": "绿电直连政策利好，新能源ETF易方达涨2.57%",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPc0ZfeDllQlhQMXd0a2lGaG1ib2dnbkNVV0FlVU0yTERwZXE3RDB1bzBUM05OalhXa0JJZGhfM29hQmlObzRJdzJmcGJGcUY2SFYwTEVldEVoc1VpcGZ6MVRMUEZpWk9QbnBCLUh1d3dUQ1FXU0s0WWxXSGNWUXJJdTBXeUJXelRjek55dg?oc=5",
+            "pub_date": "2026-05-27 02:17"
+          },
+          {
+            "title": "光伏产业迎政策利好，光伏ETF易方达涨3.34%",
+            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UTHRFRlB3MHhITHIyRzF1eUQteDU1MG5XQi0zaFJIZi1Jek5WV2trdllZQjUxVGNMSXd2dkgxRzVzMWxxdUtIUE00WHY4ZXNSSzZWNXp3?oc=5",
+            "pub_date": "2026-05-27 02:17"
+          }
+        ]
+      },
+      {
+        "code": "600111",
+        "name": "北方稀土",
+        "reason": "一季度业绩同比大增，稀土精矿价格持续上调，超级牛散章建平加仓",
+        "evidence": [
+          {
+            "title": "600111，一季度业绩同比大增！超级牛散章建平出手",
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ST0ZnOERzQjM3Y2tORmJ3LUdHZ3FVTi1ZTjlLMGV4RERLel9hX2ZYdVMxT1hCdDhkVl9ZS3dma29lbWpyaktBYV8zSkxLeW5BZVNVQUVMTEgtWEFs?oc=5",
+            "pub_date": "2026-04-28 07:00"
+          },
+          {
+            "title": "北方稀土：2025年净利同比预增117%-135%",
+            "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5jOXRaVmp0NGNYT01qa1hCZDhsa2ZfZ0FDajROQVBrcW16dnJ0Ym5rb1ZJS0lHVmpfX2ZmUEhsZXhTMGpGTUdfbw?oc=5",
+            "pub_date": "2026-01-16 08:00"
+          }
+        ]
+      },
+      {
+        "code": "002202",
+        "name": "金风科技",
+        "reason": "风电龙头首次回购567万股A股提振信心，商业航天概念外溢效应延续",
+        "evidence": [
+          {
+            "title": "金风科技(002202.SZ)：首次回购567.11万股A股股份",
+            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWWZUa0o5bW12WDVIRGcxT3ExWFZsVHN1Z3BTZFNRYkxZc3Z0X25yWVM2TXhOM2w5YVI3akVfSnRZWmxTaXh4NExLU203cjN2UmVuSV9yU1dHTnM1NmtiZElNRGVtXzlPWk4wUGdGWHUySW1leExCSGNBZHppX0h1Q09hRU1XcmZZYkpGSk44b0xYbWc3X2w0dA?oc=5",
+            "pub_date": "2026-05-29 07:00"
+          },
+          {
+            "title": "沾边航天，首个千亿市值风电股诞生了",
+            "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE84ZmU2NFFOVWtrV09iTjAyWXVUVC1kZHBDVkItMURHQ3c2UG9UZDB2YkNFQmR0WVlsLWRJWW9xMDlTZTdzNUNrSDVXcUlmZV8yOHd3eFFCRWk?oc=5",
+            "pub_date": "2026-01-05 08:00"
+          }
+        ]
+      }
+    ]
+  },
+  "losers_analysis": {
+    "sector_summary": "化工板块集体回调，煤炭受监管收严拖累，消费（白酒+饮料）与地产板块延续低迷，新奥股份私有化告吹引发市场失望性抛售",
+    "stocks": [
+      {
+        "code": "002001",
+        "name": "新和成",
+        "reason": "维生素涨价潮后高位回调，前期涨幅较大引发获利了结",
+        "evidence": [
+          {
+            "title": "突发涨价潮！维生素价格跳涨超35%，盈利拐点真的来了？",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYlI5ZjBNTnF1SVFlcEpwbDV0TGNLSmx0bTdWUDRfUUJjUWZtSUZyNWpuTS12VGJleEI1X0ExdjAxSWhxbnctMG1XVnRBZXhWRFRYUDh6V25OcUZxdWJkanpOcTVUSDVPLVUycC1CT2xrTWJ6SGk3UXZZMzJFN3JtZTUyR01MNTAtVkRyc2RYQQ?oc=5",
+            "pub_date": "2026-03-20 07:00"
+          },
+          {
+            "title": "涨超5%！维生素龙头业绩创新高，原料药板块整体向好",
+            "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBGVUNUVlpmVzhnVTZpZTAyTDg3aEtUSTlHZEJXSmtJVkJSY2std1h0VlNjTTNGTWlvUzBkWEdWWjNreC1TRnVTSkJxOTAtcHli?oc=5",
+            "pub_date": "2025-04-15 07:00"
+          }
+        ]
+      },
+      {
+        "code": "603260",
+        "name": "合盛硅业",
+        "reason": "大股东拟减持不超3%股份，市值从2800亿缩水至600亿引发信心危机",
+        "evidence": [
+          {
+            "title": "每周股票复盘：合盛硅业（603260）合盛集团拟减持不超3%股份",
+            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB2Y1JhSjFVNVI2cU1yeFhQeVB3SGJvZ3NDcXlydV9leHlhY2dyQmVTUE5fN3lPZWRpUXRLNFNMWHFObUZYSl9nbmhoVEJKZC1HWS0tV2x0SmNrRDJDREoyM3FFZm16ZExKd3hMbjhR?oc=5",
+            "pub_date": "2026-05-17 07:00"
+          },
+          {
+            "title": "800亿豪赌大结局！合盛硅业：2800亿市值跌剩600亿，大股东无奈套现114亿先溜为敬",
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ONUotcE1aaFFKODVBb25ORWhfTWhzVjJwUzVpYXNpcmtFUWMzTWszMVd3Y2JNSjRza19zQllqWGxZcVhrSmxqTWRreVZ2bTdtREY0VGVZTWJhTzlJZnU3Y3hwd3NfSlR0NU9taTB6dzFGMFk?oc=5",
+            "pub_date": "2025-08-01 07:00"
+          }
+        ]
+      },
+      {
+        "code": "600233",
+        "name": "圆通速递",
+        "reason": "快递行业竞争加剧，极兔出海 redefine 行业估值压制传统快递股",
+        "evidence": [
+          {
+            "title": "极兔股价两月内已涨逾两成创新高 出海能力重新定义快递企业价值",
+            "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jWWVYbDlMSENzWHhkN0JpYXpPc1ZRSE02al9lQjcwNlZYa091Qy0wTjlNZkoyMlBYNzNvMDk4T2hyQWxHTVE?oc=5",
+            "pub_date": "2023-12-28 08:00"
+          }
+        ]
+      },
+      {
+        "code": "000408",
+        "name": "藏格矿业",
+        "reason": "子公司被责令停产影响产能预期，碳酸锂价格波动承压",
+        "evidence": [
+          {
+            "title": "盐湖提锂龙头000408，子公司被责令停产",
+            "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9jRmxLZVdzNXRKVndtclNqNUFwQmpwOEFGZHRVX3YyU05kSGwzRzJmYS01RmJoSnZucHBCQU1yem52aHlYcFNlQUFJUEp3UFBFWGJ2Ng?oc=5",
+            "pub_date": "2025-07-17 07:00"
+          },
+          {
+            "title": "碳酸锂价格突破13万元/吨 超跌锂电池概念股出炉",
+            "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5qY1F2d1FpbFdxaGE3NGRHcXpFMTlkcFFDQ21TWDN2eXJMRDdwOTF3eGttZmp0aWM4cmxGeFJranROU3dkWG8yY09HUHhEQUxaYUpoRFdLSk53eC1Rc0tvOVBHQUIwQQ?oc=5",
+            "pub_date": "2025-12-26 08:00"
+          }
+        ]
+      },
+      {
+        "code": "603369",
+        "name": "今世缘",
+        "reason": "消费板块整体下挫，白酒行业竞争加剧叠加中证消费指数领跌",
+        "evidence": [
+          {
+            "title": "6月9日中证消费（000932）指数跌50%，成份股今世缘（603369）领跌",
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mS0Q0YlVNcnFXclBHUDB1WU9Xa05rMVlfTzNSNTdHTEljVDhYRTJaSzh4ZTNaWVhlU1F1SnNZQnRBZWZTdVFzaWtQdXVUcXpqZDhGVTZBWjJMSDg3bmRoNVln?oc=5",
+            "pub_date": "2026-06-09 10:27"
+          }
+        ]
+      },
+      {
+        "code": "600803",
+        "name": "新奥股份",
+        "reason": "私有化新奥能源计划告吹，市场失望性抛售引发大跌",
+        "evidence": [
+          {
+            "title": "传新奥股份(600803.SH)考虑放弃新奥能源(02688.HK)私有化计划",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNVmp3NVVCbUJsSmVtMzdiZjBQN0ZELVNTT3NfaGstVkI0dzBVejZGdUFpVjRuVU51NnpQLVRtR2hMaXpmMmRYeTBYY0lCcDNTM1kxY0pWMks4dUNkaDZESnh5YjFrUzRfS0tNWUliTEpBcjZtTmJzcENob2ItVVJXSnpqcXZPbkNhd244RVQzUTFtSnBQcS1wQTNR?oc=5",
+            "pub_date": "2026-06-12 09:13"
+          },
+          {
+            "title": "新奥能源(02688)私有化告吹曾挫8.7% 新奥股份现跌2%",
+            "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeE8yR3JpMUlYR1NXc3hlY1A4eHhuc1UzZThlbnF5aUowZ3FXZUw5cEtHdndrWEtzU0VXUTlvX3NRaF90cWFibUJMb0dUNHMwclZ0SHhCT05TVkdNaTRwcjd3NVROY1lQS0xWWmN1eTNXZEdVTVptMGdUUUdydmt4YUFSZEdVMjJzZ1JUQ251eVVURDJ0a2pHWFpscEtZQQ?oc=5",
+            "pub_date": "2026-06-15 01:57"
+          },
+          {
+            "title": "大和：新奥能源给予跑赢大市评级 惟新奥股份增持料下行空间有限",
+            "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQaWNYNUNiTVZsVlBwWVhlNnVpMUFzcnhxUmF5TWJLSFZWLVUxTWNJakpWMWNfRS1DanZXNUZBQ3RxeldsTHAwT2lFTEYzZTlQRHhUaXdhZWhpM3FOak1tNXdUOEZIZXJUVWYwczVmRXNvLUJFbUQwTzY0WEtTWHplMnVNYUNCRlBxeGk1aHQtejEtU0NxR3hlVGltWW5CLVMzQ0dSb09qUklYWk5lMWlqQ1FNTVNzanVqRjhwMmh3NHNYeXN6QXUyejRZSllESDhNZzJjNm45LXVpeWVLLWZjQXY5aw?oc=5",
+            "pub_date": "2026-06-15 05:33"
+          }
+        ]
+      },
+      {
+        "code": "601155",
+        "name": "新城控股",
+        "reason": "房地产行业持续低迷，1-5月合同销售仅54亿元同比大幅下滑",
+        "evidence": [
+          {
+            "title": "新城控股(601155.SH)：1-5月公司累计实现合同销售金额约54.00亿元",
+            "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORWtkUGVnTjlmdjItYlc2U0lYQzlyT19MYk9PSlNOSmlxY3g1QTVVMXNhV1VMcTE5bUJrSS1mUHVSTWNTMnE5TlJIVWpZMFBzb2xlelNYdzR3aUdZR3F1UThSQmMwLXR0ajdqa2VRNUVvZjJZRkktbnRfd3hVNUlTZFpYUFVyTEdDbDdIR1VYejA4WDFxZjhOQTBpd1R5czRvcWhJX3I4VQ?oc=5",
+            "pub_date": "2026-06-10 08:40"
+          },
+          {
+            "title": "新城控股业绩再次暴跌，审计提示注意现金流和资金错配风险",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBITkxFa09XQmJaMjNZZEJZWnJBS1o5cmNWUDAybVVSWVFiMTl2R3hyajVhR0E4QUxWS1pCbkI4Rld5S1h3MkN4OVJYVlBfVDk4YmI0ZnVGbk44Z3R1cTg2LUVlbkNrSGlhNzc4LXUySDk2NG55eVlMd3psUmVFZw?oc=5",
+            "pub_date": "2025-04-16 07:00"
+          }
+        ]
+      },
+      {
+        "code": "601600",
+        "name": "中国铝业",
+        "reason": "前期涨停后获利回吐，有色板块冲高回落",
+        "evidence": [
+          {
+            "title": "A股震荡整理，有色板块突然爆发！中国铝业午后涨停",
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPWDRSRFItNjJhNVZCWTJDT05oOS1oMXVOWG9SSVpRWlhTS1M0aGNCcFdEQU00eTJkMDlzVE9BVWRsc2ZUQml0N2had3BKRWo2ZmdIaHhNN1FOQV9h?oc=5",
+            "pub_date": "2026-05-26 07:00"
+          },
+          {
+            "title": "中国铝业(601600)龙虎榜数据(06-04)",
+            "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LNGoweFd4bkJXSEpGZXRyWVdlZWc2NHNBNXlFZmlGRExZN2JzaWNNSjNPcHNuWHh0d2o1b2Nkd0Y5WlBrMWxFczdJNmYyZ2RfeG4zOE9lN3VvamF5YWZYdA?oc=5",
+            "pub_date": "2026-06-04 09:48"
+          }
+        ]
+      },
+      {
+        "code": "000800",
+        "name": "一汽解放",
+        "reason": "商用车行业整体承压，传统燃油重卡需求偏弱",
+        "evidence": [
+          {
+            "title": "一汽解放(000800.SZ)：目前解放绿动已完成500kW发电机组样机点火",
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1xYWd4TDdKQnBDd0xnSDVfaTN0WDlpMHpwNzV0UTJhemJJTDJBM2gwTXVKM1UyQ0FrbUpDZGRmYXRBc1E1c2hiYUJKazNqRENQajdxNlp0UmpTRnVDOWxBT3RsZDhBTTluZVlN?oc=5",
+            "pub_date": "2026-06-09 07:55"
+          }
+        ]
+      },
+      {
+        "code": "000338",
+        "name": "潍柴动力",
+        "reason": "工程机械板块回调，前期大跌7.12%后延续弱势",
+        "evidence": [
+          {
+            "title": "6月10日潍柴动力跌7.12%，工程机械ETF广发基金重仓该股",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9hVHBtNWRLa1cwcDg1Y28zcjVSbXU5R1JUSVY2eWlSQk5NQVh5QW9MVE1NWkg3cWVSRkczdVQxSmdmLU4wcjR1OG5xaTJfRUlzb1piamFucVZHTmlIN1hGZFpCa0lGV004OVhJNVlCYkJpY3pNVjZMMXRYWnl3SXM?oc=5",
+            "pub_date": "2026-06-10 08:42"
+          }
+        ]
+      },
+      {
+        "code": "002252",
+        "name": "上海莱士",
+        "reason": "血液制品行业多家龙头净利下滑，板块整体承压",
+        "evidence": [
+          {
+            "title": "血液制品业绩大考：多家龙头净利下滑 上海莱士逆袭",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNb1ltTnhtNlg3THplemw2RjNOQnpOVG9fS0lLd1RzMnpJb3lrM0lZZDBYRW1CYUxiQi1fVjNhc0FoZVVnVTRTa2ZIRzc5ek5jNjRXaUYzVlJULThVMmVLUGo5dVJPT1VYU0xsNll5S1FyaEFiSU1yVmpPajZDWGU0dk9hV05nVm1Kam43eGVqOA?oc=5",
+            "pub_date": "2026-04-29 07:00"
+          }
+        ]
+      },
+      {
+        "code": "002352",
+        "name": "顺丰控股",
+        "reason": "百亿股权激励引发股价震荡，供应链及国际业务降近四成",
+        "evidence": [
+          {
+            "title": "观察：顺丰百亿股权激励引股价震荡，是股东利益受损还是长期共赢布局？",
+            "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8wZW9QUG05dndEc0lQNk42WkFJcGFBWFVOcjRBa3VRRUdVRGdteXBrYVRzLXk4dnR1VE5MVTlza1kxMlRCR2NYZ3ZWampSZUh1T2hYZGQtOHU1NVppRjVQcVVFRGdlUGRRbEM4WjB4ekVaTWRYVWoxbg?oc=5",
+            "pub_date": "2025-09-04 07:00"
+          },
+          {
+            "title": "顺丰控股上半年净利增六成：营收微跌，供应链及国际业务降近四成",
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9fdG5JeTV0anMwQ0R1RTZNQ3pBSk9xZXFGc0w0TVRaZlZkbVd5V0NQckotamtlRDduaGRJYVctVVE4cG51ektjT3Y0bTNtSzR6QUZJdFdyWk5sTE0?oc=5",
+            "pub_date": "2023-08-29 07:00"
+          }
+        ]
+      },
+      {
+        "code": "002311",
+        "name": "海大集团",
+        "reason": "增收不增利，养殖业务拖后腿，拟分拆赴港上市",
+        "evidence": [
+          {
+            "title": "成本费用高企侵蚀利润，养殖业务拖后腿，海大集团去年增收不增利",
+            "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Na2szYUFGb2dVXzdETVhrWWJQRzJILXU5aVZVLWpGUXpHek9VZklWU0lpdXYyMWF6cUdLMWJsTkpXU3QyMjBmRUItdjEwZw?oc=5",
+            "pub_date": "2026-06-09 10:05"
+          },
+          {
+            "title": "海大集团(002311)拟分拆海大国际控股，赴香港上市",
+            "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNN1BMcmlzdEhUNmRfOFd3OHIyYXlwSXM4dGJNUXVhZ3NoVHFta2FfTXZaUDZZWkUySEZaTFFZaVNkNGRXZlI1WEtBUGo0NTlCcHZ5ak91anBaQlk1QlpXUnFGMmdhenc3cEk4ZkZTZGhJZFlrdC1kUnJhOXVFNmo4Tl92dmNCQQ?oc=5",
+            "pub_date": "2025-10-18 07:00"
+          }
+        ]
+      },
+      {
+        "code": "600309",
+        "name": "万华化学",
+        "reason": "化工板块整体回调，前期大涨6.73%后获利了结",
+        "evidence": [
+          {
+            "title": "6月12日万华化学涨6.73%，化工ETF鹏华基金重仓该股",
+            "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNXzlNQy1pUHl6QUZVcEFzTGNXN2tTS3JoRXV4Zk1EYWZuQUZHSVZhUWxwRkEwajFuUVluMFlET2ZVT3B3a1FBcXZMYzVsV29OcGI5enVQZTRUR18tdnlpVkc1bUYzTEd1X3A3ZjVwNld6WURrcThBaHFDME9VUi15UmNteHlWOWJORzBramw0TTVqWmRfdDRHMXkwQUxhdDVlZ1R1aHdwRkFVdEI4NG4wZWVTMzE1ZV9TSkREWV9ycmRSc01oNlZXYTRSdkRFdm5hYlNmUlFTYkpuVEhsZWJ4Ql9QQno4aEwzN1JkNmhGWHRzU3hzRU9HYXhmblFNdjdRSGk3V0cyN1ki1ek8wdTJvam5BY2VGUGZrU3pHQzRGUUlQeVdVb3R4R3pTc3B2a1QxRTQ5LVB5MA?oc=5",
+            "pub_date": "2026-06-15 01:46"
+          },
+          {
+            "title": "万华化学集团电池科技公司增资至49亿，增幅约43%",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU25yTWp1RlM4TjVpdkttLTNoYkdSMjlJTXFSdWdveW9XNDhuTVpDaWlWNnRkRlNqWTY5YnlKME9NNERIck9Ga1FYM3ExQ3FaX2padElIT2NxbW9IUnk2Wkg0S0JUVTJKWHZreXd4b1RWZFpEYlFwYjZISGFwRnhkQ2diM05DcXFkaS1F?oc=5",
+            "pub_date": "2026-06-12 11:57"
+          }
+        ]
+      },
+      {
+        "code": "001979",
+        "name": "招商蛇口",
+        "reason": "存货跌价33亿、归母净利降75%，地产行业持续低迷",
+        "evidence": [
+          {
+            "title": "招商蛇口年销售额跻身全国四强，净利润跌超七成",
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA5Y0ZmbmNkQjhELU1zYVZsc29XenI1YnBzQWN4RzNDN1NHZUtLenhMM19hSk9rTEo2UGJQXzFvdWpWdHhfWC1sOFJCN3RDMWM5UjdpUlZqYXVScE0tc2lXZnd6QUdodk1xSjhBUjRSeWQ1aTg?oc=5",
+            "pub_date": "2026-03-19 07:00"
+          },
+          {
+            "title": "招商蛇口存货跌价33亿归母净利降75%",
+            "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1DQVVneE1HLWw3emN5NEhVd0hoTU93Y1dFWkw5LUpBX0x1M19JWEtBb1dndDkxRWJkalhLQ3lRbXJJTURmbHI2M0dBRk14aUZrOFRYLUdOUQ?oc=5",
+            "pub_date": "2026-04-13 07:00"
+          }
+        ]
+      },
+      {
+        "code": "605499",
+        "name": "东鹏饮料",
+        "reason": "营收突破200亿后股价却跌停，末季净利增速骤降叠加高位获利回吐",
+        "evidence": [
+          {
+            "title": "东鹏饮料2025年营收突破200亿，股价却跌停",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMUdldHc3NTRZMG1GZlZKYzlwV2pseFJSSnpOSmlFWEgwR2tvVkNIQmxnb3pOUjFHRldCZElVWm51akhCTXRyb1JQTUxPZW82VUsyOHpNd05YQkphblkxaEVmYVlxdEJZTnk1UmJIaWF2a3A1RWNUQU4tLVRuX0NVQ2ItT3IxT0F1ZE50UDBxZw?oc=5",
+            "pub_date": "2026-03-31 07:00"
+          },
+          {
+            "title": "张雪机车引爆概念股，东鹏饮料股价大跌，去年末净利增速骤降",
+            "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4xYXRGUFNlbjZKLUdZZGJ3Vk9POTZnSHMwU01nTXY5UTFEVG1mSGJoZFdrVnBDZTlhNWVMOWdGYkg1VGpMZjR2eGE4aHYzLTNkYkczUUZPeExnWDBMV3ZEcnRtNWRSUQ?oc=5",
+            "pub_date": "2026-04-02 07:00"
+          }
+        ]
+      },
+      {
+        "code": "601872",
+        "name": "招商轮船",
+        "reason": "航运板块冲高回落，前期涨幅较大引发获利回吐",
+        "evidence": [
+          {
+            "title": "6月12日上证中盘（000044）指数涨117%，成份股招商轮船（601872）领涨",
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJUkxMcnZGVExWZjlpYzBKT2hOZVUzVWNJUnZRWUdxd1A4SU54RUhtcjZwMHlld1dlN1BUZVYydi1nYzN4WWp4WWdYbndwRGZlcFVLekdPXzVtSl9vdHI4MW1R?oc=5",
+            "pub_date": "2026-06-12 10:15"
+          },
+          {
+            "title": "A股放量大涨：沪指收盘站稳4200点，两市成交35389亿元",
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5JOFVoTlJGQ1U5TWJaMFYwNHVqOVRtQ3JiRGZLRkVvRXh3T2ljVFo3eERmeHFvbzVzWG5nYU1HaUo4N2h1UXVvMFRwTnByRVp5NTE3NnY2dWhIWUFILUU0MU5HWVZqTHd6NENPZU96cjVjVnA0YnRn?oc=5",
+            "pub_date": "2026-05-11 07:00"
+          }
+        ]
+      },
+      {
+        "code": "688065",
+        "name": "凯赛生物",
+        "reason": "生物基材料板块回调，长周期诉讼影响市场情绪",
+        "evidence": [
+          {
+            "title": "16个寒暑，40多场官司 凯赛瀚霖大战启示录",
+            "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB5aUNFd0JSdlhMLWlrQWo2a2dfOGRkLWtJdnhRaEg5ZktELW00SDUzRjQybW9tLWxNSWE2U3UtU3BaNWk3RGJJa3RONG5uN1Y5bVduMGh6VFptaUt1dV9QX01NSzZmYWZTMFhVaG50MnY2RVFwZlE?oc=5",
+            "pub_date": "2026-06-04 03:22"
+          },
+          {
+            "title": "凯赛生物、隆基绿能、森特股份、招商租赁签署四方战略合作协议",
+            "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE52UXBtRktLeTJzenQ3Q2VPbkZVcEhfQkduV1A3T3RkNERweGFsQUpXUTV5OTZjX3JBS2tXSW9hSEIwLU1vbmstM0J3NHc1Ul9rRkhwLVhQYXNjQQ?oc=5",
+            "pub_date": "2026-06-05 03:32"
+          }
+        ]
+      },
+      {
+        "code": "002648",
+        "name": "卫星化学",
+        "reason": "主力资金持续净卖出，化工板块整体回调拖累",
+        "evidence": [
+          {
+            "title": "股票行情快报：卫星化学（002648）6月11日主力资金净卖出4877.24万元",
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE54WHU1UzNVZnpUMDRheGtmOXZoaWN2TDVLYkhBYlFyanAybVVINnVvQnhyWmdkMmVncE0wRldhVDJIMG03WWtZTDJjVDdJWHc5TTk3S2dQSGZQeFlsZ0Z6bHlR?oc=5",
+            "pub_date": "2026-06-11 13:18"
+          },
+          {
+            "title": "股票行情快报：卫星化学（002648）5月14日主力资金净卖出1.13亿元",
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBFRHFOYmczSGtPWEdRSFdHOHJlQmhGLUdEdFZDRG9MS0R0dkFNbWZic0RqblFpYlNyenhFS3VmZHJScFo1MFN1S1kyNjUtLXFGUTZaQ3JhOHQ0b3Q5dElUZXpR?oc=5",
+            "pub_date": "2026-05-14 12:36"
+          }
+        ]
+      },
+      {
+        "code": "601225",
+        "name": "陕西煤业",
+        "reason": "煤炭板块整体回调，监管收严叠加焦煤期货下跌拖累",
+        "evidence": [
+          {
+            "title": "A股高开高走，尾盘涨幅扩大：沪指涨1.61%，创指涨5.3%",
+            "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DckVyVVRwd1BtUThWaGJyMFFBYnhBUzNWWHR1ckhKVzhob2xkbEZOOHFGOEdVSjhWdGhCeFRSNlVmNUFzaktJRDRBUW1hclBiZF93UDJCNE1WOXkwZHUwOQ?oc=5",
+            "pub_date": "2026-06-15 07:11"
+          },
+          {
+            "title": "煤炭板块近期大涨，陕西煤业去年净利润221.96亿元",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdXAwbHNzVEhMWVVvWThNb1FlWGMyQm5MV1h1VEFDYm5fY2pMV1ZEUVZVc1hFNEZzVm80d2diRk5Fa3pfNXM0QlpRY3pKcVBGZFVPSTNWUWZpbnNpdFFXSkNtS2l3UEF5ZXl2QzFUR2xyZVA5M0drWUdIVDF2b2hQMDBOZVRoWkZfVDU0VE9fbw?oc=5",
+            "pub_date": "2025-03-14 07:00"
+          }
+        ]
+      }
+    ]
+  }
+}

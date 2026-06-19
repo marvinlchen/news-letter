@@ -27,6 +27,26 @@ if [[ ! -f "$source_report" ]]; then
   exit 1
 fi
 
+# 检查是否存在当日的沪深300分析，如果存在则合并到日报开头
+csi300_report="$PROJECT_ROOT/published/csi300/$report_date.md"
+combined_report="$PROJECT_ROOT/var/digests/${report_date}_combined.md"
+
+if [[ -f "$csi300_report" ]]; then
+  echo "publish-report: 找到沪深300分析，合并到日报开头..."
+  # 合并：先写沪深300分析，再写日报内容
+  {
+    cat "$csi300_report"
+    echo ""
+    echo "---"
+    echo ""
+    cat "$source_report"
+  } > "$combined_report"
+  source_report="$combined_report"
+  echo "publish-report: 已合并沪深300分析"
+else
+  echo "publish-report: 未找到沪深300分析 ($csi300_report)，仅发布日报"
+fi
+
 if git remote get-url origin >/dev/null 2>&1; then
   git pull --rebase --autostash origin "$PUBLISH_BRANCH"
 fi
