@@ -23,7 +23,7 @@ import sys
 print(json.loads(pathlib.Path(sys.argv[1]).read_text())["date"])
 PY
 )"
-source_report="$PROJECT_ROOT/var/reddit-reports/$report_date.md"
+source_report="$PROJECT_ROOT/var/reddit-digests/$report_date.md"
 if [[ ! -f "$source_report" ]]; then
   echo "publish-reddit-report: missing $source_report" >&2
   exit 1
