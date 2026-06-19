@@ -976,7 +976,7 @@ def run_codex_reddit(
         1800,
         lambda raw: parse_reddit_protocol(raw, target_date, topics, catalog),
         "reddit digest",
-        model,
+        model=model,
     )
 
 
