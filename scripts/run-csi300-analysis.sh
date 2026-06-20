@@ -8,10 +8,18 @@ export PATH="$HOME/.local/bin:$PATH"
 PROJECT_DIR="$HOME/finance-news-digest"
 REPORTS_DIR="$PROJECT_DIR/published/csi300"
 SCRIPT="$PROJECT_DIR/scripts/csi300_analysis.py"
+CHECK_SCRIPT="$PROJECT_DIR/scripts/check_trading_day.py"
 
 # 创建报告目录
 mkdir -p "$REPORTS_DIR"
 mkdir -p "$PROJECT_DIR/var/log"
+
+# 检查今天是否开盘
+echo "=== 检查市场是否开盘 ==="
+if ! python3 "$CHECK_SCRIPT"; then
+    echo "今天不开盘（节假日或周末），跳过沪深300分析"
+    exit 0
+fi
 
 # 运行分析脚本
 echo "=== 开始生成沪深300涨跌分析 ==="
