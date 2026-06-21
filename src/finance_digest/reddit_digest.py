@@ -1020,7 +1020,7 @@ def render_reddit_markdown(
                 lines.append(f"- **原标题：** {item['title_original']}")
             lines.append(f"- **社区热度：** {' / '.join(metrics)}")
             lines.append(f"- **发布时间：** {item['published_at']}")
-            lines.append(f"- **原帖：** {item['url']}")
+            lines.append(f"- **原帖：** [查看原帖]({item['url']})")
             lines.append(f"- **讨论摘要：** {item['summary_zh']}")
             lines.append(f"- **社区信号：** {item['community_signal_zh']}")
             lines.append(f"- **基本面影响：** {item['fundamental_impact_zh']}")
