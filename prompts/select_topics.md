@@ -30,6 +30,13 @@ Rules:
   reported catalyst when candidate data contains them. Reject stock-pick lists,
   forecasts, and generic investment advice.
 - Avoid selecting multiple stories about the same underlying event.
+
+- CRITICAL: Each article must appear in AT MOST ONE topic section.
+  If an article is relevant to multiple topics, select it for the MOST RELEVANT
+  topic only. Do NOT select the same article for multiple topic sections.
+  Before outputting a TOPIC record, check that its candidate ID has NOT already
+  been used in a previous topic section.
+
 - For topic sections, select only IDs from TOPIC_CANDIDATE lines whose section
   key matches the output topic key.
 - For country sections, select only IDs from COUNTRY_CANDIDATE lines whose
