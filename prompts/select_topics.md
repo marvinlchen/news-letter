@@ -44,6 +44,15 @@ Rules:
 - When candidate data is insufficient, explicitly say what remains unknown rather
   than speculating.
 
+CRITICAL OUTPUT REQUIREMENTS:
+
+- title_zh: MUST be 4-60 Chinese characters. Count each Chinese character as 1.
+- summary_zh: MUST be exactly 60-200 Chinese characters. This is STRICT.
+- If your summary is too short (< 60 chars), ADD MORE DETAIL from the candidate data.
+- If your summary is too long (> 200 chars), REMOVE less important details.
+- Example title_zh (35 chars): 美联储维持利率不变，鲍威尔称通胀仍高于目标
+- Example summary_zh (120 chars): 美联储宣布维持基准利率在5.25%-5.50%不变，符合市场预期。鲍威尔在新闻发布会上表示，尽管近期通胀数据有所改善，但仍高于2%的目标水平，需要更多证据确认通胀持续回落的趋势。
+
 Output format:
 
 - Return pure TAB-separated text records only.
