@@ -86,7 +86,7 @@
     {
       "name": "IT之家 via Google",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site%3Aithome.com%20%28tech%20OR%20科技%20OR%20software%20OR%20hardware%29%20when%3A2d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:ithome.com+(tech+OR+%E7%A7%91%E6%8A%80+OR+software+OR+hardware+OR+AI)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "technology",
       "weight": 9,
       "topics": [
@@ -146,16 +146,6 @@
       "topics": [
         "macroeconomics",
         "stock_market"
-      ]
-    },
-    {
-      "name": "雷锋网 AI RSS",
-      "provider": "rss",
-      "url": "https://www.leiphone.com/category/ai/feed",
-      "category": "ai_frontier",
-      "weight": 9,
-      "topics": [
-        "ai_frontier"
       ]
     },
     {
@@ -435,7 +425,7 @@
     {
       "name": "华尔街见闻",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:wallstreetcn.com+(finance+OR+stock+OR+economy+OR+华尔街)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:wallstreetcn.com+(finance+OR+stock+OR+economy+OR+%E5%8D%8E%E5%B0%94%E8%A1%97)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "finance",
       "weight": 10,
       "topics": [
@@ -447,7 +437,7 @@
     {
       "name": "雪球",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:xueqiu.com+(stock+OR+股票+OR+投资+OR+fund)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:xueqiu.com+(stock+OR+%E8%82%A1%E7%A5%A8+OR+%E6%8A%95%E8%B5%84+OR+fund)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "stock_market",
       "weight": 9,
       "topics": [
@@ -457,23 +447,12 @@
     {
       "name": "格隆汇",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:gelonghui.com+(finance+OR+财经+OR+stock)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:gelonghui.com+(finance+OR+%E8%B4%A2%E7%BB%8F+OR+stock)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "finance",
       "weight": 9,
       "topics": [
         "macroeconomics",
         "stock_market"
-      ]
-    },
-    {
-      "name": "虎嗅网",
-      "provider": "rss",
-      "url": "https://www.huxiu.com/rss/0.xml",
-      "category": "business_analysis",
-      "weight": 9,
-      "topics": [
-        "consumer",
-        "technology"
       ]
     },
     {
@@ -490,7 +469,7 @@
     {
       "name": "澎湃新闻财经",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:thepaper.cn+(财经+OR+金融+OR+经济)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:thepaper.cn+(%E8%B4%A2%E7%BB%8F+OR+%E9%87%91%E8%9E%8D+OR+%E7%BB%8F%E6%B5%8E)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "finance",
       "weight": 9,
       "topics": [
@@ -512,7 +491,7 @@
     {
       "name": "彭博中文",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:bloomberg.com/chinese+(finance+OR+economy+OR+market)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:bloomberg.com%2Fchinese+(finance+OR+economy+OR+market)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "finance",
       "weight": 10,
       "topics": [
@@ -524,7 +503,7 @@
     {
       "name": "路透中文",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:cn.reuters.com+(财经+OR+金融+OR+经济)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:cn.reuters.com+(%E8%B4%A2%E7%BB%8F+OR+%E9%87%91%E8%9E%8D+OR+%E7%BB%8F%E6%B5%8E)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "finance",
       "weight": 10,
       "topics": [
@@ -533,20 +512,9 @@
       ]
     },
     {
-      "name": "智东西",
-      "provider": "rss",
-      "url": "https://www.jiqizhixin.com/rss",
-      "category": "ai_frontier",
-      "weight": 9,
-      "topics": [
-        "ai_frontier",
-        "technology"
-      ]
-    },
-    {
       "name": "亿欧网",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:iyiou.com+(科技+OR+产业+OR+创新)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:iyiou.com+(%E7%A7%91%E6%8A%80+OR+%E4%BA%A7%E4%B8%9A+OR+%E5%88%9B%E6%96%B0)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "technology",
       "weight": 8,
       "topics": [
@@ -557,7 +525,7 @@
     {
       "name": "中欧商业评论",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:ceibs-review.com+(商业+OR+管理+OR+公司)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:ceibs-review.com+(%E5%95%86%E4%B8%9A+OR+%E7%AE%A1%E7%90%86+OR+%E5%85%AC%E5%8F%B8)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "business",
       "weight": 8,
       "topics": [
@@ -568,7 +536,7 @@
     {
       "name": "中国企业家",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:iceo.com.cn+(企业家+OR+公司+OR+商业)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:iceo.com.cn+(%E4%BC%81%E4%B8%9A%E5%AE%B6+OR+%E5%85%AC%E5%8F%B8+OR+%E5%95%86%E4%B8%9A)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "business",
       "weight": 8,
       "topics": [
@@ -579,7 +547,7 @@
     {
       "name": "投资界",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:pedaily.cn+(投资+OR+VC+OR+PE+OR+融资)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:pedaily.cn+(%E6%8A%95%E8%B5%84+OR+VC+OR+PE+OR+%E8%9E%8D%E8%B5%84)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "finance",
       "weight": 9,
       "topics": [
@@ -590,7 +558,7 @@
     {
       "name": "科创板日报",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:chinastarmarket.cn+(科创板+OR+硬科技+OR+半导体)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:chinastarmarket.cn+(%E7%A7%91%E5%88%9B%E6%9D%BF+OR+%E7%A1%AC%E7%A7%91%E6%8A%80+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "stock_market",
       "weight": 9,
       "topics": [
@@ -601,7 +569,7 @@
     {
       "name": "半导体行业观察",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:icbank.cc+(半导体+OR+chip+OR+集成电路)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:icbank.cc+(%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+chip+OR+%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "technology",
       "weight": 9,
       "topics": [
@@ -612,7 +580,7 @@
     {
       "name": "界面新闻财经",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:jiemian.com+(财经+OR+金融+OR+商业)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:jiemian.com+(%E8%B4%A2%E7%BB%8F+OR+%E9%87%91%E8%9E%8D+OR+%E5%95%86%E4%B8%9A)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "finance",
       "weight": 9,
       "topics": [
@@ -623,7 +591,7 @@
     {
       "name": "36氪出海",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:36kr.com+(出海+OR+全球化+OR+overseas)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:36kr.com+(%E5%87%BA%E6%B5%B7+OR+%E5%85%A8%E7%90%83%E5%8C%96+OR+overseas)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "business",
       "weight": 8,
       "topics": [
@@ -634,7 +602,7 @@
     {
       "name": "晚点LatePost",
       "provider": "rss",
-      "url": "https://news.google.com/rss/search?q=site:thepaper.cn/blogs+(科技+OR+商业+OR+公司)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=site:thepaper.cn%2Fblogs+(%E7%A7%91%E6%8A%80+OR+%E5%95%86%E4%B8%9A+OR+%E5%85%AC%E5%8F%B8)&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "category": "business",
       "weight": 9,
       "topics": [
