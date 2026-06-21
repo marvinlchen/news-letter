@@ -1,8 +1,8 @@
 from __future__ import annotations
+import re
 
 import json
 import os
-import re
 import subprocess
 import sys
 import tempfile
@@ -395,6 +395,49 @@ def append_daily_protocol_item(
     return True
 
 
+
+def deduplicate_topics(digest: dict[str, Any]) -> dict[str, Any]:
+    """Remove duplicate articles across topic sections.
+    
+    Each article should appear in at most ONE topic section.
+    Deduplication is by URL or by similar title (same story from different sources).
+    Keep the first occurrence (most relevant topic).
+    """
+    seen_urls = set()
+    seen_titles: set[str] = set()
+    for topic in digest.get("topics", []):
+        unique_items = []
+        for item in topic.get("items", []):
+            url = item.get("url")
+            title = item.get("title_original", "")
+            # Normalize title for comparison (lowercase, remove spaces/punctuation)
+            title_norm = re.sub(r"[^a-z0-9]", "", title.lower())
+            
+            # Skip if URL already seen
+            if url and url in seen_urls:
+                continue
+            # Skip if very similar title already seen (same story, different source)
+            if title_norm and len(title_norm) > 20:
+                is_dup = False
+                for seen_title in seen_titles:
+                    if len(seen_title) > 20 and (
+                        title_norm in seen_title or seen_title in title_norm or
+                        (len(title_norm) > 30 and seen_title[:30] == title_norm[:30])
+                    ):
+                        is_dup = True
+                        break
+                if is_dup:
+                    continue
+            
+            unique_items.append(item)
+            if url:
+                seen_urls.add(url)
+            if title_norm and len(title_norm) > 20:
+                seen_titles.add(title_norm)
+        topic["items"] = unique_items
+    return digest
+
+
 def parse_daily_protocol(
     raw: str,
     target_date: date,
@@ -539,6 +582,6 @@ def run_codex(
         prompt,
         codex_bin,
         900,
-        lambda raw: parse_daily_protocol(raw, target_date, catalog),
+        lambda raw: deduplicate_topics(parse_daily_protocol(raw, target_date, catalog)),
         "daily digest",
     )

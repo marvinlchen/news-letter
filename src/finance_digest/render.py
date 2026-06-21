@@ -71,18 +71,36 @@ def fallback_item(article: Article, rank: int, section_name: str) -> dict[str, A
         "url": article.url,
         "confidence": "medium" if article.cluster_size > 1 else "low",
     }
+
+def deduplicate_fallback_items(items: list[dict]) -> list[dict]:
+    """Remove duplicates from fallback items."""
+    seen = set()
+    unique = []
+    for item in items:
+        url = item.get("url")
+        if url and url in seen:
+            continue
+        unique.append(item)
+        if url:
+            seen.add(url)
+    return unique
+
 def fallback_digest(target_date: date, articles: list[Article]) -> dict[str, Any]:
     topics = []
+    seen_urls: set[str] = set()
     for key, topic_articles in topic_top_articles(articles).items():
         name_zh = TOPICS[key]["name_zh"]
+        unique_items = []
+        for rank, article in enumerate(topic_articles, start=1):
+            if article.url in seen_urls:
+                continue
+            unique_items.append(fallback_item(article, len(unique_items) + 1, name_zh))
+            seen_urls.add(article.url)
         topics.append(
             {
                 "key": key,
                 "name_zh": name_zh,
-                "items": [
-                    fallback_item(article, rank, name_zh)
-                    for rank, article in enumerate(topic_articles, start=1)
-                ],
+                "items": unique_items,
             }
         )
     countries = []
