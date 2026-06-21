@@ -51,16 +51,15 @@ def truncate(value: str, maximum: int) -> str:
 
 
 def fallback_item(article: Article, rank: int, section_name: str) -> dict[str, Any]:
+    source_name = SOURCE_NAMES.get(article.source, '可信来源')
+    title_short = article.title[:50] + '...' if len(article.title) > 50 else article.title
     return {
         "rank": rank,
-        "title_zh": (
-            f"{section_name}第{rank}条要闻："
-            f"{SOURCE_NAMES.get(article.source, '可信来源')}报道"
-        ),
+        "title_zh": f"{section_name}：{title_short}（{source_name}）",
         "title_original": article.title,
         "summary_zh": truncate(
-            f"{SOURCE_NAMES.get(article.source, '可信来源')}发布一则"
-            f"{section_name}消息。该条目规则评分为 {article.score:.1f}，"
+            f"{source_name}发布一则{section_name}消息：{article.title}。"
+            f"该条目规则评分为 {article.score:.1f}，"
             f"检测到 {article.cluster_size} 条同事件候选报道。"
             "当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文"
             "及其他可信来源进一步核实。",
@@ -72,8 +71,6 @@ def fallback_item(article: Article, rank: int, section_name: str) -> dict[str, A
         "url": article.url,
         "confidence": "medium" if article.cluster_size > 1 else "low",
     }
-
-
 def fallback_digest(target_date: date, articles: list[Article]) -> dict[str, Any]:
     topics = []
     for key, topic_articles in topic_top_articles(articles).items():
