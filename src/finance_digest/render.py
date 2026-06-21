@@ -140,7 +140,7 @@ def render_markdown(digest: dict[str, Any], mode: str, source_errors: list[dict[
                     f"- **原标题：** {item['title_original']}",
                     f"- **来源：** {item['source']}",
                     f"- **发布时间：** {item['published_at']}",
-                    f"- **原文：** {item['url']}",
+                    f"- **原文：** [查看原文]({item['url']})",
                     f"- **摘要：** {item['summary_zh']}",
                     "",
                 ]
