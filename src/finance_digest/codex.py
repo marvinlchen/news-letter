@@ -575,6 +575,7 @@ def run_codex(
     target_date: date,
     articles: list[Article],
     codex_bin: str = "codex",
+    model: str = "",
 ) -> dict[str, Any]:
     prompt, catalog = build_daily_protocol_prompt(project_root, target_date, articles)
     return run_protocol_with_retry(
@@ -584,4 +585,5 @@ def run_codex(
         900,
         lambda raw: deduplicate_topics(parse_daily_protocol(raw, target_date, catalog)),
         "daily digest",
+        model=model,
     )

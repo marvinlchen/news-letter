@@ -26,6 +26,7 @@ echo "=== 开始生成沪深300涨跌分析 ==="
 echo "时间: $(date)"
 
 CSI300_AI_MODEL="${CSI300_AI_MODEL:-codebuddy}" \
+CSI300_AI_MODEL_NAME="${CSI300_AI_MODEL_NAME:-deepseek-v4-pro}"
   python3 "$SCRIPT" --output-dir "$REPORTS_DIR" --top "${CSI300_TOP:-20}"
 
 echo "=== 分析完成 ==="

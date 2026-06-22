@@ -27,6 +27,7 @@ from xml.etree import ElementTree as ET
 # ── 配置 ────────────────────────────────────────────────────────────────────────
 
 AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codebuddy")   # "codex" or "codebuddy"
+AI_MODEL_NAME = os.environ.get("CSI300_AI_MODEL_NAME", "")  # e.g. "deepseek-v4"
 NEWS_FETCH_LIMIT = int(os.environ.get("CSI300_NEWS_FETCH_LIMIT", "8"))
 NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_NEWS_PROMPT_LIMIT", "6"))
 NEWS_EVIDENCE_LIMIT = int(os.environ.get("CSI300_NEWS_EVIDENCE_LIMIT", "2"))
@@ -647,6 +648,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
     else:
         codebuddy_executable = shutil.which("codebuddy")
         if codebuddy_executable:
+            if AI_MODEL_NAME:
+            cmd = [codebuddy_executable, "-p", "--output-format", "json", f"--model={AI_MODEL_NAME}", prompt]
+        else:
             cmd = [codebuddy_executable, "-p", "--output-format", "json", prompt]
         else:
             cmd = None
@@ -667,6 +671,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
                     if test_result.returncode != 0:
                         continue
                     # 如果成功，使用 node 直接运行 codebuddy
+                    if AI_MODEL_NAME:
+                    cmd = [node_path, cb_path, "-p", "--output-format", "json", f"--model={AI_MODEL_NAME}", prompt]
+                else:
                     cmd = [node_path, cb_path, "-p", "--output-format", "json", prompt]
                     break
                 except Exception:
@@ -674,6 +681,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
         
         if cmd is None:
             # 如果都找不到，使用默认命令（会失败并抛出错误）
+            if AI_MODEL_NAME:
+            cmd = ["codebuddy", "-p", "--output-format", "json", f"--model={AI_MODEL_NAME}", prompt]
+        else:
             cmd = ["codebuddy", "-p", "--output-format", "json", prompt]
         
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)

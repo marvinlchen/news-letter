@@ -65,6 +65,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--use-codex", action="store_true")
     parser.add_argument("--require-codex", action="store_true")
     parser.add_argument("--codex-bin", default=os.environ.get("CODEX_BIN", "codex"))
+    parser.add_argument("--codex-model", default=os.environ.get("CODEX_MODEL", ""))
     parser.add_argument("--sources-file", type=Path, help="Path to sources JSON file (default: config/sources.json)")
     return parser.parse_args(argv)
 
@@ -96,8 +97,8 @@ def run(argv: list[str] | None = None) -> int:
     digest = fallback_digest(args.date, articles)
     if args.use_codex and articles:
         try:
-            digest = run_codex(project_root, args.date, articles, args.codex_bin)
-            mode = "codex"
+            digest = run_codex(project_root, args.date, articles, args.codex_bin, model=args.codex_model)
+            mode = Path(args.codex_bin).stem
         except Exception as exc:
             codex_error = str(exc)
 
@@ -111,6 +112,7 @@ def run(argv: list[str] | None = None) -> int:
 
     digest["metadata"] = {
         "mode": mode,
+        "model": args.codex_model or mode,
         "candidate_count": len(articles),
         "source_errors": source_errors,
         "codex_error": codex_error,
@@ -125,6 +127,7 @@ def run(argv: list[str] | None = None) -> int:
         "date": args.date.isoformat(),
         "generated_at": datetime.now(TIMEZONE).isoformat(),
         "mode": mode,
+        "model": args.codex_model or mode,
         "candidate_count": len(articles),
         "topic_selected_count": sum(
             len(topic["items"]) for topic in digest.get("topics", [])

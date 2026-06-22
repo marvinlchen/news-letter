@@ -504,6 +504,7 @@ def run_codex_deep_reads(
     target_date: date,
     articles: list[Article],
     codex_bin: str,
+    model: str = "",
 ) -> dict[str, Any]:
     prompt, catalog = build_deep_protocol_prompt(project_root, target_date, articles)
     return run_protocol_with_retry(
@@ -513,6 +514,7 @@ def run_codex_deep_reads(
         1200,
         lambda raw: parse_deep_protocol(raw, target_date, catalog),
         "deep reads",
+        model=model,
     )
 
 
@@ -590,6 +592,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--use-codex", action="store_true")
     parser.add_argument("--require-codex", action="store_true")
     parser.add_argument("--codex-bin", default=os.environ.get("CODEX_BIN", "codex"))
+    parser.add_argument("--codex-model", default=os.environ.get("CODEX_MODEL", ""))
     return parser.parse_args(argv)
 
 
@@ -621,9 +624,10 @@ def run(argv: list[str] | None = None) -> int:
     if args.use_codex and articles:
         try:
             report = run_codex_deep_reads(
-                project_root, args.date, articles, args.codex_bin
+                project_root, args.date, articles, args.codex_bin,
+                model=args.codex_model,
             )
-            mode = "codex"
+            mode = Path(args.codex_bin).stem
         except Exception as exc:
             codex_error = str(exc)
 
@@ -633,9 +637,10 @@ def run(argv: list[str] | None = None) -> int:
         successful = load_successful_report(report_json, args.date)
         if successful is not None:
             report = successful
-            mode = "codex-preserved"
+            mode = Path(args.codex_bin).stem + "-preserved"
     report["metadata"] = {
         "mode": mode,
+        "model": args.codex_model or mode,
         "lookback_days": args.lookback_days,
         "candidate_count": len(articles),
         "source_errors": source_errors,
@@ -656,6 +661,7 @@ def run(argv: list[str] | None = None) -> int:
                 "date": args.date.isoformat(),
                 "generated_at": datetime.now(TIMEZONE).isoformat(),
                 "mode": mode,
+            "model": args.codex_model or mode,
                 "lookback_days": args.lookback_days,
                 "candidate_count": len(articles),
                 "selected_count": sum(
