@@ -372,7 +372,7 @@ class RedditRSSClient:
 
     def __init__(self) -> None:
         # Reddit's unauthenticated RSS endpoint applies aggressive per-IP limits.
-        self.http = RedditHTTPClient(minimum_interval=30.0)
+        self.http = RedditHTTPClient(minimum_interval=65.0)
         self.errors: list[dict[str, str]] = []
 
     def listing(
@@ -386,7 +386,7 @@ class RedditRSSClient:
         posts: list[RedditPost] = []
         for subreddit in subreddits:
             url = (
-                f"https://www.reddit.com/r/{subreddit}/top/.rss?"
+                f"https://old.reddit.com/r/{subreddit}/top/.rss?"
                 + urllib.parse.urlencode(
                     {"t": reddit_time_filter(lookback_days), "limit": limit}
                 )
