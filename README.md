@@ -45,6 +45,13 @@ fundamental impact, the value-investor takeaway, key risks, and evidence still
 required. Reddit content is treated as unverified community discussion rather
 than a factual news source.
 
+It also produces a weekly China broad-index ETF share-flow report for a
+fixed "national team ETF" observation basket. The report tracks official ETF
+total share changes from SSE and SZSE and uses delayed Eastmoney ETF quotes
+to estimate scale and weekly flow. This is a public-data proxy for allocation
+pressure, not a holder-level disclosure of Central Huijin, CSF, or any other
+specific account.
+
 The Reddit candidate ranker boosts discussions that mention durable fundamental
 signals such as revenue, margins, free cash flow, capital allocation, pricing
 power, competitive advantage, industry supply and demand, regulation, and
@@ -154,6 +161,22 @@ reddit-reports/YYYY-MM-DD.md
 reddit-reports/latest.md
 ```
 
+Generate the standalone weekly national-team ETF observation report:
+
+```bash
+./scripts/run-national-team-etf-weekly.sh
+```
+
+ETF weekly artifacts are written to:
+
+```text
+var/national-team-etf/YYYY-MM-DD.json
+var/national-team-etf/latest.json
+var/national-team-etf-status/latest.json
+published/national-team-etf/YYYY-MM-DD.md
+published/national-team-etf/latest.md
+```
+
 Without credentials, the collector uses Reddit's public Topic `top/day` RSS
 feeds at a deliberately conservative request rate. RSS mode does not fetch
 thread comments. For accurate scores, total comment counts, sampled Top
@@ -211,6 +234,10 @@ logs to `var/log/deep-reads.log`.
 The Reddit community report runs every day at `04:30` China Standard Time,
 searches the previous China calendar day, and writes logs to
 `var/log/reddit-digest.log`.
+The national-team ETF observation report runs every Saturday at `09:10`
+China Standard Time, uses the latest official ETF share data available in the
+previous two weeks, and writes logs to
+`var/log/national-team-etf-weekly.log`.
 
 After a successful digest run, `scripts/publish-report.sh` commits and pushes
 the dated report and `reports/latest.md` to the configured `origin` remote.
