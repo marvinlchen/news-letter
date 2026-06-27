@@ -417,6 +417,12 @@ def sum_present(rows: list[dict[str, Any]], key: str) -> float:
     return sum(row[key] for row in rows if row.get(key) is not None)
 
 
+def scale_shrink_pct(current_scale: float | None, baseline_scale: float | None) -> float | None:
+    if current_scale is None or baseline_scale in (None, 0):
+        return None
+    return (baseline_scale - current_scale) / baseline_scale * 100.0
+
+
 def build_payload(
     history: dict[str, list[ScalePoint]],
     quotes: dict[str, dict[str, Any]],
@@ -448,10 +454,12 @@ def build_payload(
         day_share_delta = latest.shares - previous.shares if previous else None
 
         scale_yi = latest.shares * price / 1e8 if price is not None else None
+        ytd_baseline_scale_yi = ytd_baseline.shares * price / 1e8 if ytd_baseline and price is not None else None
         week_flow_yi = flow_from_delta(week_share_delta, price)
         month_flow_yi = flow_from_delta(month_share_delta, price)
         ytd_flow_yi = flow_from_delta(ytd_share_delta, price)
         day_flow_yi = flow_from_delta(day_share_delta, price)
+        ytd_shrink_pct = scale_shrink_pct(scale_yi, ytd_baseline_scale_yi)
 
         records.append(
             {
@@ -471,6 +479,8 @@ def build_payload(
                 "iopv": quote.get("iopv"),
                 "turnover_yi": quote.get("turnover") / 1e8 if quote.get("turnover") is not None else None,
                 "estimated_scale_yi": scale_yi,
+                "ytd_baseline_estimated_scale_yi": ytd_baseline_scale_yi,
+                "ytd_scale_shrink_pct": ytd_shrink_pct,
                 "week_baseline_date": ymd(week_baseline.trade_date) if week_baseline else None,
                 "month_baseline_date": ymd(month_baseline.trade_date) if month_baseline else None,
                 "ytd_baseline_date": ymd(ytd_baseline.trade_date) if ytd_baseline else None,
@@ -501,6 +511,8 @@ def build_payload(
     total_week_flow_yi = sum_present(records, "week_estimated_flow_yi")
     total_month_flow_yi = sum_present(records, "month_estimated_flow_yi")
     total_ytd_flow_yi = sum_present(records, "ytd_estimated_flow_yi")
+    total_ytd_baseline_scale_yi = sum_present(records, "ytd_baseline_estimated_scale_yi")
+    total_ytd_shrink_pct = scale_shrink_pct(total_scale_yi, total_ytd_baseline_scale_yi)
     total_week_share_delta_yi = sum_present(records, "week_share_delta_yi")
     total_month_share_delta_yi = sum_present(records, "month_share_delta_yi")
     total_ytd_share_delta_yi = sum_present(records, "ytd_share_delta_yi")
@@ -515,12 +527,17 @@ def build_payload(
             "family": family,
             "etf_count": len(rows),
             "estimated_scale_yi": sum_present(rows, "estimated_scale_yi"),
+            "ytd_baseline_estimated_scale_yi": sum_present(rows, "ytd_baseline_estimated_scale_yi"),
             "week_estimated_flow_yi": sum_present(rows, "week_estimated_flow_yi"),
             "month_estimated_flow_yi": sum_present(rows, "month_estimated_flow_yi"),
             "ytd_estimated_flow_yi": sum_present(rows, "ytd_estimated_flow_yi"),
             "week_share_delta_yi": sum_present(rows, "week_share_delta_yi"),
             "month_share_delta_yi": sum_present(rows, "month_share_delta_yi"),
             "ytd_share_delta_yi": sum_present(rows, "ytd_share_delta_yi"),
+            "ytd_scale_shrink_pct": scale_shrink_pct(
+                sum_present(rows, "estimated_scale_yi"),
+                sum_present(rows, "ytd_baseline_estimated_scale_yi"),
+            ),
             "members": sorted(
                 flow_rows,
                 key=lambda row: abs(row["week_estimated_flow_yi"]),
@@ -557,6 +574,8 @@ def build_payload(
         "methodology": "Weekly, monthly, and YTD estimated flows use official ETF share deltas against T-7, T-30, and first available trading day of the year, multiplied by latest Eastmoney delayed price.",
         "totals": {
             "estimated_scale_yi": total_scale_yi,
+            "ytd_baseline_estimated_scale_yi": total_ytd_baseline_scale_yi,
+            "ytd_scale_shrink_pct": total_ytd_shrink_pct,
             "week_estimated_flow_yi": total_week_flow_yi,
             "month_estimated_flow_yi": total_month_flow_yi,
             "ytd_estimated_flow_yi": total_ytd_flow_yi,
@@ -566,6 +585,7 @@ def build_payload(
             "week_flow_pct_of_scale": pct(total_week_flow_yi, total_scale_yi),
             "month_flow_pct_of_scale": pct(total_month_flow_yi, total_scale_yi),
             "ytd_flow_pct_of_scale": pct(total_ytd_flow_yi, total_scale_yi),
+            "ytd_shrink_pct": total_ytd_shrink_pct,
         },
         "records": records_sorted,
         "families": families_sorted,
@@ -623,7 +643,7 @@ def render_report(payload: dict[str, Any]) -> str:
     lines.append("## 流向结论")
     lines.append("")
     lines.append(
-        f"- 观察池合计估算规模 {fmt_number(totals['estimated_scale_yi'], 1)} 亿元。"
+        f"- 观察池合计当前估算规模 {fmt_number(totals['estimated_scale_yi'], 1)} 亿元。"
     )
     lines.append(
         f"- 周估算净流入：{fmt_number(totals['week_estimated_flow_yi'], 1, signed=True)} 亿元，约占观察池规模 {fmt_pct(totals['week_flow_pct_of_scale'], 2, signed=True)}。"
@@ -632,7 +652,7 @@ def render_report(payload: dict[str, Any]) -> str:
         f"- 月估算净流入：{fmt_number(totals['month_estimated_flow_yi'], 1, signed=True)} 亿元，约占观察池规模 {fmt_pct(totals['month_flow_pct_of_scale'], 2, signed=True)}。"
     )
     lines.append(
-        f"- 年初至今估算净流入：{fmt_number(totals['ytd_estimated_flow_yi'], 1, signed=True)} 亿元，约占观察池规模 {fmt_pct(totals['ytd_flow_pct_of_scale'], 2, signed=True)}。"
+        f"- 年初至今估算净流入：{fmt_number(totals['ytd_estimated_flow_yi'], 1, signed=True)} 亿元；规模缩小比例 {fmt_pct(totals['ytd_shrink_pct'], 1)}。"
     )
     if top_out:
         lines.append(
@@ -650,17 +670,18 @@ def render_report(payload: dict[str, Any]) -> str:
 
     lines.append("## 指数族汇总")
     lines.append("")
-    lines.append("| 指数族 | ETF数量 | 估算规模(亿元) | 周估算净流入(亿元) | 月估算净流入(亿元) | 年初至今估算净流入(亿元) | 主要周变化 |")
-    lines.append("| --- | ---: | ---: | ---: | ---: | ---: | --- |")
+    lines.append("| 指数族 | ETF数量 | 当前估算规模(亿元) | 周估算净流入(亿元) | 月估算净流入(亿元) | 年初至今估算净流入(亿元) | 年初至今规模缩小比例 | 主要周变化 |")
+    lines.append("| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |")
     for family in payload["families"]:
         lines.append(
-            "| {family} | {count} | {scale} | {week} | {month} | {ytd} | {members} |".format(
+            "| {family} | {count} | {scale} | {week} | {month} | {ytd} | {shrink} | {members} |".format(
                 family=family["family"],
                 count=family["etf_count"],
                 scale=fmt_number(family["estimated_scale_yi"], 1),
                 week=fmt_number(family["week_estimated_flow_yi"], 1, signed=True),
                 month=fmt_number(family["month_estimated_flow_yi"], 1, signed=True),
                 ytd=fmt_number(family["ytd_estimated_flow_yi"], 1, signed=True),
+                shrink=fmt_pct(family["ytd_scale_shrink_pct"], 1),
                 members=render_major_members(family["members"]),
             )
         )
@@ -670,11 +691,11 @@ def render_report(payload: dict[str, Any]) -> str:
     lines.append("")
     lines.append("按周估算净流入从低到高排列，便于先看到减配方向。")
     lines.append("")
-    lines.append("| 排名 | 代码 | ETF | 指数族 | 估算规模(亿元) | 周估算净流入(亿元) | 月估算净流入(亿元) | 年初至今估算净流入(亿元) | 日涨跌幅 | 数据日期 |")
+    lines.append("| 排名 | 代码 | ETF | 指数族 | 当前估算规模(亿元) | 周估算净流入(亿元) | 月估算净流入(亿元) | 年初至今估算净流入(亿元) | 年初至今规模缩小比例 | 数据日期 |")
     lines.append("| ---: | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |")
     for idx, row in enumerate(records, start=1):
         lines.append(
-            "| {idx} | {code} | {name} | {family} | {scale} | {week} | {month} | {ytd} | {pct} | {date} |".format(
+            "| {idx} | {code} | {name} | {family} | {scale} | {week} | {month} | {ytd} | {shrink} | {date} |".format(
                 idx=idx,
                 code=row["code"],
                 name=row["name"],
@@ -683,7 +704,7 @@ def render_report(payload: dict[str, Any]) -> str:
                 week=fmt_number(row["week_estimated_flow_yi"], 1, signed=True),
                 month=fmt_number(row["month_estimated_flow_yi"], 1, signed=True),
                 ytd=fmt_number(row["ytd_estimated_flow_yi"], 1, signed=True),
-                pct=fmt_pct(row["pct_change"], 2, signed=True),
+                shrink=fmt_pct(row["ytd_scale_shrink_pct"], 1),
                 date=row["latest_date"],
             )
         )
@@ -694,14 +715,14 @@ def render_report(payload: dict[str, Any]) -> str:
     for row in records:
         quote_date = row["quote_date"] or "-"
         lines.append(
-            f"- **{row['name']}（{row['code']}）**：周/月/年初至今估算净流入分别为 {fmt_number(row['week_estimated_flow_yi'], 1, signed=True)} / {fmt_number(row['month_estimated_flow_yi'], 1, signed=True)} / {fmt_number(row['ytd_estimated_flow_yi'], 1, signed=True)} 亿元；估算规模 {fmt_number(row['estimated_scale_yi'], 1)} 亿元，最新价 {fmt_number(row['price'], 3)} 元；周/月/年初基准日分别为 {row['week_baseline_date'] or '-'} / {row['month_baseline_date'] or '-'} / {row['ytd_baseline_date'] or '-'}；行情日期 {quote_date}。"
+            f"- **{row['name']}（{row['code']}）**：周/月/年初至今估算净流入分别为 {fmt_number(row['week_estimated_flow_yi'], 1, signed=True)} / {fmt_number(row['month_estimated_flow_yi'], 1, signed=True)} / {fmt_number(row['ytd_estimated_flow_yi'], 1, signed=True)} 亿元；年初至今规模缩小比例 {fmt_pct(row['ytd_scale_shrink_pct'], 1)}；当前估算规模 {fmt_number(row['estimated_scale_yi'], 1)} 亿元，最新价 {fmt_number(row['price'], 3)} 元；周/月/年初基准日分别为 {row['week_baseline_date'] or '-'} / {row['month_baseline_date'] or '-'} / {row['ytd_baseline_date'] or '-'}；行情日期 {quote_date}。"
         )
     lines.append("")
 
     lines.append("## 数据源与方法")
     lines.append("")
     lines.append("- 份额主源：上交所 ETF 基金规模接口 `query.sse.com.cn/commonQuery.do`，深交所基金规模日频接口 `www.szse.cn/api/report/ShowReport`。")
-    lines.append("- 行情补充：东方财富 ETF 延时行情 `push2.eastmoney.com/api/qt/ulist.np/get`，用于最新价、日涨跌幅、折溢价和估算规模。")
+    lines.append("- 行情补充：东方财富 ETF 延时行情 `push2.eastmoney.com/api/qt/ulist.np/get`，用于最新价、折溢价和当前估算规模。")
     lines.append("- 报告展示重点是估算净流入；底层仍使用官方 ETF 份额口径计算，Markdown 不展示底层份额字段。")
     lines.append("- 周/月/年初至今估算净流入：分别用最新官方份额相对 T-7、T-30、当年首个可用交易日的份额变化，乘以最新价估算。")
     lines.append("- 该金额是资金方向估算，不等同于交易所逐日申赎金额，也不能识别最终持有人。")
@@ -745,6 +766,8 @@ def write_outputs(payload: dict[str, Any], markdown: str, project_root: Path, ou
         "total_week_estimated_flow_yi": payload["totals"]["week_estimated_flow_yi"],
         "total_month_estimated_flow_yi": payload["totals"]["month_estimated_flow_yi"],
         "total_ytd_estimated_flow_yi": payload["totals"]["ytd_estimated_flow_yi"],
+        "total_ytd_baseline_estimated_scale_yi": payload["totals"]["ytd_baseline_estimated_scale_yi"],
+        "total_ytd_scale_shrink_pct": payload["totals"]["ytd_scale_shrink_pct"],
         "total_week_share_delta_yi": payload["totals"]["week_share_delta_yi"],
         "total_month_share_delta_yi": payload["totals"]["month_share_delta_yi"],
         "total_ytd_share_delta_yi": payload["totals"]["ytd_share_delta_yi"],
