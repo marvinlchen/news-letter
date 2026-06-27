@@ -18,6 +18,7 @@ import sys
 import time
 import zipfile
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -34,6 +35,9 @@ HTTP_TIMEOUT = 20
 SSE_SCALE_URL = "https://query.sse.com.cn/commonQuery.do"
 SZSE_SCALE_URL = "https://www.szse.cn/api/report/ShowReport"
 EASTMONEY_QUOTE_URL = "https://push2.eastmoney.com/api/qt/ulist.np/get"
+EASTMONEY_KLINE_URL = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
+EASTMONEY_FUND_PROFILE_URL = "https://fundf10.eastmoney.com/jbgk_{code}.html"
+HISTORICAL_YEAR_COUNT = 5
 
 
 @dataclass(frozen=True)
@@ -51,6 +55,12 @@ class ScalePoint:
     trade_date: date
     shares: float
     source: str
+
+
+@dataclass(frozen=True)
+class PricePoint:
+    trade_date: date
+    close: float
 
 
 WATCHLIST: tuple[WatchETF, ...] = (
@@ -84,6 +94,37 @@ WATCHLIST: tuple[WatchETF, ...] = (
     WatchETF("159352", "A500ETF南方", "中证A500", "SZSE"),
     WatchETF("563360", "A500ETF华泰柏瑞", "中证A500", "SSE"),
 )
+
+
+KNOWN_FUND_START_DATES: dict[str, str] = {
+    "510300": "2012-05-04",
+    "510310": "2013-03-06",
+    "510330": "2012-12-25",
+    "159919": "2012-05-07",
+    "510050": "2004-12-30",
+    "510100": "2019-09-06",
+    "510180": "2006-04-13",
+    "510230": "2011-03-31",
+    "510500": "2013-02-06",
+    "512500": "2015-05-05",
+    "159922": "2013-02-06",
+    "515800": "2019-10-08",
+    "512100": "2016-09-29",
+    "159845": "2021-03-18",
+    "560010": "2022-07-28",
+    "159629": "2022-07-27",
+    "159915": "2011-09-20",
+    "159952": "2017-04-25",
+    "159977": "2019-09-12",
+    "159901": "2006-03-24",
+    "588080": "2020-09-28",
+    "588050": "2020-09-28",
+    "588000": "2020-09-28",
+    "560050": "2021-10-29",
+    "512050": "2024-11-08",
+    "159352": "2024-09-25",
+    "563360": "2024-09-25",
+}
 
 
 def parse_date(value: str) -> date:
@@ -606,6 +647,305 @@ def build_payload(
     }
     return payload
 
+
+def historical_targets(report_date: date) -> list[tuple[str, date]]:
+    start_year = report_date.year - HISTORICAL_YEAR_COUNT
+    targets = [(f"{year}年末", date(year, 12, 31)) for year in range(start_year, report_date.year)]
+    targets.append(("当前", report_date))
+    return targets
+
+
+def fetch_fund_start_dates(watchlist: tuple[WatchETF, ...]) -> tuple[dict[str, str], list[str]]:
+    start_dates: dict[str, str] = {
+        item.code: KNOWN_FUND_START_DATES[item.code]
+        for item in watchlist
+        if item.code in KNOWN_FUND_START_DATES
+    }
+    errors: list[str] = []
+    missing = [item for item in watchlist if item.code not in start_dates]
+    if not missing:
+        return start_dates, errors
+
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; finance-news-digest/1.0)"}
+    for item in missing:
+        url = EASTMONEY_FUND_PROFILE_URL.format(code=item.code)
+        try:
+            response = requests.get(url, headers=headers, timeout=HTTP_TIMEOUT)
+            response.raise_for_status()
+            match = re.search(r"成立日期：\s*<span>([^<]+)</span>", response.text)
+            if not match:
+                errors.append(f"Eastmoney fund profile {item.code}: missing start date")
+                continue
+            start_text = match.group(1).strip()
+            start_dates[item.code] = ymd(parse_date(start_text))
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"Eastmoney fund profile {item.code}: {exc}")
+        time.sleep(0.05)
+    return start_dates, errors
+
+
+def fetch_eastmoney_kline_prices(item: WatchETF, start: date, end: date) -> tuple[list[PricePoint], list[str]]:
+    params = {
+        "secid": f"{eastmoney_market_id(item.code)}.{item.code}",
+        "fields1": "f1,f2,f3,f4,f5,f6",
+        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61",
+        "klt": "101",
+        "fqt": "0",
+        "beg": start.strftime("%Y%m%d"),
+        "end": end.strftime("%Y%m%d"),
+        "ut": "fa5fd1943c7b386f172d6893dbfba10b",
+    }
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; finance-news-digest/1.0)"}
+    try:
+        payload = get_json(EASTMONEY_KLINE_URL, params, headers)
+    except Exception as exc:  # noqa: BLE001
+        return [], [f"Eastmoney kline {item.code}: {exc}"]
+    rows = payload.get("data", {}).get("klines") or []
+    points: list[PricePoint] = []
+    for raw in rows:
+        parts = str(raw).split(",")
+        if len(parts) < 3:
+            continue
+        close = parse_float(parts[2])
+        if close is None:
+            continue
+        try:
+            points.append(PricePoint(trade_date=parse_date(parts[0]), close=close))
+        except ValueError:
+            continue
+    if not points:
+        return [], [f"Eastmoney kline {item.code}: empty history"]
+    return points, []
+
+
+def fetch_historical_prices(
+    watchlist: tuple[WatchETF, ...],
+    start: date,
+    end: date,
+) -> tuple[dict[str, list[PricePoint]], list[str]]:
+    prices: dict[str, list[PricePoint]] = {}
+    errors: list[str] = []
+    max_workers = min(6, max(1, len(watchlist)))
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {
+            executor.submit(fetch_eastmoney_kline_prices, item, start, end): item
+            for item in watchlist
+        }
+        for future in as_completed(futures):
+            item = futures[future]
+            try:
+                points, point_errors = future.result()
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"Eastmoney kline {item.code}: {exc}")
+                continue
+            if points:
+                prices[item.code] = sorted(points, key=lambda point: point.trade_date)
+            errors.extend(point_errors)
+    return prices, errors
+
+
+def price_on_or_before(points: list[PricePoint], target: date, max_back_days: int = 21) -> PricePoint | None:
+    candidates = [point for point in points if point.trade_date <= target]
+    if not candidates:
+        return None
+    point = max(candidates, key=lambda item: item.trade_date)
+    if (target - point.trade_date).days > max_back_days:
+        return None
+    return point
+
+
+def fetch_sse_scale_snapshots(
+    targets: list[tuple[str, date]],
+    watch_codes: set[str],
+) -> tuple[dict[str, dict[str, ScalePoint]], list[str]]:
+    snapshots: dict[str, dict[str, ScalePoint]] = defaultdict(dict)
+    errors: list[str] = []
+    sse_codes = {code for code in watch_codes if code.startswith(("5", "6"))}
+    cache: dict[date, dict[str, ScalePoint]] = {}
+    if not sse_codes:
+        return snapshots, errors
+
+    for label, target in targets:
+        found_any = False
+        last_error: str | None = None
+        for offset in range(22):
+            day = target - timedelta(days=offset)
+            if day.weekday() >= 5:
+                continue
+            if day not in cache:
+                try:
+                    cache[day] = fetch_sse_scale_for_date(day, sse_codes)
+                except Exception as exc:  # noqa: BLE001
+                    last_error = f"SSE historical {ymd(day)}: {exc}"
+                    cache[day] = {}
+            records = cache[day]
+            if not records:
+                continue
+            found_any = True
+            for code, point in records.items():
+                snapshots[code][label] = point
+            break
+        if not found_any and last_error:
+            errors.append(last_error)
+        elif not found_any:
+            errors.append(f"SSE historical {label}: no data on or before {ymd(target)}")
+    return snapshots, errors
+
+
+def fetch_szse_scale_snapshots(
+    targets: list[tuple[str, date]],
+    watch_codes: set[str],
+) -> tuple[dict[str, dict[str, ScalePoint]], list[str]]:
+    snapshots: dict[str, dict[str, ScalePoint]] = defaultdict(dict)
+    errors: list[str] = []
+    szse_codes = {code for code in watch_codes if code.startswith(("0", "1", "2", "3"))}
+    if not szse_codes:
+        return snapshots, errors
+
+    headers = {
+        "Host": "www.szse.cn",
+        "Referer": "https://www.szse.cn/market/fund/volume/etf/index.html",
+        "User-Agent": "Mozilla/5.0 (compatible; finance-news-digest/1.0)",
+    }
+    required = {"日期", "基金代码", "基金简称", "基金规模(份)"}
+
+    for label, target in targets:
+        range_start = target - timedelta(days=21)
+        params = {
+            "SHOWTYPE": "xlsx",
+            "CATALOGID": "scsj_fund_jjgm",
+            "TABKEY": "tab1",
+            "txtStart": ymd(range_start),
+            "txtEnd": ymd(target),
+            "jjlb": "ETF",
+            "random": str(random.random()),
+        }
+        try:
+            response = requests.get(SZSE_SCALE_URL, params=params, headers=headers, timeout=HTTP_TIMEOUT)
+            response.raise_for_status()
+            rows = read_xlsx_rows(response.content)
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"SZSE historical {label}: {exc}")
+            continue
+        if not rows:
+            errors.append(f"SZSE historical {label}: empty xlsx")
+            continue
+        header = [item.strip() for item in rows[0]]
+        col = {name: idx for idx, name in enumerate(header)}
+        if not required.issubset(col):
+            errors.append(f"SZSE historical xlsx missing columns: {sorted(required - set(col))}")
+            continue
+
+        best: dict[str, ScalePoint] = {}
+        for row in rows[1:]:
+            code = row[col["基金代码"]].strip() if col["基金代码"] < len(row) else ""
+            code = code.split()[0].zfill(6)
+            if code not in szse_codes:
+                continue
+            trade_day_text = row[col["日期"]].strip() if col["日期"] < len(row) else ""
+            shares_text = row[col["基金规模(份)"]].strip() if col["基金规模(份)"] < len(row) else ""
+            shares = parse_float(shares_text)
+            if not trade_day_text or shares is None:
+                continue
+            trade_day = parse_date(trade_day_text)
+            if trade_day > target:
+                continue
+            name = row[col["基金简称"]].strip() if col["基金简称"] < len(row) else code
+            point = ScalePoint(
+                code=code,
+                name=name,
+                trade_date=trade_day,
+                shares=shares,
+                source="SZSE ETF scale",
+            )
+            if code not in best or point.trade_date > best[code].trade_date:
+                best[code] = point
+        for code, point in best.items():
+            snapshots[code][label] = point
+    return snapshots, errors
+
+
+def attach_historical_context(payload: dict[str, Any], watchlist: tuple[WatchETF, ...]) -> None:
+    report_day = parse_date(payload["report_date"])
+    targets = historical_targets(report_day)
+    target_labels = [label for label, _ in targets]
+    history_start = targets[0][1] - timedelta(days=21)
+    watch_codes = {item.code for item in watchlist}
+
+    start_dates, start_errors = fetch_fund_start_dates(watchlist)
+    prices, price_errors = fetch_historical_prices(watchlist, history_start, report_day)
+    sse_snapshots, sse_errors = fetch_sse_scale_snapshots(targets, watch_codes)
+    szse_snapshots, szse_errors = fetch_szse_scale_snapshots(targets, watch_codes)
+
+    scale_snapshots: dict[str, dict[str, ScalePoint]] = defaultdict(dict)
+    for source in (sse_snapshots, szse_snapshots):
+        for code, label_map in source.items():
+            scale_snapshots[code].update(label_map)
+
+    record_by_code = {row["code"]: row for row in payload["records"]}
+    historical_rows: list[dict[str, Any]] = []
+    for item in watchlist:
+        record = record_by_code.get(item.code)
+        price_points = prices.get(item.code, [])
+        scale_by_label: dict[str, float | None] = {}
+        scale_dates: dict[str, str | None] = {}
+        price_dates: dict[str, str | None] = {}
+        for label, target in targets:
+            if label == "当前" and record and record.get("estimated_scale_yi") is not None:
+                scale_by_label[label] = record.get("estimated_scale_yi")
+                scale_dates[label] = record.get("latest_date")
+                price_dates[label] = record.get("quote_date")
+                continue
+
+            scale_point = scale_snapshots.get(item.code, {}).get(label)
+            price_point = price_on_or_before(price_points, target)
+            if scale_point and price_point:
+                scale_by_label[label] = scale_point.shares * price_point.close / 1e8
+                scale_dates[label] = ymd(scale_point.trade_date)
+                price_dates[label] = ymd(price_point.trade_date)
+            else:
+                scale_by_label[label] = None
+                scale_dates[label] = ymd(scale_point.trade_date) if scale_point else None
+                price_dates[label] = ymd(price_point.trade_date) if price_point else None
+
+        first_label = next((label for label in target_labels if scale_by_label.get(label) is not None), None)
+        first_scale = scale_by_label.get(first_label) if first_label else None
+        current_scale = scale_by_label.get("当前")
+        change_yi = current_scale - first_scale if current_scale is not None and first_scale is not None else None
+        change_pct = pct(change_yi, first_scale)
+        historical_row = {
+            "code": item.code,
+            "name": record_by_code.get(item.code, {}).get("name") or item.display_name,
+            "display_name": item.display_name,
+            "family": item.family,
+            "exchange": item.exchange,
+            "fund_start_date": start_dates.get(item.code),
+            "historical_estimated_scale_yi": scale_by_label,
+            "historical_scale_dates": scale_dates,
+            "historical_price_dates": price_dates,
+            "historical_first_label": first_label,
+            "historical_change_yi": change_yi,
+            "historical_change_pct": change_pct,
+        }
+        historical_rows.append(historical_row)
+        if record is not None:
+            record.update(historical_row)
+
+    historical_rows.sort(key=lambda row: (row.get("fund_start_date") or "9999-12-31", row["code"]))
+    payload["historical_scale_labels"] = target_labels
+    payload["historical_scale_table"] = historical_rows
+    payload["history_methodology"] = (
+        "成立日期来自东方财富基金 F10；历史规模用目标日前最近官方 ETF 份额乘以同日或最近交易日未复权收盘价估算。"
+    )
+    payload["source_errors"].extend(start_errors + price_errors + sse_errors + szse_errors)
+    payload["source_error_count"] = len(payload["source_errors"])
+    payload["data_sources"].extend(
+        [
+            "Eastmoney fund profile: https://fundf10.eastmoney.com/jbgk_{code}.html",
+            "Eastmoney historical kline: https://push2his.eastmoney.com/api/qt/stock/kline/get",
+        ]
+    )
+
 def fmt_number(value: float | None, digits: int = 1, signed: bool = False) -> str:
     if value is None:
         return "-"
@@ -724,6 +1064,31 @@ def render_report(payload: dict[str, Any]) -> str:
         )
     lines.append("")
 
+    if payload.get("historical_scale_table"):
+        labels = payload.get("historical_scale_labels", [])
+        lines.append("## 成立日期与历史5年规模变化")
+        lines.append("")
+        lines.append("规模单位为亿元；前 5 个历史列为年末值，当前为报告日附近最新值。未成立或数据不可得显示为 `-`。")
+        lines.append("")
+        header = ["代码", "ETF", "指数族", "成立日期", "起算点"] + labels + ["较起算点变化(亿元)", "较起算点变化比例"]
+        lines.append("| " + " | ".join(header) + " |")
+        aligns = ["---", "---", "---", "---", "---"] + ["---:" for _ in labels] + ["---:", "---:"]
+        lines.append("| " + " | ".join(aligns) + " |")
+        for row in payload["historical_scale_table"]:
+            scale_map = row.get("historical_estimated_scale_yi", {})
+            values = [
+                row["code"],
+                row["name"],
+                row["family"],
+                row.get("fund_start_date") or "-",
+                row.get("historical_first_label") or "-",
+            ]
+            values.extend(fmt_number(scale_map.get(label), 1) for label in labels)
+            values.append(fmt_number(row.get("historical_change_yi"), 1, signed=True))
+            values.append(fmt_pct(row.get("historical_change_pct"), 1, signed=True))
+            lines.append("| " + " | ".join(values) + " |")
+        lines.append("")
+
     lines.append("## 单只ETF流向")
     lines.append("")
     for row in records:
@@ -737,6 +1102,7 @@ def render_report(payload: dict[str, Any]) -> str:
     lines.append("")
     lines.append("- 份额主源：上交所 ETF 基金规模接口 `query.sse.com.cn/commonQuery.do`，深交所基金规模日频接口 `www.szse.cn/api/report/ShowReport`。")
     lines.append("- 行情补充：东方财富 ETF 延时行情 `push2.eastmoney.com/api/qt/ulist.np/get`，用于最新价、折溢价和当前估算规模。")
+    lines.append("- 历史补充：东方财富基金 F10 基本概况页用于成立日期，东方财富历史日 K 用于历史收盘价；历史规模 = 官方份额 × 未复权收盘价。")
     lines.append("- 报告展示重点是估算净流入；底层仍使用官方 ETF 份额口径计算，Markdown 不展示底层份额字段。")
     lines.append("- 周/月/年初至今估算净流入：分别用最新官方份额相对 T-7、T-30、当年首个可用交易日的份额变化，乘以最新价估算。")
     lines.append("- 该金额是资金方向估算，不等同于交易所逐日申赎金额，也不能识别最终持有人。")
@@ -785,6 +1151,8 @@ def write_outputs(payload: dict[str, Any], markdown: str, project_root: Path, ou
         "total_week_share_delta_yi": payload["totals"]["week_share_delta_yi"],
         "total_month_share_delta_yi": payload["totals"]["month_share_delta_yi"],
         "total_ytd_share_delta_yi": payload["totals"]["ytd_share_delta_yi"],
+        "historical_scale_labels": payload.get("historical_scale_labels", []),
+        "historical_scale_record_count": len(payload.get("historical_scale_table", [])),
         "mode": "rules",
     }
     (status_dir / "latest.json").write_text(json.dumps(status, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -825,6 +1193,7 @@ def main(argv: list[str] | None = None) -> int:
     quotes, quote_errors = fetch_eastmoney_quotes(WATCHLIST)
     errors = sse_errors + szse_errors + quote_errors
     payload = build_payload(history, quotes, errors, start, end)
+    attach_historical_context(payload, WATCHLIST)
     markdown = render_report(payload)
     report_path = write_outputs(payload, markdown, project_root, output_dir.resolve())
     print(report_path)
