@@ -203,17 +203,53 @@ def fetch_sse_scale_history(start: date, end: date, watch_codes: set[str]) -> tu
     history: dict[str, list[ScalePoint]] = defaultdict(list)
     errors: list[str] = []
     sse_codes = {code for code in watch_codes if code.startswith(("5", "6"))}
-    for day in iter_days(start, end):
-        if day.weekday() >= 5:
-            continue
-        try:
-            records = fetch_sse_scale_for_date(day, sse_codes)
-        except Exception as exc:  # noqa: BLE001 - report diagnostics, keep going
-            errors.append(f"SSE {ymd(day)}: {exc}")
-            continue
+    cache: dict[date, dict[str, ScalePoint]] = {}
+    probe_errors: list[str] = []
+    if not sse_codes:
+        return history, errors
+
+    def fetch(day: date) -> dict[str, ScalePoint]:
+        if day not in cache:
+            try:
+                cache[day] = fetch_sse_scale_for_date(day, sse_codes)
+            except Exception as exc:  # noqa: BLE001 - report diagnostics, keep going
+                probe_errors.append(f"SSE {ymd(day)}: {exc}")
+                cache[day] = {}
+        return cache[day]
+
+    def add_records(records: dict[str, ScalePoint]) -> None:
         for point in records.values():
             history[point.code].append(point)
-        time.sleep(0.1)
+
+    def find_on_or_before(target: date, max_back_days: int = 14) -> date | None:
+        current = target
+        for _ in range(max_back_days + 1):
+            if current.weekday() < 5:
+                records = fetch(current)
+                if records:
+                    add_records(records)
+                    return current
+            current -= timedelta(days=1)
+        return None
+
+    def find_on_or_after(target: date, stop: date) -> date | None:
+        current = target
+        while current <= stop:
+            if current.weekday() < 5:
+                records = fetch(current)
+                if records:
+                    add_records(records)
+                    return current
+            current += timedelta(days=1)
+        return None
+
+    latest_day = find_on_or_before(end)
+    if latest_day is None:
+        errors.extend(probe_errors)
+        return history, errors
+    find_on_or_before(latest_day - timedelta(days=7))
+    find_on_or_before(latest_day - timedelta(days=30))
+    find_on_or_after(date(latest_day.year, 1, 1), latest_day)
     return history, errors
 
 
@@ -223,55 +259,69 @@ def fetch_szse_scale_history(start: date, end: date, watch_codes: set[str]) -> t
     szse_codes = {code for code in watch_codes if code.startswith(("0", "1", "2", "3"))}
     if not szse_codes:
         return history, errors
-    params = {
-        "SHOWTYPE": "xlsx",
-        "CATALOGID": "scsj_fund_jjgm",
-        "TABKEY": "tab1",
-        "txtStart": ymd(start),
-        "txtEnd": ymd(end),
-        "jjlb": "ETF",
-        "random": str(random.random()),
-    }
+
     headers = {
         "Host": "www.szse.cn",
         "Referer": "https://www.szse.cn/market/fund/volume/etf/index.html",
         "User-Agent": "Mozilla/5.0 (compatible; finance-news-digest/1.0)",
     }
-    try:
+    required = {"日期", "基金代码", "基金简称", "基金规模(份)"}
+
+    def fetch_range(range_start: date, range_end: date) -> list[list[str]]:
+        params = {
+            "SHOWTYPE": "xlsx",
+            "CATALOGID": "scsj_fund_jjgm",
+            "TABKEY": "tab1",
+            "txtStart": ymd(range_start),
+            "txtEnd": ymd(range_end),
+            "jjlb": "ETF",
+            "random": str(random.random()),
+        }
         response = requests.get(SZSE_SCALE_URL, params=params, headers=headers, timeout=HTTP_TIMEOUT)
         response.raise_for_status()
-        rows = read_xlsx_rows(response.content)
-    except Exception as exc:  # noqa: BLE001
-        return history, [f"SZSE {ymd(start)}..{ymd(end)}: {exc}"]
+        return read_xlsx_rows(response.content)
 
-    if not rows:
-        return history, [f"SZSE {ymd(start)}..{ymd(end)}: empty xlsx"]
-    header = [item.strip() for item in rows[0]]
-    col = {name: idx for idx, name in enumerate(header)}
-    required = {"日期", "基金代码", "基金简称", "基金规模(份)"}
-    if not required.issubset(col):
-        return history, [f"SZSE xlsx missing columns: {sorted(required - set(col))}"]
+    current = start
+    while current <= end:
+        range_end = min(current + timedelta(days=150), end)
+        try:
+            rows = fetch_range(current, range_end)
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"SZSE {ymd(current)}..{ymd(range_end)}: {exc}")
+            current = range_end + timedelta(days=1)
+            continue
+        if not rows:
+            errors.append(f"SZSE {ymd(current)}..{ymd(range_end)}: empty xlsx")
+            current = range_end + timedelta(days=1)
+            continue
+        header = [item.strip() for item in rows[0]]
+        col = {name: idx for idx, name in enumerate(header)}
+        if not required.issubset(col):
+            errors.append(f"SZSE xlsx missing columns: {sorted(required - set(col))}")
+            current = range_end + timedelta(days=1)
+            continue
 
-    for row in rows[1:]:
-        code = row[col["基金代码"]].strip() if col["基金代码"] < len(row) else ""
-        code = code.split()[0].zfill(6)
-        if code not in szse_codes:
-            continue
-        trade_day_text = row[col["日期"]].strip() if col["日期"] < len(row) else ""
-        shares_text = row[col["基金规模(份)"]].strip() if col["基金规模(份)"] < len(row) else ""
-        shares = parse_float(shares_text)
-        if not trade_day_text or shares is None:
-            continue
-        name = row[col["基金简称"]].strip() if col["基金简称"] < len(row) else code
-        history[code].append(
-            ScalePoint(
-                code=code,
-                name=name,
-                trade_date=parse_date(trade_day_text),
-                shares=shares,
-                source="SZSE ETF scale",
+        for row in rows[1:]:
+            code = row[col["基金代码"]].strip() if col["基金代码"] < len(row) else ""
+            code = code.split()[0].zfill(6)
+            if code not in szse_codes:
+                continue
+            trade_day_text = row[col["日期"]].strip() if col["日期"] < len(row) else ""
+            shares_text = row[col["基金规模(份)"]].strip() if col["基金规模(份)"] < len(row) else ""
+            shares = parse_float(shares_text)
+            if not trade_day_text or shares is None:
+                continue
+            name = row[col["基金简称"]].strip() if col["基金简称"] < len(row) else code
+            history[code].append(
+                ScalePoint(
+                    code=code,
+                    name=name,
+                    trade_date=parse_date(trade_day_text),
+                    shares=shares,
+                    source="SZSE ETF scale",
+                )
             )
-        )
+        current = range_end + timedelta(days=1)
     return history, errors
 
 
@@ -344,10 +394,27 @@ def previous_point(points: list[ScalePoint], latest_day: date) -> ScalePoint | N
     return max(candidates, key=lambda item: item.trade_date)
 
 
+def first_point_in_year(points: list[ScalePoint], year: int) -> ScalePoint | None:
+    candidates = [point for point in points if point.trade_date.year == year]
+    if not candidates:
+        return None
+    return min(candidates, key=lambda item: item.trade_date)
+
+
 def pct(numerator: float | None, denominator: float | None) -> float | None:
     if numerator is None or denominator in (None, 0):
         return None
     return numerator / denominator * 100.0
+
+
+def flow_from_delta(delta: float | None, price: float | None) -> float | None:
+    if delta is None or price is None:
+        return None
+    return delta * price / 1e8
+
+
+def sum_present(rows: list[dict[str, Any]], key: str) -> float:
+    return sum(row[key] for row in rows if row.get(key) is not None)
 
 
 def build_payload(
@@ -368,15 +435,24 @@ def build_payload(
             missing_codes.append(item.code)
             continue
         all_latest_dates.append(latest.trade_date)
-        baseline = point_on_or_before(points, latest.trade_date - timedelta(days=7))
+        week_baseline = point_on_or_before(points, latest.trade_date - timedelta(days=7))
+        month_baseline = point_on_or_before(points, latest.trade_date - timedelta(days=30))
+        ytd_baseline = first_point_in_year(points, latest.trade_date.year)
         previous = previous_point(points, latest.trade_date)
         quote = quotes.get(item.code, {})
         price = quote.get("price")
-        week_share_delta = latest.shares - baseline.shares if baseline else None
+
+        week_share_delta = latest.shares - week_baseline.shares if week_baseline else None
+        month_share_delta = latest.shares - month_baseline.shares if month_baseline else None
+        ytd_share_delta = latest.shares - ytd_baseline.shares if ytd_baseline else None
         day_share_delta = latest.shares - previous.shares if previous else None
+
         scale_yi = latest.shares * price / 1e8 if price is not None else None
-        week_flow_yi = week_share_delta * price / 1e8 if week_share_delta is not None and price is not None else None
-        day_flow_yi = day_share_delta * price / 1e8 if day_share_delta is not None and price is not None else None
+        week_flow_yi = flow_from_delta(week_share_delta, price)
+        month_flow_yi = flow_from_delta(month_share_delta, price)
+        ytd_flow_yi = flow_from_delta(ytd_share_delta, price)
+        day_flow_yi = flow_from_delta(day_share_delta, price)
+
         records.append(
             {
                 "code": item.code,
@@ -395,11 +471,20 @@ def build_payload(
                 "iopv": quote.get("iopv"),
                 "turnover_yi": quote.get("turnover") / 1e8 if quote.get("turnover") is not None else None,
                 "estimated_scale_yi": scale_yi,
-                "baseline_date": ymd(baseline.trade_date) if baseline else None,
-                "baseline_shares_yi": baseline.shares / 1e8 if baseline else None,
+                "week_baseline_date": ymd(week_baseline.trade_date) if week_baseline else None,
+                "month_baseline_date": ymd(month_baseline.trade_date) if month_baseline else None,
+                "ytd_baseline_date": ymd(ytd_baseline.trade_date) if ytd_baseline else None,
+                "baseline_date": ymd(week_baseline.trade_date) if week_baseline else None,
+                "baseline_shares_yi": week_baseline.shares / 1e8 if week_baseline else None,
                 "week_share_delta_yi": week_share_delta / 1e8 if week_share_delta is not None else None,
+                "month_share_delta_yi": month_share_delta / 1e8 if month_share_delta is not None else None,
+                "ytd_share_delta_yi": ytd_share_delta / 1e8 if ytd_share_delta is not None else None,
                 "week_estimated_flow_yi": week_flow_yi,
+                "month_estimated_flow_yi": month_flow_yi,
+                "ytd_estimated_flow_yi": ytd_flow_yi,
                 "week_flow_pct_of_scale": pct(week_flow_yi, scale_yi),
+                "month_flow_pct_of_scale": pct(month_flow_yi, scale_yi),
+                "ytd_flow_pct_of_scale": pct(ytd_flow_yi, scale_yi),
                 "previous_date": ymd(previous.trade_date) if previous else None,
                 "day_share_delta_yi": day_share_delta / 1e8 if day_share_delta is not None else None,
                 "day_estimated_flow_yi": day_flow_yi,
@@ -411,24 +496,31 @@ def build_payload(
         raise SystemExit("No ETF scale records were collected for the watchlist")
 
     report_latest_date = max(all_latest_dates)
-    valid_flows = [row for row in records if row["week_estimated_flow_yi"] is not None]
-    valid_scales = [row for row in records if row["estimated_scale_yi"] is not None]
-    total_flow_yi = sum(row["week_estimated_flow_yi"] for row in valid_flows)
+    valid_scales = [row for row in records if row.get("estimated_scale_yi") is not None]
     total_scale_yi = sum(row["estimated_scale_yi"] for row in valid_scales)
-    total_share_delta_yi = sum(row["week_share_delta_yi"] for row in records if row["week_share_delta_yi"] is not None)
+    total_week_flow_yi = sum_present(records, "week_estimated_flow_yi")
+    total_month_flow_yi = sum_present(records, "month_estimated_flow_yi")
+    total_ytd_flow_yi = sum_present(records, "ytd_estimated_flow_yi")
+    total_week_share_delta_yi = sum_present(records, "week_share_delta_yi")
+    total_month_share_delta_yi = sum_present(records, "month_share_delta_yi")
+    total_ytd_share_delta_yi = sum_present(records, "ytd_share_delta_yi")
 
     family_map: dict[str, dict[str, Any]] = {}
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in records:
         grouped[row["family"]].append(row)
     for family, rows in grouped.items():
-        flow_rows = [row for row in rows if row["week_estimated_flow_yi"] is not None]
+        flow_rows = [row for row in rows if row.get("week_estimated_flow_yi") is not None]
         family_map[family] = {
             "family": family,
             "etf_count": len(rows),
-            "estimated_scale_yi": sum(row["estimated_scale_yi"] for row in rows if row["estimated_scale_yi"] is not None),
-            "week_estimated_flow_yi": sum(row["week_estimated_flow_yi"] for row in flow_rows),
-            "week_share_delta_yi": sum(row["week_share_delta_yi"] for row in rows if row["week_share_delta_yi"] is not None),
+            "estimated_scale_yi": sum_present(rows, "estimated_scale_yi"),
+            "week_estimated_flow_yi": sum_present(rows, "week_estimated_flow_yi"),
+            "month_estimated_flow_yi": sum_present(rows, "month_estimated_flow_yi"),
+            "ytd_estimated_flow_yi": sum_present(rows, "ytd_estimated_flow_yi"),
+            "week_share_delta_yi": sum_present(rows, "week_share_delta_yi"),
+            "month_share_delta_yi": sum_present(rows, "month_share_delta_yi"),
+            "ytd_share_delta_yi": sum_present(rows, "ytd_share_delta_yi"),
             "members": sorted(
                 flow_rows,
                 key=lambda row: abs(row["week_estimated_flow_yi"]),
@@ -439,8 +531,8 @@ def build_payload(
     records_sorted = sorted(
         records,
         key=lambda row: (
-            row["week_estimated_flow_yi"] is None,
-            row["week_estimated_flow_yi"] if row["week_estimated_flow_yi"] is not None else 0,
+            row.get("week_estimated_flow_yi") is None,
+            row.get("week_estimated_flow_yi") if row.get("week_estimated_flow_yi") is not None else 0,
         ),
     )
     families_sorted = sorted(
@@ -462,18 +554,23 @@ def build_payload(
             "SZSE ETF daily scale: https://www.szse.cn/api/report/ShowReport",
             "Eastmoney delayed ETF quote: https://push2.eastmoney.com/api/qt/ulist.np/get",
         ],
-        "methodology": "Weekly share delta uses latest official ETF shares minus the latest available official shares on or before T-7 calendar days. Estimated flow uses latest Eastmoney delayed price.",
+        "methodology": "Weekly, monthly, and YTD estimated flows use official ETF share deltas against T-7, T-30, and first available trading day of the year, multiplied by latest Eastmoney delayed price.",
         "totals": {
             "estimated_scale_yi": total_scale_yi,
-            "week_estimated_flow_yi": total_flow_yi,
-            "week_share_delta_yi": total_share_delta_yi,
-            "week_flow_pct_of_scale": pct(total_flow_yi, total_scale_yi),
+            "week_estimated_flow_yi": total_week_flow_yi,
+            "month_estimated_flow_yi": total_month_flow_yi,
+            "ytd_estimated_flow_yi": total_ytd_flow_yi,
+            "week_share_delta_yi": total_week_share_delta_yi,
+            "month_share_delta_yi": total_month_share_delta_yi,
+            "ytd_share_delta_yi": total_ytd_share_delta_yi,
+            "week_flow_pct_of_scale": pct(total_week_flow_yi, total_scale_yi),
+            "month_flow_pct_of_scale": pct(total_month_flow_yi, total_scale_yi),
+            "ytd_flow_pct_of_scale": pct(total_ytd_flow_yi, total_scale_yi),
         },
         "records": records_sorted,
         "families": families_sorted,
     }
     return payload
-
 
 def fmt_number(value: float | None, digits: int = 1, signed: bool = False) -> str:
     if value is None:
@@ -511,7 +608,7 @@ def render_major_members(members: list[dict[str, Any]]) -> str:
 def render_report(payload: dict[str, Any]) -> str:
     totals = payload["totals"]
     records = payload["records"]
-    valid_flows = [row for row in records if row["week_estimated_flow_yi"] is not None]
+    valid_flows = [row for row in records if row.get("week_estimated_flow_yi") is not None]
     top_out = min(valid_flows, key=lambda row: row["week_estimated_flow_yi"]) if valid_flows else None
     top_in = max(valid_flows, key=lambda row: row["week_estimated_flow_yi"]) if valid_flows else None
     report_date = payload["report_date"]
@@ -523,21 +620,27 @@ def render_report(payload: dict[str, Any]) -> str:
         "> 口径说明：这里的“国家队 ETF”是宽基 ETF 观察池，不是账户穿透后的中央汇金、证金或其他特定主体持仓。公开数据只能看到 ETF 总份额变化，本报告把份额申赎变化作为稳市资金/机构配置压力的 proxy。"
     )
     lines.append("")
-    lines.append("## 本周结论")
+    lines.append("## 流向结论")
     lines.append("")
     lines.append(
-        f"- 观察池合计估算规模 {fmt_number(totals['estimated_scale_yi'], 1)} 亿元，周度{describe_flow(totals['week_estimated_flow_yi'])} {fmt_number(totals['week_estimated_flow_yi'], 1, signed=True)} 亿元，约占观察池规模 {fmt_pct(totals['week_flow_pct_of_scale'], 2, signed=True)}。"
+        f"- 观察池合计估算规模 {fmt_number(totals['estimated_scale_yi'], 1)} 亿元。"
     )
     lines.append(
-        f"- 周份额合计变化 {fmt_number(totals['week_share_delta_yi'], 1, signed=True)} 亿份；估算金额用最新价折算，实际申赎价格会与估算值有偏差。"
+        f"- 周估算净流入：{fmt_number(totals['week_estimated_flow_yi'], 1, signed=True)} 亿元，约占观察池规模 {fmt_pct(totals['week_flow_pct_of_scale'], 2, signed=True)}。"
+    )
+    lines.append(
+        f"- 月估算净流入：{fmt_number(totals['month_estimated_flow_yi'], 1, signed=True)} 亿元，约占观察池规模 {fmt_pct(totals['month_flow_pct_of_scale'], 2, signed=True)}。"
+    )
+    lines.append(
+        f"- 年初至今估算净流入：{fmt_number(totals['ytd_estimated_flow_yi'], 1, signed=True)} 亿元，约占观察池规模 {fmt_pct(totals['ytd_flow_pct_of_scale'], 2, signed=True)}。"
     )
     if top_out:
         lines.append(
-            f"- 减配压力最大：{top_out['name']}（{top_out['code']}），周估算 {fmt_number(top_out['week_estimated_flow_yi'], 1, signed=True)} 亿元，份额变化 {fmt_number(top_out['week_share_delta_yi'], 1, signed=True)} 亿份。"
+            f"- 本周净流出最大：{top_out['name']}（{top_out['code']}），周估算 {fmt_number(top_out['week_estimated_flow_yi'], 1, signed=True)} 亿元。"
         )
     if top_in and top_in is not top_out:
         lines.append(
-            f"- 增配最明显：{top_in['name']}（{top_in['code']}），周估算 {fmt_number(top_in['week_estimated_flow_yi'], 1, signed=True)} 亿元，份额变化 {fmt_number(top_in['week_share_delta_yi'], 1, signed=True)} 亿份。"
+            f"- 本周净流入最大：{top_in['name']}（{top_in['code']}），周估算 {fmt_number(top_in['week_estimated_flow_yi'], 1, signed=True)} 亿元。"
         )
     if payload["missing_codes"]:
         lines.append(f"- 缺少份额数据的代码：{', '.join(payload['missing_codes'])}。")
@@ -547,51 +650,51 @@ def render_report(payload: dict[str, Any]) -> str:
 
     lines.append("## 指数族汇总")
     lines.append("")
-    lines.append("| 指数族 | ETF数量 | 估算规模(亿元) | 周估算净流入(亿元) | 周份额变化(亿份) | 主要变化 |")
-    lines.append("| --- | ---: | ---: | ---: | ---: | --- |")
+    lines.append("| 指数族 | ETF数量 | 估算规模(亿元) | 周估算净流入(亿元) | 月估算净流入(亿元) | 年初至今估算净流入(亿元) | 主要周变化 |")
+    lines.append("| --- | ---: | ---: | ---: | ---: | ---: | --- |")
     for family in payload["families"]:
         lines.append(
-            "| {family} | {count} | {scale} | {flow} | {shares} | {members} |".format(
+            "| {family} | {count} | {scale} | {week} | {month} | {ytd} | {members} |".format(
                 family=family["family"],
                 count=family["etf_count"],
                 scale=fmt_number(family["estimated_scale_yi"], 1),
-                flow=fmt_number(family["week_estimated_flow_yi"], 1, signed=True),
-                shares=fmt_number(family["week_share_delta_yi"], 1, signed=True),
+                week=fmt_number(family["week_estimated_flow_yi"], 1, signed=True),
+                month=fmt_number(family["month_estimated_flow_yi"], 1, signed=True),
+                ytd=fmt_number(family["ytd_estimated_flow_yi"], 1, signed=True),
                 members=render_major_members(family["members"]),
             )
         )
     lines.append("")
 
-    lines.append("## ETF明细")
+    lines.append("## ETF流向明细")
     lines.append("")
     lines.append("按周估算净流入从低到高排列，便于先看到减配方向。")
     lines.append("")
-    lines.append("| 排名 | 代码 | ETF | 指数族 | 最新份额(亿份) | 估算规模(亿元) | 周份额变化(亿份) | 周估算净流入(亿元) | 日涨跌幅 | 数据日期 |")
+    lines.append("| 排名 | 代码 | ETF | 指数族 | 估算规模(亿元) | 周估算净流入(亿元) | 月估算净流入(亿元) | 年初至今估算净流入(亿元) | 日涨跌幅 | 数据日期 |")
     lines.append("| ---: | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |")
     for idx, row in enumerate(records, start=1):
         lines.append(
-            "| {idx} | {code} | {name} | {family} | {shares} | {scale} | {delta} | {flow} | {pct} | {date} |".format(
+            "| {idx} | {code} | {name} | {family} | {scale} | {week} | {month} | {ytd} | {pct} | {date} |".format(
                 idx=idx,
                 code=row["code"],
                 name=row["name"],
                 family=row["family"],
-                shares=fmt_number(row["latest_shares_yi"], 1),
                 scale=fmt_number(row["estimated_scale_yi"], 1),
-                delta=fmt_number(row["week_share_delta_yi"], 1, signed=True),
-                flow=fmt_number(row["week_estimated_flow_yi"], 1, signed=True),
+                week=fmt_number(row["week_estimated_flow_yi"], 1, signed=True),
+                month=fmt_number(row["month_estimated_flow_yi"], 1, signed=True),
+                ytd=fmt_number(row["ytd_estimated_flow_yi"], 1, signed=True),
                 pct=fmt_pct(row["pct_change"], 2, signed=True),
                 date=row["latest_date"],
             )
         )
     lines.append("")
 
-    lines.append("## 单只ETF细节")
+    lines.append("## 单只ETF流向")
     lines.append("")
     for row in records:
-        baseline = row["baseline_date"] or "-"
         quote_date = row["quote_date"] or "-"
         lines.append(
-            f"- **{row['name']}（{row['code']}）**：{baseline} -> {row['latest_date']}，份额 {fmt_number(row['baseline_shares_yi'], 1)} -> {fmt_number(row['latest_shares_yi'], 1)} 亿份，变化 {fmt_number(row['week_share_delta_yi'], 1, signed=True)} 亿份；最新价 {fmt_number(row['price'], 3)} 元，估算规模 {fmt_number(row['estimated_scale_yi'], 1)} 亿元，周估算资金变化 {fmt_number(row['week_estimated_flow_yi'], 1, signed=True)} 亿元；行情日期 {quote_date}。"
+            f"- **{row['name']}（{row['code']}）**：周/月/年初至今估算净流入分别为 {fmt_number(row['week_estimated_flow_yi'], 1, signed=True)} / {fmt_number(row['month_estimated_flow_yi'], 1, signed=True)} / {fmt_number(row['ytd_estimated_flow_yi'], 1, signed=True)} 亿元；估算规模 {fmt_number(row['estimated_scale_yi'], 1)} 亿元，最新价 {fmt_number(row['price'], 3)} 元；周/月/年初基准日分别为 {row['week_baseline_date'] or '-'} / {row['month_baseline_date'] or '-'} / {row['ytd_baseline_date'] or '-'}；行情日期 {quote_date}。"
         )
     lines.append("")
 
@@ -599,8 +702,9 @@ def render_report(payload: dict[str, Any]) -> str:
     lines.append("")
     lines.append("- 份额主源：上交所 ETF 基金规模接口 `query.sse.com.cn/commonQuery.do`，深交所基金规模日频接口 `www.szse.cn/api/report/ShowReport`。")
     lines.append("- 行情补充：东方财富 ETF 延时行情 `push2.eastmoney.com/api/qt/ulist.np/get`，用于最新价、日涨跌幅、折溢价和估算规模。")
-    lines.append("- 周度变化：最新官方份额减去 T-7 日或之前最近一个可用交易日的官方份额。")
-    lines.append("- 周估算净流入：周份额变化乘以最新价。它是资金方向估算，不等同于交易所逐日申赎金额，也不能识别最终持有人。")
+    lines.append("- 报告展示重点是估算净流入；底层仍使用官方 ETF 份额口径计算，Markdown 不展示底层份额字段。")
+    lines.append("- 周/月/年初至今估算净流入：分别用最新官方份额相对 T-7、T-30、当年首个可用交易日的份额变化，乘以最新价估算。")
+    lines.append("- 该金额是资金方向估算，不等同于交易所逐日申赎金额，也不能识别最终持有人。")
     lines.append("")
     lines.append("## 运行状态")
     lines.append("")
@@ -614,7 +718,6 @@ def render_report(payload: dict[str, Any]) -> str:
         lines.append("- 数据源异常：无")
     lines.append("")
     return "\n".join(lines)
-
 
 def write_outputs(payload: dict[str, Any], markdown: str, project_root: Path, output_dir: Path) -> Path:
     report_date = payload["report_date"]
@@ -640,7 +743,11 @@ def write_outputs(payload: dict[str, Any], markdown: str, project_root: Path, ou
         "source_error_count": payload["source_error_count"],
         "total_estimated_scale_yi": payload["totals"]["estimated_scale_yi"],
         "total_week_estimated_flow_yi": payload["totals"]["week_estimated_flow_yi"],
+        "total_month_estimated_flow_yi": payload["totals"]["month_estimated_flow_yi"],
+        "total_ytd_estimated_flow_yi": payload["totals"]["ytd_estimated_flow_yi"],
         "total_week_share_delta_yi": payload["totals"]["week_share_delta_yi"],
+        "total_month_share_delta_yi": payload["totals"]["month_share_delta_yi"],
+        "total_ytd_share_delta_yi": payload["totals"]["ytd_share_delta_yi"],
         "mode": "rules",
     }
     (status_dir / "latest.json").write_text(json.dumps(status, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -662,7 +769,8 @@ def main(argv: list[str] | None = None) -> int:
     project_root = args.project_root.resolve()
     output_dir = args.output_dir or project_root / "published" / "national-team-etf"
     end = parse_date(args.date) if args.date else datetime.now(CN_TZ).date()
-    start = end - timedelta(days=max(args.lookback_days, 8))
+    year_start = date(end.year, 1, 1)
+    start = min(end - timedelta(days=max(args.lookback_days, 31)), year_start)
     watch_codes = {item.code for item in WATCHLIST}
 
     sse_history, sse_errors = fetch_sse_scale_history(start, end, watch_codes)
