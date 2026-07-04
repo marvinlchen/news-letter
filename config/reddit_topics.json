@@ -2,33 +2,63 @@
   "topics": {
     "macroeconomics": {
       "name_zh": "宏观经济",
-      "subreddits": ["Economics", "AskEconomics", "finance"],
-      "subreddit_weights": {"Economics": 9, "AskEconomics": 10, "finance": 7},
+      "subreddits": ["Economics", "AskEconomics", "finance", "EconMonitor"],
+      "subreddit_weights": {
+        "Economics": 9,
+        "AskEconomics": 10,
+        "finance": 7,
+        "EconMonitor": 10
+      },
       "listing_limit": 35
     },
     "shipping": {
       "name_zh": "航运与供应链",
-      "subreddits": ["maritime", "supplychain", "logistics"],
-      "subreddit_weights": {"maritime": 10, "supplychain": 9, "logistics": 8},
+      "subreddits": [
+        "maritime",
+        "supplychain",
+        "logistics",
+        "SupplyChainManagement"
+      ],
+      "subreddit_weights": {
+        "maritime": 10,
+        "supplychain": 9,
+        "logistics": 8,
+        "SupplyChainManagement": 9
+      },
       "listing_limit": 35
     },
     "commodities": {
       "name_zh": "大宗商品",
-      "subreddits": ["Commodities", "energy", "mining"],
-      "subreddit_weights": {"Commodities": 10, "energy": 8, "mining": 8},
+      "subreddits": ["Commodities", "energy", "mining", "OilAndGas"],
+      "subreddit_weights": {
+        "Commodities": 10,
+        "energy": 8,
+        "mining": 8,
+        "OilAndGas": 8
+      },
       "listing_limit": 35
     },
     "stock_market": {
       "name_zh": "股票市场",
-      "subreddits": ["stocks", "investing", "SecurityAnalysis"],
-      "subreddit_weights": {"stocks": 8, "investing": 8, "SecurityAnalysis": 10},
+      "subreddits": ["stocks", "investing", "SecurityAnalysis", "ValueInvesting"],
+      "subreddit_weights": {
+        "stocks": 8,
+        "investing": 8,
+        "SecurityAnalysis": 10,
+        "ValueInvesting": 10
+      },
       "listing_limit": 40,
       "exclude_patterns": ["daily discussion", "rate my portfolio"]
     },
     "technology": {
       "name_zh": "科技产业",
-      "subreddits": ["technology", "programming", "hardware"],
-      "subreddit_weights": {"technology": 8, "programming": 9, "hardware": 8},
+      "subreddits": ["technology", "programming", "hardware", "Semiconductors"],
+      "subreddit_weights": {
+        "technology": 8,
+        "programming": 9,
+        "hardware": 8,
+        "Semiconductors": 9
+      },
       "listing_limit": 40
     },
     "consumer": {
@@ -39,23 +69,32 @@
     },
     "cloud_infra": {
       "name_zh": "Cloud Infra Engineering",
-      "subreddits": ["kubernetes", "devops", "sre", "networking", "sysadmin"],
+      "subreddits": [
+        "kubernetes",
+        "devops",
+        "sre",
+        "networking",
+        "sysadmin",
+        "cloudcomputing"
+      ],
       "subreddit_weights": {
         "kubernetes": 10,
         "devops": 9,
         "sre": 10,
         "networking": 9,
-        "sysadmin": 8
+        "sysadmin": 8,
+        "cloudcomputing": 8
       },
       "listing_limit": 45
     },
     "ai_frontier": {
       "name_zh": "AI 前沿",
-      "subreddits": ["MachineLearning", "LocalLLaMA", "artificial"],
+      "subreddits": ["MachineLearning", "LocalLLaMA", "artificial", "MLOps"],
       "subreddit_weights": {
         "MachineLearning": 10,
         "LocalLLaMA": 9,
-        "artificial": 7
+        "artificial": 7,
+        "MLOps": 8
       },
       "listing_limit": 40
     }

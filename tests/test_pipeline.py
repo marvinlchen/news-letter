@@ -9,7 +9,11 @@ from tempfile import TemporaryDirectory
 from finance_digest.codex import validate_digest
 from finance_digest.cli import load_successful_digest
 from finance_digest.collect import in_target_date
-from finance_digest.feeds import parse_feed, parse_world_bank_news
+from finance_digest.feeds import (
+    parse_feed,
+    parse_gdelt_articles,
+    parse_world_bank_news,
+)
 from finance_digest.models import Article
 from finance_digest.ranking import (
     COUNTRIES,
@@ -81,6 +85,36 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(len(articles), 1)
         self.assertEqual(articles[0].source, "World Bank")
         self.assertEqual(articles[0].description, "Growth projections were updated.")
+
+    def test_parse_gdelt_articles_api(self) -> None:
+        data = json.dumps(
+            {
+                "articles": [
+                    {
+                        "title": "Global shipping rates rise as port congestion worsens",
+                        "url": "https://example.com/shipping?utm_source=gdelt",
+                        "seendate": "20260703T101500Z",
+                        "domain": "example.com",
+                        "sourcecountry": "US",
+                        "language": "English",
+                    }
+                ]
+            }
+        ).encode()
+        articles = parse_gdelt_articles(
+            data,
+            {
+                "name": "GDELT Shipping",
+                "weight": 6,
+                "category": "shipping",
+                "topics": ["shipping"],
+            },
+        )
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0].source, "example.com")
+        self.assertEqual(articles[0].url, "https://example.com/shipping")
+        self.assertEqual(articles[0].topics, ["shipping"])
+        self.assertIn("English", articles[0].description)
 
     def test_date_filter_uses_china_time(self) -> None:
         self.assertTrue(in_target_date(self.articles[0], date(2026, 6, 10)))

@@ -17,6 +17,7 @@ from .models import Article
 
 
 USER_AGENT = "finance-news-digest/0.1 (+https://github.com/marvinlchen)"
+GDELT_DOC_API_URL = "https://api.gdeltproject.org/api/v2/doc/doc"
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 WHITESPACE_RE = re.compile(r"\s+")
 TRACKING_PARAMS = {
@@ -202,9 +203,87 @@ def parse_world_bank_news(data: bytes, source_config: dict[str, Any]) -> list[Ar
     return articles
 
 
+def parse_gdelt_date(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
+    except (TypeError, ValueError):
+        return parse_date(value)
+
+
+def build_gdelt_url(source_config: dict[str, Any]) -> str:
+    query = str(source_config.get("query", "")).strip()
+    if not query:
+        raise ValueError("gdelt source requires a query")
+    language = str(source_config.get("language", "")).strip()
+    country = str(source_config.get("country", "")).strip()
+    if language:
+        query = f"{query} sourcelang:{language}"
+    if country:
+        query = f"{query} sourcecountry:{country}"
+    params: dict[str, Any] = {
+        "query": query,
+        "mode": source_config.get("mode", "ArtList"),
+        "format": "json",
+        "maxrecords": int(source_config.get("max_records", 75)),
+        "sort": source_config.get("sort", "datedesc"),
+    }
+    if source_config.get("timespan"):
+        params["timespan"] = source_config["timespan"]
+    base_url = source_config.get("url", GDELT_DOC_API_URL)
+    return f"{base_url}?{urllib.parse.urlencode(params)}"
+
+
+def parse_gdelt_articles(data: bytes, source_config: dict[str, Any]) -> list[Article]:
+    payload = json.loads(data)
+    raw_articles = payload.get("articles", [])
+    if not isinstance(raw_articles, list):
+        return []
+    articles: list[Article] = []
+    for raw in raw_articles:
+        if not isinstance(raw, dict):
+            continue
+        title = clean_text(raw.get("title", ""))
+        url = normalize_url(raw.get("url", ""))
+        published = parse_gdelt_date(str(raw.get("seendate", "")))
+        if not title or not url or published is None:
+            continue
+        source = clean_text(raw.get("domain", "")) or source_config["name"]
+        metadata = " ".join(
+            clean_text(str(raw.get(field, "")))
+            for field in ("sourcecountry", "language")
+            if raw.get(field)
+        )
+        article_id = hashlib.sha256(f"{url}\n{title}".encode()).hexdigest()[:20]
+        articles.append(
+            Article(
+                article_id=article_id,
+                title=title,
+                url=url,
+                source=source,
+                published_at=published,
+                description=metadata[:1200],
+                category=source_config.get("category", "finance"),
+                source_weight=int(source_config.get("weight", 5)),
+                topics=list(source_config.get("topics", [])),
+                topic_binding=source_config.get("topic_binding", "keyword_required"),
+                countries=list(source_config.get("countries", [])),
+                country_binding=source_config.get(
+                    "country_binding", "keyword_required"
+                ),
+            )
+        )
+    return articles
+
+
 def fetch_feed(source_config: dict[str, Any]) -> list[Article]:
-    data = fetch_bytes(source_config["url"])
     provider = source_config.get("provider", "rss")
+    if provider == "gdelt":
+        return parse_gdelt_articles(
+            fetch_bytes(build_gdelt_url(source_config)), source_config
+        )
+    data = fetch_bytes(source_config["url"])
     if provider == "rss":
         return parse_feed(data, source_config)
     if provider == "world_bank_news":

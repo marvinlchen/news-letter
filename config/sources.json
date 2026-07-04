@@ -118,6 +118,71 @@
       ]
     },
     {
+      "name": "GDELT Global Finance and Industry Radar",
+      "provider": "gdelt",
+      "enabled": false,
+      "query": "(economy OR markets OR inflation OR \"central bank\" OR shipping OR freight OR oil OR copper OR semiconductor OR \"data center\" OR retail OR \"artificial intelligence\")",
+      "timespan": "2d",
+      "max_records": 75,
+      "category": "finance",
+      "weight": 6,
+      "topics": [
+        "macroeconomics",
+        "shipping",
+        "commodities",
+        "stock_market",
+        "technology",
+        "consumer",
+        "cloud_infra",
+        "ai_frontier"
+      ]
+    },
+    {
+      "name": "US Treasury Official Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=site%3Ahome.treasury.gov%20%28Treasury%20OR%20sanctions%20OR%20debt%20OR%20market%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "finance",
+      "weight": 9,
+      "topics": [
+        "macroeconomics"
+      ],
+      "countries": [
+        "united_states"
+      ],
+      "country_binding": "authoritative"
+    },
+    {
+      "name": "Maritime Trade Press Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Amaritime-executive.com%20OR%20site%3Alloydslist.com%20OR%20site%3Asplash247.com%29%20%28shipping%20OR%20freight%20OR%20container%20OR%20tanker%20OR%20port%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "shipping",
+      "weight": 8,
+      "topics": [
+        "shipping"
+      ]
+    },
+    {
+      "name": "Data Center Industry Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Adatacenterdynamics.com%20OR%20site%3Adatacenterfrontier.com%29%20%28data%20center%20OR%20cloud%20OR%20AI%20OR%20power%20OR%20capacity%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "cloud_infra",
+      "weight": 8,
+      "topics": [
+        "cloud_infra",
+        "ai_frontier"
+      ]
+    },
+    {
+      "name": "Retail Industry News Index",
+      "provider": "rss",
+      "url": "https://news.google.com/rss/search?q=%28site%3Anrf.com%20OR%20site%3Aretaildive.com%20OR%20site%3Agrocerydive.com%20OR%20site%3Arestaurantdive.com%29%20%28retail%20OR%20consumer%20OR%20sales%20OR%20pricing%20OR%20earnings%20OR%20traffic%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen",
+      "category": "consumer",
+      "weight": 8,
+      "topics": [
+        "consumer"
+      ]
+    },
+    {
       "name": "Reuters Finance Index",
       "provider": "rss",
       "url": "https://news.google.com/rss/search?q=site%3Areuters.com%20(finance%20OR%20markets%20OR%20economy%20OR%20business)%20when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
