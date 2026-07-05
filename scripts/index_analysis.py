@@ -866,8 +866,9 @@ def run_codebuddy_analysis(prompt, gainers, losers, max_attempts=2):
         (
             prompt
             + "\n\n## 重新输出要求\n"
-            + "上一次输出未能被脚本解析。请重新输出完整结果："
-            + "只允许纯文本记录、TAB 分隔、不要 JSON、不要 Markdown、不要代码块、不要空行。"
+            + "上一次输出不是机器协议行，已被脚本拒绝。请重新输出完整结果："
+            + "第一行必须以 MARKET_SUMMARY<TAB> 开头；"
+            + "只允许纯文本协议记录、TAB 分隔、不要 JSON、不要 Markdown、不要代码块、不要空行、不要解释任务已完成。"
             + "股票行必须为 5 列：TAG、股票代码、归因类型、原因、证据ID列表。"
             + "第三列归因类型只能是直接催化/行业带动/资金交易/弱证据待复核；"
             + "第五列填写 0-2 个候选证据 ID，用逗号分隔；没有合适证据时留空。"
@@ -2057,6 +2058,11 @@ def build_codebuddy_prompt(date_str, gainers, losers, market_news_context=None):
     """Build a compact line-based prompt for CodeBuddy."""
     top_n = max(len(gainers), len(losers))
     lines = [
+        "机器协议模式：你的回复会被脚本逐行解析，任何自然语言开场、总结、Markdown、代码块或空行都会导致任务失败。",
+        "只输出协议行。不要写“分析完成”“以上为”“要点总结”“输出已直接显示”等说明。",
+        "第一行必须是 MARKET_SUMMARY<TAB>指数概况；最后一行必须是最后一只 LOSER 股票的协议行。",
+        "禁止使用项目符号、标题、编号列表、表格、加粗、代码围栏。",
+        "",
         "# 任务",
         f"你是专业财经分析师。请分析 {date_str} {INDEX_DISPLAY_NAME}指数成分股涨跌幅 Top {top_n}。",
         "只能基于下方行情数据、新闻候选和市场/板块快讯做归因，不要编造信息。",
