@@ -18,6 +18,7 @@ import argparse
 import tempfile
 import shutil
 import html
+import hashlib
 import urllib.request
 import urllib.parse
 from pathlib import Path
@@ -118,6 +119,7 @@ HISTORICAL_RANK_CACHE = {}
 CNINFO_STOCK_INDEX_CACHE = None
 THS_HOT_REASON_CACHE = {}
 EASTMONEY_MARKET_NEWS_CACHE = {}
+CSI_RUN_STATS = {}
 PUSH2_HEADERS = {
     "User-Agent": "Mozilla/5.0",
     "Referer": "https://quote.eastmoney.com/",
@@ -310,6 +312,40 @@ def parse_jsonp_payload(text):
     return json.loads(text[start + 1:end])
 
 
+def reset_csi_run_stats(target_date=None, top_n=None, skip_ai=False):
+    CSI_RUN_STATS.clear()
+    CSI_RUN_STATS.update({
+        "started_at": datetime.now().isoformat(timespec="seconds"),
+        "date": target_date,
+        "index": INDEX_TYPE,
+        "index_display_name": INDEX_DISPLAY_NAME,
+        "mode": "skip-ai" if skip_ai else AI_MODEL,
+        "ai_model_name": AI_MODEL_NAME,
+        "top_n": top_n,
+        "codex_error": False,
+        "fallback_used": False,
+        "parse_attempts": 0,
+        "codebuddy_parse_errors": [],
+        "source_error_count": 0,
+    })
+
+
+def record_source_error(message):
+    CSI_RUN_STATS["source_error_count"] = int(CSI_RUN_STATS.get("source_error_count", 0) or 0) + 1
+    print(f"[WARN] {message}", file=sys.stderr)
+
+
+def news_after_target_date(news, target_date=None):
+    """Return True when a candidate is dated after the target trading day."""
+    if not target_date:
+        return False
+    news_dt = parse_report_datetime(news.get("pub_date", ""))
+    target_dt = parse_report_datetime(target_date or "")
+    if not news_dt or not target_dt:
+        return False
+    return news_dt.date() > target_dt.date()
+
+
 def text_has_any(text, keywords):
     return any(keyword in text for keyword in keywords)
 
@@ -431,8 +467,8 @@ def news_candidate_score(news, stock_name, stock_code, target_date=None):
     target_dt = parse_report_datetime(target_date or "")
     if news_dt and target_dt:
         age_days = (target_dt.date() - news_dt.date()).days
-        if age_days < -2:
-            score -= 8
+        if age_days < 0:
+            return REJECT_SCORE
         elif age_days <= 7:
             score += 8
         elif age_days <= 30:
@@ -481,7 +517,11 @@ def rank_news_candidates(news_list, stock_name, stock_code, target_date=None, li
 
 
 def news_candidate_in_window(news, target_date=None, lookback_days=None):
-    """Keep dated candidates inside the unified news lookback window."""
+    """Keep dated candidates inside the unified lookback window.
+
+    Reports explain the target trading day, so candidates dated after that day
+    are excluded to avoid hindsight evidence.
+    """
     if lookback_days is None:
         lookback_days = NEWS_LOOKBACK_DAYS
     if not target_date:
@@ -491,7 +531,7 @@ def news_candidate_in_window(news, target_date=None, lookback_days=None):
     if not news_dt or not target_dt:
         return True
     age_days = (target_dt.date() - news_dt.date()).days
-    return -1 <= age_days <= lookback_days
+    return 0 <= age_days <= lookback_days
 
 
 def repair_unescaped_string_quotes(text):
@@ -785,8 +825,23 @@ def parse_codebuddy_protocol(raw, gainers, losers):
 
     if not market_summary or not gainers_summary or not losers_summary:
         raise ValueError("missing summary lines in CodeBuddy output")
-    if not gainer_reasons and not loser_reasons:
-        raise ValueError("no stock reason lines parsed from CodeBuddy output")
+
+    missing_gainers = [
+        stock.get("code", "")
+        for stock in gainers
+        if stock.get("code", "") not in gainer_reasons
+    ]
+    missing_losers = [
+        stock.get("code", "")
+        for stock in losers
+        if stock.get("code", "") not in loser_reasons
+    ]
+    if missing_gainers or missing_losers:
+        raise ValueError(
+            "missing stock lines: "
+            f"gainers={','.join(missing_gainers) or '-'}; "
+            f"losers={','.join(missing_losers) or '-'}"
+        )
 
     return build_result(
         gainers,
@@ -819,15 +874,19 @@ def run_codebuddy_analysis(prompt, gainers, losers, max_attempts=2):
         ),
     ]
     for attempt in range(max_attempts):
+        CSI_RUN_STATS["parse_attempts"] = attempt + 1
         raw = call_ai(attempts[min(attempt, len(attempts) - 1)], max_tokens=4096, expect_json=False)
         try:
             return parse_codebuddy_protocol(raw, gainers, losers)
         except Exception as exc:
             last_error = exc
+            CSI_RUN_STATS.setdefault("codebuddy_parse_errors", []).append(str(exc))
             print(f"[WARN] CodeBuddy 输出解析失败，第 {attempt + 1} 次尝试: {exc}", file=sys.stderr)
             print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
 
     print(f"[WARN] CodeBuddy 多次输出失败，使用兜底报告: {last_error}", file=sys.stderr)
+    CSI_RUN_STATS["codex_error"] = True
+    CSI_RUN_STATS["fallback_used"] = True
     return build_fallback_result(gainers, losers)
 
 
@@ -892,9 +951,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
         codebuddy_executable = shutil.which("codebuddy")
         if codebuddy_executable:
             if AI_MODEL_NAME:
-                cmd = [codebuddy_executable, "-p", "--output-format", "json", f"--model={AI_MODEL_NAME}", prompt]
+                cmd = [codebuddy_executable, "-p", "--output-format", "json", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
             else:
-                cmd = [codebuddy_executable, "-p", "--output-format", "json", prompt]
+                cmd = [codebuddy_executable, "-p", "--output-format", "json", "--input-format", "text"]
         else:
             cmd = None
 
@@ -915,9 +974,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
                         continue
                     # 如果成功，使用 node 直接运行 codebuddy
                     if AI_MODEL_NAME:
-                        cmd = [node_path, cb_path, "-p", "--output-format", "json", f"--model={AI_MODEL_NAME}", prompt]
+                        cmd = [node_path, cb_path, "-p", "--output-format", "json", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
                     else:
-                        cmd = [node_path, cb_path, "-p", "--output-format", "json", prompt]
+                        cmd = [node_path, cb_path, "-p", "--output-format", "json", "--input-format", "text"]
                     break
                 except Exception:
                     continue
@@ -925,11 +984,11 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
         if cmd is None:
             # 如果都找不到，使用默认命令（会失败并抛出错误）
             if AI_MODEL_NAME:
-                cmd = ["codebuddy", "-p", "--output-format", "json", f"--model={AI_MODEL_NAME}", prompt]
+                cmd = ["codebuddy", "-p", "--output-format", "json", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
             else:
-                cmd = ["codebuddy", "-p", "--output-format", "json", prompt]
+                cmd = ["codebuddy", "-p", "--output-format", "json", "--input-format", "text"]
         
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+        result = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=600)
         if result.returncode != 0:
             raise RuntimeError((result.stderr or result.stdout).strip())
         text = result.stdout.strip()
@@ -1555,7 +1614,7 @@ def fetch_eastmoney_stock_news(stock_name, stock_code, target_date=None, limit=N
             )
         return news_list
     except Exception as e:
-        print(f"[WARN] 搜索东方财富个股新闻失败 ({stock_name}): {e}", file=sys.stderr)
+        record_source_error(f"搜索东方财富个股新闻失败 ({stock_name}): {e}")
         return []
 
 
@@ -1593,7 +1652,7 @@ def fetch_ths_hot_reasons(target_date=None, limit=None):
         THS_HOT_REASON_CACHE[cache_key] = result
         return result
     except Exception as e:
-        print(f"[WARN] 搜索同花顺题材归因失败 ({date_str}): {e}", file=sys.stderr)
+        record_source_error(f"搜索同花顺题材归因失败 ({date_str}): {e}")
         THS_HOT_REASON_CACHE[cache_key] = {}
         return {}
 
@@ -1677,7 +1736,7 @@ def fetch_eastmoney_market_news(target_date=None, limit=None):
         EASTMONEY_MARKET_NEWS_CACHE[cache_key] = result
         return result
     except Exception as e:
-        print(f"[WARN] 搜索东方财富7x24快讯失败: {e}", file=sys.stderr)
+        record_source_error(f"搜索东方财富7x24快讯失败: {e}")
         EASTMONEY_MARKET_NEWS_CACHE[cache_key] = []
         return []
 
@@ -1820,7 +1879,7 @@ def search_cninfo_announcements(stock_name, stock_code, target_date=None, limit=
             )
         return news_list
     except Exception as e:
-        print(f"[WARN] 搜索巨潮公告失败 ({stock_name}): {e}", file=sys.stderr)
+        record_source_error(f"搜索巨潮公告失败 ({stock_name}): {e}")
         return []
 
 
@@ -1844,7 +1903,7 @@ def search_stock_news(stock_name, stock_code, target_date=None, limit=None, mark
                 fetch_google_news_rss(query, limit=query_limit, source_type=source_type)
             )
         except Exception as e:
-            print(f"[WARN] 搜索新闻失败 ({stock_name}, {source_type}): {e}", file=sys.stderr)
+            record_source_error(f"搜索新闻失败 ({stock_name}, {source_type}): {e}")
 
     news_list.extend(matching_market_news(stock_name, stock_code, market_news_context))
     news_list.extend(
@@ -2017,6 +2076,18 @@ def build_codebuddy_prompt(date_str, gainers, losers, market_news_context=None):
         "证据ID列表最多 2 个，用英文逗号分隔；只能从该股票下方 NEWS 行选择，不要编造 ID；没有合适证据时第五列留空。",
         "MARKET_NEWS 行只用于 MARKET_SUMMARY、GAINERS_SUMMARY、LOSERS_SUMMARY，不得作为个股证据ID输出。",
         "",
+        "## 输出骨架",
+        "必须按下列骨架逐行输出，TAG 和股票代码必须保持不变；把“待填写”替换为你的分析。",
+        "MARKET_SUMMARY\t待填写",
+        "GAINERS_SUMMARY\t待填写",
+        "LOSERS_SUMMARY\t待填写",
+    ]
+    for st in gainers:
+        lines.append(f"GAINER\t{st.get('code', '')}\t弱证据待复核\t待填写\t")
+    for st in losers:
+        lines.append(f"LOSER\t{st.get('code', '')}\t弱证据待复核\t待填写\t")
+    lines += [
+        "",
         "## 数据",
         "",
     ]
@@ -2075,12 +2146,141 @@ def build_codebuddy_prompt(date_str, gainers, losers, market_news_context=None):
 
 # ── 报告生成 ─────────────────────────────────────────────────────────────────────
 
+def iter_result_stocks(result):
+    for section in ("gainers_analysis", "losers_analysis"):
+        for item in result.get(section, {}).get("stocks", []) or []:
+            yield item
+
+
+def build_report_quality(result, gainers=None, losers=None, target_date=None, market_news_context=None):
+    stocks = list(iter_result_stocks(result))
+    source_stocks = {
+        stock.get("code", ""): stock
+        for stock in (gainers or []) + (losers or [])
+    }
+    attribution_counts = {item: 0 for item in ATTRIBUTION_TYPES}
+    selected_evidence_count = 0
+    future_evidence_count = 0
+    missing_reason_count = 0
+    evidence_source_counts = {
+        "google_news": 0,
+        "cninfo": 0,
+        "eastmoney": 0,
+        "sina": 0,
+        "stcn": 0,
+        "other": 0,
+    }
+
+    for item in stocks:
+        attribution_type = normalize_attribution_type(
+            item.get("attribution_type", ""),
+            reason=item.get("reason", ""),
+            evidence=item.get("evidence") or [],
+        )
+        attribution_counts[attribution_type] = attribution_counts.get(attribution_type, 0) + 1
+        if not item.get("reason"):
+            missing_reason_count += 1
+        code = item.get("code", "")
+        source_news = [
+            news
+            for news in source_stocks.get(code, {}).get("news", []) or []
+            if news_candidate_in_window(news, target_date=target_date)
+        ][:NEWS_EVIDENCE_LIMIT]
+        display_evidence = item.get("evidence") or [
+            {"title": news.get("title"), "url": news.get("link"), "pub_date": news.get("pub_date")}
+            for news in source_news
+        ]
+        for ev in display_evidence:
+            selected_evidence_count += 1
+            if news_after_target_date({"pub_date": ev.get("pub_date", "")}, target_date=target_date):
+                future_evidence_count += 1
+            url = ev.get("url") or ev.get("link") or ""
+            if "news.google.com" in url:
+                evidence_source_counts["google_news"] += 1
+            elif "cninfo.com.cn" in url:
+                evidence_source_counts["cninfo"] += 1
+            elif "eastmoney.com" in url:
+                evidence_source_counts["eastmoney"] += 1
+            elif "sina.com.cn" in url:
+                evidence_source_counts["sina"] += 1
+            elif "stcn.com" in url:
+                evidence_source_counts["stcn"] += 1
+            else:
+                evidence_source_counts["other"] += 1
+
+    candidate_count = sum(
+        1
+        for stock in (gainers or []) + (losers or [])
+        for news in stock.get("news", []) or []
+        if news_candidate_in_window(news, target_date=target_date)
+    )
+    raw_candidate_count = sum(stock.get("raw_news_count", 0) or 0 for stock in (gainers or []) + (losers or []))
+    return {
+        "stock_count": len(stocks),
+        "gainer_count": len(gainers or []),
+        "loser_count": len(losers or []),
+        "candidate_count": candidate_count,
+        "raw_candidate_count": raw_candidate_count,
+        "market_news_count": len(market_news_context or []),
+        "selected_evidence_count": selected_evidence_count,
+        "weak_evidence_count": attribution_counts.get("弱证据待复核", 0),
+        "missing_reason_count": missing_reason_count,
+        "future_evidence_count": future_evidence_count,
+        "attribution_counts": attribution_counts,
+        "evidence_source_counts": evidence_source_counts,
+    }
+
+
+def write_csi_status(target_date, result, gainers, losers, market_news_context, report_path=None, latest_path=None):
+    project_root = Path(__file__).resolve().parents[1]
+    status_dir = project_root / "var" / "csi-status" / INDEX_TYPE
+    status_dir.mkdir(parents=True, exist_ok=True)
+    quality = build_report_quality(
+        result,
+        gainers=gainers,
+        losers=losers,
+        target_date=target_date,
+        market_news_context=market_news_context,
+    )
+    status = {
+        "date": target_date,
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "index": INDEX_TYPE,
+        "index_display_name": INDEX_DISPLAY_NAME,
+        "mode": CSI_RUN_STATS.get("mode", AI_MODEL),
+        "ai_model_name": CSI_RUN_STATS.get("ai_model_name", AI_MODEL_NAME),
+        "top_n": CSI_RUN_STATS.get("top_n"),
+        "codex_error": bool(CSI_RUN_STATS.get("codex_error", False)),
+        "fallback_used": bool(CSI_RUN_STATS.get("fallback_used", False)),
+        "parse_attempts": int(CSI_RUN_STATS.get("parse_attempts", 0) or 0),
+        "codebuddy_parse_errors": CSI_RUN_STATS.get("codebuddy_parse_errors", []),
+        "source_error_count": int(CSI_RUN_STATS.get("source_error_count", 0) or 0),
+        "news_cutoff": {
+            "target_date": target_date,
+            "rule": "exclude candidates dated after target_date",
+            "lookback_days": NEWS_LOOKBACK_DAYS,
+        },
+        **quality,
+        "output_path": str(report_path) if report_path else "",
+        "latest_path": str(latest_path) if latest_path else "",
+        "report_sha256": "",
+        "publish_commit": "",
+    }
+    if report_path and Path(report_path).exists():
+        status["report_sha256"] = hashlib.sha256(Path(report_path).read_bytes()).hexdigest()
+    payload = json.dumps(status, ensure_ascii=False, indent=2, sort_keys=True)
+    (status_dir / f"{target_date}.json").write_text(payload + "\n", encoding="utf-8")
+    (status_dir / "latest.json").write_text(payload + "\n", encoding="utf-8")
+    print(f"[INFO] 已写入 CSI 状态: {status_dir / 'latest.json'}", file=sys.stderr)
+
+
 def format_report(result, target_date, gainers=None, losers=None):
     """
     生成报告 Markdown。
     如果传入 gainers/losers，则从原始数据获取涨跌幅百分比和扩展数据。
     """
     top_n = max(len(gainers or []), len(losers or []))
+    quality = build_report_quality(result, gainers=gainers, losers=losers, target_date=target_date)
 
     change_map = {}
     week_map = {}
@@ -2111,7 +2311,11 @@ def format_report(result, target_date, gainers=None, losers=None):
     def fallback_evidence_for_code(code):
         return [
             {"title": news.get("title"), "url": news.get("link"), "pub_date": news.get("pub_date")}
-            for news in news_map.get(code, [])[:2]
+            for news in [
+                item
+                for item in news_map.get(code, [])
+                if news_candidate_in_window(item, target_date=target_date)
+            ][:2]
         ]
 
     def attribution_for_stock(code, item):
@@ -2154,7 +2358,14 @@ def format_report(result, target_date, gainers=None, losers=None):
         f"# {INDEX_DISPLAY_NAME}涨跌分析 — {target_date}",
         f"",
         f"**生成时间：** {datetime.now().strftime('%Y-%m-%d %H:%M')}  ",
-        f"**分析基于：** {INDEX_DISPLAY_NAME}指数成分股涨跌幅 top{top_n}",
+        f"**分析基于：** {INDEX_DISPLAY_NAME}指数成分股涨跌幅 top{top_n}  ",
+        f"**新闻截止：** 仅使用不晚于 {target_date} 的候选新闻，目标日之后信息不进入个股证据  ",
+        (
+            f"**数据质量：** 候选新闻 {quality['candidate_count']} 条；"
+            f"入选证据 {quality['selected_evidence_count']} 条；"
+            f"弱证据待复核 {quality['weak_evidence_count']} 只；"
+            f"未来日期证据 {quality['future_evidence_count']} 条"
+        ),
         f"",
         f"---",
         f"",
@@ -2239,6 +2450,7 @@ def main():
     else:
         target_date = get_trading_dates(1, include_today=True)[0]
 
+    reset_csi_run_stats(target_date=target_date, top_n=top_n, skip_ai=args.skip_ai)
     print(f"[INFO] 开始分析 {target_date} ...", file=sys.stderr)
 
     # 1. 获取基础数据
@@ -2311,6 +2523,7 @@ def main():
             try:
                 result = parse_ai_json(raw)
             except Exception as e:
+                CSI_RUN_STATS["codex_error"] = True
                 print(f"[ERROR] JSON 解析失败: {e}", file=sys.stderr)
                 print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
                 sys.exit(1)
@@ -2323,10 +2536,21 @@ def main():
         out_dir.mkdir(parents=True, exist_ok=True)
         report_path = out_dir / f"{target_date}.md"
         report_path.write_text(report + "\n", encoding="utf-8")
-        (out_dir / "latest.md").write_text(report + "\n", encoding="utf-8")
+        latest_path = out_dir / "latest.md"
+        latest_path.write_text(report + "\n", encoding="utf-8")
         print(f"[INFO] 已写入报告: {report_path}", file=sys.stderr)
+        write_csi_status(
+            target_date,
+            result,
+            gainers,
+            losers,
+            market_news_context,
+            report_path=report_path,
+            latest_path=latest_path,
+        )
     else:
         print(report)
+        write_csi_status(target_date, result, gainers, losers, market_news_context)
 
 
 if __name__ == "__main__":

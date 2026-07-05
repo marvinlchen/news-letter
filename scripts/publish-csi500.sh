@@ -14,6 +14,23 @@ if [[ -z "$LATEST_MD" || ! -f "$LATEST_MD" ]]; then
 fi
 
 REPORT_DATE="$(basename "$LATEST_MD" .md)"
+update_status_publish_commit() {
+  local commit="$1"
+  python3 - "$PROJECT_ROOT" csi500 "$REPORT_DATE" "$commit" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+root, index, report_date, commit = sys.argv[1:5]
+status_dir = Path(root) / "var" / "csi-status" / index
+for path in (status_dir / f"{report_date}.json", status_dir / "latest.json"):
+    if not path.exists():
+        continue
+    data = json.loads(path.read_text(encoding="utf-8"))
+    data["publish_commit"] = commit
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+PY
+}
 
 # Update latest.md
 cp "$LATEST_MD" "published/csi500/latest.md"
@@ -25,10 +42,12 @@ fi
 git add "published/csi500/${REPORT_DATE}.md" published/csi500/latest.md
 if git diff --cached --quiet -- "published/csi500/${REPORT_DATE}.md" published/csi500/latest.md; then
   echo "publish-csi500: report is unchanged"
+  update_status_publish_commit "$(git rev-parse HEAD)"
   exit 0
 fi
 
 git commit --only "published/csi500/${REPORT_DATE}.md" published/csi500/latest.md \
   -m "Publish CSI500 analysis ${REPORT_DATE}"
 git push origin "HEAD:$PUBLISH_BRANCH"
+update_status_publish_commit "$(git rev-parse HEAD)"
 echo "Published CSI500 report for $REPORT_DATE"
