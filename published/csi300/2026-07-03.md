@@ -1,353 +1,472 @@
 # 沪深300涨跌分析 — 2026-07-03
 
-**生成时间：** 2026-07-03 15:34  
-**分析基于：** 沪深300指数成分股涨跌幅 top20
+**生成时间：** 2026-07-05 21:36  
+**分析基于：** 沪深300指数成分股涨跌幅 top20  
+**新闻截止：** 仅使用不晚于 2026-07-03 的候选新闻，目标日之后信息不进入个股证据  
+**数据质量：** 候选新闻 238 条；入选证据 79 条；弱证据待复核 2 只；未来日期证据 0 条
 
 ---
 
 ## 一、指数概况
 
-2026年7月3日沪深300指数成分股分化明显，涨幅居前个股集中于黄金、CPO网络设备、汽车零部件及机械制造板块，受业绩预增与美联储加息预期削弱催化；跌幅居前个股集中于半导体电子、钨业及化工板块，前期涨幅较大品种出现获利回吐与利空兑现回调
+7月3日沪深300指数震荡分化，贵金属(黄金)、机器人、军工(船舶/航空发动机)板块领涨，半导体(国家大基金持股)、化工(PVDF/氟化工)板块承压回调。美联储鸽派信号推动黄金股大涨，马斯克晒Optimus产线合照刺激机器人概念爆发，中船系获86.56亿元大额订单催化走强。半导体连续两日回调，国家大基金持股概念资金大幅流出。
 
 ---
 
 ## 二、涨幅分析（Top 20）
 
-**板块共性：** 黄金股受沃什讲话削弱美联储加息预期提振全线走强，CPO概念与网络设备股受半年报业绩预增驱动，汽车零部件及整车股受6月产销数据催化，机械制造与央企改革标的同步领涨
+**板块共性：** 涨幅前20集中分布：一、贵金属(山金国际、山东黄金、中金黄金)受益于美联储鸽派信号及业绩预增；二、机器人/汽车产业链(拓普集团、三花智控、德赛西威、比亚迪)受马斯克Optimus产线合照、特斯拉产业链及汽车热管理概念催化；三、军工(中国船舶、航发动力、中国卫星)受中船系大额订单及军工板块资金流入推动，航空发动机概念涨3.24%；四、个股催化(锐捷网络业绩预增、科伦药业回购、安克创新H股上市、恒立液压分红、传音控股业绩预增等)。
 
-| 排名 | 股票代码 | 股票名称 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
-|------|----------|----------|--------|----------|--------------|
-| 1 | 301165 | 锐捷网络 | +11.31% | +41.54% | +10.56% |
-| 2 | 601689 | 拓普集团 | +10.01% | +8.40% | -24.68% |
-| 3 | 002353 | 杰瑞股份 | +10.00% | -2.59% | +92.12% |
-| 4 | 601100 | 恒立液压 | +10.00% | +3.20% | -3.99% |
-| 5 | 000975 | 山金国际 | +9.98% | +3.38% | -29.09% |
-| 6 | 002050 | 三花智控 | +9.06% | +8.84% | -21.39% |
-| 7 | 600150 | 中国船舶 | +8.12% | +2.29% | -3.94% |
-| 8 | 600547 | 山东黄金 | +7.86% | +2.68% | -44.74% |
-| 9 | 002028 | 思源电气 | +7.86% | -10.61% | -2.58% |
-| 10 | 002916 | 深南电路 | +7.42% | -2.55% | +82.17% |
-| 11 | 300866 | 安克创新 | +7.40% | -1.08% | +1.54% |
-| 12 | 002422 | 科伦药业 | +7.22% | +14.27% | +32.24% |
-| 13 | 002920 | 德赛西威 | +6.65% | +3.17% | -39.78% |
-| 14 | 000338 | 潍柴动力 | +6.59% | +0.80% | +43.95% |
-| 15 | 688183 | 生益电子 | +6.58% | -1.07% | +28.16% |
-| 16 | 600489 | 中金黄金 | +6.55% | +3.81% | -23.43% |
-| 17 | 688036 | 传音控股 | +6.37% | +5.72% | -11.64% |
-| 18 | 600893 | 航发动力 | +6.07% | -0.59% | -15.72% |
-| 19 | 600118 | 中国卫星 | +5.89% | +0.59% | -23.15% |
-| 20 | 002594 | 比亚迪 | +5.86% | +4.93% | -13.85% |
+| 排名 | 股票代码 | 股票名称 | 归因类型 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
+|------|----------|----------|----------|--------|----------|--------------|
+| 1 | 301165 | 锐捷网络 | 直接催化 | +11.31% | +41.54% | +10.56% |
+| 2 | 601689 | 拓普集团 | 行业带动 | +10.01% | +19.26% | -17.15% |
+| 3 | 002353 | 杰瑞股份 | 行业带动 | +10.00% | +7.15% | +111.34% |
+| 4 | 601100 | 恒立液压 | 直接催化 | +10.00% | +13.52% | +5.61% |
+| 5 | 000975 | 山金国际 | 直接催化 | +9.98% | +13.70% | -22.01% |
+| 6 | 002050 | 三花智控 | 直接催化 | +9.06% | +18.71% | -14.26% |
+| 7 | 600150 | 中国船舶 | 直接催化 | +8.12% | +10.60% | +3.86% |
+| 8 | 600547 | 山东黄金 | 直接催化 | +7.86% | +10.74% | -40.40% |
+| 9 | 002028 | 思源电气 | 直接催化 | +7.86% | -3.59% | +5.08% |
+| 10 | 002916 | 深南电路 | 行业带动 | +7.42% | +4.68% | +95.69% |
+| 11 | 300866 | 安克创新 | 直接催化 | +7.40% | -1.08% | +1.54% |
+| 12 | 002422 | 科伦药业 | 直接催化 | +7.22% | +22.52% | +41.78% |
+| 13 | 002920 | 德赛西威 | 直接催化 | +6.65% | +10.03% | -35.77% |
+| 14 | 000338 | 潍柴动力 | 直接催化 | +6.59% | +7.45% | +53.44% |
+| 15 | 688183 | 生益电子 | 直接催化 | +6.58% | -1.07% | +28.16% |
+| 16 | 600489 | 中金黄金 | 行业带动 | +6.55% | +10.60% | -18.41% |
+| 17 | 688036 | 传音控股 | 直接催化 | +6.37% | +5.72% | -11.64% |
+| 18 | 600893 | 航发动力 | 行业带动 | +6.07% | +5.45% | -10.60% |
+| 19 | 600118 | 中国卫星 | 行业带动 | +5.89% | +6.52% | -18.62% |
+| 20 | 002594 | 比亚迪 | 直接催化 | +5.86% | +11.09% | -8.80% |
 
 ### 锐捷网络（301165）
 
-**原因：** 公司发布半年度业绩预增公告，归母净利润同比预增32.71%-65.88%，叠加CPO概念受海外巨头量产催化震荡拉升
+**归因类型：** 直接催化
+
+**原因：** 半年度业绩预告归属净利润预增32.71%-65.88%，业绩超预期，核心受益于数据中心交换机大幅增长，开源证券发布更新报告
 
 **证据：**
-- [锐捷网络(301165.SZ)发预增，预计上半年归母净利润同比增长32.71%-65.88% - 新浪财经](https://news.google.com/rss/articles/CBMijgFBVV95cUxNdHZtczYzbDBkRmZFSkV6ZEUxRi1ETzFNSE1GU0NoSmpxTUZ1V1NXVXNRMFF1eVRHYzRRVVlfLVRoMkdDN0lBLUZyc19nbjhRYnlHeXlST0dfQmpmaFRVSW9RUXhOMWNFaEdNX0h3MTNsc2tSeWdJOVR4UktsUlRkNklzRFcwdExMWFNzN25R?oc=5) （2026-07-02 09:55）
-- [海外巨头加速量产，CPO概念震荡拉升 锐捷网络、深科达、铭普光磁等多股涨停 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE4waDhtTklpZ05zQ0FkVUozbmlaTzFDRDltYVZWSmE0YmpONzR5dXozMGo0MjVtci0xZzU0N09vbVRGejBPajRVUTR3eGJQdkVSVW5idFZhamwyejNiMmxJdzNCU21kMlUtaUJva1BUVnhpU2JnbzZrTg?oc=5) （2026-06-30 02:10）
+- [锐捷网络披露2026年半年度业绩预告 归属净利润预增32.71%~65.88% - 央广财经](http://finance.eastmoney.com/a/202607023792043785.html) （2026-07-02 18:08）
+- [开源证券-锐捷网络-301165-公司信息更新报告：业绩超预期，核心受益于数据中心交换机大幅增长-260703 - 新浪财经](https://news.google.com/rss/articles/CBMihwFBVV95cUxOM1drRlN2VkF3VWRsRWg1MTUwc0NlU1NNQTVmSTRNeERwWHBXdmlmX0RGYlZrSnhRV2taaU1rdFFVVGlhMW1KaG93NXVVQkRhLW9WakhmYUlBakd4eHJVMEFPX0lOSHFkdi0zcTd6bVRvbHRfbkthQWdkM1VqaE9seHBrSlduZFE?oc=5) （2026-07-03 05:39）
 
 ### 拓普集团（601689）
 
-**原因：** 公司公告闲置募集资金现金管理到期赎回，资金回流提振市场情绪
+**归因类型：** 行业带动
+
+**原因：** 人形机器人概念涨3.46%，特斯拉产业链带动，汽车热管理概念涨4.03%，华为汽车概念涨3.05%
 
 **证据：**
-- [拓普集团：拓普集团关于闲置募集资金现金管理到期赎回的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-01/1225399662.PDF) （2026-07-01）
+- [拓普集团：同花顺强势股题材归因：人形机器人+特斯拉产业链+汽车零部件](http://zx.10jqka.com.cn/event/api/getharden/date/2026-07-03/orderby/date/orderway/desc/charset/GBK/) （2026-07-03）
+- [人形机器人概念涨3.46%，主力资金净流入306股 - 证券时报网](http://finance.eastmoney.com/a/202607033793606718.html) （2026-07-03 16:39）
 
 ### 杰瑞股份（002353）
 
-**原因：** 7月3日触及涨停板，领涨中创400ETF成分股
+**归因类型：** 行业带动
+
+**原因：** 燃气轮机+北美数据中心+油气装备题材驱动，机械设备行业资金流入
 
 **证据：**
-- [异动快报：杰瑞股份（002353）7月3日10点50分触及涨停板_股市直击 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1RbHBfVEgxdGttampHX21mXzVIQUdKSWRhX1loY3l5OW5GY0NicXFjZm5FeFJYN2wzQ001bjZiUkphMFM1VExpZzBIZDNEZkM0SzdNNkcwTUJFN2piUkFkS1lR?oc=5) （2026-07-03 02:50）
-- [财中ETF风向标｜中创400ETF嘉实(159918)盘中涨超1.4%，杰瑞股份涨停领涨成分股 - 财中社](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9nM3dxYVNHanRwZ2VfZU9SNFBCajZNN0dDemVMMkpTQTRweGU2NFVuaTdmcTIyRTFCeDBtTXd6Tk9xN3JXQ0IzSXp5VlNsSG5JWFFQLTlxSWJsRzFhT2NNcFNZTXc?oc=5) （2026-07-03 06:25）
+- [杰瑞股份：同花顺强势股题材归因：燃气轮机+北美数据中心+油气装备](http://zx.10jqka.com.cn/event/api/getharden/date/2026-07-03/orderby/date/orderway/desc/charset/GBK/) （2026-07-03）
+- [机械设备行业7月3日资金流向日报 - 证券时报网](http://finance.eastmoney.com/a/202607033793596321.html) （2026-07-03 16:39）
 
 ### 恒立液压（601100）
 
-**原因：** 公司发布2025年年度权益分派实施公告，分红落地提振股价
+**归因类型：** 直接催化
+
+**原因：** 线性驱动器项目推进，2025年年度权益分派实施，工程机械板块"淡季不淡"订单爆满
 
 **证据：**
-- [恒立液压：江苏恒立液压股份有限公司2025年年度权益分派实施公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-03/1225405168.PDF) （2026-07-03）
+- [恒立液压：同花顺强势股题材归因：线性驱动器项目+液压油缸+分红](http://zx.10jqka.com.cn/event/api/getharden/date/2026-07-03/orderby/date/orderway/desc/charset/GBK/) （2026-07-03）
+- [工程机械板块走强，行业“淡季不淡”、订单爆满 | 异动情报 - 21世纪经济报道](http://finance.eastmoney.com/a/202607023791665284.html) （2026-07-02 12:13）
 
 ### 山金国际（000975）
 
-**原因：** 受沃什讲话削弱美联储年内加息必要性影响，黄金股招金黄金、山金国际、赤峰黄金涨停
+**归因类型：** 直接催化
+
+**原因：** 黄金+业绩预增+山东国资题材，沃什讲话削弱美联储年内加息必要性，贵金属板块涨停潮
 
 **证据：**
+- [山金国际：同花顺强势股题材归因：黄金+业绩预增+山东国资](http://zx.10jqka.com.cn/event/api/getharden/date/2026-07-03/orderby/date/orderway/desc/charset/GBK/) （2026-07-03）
 - [沃什讲话削弱美联储年内加息必要性，招金黄金、山金国际、赤峰黄金涨停 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE5KbFhhLXZuUVZ2Nk5hRVVKdFFLVjJnTXRQRXp6TWhGVDN0cHFESXNhbDlSSTNsNEE1LVl6NHp3RHVPOVFyS1BtRlFNUmVteFJhai1NMHhKM0w4RHBHeDB2bHZObU1SVjZ1NjhvWFd5MmptSVJlSDFaTg?oc=5) （2026-07-02 03:04）
 
 ### 三花智控（002050）
 
-**原因：** 可选消费ETF盘中涨2.17%，三花智控作为领涨成分股受资金追捧
+**归因类型：** 直接催化
+
+**原因：** 马斯克晒Optimus产线合照，A股机器人板块多股涨停，汽车热管理概念涨4.03%
 
 **证据：**
-- [财中ETF风向标｜可选消费ETF华夏(562580)盘中涨2.17%，三花智控、比亚迪领涨成分股 - 新浪财经](https://news.google.com/rss/articles/CBMigAFBVV95cUxPTG10cFRRbEdSeWNFbVhyR3lGNjRsMGZDcUNwQXk5dnRIQi0yWFZUZlhLdDd4YzJXYmE3XzV5RFlpUjBqYUIwQ2RUbUJEb3poUk5RNEw3R1BoTXoxUFNaQjNUbjlEUnZ4RFdTeVNTcEFSS3BMaDB6eWVhckhzWGZ1Yw?oc=5) （2026-07-02 03:10）
+- [马斯克晒Optimus产线合照，A股机器人板块多股涨停 - 界面新闻](http://finance.eastmoney.com/a/202607023791900310.html) （2026-07-02 16:20）
+- [61.15亿主力资金净流入，汽车热管理概念涨4.03% - 证券时报网](http://finance.eastmoney.com/a/202607033793602197.html) （2026-07-03 16:39）
 
 ### 中国船舶（600150）
 
-**原因：** 央企结构调整ETF前十大权重股中国船舶领涨，央企改革主题资金流入
+**归因类型：** 直接催化
+
+**原因：** 中远海发下单24条新船共86.56亿元，中船系概念涨3.13%，国产航母概念涨3.34%
 
 **证据：**
-- [财中ETF风向标｜央企结构调整ETF博时(512960)盘中涨0.938%，前十大权重股中国船舶领涨超4% - 新浪财经](https://news.google.com/rss/articles/CBMigAFBVV95cUxQNWp3TmlOc0ROYUlpTGd4NGFiVWsxdURfcGJDc0hLTlZZa1dleTZjNk83ZmxhcVVDcHZkNV9sTmJWd3U0OGU2UmY0b2l2eDMxMG91TmZEa3FoZmRBbWJ5aFkyaGg3c3VWOXE2SVdiRzJRMHc5anM1bGNQOXM0TWRpVA?oc=5) （2026-07-03 01:50）
+- [共86.56亿元！中远海发下单24条新船 预计2029年至2030年陆续交付|速读公告 - 财联社](http://finance.eastmoney.com/a/202606303788691273.html) （2026-06-30 22:15）
+- [中船系概念涨3.13%，主力资金净流入6股 - 证券时报网](http://finance.eastmoney.com/a/202607033793599365.html) （2026-07-03 16:38）
 
 ### 山东黄金（600547）
 
-**原因：** 主力资金净买入4.32亿元，叠加2025年年度权益分派实施公告利好
+**归因类型：** 直接催化
+
+**原因：** 2025年年度权益分派实施公告发布，叠加黄金板块走强
 
 **证据：**
-- [山东黄金（600547）7月2日主力资金净买入4.32亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5b1dfY0ZNMks0QXJzaHIzX2Fjb2o4c0lEZnVJd0ZHM0x4dG5zSVBDRnhNazVkQkIwUFVTTGh2N0NNYjdPNUJHTXVhNTJvZkpFYkttSTlXa1dtRHhZWjZNeVZn?oc=5) （2026-07-03 00:14）
 - [山东黄金：山东黄金矿业股份有限公司2025年年度权益分派实施公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-03/1225406031.PDF) （2026-07-03）
+- [山东黄金（600547）7月2日主力资金净买入4.32亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5b1dfY0ZNMks0QXJzaHIzX2Fjb2o4c0lEZnVJd0ZHM0x4dG5zSVBDRnhNazVkQkIwUFVTTGh2N0NNYjdPNUJHTXVhNTJvZkpFYkttSTlXa1dtRHhZWjZNeVZn?oc=5) （2026-07-03 00:14）
 
 ### 思源电气（002028）
 
-**原因：** 中标中国能源建设集团广东省电力设计研究院采购项目，订单落地利好
+**归因类型：** 直接催化
+
+**原因：** 2025年度权益分派实施公告发布
 
 **证据：**
-- [思源电气（002028）：中标中国能源建设集团广东省电力设计研究院有限公司采购项目，中标金额为149.14万元 - 新浪财经](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPX29RLUF2akM5bkswWW9hanB4RUxucTV2ZkNkRUFKR0hpNDVNOWt3bGJNRDdvSGlaOEVROF9kU2Rpa2dFUDRPSVVKcDgxNGd1OFl4T2dvSlEyR3ZDVUxzeEVwSVBjT1pJaTJFN1JhQ2tBX25rMGViWk1feVUxT04xdE5EVEcwZjVi?oc=5) （2026-07-01 06:30）
+- [思源电气：2025年度权益分派实施公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-01/1225399910.PDF) （2026-07-01）
 
 ### 深南电路（002916）
 
-**原因：** 融资融券余额维持21.64亿元高位，市场做多情绪浓厚
+**归因类型：** 行业带动
+
+**原因：** PCB概念局部活跃，机构强调"量价质"三重共振，深南电路涨停
 
 **证据：**
-- [深南电路：6月22日融券卖出2500股，融资融券余额21.64 亿元 - MSN](https://news.google.com/rss/articles/CBMi6gNBVV95cUxNQTJvTTlmdnBVdXlyTDBiaWZfN3FuOXFEUVBIVWN3anFOSDNxclNjTExGd2dQX2RWTFN4MWJ3OThROGhsajkzLVFFaHRrNklrRm9jMlhobGVTUWNHa0VDSHBnWUNLdzNLN0lnWTRHUzR2dmhTb2Y5blpBYUw5M2JmZEQyNUEyS3gxaFNrVnFmOFBTR01PcHZ5M0ZtUmVvNjdIdzZIQmlsdkpsUjVpODFrTmllclBteHBzRHVmamp1VDhJbHZORTd2ZzhNSkVWZVQ5YXdsMGY3NzNrcXVSOHRSU2hKN2pfMWYyOGJqWDd2QU1HWTZFUjE0VzVYbmo5TXExbFcteW9RUTBXbmJiUTktQ3pNaG95M3ZtMVJIMUhTUURiV1lUbEV0Mzd4YnEtdi1uMzZlaU1aNHpxX2JsblRLQjV1WHFERzAxbXlWM2JrWFhBaUlHQVhTbDVtU3FTWUUzeEViVVRJXy01cWdoaUlFTWNEYVJrZFNMM0FwaUt4ZWxjTWdiTURteXNGaTIzNjZmLXdfWDM3MmpPREdrWTFDV0w0NWhIWEdaNkR6UVhPVTJhMlN4cy14QlNvZXVnTmpKalljLUdBWU9PYWRRYXhBTmZtRU5ROU9xaDFVaUlpRnVnUXBOR0MtUjZR?oc=5) （2026-06-27 16:17）
+- [机构强调“量价质”三重共振！PCB概念局部活跃，深南电路涨停 - 新浪财经](https://news.google.com/rss/articles/CBMihwFBVV95cUxOZ3RzUjBsMXM3QU81UW14bHB1T012VWxRb25JYXJ6TzdpODE4RWxtRGVWa2pyU0Q4LUhGNktTZ2MtYUZrTG43cXp0RDF6WmNiRnpMWjdtVE5tRDRpTlhxWk1FSWtTdmExYkxfeFZuQjFkY2twLTRwclFZZUk5T3VJY3JiTnlJTjA?oc=5) （2026-07-03 03:02）
+- [7月3日A股半日行情：创业板指涨1.58% 机器人概念掀涨停潮 - 央广财经](http://finance.eastmoney.com/a/202607033793318594.html) （2026-07-03 11:58）
 
 ### 安克创新（300866）
 
-**原因：** H股挂牌上市首日破发后上演V型反转，境外上市资金关注提升
+**归因类型：** 直接催化
+
+**原因：** 推进H股主板上市全球发售4663万股净筹约45.23亿港元，上市首日破发后V型反转
 
 **证据：**
-- [安克创新上市首日破发 当日股价上演“V”型反转 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE9sbGVVY2g5MU9oZ3hLVmxPbGFzNzQ3a28tck5QTmpCU0NDc0dVczdremRTemlCRlJMVEFfMmhsUlktakc0SG03NVhubjctRFFaMXVka2ZHV203TUxEZWgxcndNYVhuaGh5MUtoZmlJdjRpQ3BJZ3RPUA?oc=5) （2026-07-02 22:25）
-- [安克创新：关于境外上市外资股（H股）挂牌并上市交易的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-02/1225406962.PDF) （2026-07-02）
+- [安克创新推进H股主板上市：全球发售4663万股 净筹约45.23亿港元 - 财中社](http://finance.eastmoney.com/a/202607023792071465.html) （2026-07-02 19:06）
+- [安克创新上市首日破发 当日股价上演“V”型反转 - 中国经营报](http://finance.eastmoney.com/a/202607033793660387.html) （2026-07-03 17:35）
 
 ### 科伦药业（002422）
 
-**原因：** 累计回购35万股释放积极信号，6月29日曾触及涨停板资金活跃
+**归因类型：** 直接催化
+
+**原因：** 公司累计回购35万股，回购股份进展公告发布，连续3个交易日涨幅偏离值累计超20%
 
 **证据：**
 - [科伦药业(002422.SZ)：累计回购35万股 - 新浪财经](https://news.google.com/rss/articles/CBMif0FVX3lxTE5BUEh2T2F0V09UMGZ6ZEl2ZU1oSzk1clZvODByNXFpSzlHNkZ6WHltZ1ZpOWtDdTBmZy1YTzQ2Mk83QVlPc052Q1dMRW8xekw3X1hfVmhmbVVYam5KT3BpT2t2SVU5YVJGakxWc1lsV3hMdzZSaEdnNVV3REdIN1E?oc=5) （2026-07-01 08:40）
-- [异动快报：科伦药业（002422）6月29日10点24分触及涨停板_股市直击 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5FSGgxWWxJTE1Kd3U4bU04eF8tVnNHTzZBak9WU2kzY0ZlaEVRWFJETkh0Yi1TMTYwNlBERDdvclNWaWRfbDE2UElNSUJGRU5zS0ZHUkdpT1JFcjE4Q3pRZmNR?oc=5) （2026-06-29 02:25）
+- [科伦药业：关于回购公司股份进展的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-02/1225402739.PDF) （2026-07-02）
 
 ### 德赛西威（002920）
 
-**原因：** 与兆易创新达成战略合作，携手共筑汽车电子产业链新生态
+**归因类型：** 直接催化
+
+**原因：** 兆易创新与德赛西威达成战略合作，携手共筑汽车电子产业链新生态
 
 **证据：**
 - [兆易创新与德赛西威达成战略合作，携手共筑汽车电子产业链新生态 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE5VRDZYTWJ5SjZuWFRrY1c2YnVhQWdiMjhhOGtwWjVVRnlyMWVoVzlESU5OMjhSZXl5M1M1ODNjQkxJMUJmVWc1a3ZIRk00ZlpjMlNiWW5SZDBqOHVSZFBaVzc1Q0JidTFnbGxCNmRrN2hTMm4xS2JweA?oc=5) （2026-07-03 05:58）
+- [兆易创新与德赛西威达成战略合作 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE9aMFdqaDdMYUdvbUhBaXFWaUNnWnZSNEZaU0RoX2NvVVpYaW9maFRLUUtPZE5SYkszUGxuT19vemNKOTU4ZUhSaHRveE1TZVRfV1FCYWpDcUprMmtiN0xQeE5vSThTSFhUaE5WeDZuLVkyMjRLLTBEYg?oc=5) （2026-07-03 06:02）
 
 ### 潍柴动力（000338）
 
-**原因：** 公司公告变更持续督导保荐代表人，公司治理规范化推进
+**归因类型：** 直接催化
+
+**原因：** 获批45亿元闲置募集资金续作现金管理，汽车行业资金流入，比亚迪等净流入资金居前
 
 **证据：**
-- [潍柴动力：潍柴动力股份有限公司关于变更持续督导保荐代表人的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-06-27/1225391163.PDF) （2026-06-27）
+- [潍柴动力获批45亿元闲置募集资金续作现金管理 聚焦保本结构性存款 - 新浪财经](https://news.google.com/rss/articles/CBMilgFBVV95cUxNTTdmRHh4V3pLSzJGLWhjbWJUVjlTdmdNc3RtZ1U5WkR4UXp0OGdRMUk1QWJ2TzNRZGhfdnkyS2JpOWQ4US0xd215SlpyWFQ5MUIwOFZMQnhOeHN0TzdXS0tjSGNKRU4xZmdZUHVtT2VkVXU4SUV3TGFnMXRXVEJJNmYyWVh4V0U5QXlrcnR1bWRuTnVnTGc?oc=5) （2026-07-03 10:21）
+- [汽车行业资金流入榜：比亚迪等20股净流入资金超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793603775.html) （2026-07-03 16:39）
 
 ### 生益电子（688183）
 
-**原因：** 2024年限制性股票激励计划首次授予部分第二个归属期归属完成，激励效应释放
+**归因类型：** 直接催化
+
+**原因：** 限制性股票激励计划首次授予部分第二个归属期归属结果公告，杠杆资金加仓
 
 **证据：**
 - [生益电子：生益电子关于公司2024年限制性股票激励计划首次授予部分第二个归属期部分归属结果的公告（回购股份） - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-06-26/1225386994.PDF) （2026-06-26）
+- [杠杆资金大手笔加仓股名单 - 证券时报网](http://finance.eastmoney.com/a/202607023791220993.html) （2026-07-02 09:31）
 
 ### 中金黄金（600489）
 
-**原因：** 主力资金净买入4.18亿元，黄金板块整体走强带动
+**归因类型：** 行业带动
+
+**原因：** 黄金板块走强，美联储释放通胀回落信号，贵金属板块资金流入，有色金属行业净流入
 
 **证据：**
-- [中金黄金（600489）7月2日主力资金净买入4.18亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BTFZHcUFjSlpxYnVtN3VJMU9GSWx2TzdLUGVadkhhS0hmV1F2VF9tTkVEanVLWHVYbkxNbWk2OVN2aDJWZTM3UjM0cDZnS3RRY1BheURhTnJXSFBlaEMxb1dR?oc=5) （2026-07-03 00:12）
+- [美联储释放通胀回落信号，贵金属板块盘中涨近3%，现货黄金拉升 | 异动情报 - 21世纪经济报道](http://finance.eastmoney.com/a/202607023791660344.html) （2026-07-02 11:55）
+- [有色金属行业资金流入榜：紫金矿业、章源钨业等净流入资金居前 - 证券时报网](http://finance.eastmoney.com/a/202607023792004435.html) （2026-07-02 17:29）
 
 ### 传音控股（688036）
 
-**原因：** 跟随科技板块整体反弹，资金回流消费电子及手机产业链
+**归因类型：** 直接催化
+
+**原因：** 预计二季报净利润9.92亿元同比增37.2%，AI手机概念涨5.23%
 
 **证据：**
-- [传音控股 - money.finance.sina.com.cn](https://news.google.com/rss/articles/CBMiwAFBVV95cUxNSmFWM2xkMTVMa0RBUzlQc1dCUWswWUpISlZSV2s0UzloNWtlVWNpbDNuWXotVHA3eGhFeXpTNmF0em9UZmhHVUQ5WFlVaENZQnBINEhNQmZlTF91cjRYeTR5cmJwUk50M1dzUVAyV3R0N0lFY05QQjBuNDVTUXdxMlN4RzRWTkRXWWZhSV9QaHhPWnNEV0RZRmhyNDJncDdpLXNPTDlVSVhzSkxNYjlYOFlzMG5keGNlY0oxWlJaQ3A?oc=5) （2026-06-26 07:34）
+- [传音控股：预计2026年8月18日公布二季报，预测第二季度净利润9.92亿元，同比变动37.2% - 新浪财经](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVkZSSE91YXFIRHZ5M1g3THNCdzRXb0JmMnp3RjZHNm12T0FPV2c5VEZBM0tuaENQLWxUd1NVYmcwTl8zZ0Rrd0JaZGZhdE5PcDlCLWhKRDRVOXhEUFVjd1FyRVVIQlJ0aGRkdVdEVGxJWjIycUcwaW41NHRxWURZQWJEZFJna05B?oc=5) （2026-06-29 10:30）
+- [AI手机概念涨5.23%，主力资金净流入这些股 - 证券时报网](http://finance.eastmoney.com/a/202606303788356475.html) （2026-06-30 16:31）
 
 ### 航发动力（600893）
 
-**原因：** 公司发布2026年担保进展公告，业务推进平稳
+**归因类型：** 行业带动
+
+**原因：** 航空发动机概念涨3.24%，国产航母概念涨3.34%，主力资金连续5日净流入
 
 **证据：**
-- [航发动力：中国航发动力股份有限公司关于2026年担保进展的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-06-30/1225395294.PDF) （2026-06-30）
+- [19.11亿主力资金净流入，航空发动机概念涨3.24% - 证券时报网](http://finance.eastmoney.com/a/202607033793601064.html) （2026-07-03 16:38）
+- [国产航母概念涨3.34%，主力资金净流入26股 - 证券时报网](http://finance.eastmoney.com/a/202607033793603478.html) （2026-07-03 16:38）
 
 ### 中国卫星（600118）
 
-**原因：** 卫星ETF盘中涨超1.5%，中国卫星作为航天电子概念股领涨
+**归因类型：** 行业带动
+
+**原因：** 国产航母概念涨3.34%，国防军工行业净流入资金16.64亿元，杠杆资金加仓
 
 **证据：**
-- [财中ETF风向标｜卫星ETF永赢(159206)盘中涨超1.5%，航天电子、中国卫星 - 新浪财经](https://news.google.com/rss/articles/CBMigAFBVV95cUxPcXFweE5FMjBYMmxqRWNlN0NWMzN5VXZMSW93YzRQRkFiRWJJLXExSTltM0hCSFNhRkdvdFE0UEtVLWs3MGFmaGRnekJ6ZDdLOXY3S2NxN21UeU5DWnV3Ui1TYVNvSDZQVVRFcmVUd1VQRS1wV1BuaFNSLTdKQlVXTw?oc=5) （2026-07-01 03:23）
+- [国产航母概念涨3.34%，主力资金净流入26股 - 证券时报网](http://finance.eastmoney.com/a/202607033793603478.html) （2026-07-03 16:38）
+- [国防军工行业今日净流入资金16.64亿元，航天电子等13股净流入资金超亿元 - 证券时报网](http://finance.eastmoney.com/a/202606303788357465.html) （2026-06-30 16:31）
 
 ### 比亚迪（002594）
 
-**原因：** 6月产销数据高增带动A、H股联袂大涨，新建336座闪充站扩张超预期
+**归因类型：** 直接催化
+
+**原因：** 加快提升第二代刀片电池产能满足闪充车型订单需求，6月产销快报发布，再成纯电车全球销冠
 
 **证据：**
-- [6月业绩高增，比亚迪A、H股联袂大涨 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE9aNFNxSG5FN1V4YkNtTDNWekxZUXBCOW1zU04wZVpuQU82ajlFZXM5RFIwbDVpc1BROU52NGJOaEFRSnl5cXZvZTlPWTBWRW5hZEhuX3p5SUM1c1hYRWNBclJtWEFzeW8tekxVMngwUHJ2czNCdDFhWg?oc=5) （2026-07-02 01:43）
-- [比亚迪：6月16日~6月30日新建336座闪充站 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTFBSWFdEQ2RCb1d3WGh1N0ZhYno4ZTc4cEo3MmthN3hKQmVLM1RTa0pQNmQzS2hVbENfVHUzczF0cWVwYnhjY25IRHJRTFdoSk1hSGg5dExzNXVvMUF0NElDRW5kNWtCSlFsUFpoOVpHMExoOGIwRlBGYQ?oc=5) （2026-07-03 00:55）
+- [比亚迪：公司正加快提升第二代刀片电池产能 以满足闪充车型的订单需求 - 证券时报网](http://finance.eastmoney.com/a/202606303788587142.html) （2026-06-30 20:39）
+- [特斯拉二季度交付量超预期 股价大跌超7%！比亚迪再成纯电车全球销冠 - 红星资本局](http://finance.eastmoney.com/a/202607033793320995.html) （2026-07-03 12:38）
 
 ---
 
 ## 三、跌幅分析（Top 20）
 
-**板块共性：** 半导体及电子产业链集体回调，钨业受合资子公司停产消息冲击，化工与硅业板块受定增问询及高位获利回吐拖累，AI与算力相关概念股出现技术性回调
+**板块共性：** 跌幅前20集中分布：一、半导体/国家大基金概念(沪硅产业、士兰微、长电科技、华大九天、华润微、北方华创)连续两日大幅回调，电子板块243.97亿元主力资金撤离；二、化工板块(巨化股份、合盛硅业、卫星化学)受PVDF/氟化工概念下跌及行业资金流出拖累；三、个股利空(厦门钨业子公司停产、TCL科技延期回复问询、圆通速递股东减持、晶盛机电董事减持)；四、前期涨幅较大后技术性/除权回调(京东方A玻璃基板概念降温、中钨高新除权除息)。
 
-| 排名 | 股票代码 | 股票名称 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
-|------|----------|----------|--------|----------|--------------|
-| 1 | 600160 | 巨化股份 | -9.99% | +1.91% | +45.01% |
-| 2 | 600549 | 厦门钨业 | -8.64% | -2.04% | +70.47% |
-| 3 | 000725 | 京东方Ａ | -7.91% | +14.47% | +106.35% |
-| 4 | 688126 | 沪硅产业 | -7.80% | -11.46% | +46.13% |
-| 5 | 000657 | 中钨高新 | -7.63% | +1.53% | +195.01% |
-| 6 | 603260 | 合盛硅业 | -6.94% | +7.74% | -10.96% |
-| 7 | 600460 | 士兰微 | -6.44% | -3.97% | +70.72% |
-| 8 | 300418 | 昆仑万维 | -6.34% | +7.24% | -21.03% |
-| 9 | 688047 | 龙芯中科 | -5.86% | -7.40% | -2.83% |
-| 10 | 600584 | 长电科技 | -5.31% | -7.04% | +133.07% |
-| 11 | 300316 | 晶盛机电 | -5.06% | -9.11% | +32.47% |
-| 12 | 301269 | 华大九天 | -4.93% | -10.06% | -9.61% |
-| 13 | 000100 | TCL科技 | -4.56% | +11.91% | +24.37% |
-| 14 | 688396 | 华润微 | -4.33% | -9.59% | +43.87% |
-| 15 | 300628 | 亿联网络 | -4.15% | -1.64% | -9.79% |
-| 16 | 600233 | 圆通速递 | -4.07% | +18.27% | +8.34% |
-| 17 | 002179 | 中航光电 | -3.99% | +0.02% | +13.42% |
-| 18 | 002371 | 北方华创 | -2.98% | -2.14% | +69.21% |
-| 19 | 002648 | 卫星化学 | -2.87% | +2.06% | +33.53% |
-| 20 | 300442 | 润泽科技 | -2.69% | +12.13% | +23.47% |
+| 排名 | 股票代码 | 股票名称 | 归因类型 | 涨跌幅 | 本周涨幅 | 年初至今涨幅 |
+|------|----------|----------|----------|--------|----------|--------------|
+| 1 | 600160 | 巨化股份 | 行业带动 | -9.99% | -8.27% | +30.52% |
+| 2 | 600549 | 厦门钨业 | 直接催化 | -8.64% | -10.51% | +55.74% |
+| 3 | 000725 | 京东方Ａ | 行业带动 | -7.91% | +5.41% | +90.02% |
+| 4 | 688126 | 沪硅产业 | 行业带动 | -7.80% | -11.46% | +46.13% |
+| 5 | 000657 | 中钨高新 | 直接催化 | -7.63% | -6.22% | +172.51% |
+| 6 | 603260 | 合盛硅业 | 直接催化 | -6.94% | +0.26% | -17.15% |
+| 7 | 600460 | 士兰微 | 行业带动 | -6.44% | -10.15% | +59.74% |
+| 8 | 300418 | 昆仑万维 | 行业带动 | -6.34% | +7.24% | -21.03% |
+| 9 | 688047 | 龙芯中科 | 弱证据待复核 | -5.86% | -7.40% | -2.83% |
+| 10 | 600584 | 长电科技 | 行业带动 | -5.31% | -11.98% | +120.69% |
+| 11 | 300316 | 晶盛机电 | 直接催化 | -5.06% | -9.11% | +32.47% |
+| 12 | 301269 | 华大九天 | 行业带动 | -4.93% | -10.06% | -9.61% |
+| 13 | 000100 | TCL科技 | 直接催化 | -4.56% | +6.81% | +18.70% |
+| 14 | 688396 | 华润微 | 行业带动 | -4.33% | -9.59% | +43.87% |
+| 15 | 300628 | 亿联网络 | 行业带动 | -4.15% | -1.64% | -9.79% |
+| 16 | 600233 | 圆通速递 | 直接催化 | -4.07% | +13.46% | +3.93% |
+| 17 | 002179 | 中航光电 | 弱证据待复核 | -3.99% | -3.97% | +8.90% |
+| 18 | 002371 | 北方华创 | 行业带动 | -2.98% | -5.14% | +64.02% |
+| 19 | 002648 | 卫星化学 | 行业带动 | -2.87% | -0.87% | +29.70% |
+| 20 | 300442 | 润泽科技 | 行业带动 | -2.69% | +12.13% | +23.47% |
 
 ### 巨化股份（600160）
 
-**原因：** 7月3日10点30分触及跌停板，前期涨幅较大叠加获利回吐
+**归因类型：** 行业带动
+
+**原因：** PVDF概念下跌5.02%，氟化工概念下跌3.95%，基础化工行业资金流出
 
 **证据：**
-- [异动快报：巨化股份（600160）7月3日10点30分触及跌停板_股市直击 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE10UHhjbUR5UkMtTG84ZjVKeVJDdUNNQlMwZ3djODFmd3c2b1k5TE5uWEliRm93bVFHNlZpUF9uU3VyWGV0a05fejBwWURwV2s3cGZTT01vRVgtWExaa3pfSThn?oc=5) （2026-07-03 02:35）
+- [PVDF概念下跌5.02%，6股主力资金净流出超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793604344.html) （2026-07-03 16:39）
+- [氟化工概念下跌3.95%，主力资金净流出54股 - 证券时报网](http://finance.eastmoney.com/a/202607033793603368.html) （2026-07-03 16:39）
 
 ### 厦门钨业（600549）
 
-**原因：** 控股子公司洛阳豫鹭因洛阳钼业暂停提供尾矿已基本停产，钨产业链供给冲击
+**归因类型：** 直接催化
+
+**原因：** 控股子公司洛阳豫鹭因洛阳钼业暂停提供尾矿停产，拟收购股权标的涉及诉讼
 
 **证据：**
-- [厦门钨业(600549.SH)：洛阳豫鹭已基本停产 - 新浪财经](https://news.google.com/rss/articles/CBMijwFBVV95cUxQRVBMLXdIMk9yMGJLTHZyc292ajVzVmo3UDNWekxyQ29NM1RlbENZNTlRRkZiSHlXVk53UGRfTXNKa241WkNGMFBuLW12RWt5R2dnWmhySndURmo4S1NSYnFEdlRzdmJiakVfdXFNMG9xMkNBRVVVUnlPVDQ3YzhKTGdsd3c0dW9Bbzl0SndkWQ?oc=5) （2026-07-01 08:14）
+- [厦门钨业：因洛阳钼业暂停提供尾矿 控股子公司洛阳豫鹭停产 - 每日经济新闻](http://finance.eastmoney.com/a/202607013790215566.html) （2026-07-01 16:18）
+- [厦门钨业：厦门钨业关于控股子公司洛阳豫鹭矿业有限责任公司停产的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-02/1225402770.PDF) （2026-07-02）
 
 ### 京东方Ａ（000725）
 
-**原因：** 公司公告尚未买入公司A股股票，回购进度低于市场预期
+**归因类型：** 行业带动
+
+**原因：** 前期玻璃基板概念大涨后回调，龙虎榜显示短线资金博弈，机构席位虽有净买入但获利盘涌出
 
 **证据：**
-- [京东方Ａ(000725.SZ)：尚未买入公司A股股票 - 新浪财经](https://news.google.com/rss/articles/CBMigAFBVV95cUxOUTdQRlBKbmdFRlJXQU0zdGFFWFlPWG42eGdlYWI4eVFGZmpZdW9BakZkbzFQOEd1b05ERFJnUnd4X2xSbDlVanVxcURkek5vUTRZTzRoZ1otbE40OHhjNHZxdmVhaW5XbFpCUm1nTk5IU1lSRmNkMTM0UGJwby1oOA?oc=5) （2026-06-30 09:24）
+- [全线爆发！000725午后一度涨停 - 证券时报](http://finance.eastmoney.com/a/202606303788352535.html) （2026-06-30 16:26）
+- [京东方A(000725)龙虎榜数据(07-02) - 东方财富Choice数据](http://stock.eastmoney.com/a/202607023791896010.html) （2026-07-02 16:28）
 
 ### 沪硅产业（688126）
 
-**原因：** 2025年年度股东会决议公告发布，前期涨幅较大叠加获利回吐
+**归因类型：** 行业带动
+
+**原因：** 国家大基金持股概念连续两日大跌累计近10%，电子板块243.97亿元主力资金撤离
 
 **证据：**
-- [沪硅产业：沪硅产业2025年年度股东会决议公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-01/1225400522.PDF) （2026-07-01）
+- [国家大基金持股概念下跌3.58%，28股主力资金净流出超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793601897.html) （2026-07-03 16:39）
+- [243.97亿元主力资金今日撤离电子板块 - 证券时报网](http://finance.eastmoney.com/a/202607033793596617.html) （2026-07-03 16:39）
 
 ### 中钨高新（000657）
 
-**原因：** 利润分配股权登记日为7月3日，除权除息日股价自然回落
+**归因类型：** 直接催化
+
+**原因：** 2025年度分红派息实施，41只股即将分红引发除权除息效应
 
 **证据：**
-- [中钨高新：利润分配股权登记日为7月3日 - 每日经济新闻](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBEM0ZRb3FpcEVXcVhhMW5TT0YwVy1JRktWMUlEVnkyaWdHZ3U1ejV0ZjNVRGFOQUdRTnpETDVoanN5djJ3UDAwWFpfcTdCZkZvUkZpR1c1QTBEMlZ0cWlEakV3?oc=5) （2026-06-26 08:46）
 - [中钨高新：2025年度分红派息实施公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-06-27/1225390039.PDF) （2026-06-27）
+- [41只股即将分红 抢权行情能否开启？ - 证券时报网](http://finance.eastmoney.com/a/202607033792826339.html) （2026-07-03 09:26）
 
 ### 合盛硅业（603260）
 
-**原因：** 58亿元定增问询函回复聚焦主业，市场对定增摊薄 EPS 担忧
+**归因类型：** 直接催化
+
+**原因：** 回复年报问询函，2025年首亏29.91亿元，光伏业务成拖累，有机硅底部企稳但市场信心不足
 
 **证据：**
-- [合盛硅业就58亿元定增问询函回复 聚焦主业强化能源配套 - 新浪财经](https://news.google.com/rss/articles/CBMiigFBVV95cUxQdjhYd0t1RHc2bnVlVkxiVzEzVTBHZVV6eHZabEhxWUI4aEJCN0JVbVBXMjVfY3d4NlgxRGM4b0NLS0ZMS01FbHRjVlJYdzVBV2t6OHlLRlJfeU1uYm1McXpwMDBaVEp4cVRsV0NZZV9xVmFmMkV4a0hXWnNIQjMtNndBUmdLYUNzLUE?oc=5) （2026-06-26 10:29）
+- [合盛硅业回复年报问询函：有机硅底部企稳，加速高端产品布局 - 证券时报网](http://finance.eastmoney.com/a/202607033793798233.html) （2026-07-03 20:46）
+- [合盛硅业2025年首亏29.91亿元 光伏业务成拖累 2026年一季度已扭亏 - 新浪财经](https://news.google.com/rss/articles/CBMiigFBVV95cUxQMWJSUGxMYm12SU5BZ21ZejR0ZUJQLUtTTWpvTW10NkhvcDEwWnY0VmZ0cEp2ZTh2bVNQYUMtRmdJamQ3eHhSdTl1WlJYSV9zWGlFb05DenduaXVvOXpIR1lxSVlMNkMxcWI3b2xkaGdqaEZnNXBUYnJqZTBCOGdUaWxwWVE0U0doS2c?oc=5) （2026-07-03 13:26）
 
 ### 士兰微（600460）
 
-**原因：** 跟随半导体板块整体回调，缺乏个股催化
+**归因类型：** 行业带动
+
+**原因：** 国家大基金持股概念下跌3.58%，电子板块243.97亿元主力资金撤离
+
+**证据：**
+- [国家大基金持股概念下跌3.58%，28股主力资金净流出超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793601897.html) （2026-07-03 16:39）
+- [243.97亿元主力资金今日撤离电子板块 - 证券时报网](http://finance.eastmoney.com/a/202607033793596617.html) （2026-07-03 16:39）
 
 ### 昆仑万维（300418）
 
-**原因：** 公司及子公司向银行申请授信并由公司提供担保，增加临时股东会提案
+**归因类型：** 行业带动
+
+**原因：** 传媒行业净流出资金29.50亿元，前期主力资金净买入后获利回吐
 
 **证据：**
-- [昆仑万维：关于公司及全资子公司向银行申请授信并由公司提供担保的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-02/1225407059.PDF) （2026-07-02）
+- [传媒行业今日净流出资金29.50亿元，蓝色光标等7股净流出资金超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793595520.html) （2026-07-03 16:39）
+- [股票行情快报：昆仑万维（300418）6月29日主力资金净买入3.14亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9VMjVxSzJDY2p0Sk9jY1RwN24tT1dVM1NISzMtWTk2cFRibGhpTnlPYXFzdnJuUDFZVUpjSnUwTXl4d1d3R2xIRk5FTl9qSndzMUdNaktIWVBiaW92ZlJMeFZn?oc=5) （2026-06-29 14:12）
 
 ### 龙芯中科（688047）
 
-**原因：** 首次公开发行股票募投项目结项，市场对成长预期兑现
+**归因类型：** 弱证据待复核
+
+**原因：** 弱证据待复核
 
 **证据：**
-- [龙芯中科：龙芯中科关于首次公开发行股票募投项目结项的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-01/1225400530.PDF) （2026-07-01）
+- [MCU芯片概念涨5.51%，主力资金净流入这些股 - 证券时报网](http://finance.eastmoney.com/a/202606303788356696.html) （2026-06-30 16:31）
+- [科创板百元股达126只，联讯仪器股价最高 - 证券时报网](http://finance.eastmoney.com/a/202607033793601155.html) （2026-07-03 16:39）
 
 ### 长电科技（600584）
 
-**原因：** 股价前期创新高后技术性回调，78亿投建新厂短期摊薄利润担忧
+**归因类型：** 行业带动
+
+**原因：** 国家大基金持股概念下跌3.58%，玻璃基板概念下跌3.44%，前期股价异常波动后持续回调
 
 **证据：**
-- [股价创新高、78亿投建新厂 长电科技加速向先进封装转型 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTFBEV09NVDNFMmtaNUVYQlJuTkhlcUxqV2l6S29Ra0J2RFRMcEg4SUZvcFVYUmpkREZJejdIVmVQVTg4cFlmaXgtT2RiOFJKbk5PQkI4V2dFYXExZTJhQ0hoQWJTVXRDTUhEZWJDV3FKV3lSTUNLQVpSdw?oc=5) （2026-07-01 13:26）
+- [长电科技：江苏长电科技股份有限公司股票交易价格异常波动公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-06-26/1225389320.PDF) （2026-06-26）
+- [国家大基金持股概念下跌3.58%，28股主力资金净流出超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793601897.html) （2026-07-03 16:39）
 
 ### 晶盛机电（300316）
 
-**原因：** 董事邱敏秀减持6.13万股，减持金额362.16万元，股东减持压力
+**归因类型：** 直接催化
+
+**原因：** 董事邱敏秀减持6.13万股，减持金额362.16万元，电力设备股资金流出
 
 **证据：**
 - [晶盛机电董事邱敏秀减持6.13万股，减持金额362.16万元 - 每日经济新闻](https://news.google.com/rss/articles/CBMiZkFVX3lxTFBjUDUydVgycC11OVJXSVMzUGRrN216bC1MVnRpNGZwVjdwLWVhMUk1NWlwcjQtZHJGd2x3cmtreVFvNktUSS1NYzRhaExmWTZSbFJZOGw1LTRuNmFsbGMtNmxvYXMxUQ?oc=5) （2026-06-30 13:46）
+- [48.42亿元资金今日流出电力设备股 - 证券时报网](http://finance.eastmoney.com/a/202607013790263250.html) （2026-07-01 16:39）
 
 ### 华大九天（301269）
 
-**原因：** 跟随EDA及AI软件板块整体回调，缺乏个股催化
+**归因类型：** 行业带动
+
+**原因：** 国家大基金持股概念连续两日大幅下跌，半导体板块资金持续流出
+
+**证据：**
+- [国家大基金持股概念下跌3.58%，28股主力资金净流出超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793601897.html) （2026-07-03 16:39）
+- [国家大基金持股概念下跌6.28%，主力资金净流出37股 - 证券时报网](http://finance.eastmoney.com/a/202607023792008232.html) （2026-07-02 17:29）
 
 ### TCL科技（000100）
 
-**原因：** 申请延期回复发行股份购买资产审核问询函，重组进度不及预期
+**归因类型：** 直接催化
+
+**原因：** TCL科技延期回复发行股份及支付现金购买资产审核问询函
 
 **证据：**
-- [TCL科技申请延期回复发行股份购买资产审核问询函 - 新浪财经](https://news.google.com/rss/articles/CBMiigFBVV95cUxQVGJUY2NvYzgySmdVT3B6Y20zd0NtdkRNLVJDUENEV2xuNjc5WHJsTnNfNWUxRElVY2xGUzJ3aW9haXFua2tqVGZqTmNkMkloRVBZVG5VQWZfUWpvUlZ2Tm5FVGhubzhwRG1pd1Jyckc2YmlrbktLczNXRjZaemVjdlg5aHlwWktUc3c?oc=5) （2026-07-02 11:26）
+- [TCL科技延期回复问询函 - 财中社](http://finance.eastmoney.com/a/202607033793294326.html) （2026-07-03 11:12）
+- [TCL科技：关于延期回复发行股份及支付现金购买资产审核问询函的公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-03/1225406054.PDF) （2026-07-03）
 
 ### 华润微（688396）
 
-**原因：** 聘任2026年度审计机构，前期涨幅较大叠加获利回吐
+**归因类型：** 行业带动
+
+**原因：** 国家大基金持股概念连续下跌拖累，虽已启动第二轮涨价谈判且待交订单规模创新高但板块承压
 
 **证据：**
-- [华润微：关于聘任公司2026年度审计机构的公告 下载公告 - vip.stock.finance.sina.com.cn](https://news.google.com/rss/articles/CBMiogFBVV95cUxOal9nX01STXRUSkdlOU1xYVNZSklpTDQ3U3FHS3BFNTgxRXVyN19QbENfckQtZEVCVmQ4NVh2Y0xJQ0V5SS1uc1Y3dFJkS1QtTU4zVjg5Wmo5N3BKRzRMZllPZmNxai1VTmlxQ1VlYmhkbXhteThKQ2Z1NXdjZUNfWHhlZ3dvLWtOcGpoXy1qbTFtczNQZTlVVDg4QVN1Yll3b3c?oc=5) （2026-06-30 07:34）
+- [国家大基金持股概念下跌3.58%，28股主力资金净流出超亿元 - 证券时报网](http://finance.eastmoney.com/a/202607033793601897.html) （2026-07-03 16:39）
+- [国家大基金持股概念下跌6.28%，主力资金净流出37股 - 证券时报网](http://finance.eastmoney.com/a/202607023792008232.html) （2026-07-02 17:29）
 
 ### 亿联网络（300628）
 
-**原因：** 2025年合伙人持股计划锁定期届满，解禁抛售预期升温
+**归因类型：** 行业带动
+
+**原因：** 通信行业连续资金流出，合伙人持股计划锁定期届满公告引发减持预期
 
 **证据：**
 - [亿联网络：关于2025年合伙人持股计划锁定期届满的提示性公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-07-02/1225405289.PDF) （2026-07-02）
+- [185.74亿元资金今日流出通信股 - 证券时报网](http://finance.eastmoney.com/a/202607013790260460.html) （2026-07-01 16:39）
 
 ### 圆通速递（600233）
 
-**原因：** 上半年业绩预增69.34%-85.73%利好兑现后回调，前期周涨幅超18%
+**归因类型：** 直接催化
+
+**原因：** 5%以上股东杭州灏月减持触及5%刻度，前期半年度业绩预增69%-86%利好已兑现
 
 **证据：**
-- [圆通速递：上半年净利润同比预增69.34%到85.73% - 新浪财经](https://news.google.com/rss/articles/CBMid0FVX3lxTE1yei1wZWJLbVd5MlV3LWVoVTNfby1PWGVPUEM4bnlma0ZXQkFXWXl1ZVR1amxrUGQybDExSDhUcXVvTVFyMEg3S1BPVTA2aDZsVWZtYmEzajBwbjNzOUJXX1RzSUZKSnFGUFNTRnNxNFJVamVpTldR?oc=5) （2026-06-30 09:55）
+- [圆通速递：5%以上股东杭州灏月减持触及5%刻度 - 财联社](http://finance.eastmoney.com/a/202606293786832973.html) （2026-06-29 19:04）
+- [圆通速递：预计2026年半年度净利润同比增长69.34%-85.73% - 财联社](http://finance.eastmoney.com/a/202606303788401410.html) （2026-06-30 17:03）
 
 ### 中航光电（002179）
 
-**原因：** 二季度黄金价格下跌一定程度有利于公司成本下降，利好兑现后回调
+**归因类型：** 弱证据待复核
+
+**原因：** 弱证据待复核
 
 **证据：**
-- [中航光电：二季度黄金价格下跌一定程度上有利于公司成本下降 - 新浪财经](https://news.google.com/rss/articles/CBMihwFBVV95cUxNSnc2M3F5NkVsT0IyYXdjNTdHa1B4dE54OHU1RHNJMmdqUUw2bVlOb2JLQjBucGlmTFZmR0hoTXBWQWZGcGh2bFRrV3c5M2JZNXJwWk1ZT1Y0ZTFiVmNQS2djM1ZFUlJpNTctcmgxOVNsVkw1ZlBUX0hQZDRLUkxGWkJBSW5TLVE?oc=5) （2026-06-30 00:27）
+- [中航光电：二季度黄金价格下跌一定程度上有利于公司成本下降 - 人民财讯](http://finance.eastmoney.com/a/202606303787338647.html) （2026-06-30 08:27）
+- [中航光电：公司面向算力市场的高速互连、液冷等产品需求饱满 - 人民财讯](http://finance.eastmoney.com/a/202606303787340470.html) （2026-06-30 08:30）
 
 ### 北方华创（002371）
 
-**原因：** 跌停遭多家机构净卖出，北向资金净卖出2.81亿元，资金大幅流出
+**归因类型：** 行业带动
+
+**原因：** 半导体设备板块持续调整，国家大基金持股概念连续下跌，叠加股权登记后除权除息影响
 
 **证据：**
-- [龙虎榜|北方华创跌停，北向资金净买入-2.81亿元 - 新浪财经](https://news.google.com/rss/articles/CBMijgFBVV95cUxNei0yZFBzMUNUZzM4V1NiNlJGMTN4Z2lMZjlQaVRuOGhXUDBObGNnd0ZsU3VFRGR3NGltTGx4dHYtRk55eWRkWl9lTlQ5UUV3MVVhcTAxa0I3YW5mNGNOcy1QTndsYkIwSHItMGFIOXM0TTR4UDF6eXRyMjRWYXBmTmNQeXdZdkQ0eDk0dlp3?oc=5) （2026-07-02 09:02）
-- [北方华创遭多家机构净卖出，京东方A获机构大手笔加仓 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE1XZXgxR1pSVkxSNy1ibTFpdnAtZFMxNHF3YmVkQUk1LTJFcFphNVNVUTlQdExQWHoxT0cwLXI0SUQ4WVltZGpHd2trbFEzMjhBTVJoVGJ2LVljdnlWXzJ3cmo0c2g0bVBKQVZKakZKcFUyZ0ZoRGtWOQ?oc=5) （2026-07-02 08:56）
+- [半导体设备板块持续调整 北方华创逼近跌停 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE9lZk9DZ013c0pwNmJwNWRmM3hzNjd5XzVzZWN2VV9pSmZxcHlPVFFOYmtQU2NiUThEQTZueEVfWFBOQ0dmVzEwUTk3RTlLTTBQRUpyM1c0aXI4Z0pNaXVHclZZNUowNkxmQzN6YjNSSVhTSU9NcnUtVQ?oc=5) （2026-07-02 03:02）
+- [50股今日股权登记：金山办公、华荣股份、北方华创分红力度居前 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE1NWXFfTHJGZFhYR2RtcDZic21Pak9BMXhXazZlLTU1UTk5U0FvZmZMUmI0RG5mUE1kM2NZZWZPbG5ZU29kaGRRdDJlN0pwS3hqZFc3R3F5MlFwMEg4aW1zNkJGQXN6NUZNN2NPTmZuTGw1UDB4c2NXMQ?oc=5) （2026-07-02 00:17）
 
 ### 卫星化学（002648）
 
-**原因：** 上半年净利预增超118%利好兑现后回调，前期涨幅较大
+**归因类型：** 行业带动
+
+**原因：** 基础化工行业7月3日资金流出，前期中报净利预增超118%利好兑现后随板块回调
 
 **证据：**
-- [卫星化学上半年净利预增超118%！ - 新浪财经](https://news.google.com/rss/articles/CBMihwFBVV95cUxOYzNNSW40bzlJRnNWWE5SbkoycDVQQVFjT1FJVVRzaDYzVHVvVEplZl9TYURQdDFUYURUV2pZR1pUSkdxRERSSVdvY3JVZzIzcGFJbXcxdXFlRzVDeGtGZWMwLUdPNFFHUHBsUmd0SzV5RkdzbDhGa181bFFoSlNuWlpMZDE2bWM?oc=5) （2026-07-01 23:18）
+- [基础化工行业7月3日资金流向日报 - 证券时报网](http://finance.eastmoney.com/a/202607033793603266.html) （2026-07-03 16:39）
+- [卫星化学上半年净利预增超118%！ - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTE40Ri1WR0M4V2hMMHJ3cVNORW5YdzVsVmRUY014dEhIUGJzUm1OU0FxNFF6UzU5cjRsdl9ucFpSeGcxenZ4NlFtc25Sek5mQTNKOUZYWGNCb20zT2dBd1lRZkF5YzJUNmJTaDBLQ01vSG15b0U0ZUVQcA?oc=5) （2026-07-01 23:18）
 
 ### 润泽科技（300442）
 
-**原因：** 发行可转换公司债券购买资产并募集配套资金审核问询函回复中
+**归因类型：** 行业带动
+
+**原因：** 通信行业连续大幅资金流出，中国AI 50概念下跌，限制性股票激励回购注销及权益分派后调整
 
 **证据：**
-- [润泽科技：关于发行可转换公司债券购买资产并募集配套资金的审核问询函回复的提示性公告 - 巨潮资讯公告](http://static.cninfo.com.cn/finalpage/2026-06-26/1225389098.PDF) （2026-06-26）
+- [通信行业今日跌7.36%，主力资金净流出193.79亿元 - 证券时报网](http://finance.eastmoney.com/a/202607023792009781.html) （2026-07-02 17:29）
+- [中国AI 50概念下跌4.76%，主力资金净流出46股 - 证券时报网](http://finance.eastmoney.com/a/202606263784844569.html) （2026-06-26 17:20）
 
 ---
 
