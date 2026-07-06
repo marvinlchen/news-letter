@@ -23,7 +23,7 @@ echo "时间: $(date)"
 
 SECTOR_HOTSPOTS_AI_MODEL="${SECTOR_HOTSPOTS_AI_MODEL:-codebuddy}" \
 SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-deepseek-v4-pro}" \
-  python3 "$SCRIPT" --market a --output-dir "$REPORTS_DIR" --top "${SECTOR_HOTSPOTS_TOP:-8}"
+  python3 "$SCRIPT" --market a --output-dir "$REPORTS_DIR" --top "${SECTOR_HOTSPOTS_TOP:-12}"
 
 echo "=== A股板块热点分析完成 ==="
 echo "报告保存在: $REPORTS_DIR"

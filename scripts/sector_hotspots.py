@@ -30,7 +30,7 @@ NEWS_LOOKBACK_DAYS = int(os.environ.get("SECTOR_HOTSPOTS_NEWS_LOOKBACK_DAYS", "2
 NEWS_FETCH_LIMIT = int(os.environ.get("SECTOR_HOTSPOTS_NEWS_FETCH_LIMIT", "6"))
 NEWS_PROMPT_LIMIT = int(os.environ.get("SECTOR_HOTSPOTS_NEWS_PROMPT_LIMIT", "4"))
 MARKET_NEWS_LIMIT = int(os.environ.get("SECTOR_HOTSPOTS_MARKET_NEWS_LIMIT", "40"))
-DEFAULT_TOP = int(os.environ.get("SECTOR_HOTSPOTS_TOP", "8"))
+DEFAULT_TOP = int(os.environ.get("SECTOR_HOTSPOTS_TOP", "12"))
 
 EASTMONEY_PUSH2_DELAY = "https://push2delay.eastmoney.com/api/qt/clist/get"
 EASTMONEY_FAST_NEWS = "https://np-weblist.eastmoney.com/comm/web/getFastNewsList"
@@ -650,8 +650,11 @@ def parse_protocol(raw, sectors):
                 selected.append(item)
             if len(selected) >= 2:
                 break
+        attribution_type = normalize_attribution(fields[2])
+        if attribution_type != "弱证据待复核" and not selected:
+            raise ValueError(f"{sector_id} non-weak attribution missing valid evidence")
         result["items"][sector_id] = {
-            "attribution_type": normalize_attribution(fields[2]),
+            "attribution_type": attribution_type,
             "reason": normalize_inline_text(fields[3]),
             "evidence": selected,
         }
@@ -686,11 +689,13 @@ def build_fallback_result(sectors):
     }
 
 
-def run_ai_analysis(prompt, sectors, max_attempts=2):
+def run_ai_analysis(prompt, sectors, max_attempts=3):
     attempts = [
         prompt,
         prompt
         + "\n\n重新输出要求：上一次输出未能被脚本解析。请只输出协议行，TAB 分隔，不要 Markdown、不要解释、不要空行；必须覆盖所有给定 sector_id。",
+        prompt
+        + "\n\n重新输出要求：上一次输出未能被脚本解析。请只输出协议行，TAB 分隔，不要 Markdown、不要解释、不要空行；必须覆盖所有给定 sector_id；凡是归因类型不是“弱证据待复核”的行，证据ID列表必须包含至少 1 个对应板块的有效 NEWS ID。",
     ]
     last_error = None
     for attempt in range(max_attempts):
@@ -874,7 +879,13 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
         f"**生成时间：** {datetime.now().strftime('%Y-%m-%d %H:%M')}  ",
     ]
     if market in ("all", "a"):
-        lines.append("**A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序  ")
+        a_scope = []
+        if a_industry:
+            a_scope.append(f"行业 Top {len(a_industry)}")
+        if a_concept:
+            a_scope.append(f"概念 Top {len(a_concept)}")
+        a_scope_text = f"，覆盖{' / '.join(a_scope)}" if a_scope else ""
+        lines.append(f"**A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序{a_scope_text}  ")
     if market in ("all", "us"):
         lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理；计划在美股收盘后约3小时生成  ")
     lines += [
