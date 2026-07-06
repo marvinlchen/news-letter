@@ -673,7 +673,7 @@ def fallback_item(sector):
     lead_part = f"，领涨股为{lead}" if lead else ""
     return {
         "attribution_type": "弱证据待复核",
-        "reason": f"{sector.get('name')}当日表现居前{lead_part}；自动归因证据不足，需结合后续新闻复核。",
+        "reason": f"{sector.get('name')}当日表现居前{lead_part}；自动归因证据不足，需结合后续候选新闻证据复核。",
         "evidence": evidence,
     }
 
@@ -681,7 +681,7 @@ def fallback_item(sector):
 def build_fallback_result(sectors):
     RUN_STATS["fallback_used"] = True
     return {
-        "market_summary": "AI 输出未完整返回，以下内容基于板块行情和候选新闻自动整理，事件归因需人工复核。",
+        "market_summary": "AI 输出未完整返回，以下内容基于板块行情和候选新闻证据自动整理，归因需人工复核。",
         "items": {sector.get("id", ""): fallback_item(sector) for sector in sectors},
     }
 
@@ -708,7 +708,7 @@ def run_ai_analysis(prompt, sectors, max_attempts=2):
     return build_fallback_result(sectors)
 
 
-def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date):
+def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market="all"):
     sectors = a_industry + a_concept + us_hot
     lines = [
         "机器协议模式：你的回复会被脚本逐行解析。只输出协议行，不要 Markdown、不要标题、不要编号、不要空行。",
@@ -718,11 +718,15 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date):
         "美股热点行格式：US_HOTSPOT<TAB>sector_id<TAB>归因类型<TAB>原因<TAB>证据ID列表。",
         "归因类型只能是：政策催化、供需景气、公司事件、资金交易、宏观变量、弱证据待复核。",
         "证据ID列表最多 2 个，用英文逗号分隔；只能从对应板块的 NEWS 行选择；没有可靠证据则留空并标为弱证据待复核。",
-        "不要把单纯涨跌幅描述包装成强因果；必须区分行情事实、新闻事件和推断。",
+        "不要把单纯涨跌幅描述包装成强因果；必须区分行情事实、候选新闻证据和推断。",
         "",
         f"# 任务：分析 {report_date} 股票板块热点",
-        f"A股数据为中国交易日 {report_date} 收盘后东方财富延迟板块行情。",
-        f"美股数据为最近一个美股交易日 {us_data_date or '未知'} 的ETF板块代理日线表现，因为中国16:00美股尚未开盘。",
+    ]
+    if market in ("all", "a"):
+        lines.append(f"A股数据为中国交易日 {report_date} 收盘后东方财富延迟板块行情。")
+    if market in ("all", "us"):
+        lines.append(f"美股数据为最近一个美股交易日 {us_data_date or '未知'} 的ETF板块代理日线表现。")
+    lines += [
         "",
         "## 输出骨架",
         "MARKET_SUMMARY\t待填写",
@@ -756,15 +760,18 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date):
             lines.append(f"NEWS\t{sector.get('id')}-N0\t\t暂无候选新闻")
         lines.append("")
 
-    lines.append("### A股行业热点")
-    for item in a_industry:
-        append_sector(item)
-    lines.append("### A股概念主题")
-    for item in a_concept:
-        append_sector(item)
-    lines.append("### 美股板块热点")
-    for item in us_hot:
-        append_sector(item)
+    if a_industry:
+        lines.append("### A股行业热点")
+        for item in a_industry:
+            append_sector(item)
+    if a_concept:
+        lines.append("### A股概念主题")
+        for item in a_concept:
+            append_sector(item)
+    if us_hot:
+        lines.append("### 美股板块热点")
+        for item in us_hot:
+            append_sector(item)
     return "\n".join(lines)
 
 
@@ -852,18 +859,28 @@ def report_quality(sectors, result):
     }
 
 
-def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date):
+def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date, market="all"):
     sectors = a_industry + a_concept + us_hot
     quality = report_quality(sectors, result)
+    if market == "a":
+        title = f"A股板块热点分析 — {report_date}"
+    elif market == "us":
+        title = f"美股板块热点分析 — {report_date}"
+    else:
+        title = f"股票板块热点分析 — {report_date}"
     lines = [
-        f"# 股票板块热点分析 — {report_date}",
+        f"# {title}",
         "",
         f"**生成时间：** {datetime.now().strftime('%Y-%m-%d %H:%M')}  ",
-        "**A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序  ",
-        f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理；中国16:00美股尚未开盘  ",
+    ]
+    if market in ("all", "a"):
+        lines.append("**A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序  ")
+    if market in ("all", "us"):
+        lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理；计划在美股收盘后约3小时生成  ")
+    lines += [
         (
             f"**数据质量：** 热点板块 {quality['sector_count']} 个；"
-            f"候选新闻 {quality['candidate_count']} 条；"
+            f"候选新闻证据 {quality['candidate_count']} 条；"
             f"入选证据 {quality['selected_evidence_count']} 条；"
             f"弱证据待复核 {quality['weak_evidence_count']} 个"
         ),
@@ -874,28 +891,34 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
         "",
         result.get("market_summary", ""),
     ]
-    append_hotspot_table(lines, "A股行业热点", a_industry, result, include_board=True)
-    append_hotspot_table(lines, "A股概念主题热点", a_concept, result, include_board=True)
-    append_hotspot_table(lines, "美股板块热点", us_hot, result, include_board=False)
-    append_weak_table(lines, "A股回落/弱势板块", a_weak)
-    append_weak_table(lines, "美股回落/弱势板块", us_weak)
+    if a_industry:
+        append_hotspot_table(lines, "A股行业热点", a_industry, result, include_board=True)
+    if a_concept:
+        append_hotspot_table(lines, "A股概念主题热点", a_concept, result, include_board=True)
+    if us_hot:
+        append_hotspot_table(lines, "美股板块热点", us_hot, result, include_board=False)
+    if a_weak:
+        append_weak_table(lines, "A股回落/弱势板块", a_weak)
+    if us_weak:
+        append_weak_table(lines, "美股回落/弱势板块", us_weak)
     lines += [
         "",
         "---",
         "",
-        "*报告由 AI 基于公开行情与新闻候选生成，仅供研究参考，不构成投资建议。*",
+        "*报告由 AI 基于公开行情与候选新闻证据生成，仅供研究参考，不构成投资建议。*",
     ]
     return "\n".join(lines)
 
 
-def write_status(report_date, result, sectors, report_path=None, latest_path=None, us_data_date=None):
-    status_dir = PROJECT_ROOT / "var" / "sector-hotspots-status"
+def write_status(report_date, result, sectors, report_path=None, latest_path=None, us_data_date=None, market="all", status_dir_name=None):
+    status_dir = PROJECT_ROOT / "var" / (status_dir_name or "sector-hotspots-status")
     status_dir.mkdir(parents=True, exist_ok=True)
     status = {
         "date": report_date,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "mode": AI_MODEL,
         "ai_model_name": AI_MODEL_NAME,
+        "market": market,
         "us_data_date": us_data_date,
         "news_lookback_days": NEWS_LOOKBACK_DAYS,
         "codex_error": bool(RUN_STATS.get("codex_error", False)),
@@ -929,24 +952,37 @@ def most_common(values):
 
 def main():
     parser = argparse.ArgumentParser(description="A股和美股板块热点分析")
-    parser.add_argument("--date", default=datetime.now().strftime("%Y-%m-%d"), help="报告日期 YYYY-MM-DD")
+    parser.add_argument("--market", choices=("all", "a", "us"), default="all", help="生成范围: all, a, us")
+    parser.add_argument("--date", default=None, help="报告日期 YYYY-MM-DD，默认按市场自动选择")
     parser.add_argument("--top", type=int, default=DEFAULT_TOP, help="每组热点数量")
     parser.add_argument("--output-dir", default=None, help="报告输出目录")
+    parser.add_argument("--status-dir-name", default=None, help="var 下的状态目录名")
     parser.add_argument("--skip-ai", action="store_true", help="跳过 AI 归因")
-    parser.add_argument("--no-news", action="store_true", help="跳过新闻候选")
+    parser.add_argument("--no-news", action="store_true", help="跳过候选新闻证据")
     parser.add_argument("--no-status", action="store_true", help="不写 var/status，便于诊断运行")
     args = parser.parse_args()
 
-    report_date = args.date
+    initial_date = args.date or datetime.now().strftime("%Y-%m-%d")
+    report_date = initial_date
     print(f"[INFO] 开始生成 {report_date} 股票板块热点分析", file=sys.stderr)
-    print("[INFO] 获取A股板块排行...", file=sys.stderr)
-    a_groups, a_weak = fetch_a_share_hotspots(args.top)
-    a_industry = a_groups.get("industry", [])
-    a_concept = a_groups.get("concept", [])
+    a_industry = []
+    a_concept = []
+    a_weak = []
+    if args.market in ("all", "a"):
+        print("[INFO] 获取A股板块排行...", file=sys.stderr)
+        a_groups, a_weak = fetch_a_share_hotspots(args.top)
+        a_industry = a_groups.get("industry", [])
+        a_concept = a_groups.get("concept", [])
 
-    print("[INFO] 获取美股板块ETF代理行情...", file=sys.stderr)
-    us_hot, us_weak = fetch_us_hotspots(args.top)
-    us_data_date = most_common([item.get("trade_date") for item in us_hot + us_weak])
+    us_hot = []
+    us_weak = []
+    us_data_date = ""
+    if args.market in ("all", "us"):
+        print("[INFO] 获取美股板块ETF代理行情...", file=sys.stderr)
+        us_hot, us_weak = fetch_us_hotspots(args.top)
+        us_data_date = most_common([item.get("trade_date") for item in us_hot + us_weak])
+        if args.market == "us" and not args.date and us_data_date:
+            report_date = us_data_date
 
     sectors = a_industry + a_concept + us_hot
     if not sectors:
@@ -954,22 +990,24 @@ def main():
         sys.exit(1)
 
     if not args.no_news:
-        print("[INFO] 获取新闻候选...", file=sys.stderr)
-        market_news = fetch_eastmoney_market_news(target_date=report_date)
-        attach_news_candidates(a_industry + a_concept, report_date, market_news=market_news)
-        attach_news_candidates(us_hot, report_date, market_news=[])
+        print("[INFO] 获取候选新闻证据...", file=sys.stderr)
+        if a_industry or a_concept:
+            market_news = fetch_eastmoney_market_news(target_date=report_date)
+            attach_news_candidates(a_industry + a_concept, report_date, market_news=market_news)
+        if us_hot:
+            attach_news_candidates(us_hot, initial_date, market_news=[])
     else:
-        print("[INFO] 跳过新闻候选", file=sys.stderr)
+        print("[INFO] 跳过候选新闻证据", file=sys.stderr)
 
     if args.skip_ai:
         print("[INFO] 跳过 AI 分析，生成基础报告", file=sys.stderr)
         result = build_fallback_result(sectors)
     else:
-        prompt = build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date)
+        prompt = build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market=args.market)
         print(f"[INFO] 调用 AI ({AI_MODEL}) ...", file=sys.stderr)
         result = run_ai_analysis(prompt, sectors)
 
-    report = format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date)
+    report = format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date, market=args.market)
     report_path = None
     latest_path = None
     if args.output_dir:
@@ -984,7 +1022,16 @@ def main():
         print(report)
 
     if not args.no_status:
-        write_status(report_date, result, sectors, report_path=report_path, latest_path=latest_path, us_data_date=us_data_date)
+        write_status(
+            report_date,
+            result,
+            sectors,
+            report_path=report_path,
+            latest_path=latest_path,
+            us_data_date=us_data_date,
+            market=args.market,
+            status_dir_name=args.status_dir_name,
+        )
 
 
 if __name__ == "__main__":
