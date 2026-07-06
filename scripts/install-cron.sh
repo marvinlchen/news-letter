@@ -8,6 +8,7 @@ REDDIT_MARKER="# finance-reddit-digest"
 CSI300_MARKER="# finance-csi300-analysis"
 CSI500_MARKER="# finance-csi500-analysis"
 CSI1000_MARKER="# finance-csi1000-analysis"
+SECTOR_HOTSPOTS_MARKER="# finance-sector-hotspots"
 NATIONAL_TEAM_ETF_MARKER="# finance-national-team-etf-weekly"
 mkdir -p "$PROJECT_ROOT/var/log"
 
@@ -42,6 +43,11 @@ else
   CSI1000_COMMAND="$PROJECT_ROOT/scripts/run-csi1000-analysis.sh"
 fi
 if command -v flock >/dev/null 2>&1; then
+  SECTOR_HOTSPOTS_COMMAND="/usr/bin/flock -n $PROJECT_ROOT/var/sector-hotspots-run.lock $PROJECT_ROOT/scripts/run-sector-hotspots.sh"
+else
+  SECTOR_HOTSPOTS_COMMAND="$PROJECT_ROOT/scripts/run-sector-hotspots.sh"
+fi
+if command -v flock >/dev/null 2>&1; then
   NATIONAL_TEAM_ETF_COMMAND="/usr/bin/flock -n $PROJECT_ROOT/var/national-team-etf-run.lock $PROJECT_ROOT/scripts/run-national-team-etf-weekly.sh"
 else
   NATIONAL_TEAM_ETF_COMMAND="$PROJECT_ROOT/scripts/run-national-team-etf-weekly.sh"
@@ -56,13 +62,16 @@ crontab -l 2>/dev/null \
   | grep -vF "$CSI300_MARKER" \
   | grep -vF "$CSI500_MARKER" \
   | grep -vF "$CSI1000_MARKER" \
+  | grep -vF "$SECTOR_HOTSPOTS_MARKER" \
   | grep -vF "$NATIONAL_TEAM_ETF_MARKER" \
   | grep -v 'run-csi300-analysis.sh' \
   | grep -v 'run-csi500-analysis.sh' \
   | grep -v 'run-csi1000-analysis.sh' \
+  | grep -v 'run-sector-hotspots.sh' \
   | grep -v 'csi300-analysis.log' \
   | grep -v 'csi500-analysis.log' \
   | grep -v 'csi1000-analysis.log' \
+  | grep -v 'sector-hotspots.log' \
   | grep -v 'run-national-team-etf-weekly.sh' \
   | grep -v 'national-team-etf-weekly.log' > "$tmp" || true
 printf '0 4 * * * %s >> %s/var/log/cron.log 2>&1 %s\n' \
@@ -77,7 +86,9 @@ printf '35 15 * * 1-5 %s >> %s/var/log/csi500-analysis.log 2>&1 %s\n' \
   "$CSI500_COMMAND" "$PROJECT_ROOT" "$CSI500_MARKER" >> "$tmp"
 printf '40 15 * * 1-5 %s >> %s/var/log/csi1000-analysis.log 2>&1 %s\n' \
   "$CSI1000_COMMAND" "$PROJECT_ROOT" "$CSI1000_MARKER" >> "$tmp"
+printf '0 16 * * 1-5 %s >> %s/var/log/sector-hotspots.log 2>&1 %s\n' \
+  "$SECTOR_HOTSPOTS_COMMAND" "$PROJECT_ROOT" "$SECTOR_HOTSPOTS_MARKER" >> "$tmp"
 printf '10 9 * * 6 %s >> %s/var/log/national-team-etf-weekly.log 2>&1 %s\n' \
   "$NATIONAL_TEAM_ETF_COMMAND" "$PROJECT_ROOT" "$NATIONAL_TEAM_ETF_MARKER" >> "$tmp"
 crontab "$tmp"
-crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest|finance-csi[0-9]+-analysis|finance-national-team-etf-weekly'
+crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest|finance-csi[0-9]+-analysis|finance-sector-hotspots|finance-national-team-etf-weekly'
