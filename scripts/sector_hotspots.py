@@ -50,23 +50,114 @@ A_SHARE_BOARD_TYPES = (
 )
 
 US_SECTOR_ETFS = (
-    {"symbol": "XLK", "name_zh": "科技", "name_en": "Technology", "keywords": "technology software semiconductors AI"},
-    {"symbol": "SMH", "name_zh": "半导体", "name_en": "Semiconductors", "keywords": "semiconductor chips AI data center"},
-    {"symbol": "IGV", "name_zh": "软件", "name_en": "Software", "keywords": "software cloud SaaS enterprise"},
-    {"symbol": "XLC", "name_zh": "通信服务", "name_en": "Communication Services", "keywords": "communication services internet media telecom"},
-    {"symbol": "XLY", "name_zh": "可选消费", "name_en": "Consumer Discretionary", "keywords": "consumer discretionary retail autos travel"},
-    {"symbol": "XLP", "name_zh": "必需消费", "name_en": "Consumer Staples", "keywords": "consumer staples food beverages retail"},
-    {"symbol": "XLF", "name_zh": "金融", "name_en": "Financials", "keywords": "banks financials insurance rates"},
-    {"symbol": "XLV", "name_zh": "医疗保健", "name_en": "Health Care", "keywords": "health care pharma biotech medical devices"},
-    {"symbol": "XLI", "name_zh": "工业", "name_en": "Industrials", "keywords": "industrials aerospace machinery transport"},
-    {"symbol": "XLE", "name_zh": "能源", "name_en": "Energy", "keywords": "energy oil gas crude"},
-    {"symbol": "XLB", "name_zh": "材料", "name_en": "Materials", "keywords": "materials chemicals metals mining"},
-    {"symbol": "XLU", "name_zh": "公用事业", "name_en": "Utilities", "keywords": "utilities power electricity rates"},
-    {"symbol": "XLRE", "name_zh": "房地产", "name_en": "Real Estate", "keywords": "real estate REITs mortgage rates"},
-    {"symbol": "IBB", "name_zh": "生物科技", "name_en": "Biotechnology", "keywords": "biotechnology FDA drug trials pharma"},
-    {"symbol": "ITA", "name_zh": "航空航天与军工", "name_en": "Aerospace & Defense", "keywords": "aerospace defense orders budget"},
+    {
+        "symbol": "XLK",
+        "name_zh": "科技",
+        "name_en": "Technology",
+        "keywords": "technology software semiconductors AI",
+        "representatives": ("NVDA", "MSFT", "AAPL", "AVGO", "ORCL", "CRM", "AMD", "CSCO"),
+    },
+    {
+        "symbol": "SMH",
+        "name_zh": "半导体",
+        "name_en": "Semiconductors",
+        "keywords": "semiconductor chips AI data center",
+        "representatives": ("NVDA", "TSM", "AVGO", "AMD", "ASML", "QCOM", "MU", "AMAT"),
+    },
+    {
+        "symbol": "IGV",
+        "name_zh": "软件",
+        "name_en": "Software",
+        "keywords": "software cloud SaaS enterprise",
+        "representatives": ("MSFT", "ORCL", "CRM", "NOW", "ADBE", "INTU", "PANW", "PLTR"),
+    },
+    {
+        "symbol": "XLC",
+        "name_zh": "通信服务",
+        "name_en": "Communication Services",
+        "keywords": "communication services internet media telecom",
+        "representatives": ("META", "GOOGL", "NFLX", "TMUS", "DIS", "VZ", "T", "CMCSA"),
+    },
+    {
+        "symbol": "XLY",
+        "name_zh": "可选消费",
+        "name_en": "Consumer Discretionary",
+        "keywords": "consumer discretionary retail autos travel",
+        "representatives": ("AMZN", "TSLA", "HD", "MCD", "BKNG", "LOW", "TJX", "SBUX"),
+    },
+    {
+        "symbol": "XLP",
+        "name_zh": "必需消费",
+        "name_en": "Consumer Staples",
+        "keywords": "consumer staples food beverages retail",
+        "representatives": ("WMT", "COST", "PG", "KO", "PEP", "PM", "MDLZ", "CL"),
+    },
+    {
+        "symbol": "XLF",
+        "name_zh": "金融",
+        "name_en": "Financials",
+        "keywords": "banks financials insurance rates",
+        "representatives": ("JPM", "BAC", "WFC", "GS", "MS", "C", "SCHW", "AXP"),
+    },
+    {
+        "symbol": "XLV",
+        "name_zh": "医疗保健",
+        "name_en": "Health Care",
+        "keywords": "health care pharma biotech medical devices",
+        "representatives": ("LLY", "UNH", "JNJ", "ABBV", "MRK", "ABT", "TMO", "PFE"),
+    },
+    {
+        "symbol": "XLI",
+        "name_zh": "工业",
+        "name_en": "Industrials",
+        "keywords": "industrials aerospace machinery transport",
+        "representatives": ("GE", "CAT", "RTX", "UBER", "HON", "UNP", "BA", "ETN"),
+    },
+    {
+        "symbol": "XLE",
+        "name_zh": "能源",
+        "name_en": "Energy",
+        "keywords": "energy oil gas crude",
+        "representatives": ("XOM", "CVX", "COP", "EOG", "SLB", "WMB", "MPC", "PSX"),
+    },
+    {
+        "symbol": "XLB",
+        "name_zh": "材料",
+        "name_en": "Materials",
+        "keywords": "materials chemicals metals mining",
+        "representatives": ("LIN", "SHW", "APD", "ECL", "FCX", "NEM", "DOW", "DD"),
+    },
+    {
+        "symbol": "XLU",
+        "name_zh": "公用事业",
+        "name_en": "Utilities",
+        "keywords": "utilities power electricity rates",
+        "representatives": ("NEE", "SO", "DUK", "CEG", "AEP", "SRE", "D", "EXC"),
+    },
+    {
+        "symbol": "XLRE",
+        "name_zh": "房地产",
+        "name_en": "Real Estate",
+        "keywords": "real estate REITs mortgage rates",
+        "representatives": ("PLD", "AMT", "EQIX", "WELL", "SPG", "PSA", "O", "DLR"),
+    },
+    {
+        "symbol": "IBB",
+        "name_zh": "生物科技",
+        "name_en": "Biotechnology",
+        "keywords": "biotechnology FDA drug trials pharma",
+        "representatives": ("AMGN", "GILD", "VRTX", "REGN", "MRNA", "BIIB", "ALNY", "BMRN"),
+    },
+    {
+        "symbol": "ITA",
+        "name_zh": "航空航天与军工",
+        "name_en": "Aerospace & Defense",
+        "keywords": "aerospace defense orders budget",
+        "representatives": ("RTX", "BA", "LMT", "NOC", "GD", "TDG", "LHX", "HWM"),
+    },
 )
 DEFAULT_US_TOP = int(os.environ.get("US_SECTOR_HOTSPOTS_TOP", str(len(US_SECTOR_ETFS))))
+US_REPRESENTATIVE_STOCK_LIMIT = int(os.environ.get("US_SECTOR_HOTSPOTS_STOCK_LIMIT", "8"))
 
 ATTRIBUTION_TYPES = ("政策催化", "供需景气", "公司事件", "资金交易", "宏观变量", "弱证据待复核")
 RUN_STATS = {
@@ -133,6 +224,26 @@ def fmt_amount(value):
     if abs(value) >= 10000:
         return f"{value / 10000:.2f}万"
     return f"{value:.0f}"
+
+
+def fmt_us_representative_breadth(sector):
+    stock_count = sector.get("stock_count") or 0
+    if not stock_count:
+        return "暂无"
+    return f"{sector.get('stock_up_count') or 0}涨/{sector.get('stock_down_count') or 0}跌"
+
+
+def fmt_us_lead_lag(sector):
+    lead = sector.get("lead_stock")
+    lag = sector.get("lag_stock")
+    lead_pct = sector.get("lead_stock_change_pct")
+    lag_pct = sector.get("lag_stock_change_pct")
+    parts = []
+    if lead:
+        parts.append(f"领涨 {lead} {fmt_pct(lead_pct)}")
+    if lag:
+        parts.append(f"领跌 {lag} {fmt_pct(lag_pct)}")
+    return " / ".join(parts) if parts else "暂无"
 
 
 def request_json(url, headers=None, timeout=15):
@@ -419,6 +530,38 @@ def fetch_us_etf_quote(symbol):
     raise RuntimeError("; ".join(errors))
 
 
+def fetch_us_stock_quote(symbol):
+    data = fetch_us_yahoo_chart(symbol)
+    if data.get("price") is None or not data.get("previous_close"):
+        raise ValueError("missing stock close data")
+    data["change_pct"] = (data["price"] - data["previous_close"]) / data["previous_close"] * 100
+    return data
+
+
+def attach_us_representative_movers(sector, symbols):
+    stocks = []
+    for symbol in list(symbols or [])[:US_REPRESENTATIVE_STOCK_LIMIT]:
+        try:
+            quote = fetch_us_stock_quote(symbol)
+            stocks.append({"symbol": symbol, **quote})
+        except Exception as exc:
+            record_source_error(f"美股代表股 {symbol} 行情获取失败: {exc}")
+        time.sleep(0.03)
+    stocks.sort(key=lambda item: item.get("change_pct") if item.get("change_pct") is not None else -999, reverse=True)
+    sector["representative_stocks"] = stocks
+    sector["stock_count"] = len(stocks)
+    sector["stock_up_count"] = sum(1 for item in stocks if (item.get("change_pct") or 0) > 0)
+    sector["stock_down_count"] = sum(1 for item in stocks if (item.get("change_pct") or 0) < 0)
+    if stocks:
+        leader = stocks[0]
+        laggard = stocks[-1]
+        sector["lead_stock"] = leader.get("symbol")
+        sector["lead_stock_change_pct"] = leader.get("change_pct")
+        sector["lag_stock"] = laggard.get("symbol")
+        sector["lag_stock_change_pct"] = laggard.get("change_pct")
+    return sector
+
+
 def fetch_us_hotspots(limit):
     rows = []
     for meta in US_SECTOR_ETFS:
@@ -436,6 +579,7 @@ def fetch_us_hotspots(limit):
                     **quote,
                 }
             )
+            attach_us_representative_movers(rows[-1], meta.get("representatives", ()))
         except Exception as exc:
             record_source_error(f"美股ETF {symbol} 行情获取失败: {exc}")
         time.sleep(0.15)
@@ -760,8 +904,11 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
                 f"SECTOR\t{sector.get('id')}\tA股\t{sector.get('board_label')}\t{sector.get('name')}\t涨跌幅{chg}\t成交额{amount}\t主力净流入{flow}\t涨跌家数{breadth}\t{lead}"
             )
         else:
+            stock_breadth = fmt_us_representative_breadth(sector)
+            lead_lag = fmt_us_lead_lag(sector)
             lines.append(
                 f"SECTOR\t{sector.get('id')}\t美股\t{sector.get('symbol')}\t{sector.get('name')}({sector.get('name_en')})\t涨跌幅{chg}\t收盘{sector.get('price')}\t成交量{fmt_amount(sector.get('volume'))}"
+                f"\t代表成分股{stock_breadth}\t{lead_lag}"
             )
         for idx, news in enumerate(sector.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
             evidence_id = f"{sector.get('id')}-N{idx}"
@@ -797,8 +944,8 @@ def append_hotspot_table(lines, title, sectors, result, include_board=False):
         lines.append("| 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |")
         lines.append("|---:|---|---|---:|---:|---:|---|---|---|")
     else:
-        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 归因类型 |")
-        lines.append("|---:|---|---|---|---:|---:|---|")
+        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 代表股涨跌 | 领涨/领跌 | 归因类型 |")
+        lines.append("|---:|---|---|---|---:|---:|---|---|---|")
     for idx, sector in enumerate(sectors, 1):
         analysis = analysis_for(result, sector)
         if sector.get("market") == "A股":
@@ -813,7 +960,8 @@ def append_hotspot_table(lines, title, sectors, result, include_board=False):
         else:
             lines.append(
                 f"| {idx} | {sector.get('name')} | {sector.get('symbol')} | {sector.get('trade_date')} | "
-                f"{fmt_pct(sector.get('change_pct'))} | {fmt_amount(sector.get('volume'))} | {analysis.get('attribution_type')} |"
+                f"{fmt_pct(sector.get('change_pct'))} | {fmt_amount(sector.get('volume'))} | "
+                f"{fmt_us_representative_breadth(sector)} | {fmt_us_lead_lag(sector)} | {analysis.get('attribution_type')} |"
             )
     lines.append("")
     for sector in sectors:
@@ -848,10 +996,13 @@ def append_weak_table(lines, title, sectors):
                 f"{fmt_amount(sector.get('amount'))} | {breadth} | {sector.get('lead_stock') or '-'} |"
             )
     else:
-        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 |")
-        lines.append("|---:|---|---|---|---:|")
+        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 代表股涨跌 | 领涨/领跌参考 |")
+        lines.append("|---:|---|---|---|---:|---|---|")
         for idx, sector in enumerate(sectors, 1):
-            lines.append(f"| {idx} | {sector.get('name')} | {sector.get('symbol')} | {sector.get('trade_date')} | {fmt_pct(sector.get('change_pct'))} |")
+            lines.append(
+                f"| {idx} | {sector.get('name')} | {sector.get('symbol')} | {sector.get('trade_date')} | "
+                f"{fmt_pct(sector.get('change_pct'))} | {fmt_us_representative_breadth(sector)} | {fmt_us_lead_lag(sector)} |"
+            )
 
 
 def report_quality(sectors, result):
@@ -868,6 +1019,7 @@ def report_quality(sectors, result):
         "raw_candidate_count": raw_candidate_count,
         "selected_evidence_count": selected_evidence_count,
         "weak_evidence_count": weak_count,
+        "representative_stock_count": sum(sector.get("stock_count", 0) or 0 for sector in sectors),
     }
 
 
@@ -900,14 +1052,18 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
                 us_scope_text = f"，覆盖全部 {len(us_hot)} 个ETF代理"
             else:
                 us_scope_text = f"，覆盖 {len(us_hot)} 个ETF代理"
-        lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理{us_scope_text}；计划在美股收盘后约3小时生成  ")
+        lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理{us_scope_text}；代表成分股为每个代理ETF的固定代表持仓池；计划在美股收盘后约3小时生成  ")
     quality_label = "覆盖板块" if market in ("all", "us") and us_hot else "热点板块"
+    stock_quality = ""
+    if market in ("all", "us") and quality.get("representative_stock_count"):
+        stock_quality = f"；代表股行情 {quality['representative_stock_count']} 条"
     lines += [
         (
             f"**数据质量：** {quality_label} {quality['sector_count']} 个；"
             f"候选新闻证据 {quality['candidate_count']} 条；"
             f"入选证据 {quality['selected_evidence_count']} 条；"
             f"弱证据待复核 {quality['weak_evidence_count']} 个"
+            f"{stock_quality}"
         ),
         "",
         "---",

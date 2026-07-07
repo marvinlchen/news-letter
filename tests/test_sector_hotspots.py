@@ -40,6 +40,13 @@ def us_sector(index: int, meta: dict) -> dict:
         "trade_date": "2026-07-06",
         "change_pct": 1.0 - index * 0.1,
         "volume": 1000000 + index,
+        "stock_count": 8,
+        "stock_up_count": 5,
+        "stock_down_count": 3,
+        "lead_stock": "NVDA",
+        "lead_stock_change_pct": 2.5,
+        "lag_stock": "AAPL",
+        "lag_stock_change_pct": -1.2,
         "news": [],
     }
 
@@ -132,9 +139,30 @@ class SectorHotspotsReportTest(unittest.TestCase):
         )
 
         self.assertIn("覆盖全部 15 个ETF代理", report)
+        self.assertIn("代表成分股", report)
         self.assertIn("数据质量：** 覆盖板块 15 个", report)
+        self.assertIn("代表股行情 120 条", report)
         self.assertIn("## 美股ETF代理表现", report)
+        self.assertIn("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 代表股涨跌 | 领涨/领跌 | 归因类型 |", report)
+        self.assertIn("5涨/3跌", report)
+        self.assertIn("领涨 NVDA +2.50% / 领跌 AAPL -1.20%", report)
         self.assertNotIn("数据质量：** 热点板块 15 个", report)
+
+    def test_us_prompt_includes_representative_stock_context(self) -> None:
+        sector = us_sector(1, sector_hotspots.US_SECTOR_ETFS[0])
+
+        prompt = sector_hotspots.build_prompt(
+            "2026-07-06",
+            [],
+            [],
+            [sector],
+            "2026-07-06",
+            market="us",
+        )
+
+        self.assertIn("代表成分股5涨/3跌", prompt)
+        self.assertIn("领涨 NVDA +2.50%", prompt)
+        self.assertIn("领跌 AAPL -1.20%", prompt)
 
 
 if __name__ == "__main__":
