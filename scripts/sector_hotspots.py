@@ -159,7 +159,18 @@ US_SECTOR_ETFS = (
 DEFAULT_US_TOP = int(os.environ.get("US_SECTOR_HOTSPOTS_TOP", str(len(US_SECTOR_ETFS))))
 US_REPRESENTATIVE_STOCK_LIMIT = int(os.environ.get("US_SECTOR_HOTSPOTS_STOCK_LIMIT", "8"))
 
-ATTRIBUTION_TYPES = ("政策催化", "供需景气", "公司事件", "资金交易", "宏观变量", "弱证据待复核")
+US_MARKET_INDICATORS = (
+    {"symbol": "SPY", "label": "标普500", "note": "大盘风险偏好"},
+    {"symbol": "QQQ", "label": "纳指100", "note": "成长/科技风险偏好"},
+    {"symbol": "IWM", "label": "小盘股", "note": "风险广度"},
+    {"symbol": "^VIX", "label": "VIX", "note": "波动率"},
+    {"symbol": "IEF", "label": "中期美债ETF", "note": "利率变量，价格与收益率反向"},
+    {"symbol": "UUP", "label": "美元指数代理", "note": "美元变量"},
+    {"symbol": "USO", "label": "原油代理", "note": "能源变量"},
+    {"symbol": "GLD", "label": "黄金代理", "note": "避险/实际利率变量"},
+)
+
+ATTRIBUTION_TYPES = ("政策催化", "供需景气", "公司事件", "资金交易", "宏观变量", "行情结构", "弱证据待复核")
 RUN_STATS = {
     "source_error_count": 0,
     "codex_error": False,
@@ -252,17 +263,32 @@ def fmt_us_representative_breadth(sector):
     return f"{sector.get('stock_up_count') or 0}涨/{sector.get('stock_down_count') or 0}跌"
 
 
-def fmt_us_lead_lag(sector):
+def fmt_us_leader(sector):
     lead = sector.get("lead_stock")
-    lag = sector.get("lag_stock")
     lead_pct = sector.get("lead_stock_change_pct")
-    lag_pct = sector.get("lag_stock_change_pct")
-    parts = []
-    if lead:
-        parts.append(f"领涨 {lead} {fmt_pct(lead_pct)}")
-    if lag:
-        parts.append(f"领跌 {lag} {fmt_pct(lag_pct)}")
-    return " / ".join(parts) if parts else "暂无"
+    return f"领涨 {lead} {fmt_pct(lead_pct)}" if lead else "暂无"
+
+
+def with_change_pct(data):
+    data = dict(data or {})
+    if data.get("price") is not None and data.get("previous_close"):
+        data["change_pct"] = (data["price"] - data["previous_close"]) / data["previous_close"] * 100
+    return data
+
+
+def fmt_market_indicator_value(item):
+    price = item.get("price")
+    if price is None:
+        return "暂无"
+    return f"{float(price):.2f}"
+
+
+def fmt_market_indicator_change(item):
+    price = item.get("price")
+    previous = item.get("previous_close")
+    if price is None or previous is None:
+        return "暂无"
+    return fmt_pct(item.get("change_pct"))
 
 
 def request_json(url, headers=None, timeout=15):
@@ -542,8 +568,7 @@ def fetch_us_etf_quote(symbol):
         try:
             data = fetcher(symbol)
             if data.get("price") is not None and data.get("previous_close"):
-                data["change_pct"] = (data["price"] - data["previous_close"]) / data["previous_close"] * 100
-                return data
+                return with_change_pct(data)
         except Exception as exc:
             errors.append(f"{fetcher.__name__}: {exc}")
     raise RuntimeError("; ".join(errors))
@@ -553,8 +578,20 @@ def fetch_us_stock_quote(symbol):
     data = fetch_us_yahoo_chart(symbol)
     if data.get("price") is None or not data.get("previous_close"):
         raise ValueError("missing stock close data")
-    data["change_pct"] = (data["price"] - data["previous_close"]) / data["previous_close"] * 100
-    return data
+    return with_change_pct(data)
+
+
+def fetch_us_market_context():
+    rows = []
+    for meta in US_MARKET_INDICATORS:
+        symbol = meta["symbol"]
+        try:
+            quote = with_change_pct(fetch_us_yahoo_chart(symbol))
+            rows.append({**meta, **quote})
+        except Exception as exc:
+            print(f"[WARN] 美股市场背景 {symbol} 获取失败: {exc}", file=sys.stderr)
+        time.sleep(0.03)
+    return rows
 
 
 def attach_us_representative_movers(sector, symbols):
@@ -797,6 +834,7 @@ def parse_protocol(raw, sectors):
     catalog = build_evidence_catalog(sectors)
     result = {"market_summary": "", "items": {}}
     valid_ids = {sector.get("id", "") for sector in sectors}
+    sector_by_id = {sector.get("id", ""): sector for sector in sectors}
 
     for raw_line in clean.splitlines():
         line = re.sub(r"^\s*(?:[-*]|\d+[.)])\s*", "", raw_line.strip(" \r\n"))
@@ -821,11 +859,23 @@ def parse_protocol(raw, sectors):
             if len(selected) >= 2:
                 break
         attribution_type = normalize_attribution(fields[2])
-        if attribution_type != "弱证据待复核" and not selected:
+        reason = normalize_inline_text(fields[3])
+        if attribution_type == "行情结构" and not selected:
+            sector = sector_by_id.get(sector_id, {})
+            structural_reason = structural_us_reason(sector)
+            if structural_reason:
+                reason = structural_reason
+            else:
+                attribution_type = "弱证据待复核"
+                reason = (
+                    f"代表股{fmt_us_representative_breadth(sector)}，{fmt_us_leader(sector)}；"
+                    "未识别到可靠新闻证据，且未满足结构归因规则，需复核。"
+                )
+        if attribution_type not in ("弱证据待复核", "行情结构") and not selected:
             raise ValueError(f"{sector_id} non-weak attribution missing valid evidence")
         result["items"][sector_id] = {
             "attribution_type": attribution_type,
-            "reason": normalize_inline_text(fields[3]),
+            "reason": reason,
             "evidence": selected,
         }
 
@@ -859,6 +909,41 @@ def build_fallback_result(sectors):
     }
 
 
+def structural_us_reason(sector):
+    if sector.get("market") != "美股":
+        return None
+    stock_count = sector.get("stock_count") or 0
+    if stock_count <= 0 or sector.get("change_pct") is None:
+        return None
+    up_count = sector.get("stock_up_count") or 0
+    down_count = sector.get("stock_down_count") or 0
+    change_pct = sector.get("change_pct") or 0
+    leader = fmt_us_leader(sector)
+    breadth = fmt_us_representative_breadth(sector)
+    lead_pct = sector.get("lead_stock_change_pct")
+    if change_pct >= 0.4 and up_count >= max(6, int(stock_count * 0.75)):
+        return f"代表股{breadth}，{leader}，ETF上涨具备较好广度；未识别到更强板块级新闻催化。"
+    if change_pct <= -0.4 and down_count >= max(6, int(stock_count * 0.75)):
+        return f"代表股{breadth}，板块下跌具备较好广度，{leader}仅为相对抗跌/逆势个股；未识别到更强板块级新闻催化。"
+    if change_pct >= 0.4 and lead_pct is not None and lead_pct >= max(2.0, change_pct * 3) and up_count <= max(3, stock_count // 2):
+        return f"代表股{breadth}但ETF收涨，{leader}对指数拉动突出，板块内部存在明显分化。"
+    return None
+
+
+def apply_structural_us_attributions(result, sectors):
+    for sector in sectors:
+        item = result.get("items", {}).get(sector.get("id", ""))
+        if not item or item.get("attribution_type") != "弱证据待复核":
+            continue
+        reason = structural_us_reason(sector)
+        if not reason:
+            continue
+        item["attribution_type"] = "行情结构"
+        item["reason"] = reason
+        item["evidence"] = []
+    return result
+
+
 def run_ai_analysis(prompt, sectors, max_attempts=3):
     attempts = [
         prompt,
@@ -872,7 +957,7 @@ def run_ai_analysis(prompt, sectors, max_attempts=3):
         RUN_STATS["parse_attempts"] = attempt + 1
         raw = call_ai(attempts[min(attempt, len(attempts) - 1)])
         try:
-            return parse_protocol(raw, sectors)
+            return apply_structural_us_attributions(parse_protocol(raw, sectors), sectors)
         except Exception as exc:
             last_error = exc
             RUN_STATS.setdefault("codebuddy_parse_errors", []).append(str(exc))
@@ -883,16 +968,17 @@ def run_ai_analysis(prompt, sectors, max_attempts=3):
     return build_fallback_result(sectors)
 
 
-def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market="all"):
+def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market="all", us_market_context=None):
     sectors = a_industry + a_concept + us_hot
     lines = [
         "机器协议模式：你的回复会被脚本逐行解析。只输出协议行，不要 Markdown、不要标题、不要编号、不要空行。",
         "字段分隔符必须使用 TAB。原因和摘要必须是单行文本，不能包含 TAB。",
+        "MARKET_SUMMARY 和所有原因必须使用简体中文；不要输出英文句子。",
         "第一行必须是 MARKET_SUMMARY<TAB>总体总结。",
         "A股热点行格式：A_HOTSPOT<TAB>sector_id<TAB>归因类型<TAB>原因<TAB>证据ID列表。",
         "美股热点行格式：US_HOTSPOT<TAB>sector_id<TAB>归因类型<TAB>原因<TAB>证据ID列表。",
-        "归因类型只能是：政策催化、供需景气、公司事件、资金交易、宏观变量、弱证据待复核。",
-        "证据ID列表最多 2 个，用英文逗号分隔；只能从对应板块的 NEWS 行选择；没有可靠证据则留空并标为弱证据待复核。",
+        "归因类型只能是：政策催化、供需景气、公司事件、资金交易、宏观变量、行情结构、弱证据待复核。",
+        "证据ID列表最多 2 个，用英文逗号分隔；只能从对应板块的 NEWS 行选择；没有可靠新闻证据但代表股广度、单一领涨股拉动、普跌等行情结构足以解释时，可标为行情结构并留空证据；仍无法解释则标为弱证据待复核。",
         "不要把单纯涨跌幅描述包装成强因果；必须区分行情事实、候选新闻证据和推断。",
         "",
         f"# 任务：分析 {report_date} 股票板块热点",
@@ -901,6 +987,8 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
         lines.append(f"A股数据为中国交易日 {report_date} 收盘后东方财富延迟板块行情。")
     if market in ("all", "us"):
         lines.append(f"美股数据为最近一个美股交易日 {us_data_date or '未知'} 的ETF板块代理日线表现。")
+        if us_market_context:
+            lines.append("美股市场背景用于验证风险偏好、利率、美元、能源和黄金背景，不作为单一板块新闻证据。")
     lines += [
         "",
         "## 输出骨架",
@@ -911,6 +999,14 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
     for sector in us_hot:
         lines.append(f"US_HOTSPOT\t{sector.get('id')}\t弱证据待复核\t待填写\t")
     lines += ["", "## 数据", ""]
+    if us_market_context:
+        lines.append("### 美股市场背景")
+        for item in us_market_context:
+            lines.append(
+                f"MARKET_CONTEXT\t{item.get('label')}\t{item.get('symbol')}\t{item.get('trade_date')}\t"
+                f"数值{fmt_market_indicator_value(item)}\t日变动{fmt_market_indicator_change(item)}\t{item.get('note')}"
+            )
+        lines.append("")
 
     def append_sector(sector):
         chg = fmt_pct(sector.get("change_pct"))
@@ -924,10 +1020,10 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
             )
         else:
             stock_breadth = fmt_us_representative_breadth(sector)
-            lead_lag = fmt_us_lead_lag(sector)
+            leader = fmt_us_leader(sector)
             lines.append(
                 f"SECTOR\t{sector.get('id')}\t美股\t{sector.get('symbol')}\t{sector.get('name')}({sector.get('name_en')})\t涨跌幅{chg}\t收盘{sector.get('price')}\t成交量{fmt_amount(sector.get('volume'))}"
-                f"\t成交额估算{fmt_usd_amount(us_turnover(sector))}\t代表成分股{stock_breadth}\t{lead_lag}"
+                f"\t成交额估算{fmt_usd_amount(us_turnover(sector))}\t代表成分股{stock_breadth}\t{leader}"
             )
         for idx, news in enumerate(sector.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
             evidence_id = f"{sector.get('id')}-N{idx}"
@@ -963,7 +1059,7 @@ def append_hotspot_table(lines, title, sectors, result, include_board=False):
         lines.append("| 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |")
         lines.append("|---:|---|---|---:|---:|---:|---|---|---|")
     else:
-        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨/领跌 | 归因类型 |")
+        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨股 | 归因类型 |")
         lines.append("|---:|---|---|---|---:|---:|---:|---|---|---|")
     for idx, sector in enumerate(sectors, 1):
         analysis = analysis_for(result, sector)
@@ -981,7 +1077,7 @@ def append_hotspot_table(lines, title, sectors, result, include_board=False):
                 f"| {idx} | {sector.get('name')} | {sector.get('symbol')} | {sector.get('trade_date')} | "
                 f"{fmt_pct(sector.get('change_pct'))} | {fmt_amount(sector.get('volume'))} | "
                 f"{fmt_usd_amount(us_turnover(sector))} | {fmt_us_representative_breadth(sector)} | "
-                f"{fmt_us_lead_lag(sector)} | {analysis.get('attribution_type')} |"
+                f"{fmt_us_leader(sector)} | {analysis.get('attribution_type')} |"
             )
     lines.append("")
     for sector in sectors:
@@ -1016,14 +1112,27 @@ def append_weak_table(lines, title, sectors):
                 f"{fmt_amount(sector.get('amount'))} | {breadth} | {sector.get('lead_stock') or '-'} |"
             )
     else:
-        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交额(估) | 代表股涨跌 | 领涨/领跌参考 |")
+        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交额(估) | 代表股涨跌 | 领涨股 |")
         lines.append("|---:|---|---|---|---:|---:|---|---|")
         for idx, sector in enumerate(sectors, 1):
             lines.append(
                 f"| {idx} | {sector.get('name')} | {sector.get('symbol')} | {sector.get('trade_date')} | "
                 f"{fmt_pct(sector.get('change_pct'))} | {fmt_usd_amount(us_turnover(sector))} | "
-                f"{fmt_us_representative_breadth(sector)} | {fmt_us_lead_lag(sector)} |"
+                f"{fmt_us_representative_breadth(sector)} | {fmt_us_leader(sector)} |"
             )
+
+
+def append_us_market_context(lines, context):
+    if not context:
+        return
+    lines += ["", "## 美股市场背景", ""]
+    lines.append("| 指标 | 代码 | 数据日 | 数值 | 日变动 | 观察含义 |")
+    lines.append("|---|---|---|---:|---:|---|")
+    for item in context:
+        lines.append(
+            f"| {item.get('label')} | {item.get('symbol')} | {item.get('trade_date')} | "
+            f"{fmt_market_indicator_value(item)} | {fmt_market_indicator_change(item)} | {item.get('note')} |"
+        )
 
 
 def report_quality(sectors, result):
@@ -1044,7 +1153,7 @@ def report_quality(sectors, result):
     }
 
 
-def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date, market="all"):
+def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date, market="all", us_market_context=None):
     sectors = a_industry + a_concept + us_hot
     quality = report_quality(sectors, result)
     if market == "a":
@@ -1056,7 +1165,7 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
     lines = [
         f"# {title}",
         "",
-        f"**生成时间：** {datetime.now().strftime('%Y-%m-%d %H:%M')}  ",
+        f"**生成时间：** {datetime.now().strftime('%Y-%m-%d %H:%M')}<br>",
     ]
     if market in ("all", "a"):
         a_scope = []
@@ -1065,7 +1174,7 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
         if a_concept:
             a_scope.append(f"概念 Top {len(a_concept)}")
         a_scope_text = f"，覆盖{' / '.join(a_scope)}" if a_scope else ""
-        lines.append(f"**A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序{a_scope_text}  ")
+        lines.append(f"**A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序{a_scope_text}<br>")
     if market in ("all", "us"):
         us_scope_text = ""
         if us_hot:
@@ -1073,11 +1182,14 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
                 us_scope_text = f"，覆盖全部 {len(us_hot)} 个ETF代理"
             else:
                 us_scope_text = f"，覆盖 {len(us_hot)} 个ETF代理"
-        lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理{us_scope_text}；代表成分股为每个代理ETF的固定代表持仓池；计划在美股收盘后约3小时生成  ")
+        lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理{us_scope_text}；代表成分股为每个代理ETF的固定代表持仓池；计划在美股收盘后约3小时生成<br>")
     quality_label = "覆盖板块" if market in ("all", "us") and us_hot else "热点板块"
     stock_quality = ""
     if market in ("all", "us") and quality.get("representative_stock_count"):
         stock_quality = f"；代表股行情 {quality['representative_stock_count']} 条"
+    market_context_quality = ""
+    if market in ("all", "us") and us_market_context:
+        market_context_quality = f"；市场背景 {len(us_market_context)} 项"
     lines += [
         (
             f"**数据质量：** {quality_label} {quality['sector_count']} 个；"
@@ -1085,6 +1197,7 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
             f"入选证据 {quality['selected_evidence_count']} 条；"
             f"弱证据待复核 {quality['weak_evidence_count']} 个"
             f"{stock_quality}"
+            f"{market_context_quality}"
         ),
         "",
         "---",
@@ -1093,6 +1206,8 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
         "",
         result.get("market_summary", ""),
     ]
+    if market in ("all", "us") and us_hot:
+        append_us_market_context(lines, us_market_context or [])
     if a_industry:
         append_hotspot_table(lines, "A股行业热点", a_industry, result, include_board=True)
     if a_concept:
@@ -1113,7 +1228,7 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
     return "\n".join(lines)
 
 
-def write_status(report_date, result, sectors, report_path=None, latest_path=None, us_data_date=None, market="all", status_dir_name=None):
+def write_status(report_date, result, sectors, report_path=None, latest_path=None, us_data_date=None, market="all", status_dir_name=None, us_market_context=None):
     status_dir = PROJECT_ROOT / "var" / (status_dir_name or "sector-hotspots-status")
     status_dir.mkdir(parents=True, exist_ok=True)
     status = {
@@ -1129,6 +1244,7 @@ def write_status(report_date, result, sectors, report_path=None, latest_path=Non
         "parse_attempts": int(RUN_STATS.get("parse_attempts", 0) or 0),
         "codebuddy_parse_errors": RUN_STATS.get("codebuddy_parse_errors", []),
         "source_error_count": int(RUN_STATS.get("source_error_count", 0) or 0),
+        "market_context_count": len(us_market_context or []),
         **report_quality(sectors, result),
         "output_path": str(report_path) if report_path else "",
         "latest_path": str(latest_path) if latest_path else "",
@@ -1181,10 +1297,13 @@ def main():
     us_hot = []
     us_weak = []
     us_data_date = ""
+    us_market_context = []
     if args.market in ("all", "us"):
         print("[INFO] 获取美股板块ETF代理行情...", file=sys.stderr)
         us_hot, us_weak = fetch_us_hotspots(us_top)
         us_data_date = most_common([item.get("trade_date") for item in us_hot + us_weak])
+        print("[INFO] 获取美股市场背景...", file=sys.stderr)
+        us_market_context = fetch_us_market_context()
         if args.market == "us" and not args.date and us_data_date:
             report_date = us_data_date
 
@@ -1207,11 +1326,11 @@ def main():
         print("[INFO] 跳过 AI 分析，生成基础报告", file=sys.stderr)
         result = build_fallback_result(sectors)
     else:
-        prompt = build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market=args.market)
+        prompt = build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market=args.market, us_market_context=us_market_context)
         print(f"[INFO] 调用 AI ({AI_MODEL}) ...", file=sys.stderr)
         result = run_ai_analysis(prompt, sectors)
 
-    report = format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date, market=args.market)
+    report = format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date, market=args.market, us_market_context=us_market_context)
     report_path = None
     latest_path = None
     if args.output_dir:
@@ -1235,6 +1354,7 @@ def main():
             us_data_date=us_data_date,
             market=args.market,
             status_dir_name=args.status_dir_name,
+            us_market_context=us_market_context,
         )
 
 

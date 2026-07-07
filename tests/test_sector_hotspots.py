@@ -144,11 +144,88 @@ class SectorHotspotsReportTest(unittest.TestCase):
         self.assertIn("数据质量：** 覆盖板块 15 个", report)
         self.assertIn("代表股行情 120 条", report)
         self.assertIn("## 美股ETF代理表现", report)
-        self.assertIn("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨/领跌 | 归因类型 |", report)
+        self.assertIn("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨股 | 归因类型 |", report)
         self.assertIn("1.00亿美元", report)
         self.assertIn("5涨/3跌", report)
-        self.assertIn("领涨 NVDA +2.50% / 领跌 AAPL -1.20%", report)
+        self.assertIn("领涨 NVDA +2.50%", report)
+        self.assertNotIn("领跌 AAPL", report)
         self.assertNotIn("数据质量：** 热点板块 15 个", report)
+
+    def test_us_report_includes_market_context(self) -> None:
+        context = [
+            {
+                "symbol": "SPY",
+                "label": "标普500",
+                "trade_date": "2026-07-06",
+                "price": 650.0,
+                "previous_close": 640.0,
+                "change_pct": 1.5625,
+                "note": "大盘风险偏好",
+            }
+        ]
+        report = sector_hotspots.format_report(
+            "2026-07-06",
+            [],
+            [],
+            [],
+            [us_sector(1, sector_hotspots.US_SECTOR_ETFS[0])],
+            [],
+            {
+                "market_summary": "美股ETF代理分化。",
+                "items": {
+                    "US1": {
+                        "attribution_type": "弱证据待复核",
+                        "reason": "候选证据不足。",
+                        "evidence": [],
+                    }
+                },
+            },
+            "2026-07-06",
+            market="us",
+            us_market_context=context,
+        )
+
+        self.assertIn("市场背景 1 项", report)
+        self.assertIn("## 美股市场背景", report)
+        self.assertIn("| 标普500 | SPY | 2026-07-06 | 650.00 | +1.56% | 大盘风险偏好 |", report)
+
+    def test_structural_us_attribution_reclassifies_broad_move(self) -> None:
+        sector = us_sector(1, sector_hotspots.US_SECTOR_ETFS[0])
+        sector["stock_up_count"] = 7
+        sector["stock_down_count"] = 1
+        sector["change_pct"] = 1.2
+        result = {
+            "market_summary": "美股ETF代理分化。",
+            "items": {
+                "US1": {
+                    "attribution_type": "弱证据待复核",
+                    "reason": "候选证据不足。",
+                    "evidence": [],
+                }
+            },
+        }
+
+        updated = sector_hotspots.apply_structural_us_attributions(result, [sector])
+
+        self.assertEqual(updated["items"]["US1"]["attribution_type"], "行情结构")
+        self.assertIn("代表股7涨/1跌", updated["items"]["US1"]["reason"])
+
+    def test_parse_downgrades_unqualified_structural_us_attribution(self) -> None:
+        sector = us_sector(1, sector_hotspots.US_SECTOR_ETFS[0])
+        sector["stock_up_count"] = 4
+        sector["stock_down_count"] = 4
+        sector["change_pct"] = -0.1
+        raw = "\n".join(
+            [
+                "MARKET_SUMMARY\t美股ETF代理分化。",
+                "US_HOTSPOT\tUS1\t行情结构\t涨跌参半但可归因为结构。\t",
+            ]
+        )
+
+        parsed = sector_hotspots.parse_protocol(raw, [sector])
+
+        self.assertEqual(parsed["items"]["US1"]["attribution_type"], "弱证据待复核")
+        self.assertIn("未满足结构归因规则", parsed["items"]["US1"]["reason"])
 
     def test_us_prompt_includes_representative_stock_context(self) -> None:
         sector = us_sector(1, sector_hotspots.US_SECTOR_ETFS[0])
@@ -160,12 +237,25 @@ class SectorHotspotsReportTest(unittest.TestCase):
             [sector],
             "2026-07-06",
             market="us",
+            us_market_context=[
+                {
+                    "symbol": "SPY",
+                    "label": "标普500",
+                    "trade_date": "2026-07-06",
+                    "price": 650.0,
+                    "previous_close": 640.0,
+                    "change_pct": 1.5625,
+                    "note": "大盘风险偏好",
+                }
+            ],
         )
 
+        self.assertIn("归因类型只能是：政策催化、供需景气、公司事件、资金交易、宏观变量、行情结构、弱证据待复核", prompt)
+        self.assertIn("MARKET_CONTEXT\t标普500\tSPY\t2026-07-06\t数值650.00\t日变动+1.56%\t大盘风险偏好", prompt)
         self.assertIn("代表成分股5涨/3跌", prompt)
         self.assertIn("成交额估算1.00亿美元", prompt)
         self.assertIn("领涨 NVDA +2.50%", prompt)
-        self.assertIn("领跌 AAPL -1.20%", prompt)
+        self.assertNotIn("领跌 AAPL", prompt)
 
 
 if __name__ == "__main__":
