@@ -226,6 +226,25 @@ def fmt_amount(value):
     return f"{value:.0f}"
 
 
+def fmt_usd_amount(value):
+    if value is None:
+        return "暂无"
+    value = float(value)
+    if abs(value) >= 100000000:
+        return f"{value / 100000000:.2f}亿美元"
+    if abs(value) >= 10000:
+        return f"{value / 10000:.2f}万美元"
+    return f"{value:.2f}美元"
+
+
+def us_turnover(sector):
+    price = sector.get("price")
+    volume = sector.get("volume")
+    if price is None or volume is None:
+        return None
+    return float(price) * float(volume)
+
+
 def fmt_us_representative_breadth(sector):
     stock_count = sector.get("stock_count") or 0
     if not stock_count:
@@ -908,7 +927,7 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
             lead_lag = fmt_us_lead_lag(sector)
             lines.append(
                 f"SECTOR\t{sector.get('id')}\t美股\t{sector.get('symbol')}\t{sector.get('name')}({sector.get('name_en')})\t涨跌幅{chg}\t收盘{sector.get('price')}\t成交量{fmt_amount(sector.get('volume'))}"
-                f"\t代表成分股{stock_breadth}\t{lead_lag}"
+                f"\t成交额估算{fmt_usd_amount(us_turnover(sector))}\t代表成分股{stock_breadth}\t{lead_lag}"
             )
         for idx, news in enumerate(sector.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
             evidence_id = f"{sector.get('id')}-N{idx}"
@@ -944,8 +963,8 @@ def append_hotspot_table(lines, title, sectors, result, include_board=False):
         lines.append("| 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |")
         lines.append("|---:|---|---|---:|---:|---:|---|---|---|")
     else:
-        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 代表股涨跌 | 领涨/领跌 | 归因类型 |")
-        lines.append("|---:|---|---|---|---:|---:|---|---|---|")
+        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨/领跌 | 归因类型 |")
+        lines.append("|---:|---|---|---|---:|---:|---:|---|---|---|")
     for idx, sector in enumerate(sectors, 1):
         analysis = analysis_for(result, sector)
         if sector.get("market") == "A股":
@@ -961,7 +980,8 @@ def append_hotspot_table(lines, title, sectors, result, include_board=False):
             lines.append(
                 f"| {idx} | {sector.get('name')} | {sector.get('symbol')} | {sector.get('trade_date')} | "
                 f"{fmt_pct(sector.get('change_pct'))} | {fmt_amount(sector.get('volume'))} | "
-                f"{fmt_us_representative_breadth(sector)} | {fmt_us_lead_lag(sector)} | {analysis.get('attribution_type')} |"
+                f"{fmt_usd_amount(us_turnover(sector))} | {fmt_us_representative_breadth(sector)} | "
+                f"{fmt_us_lead_lag(sector)} | {analysis.get('attribution_type')} |"
             )
     lines.append("")
     for sector in sectors:
@@ -996,12 +1016,13 @@ def append_weak_table(lines, title, sectors):
                 f"{fmt_amount(sector.get('amount'))} | {breadth} | {sector.get('lead_stock') or '-'} |"
             )
     else:
-        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 代表股涨跌 | 领涨/领跌参考 |")
-        lines.append("|---:|---|---|---|---:|---|---|")
+        lines.append("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交额(估) | 代表股涨跌 | 领涨/领跌参考 |")
+        lines.append("|---:|---|---|---|---:|---:|---|---|")
         for idx, sector in enumerate(sectors, 1):
             lines.append(
                 f"| {idx} | {sector.get('name')} | {sector.get('symbol')} | {sector.get('trade_date')} | "
-                f"{fmt_pct(sector.get('change_pct'))} | {fmt_us_representative_breadth(sector)} | {fmt_us_lead_lag(sector)} |"
+                f"{fmt_pct(sector.get('change_pct'))} | {fmt_usd_amount(us_turnover(sector))} | "
+                f"{fmt_us_representative_breadth(sector)} | {fmt_us_lead_lag(sector)} |"
             )
 
 

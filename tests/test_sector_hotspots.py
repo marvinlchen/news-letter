@@ -38,6 +38,7 @@ def us_sector(index: int, meta: dict) -> dict:
         "name": meta["name_zh"],
         "name_en": meta["name_en"],
         "trade_date": "2026-07-06",
+        "price": 100.0,
         "change_pct": 1.0 - index * 0.1,
         "volume": 1000000 + index,
         "stock_count": 8,
@@ -143,7 +144,8 @@ class SectorHotspotsReportTest(unittest.TestCase):
         self.assertIn("数据质量：** 覆盖板块 15 个", report)
         self.assertIn("代表股行情 120 条", report)
         self.assertIn("## 美股ETF代理表现", report)
-        self.assertIn("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 代表股涨跌 | 领涨/领跌 | 归因类型 |", report)
+        self.assertIn("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨/领跌 | 归因类型 |", report)
+        self.assertIn("1.00亿美元", report)
         self.assertIn("5涨/3跌", report)
         self.assertIn("领涨 NVDA +2.50% / 领跌 AAPL -1.20%", report)
         self.assertNotIn("数据质量：** 热点板块 15 个", report)
@@ -161,6 +163,7 @@ class SectorHotspotsReportTest(unittest.TestCase):
         )
 
         self.assertIn("代表成分股5涨/3跌", prompt)
+        self.assertIn("成交额估算1.00亿美元", prompt)
         self.assertIn("领涨 NVDA +2.50%", prompt)
         self.assertIn("领跌 AAPL -1.20%", prompt)
 
