@@ -66,6 +66,7 @@ US_SECTOR_ETFS = (
     {"symbol": "IBB", "name_zh": "生物科技", "name_en": "Biotechnology", "keywords": "biotechnology FDA drug trials pharma"},
     {"symbol": "ITA", "name_zh": "航空航天与军工", "name_en": "Aerospace & Defense", "keywords": "aerospace defense orders budget"},
 )
+DEFAULT_US_TOP = int(os.environ.get("US_SECTOR_HOTSPOTS_TOP", str(len(US_SECTOR_ETFS))))
 
 ATTRIBUTION_TYPES = ("政策催化", "供需景气", "公司事件", "资金交易", "宏观变量", "弱证据待复核")
 RUN_STATS = {
@@ -75,6 +76,12 @@ RUN_STATS = {
     "parse_attempts": 0,
     "codebuddy_parse_errors": [],
 }
+
+
+def resolve_top_counts(cli_top):
+    if cli_top is not None:
+        return cli_top, cli_top
+    return DEFAULT_TOP, DEFAULT_US_TOP
 
 
 def normalize_inline_text(text):
@@ -887,10 +894,17 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
         a_scope_text = f"，覆盖{' / '.join(a_scope)}" if a_scope else ""
         lines.append(f"**A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序{a_scope_text}  ")
     if market in ("all", "us"):
-        lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理；计划在美股收盘后约3小时生成  ")
+        us_scope_text = ""
+        if us_hot:
+            if len(us_hot) >= len(US_SECTOR_ETFS):
+                us_scope_text = f"，覆盖全部 {len(us_hot)} 个ETF代理"
+            else:
+                us_scope_text = f"，覆盖 {len(us_hot)} 个ETF代理"
+        lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理{us_scope_text}；计划在美股收盘后约3小时生成  ")
+    quality_label = "覆盖板块" if market in ("all", "us") and us_hot else "热点板块"
     lines += [
         (
-            f"**数据质量：** 热点板块 {quality['sector_count']} 个；"
+            f"**数据质量：** {quality_label} {quality['sector_count']} 个；"
             f"候选新闻证据 {quality['candidate_count']} 条；"
             f"入选证据 {quality['selected_evidence_count']} 条；"
             f"弱证据待复核 {quality['weak_evidence_count']} 个"
@@ -907,7 +921,8 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
     if a_concept:
         append_hotspot_table(lines, "A股概念主题热点", a_concept, result, include_board=True)
     if us_hot:
-        append_hotspot_table(lines, "美股板块热点", us_hot, result, include_board=False)
+        us_table_title = "美股ETF代理表现" if len(us_hot) >= len(US_SECTOR_ETFS) else "美股板块热点"
+        append_hotspot_table(lines, us_table_title, us_hot, result, include_board=False)
     if a_weak:
         append_weak_table(lines, "A股回落/弱势板块", a_weak)
     if us_weak:
@@ -965,7 +980,7 @@ def main():
     parser = argparse.ArgumentParser(description="A股和美股板块热点分析")
     parser.add_argument("--market", choices=("all", "a", "us"), default="all", help="生成范围: all, a, us")
     parser.add_argument("--date", default=None, help="报告日期 YYYY-MM-DD，默认按市场自动选择")
-    parser.add_argument("--top", type=int, default=DEFAULT_TOP, help="每组热点数量")
+    parser.add_argument("--top", type=int, default=None, help="每组热点数量；默认A股12、美股全部ETF代理")
     parser.add_argument("--output-dir", default=None, help="报告输出目录")
     parser.add_argument("--status-dir-name", default=None, help="var 下的状态目录名")
     parser.add_argument("--skip-ai", action="store_true", help="跳过 AI 归因")
@@ -975,13 +990,14 @@ def main():
 
     initial_date = args.date or datetime.now().strftime("%Y-%m-%d")
     report_date = initial_date
+    a_top, us_top = resolve_top_counts(args.top)
     print(f"[INFO] 开始生成 {report_date} 股票板块热点分析", file=sys.stderr)
     a_industry = []
     a_concept = []
     a_weak = []
     if args.market in ("all", "a"):
         print("[INFO] 获取A股板块排行...", file=sys.stderr)
-        a_groups, a_weak = fetch_a_share_hotspots(args.top)
+        a_groups, a_weak = fetch_a_share_hotspots(a_top)
         a_industry = a_groups.get("industry", [])
         a_concept = a_groups.get("concept", [])
 
@@ -990,7 +1006,7 @@ def main():
     us_data_date = ""
     if args.market in ("all", "us"):
         print("[INFO] 获取美股板块ETF代理行情...", file=sys.stderr)
-        us_hot, us_weak = fetch_us_hotspots(args.top)
+        us_hot, us_weak = fetch_us_hotspots(us_top)
         us_data_date = most_common([item.get("trade_date") for item in us_hot + us_weak])
         if args.market == "us" and not args.date and us_data_date:
             report_date = us_data_date

@@ -30,7 +30,27 @@ def a_share_sector(sector_id: str, board_label: str, name: str) -> dict:
     }
 
 
+def us_sector(index: int, meta: dict) -> dict:
+    return {
+        "id": f"US{index}",
+        "market": "美股",
+        "symbol": meta["symbol"],
+        "name": meta["name_zh"],
+        "name_en": meta["name_en"],
+        "trade_date": "2026-07-06",
+        "change_pct": 1.0 - index * 0.1,
+        "volume": 1000000 + index,
+        "news": [],
+    }
+
+
 class SectorHotspotsReportTest(unittest.TestCase):
+    def test_default_us_scope_covers_all_etf_proxies(self) -> None:
+        a_top, us_top = sector_hotspots.resolve_top_counts(None)
+
+        self.assertEqual(a_top, sector_hotspots.DEFAULT_TOP)
+        self.assertEqual(us_top, len(sector_hotspots.US_SECTOR_ETFS))
+
     def test_parse_rejects_non_weak_attribution_without_evidence(self) -> None:
         sectors = [a_share_sector("AIND1", "行业板块", "煤炭")]
         sectors[0]["news"] = [
@@ -81,6 +101,40 @@ class SectorHotspotsReportTest(unittest.TestCase):
         )
 
         self.assertIn("覆盖行业 Top 2 / 概念 Top 1", report)
+
+    def test_us_report_declares_full_etf_scope(self) -> None:
+        us_hot = [
+            us_sector(index, meta)
+            for index, meta in enumerate(sector_hotspots.US_SECTOR_ETFS, 1)
+        ]
+        result = {
+            "market_summary": "美股ETF代理分化。",
+            "items": {
+                sector["id"]: {
+                    "attribution_type": "弱证据待复核",
+                    "reason": "候选证据不足。",
+                    "evidence": [],
+                }
+                for sector in us_hot
+            },
+        }
+
+        report = sector_hotspots.format_report(
+            "2026-07-06",
+            [],
+            [],
+            [],
+            us_hot,
+            [],
+            result,
+            "2026-07-06",
+            market="us",
+        )
+
+        self.assertIn("覆盖全部 15 个ETF代理", report)
+        self.assertIn("数据质量：** 覆盖板块 15 个", report)
+        self.assertIn("## 美股ETF代理表现", report)
+        self.assertNotIn("数据质量：** 热点板块 15 个", report)
 
 
 if __name__ == "__main__":
