@@ -15,7 +15,7 @@ echo "=== 开始生成美股板块热点分析 ==="
 echo "时间: $(date)"
 
 SECTOR_HOTSPOTS_AI_MODEL="${SECTOR_HOTSPOTS_AI_MODEL:-codebuddy}" \
-SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-deepseek-v4-pro}" \
+SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-hy3-preview-agent}" \
   python3 "$SCRIPT" --market us --output-dir "$REPORTS_DIR" --status-dir-name us-sector-hotspots-status --top "${US_SECTOR_HOTSPOTS_TOP:-15}"
 
 echo "=== 美股板块热点分析完成 ==="

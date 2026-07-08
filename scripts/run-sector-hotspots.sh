@@ -22,7 +22,7 @@ echo "=== 开始生成A股板块热点分析 ==="
 echo "时间: $(date)"
 
 SECTOR_HOTSPOTS_AI_MODEL="${SECTOR_HOTSPOTS_AI_MODEL:-codebuddy}" \
-SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-deepseek-v4-pro}" \
+SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-hy3-preview-agent}" \
   python3 "$SCRIPT" --market a --output-dir "$REPORTS_DIR" --top "${SECTOR_HOTSPOTS_TOP:-12}"
 
 echo "=== A股板块热点分析完成 ==="
