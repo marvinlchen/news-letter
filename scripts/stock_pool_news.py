@@ -30,7 +30,7 @@ sys.path.insert(0, str(PROJECT_ROOT / "src"))
 from finance_digest.feeds import fetch_bytes, parse_feed  # noqa: E402
 
 CONFIG_PATH = PROJECT_ROOT / "config" / "stock_pool.json"
-DEFAULT_MODEL = "hy3-preview-agent"
+DEFAULT_MODEL = "hy3"
 MAX_CANDIDATES = 12
 MAX_RECORDS_PER_QUERY = 25
 INTER_QUERY_DELAY = 3  # 秒，两次查询之间的礼貌间隔

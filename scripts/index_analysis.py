@@ -836,12 +836,24 @@ def parse_codebuddy_protocol(raw, gainers, losers):
         for stock in losers
         if stock.get("code", "") not in loser_reasons
     ]
+    # Tolerate a truncated AI response: fill missing per-stock reasons with a
+    # news-aware fallback instead of discarding the whole report. The summaries
+    # (which are generated first) are still required and validated above.
+    for stock in gainers:
+        code = stock.get("code", "")
+        if code not in gainer_reasons:
+            gainer_reasons[code] = build_fallback_reason(stock, "当日涨幅居前")
+    for stock in losers:
+        code = stock.get("code", "")
+        if code not in loser_reasons:
+            loser_reasons[code] = build_fallback_reason(stock, "当日跌幅居前")
     if missing_gainers or missing_losers:
-        raise ValueError(
-            "missing stock lines: "
-            f"gainers={','.join(missing_gainers) or '-'}; "
-            f"losers={','.join(missing_losers) or '-'}"
-        )
+        try:
+            CSI_RUN_STATS.setdefault("partial_stock_fallback", []).extend(
+                missing_gainers + missing_losers
+            )
+        except Exception:
+            pass
 
     return build_result(
         gainers,
@@ -908,6 +920,125 @@ def extract_json_response(text):
     if start != -1 and end != -1 and end > start:
         return clean[start:end + 1]
     return clean
+
+
+def _extract_codebuddy_text(text):
+    """Extract the assistant's final protocol text from CodeBuddy --output-format json stdout.
+
+    Robust to two real-world failure modes seen in production:
+      * Unescaped control characters in the model output (json strict mode throws) -> strict=False.
+      * Truncated stdout: CodeBuddy echoes the (large) prompt as a user message, then the
+        assistant message (the real protocol), then a redundant `result` event. A hard output
+        cap can cut the trailing `result` event, leaving the array unparseable even though the
+        assistant's `output_text` is intact. -> recover complete JSON string values via regex
+        and pick the best protocol-shaped one.
+
+    Returns the extracted string, or None if nothing usable could be parsed.
+    """
+    if not text:
+        return None
+
+    # 1) Best effort: full JSON parse (tolerant of control chars).
+    candidates = [text]
+    for opener in ("[", "{"):
+        idx = text.find(opener)
+        if idx > 0:
+            candidates.append(text[idx:])
+    parsed = None
+    for cand in candidates:
+        try:
+            parsed = json.loads(cand, strict=False)
+            break
+        except json.JSONDecodeError:
+            continue
+    if parsed is not None:
+        extracted = _extract_from_parsed_object(parsed)
+        if extracted:
+            return extracted
+
+    # 2) Truncation / control-char recovery: pull complete JSON string values and pick
+    #    the best protocol-shaped candidate (the prompt echo is excluded automatically).
+    return _recover_protocol_from_raw(text)
+
+
+def _extract_from_parsed_object(parsed):
+    """Extract protocol text from an already-parsed JSON object / list."""
+    if isinstance(parsed, dict):
+        if isinstance(parsed.get("result"), str) and parsed.get("result").strip():
+            return parsed["result"]
+        joined = _join_content_text(parsed.get("content"))
+        return joined or None
+    if isinstance(parsed, list):
+        # 1) Prefer the canonical result event.
+        for msg in reversed(parsed):
+            if isinstance(msg, dict) and msg.get("type") == "result" and not msg.get("is_error"):
+                r = msg.get("result")
+                if isinstance(r, str) and r.strip():
+                    return r
+        # 2) Fall back to the last assistant message with text content.
+        for msg in reversed(parsed):
+            if isinstance(msg, dict) and msg.get("role") == "assistant":
+                joined = _join_content_text(msg.get("content"))
+                if joined:
+                    return joined
+    return None
+
+
+def _recover_protocol_from_raw(text):
+    """Recover the assistant protocol from truncated / malformed CodeBuddy output.
+
+    Scans for complete JSON string values on `output_text` / `text` / `result` keys,
+    JSON-unescapes them, and returns the one that best matches the compact protocol shape
+    (starts with MARKET_SUMMARY, most summary + stock lines). The large prompt echo is
+    excluded because it carries `<user_query>` and is not protocol-shaped.
+    """
+    pat = re.compile(r'"(?:output_text|text|result)"\s*:\s*"((?:[^"\\]|\\.)*)"', re.DOTALL)
+    best = None
+    best_score = -1
+    for m in pat.findall(text):
+        u = _json_unescape_string(m)
+        score = _protocol_score(u)
+        if score > best_score:
+            best_score = score
+            best = u
+    return best
+
+
+def _protocol_score(u):
+    """Heuristic score for how protocol-shaped a recovered string is. Negative => not it."""
+    if not u or "<user_query>" in u:
+        return -1
+    score = 0
+    for tag in ("MARKET_SUMMARY", "GAINERS_SUMMARY", "LOSERS_SUMMARY"):
+        if re.search(r"(?m)^" + tag + r"\b", u):
+            score += 10
+    score += len(re.findall(r"(?m)^GAINER\b", u))
+    score += len(re.findall(r"(?m)^LOSER\b", u))
+    return score
+
+
+def _json_unescape_string(s):
+    """Unescape a JSON string body (without surrounding quotes)."""
+    try:
+        return json.loads('"' + s + '"')
+    except (json.JSONDecodeError, ValueError):
+        return s.replace("\\n", "\n").replace("\\t", "\t").replace('\\"', '"').replace("\\\\", "\\")
+
+
+def _join_content_text(content):
+    """Join text/output_text parts from a message content field."""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts = []
+        for item in content:
+            if isinstance(item, dict) and item.get("type") in ("text", "output_text"):
+                t = item.get("text", "")
+                if t:
+                    parts.append(t)
+        if parts:
+            return "\n".join(parts)
+    return ""
 
 
 def call_ai(prompt, max_tokens=4096, expect_json=True):
@@ -993,33 +1124,18 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
         if result.returncode != 0:
             raise RuntimeError((result.stderr or result.stdout).strip())
         text = result.stdout.strip()
-        
-        # 尝试解析 codebuddy 的输出格式
-        # 格式1：纯 JSON 字符串（AI 的直接响应）
-        # 格式2：JSON 数组（对话历史）
-        try:
-            parsed = json.loads(text)
-            if isinstance(parsed, list):
-                # 是对话历史数组，找到最后一个 assistant 消息
-                for msg in reversed(parsed):
-                    if isinstance(msg, dict):
-                        role = msg.get("role", "")
-                        if role == "assistant":
-                            content = msg.get("content", "")
-                            if isinstance(content, list):
-                                # content 是数组，提取 text
-                                for item in content:
-                                    if isinstance(item, dict) and item.get("type") in ("text", "output_text"):
-                                        text = item.get("text", "")
-                                        break
-                            elif isinstance(content, str):
-                                text = content
-                            break
-                # 现在 text 应该是纯文本 JSON
-        except json.JSONDecodeError:
-            # 不是 JSON 数组，假设是纯文本
-            pass
-        
+
+        # 解析 codebuddy 的输出（--output-format json）。
+        # 输出通常是事件数组：user message、file-history-snapshot、assistant message、result。
+        # 稳健策略：
+        #  1) 用 strict=False 解析，容忍字符串内的裸控制符（TAB/换行未转义时 strict 会抛错）。
+        #  2) 优先取 type=="result" 且非 is_error 的 result 字段（CLI 规范化的最终输出）。
+        #  3) 回退：拼接所有 assistant 消息里的 text/output_text 片段。
+        #  4) 全部失败时保留原始文本。
+        extracted = _extract_codebuddy_text(text)
+        if extracted is not None:
+            text = extracted
+
         return extract_json_response(text) if expect_json else text
 
 
@@ -1147,17 +1263,32 @@ def build_secid(stock_code):
     return f"{market}.{stock_code}"
 
 
-def fetch_constituents_akshare(index_code):
-    """通过 akshare 获取指数成分股代码和名称。"""
+def fetch_constituents_akshare(index_code, max_retries=3, sleep_base=2.0):
+    """通过 akshare 获取指数成分股代码和名称（带重试，避免瞬时网络抖动导致整条流水线失败）。"""
+    import time
     import akshare as ak
-    df = ak.index_stock_cons_csindex(symbol=index_code)
-    result = []
-    for _, row in df.iterrows():
-        code = str(row.get("成分券代码", "")).strip()
-        name = str(row.get("成分券名称", "")).strip()
-        if code:
-            result.append({"code": code, "name": name})
-    return result
+    last_err = None
+    for attempt in range(max_retries):
+        try:
+            df = ak.index_stock_cons_csindex(symbol=index_code)
+            result = []
+            for _, row in df.iterrows():
+                code = str(row.get("成分券代码", "")).strip()
+                name = str(row.get("成分券名称", "")).strip()
+                if code:
+                    result.append({"code": code, "name": name})
+            return result
+        except Exception as e:  # 网络错误/超时等瞬时故障
+            last_err = e
+            if attempt < max_retries - 1:
+                wait = sleep_base * (attempt + 1)
+                print(f"[WARN] akshare 成分股获取失败（第{attempt+1}次），{wait:.0f}s 后重试: {e}", file=sys.stderr)
+                time.sleep(wait)
+            else:
+                print(f"[ERROR] akshare 成分股获取最终失败: {e}", file=sys.stderr)
+    if last_err is not None:
+        raise last_err
+    return []
 
 
 def fetch_constituents(max_retries=3):

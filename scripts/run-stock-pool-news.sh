@@ -17,7 +17,7 @@ echo "=== 开始生成股票池重要新闻日报 ==="
 echo "时间: $(date)"
 
 export PYTHONPATH="$PROJECT_DIR/src"
-export STOCK_POOL_AI_MODEL_NAME="${STOCK_POOL_AI_MODEL_NAME:-hy3-preview-agent}"
+export STOCK_POOL_AI_MODEL_NAME="${STOCK_POOL_AI_MODEL_NAME:-hy3}"
 
 python3 "$PROJECT_DIR/scripts/stock_pool_news.py" --output-dir "$REPORTS_DIR"
 

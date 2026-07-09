@@ -26,7 +26,7 @@ echo "=== 开始生成中证500涨跌分析 ==="
 echo "时间: $(date)"
 
 CSI500_AI_MODEL="${CSI500_AI_MODEL:-codebuddy}" \
-CSI500_AI_MODEL_NAME="${CSI500_AI_MODEL_NAME:-hy3-preview-agent}" \
+CSI500_AI_MODEL_NAME="${CSI500_AI_MODEL_NAME:-hy3}" \
   python3 "$SCRIPT" --index csi500 --output-dir "$REPORTS_DIR" --top "${CSI500_TOP:-20}"
 
 echo "=== 分析完成 ==="
