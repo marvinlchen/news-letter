@@ -155,7 +155,7 @@ def build_candidate_block(idx, articles):
 
 
 def build_prompt(stocks, candidates, tday):
-    today = fmt_date(tz_now())
+    today = fmt_date(tday)  # 报告日=新闻日，标题与新闻日期一致
     blocks = []
     for idx, s in enumerate(stocks, 1):
         arts = candidates.get(s["name_zh"], [])
@@ -300,14 +300,14 @@ def render_report(date_str, model, tday, body):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--output-dir", default=str(PROJECT_ROOT / "published" / "stock-pool"))
-    ap.add_argument("--date", default=None, help="报告日期 YYYY-MM-DD，默认今天(Asia/Shanghai)")
+    ap.add_argument("--date", default=None, help="报告日期 YYYY-MM-DD，默认=新闻日(前一天)")
     ap.add_argument("--no-ai", action="store_true", help="仅抓取候选并打印，不调用 AI")
     args = ap.parse_args()
 
     model = os.environ.get("STOCK_POOL_AI_MODEL_NAME", DEFAULT_MODEL)
     stocks, window = load_config()
-    report_date = args.date or fmt_date(tz_now())
     tday = target_day(window)
+    report_date = args.date or fmt_date(tday)  # 文件名=新闻日，使标题日期与新闻日期一致
 
     candidates = {}
     candidates_map = {}
