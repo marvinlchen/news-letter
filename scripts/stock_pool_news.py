@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """股票池重要新闻日报生成器。
 
-读取 config/stock_pool.json 中的自选股票池，通过 Google News RSS 抓取近 N 天候选新闻
-（中文源为主、英文源为辅），交由 hy3 筛选重要新闻并生成中文日报。
-无重要新闻的股票保持小节留空。
+读取 config/stock_pool.json 中的自选股票池，通过 Google News RSS 抓取“前一天”
+（生成日的前 N 个自然日，默认 1 = 昨天）的候选新闻（中文源为主、英文源为辅），
+交由 hy3 筛选重要新闻并生成中文日报。无重要新闻的股票保持小节留空。
+
+新闻按自然日过滤：只保留 published_at 落在目标日（前一天）的条目，
+不再使用滚动 24 小时窗口，便于按日期区分新闻。
 """
 from __future__ import annotations
 
@@ -50,11 +53,18 @@ def load_config():
     stocks = data.get("stocks", [])
     if not stocks:
         raise SystemExit("stock_pool.json 中没有配置任何股票")
-    return stocks, int(data.get("window_days", 3))
+    # window_days: 目标日相对生成日往前推的自然日数，默认 1 = 昨天
+    return stocks, int(data.get("window_days", 1))
 
 
-def build_gnews_url(query, hl, gl, ceid, days):
-    q = f"{query} when:{days}d"
+def target_day(window_days):
+    """生成日（Asia/Shanghai）往前推 window_days 个自然日。"""
+    return (tz_now() - dt.timedelta(days=window_days)).date()
+
+
+def build_gnews_url(query, hl, gl, ceid, tday):
+    # 用 after: 把抓取范围锚定到目标日 00:00 起，再在本地按自然日精确过滤
+    q = f"{query} after:{tday.isoformat()}"
     params = {"q": q, "hl": hl, "gl": gl, "ceid": ceid}
     return "https://news.google.com/rss/search?" + urllib.parse.urlencode(params)
 
@@ -75,27 +85,29 @@ def _gnews_fetch(url, label):
     return []
 
 
-def fetch_stock_articles(stock, window_days):
+def fetch_stock_articles(stock, tday):
     cn = stock.get("name_zh", "")
     en = stock.get("name_en", "")
     articles = []
     if cn or en:
         q_cn = " OR ".join(f'"{n}"' for n in [cn, en] if n)
-        url = build_gnews_url(q_cn, "zh-CN", "CN", "CN:zh-Hans", window_days)
+        url = build_gnews_url(q_cn, "zh-CN", "CN", "CN:zh-Hans", tday)
         try:
             articles += _gnews_fetch(url, stock.get("name_zh"))
         except Exception as exc:
             print(f"[WARN] Google News 中文源抓取失败 {stock.get('name_zh')}: {exc}", file=sys.stderr)
         time.sleep(INTER_QUERY_DELAY)
     if en:
-        url_en = build_gnews_url(f'"{en}"', "en-US", "US", "US:en", window_days)
+        url_en = build_gnews_url(f'"{en}"', "en-US", "US", "US:en", tday)
         try:
             articles += _gnews_fetch(url_en, stock.get("name_zh"))
         except Exception as exc:
             print(f"[WARN] Google News 英文源抓取失败 {stock.get('name_zh')}: {exc}", file=sys.stderr)
+    # 仅保留目标日（前一天）的条目，按自然日精确过滤（Google News 的 when/before 不可靠）
     seen = {}
     for a in articles:
-        seen[a.article_id] = a
+        if a.published_at is not None and a.published_at.date() == tday:
+            seen[a.article_id] = a
     return list(seen.values())
 
 
@@ -109,7 +121,7 @@ def build_candidate_block(idx, articles):
     return "\n".join(lines)
 
 
-def build_prompt(stocks, candidates, window_days):
+def build_prompt(stocks, candidates, tday):
     today = fmt_date(tz_now())
     blocks = []
     for idx, s in enumerate(stocks, 1):
@@ -118,7 +130,7 @@ def build_prompt(stocks, candidates, window_days):
                       f"候选新闻（ID | 标题 | 来源 | 日期）：\n{build_candidate_block(idx, arts)}")
     stock_pool_text = "\n\n".join(blocks)
     n = len(stocks)
-    return f"""你是一名中文财经新闻编辑。下面是针对一个自选股票池、过去 {window_days} 天通过 Google News 搜集到的候选新闻（已按中文源为主、英文源为辅整理）。请逐只股票筛选“重要新闻”，并输出一份中文日报。
+    return f"""你是一名中文财经新闻编辑。下面是针对一个自选股票池、日期为 {tday}（前一天）通过 Google News 搜集到的候选新闻（已按中文源为主、英文源为辅整理）。请逐只股票筛选“重要新闻”，并输出一份中文日报。
 
 筛选标准（满足任一即算重要）：
 - 影响公司基本面/业绩（财报、指引、盈利预警、分红、回购）
@@ -140,7 +152,7 @@ def build_prompt(stocks, candidates, window_days):
 - 必须包含全部 {n} 只股票小节，顺序与“股票池”完全一致。
 - 只输出报告正文（从第一个 ## 开始），不要代码块或额外解释。
 
-===== 股票池（{today}） =====
+===== 股票池（{today}，覆盖 {tday} 新闻） =====
 {stock_pool_text}
 """
 
@@ -238,10 +250,10 @@ def assemble(stocks, candidates_map, raw):
     return "\n".join(out).strip() + "\n"
 
 
-def render_report(date_str, model, window_days, body):
+def render_report(date_str, model, tday, body):
     return f"""# 股票池重要新闻日报 — {date_str}
 
-> 生成模式：`{model}` · 新闻窗口：近 {window_days} 天（Google News，中文源为主 / 英文源为辅）· 生成时间：{fmt_date(tz_now())}
+> 生成模式：`{model}` · 新闻窗口：前一天（{tday}，自然日）· 生成时间：{fmt_date(tz_now())}
 > 新闻链接可能受订阅或付费墙限制。
 
 {body}
@@ -258,11 +270,12 @@ def main():
     model = os.environ.get("STOCK_POOL_AI_MODEL_NAME", DEFAULT_MODEL)
     stocks, window = load_config()
     report_date = args.date or fmt_date(tz_now())
+    tday = target_day(window)
 
     candidates = {}
     candidates_map = {}
     for idx, s in enumerate(stocks, 1):
-        arts = fetch_stock_articles(s, window)
+        arts = fetch_stock_articles(s, tday)
         candidates[s["name_zh"]] = arts
         for k, a in enumerate(arts[:MAX_CANDIDATES], 1):
             candidates_map[f"S{idx}-{k}"] = a
@@ -275,7 +288,7 @@ def main():
             print(build_candidate_block(idx, candidates[s['name_zh']]))
         return
 
-    prompt = build_prompt(stocks, candidates, window)
+    prompt = build_prompt(stocks, candidates, tday)
     try:
         raw = call_codebuddy(prompt, model)
         body = assemble(stocks, candidates_map, raw)
@@ -286,7 +299,7 @@ def main():
             for i, s in enumerate(stocks, 1)
         )
 
-    report = render_report(report_date, model, window, body)
+    report = render_report(report_date, model, tday, body)
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / f"{report_date}.md"
