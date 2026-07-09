@@ -3,7 +3,9 @@
 
 读取 config/stock_pool.json 中的自选股票池，通过 Google News RSS 抓取“前一天”
 （生成日的前 N 个自然日，默认 1 = 昨天）的候选新闻（中文源为主、英文源为辅），
-交由 hy3 筛选重要新闻并生成中文日报。无重要新闻的股票保持小节留空。
+先做一遍确定性“近似标题去重”（只合并措辞/来源不同但明显是同一条的新闻），
+再交由 hy3 逐只股票筛选重要新闻、对仍可能存在的同类事件只保留一条，生成中文日报。
+无重要新闻的股票保持小节留空。
 
 新闻按自然日过滤：只保留 published_at 落在目标日（前一天）的条目，
 不再使用滚动 24 小时窗口，便于按日期区分新闻。
@@ -32,6 +34,8 @@ DEFAULT_MODEL = "hy3-preview-agent"
 MAX_CANDIDATES = 12
 MAX_RECORDS_PER_QUERY = 25
 INTER_QUERY_DELAY = 3  # 秒，两次查询之间的礼貌间隔
+# 近似标题去重阈值：两条标题的字符 bigram Jaccard 相似度达到该值即视为同一条新闻
+LEXICAL_DUP_THRESHOLD = 0.8
 CODEBUDDY_FALLBACK = "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/lib/node_modules/@tencent-ai/codebuddy-code/bin/codebuddy"
 NODE_FALLBACK = "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/bin/node"
 
@@ -111,6 +115,35 @@ def fetch_stock_articles(stock, tday):
     return list(seen.values())
 
 
+def _norm_title(t):
+    t = (t or "").lower()
+    t = re.sub(r"[\s\W_]+", "", t)
+    return t
+
+
+def _title_sim(a, b):
+    na, nb = _norm_title(a), _norm_title(b)
+    if not na or not nb:
+        return False
+    sa = set(na[i:i + 2] for i in range(len(na) - 1)) or {na}
+    sb = set(nb[i:i + 2] for i in range(len(nb) - 1)) or {nb}
+    if not sa or not sb:
+        return False
+    return len(sa & sb) / len(sa | sb) >= LEXICAL_DUP_THRESHOLD
+
+
+def lexical_dedup(articles, threshold=LEXICAL_DUP_THRESHOLD):
+    """确定性近似标题去重：只合并措辞/来源不同但明显是同一条的新闻，保留先出现的。
+
+    阈值设得较高（默认 0.8），仅命中近乎相同标题时才合并，绝不误删独立事件。
+    """
+    kept = []
+    for a in articles:
+        if not any(_title_sim(a.title, k.title) for k in kept):
+            kept.append(a)
+    return kept
+
+
 def build_candidate_block(idx, articles):
     if not articles:
         return "（无候选新闻）"
@@ -130,7 +163,7 @@ def build_prompt(stocks, candidates, tday):
                       f"候选新闻（ID | 标题 | 来源 | 日期）：\n{build_candidate_block(idx, arts)}")
     stock_pool_text = "\n\n".join(blocks)
     n = len(stocks)
-    return f"""你是一名中文财经新闻编辑。下面是针对一个自选股票池、日期为 {tday}（前一天）通过 Google News 搜集到的候选新闻（已按中文源为主、英文源为辅整理）。请逐只股票筛选“重要新闻”，并输出一份中文日报。
+    return f"""你是一名中文财经新闻编辑。下面是针对一个自选股票池、日期为 {tday}（前一天）通过 Google News 搜集到的候选新闻（已按中文源为主、英文源为辅整理）。请逐只股票筛选“重要新闻”、并对同类事件去重，输出一份中文日报。
 
 筛选标准（满足任一即算重要）：
 - 影响公司基本面/业绩（财报、指引、盈利预警、分红、回购）
@@ -138,6 +171,10 @@ def build_prompt(stocks, candidates, tday):
 - 股价/估值重大异动及其原因
 - 行业政策、地缘或宏观对该公司有直接重大影响的
 不重要的（无关软文、重复旧闻、纯行情播报无原因）不要列入。
+
+去重规则（务必遵守）：
+- 同一事件若被多条候选覆盖（不同来源、不同措辞，例如“腾讯减持快手套现百亿”在多家媒体的报道），只保留最具代表性的一条，绝不要同一条新闻重复列出。
+- 跨股票出现的同一宏观/行业事件，只在最相关的一只股票下列出；其他股票若确实也受直接影响，用一句话带过即可，不要整条重复。
 
 对每个股票，输出小节。格式（严格遵守）：
 ## 序号. 中文名 (代码)
@@ -253,7 +290,7 @@ def assemble(stocks, candidates_map, raw):
 def render_report(date_str, model, tday, body):
     return f"""# 股票池重要新闻日报 — {date_str}
 
-> 生成模式：`{model}` · 新闻窗口：前一天（{tday}，自然日）· 生成时间：{fmt_date(tz_now())}
+> 生成模式：`{model}` · 新闻窗口：前一天（{tday}，自然日）· 生成时间：{fmt_date(tz_now())} · AI去重：开
 > 新闻链接可能受订阅或付费墙限制。
 
 {body}
@@ -276,10 +313,12 @@ def main():
     candidates_map = {}
     for idx, s in enumerate(stocks, 1):
         arts = fetch_stock_articles(s, tday)
+        before = len(arts)
+        arts = lexical_dedup(arts)  # 确定性近似标题去重（同事件不同来源）
         candidates[s["name_zh"]] = arts
         for k, a in enumerate(arts[:MAX_CANDIDATES], 1):
             candidates_map[f"S{idx}-{k}"] = a
-        print(f"[INFO] {s['name_zh']}: 候选 {len(arts)} 条", file=sys.stderr)
+        print(f"[INFO] {s['name_zh']}: 候选 {before} -> 去重后 {len(arts)} 条", file=sys.stderr)
         time.sleep(INTER_QUERY_DELAY)
 
     if args.no_ai:
