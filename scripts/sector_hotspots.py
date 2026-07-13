@@ -480,9 +480,11 @@ def assign_ids(items, prefix):
     return items
 
 
-# 申万行业分类用罗马数字标注层级：无后缀=一级, Ⅰ=一级(罕见), Ⅱ=二级, Ⅲ=三级。
+# 申万行业分类用罗马数字标注层级：无后缀=一级, Ⅱ=二级, Ⅲ=三级。
 # 东方财富行业板块会把同一行业在父子层级各挂一块，导致热点榜出现重复行
-# （如 中药Ⅲ 与 中药Ⅱ 数值完全相同）。这里只保留每个基础名最细的那一级。
+# （如 中药Ⅲ 与 中药Ⅱ 数值完全相同——中药二级只有一个三级子行业，二者同成分）。
+# 这里按「基础名」归族，族内只保留最细一级；并以行情指纹做安全网，确保不会
+# 误删成分确实不同的板块。
 _SHENWAN_LEVEL = {"Ⅰ": 1, "Ⅱ": 2, "Ⅲ": 3}
 
 
@@ -490,45 +492,75 @@ def board_level_and_base(name):
     """Return (level:int, base_name:str) for a Shenwan board name.
 
     level: 0 = 一级(无后缀), 1 = Ⅰ, 2 = Ⅱ, 3 = Ⅲ.
-    仅当末位为罗马数字且前一位是汉字时才剥离后缀，避免误伤以罗马数字结尾的
-    概念板块或英文名板块。
+    仅当末位为罗马数字且前一位是 CJK 汉字时才剥离后缀，避免误伤以罗马数字
+    结尾的概念板块或英文名板块。
     """
-    if name and len(name) >= 2 and name[-1] in _SHENWAN_LEVEL and "\u4e00" <= name[-2] <= "\u9fff":
+    if (
+        name
+        and len(name) >= 2
+        and name[-1] in _SHENWAN_LEVEL
+        and ("\u4e00" <= name[-2] <= "\u9fff" or "\u3400" <= name[-2] <= "\u4dbf")
+    ):
         return _SHENWAN_LEVEL[name[-1]], name[:-1]
     return 0, name
 
 
-def dedupe_shenwan_levels(items):
-    """Keep only the most granular board per base name.
+def _board_fingerprint(item):
+    """行情指纹：申万父子层级若为同一成分集，其涨跌幅/成交额/涨跌家数必然一致。"""
+    return (
+        item.get("change_pct"),
+        item.get("amount"),
+        item.get("up_count"),
+        item.get("down_count"),
+    )
 
-    当同一基础名存在多级板块时，丢弃层级更粗（数字更小）的父级行，
-    例如保留 中药Ⅲ 丢弃 中药Ⅱ；保留 银行Ⅱ 丢弃 银行。概念板块一般不含
-    罗马数字后缀，此函数对其为无操作。
+
+def dedupe_shenwan_levels(items):
+    """按基础名归族，族内丢弃与最细级行情一致的粗级行（同成分别名）。
+
+    - 同一基础名（剥离 Ⅱ/Ⅲ 后）的多级板块通常成分相同（如 中药Ⅱ==中药Ⅲ），
+      只保留最细一级。
+    - 安全网：若同族板块行情指纹不同（成分确实不同），则全部保留，绝不误删。
+    - 概念板块不含罗马数字后缀，每个自成一族，本函数对其无影响。
+    输出保留首次出现顺序（即涨跌幅排名）。
     """
-    by_base = {}
-    order = []
+    groups = {}      # base -> [(level, item)]
+    order = []       # 首次出现顺序，保持涨跌幅排名
     for item in items:
         level, base = board_level_and_base(item.get("name", ""))
-        if base not in by_base:
-            by_base[base] = []
+        if base not in groups:
+            groups[base] = []
             order.append(base)
-        by_base[base].append((level, item))
+        groups[base].append((level, item))
+
     kept = []
     for base in order:
-        best_level, best_item = max(by_base[base], key=lambda pair: pair[0])
-        kept.append(best_item)
+        members = groups[base]
+        if len(members) == 1:
+            kept.append(members[0][1])
+            continue
+        # 族内按行情指纹再分组：指纹相同=同成分别名，取最细；指纹不同=确属不同，全留。
+        finest_by_fp = {}
+        fp_order = []
+        for level, item in members:
+            fp = _board_fingerprint(item)
+            if fp not in finest_by_fp:
+                finest_by_fp[fp] = []
+                fp_order.append(fp)
+            finest_by_fp[fp].append((level, item))
+        for fp in fp_order:
+            best_level, best_item = max(finest_by_fp[fp], key=lambda pair: pair[0])
+            kept.append(best_item)
     return kept
-
-
-# 去重后同一基础名可能从 Top-N 中移除父级行，多抓几块以保证最终仍凑满 Top-N。
-_SHENWAN_DEDUP_BUFFER = 4
 
 
 def fetch_a_share_hotspots(limit):
     groups = {}
     weak = []
+    # 多抓一倍原始板块：去重会移除父子别名行，需从更靠后的候选补位以保证 Top-N 仍凑满。
+    raw_limit = max(limit * 2, limit + 8)
     for board_type, board_label, fs, prefix in A_SHARE_BOARD_TYPES:
-        raw = fetch_eastmoney_boards(board_type, board_label, fs, limit + _SHENWAN_DEDUP_BUFFER, ascending=False)
+        raw = fetch_eastmoney_boards(board_type, board_label, fs, raw_limit, ascending=False)
         hot = dedupe_shenwan_levels(raw)[:limit]
         groups[board_type] = assign_ids(hot, prefix)
         weak.extend(dedupe_shenwan_levels(

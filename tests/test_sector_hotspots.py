@@ -295,6 +295,36 @@ class SectorHotspotsReportTest(unittest.TestCase):
         # 末位非汉字前缀（如英文名）不剥离
         self.assertEqual(sector_hotspots.board_level_and_base("III Corp"), (0, "III Corp"))
 
+    def test_dedupe_drops_alias_with_identical_stats(self) -> None:
+        boards = [
+            {"name": "中药Ⅲ", "change_pct": 2.96, "amount": 203.36, "up_count": 57, "down_count": 9},
+            {"name": "中药Ⅱ", "change_pct": 2.96, "amount": 203.36, "up_count": 57, "down_count": 9},
+        ]
+        kept = sector_hotspots.dedupe_shenwan_levels(boards)
+
+        self.assertEqual([item["name"] for item in kept], ["中药Ⅲ"])
+
+    def test_dedupe_keeps_same_base_with_different_stats(self) -> None:
+        # 同基础名但行情不同（申万正常不应出现，但安全网必须保留两者，绝不误删）
+        boards = [
+            {"name": "中药Ⅲ", "change_pct": 2.96, "amount": 203.36, "up_count": 57, "down_count": 9},
+            {"name": "中药Ⅱ", "change_pct": 2.10, "amount": 150.00, "up_count": 40, "down_count": 20},
+        ]
+        kept = sector_hotspots.dedupe_shenwan_levels(boards)
+
+        self.assertEqual([item["name"] for item in kept], ["中药Ⅲ", "中药Ⅱ"])
+
+    def test_dedupe_preserves_rank_order_with_tied_alias(self) -> None:
+        # 父行排在子行之前（同涨跌幅），去重后子行应顶到父行的排名位置
+        boards = [
+            {"name": "中药Ⅱ", "change_pct": 2.96, "amount": 203.36, "up_count": 57, "down_count": 9},
+            {"name": "中药Ⅲ", "change_pct": 2.96, "amount": 203.36, "up_count": 57, "down_count": 9},
+            {"name": "油气开采Ⅲ", "change_pct": 2.81, "amount": 34.08, "up_count": 4, "down_count": 1},
+        ]
+        kept = sector_hotspots.dedupe_shenwan_levels(boards)
+
+        self.assertEqual([item["name"] for item in kept], ["中药Ⅲ", "油气开采Ⅲ"])
+
 
 if __name__ == "__main__":
     unittest.main()
