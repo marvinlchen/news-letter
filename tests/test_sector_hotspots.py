@@ -257,6 +257,44 @@ class SectorHotspotsReportTest(unittest.TestCase):
         self.assertIn("领涨 NVDA +2.50%", prompt)
         self.assertNotIn("领跌 AAPL", prompt)
 
+    def test_dedupe_shenwan_levels_keeps_most_granular(self) -> None:
+        boards = [
+            {"name": "中药Ⅲ"},
+            {"name": "中药Ⅱ"},
+            {"name": "油气开采Ⅲ"},
+            {"name": "油气开采Ⅱ"},
+            {"name": "银行"},
+            {"name": "银行Ⅱ"},
+            {"name": "国有大型银行Ⅲ"},
+            {"name": "农商行Ⅲ"},
+            {"name": "城商行Ⅲ"},
+            {"name": "股份制银行Ⅲ"},
+            {"name": "AI手机"},  # 概念板块，不含后缀，原样保留
+        ]
+        kept = sector_hotspots.dedupe_shenwan_levels(boards)
+        kept_names = {item["name"] for item in kept}
+
+        self.assertIn("中药Ⅲ", kept_names)
+        self.assertNotIn("中药Ⅱ", kept_names)
+        self.assertIn("银行Ⅱ", kept_names)
+        self.assertNotIn("银行", kept_names)
+        # 三级细分银行板块各自独立，应全部保留
+        self.assertIn("国有大型银行Ⅲ", kept_names)
+        self.assertIn("农商行Ⅲ", kept_names)
+        self.assertIn("城商行Ⅲ", kept_names)
+        self.assertIn("股份制银行Ⅲ", kept_names)
+        # 概念板块不受影响
+        self.assertIn("AI手机", kept_names)
+        # 总数：中药1 + 油气1 + 银行家族(银行Ⅱ+4个三级)=5 + 概念1 = 8
+        self.assertEqual(len(kept_names), 8)
+
+    def test_board_level_and_base_strips_only_cjk_prefixed_suffix(self) -> None:
+        self.assertEqual(sector_hotspots.board_level_and_base("中药Ⅲ"), (3, "中药"))
+        self.assertEqual(sector_hotspots.board_level_and_base("银行Ⅱ"), (2, "银行"))
+        self.assertEqual(sector_hotspots.board_level_and_base("银行"), (0, "银行"))
+        # 末位非汉字前缀（如英文名）不剥离
+        self.assertEqual(sector_hotspots.board_level_and_base("III Corp"), (0, "III Corp"))
+
 
 if __name__ == "__main__":
     unittest.main()

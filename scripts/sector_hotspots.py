@@ -480,13 +480,60 @@ def assign_ids(items, prefix):
     return items
 
 
+# 申万行业分类用罗马数字标注层级：无后缀=一级, Ⅰ=一级(罕见), Ⅱ=二级, Ⅲ=三级。
+# 东方财富行业板块会把同一行业在父子层级各挂一块，导致热点榜出现重复行
+# （如 中药Ⅲ 与 中药Ⅱ 数值完全相同）。这里只保留每个基础名最细的那一级。
+_SHENWAN_LEVEL = {"Ⅰ": 1, "Ⅱ": 2, "Ⅲ": 3}
+
+
+def board_level_and_base(name):
+    """Return (level:int, base_name:str) for a Shenwan board name.
+
+    level: 0 = 一级(无后缀), 1 = Ⅰ, 2 = Ⅱ, 3 = Ⅲ.
+    仅当末位为罗马数字且前一位是汉字时才剥离后缀，避免误伤以罗马数字结尾的
+    概念板块或英文名板块。
+    """
+    if name and len(name) >= 2 and name[-1] in _SHENWAN_LEVEL and "\u4e00" <= name[-2] <= "\u9fff":
+        return _SHENWAN_LEVEL[name[-1]], name[:-1]
+    return 0, name
+
+
+def dedupe_shenwan_levels(items):
+    """Keep only the most granular board per base name.
+
+    当同一基础名存在多级板块时，丢弃层级更粗（数字更小）的父级行，
+    例如保留 中药Ⅲ 丢弃 中药Ⅱ；保留 银行Ⅱ 丢弃 银行。概念板块一般不含
+    罗马数字后缀，此函数对其为无操作。
+    """
+    by_base = {}
+    order = []
+    for item in items:
+        level, base = board_level_and_base(item.get("name", ""))
+        if base not in by_base:
+            by_base[base] = []
+            order.append(base)
+        by_base[base].append((level, item))
+    kept = []
+    for base in order:
+        best_level, best_item = max(by_base[base], key=lambda pair: pair[0])
+        kept.append(best_item)
+    return kept
+
+
+# 去重后同一基础名可能从 Top-N 中移除父级行，多抓几块以保证最终仍凑满 Top-N。
+_SHENWAN_DEDUP_BUFFER = 4
+
+
 def fetch_a_share_hotspots(limit):
     groups = {}
     weak = []
     for board_type, board_label, fs, prefix in A_SHARE_BOARD_TYPES:
-        hot = fetch_eastmoney_boards(board_type, board_label, fs, limit, ascending=False)
+        raw = fetch_eastmoney_boards(board_type, board_label, fs, limit + _SHENWAN_DEDUP_BUFFER, ascending=False)
+        hot = dedupe_shenwan_levels(raw)[:limit]
         groups[board_type] = assign_ids(hot, prefix)
-        weak.extend(fetch_eastmoney_boards(board_type, board_label, fs, max(3, min(limit, 5)), ascending=True))
+        weak.extend(dedupe_shenwan_levels(
+            fetch_eastmoney_boards(board_type, board_label, fs, max(3, min(limit, 5)), ascending=True)
+        ))
         time.sleep(0.2)
     weak.sort(key=lambda item: item.get("change_pct") if item.get("change_pct") is not None else 999)
     return groups, weak[:5]
