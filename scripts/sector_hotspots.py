@@ -905,7 +905,7 @@ def build_evidence_catalog(sectors):
 
 
 def parse_evidence_ids(text):
-    return [item.upper() for item in re.findall(r"\b(?:AIND|ACON|US)\d+-N\d+\b", text or "", flags=re.IGNORECASE)]
+    return [item.upper() for item in re.findall(r"\b(?:AIND|ACON|US|AWK|USW)\d+-N\d+\b", text or "", flags=re.IGNORECASE)]
 
 
 def parse_protocol(raw, sectors):
@@ -927,7 +927,7 @@ def parse_protocol(raw, sectors):
             continue
         tag = fields[0].upper()
         sector_id = fields[1].upper()
-        if tag not in {"A_HOTSPOT", "US_HOTSPOT"} or sector_id not in valid_ids:
+        if tag not in {"A_HOTSPOT", "US_HOTSPOT", "A_WEAKSPOT", "US_WEAKSPOT"} or sector_id not in valid_ids:
             continue
         selected = []
         evidence_field = fields[4] if len(fields) >= 5 else ""
@@ -1047,8 +1047,10 @@ def run_ai_analysis(prompt, sectors, max_attempts=3):
     return build_fallback_result(sectors)
 
 
-def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market="all", us_market_context=None):
-    sectors = a_industry + a_concept + us_hot
+def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market="all", us_market_context=None, a_weak=None, us_weak=None):
+    a_weak = a_weak or []
+    us_weak = us_weak or []
+    sectors = a_industry + a_concept + us_hot + a_weak + us_weak
     lines = [
         "机器协议模式：你的回复会被脚本逐行解析。只输出协议行，不要 Markdown、不要标题、不要编号、不要空行。",
         "字段分隔符必须使用 TAB。原因和摘要必须是单行文本，不能包含 TAB。",
@@ -1056,9 +1058,12 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
         "第一行必须是 MARKET_SUMMARY<TAB>总体总结。",
         "A股热点行格式：A_HOTSPOT<TAB>sector_id<TAB>归因类型<TAB>原因<TAB>证据ID列表。",
         "美股热点行格式：US_HOTSPOT<TAB>sector_id<TAB>归因类型<TAB>原因<TAB>证据ID列表。",
+        "A股回落/弱势行格式：A_WEAKSPOT<TAB>sector_id<TAB>归因类型<TAB>原因<TAB>证据ID列表。",
+        "美股回落/弱势行格式：US_WEAKSPOT<TAB>sector_id<TAB>归因类型<TAB>原因<TAB>证据ID列表。",
         "归因类型只能是：政策催化、供需景气、公司事件、资金交易、宏观变量、行情结构、弱证据待复核。",
         "证据ID列表最多 2 个，用英文逗号分隔；只能从对应板块的 NEWS 行选择；没有可靠新闻证据但代表股广度、单一领涨股拉动、普跌等行情结构足以解释时，可标为行情结构并留空证据；仍无法解释则标为弱证据待复核。",
         "不要把单纯涨跌幅描述包装成强因果；必须区分行情事实、候选新闻证据和推断。",
+        "回落/弱势板块为当日下跌板块，归因应侧重解释下跌原因（资金净流出、获利回吐、利空政策、板块轮动、普跌行情结构等）；归因类型仍从既定集合中选择，证据规则与热点一致。",
         "",
         f"# 任务：分析 {report_date} 股票板块热点",
     ]
@@ -1075,8 +1080,12 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
     ]
     for sector in a_industry + a_concept:
         lines.append(f"A_HOTSPOT\t{sector.get('id')}\t弱证据待复核\t待填写\t")
+    for sector in a_weak:
+        lines.append(f"A_WEAKSPOT\t{sector.get('id')}\t弱证据待复核\t待填写\t")
     for sector in us_hot:
         lines.append(f"US_HOTSPOT\t{sector.get('id')}\t弱证据待复核\t待填写\t")
+    for sector in us_weak:
+        lines.append(f"US_WEAKSPOT\t{sector.get('id')}\t弱证据待复核\t待填写\t")
     lines += ["", "## 数据", ""]
     if us_market_context:
         lines.append("### 美股市场背景")
@@ -1121,9 +1130,17 @@ def build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, marke
         lines.append("### A股概念主题")
         for item in a_concept:
             append_sector(item)
+    if a_weak:
+        lines.append("### A股回落/弱势板块")
+        for item in a_weak:
+            append_sector(item)
     if us_hot:
         lines.append("### 美股板块热点")
         for item in us_hot:
+            append_sector(item)
+    if us_weak:
+        lines.append("### 美股回落/弱势板块")
+        for item in us_weak:
             append_sector(item)
     return "\n".join(lines)
 
@@ -1233,7 +1250,7 @@ def report_quality(sectors, result):
 
 
 def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, result, us_data_date, market="all", us_market_context=None):
-    sectors = a_industry + a_concept + us_hot
+    sectors = a_industry + a_concept + us_hot + a_weak + us_weak
     quality = report_quality(sectors, result)
     if market == "a":
         title = f"A股板块热点分析 — {report_date}"
@@ -1262,7 +1279,7 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
             else:
                 us_scope_text = f"，覆盖 {len(us_hot)} 个ETF代理"
         lines.append(f"**美股口径：** 最近一个美股交易日（{us_data_date or '未知'}）的公开ETF日线代理{us_scope_text}；代表成分股为每个代理ETF的固定代表持仓池；计划在美股收盘后约3小时生成<br>")
-    quality_label = "覆盖板块" if market in ("all", "us") and us_hot else "热点板块"
+    quality_label = "覆盖板块"
     stock_quality = ""
     if market in ("all", "us") and quality.get("representative_stock_count"):
         stock_quality = f"；代表股行情 {quality['representative_stock_count']} 条"
@@ -1295,9 +1312,9 @@ def format_report(report_date, a_industry, a_concept, a_weak, us_hot, us_weak, r
         us_table_title = "美股ETF代理表现" if len(us_hot) >= len(US_SECTOR_ETFS) else "美股板块热点"
         append_hotspot_table(lines, us_table_title, us_hot, result, include_board=False)
     if a_weak:
-        append_weak_table(lines, "A股回落/弱势板块", a_weak)
+        append_hotspot_table(lines, "A股回落/弱势板块", a_weak, result, include_board=True)
     if us_weak:
-        append_weak_table(lines, "美股回落/弱势板块", us_weak)
+        append_hotspot_table(lines, "美股回落/弱势板块", us_weak, result, include_board=False)
     lines += [
         "",
         "---",
@@ -1372,6 +1389,7 @@ def main():
         a_groups, a_weak = fetch_a_share_hotspots(a_top)
         a_industry = a_groups.get("industry", [])
         a_concept = a_groups.get("concept", [])
+        assign_ids(a_weak, "AWK")
 
     us_hot = []
     us_weak = []
@@ -1380,24 +1398,26 @@ def main():
     if args.market in ("all", "us"):
         print("[INFO] 获取美股板块ETF代理行情...", file=sys.stderr)
         us_hot, us_weak = fetch_us_hotspots(us_top)
+        assign_ids(us_weak, "USW")
         us_data_date = most_common([item.get("trade_date") for item in us_hot + us_weak])
         print("[INFO] 获取美股市场背景...", file=sys.stderr)
         us_market_context = fetch_us_market_context()
         if args.market == "us" and not args.date and us_data_date:
             report_date = us_data_date
 
-    sectors = a_industry + a_concept + us_hot
+    sectors = a_industry + a_concept + us_hot + a_weak + us_weak
     if not sectors:
         print("[ERROR] 未获取到任何板块数据", file=sys.stderr)
         sys.exit(1)
 
     if not args.no_news:
         print("[INFO] 获取候选新闻证据...", file=sys.stderr)
-        if a_industry or a_concept:
+        a_sectors = a_industry + a_concept + a_weak
+        if a_sectors:
             market_news = fetch_eastmoney_market_news(target_date=report_date)
-            attach_news_candidates(a_industry + a_concept, report_date, market_news=market_news)
-        if us_hot:
-            attach_news_candidates(us_hot, initial_date, market_news=[])
+            attach_news_candidates(a_sectors, report_date, market_news=market_news)
+        if us_hot or us_weak:
+            attach_news_candidates(us_hot + us_weak, initial_date, market_news=[])
     else:
         print("[INFO] 跳过候选新闻证据", file=sys.stderr)
 
@@ -1405,7 +1425,7 @@ def main():
         print("[INFO] 跳过 AI 分析，生成基础报告", file=sys.stderr)
         result = build_fallback_result(sectors)
     else:
-        prompt = build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market=args.market, us_market_context=us_market_context)
+        prompt = build_prompt(report_date, a_industry, a_concept, us_hot, us_data_date, market=args.market, us_market_context=us_market_context, a_weak=a_weak, us_weak=us_weak)
         print(f"[INFO] 调用 AI ({AI_MODEL}) ...", file=sys.stderr)
         result = run_ai_analysis(prompt, sectors)
 
