@@ -52,6 +52,12 @@ to estimate scale and weekly flow. This is a public-data proxy for allocation
 pressure, not a holder-level disclosure of Central Huijin, CSF, or any other
 specific account.
 
+It also produces a frozen forward A-share sector-leading-signal report across
+all 31 Shenwan level-1 industries. The weekly pipeline separates the S/O/E
+industry evidence gate from deterministic market activation, quality and E30
+crowding filters. It keeps an append-only activation ledger and evaluates each
+signal from the next common trading day instead of rewriting past snapshots.
+
 The Reddit candidate ranker boosts discussions that mention durable fundamental
 signals such as revenue, margins, free cash flow, capital allocation, pricing
 power, competitive advantage, industry supply and demand, regulation, and
@@ -177,6 +183,27 @@ published/national-team-etf/YYYY-MM-DD.md
 published/national-team-etf/latest.md
 ```
 
+Generate the A-share sector-leading-signal weekly report:
+
+```bash
+./scripts/run-a-share-sector-radar-weekly.sh
+```
+
+Sector radar artifacts are written to:
+
+```text
+var/a-share-sector-radar-weekly-status/latest.json
+var/a-share-sector-radar-cache/
+published/a-share-sector-radar-weekly/YYYY-MM-DD.md
+published/a-share-sector-radar-weekly/latest.md
+published/a-share-sector-radar-weekly/ledger.json
+published/a-share-sector-radar-weekly/snapshots/YYYY-MM-DD.json
+```
+
+For a non-publishing diagnostic run, use `PUBLISH_TO_GITHUB=0`. The scheduled
+job requires a valid evidence-model response; it does not publish a rules-only
+placeholder when evidence classification fails.
+
 Without credentials, the collector uses Reddit's public Topic `top/day` RSS
 feeds at a deliberately conservative request rate. RSS mode does not fetch
 thread comments. For accurate scores, total comment counts, sampled Top
@@ -238,6 +265,9 @@ The national-team ETF observation report runs every Saturday at `09:10`
 China Standard Time, uses the latest official ETF share data available in the
 previous two weeks, and writes logs to
 `var/log/national-team-etf-weekly.log`.
+The A-share sector-leading-signal report runs every Sunday at `10:00` China
+Standard Time, uses the latest common Shenwan trading day, and writes logs to
+`var/log/a-share-sector-radar-weekly.log`.
 
 After a successful digest run, `scripts/publish-report.sh` commits and pushes
 the dated report and `reports/latest.md` to the configured `origin` remote.
