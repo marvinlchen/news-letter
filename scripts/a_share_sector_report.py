@@ -32,6 +32,23 @@ def _cell(value: Any) -> str:
     return _text(value).replace("|", "\\|").replace("\r", " ").replace("\n", " ")
 
 
+def _markdown_plain(value: Any, limit: int = 360) -> str:
+    """Render an untrusted diagnostic as one inert Markdown text line."""
+
+    rendered = " ".join(_text(value, "").split())[:limit]
+    return (
+        rendered.replace("\\", "\\\\")
+        .replace("`", "'")
+        .replace("[", "\\[")
+        .replace("]", "\\]")
+        .replace("*", "\\*")
+        .replace("_", "\\_")
+        .replace("|", "\\|")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+    )
+
+
 def _safe_float(value: Any) -> float | None:
     try:
         parsed = float(value)
@@ -55,6 +72,11 @@ def _fmt_pct(value: Any, digits: int = 2) -> str:
 def _fmt_ratio(value: Any) -> str:
     parsed = _safe_float(value)
     return "未计算" if parsed is None else f"{parsed * 100:.1f}%"
+
+
+def _fmt_share(value: Any) -> str:
+    parsed = _safe_float(value)
+    return "未计算" if parsed is None else f"{parsed * 100:.3f}%"
 
 
 def _fmt_percentile(value: Any) -> str:
@@ -252,11 +274,21 @@ def _breadth_available(metric: dict) -> bool:
 
 
 def _market_parts(metric: dict) -> list[tuple[str, str, bool | None]]:
-    breadth_state: bool | None = bool(metric.get("breadth_ok")) if _breadth_available(metric) else None
+    relative_state = bool(metric["relative_ok"]) if metric.get("relative_ok") is not None else None
+    breadth_state = (
+        bool(metric["breadth_ok"])
+        if _breadth_available(metric) and metric.get("breadth_ok") is not None
+        else None
+    )
+    turnover_state = bool(metric["turnover_ok"]) if metric.get("turnover_ok") is not None else None
+
+    def label(state: bool | None) -> str:
+        return "通过" if state is True else ("未通过" if state is False else "未计算")
+
     return [
-        ("相对", "通过" if bool(metric.get("relative_ok")) else "未通过", bool(metric.get("relative_ok"))),
-        ("广度", "通过" if breadth_state else ("未通过" if breadth_state is False else "未计算"), breadth_state),
-        ("成交", "通过" if bool(metric.get("turnover_ok")) else "未通过", bool(metric.get("turnover_ok"))),
+        ("相对", label(relative_state), relative_state),
+        ("广度", label(breadth_state), breadth_state),
+        ("成交", label(turnover_state), turnover_state),
     ]
 
 
@@ -266,6 +298,98 @@ def _market_pass_count(metric: dict) -> int:
 
 def _market_label(metric: dict) -> str:
     return " / ".join(f"{name}{label}" for name, label, _ in _market_parts(metric))
+
+
+def _market_audit(metric: dict) -> str:
+    """Expose the exact inputs behind one radar member's market decision."""
+
+    rank = _rank(metric)
+    rank_text = str(rank) if rank < 10**9 else "未计算"
+    breadth = metric.get("breadth") if isinstance(metric.get("breadth"), dict) else {}
+    endpoints = list(breadth.get("endpoints") or [])[:3]
+    fallback_labels = ["本期", "前一期", "两期前"]
+
+    def endpoint_label(index: int) -> str:
+        endpoint = _text(endpoints[index], "") if index < len(endpoints) else ""
+        return endpoint or fallback_labels[index]
+
+    relative_values = [
+        metric.get("relative_20d"),
+        metric.get("relative_20d_previous"),
+        metric.get("relative_20d_two_weeks_ago"),
+    ]
+    relative_parts = [
+        f"{endpoint_label(index)}={_fmt_pct(value)}"
+        for index, value in enumerate(relative_values)
+    ]
+    numeric_relative = [_safe_float(value) for value in relative_values]
+    has_three_relative = all(value is not None for value in numeric_relative)
+    relative_improving_flag = metric.get("relative_improving") if "relative_improving" in metric else None
+    if relative_improving_flag is not None:
+        relative_improving: bool | None = bool(relative_improving_flag)
+    elif has_three_relative:
+        assert all(value is not None for value in numeric_relative)
+        relative_improving = bool(numeric_relative[0] > numeric_relative[1] > numeric_relative[2])
+    else:
+        relative_improving = None
+    relative_improving_text = (
+        "是" if relative_improving is True else ("否" if relative_improving is False else "未计算")
+    )
+    relative_flag = metric.get("relative_ok") if "relative_ok" in metric else None
+    relative_state = (
+        "通过" if bool(relative_flag) else "未通过"
+    ) if relative_flag is not None else "未计算"
+
+    turnover_percentile = _safe_float(metric.get("turnover_percentile"))
+    turnover_flag = metric.get("turnover_ok") if "turnover_ok" in metric else None
+    turnover_state = (
+        "通过" if bool(turnover_flag) else "未通过"
+    ) if turnover_flag is not None else "未计算"
+    turnover_previous = metric.get("turnover_share_previous")
+    turnover_current = metric.get("turnover_share")
+
+    ratios = list(breadth.get("ratios") or [])[:3]
+    coverages = list(breadth.get("coverages") or [])[:3]
+    endpoint_parts: list[str] = []
+    for index in range(3):
+        ratio = ratios[index] if index < len(ratios) else None
+        coverage = coverages[index] if index < len(coverages) else None
+        endpoint_parts.append(f"{endpoint_label(index)}={_fmt_ratio(ratio)}（覆盖{_fmt_ratio(coverage)}）")
+
+    numeric_ratios = [_safe_float(value) for value in ratios]
+    has_three_ratios = len(numeric_ratios) == 3 and all(value is not None for value in numeric_ratios)
+    if _breadth_available(metric) and has_three_ratios:
+        assert all(value is not None for value in numeric_ratios)
+        improving_flag = breadth.get("improving") if "improving" in breadth else None
+        improving = (
+            bool(improving_flag)
+            if improving_flag is not None
+            else bool(numeric_ratios[0] > numeric_ratios[1] > numeric_ratios[2])
+        )
+        breadth_improving_text = "是" if improving else "否"
+        breadth_flag = metric.get("breadth_ok") if "breadth_ok" in metric else None
+        breadth_gate = (
+            "通过" if bool(breadth_flag) else "未通过"
+        ) if breadth_flag is not None else "未计算"
+    elif has_three_ratios:
+        assert all(value is not None for value in numeric_ratios)
+        raw_improving = bool(numeric_ratios[0] > numeric_ratios[1] > numeric_ratios[2])
+        breadth_improving_text = f"未计算（覆盖不足；原始比例{'连续上升' if raw_improving else '未连续上升'}）"
+        breadth_gate = "未计算"
+    else:
+        breadth_improving_text = "未计算"
+        breadth_gate = "未计算"
+
+    return (
+        f"20日收益{_fmt_pct(metric.get('return_20d'))}；"
+        f"排名第{rank_text}；"
+        f"相对端点（旧→新）：{'；'.join(reversed(relative_parts))}；"
+        f"相对连续改善：{relative_improving_text}（相对门{relative_state}）；"
+        f"成交分位{_fmt_percentile(turnover_percentile)}；"
+        f"成交占比（前期→本期）：{_fmt_share(turnover_previous)}→{_fmt_share(turnover_current)}（成交门{turnover_state}）；"
+        f"广度端点（旧→新）：{'；'.join(reversed(endpoint_parts))}；"
+        f"广度连续改善：{breadth_improving_text}（广度门{breadth_gate}）"
+    )
 
 
 def _rank(metric: dict) -> int:
@@ -400,6 +524,22 @@ def _run_outcome(run_quality: dict) -> tuple[str, str]:
     return "正式前瞻样本", "按冻结规则发布；新增激活从下一共同交易日开盘代理记账。"
 
 
+def _source_error_details(value: Any) -> list[str]:
+    details: list[str] = []
+    seen: set[str] = set()
+    for raw in _values(value):
+        if isinstance(raw, dict):
+            raw = raw.get("message") or raw.get("error") or raw.get("detail") or raw.get("source") or str(raw)
+        cleaned = _markdown_plain(raw)
+        if not cleaned or cleaned in seen:
+            continue
+        seen.add(cleaned)
+        details.append(cleaned)
+        if len(details) == 3:
+            break
+    return details
+
+
 def format_report(
     report_date: str,
     strategy_version: str,
@@ -489,12 +629,23 @@ def format_report(
     checked_at = run_quality.get("checked_at") or run_quality.get("generated_at")
     if checked_at:
         lines.append(f"| 本次检查时间 | {_cell(checked_at)} |")
+    source_error_details = _source_error_details(run_quality.get("source_errors"))
     source_errors = run_quality.get("source_error_total")
-    if source_errors is not None:
-        lines.append(f"| 数据源错误 | {_safe_int(source_errors)} |")
+    if source_errors is not None or source_error_details:
+        lines.append(f"| 数据源错误 | {_safe_int(source_errors, len(source_error_details))} |")
+    breadth_requests = run_quality.get("breadth_stock_requests")
+    breadth_cache_hits = run_quality.get("breadth_stock_cache_hits")
+    if breadth_requests is not None or breadth_cache_hits is not None:
+        request_text = str(_safe_int(breadth_requests)) if breadth_requests is not None else "未提供"
+        cache_hit_text = str(_safe_int(breadth_cache_hits)) if breadth_cache_hits is not None else "未提供"
+        lines.append(f"| 广度成分股请求 / 缓存命中 | {request_text} / {cache_hit_text} |")
     recovery_batches = _safe_int(run_quality.get("ai_recovery_batches"))
     if recovery_batches:
         lines.append(f"| 模型协议规则恢复 | {recovery_batches} 批；仅采用标题、实体、时点与TTL均通过脚本校验的字段 |")
+
+    if source_error_details:
+        lines += ["", "数据源错误明细（最多3条，已清洗）："]
+        lines.extend(f"- {detail}" for detail in source_error_details)
 
     if new_activations:
         lines += ["", "本周新增激活：" + "、".join(names.get(code, code) for code in new_activations) + "。"]
@@ -553,8 +704,10 @@ def format_report(
         lines.append("")
         for code in radar:
             item = evidence.get(code, {})
+            metric = metrics.get(code, {})
             lines += [f"### {names.get(code, code)}｜结构化证据审计", ""]
             lines.append("- 证据缺口/核对：" + "；".join(_evidence_gap_parts(item, candidates, code)) + "。")
+            lines.append("- 市场核对：" + _market_audit(metric) + "。")
             _render_claims(lines, code, item, candidates)
             lines.append("")
     else:

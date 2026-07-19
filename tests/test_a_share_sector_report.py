@@ -146,10 +146,33 @@ class DeterministicReportTest(unittest.TestCase):
         states = {code: "早期观察" for code in evidence}
         return industries, evidence, candidates, metrics, states
 
-    def render(self, industries=None, evidence_transform=None):
+    def render(
+        self,
+        industries=None,
+        evidence_transform=None,
+        metrics_transform=None,
+        radar_codes=None,
+        run_quality_update=None,
+    ):
         base_industries, evidence, candidates, metrics, states = self.make_inputs()
         if evidence_transform:
             evidence_transform(evidence)
+        if metrics_transform:
+            metrics_transform(metrics)
+        run_quality = {
+            "outcome": "repair_excluded",
+            "expected_market_date": "2026-07-17",
+            "source_market_date": "2026-07-16",
+            "candidate_count": 6,
+            "claim_count": 1,
+            "evidence_ref_count": 3,
+            "semantic_utilization": 1 / 6,
+            "ai_recovery_batches": 1,
+            "evidence_engine_version": "rules-recovery-v1",
+            "engine_sha256": "abcdef0123456789",
+        }
+        if run_quality_update:
+            run_quality.update(run_quality_update)
         return reporter.format_report(
             "2026-07-17",
             "v-test",
@@ -157,25 +180,14 @@ class DeterministicReportTest(unittest.TestCase):
             evidence,
             candidates,
             metrics,
-            [],
+            radar_codes if radar_codes is not None else [],
             states,
             [],
             [],
             {"events": [], "hold_observations": []},
             "test-model",
             120,
-            run_quality={
-                "outcome": "repair_excluded",
-                "expected_market_date": "2026-07-17",
-                "source_market_date": "2026-07-16",
-                "candidate_count": 6,
-                "claim_count": 1,
-                "evidence_ref_count": 3,
-                "semantic_utilization": 1 / 6,
-                "ai_recovery_batches": 1,
-                "evidence_engine_version": "rules-recovery-v1",
-                "engine_sha256": "abcdef0123456789",
-            },
+            run_quality=run_quality,
         )
 
     def test_zero_pass_has_useful_sections_instead_of_empty_radar(self) -> None:
@@ -227,6 +239,126 @@ class DeterministicReportTest(unittest.TestCase):
 
         self.assertIn("规则恢复可入门O/E：类别E；成分公司主体1/2；独立URL1/2", rendered)
         self.assertIn("成分公司O/E类别不足2类", rendered)
+
+    def test_pass_radar_exposes_market_inputs_and_cleaned_source_errors(self) -> None:
+        def mark_pass(evidence):
+            evidence["801002"].update(
+                {
+                    "gate": "PASS",
+                    "claims": [
+                        {"category": "S", "entity": "乙公司", "evidence_id": "801002-N1"},
+                        {"category": "O", "entity": "供应商乙", "evidence_id": "801002-N2"},
+                    ],
+                }
+            )
+
+        def add_breadth_dates(metrics):
+            metrics["801002"].update(
+                {
+                    "relative_20d_previous": 0.005,
+                    "relative_20d_two_weeks_ago": 0.0,
+                    "relative_improving": True,
+                    "turnover_share_previous": 0.02,
+                    "turnover_share": 0.03,
+                }
+            )
+            metrics["801002"]["breadth"].update(
+                {
+                    "endpoints": ["2026-07-17", "2026-07-10", "2026-07-03"],
+                    "coverages": [0.80, 0.75, 0.70],
+                    "improving": True,
+                }
+            )
+
+        rendered = self.render(
+            evidence_transform=mark_pass,
+            metrics_transform=add_breadth_dates,
+            radar_codes=["801002"],
+            run_quality_update={
+                "source_error_total": 4,
+                "source_errors": [
+                    "接口|失败\n<script>alert(1)</script>",
+                    "第二个 [链接](javascript:bad)",
+                    "第三个错误",
+                    "第四个不应出现",
+                ],
+                "breadth_stock_requests": 87,
+                "breadth_stock_cache_hits": 21,
+            },
+        )
+
+        self.assertIn(
+            "市场核对：20日收益+4.00%；排名第8；相对端点（旧→新）",
+            rendered,
+        )
+        self.assertIn("2026-07-03=+0.00%；2026-07-10=+0.50%；2026-07-17=+1.00%", rendered)
+        self.assertIn("相对连续改善：是（相对门通过）", rendered)
+        self.assertIn("成交分位55.0%；成交占比（前期→本期）：2.000%→3.000%（成交门通过）", rendered)
+        self.assertIn("2026-07-17=70.0%（覆盖80.0%）", rendered)
+        self.assertIn("2026-07-10=60.0%（覆盖75.0%）", rendered)
+        self.assertIn("2026-07-03=50.0%（覆盖70.0%）", rendered)
+        self.assertIn("广度端点（旧→新）", rendered)
+        self.assertLess(rendered.index("2026-07-03=50.0%"), rendered.index("2026-07-10=60.0%"))
+        self.assertLess(rendered.index("2026-07-10=60.0%"), rendered.index("2026-07-17=70.0%"))
+        self.assertIn("广度连续改善：是（广度门通过）", rendered)
+        self.assertIn("广度成分股请求 / 缓存命中 | 87 / 21", rendered)
+        self.assertIn("数据源错误明细（最多3条，已清洗）", rendered)
+        self.assertIn("接口\\|失败 &lt;script&gt;alert(1)&lt;/script&gt;", rendered)
+        self.assertIn("第二个 \\[链接\\](javascript:bad)", rendered)
+        self.assertIn("第三个错误", rendered)
+        self.assertNotIn("第四个不应出现", rendered)
+        self.assertNotIn("AI_DRIVER_SENTINEL", rendered)
+        self.assertNotIn("AI_SUMMARY_SENTINEL", rendered)
+
+    def test_market_audit_does_not_invent_missing_gate_flags(self) -> None:
+        rendered = reporter._market_audit(
+            {
+                "rank_20d": 3,
+                "return_20d": 0.04,
+                "relative_20d": 0.01,
+                "turnover_percentile": 42.0,
+                "breadth": {
+                    "available": True,
+                    "endpoints": ["2026-07-17", "2026-07-10", "2026-07-03"],
+                    "ratios": [0.7, 0.6, 0.5],
+                    "coverages": [0.9, 0.9, 0.9],
+                },
+            }
+        )
+
+        self.assertIn("2026-07-17=+1.00%", rendered)
+        self.assertIn("相对连续改善：未计算（相对门未计算）", rendered)
+        self.assertIn("成交分位42.0%；成交占比（前期→本期）：未计算→未计算（成交门未计算）", rendered)
+        self.assertIn("广度连续改善：是（广度门未计算）", rendered)
+
+    def test_market_audit_explains_improving_negative_relative_and_declining_turnover(self) -> None:
+        rendered = reporter._market_audit(
+            {
+                "rank_20d": 9,
+                "return_20d": -0.02,
+                "relative_20d": -0.01,
+                "relative_20d_previous": -0.02,
+                "relative_20d_two_weeks_ago": -0.03,
+                "relative_improving": True,
+                "relative_ok": True,
+                "turnover_percentile": 40.0,
+                "turnover_share_previous": 0.03,
+                "turnover_share": 0.02,
+                "turnover_ok": False,
+                "breadth_ok": False,
+                "breadth": {
+                    "available": True,
+                    "improving": False,
+                    "endpoints": ["2026-07-17", "2026-07-10", "2026-07-03"],
+                    "ratios": [0.4, 0.4, 0.4],
+                    "coverages": [1.0, 1.0, 1.0],
+                },
+            }
+        )
+
+        self.assertIn("2026-07-03=-3.00%；2026-07-10=-2.00%；2026-07-17=-1.00%", rendered)
+        self.assertIn("相对连续改善：是（相对门通过）", rendered)
+        self.assertIn("成交分位40.0%；成交占比（前期→本期）：3.000%→2.000%（成交门未通过）", rendered)
 
 
 if __name__ == "__main__":
