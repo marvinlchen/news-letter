@@ -13,6 +13,20 @@ blocks: 80A/80B/80C + 90A/90B/91A/92B/93A/93B (Telok Blangah Street 31)
   注：中/高楼层不做额外判定，统一标为"非低楼层"。
 - 4-room 判定：floorArea 在 950~1055 sqft（HDB 4-room≈1001；3-room≈731）。
 - 反爬：Cloudflare 会限流(HTTP 429)，fetch 带重试+退避+请求间隔。
+
+【"上新"判定规则 v2 —— 解决平台刷新上架时间导致误报】
+- PropertyGuru 在中介"刷新/重发"房源时会把"上架时间"改写成本日，平台自身的
+  "新上"信号不可靠，因此本监控完全不依赖平台的上架时间。
+- 以"房源ID"为唯一身份标识，并维护一份**永久的 ever-seen 记忆**（state.json 的
+  history 字段）：只要某个 ID 监控以来曾经出现过，就永远记在 history 里。
+- 三类事件判定：
+    🆕 今日上新    = 当前出现、且 history 中从未出现过的全新 ID（真正的新房源）。
+    🔄 重新上架/刷新 = 当前出现、但 history 里有记录（此前下架后重现，或平台刷新）。
+    ✅ 今日卖出/下架 = 此前在售、且连续消失 ≥ GRACE_DAYS 天的房源（避免一日限流/
+                     分页漏抓造成的"假卖出→次日假上新"抖动）。
+- state.json 结构：
+    listings: 当前在售(含宽限期内暂时消失) id -> rec(first_seen/last_seen 内嵌)
+    history : 所有曾经出现过的 id -> {first_seen,last_seen,last_price,block,url,area}
 """
 import os, re, json, sys, time, random, datetime, html
 
@@ -45,9 +59,25 @@ HOME = os.path.expanduser('~/hdb_monitor')
 STATE_FILE = os.path.join(HOME, 'state.json')
 REPORT_DIR = os.path.join(HOME, 'reports')
 
+# 连续消失多少天（按自然日）才判定为"卖出/下架"。
+# 期内暂时消失的房源保留在宽限名单里，不算卖出，重现时也不算上新。
+GRACE_DAYS = 7
+
 
 def log(msg):
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
+
+
+def days_between(d1, d2):
+    """d1/d2: 'YYYY-MM-DD' 或 'baseline'。返回 (d2-d1) 的天数；baseline 视为已很久。"""
+    if not d1 or d1 == 'baseline':
+        return 9999
+    try:
+        a = datetime.datetime.strptime(d1, '%Y-%m-%d').date()
+        b = datetime.datetime.strptime(d2, '%Y-%m-%d').date()
+    except Exception:
+        return 9999
+    return (b - a).days
 
 
 def fetch(url, tries=4):
@@ -154,7 +184,7 @@ FLOOR_MAP = {'LOW': '低楼层', 'MIDDLE': '中楼层', 'MID': '中楼层', 'HIG
 
 
 def fetch_summary(url):
-    """抓详情页，返回 {summary, agent, floor_desc}。失败返回 {}。"""
+    """抓详情页，返回 {summary, agent, floor_desc, listed_on}。失败返回 {}。"""
     t = fetch(url)
     if not t:
         return {}
@@ -172,6 +202,10 @@ def fetch_summary(url):
         m = re.search(r'"floorLevel"\s*:\s*\{[^}]*"code"\s*:\s*"([^"]+)"', t)
         if m:
             d['floor_desc'] = FLOOR_MAP.get(m.group(1).upper(), m.group(1))
+    # 平台显示的上架时间（注意：平台会在刷新/重发时改写，不可靠，仅作参考展示）
+    m = re.search(r'Listed on (\d{1,2} [A-Z][a-z]+ \d{4})', t)
+    if m:
+        d['listed_on'] = m.group(1)
     return d
 
 
@@ -184,6 +218,7 @@ def enrich_summaries(kept, prev):
             r['summary'] = old.get('summary')
             r['agent'] = old.get('agent')
             r['floor_desc'] = old.get('floor_desc')
+            r['listed_on'] = old.get('listed_on')
         else:
             to_fetch.append(lid)
     log(f"摘要：复用缓存 {len(kept) - len(to_fetch)} 套，需抓取 {len(to_fetch)} 套")
@@ -194,6 +229,7 @@ def enrich_summaries(kept, prev):
         r['summary'] = s.get('summary', '')
         r['agent'] = s.get('agent', '')
         r['floor_desc'] = s.get('floor_desc', '')
+        r['listed_on'] = s.get('listed_on', '')
         time.sleep(2 + random.random())  # 礼貌间隔，降低限流概率
 
 
@@ -205,7 +241,7 @@ def psf(r):
 
 
 def fmt_listing(r, with_block=True):
-    """两行 markdown：第一行价格/面积/呎价/楼层，第二行摘要+中介。"""
+    """两行 markdown：第一行价格/面积/呎价/楼层，第二行摘要+中介+平台显示上架+链接。"""
     prefix = f"[{r['block']}] " if with_block else ""
     meta = [fmt_price(r.get('price')), f"{r.get('area')} sqft"]
     ps = psf(r)
@@ -215,37 +251,82 @@ def fmt_listing(r, with_block=True):
     if fd:
         meta.append(fd)
     line1 = f"- **{prefix}{' · '.join(meta)}**"
-    # 第二行：摘要（中介卖点）+ 中介名 + 链接
     summ = r.get('summary') or "（无摘要）"
     agent = f" · 中介: {r['agent']}" if r.get('agent') else ""
-    line2 = f"  - {summ}{agent}\n  - {r['url']}"
+    line2 = f"  - {summ}{agent}"
+    lo = r.get('listed_on')
+    if lo:
+        line2 += f"\n  - 🕒 平台显示上架: {lo}（平台会刷新上架时间，仅供参考）"
+    line2 += f"\n  - {r['url']}"
     return line1 + "\n" + line2
 
 
-def build_report(date_str, kept, excluded, prev, new_ids, sold_ids):
+def load_state():
+    """读取 state.json。兼容旧版（扁平 id->rec）自动迁移为新结构。"""
+    if not os.path.exists(STATE_FILE):
+        return {"listings": {}, "history": {}}
+    try:
+        raw = json.load(open(STATE_FILE))
+    except Exception:
+        return {"listings": {}, "history": {}}
+    if isinstance(raw, dict) and "listings" in raw and "history" in raw:
+        raw.setdefault("listings", {})
+        raw.setdefault("history", {})
+        return raw
+    # 旧版扁平结构：raw 即 kept 字典
+    listings, history = {}, {}
+    for i, rec in raw.items():
+        rec = dict(rec)
+        rec["first_seen"] = "baseline"
+        rec["last_seen"] = "baseline"
+        listings[i] = rec
+        history[i] = {
+            "first_seen": "baseline", "last_seen": "baseline",
+            "last_price": rec.get("price"), "block": rec.get("block"),
+            "url": rec.get("url"), "area": rec.get("area"),
+        }
+    log("已把旧版 state.json 迁移为新结构（listings + history）")
+    return {"listings": listings, "history": history}
+
+
+def build_report(date_str, kept, excluded, state, truly_new, returned, sold):
+    history = state["history"]
     L = []
     L.append("# HDB 4-room 订阅日报 · Telok Blangah Parcview")
     L.append(f"**日期**: {date_str}  ")
     L.append("**范围**: blocks 80A/80B/80C + 90A/90B/91A/92B/93A/93B，4-room HDB 在售（已排除低楼层 LOW）")
     L.append("")
+    L.append("> ⚠️ **关于\"上新\"的判定说明**：PropertyGuru 会在中介刷新/重发房源时把\"上架时间\"改写成本日，"
+             "平台自身的\"新上\"信号不可靠。本日报**完全不依赖平台的上架时间**，而是以**房源 ID** 为身份、"
+             "配合一份永久的\"曾出现\"记忆来判定：只有监控以来**从未出现过**的 ID 才记为 🆕 今日上新；"
+             "此前下架后重现的记为 🔄 重新上架/刷新；连续消失 ≥ %d 天才记为 ✅ 卖出/下架。" % GRACE_DAYS)
+    L.append("")
     L.append("## 📊 概览")
     L.append(f"- 当前在售(非低楼层): **{len(kept)}** 套")
-    L.append(f"- 🆕 今日上新: **{len(new_ids)}** 套")
-    L.append(f"- ✅ 今日卖出/下架: **{len(sold_ids)}** 套")
+    L.append(f"- 🆕 今日上新(全新房源，监控以来首次出现): **{len(truly_new)}** 套")
+    L.append(f"- 🔄 重新上架/刷新(历史出现过、此前下架后重现): **{len(returned)}** 套")
+    L.append(f"- ✅ 今日卖出/下架(连续消失≥{GRACE_DAYS}天): **{len(sold)}** 套")
     excluded_total = sum(len(e) for e in excluded.values())
     L.append(f"- 🚫 已排除低楼层: {excluded_total} 套（不计入上方在售）")
     L.append("")
-    if new_ids:
-        L.append("## 🆕 今日上新")
-        for i in new_ids:
-            r = kept[i]
-            L.append(fmt_listing(r))
+    if truly_new:
+        L.append("## 🆕 今日上新（全新房源，监控以来首次出现）")
+        for i in truly_new:
+            L.append(fmt_listing(kept[i]))
         L.append("")
-    if sold_ids:
-        L.append("## ✅ 今日卖出 / 下架（先前在售，今日已消失）")
-        for i in sold_ids:
-            r = prev[i]
-            L.append(f"- [{r['block']}] {fmt_price(r.get('price'))} · {r.get('url','')}")
+    if returned:
+        L.append("## 🔄 重新上架 / 刷新（历史出现过，此前已下架，今日重现）")
+        for i in returned:
+            L.append(fmt_listing(kept[i]))
+        L.append("")
+    if sold:
+        L.append("## ✅ 今日卖出 / 下架（先前在售，连续消失≥%d天）" % GRACE_DAYS)
+        for i in sold:
+            h = history.get(i, {})
+            b = h.get('block', '?')
+            p = fmt_price(h.get('last_price'))
+            u = h.get('url', '')
+            L.append(f"- [{b}] {p} · {u}")
         L.append("")
     L.append("## 📋 当前在售清单（按 block，已排除低楼层）")
     by_block = {}
@@ -265,8 +346,7 @@ def build_report(date_str, kept, excluded, prev, new_ids, sold_ids):
 
 
 def git_commit(msg):
-    """用 dulwich（纯 Python，无需 git 二进制）把脚本/状态/报告提交到本地仓库。
-    只追踪 hdb_monitor.py / state.json / reports/，忽略 cron.log。无变化则跳过。"""
+    """用 dulwich（纯 Python，无需 git 二进制）把脚本/状态/报告提交到本地仓库。"""
     if not HAVE_DULWICH:
         log("dulwich 未安装，跳过 git 提交（pip install dulwich --break-system-packages）")
         return
@@ -294,7 +374,6 @@ def git_push():
         return
     try:
         r = Repo(HOME)
-        # 确保 remote 存在
         if not r.get_config().has_section((b'remote', GIT_REMOTE.encode())):
             porcelain.remote_add(HOME, GIT_REMOTE, GIT_REMOTE_URL)
         res = porcelain.push(HOME, GIT_REMOTE,
@@ -320,25 +399,61 @@ def main():
         print("NO_DATA")
         return
 
-    prev = {}
-    if os.path.exists(STATE_FILE):
-        try:
-            with open(STATE_FILE) as f:
-                prev = json.load(f)
-        except Exception:
-            prev = {}
+    state = load_state()
+    listings = state["listings"]
+    history = state["history"]
+    ever = set(history) | set(listings)          # 监控以来出现过的全部 ID
+    cur_ids = set(kept)
 
-    new_ids = [i for i in kept if i not in prev]
-    sold_ids = [i for i in prev if i not in kept]
-    enrich_summaries(kept, prev)
-    report = build_report(date_str, kept, excluded, prev, new_ids, sold_ids)
+    truly_new = [i for i in cur_ids if i not in ever]
+    returned = [i for i in cur_ids if (i in history) and (i not in listings)]
+    missing = [i for i in listings if i not in cur_ids]
+    sold = []
+    for i in missing:
+        last = listings[i].get("last_seen")
+        absent = days_between(last, date_str)
+        if absent >= GRACE_DAYS:
+            sold.append(i)
+        else:
+            log(f"  {i} 今日未在售，但在 {GRACE_DAYS} 天宽限期内（已消失 {absent} 天），暂不记为卖出")
+
+    # 摘要补充：用 listings 作为缓存来源（含历史 rec 的 summary/price）
+    enrich_summaries(kept, listings)
+
+    # 构建新 state
+    new_listings = {}
+    for i in cur_ids:
+        rec = kept[i]
+        old = listings.get(i) or history.get(i) or {}
+        rec["first_seen"] = old.get("first_seen") or date_str
+        rec["last_seen"] = date_str
+        new_listings[i] = rec
+    for i in missing:
+        if i not in sold:
+            new_listings[i] = listings[i]   # 宽限期内：保留，不记为卖出/上新
+
+    # 重建 history：new_listings ∪ history 的合集，更新 first/last seen
+    new_history = {}
+    src = {**history, **new_listings}   # new_listings 优先（含今日最新 last_seen）
+    for i, rec in src.items():
+        new_history[i] = {
+            "first_seen": rec.get("first_seen") or date_str,
+            "last_seen": rec.get("last_seen") or date_str,
+            "last_price": rec.get("price"),
+            "block": rec.get("block"),
+            "url": rec.get("url"),
+            "area": rec.get("area"),
+        }
+    state = {"listings": new_listings, "history": new_history}
+
+    report = build_report(date_str, kept, excluded, state, truly_new, returned, sold)
     with open(STATE_FILE, 'w') as f:
-        json.dump(kept, f, indent=2)
+        json.dump(state, f, indent=2)
     with open(os.path.join(REPORT_DIR, f'report_{date_str}.md'), 'w') as f:
         f.write(report)
     with open(os.path.join(REPORT_DIR, 'latest.md'), 'w') as f:
         f.write(report)
-    log("日报已生成")
+    log("日报已生成（上新 %d / 重新上架 %d / 卖出 %d）" % (len(truly_new), len(returned), len(sold)))
     git_commit(f"daily report {date_str}")
     git_push()
     print("\n===== 日报摘要 =====")

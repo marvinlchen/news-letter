@@ -2,16 +2,14 @@
 **日期**: 2026-07-19  
 **范围**: blocks 80A/80B/80C + 90A/90B/91A/92B/93A/93B，4-room HDB 在售（已排除低楼层 LOW）
 
+> ⚠️ **关于"上新"的判定说明**：PropertyGuru 会在中介刷新/重发房源时把"上架时间"改写成本日，平台自身的"新上"信号不可靠。本日报**完全不依赖平台的上架时间**，而是以**房源 ID** 为身份、配合一份永久的"曾出现"记忆来判定：只有监控以来**从未出现过**的 ID 才记为 🆕 今日上新；此前下架后重现的记为 🔄 重新上架/刷新；连续消失 ≥ 7 天才记为 ✅ 卖出/下架。
+
 ## 📊 概览
 - 当前在售(非低楼层): **38** 套
-- 🆕 今日上新: **1** 套
-- ✅ 今日卖出/下架: **0** 套
+- 🆕 今日上新(全新房源，监控以来首次出现): **0** 套
+- 🔄 重新上架/刷新(历史出现过、此前下架后重现): **0** 套
+- ✅ 今日卖出/下架(连续消失≥7天): **0** 套
 - 🚫 已排除低楼层: 3 套（不计入上方在售）
-
-## 🆕 今日上新
-- **[93B] S$950,000 · 1001 sqft · S$949/sqft · High Floor**
-  - C.H.E.A.P beautifully renovated unit 50k below last transacted · 中介: Georgiana Ong
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099
 
 ## 📋 当前在售清单（按 block，已排除低楼层）
 ### 80A （3 套）
@@ -148,4 +146,4 @@
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711
 
 ---
-_生成时间 2026-07-19 11:39:44 · 数据来源 PropertyGuru（curl_cffi 抓取）_
+_生成时间 2026-07-19 12:14:20 · 数据来源 PropertyGuru（curl_cffi 抓取）_
