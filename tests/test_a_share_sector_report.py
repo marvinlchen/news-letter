@@ -1,0 +1,209 @@
+from __future__ import annotations
+
+import importlib.util
+import unittest
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SPEC = importlib.util.spec_from_file_location(
+    "a_share_sector_report",
+    ROOT / "scripts" / "a_share_sector_report.py",
+)
+reporter = importlib.util.module_from_spec(SPEC)
+assert SPEC.loader is not None
+SPEC.loader.exec_module(reporter)
+
+
+class DeterministicReportTest(unittest.TestCase):
+    def make_inputs(self):
+        industries = [
+            {"code": "801001", "name": "行业甲"},
+            {"code": "801002", "name": "行业乙"},
+            {"code": "801003", "name": "行业丙"},
+        ]
+        evidence = {
+            "801001": {
+                "gate": "WATCH",
+                "categories": ["O"],
+                "entities": ["甲公司"],
+                "evidence_ids": ["801001-N1"],
+                "claims": [
+                    {
+                        "category": "O",
+                        "entity": "甲公司",
+                        "evidence_id": "801001-N1",
+                        "text": "甲公司披露新增订单",
+                    }
+                ],
+                "quality_flags": [],
+                "contrary_evidence_ids": [],
+                "driver": "AI_DRIVER_SENTINEL",
+                "summary": "AI_SUMMARY_SENTINEL",
+            },
+            "801002": {
+                "gate": "WATCH",
+                "categories": ["S", "O"],
+                "entities": ["乙公司", "供应商乙"],
+                "evidence_ids": ["801002-N1", "801002-N2"],
+                "quality_flags": [],
+                "contrary_evidence_ids": ["801002-N3"],
+                "driver": "AI_DRIVER_SENTINEL",
+                "summary": "AI_SUMMARY_SENTINEL",
+            },
+            "801003": {
+                "gate": "WATCH",
+                "categories": [],
+                "entities": [],
+                "evidence_ids": [],
+                "quality_flags": [],
+                "driver": "AI_DRIVER_SENTINEL",
+                "summary": "AI_SUMMARY_SENTINEL",
+            },
+        }
+        candidates = {
+            "801001": [
+                {
+                    "id": "801001-N1",
+                    "title": "甲公司披露新增订单公告",
+                    "url": "https://example.com/alpha-order",
+                    "pub_date": "2026-07-16",
+                }
+            ],
+            "801002": [
+                {
+                    "id": "801002-N1",
+                    "title": "乙行业现货库存下降",
+                    "url": "https://example.com/beta-stock",
+                    "pub_date": "2026-07-15",
+                },
+                {
+                    "id": "801002-N2",
+                    "title": "乙公司中标新项目",
+                    "url": "https://example.com/beta-order",
+                    "pub_date": "2026-07-16",
+                },
+            ],
+            "801003": [
+                {
+                    "id": "801003-N1",
+                    "title": "行业丙候选标题一",
+                    "url": "https://example.com/gamma-1",
+                    "pub_date": "2026-07-14",
+                },
+                {
+                    "id": "801003-N2",
+                    "title": "行业丙候选标题二",
+                    "url": "https://example.com/gamma-2",
+                    "pub_date": "2026-07-15",
+                },
+                {
+                    "id": "801003-N3",
+                    "title": "行业丙候选标题三不应展示",
+                    "url": "https://example.com/gamma-3",
+                    "pub_date": "2026-07-16",
+                },
+            ],
+        }
+        metrics = {
+            "801001": {
+                "rank_20d": 1,
+                "return_5d": 0.03,
+                "return_20d": 0.11,
+                "relative_20d": 0.08,
+                "relative_ok": True,
+                "breadth_ok": False,
+                "breadth": {"available": False},
+                "turnover_ok": True,
+                "turnover_percentile": 60.0,
+                "crowding_state": "",
+            },
+            "801002": {
+                "rank_20d": 8,
+                "return_5d": 0.01,
+                "return_20d": 0.04,
+                "relative_20d": 0.01,
+                "relative_ok": True,
+                "breadth_ok": True,
+                "breadth": {"available": True, "ratios": [0.7, 0.6, 0.5]},
+                "turnover_ok": True,
+                "turnover_percentile": 55.0,
+                "crowding_state": "",
+            },
+            "801003": {
+                "rank_20d": 5,
+                "return_5d": 0.02,
+                "return_20d": 0.06,
+                "relative_20d": 0.03,
+                "relative_ok": True,
+                "breadth_ok": False,
+                "breadth": {"available": False},
+                "turnover_ok": True,
+                "turnover_percentile": 50.0,
+                "crowding_state": "",
+            },
+        }
+        states = {code: "早期观察" for code in evidence}
+        return industries, evidence, candidates, metrics, states
+
+    def render(self, industries=None):
+        base_industries, evidence, candidates, metrics, states = self.make_inputs()
+        return reporter.format_report(
+            "2026-07-17",
+            "v-test",
+            industries or base_industries,
+            evidence,
+            candidates,
+            metrics,
+            [],
+            states,
+            [],
+            [],
+            {"events": [], "hold_observations": []},
+            "test-model",
+            120,
+            run_quality={
+                "outcome": "repair_excluded",
+                "expected_market_date": "2026-07-17",
+                "source_market_date": "2026-07-16",
+                "candidate_count": 6,
+                "claim_count": 1,
+                "evidence_ref_count": 3,
+                "semantic_utilization": 1 / 6,
+            },
+        )
+
+    def test_zero_pass_has_useful_sections_instead_of_empty_radar(self) -> None:
+        rendered = self.render()
+        self.assertIn("0 个行业通过硬证据门", rendered)
+        self.assertIn("行情领先但证据未闭环（近失配 Top 5）", rendered)
+        self.assertNotIn("## 已通过证据门的雷达", rendered)
+        self.assertNotIn("## 产业证据雷达 Top 8", rendered)
+        self.assertIn("修复回填（不计前瞻）", rendered)
+        self.assertIn("2026-07-17 / 2026-07-16", rendered)
+
+    def test_free_model_prose_never_leaks(self) -> None:
+        rendered = self.render()
+        self.assertNotIn("AI_DRIVER_SENTINEL", rendered)
+        self.assertNotIn("AI_SUMMARY_SENTINEL", rendered)
+
+    def test_partial_claim_is_linked_and_unadopted_titles_are_labeled(self) -> None:
+        rendered = self.render()
+        self.assertIn("[甲公司披露新增订单](https://example.com/alpha-order)", rendered)
+        self.assertIn("未被证据门采用的候选标题（最多2条）", rendered)
+        self.assertIn("[行业丙候选标题二](https://example.com/gamma-2)", rendered)
+        self.assertIn("[行业丙候选标题三不应展示](https://example.com/gamma-3)", rendered)
+        self.assertNotIn("[行业丙候选标题一](https://example.com/gamma-1)", rendered)
+        self.assertIn("广度未计算", rendered)
+        self.assertNotIn("广度未通过", rendered)
+
+    def test_near_miss_sort_is_deterministic_and_audit_quality_first(self) -> None:
+        industries, _, _, _, _ = self.make_inputs()
+        first = self.render(industries)
+        second = self.render(list(reversed(industries)))
+        self.assertEqual(first, second)
+        self.assertLess(first.index("### 1. 行业乙"), first.index("### 2. 行业甲"))
+
+
+if __name__ == "__main__":
+    unittest.main()

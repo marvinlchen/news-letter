@@ -192,7 +192,8 @@ Generate the A-share sector-leading-signal weekly report:
 Sector radar artifacts are written to:
 
 ```text
-var/a-share-sector-radar-weekly-status/latest.json
+var/a-share-sector-radar-weekly-status/latest-run.json
+var/a-share-sector-radar-weekly-status/latest-artifact.json
 var/a-share-sector-radar-cache/
 published/a-share-sector-radar-weekly/YYYY-MM-DD.md
 published/a-share-sector-radar-weekly/latest.md
@@ -200,9 +201,20 @@ published/a-share-sector-radar-weekly/ledger.json
 published/a-share-sector-radar-weekly/snapshots/YYYY-MM-DD.json
 ```
 
-For a non-publishing diagnostic run, use `PUBLISH_TO_GITHUB=0`. The scheduled
-job requires a valid evidence-model response; it does not publish a rules-only
-placeholder when evidence classification fails.
+The run status is separate from the last immutable artifact status: a stale
+upstream check can therefore record `publish_required=false` without changing
+the previously published artifact or its Git commit. The job compares the
+latest common Shenwan industry date with an independent Shanghai Composite
+trading calendar and stops before news, AI and ledger writes when Shenwan is
+behind. Evidence candidates combine company-bound news with CNInfo official
+announcements; the model audits industries in small batches and WATCH rows
+retain grounded partial claims. A semantically empty all-WATCH response fails
+closed.
+
+For a non-publishing diagnostic run, use `PUBLISH_TO_GITHUB=0`. Rebuilding a
+known-invalid same-day artifact requires the explicit `--repair-existing`
+flag. Such a report is labeled `excluded_repair`, may be published for audit,
+but never enters the forward activation or hit-rate denominator.
 
 Without credentials, the collector uses Reddit's public Topic `top/day` RSS
 feeds at a deliberately conservative request rate. RSS mode does not fetch

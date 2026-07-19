@@ -1,5 +1,5 @@
 {
-  "strategy_version": "v0.2-F.1-pilot",
+  "strategy_version": "v0.2-F.2-pilot",
   "radar_limit": 8,
   "activation_limit": 3,
   "news_lookback_days": 180,

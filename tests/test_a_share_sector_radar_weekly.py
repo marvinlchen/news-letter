@@ -272,7 +272,7 @@ class ConfigurationAndCronTest(unittest.TestCase):
     def test_configuration_freezes_all_31_industries(self) -> None:
         config = radar.load_config(ROOT / "config" / "a_share_sector_radar.json")
         self.assertEqual(len(config["industries"]), 31)
-        self.assertEqual(config["strategy_version"], "v0.2-F.1-pilot")
+        self.assertEqual(config["strategy_version"], "v0.2-F.2-pilot")
 
     def test_cron_is_sunday_at_ten(self) -> None:
         installer = (ROOT / "scripts" / "install-cron.sh").read_text(encoding="utf-8")

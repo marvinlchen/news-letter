@@ -5,6 +5,8 @@ PROJECT_ROOT="${PROJECT_ROOT:-/home/ME/finance-news-digest}"
 PUBLISH_BRANCH="${PUBLISH_BRANCH:-main}"
 REPORT_DIR="published/a-share-sector-radar-weekly"
 STATUS_DIR="var/a-share-sector-radar-weekly-status"
+ARTIFACT_STATUS_NAME="latest-artifact.json"
+RUN_STATUS_NAME="latest-run.json"
 export PATH="$HOME/.local/bin:$PATH"
 
 if command -v flock >/dev/null 2>&1 && [[ "${A_SHARE_RADAR_GIT_LOCK_HELD:-0}" != "1" ]]; then
@@ -21,14 +23,32 @@ update_publish_status() {
   local commit="${2:-}"
   local error="${3:-}"
   [[ -n "$REPORT_DATE" ]] || return 0
-  python3 - "$PROJECT_ROOT" "$STATUS_DIR" "$REPORT_DATE" "$publish_status" "$commit" "$error" <<'PY'
+  python3 - "$PROJECT_ROOT" "$STATUS_DIR" "$REPORT_DATE" "$publish_status" "$commit" "$error" "$ARTIFACT_STATUS_NAME" "$RUN_STATUS_NAME" <<'PY'
 import json
 import sys
 from pathlib import Path
 
-root, status_dir_name, report_date, publish_status, commit, error = sys.argv[1:7]
+(
+    root,
+    status_dir_name,
+    report_date,
+    publish_status,
+    commit,
+    error,
+    artifact_status_name,
+    run_status_name,
+) = sys.argv[1:9]
 status_dir = Path(root) / status_dir_name
-for path in (status_dir / f"{report_date}.json", status_dir / "latest.json"):
+
+paths = [status_dir / f"{report_date}.json", status_dir / artifact_status_name]
+run_path = status_dir / run_status_name
+if run_path.exists():
+    run_data = json.loads(run_path.read_text(encoding="utf-8"))
+    run_artifact_date = str(run_data.get("artifact_date") or run_data.get("date") or "")
+    if run_artifact_date == report_date:
+        paths.append(run_path)
+
+for path in paths:
     if not path.exists():
         continue
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -56,9 +76,9 @@ from pathlib import Path
 
 root = Path(sys.argv[1]).resolve()
 report_dir = root / sys.argv[2]
-status_path = root / sys.argv[3] / "latest.json"
+status_path = root / sys.argv[3] / "latest-artifact.json"
 if not status_path.is_file():
-    raise SystemExit("publish: latest status is missing")
+    raise SystemExit("publish: latest artifact status is missing")
 status = json.loads(status_path.read_text(encoding="utf-8"))
 report_date = str(status.get("date", ""))
 if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", report_date):
@@ -100,20 +120,49 @@ SNAPSHOT_PATH="$REPORT_DIR/snapshots/$REPORT_DATE.json"
 if git remote get-url origin >/dev/null 2>&1; then
   git fetch origin "$PUBLISH_BRANCH"
   REMOTE_REF="$(git rev-parse "origin/$PUBLISH_BRANCH")"
-  if [[ "$(git rev-parse HEAD)" != "$REMOTE_REF" ]]; then
+  LOCAL_REF="$(git rev-parse HEAD)"
+  if [[ "$LOCAL_REF" != "$REMOTE_REF" ]] && git merge-base --is-ancestor "$LOCAL_REF" "$REMOTE_REF"; then
     git merge --ff-only "$REMOTE_REF"
+  elif [[ "$LOCAL_REF" != "$REMOTE_REF" ]] && ! git merge-base --is-ancestor "$REMOTE_REF" "$LOCAL_REF"; then
+    echo "publish: local and origin/$PUBLISH_BRANCH have diverged" >&2
+    exit 1
   fi
 fi
 
-git add "$REPORT_DIR/$REPORT_DATE.md" "$REPORT_DIR/latest.md" "$REPORT_DIR/ledger.json" "$SNAPSHOT_PATH"
-if ! git diff --cached --quiet -- "$REPORT_DIR/$REPORT_DATE.md" "$REPORT_DIR/latest.md" "$REPORT_DIR/ledger.json" "$SNAPSHOT_PATH"; then
-  git commit --only "$REPORT_DIR/$REPORT_DATE.md" "$REPORT_DIR/latest.md" "$REPORT_DIR/ledger.json" "$SNAPSHOT_PATH" \
+ARTIFACT_PATHS=(
+  "$REPORT_DIR/$REPORT_DATE.md"
+  "$REPORT_DIR/latest.md"
+  "$REPORT_DIR/ledger.json"
+  "$SNAPSHOT_PATH"
+)
+
+git add -- "${ARTIFACT_PATHS[@]}"
+CREATED_COMMIT=0
+if ! git diff --cached --quiet -- "${ARTIFACT_PATHS[@]}"; then
+  git commit --only \
     -m "Publish A-share sector radar weekly $REPORT_DATE" \
-    -m "Co-authored-by: Codex <noreply@openai.com>"
+    -m "Co-authored-by: Codex <noreply@openai.com>" \
+    -- "${ARTIFACT_PATHS[@]}"
+  CREATED_COMMIT=1
 fi
 
-git push origin "HEAD:$PUBLISH_BRANCH"
-COMMIT="$(git rev-parse HEAD)"
+COMMIT="$(git log -1 --format=%H -- "$REPORT_DIR/$REPORT_DATE.md")"
+if [[ -z "$COMMIT" ]]; then
+  echo "publish: cannot resolve the report's Git commit" >&2
+  exit 1
+fi
+
+if [[ "$CREATED_COMMIT" == "1" ]]; then
+  git push origin "HEAD:$PUBLISH_BRANCH"
+elif git remote get-url origin >/dev/null 2>&1 && ! git merge-base --is-ancestor "$COMMIT" "origin/$PUBLISH_BRANCH"; then
+  # A previous push may have failed after the artifact commit was created.
+  git push origin "HEAD:$PUBLISH_BRANCH"
+fi
+
 update_publish_status "published" "$COMMIT" ""
 trap - ERR
-echo "Published A-share sector radar weekly report for $REPORT_DATE at $COMMIT"
+if [[ "$CREATED_COMMIT" == "1" ]]; then
+  echo "Published A-share sector radar weekly report for $REPORT_DATE at $COMMIT"
+else
+  echo "A-share sector radar weekly report for $REPORT_DATE is unchanged; existing commit: $COMMIT"
+fi

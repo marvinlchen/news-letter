@@ -34,7 +34,26 @@ echo "=== A股产业领先信号周报生成完成 ==="
 echo "报告目录: $REPORT_DIR"
 
 if [[ "${PUBLISH_TO_GITHUB:-1}" == "1" && "$PUBLISH_ALLOWED" == "1" ]]; then
-  "$PROJECT_ROOT/scripts/publish-a-share-sector-radar-weekly.sh"
+  PUBLISH_REQUIRED="$(python3 - "$STATUS_DIR/latest-run.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit("publish gate: latest-run.json is missing")
+status = json.loads(path.read_text(encoding="utf-8"))
+publish_required = status.get("publish_required")
+if not isinstance(publish_required, bool):
+    raise SystemExit("publish gate: publish_required must be a boolean")
+print("1" if publish_required else "0")
+PY
+)"
+  if [[ "$PUBLISH_REQUIRED" == "1" ]]; then
+    "$PROJECT_ROOT/scripts/publish-a-share-sector-radar-weekly.sh"
+  else
+    echo "本次运行无需发布：latest-run.json 的 publish_required=false"
+  fi
 elif [[ "$PUBLISH_ALLOWED" != "1" ]]; then
   echo "诊断参数已启用：强制跳过GitHub发布"
 fi
