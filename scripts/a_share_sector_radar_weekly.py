@@ -1745,9 +1745,18 @@ def validate_evidence_semantics(
     )
     summaries = [normalize_entity(str(item.get("summary", ""))) for item in evidence.values()]
     repeated_summary = bool(summaries) and len(set(summaries)) <= max(1, len(summaries) // 4)
+    audited_rules_recovery = bool(evidence) and all(
+        item.get("decision_source") == "rules_recovery"
+        for item in evidence.values()
+    )
     if claim_count == 0 and official_options >= 2:
         raise ValueError(f"语义空转：本批有{official_options}条公司公告候选但未保留任何partial claim")
-    if claim_count == 0 and repeated_summary and sum(bool(candidates.get(code)) for code in evidence) >= 3:
+    if (
+        claim_count == 0
+        and repeated_summary
+        and sum(bool(candidates.get(code)) for code in evidence) >= 3
+        and not audited_rules_recovery
+    ):
         raise ValueError("语义空转：多行业有候选但输出为重复的全WATCH空claim")
 
 

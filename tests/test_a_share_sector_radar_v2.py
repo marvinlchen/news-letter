@@ -418,6 +418,28 @@ class EvidenceSemanticValidationTest(unittest.TestCase):
             {"S": 45, "O": 120, "E": 120},
         )
 
+    def test_audited_rules_recovery_may_confirm_no_positive_claims(self) -> None:
+        codes = ["801001", "801002", "801003"]
+        evidence = {
+            code: {
+                **self.empty_watch("规则核验无正向字段"),
+                "decision_source": "rules_recovery",
+            }
+            for code in codes
+        }
+        candidates = {
+            code: [
+                {
+                    "id": f"{code}-N1",
+                    "source_type": "trusted_news",
+                    "positive_category_tags": [],
+                }
+            ]
+            for code in codes
+        }
+
+        radar.validate_evidence_semantics(evidence, candidates)
+
 
 class DeterministicEvidenceRecoveryTest(unittest.TestCase):
     def setUp(self) -> None:
