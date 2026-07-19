@@ -55,6 +55,7 @@ SW_HISTORY_URL = "https://www.swsresearch.com/institute-sw/api/index_publish/tre
 SW_COMPONENT_URL = "https://www.swsresearch.com/institute-sw/api/index_publish/details/component_stocks/"
 EASTMONEY_KLINE_URL = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
 TENCENT_KLINE_URL = "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get"
+SINA_KLINE_URL = "https://quotes.sina.cn/cn/api/json_v2.php/CN_MarketData.getKLineData"
 SW_SOURCE_URL = "https://www.swsresearch.com/institute_sw/allIndex/releasedIndex"
 CNINFO_STOCK_INDEX_URL = "https://www.cninfo.com.cn/new/data/szse_stock.json"
 CNINFO_ANNOUNCEMENT_URL = "https://www.cninfo.com.cn/new/hisAnnouncement/query"
@@ -73,6 +74,26 @@ USER_AGENT = "Mozilla/5.0 (compatible; finance-news-digest/1.0)"
 UNVERIFIED_SSL = ssl._create_unverified_context()
 QUALITY_FLAGS = {"OCF_WEAK", "ONE_OFF_OR_LOW_BASE", "SINGLE_COMPANY"}
 EVIDENCE_CATEGORIES = {"S", "O", "E"}
+
+# Frozen from the Shanghai Stock Exchange annual closure notices:
+# 2025: https://www.sse.com.cn/disclosure/announcement/general/c/c_20241223_10767108.shtml
+# 2026: https://www.sse.com.cn/disclosure/announcement/general/c/c_20251222_10802507.shtml
+SSE_HOLIDAY_RANGES = (
+    (date(2025, 1, 1), date(2025, 1, 1)),
+    (date(2025, 1, 28), date(2025, 2, 4)),
+    (date(2025, 4, 4), date(2025, 4, 6)),
+    (date(2025, 5, 1), date(2025, 5, 5)),
+    (date(2025, 5, 31), date(2025, 6, 2)),
+    (date(2025, 10, 1), date(2025, 10, 8)),
+    (date(2026, 1, 1), date(2026, 1, 3)),
+    (date(2026, 2, 15), date(2026, 2, 23)),
+    (date(2026, 4, 4), date(2026, 4, 6)),
+    (date(2026, 5, 1), date(2026, 5, 5)),
+    (date(2026, 6, 19), date(2026, 6, 21)),
+    (date(2026, 9, 25), date(2026, 9, 27)),
+    (date(2026, 10, 1), date(2026, 10, 7)),
+)
+SSE_CALENDAR_YEARS = {2025, 2026}
 CATEGORY_KEYWORDS = {
     "S": ("价格", "涨价", "降价", "库存", "产能", "开工", "利用率", "价差", "成本", "供给", "供应", "需求", "供需", "销量"),
     "O": ("订单", "合同", "中标", "交付", "排产", "资本开支", "在手", "招标", "出货", "客流", "保费", "信贷"),
@@ -280,6 +301,38 @@ def load_config(path: Path) -> dict:
     return config
 
 
+def official_sse_trading_dates(cutoff: date, lookback_days: int = 60) -> list[str]:
+    if cutoff.year not in SSE_CALENDAR_YEARS:
+        raise RuntimeError(f"上交所官方休市表未覆盖{cutoff.year}年，拒绝推断应到交易日")
+    start = cutoff - timedelta(days=max(1, lookback_days))
+    result: list[str] = []
+    current = start
+    while current <= cutoff:
+        is_holiday = any(begin <= current <= end for begin, end in SSE_HOLIDAY_RANGES)
+        if current.weekday() < 5 and not is_holiday:
+            result.append(current.isoformat())
+        current += timedelta(days=1)
+    if not result:
+        raise RuntimeError("上交所官方交易日窗口为空")
+    return result
+
+
+def validate_reference_trading_dates(dates: list[str], cutoff: date, source: str) -> list[str]:
+    official_dates = official_sse_trading_dates(cutoff)
+    expected = official_dates[-1]
+    source_dates = sorted(
+        {
+            parsed.isoformat()
+            for value in dates
+            if (parsed := parse_iso_date(str(value))) and parsed <= cutoff
+        }
+    )
+    if expected not in source_dates:
+        latest = source_dates[-1] if source_dates else "空"
+        raise RuntimeError(f"{source}未覆盖官方应到交易日{expected}（源末日{latest}）")
+    return official_dates
+
+
 def fetch_tencent_reference_trading_dates(cutoff: date) -> list[str]:
     """Return Shanghai Composite sessions from Tencent's independent feed."""
     begin = (cutoff - timedelta(days=60)).isoformat()
@@ -300,7 +353,31 @@ def fetch_tencent_reference_trading_dates(cutoff: date) -> list[str]:
     )
     if not result:
         raise RuntimeError("腾讯上证指数交易日历为空，无法判断申万行情是否完整")
-    return result
+    return validate_reference_trading_dates(result, cutoff, "腾讯上证指数")
+
+
+def fetch_sina_reference_trading_dates(cutoff: date) -> list[str]:
+    """Return Shanghai Composite sessions from Sina's independent feed."""
+    payload = request_json(
+        SINA_KLINE_URL,
+        {"symbol": "sh000001", "scale": 240, "ma": "no", "datalen": 1500},
+        timeout=15,
+        retries=2,
+    )
+    if not isinstance(payload, list):
+        raise RuntimeError("新浪上证指数交易日历格式无效")
+    result = sorted(
+        {
+            parsed.isoformat()
+            for row in payload
+            if isinstance(row, dict)
+            and (parsed := parse_iso_date(str(row.get("day", ""))))
+            and parsed <= cutoff
+        }
+    )
+    if not result:
+        raise RuntimeError("新浪上证指数交易日历为空，无法判断申万行情是否完整")
+    return validate_reference_trading_dates(result, cutoff, "新浪上证指数")
 
 
 def fetch_reference_trading_dates(cutoff: date) -> list[str]:
@@ -328,30 +405,43 @@ def fetch_reference_trading_dates(cutoff: date) -> list[str]:
         dates = sorted({row["date"] for row in rows})
         if not dates:
             raise RuntimeError("上证指数交易日历为空")
-        return dates
+        return validate_reference_trading_dates(dates, cutoff, "东财上证指数")
     except Exception as exc:
         eastmoney_error = str(exc)
 
+    tencent_error = ""
     try:
         dates = fetch_tencent_reference_trading_dates(cutoff)
         print(f"[WARN] 东财上证交易日历不可用，改用腾讯上证指数: {eastmoney_error}", file=sys.stderr)
         return dates
-    except Exception as tencent_exc:
+    except Exception as exc:
+        tencent_error = str(exc)
+
+    try:
+        dates = fetch_sina_reference_trading_dates(cutoff)
+        print(
+            f"[WARN] 东财与腾讯上证交易日历不可用，改用新浪上证指数: 东财={eastmoney_error}；腾讯={tencent_error}",
+            file=sys.stderr,
+        )
+        return dates
+    except Exception as sina_exc:
         raise RuntimeError(
-            f"独立交易日历获取失败；东财: {eastmoney_error}；腾讯: {tencent_exc}"
-        ) from tencent_exc
+            f"独立交易日历获取失败；东财: {eastmoney_error}；腾讯: {tencent_error}；新浪: {sina_exc}"
+        ) from sina_exc
 
 
 def assess_market_freshness(actual: str, expected: str, reference_dates: list[str]) -> dict:
     if not parse_iso_date(actual) or not parse_iso_date(expected):
         raise ValueError("行情新鲜度日期无效")
+    if actual > expected:
+        raise RuntimeError(f"申万共同交易日{actual}晚于官方应到日{expected}，参考日历不一致")
     lag_dates = [day for day in reference_dates if actual < day <= expected]
     return {
         "actual": actual,
         "expected": expected,
         "lag_sessions": len(lag_dates),
         "missing_sessions": lag_dates,
-        "fresh": actual >= expected,
+        "fresh": actual == expected,
     }
 
 

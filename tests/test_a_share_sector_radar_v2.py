@@ -37,10 +37,43 @@ class MarketFreshnessTest(unittest.TestCase):
             }
         }
         with mock.patch.object(radar, "request_json", return_value=payload):
-            self.assertEqual(
-                radar.fetch_tencent_reference_trading_dates(date(2026, 7, 19)),
-                ["2026-07-16", "2026-07-17"],
-            )
+            result = radar.fetch_tencent_reference_trading_dates(date(2026, 7, 19))
+
+        self.assertEqual(result[-2:], ["2026-07-16", "2026-07-17"])
+
+    def test_sina_reference_calendar_parses_sessions_and_cutoff(self) -> None:
+        payload = [
+            {"day": "2026-07-16", "close": "4000"},
+            {"day": "2026-07-17", "close": "4010"},
+            {"day": "2026-07-20", "close": "4020"},
+        ]
+        with mock.patch.object(radar, "request_json", return_value=payload) as request:
+            result = radar.fetch_sina_reference_trading_dates(date(2026, 7, 19))
+
+        self.assertEqual(result[-2:], ["2026-07-16", "2026-07-17"])
+
+        request.assert_called_once_with(
+            radar.SINA_KLINE_URL,
+            {"symbol": "sh000001", "scale": 240, "ma": "no", "datalen": 1500},
+            timeout=15,
+            retries=2,
+        )
+
+    def test_stale_nonempty_sina_calendar_cannot_lower_expected_session(self) -> None:
+        payload = [{"day": "2026-07-16", "close": "4000"}]
+        with mock.patch.object(radar, "request_json", return_value=payload):
+            with self.assertRaisesRegex(RuntimeError, "未覆盖官方应到交易日2026-07-17"):
+                radar.fetch_sina_reference_trading_dates(date(2026, 7, 19))
+
+    def test_official_calendar_freezes_2025_and_2026_exchange_holidays(self) -> None:
+        self.assertEqual(radar.official_sse_trading_dates(date(2025, 10, 8))[-1], "2025-09-30")
+        self.assertEqual(radar.official_sse_trading_dates(date(2025, 10, 9))[-1], "2025-10-09")
+        self.assertEqual(radar.official_sse_trading_dates(date(2026, 2, 23))[-1], "2026-02-13")
+        self.assertEqual(radar.official_sse_trading_dates(date(2026, 2, 24))[-1], "2026-02-24")
+
+    def test_official_calendar_fails_closed_outside_frozen_years(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "官方休市表未覆盖2027年"):
+            radar.official_sse_trading_dates(date(2027, 1, 4))
 
     def test_reference_calendar_falls_back_to_tencent(self) -> None:
         expected = ["2026-07-16", "2026-07-17"]
@@ -51,11 +84,25 @@ class MarketFreshnessTest(unittest.TestCase):
 
         tencent.assert_called_once_with(date(2026, 7, 19))
 
-    def test_reference_calendar_fails_closed_when_both_sources_fail(self) -> None:
+    def test_reference_calendar_falls_back_to_sina(self) -> None:
+        expected = ["2026-07-16", "2026-07-17"]
         with mock.patch.object(radar, "request_json", side_effect=ConnectionError("eastmoney closed")), mock.patch.object(
             radar, "fetch_tencent_reference_trading_dates", side_effect=RuntimeError("tencent unavailable")
+        ), mock.patch.object(radar, "fetch_sina_reference_trading_dates", return_value=expected) as sina:
+            self.assertEqual(radar.fetch_reference_trading_dates(date(2026, 7, 19)), expected)
+
+        sina.assert_called_once_with(date(2026, 7, 19))
+
+    def test_reference_calendar_fails_closed_when_all_sources_fail(self) -> None:
+        with mock.patch.object(radar, "request_json", side_effect=ConnectionError("eastmoney closed")), mock.patch.object(
+            radar, "fetch_tencent_reference_trading_dates", side_effect=RuntimeError("tencent unavailable")
+        ), mock.patch.object(
+            radar, "fetch_sina_reference_trading_dates", side_effect=RuntimeError("sina unavailable")
         ):
-            with self.assertRaisesRegex(RuntimeError, "东财: eastmoney closed；腾讯: tencent unavailable"):
+            with self.assertRaisesRegex(
+                RuntimeError,
+                "东财: eastmoney closed；腾讯: tencent unavailable；新浪: sina unavailable",
+            ):
                 radar.fetch_reference_trading_dates(date(2026, 7, 19))
 
     def test_one_missing_session_is_stale(self) -> None:
@@ -68,6 +115,14 @@ class MarketFreshnessTest(unittest.TestCase):
         self.assertFalse(result["fresh"])
         self.assertEqual(result["lag_sessions"], 1)
         self.assertEqual(result["missing_sessions"], ["2026-07-17"])
+
+    def test_actual_after_official_expected_is_reference_inconsistency(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "参考日历不一致"):
+            radar.assess_market_freshness(
+                "2026-07-17",
+                "2026-07-16",
+                ["2026-07-15", "2026-07-16"],
+            )
 
     def test_same_expected_session_is_fresh_including_before_long_holiday(self) -> None:
         for actual, expected, calendar in (
