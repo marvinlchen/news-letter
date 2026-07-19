@@ -4,16 +4,33 @@
   "events": [],
   "hold_observations": [],
   "last_report_date": "2026-07-16",
+  "migrations": [
+    {
+      "from": "v0.2-F.1-pilot",
+      "migrated_at": "2026-07-19T13:34:05+08:00",
+      "reason": "F.2证据语义校验、来源绑定与行情新鲜度闸门",
+      "to": "v0.2-F.2-pilot"
+    }
+  ],
   "schema_version": 1,
-  "strategy_version": "v0.2-F.1-pilot",
-  "updated_at": "2026-07-18T23:47:05+08:00",
+  "strategy_version": "v0.2-F.2-pilot",
+  "updated_at": "2026-07-19T14:07:15+08:00",
   "weekly_snapshots": [
     {
       "date": "2026-07-16",
+      "decision_sha256": "2cafb4e30b591f8c70be6ba171533ad04e9b74832e3549b77cebe81f81534a2f",
+      "engine_sha256": "5733f73054eeac1b24e92af6a23a1fc4d841da2db745901b1a6b73421913a749",
+      "evidence_engine_version": "rules-recovery-v1",
       "hold_confirmations": [],
-      "input_sha256": "51acc26749adc4ffb9898472bdf563606b9fb95cdb682db23be327208402ec40",
+      "input_sha256": "8f8e27ae0010b198fde5a76a99f20309731e17e84c4014fd820027336028881f",
       "new_activations": [],
-      "radar": [],
+      "radar": [
+        "801230",
+        "801970",
+        "801740"
+      ],
+      "sample_eligibility": "excluded_repair",
+      "simulated_activations": [],
       "states": {
         "801010": "证据观察",
         "801030": "证据观察",
@@ -30,11 +47,11 @@
         "801180": "证据观察",
         "801200": "证据观察",
         "801210": "证据观察",
-        "801230": "证据观察",
+        "801230": "周期成熟",
         "801710": "证据观察",
         "801720": "证据观察",
         "801730": "证据观察",
-        "801740": "证据观察",
+        "801740": "早期雷达",
         "801750": "证据观察",
         "801760": "证据观察",
         "801770": "证据观察",
@@ -44,7 +61,7 @@
         "801890": "证据观察",
         "801950": "证据观察",
         "801960": "证据观察",
-        "801970": "证据观察",
+        "801970": "早期雷达",
         "801980": "证据观察"
       }
     }
