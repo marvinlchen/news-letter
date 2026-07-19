@@ -14,7 +14,7 @@ blocks: 80A/80B/80C + 90A/90B/91A/92B/93A/93B (Telok Blangah Street 31)
 - 4-room 判定：floorArea 在 950~1055 sqft（HDB 4-room≈1001；3-room≈731）。
 - 反爬：Cloudflare 会限流(HTTP 429)，fetch 带重试+退避+请求间隔。
 """
-import os, re, json, sys, time, random, datetime
+import os, re, json, sys, time, random, datetime, html
 
 try:
     from curl_cffi import requests
@@ -29,6 +29,10 @@ except ImportError:
     HAVE_DULWICH = False
 
 GIT_AUTHOR = b'marvinlchen <marvinlchen@users.noreply.github.com>'
+GIT_REMOTE = 'origin'
+GIT_REMOTE_URL = 'git@github.com:marvinlchen/news-letter.git'
+GIT_LOCAL_REF = 'refs/heads/master'
+GIT_REMOTE_REF = 'refs/heads/hdb-monitor'  # 独立分支，避免覆盖 finance-news-digest 的 main
 
 # 新加的 block 放前面，优先在限流前抓到
 BLOCKS = ['80A', '80B', '80C', '90A', '90B', '91A', '92B', '93A', '93B']
@@ -146,6 +150,78 @@ def fmt_price(p):
     return f"S${p:,}" if p else "价格未公开"
 
 
+FLOOR_MAP = {'LOW': '低楼层', 'MIDDLE': '中楼层', 'MID': '中楼层', 'HIGH': '高楼层'}
+
+
+def fetch_summary(url):
+    """抓详情页，返回 {summary, agent, floor_desc}。失败返回 {}。"""
+    t = fetch(url)
+    if not t:
+        return {}
+    d = {}
+    m = re.search(r'<h3 class="subtitle">(.*?)</h3>', t, re.S)
+    if m:
+        d['summary'] = html.unescape(re.sub(r'<[^>]+>', '', m.group(1))).strip()
+    m = re.search(r'listed by ([^.\-]+?)(?:\.|\s*-\s*|")', t)
+    if m:
+        d['agent'] = m.group(1).strip()
+    m = re.search(r'"floorLevel"\s*:\s*\{[^}]*"description"\s*:\s*"([^"]+)"', t)
+    if m:
+        d['floor_desc'] = m.group(1)
+    else:
+        m = re.search(r'"floorLevel"\s*:\s*\{[^}]*"code"\s*:\s*"([^"]+)"', t)
+        if m:
+            d['floor_desc'] = FLOOR_MAP.get(m.group(1).upper(), m.group(1))
+    return d
+
+
+def enrich_summaries(kept, prev):
+    """为 kept 里的房源补充摘要。老房源(价格未变)复用 prev 缓存，只抓新/变价的。"""
+    to_fetch = []
+    for lid, r in kept.items():
+        old = prev.get(lid)
+        if old and old.get('summary') and old.get('price') == r.get('price'):
+            r['summary'] = old.get('summary')
+            r['agent'] = old.get('agent')
+            r['floor_desc'] = old.get('floor_desc')
+        else:
+            to_fetch.append(lid)
+    log(f"摘要：复用缓存 {len(kept) - len(to_fetch)} 套，需抓取 {len(to_fetch)} 套")
+    for n, lid in enumerate(to_fetch, 1):
+        r = kept[lid]
+        log(f"  摘要 {n}/{len(to_fetch)}: {r['block']} {lid}")
+        s = fetch_summary(r['url'])
+        r['summary'] = s.get('summary', '')
+        r['agent'] = s.get('agent', '')
+        r['floor_desc'] = s.get('floor_desc', '')
+        time.sleep(2 + random.random())  # 礼貌间隔，降低限流概率
+
+
+def psf(r):
+    p, a = r.get('price'), r.get('area')
+    if p and a:
+        return f"S${round(p / a):,}/sqft"
+    return ""
+
+
+def fmt_listing(r, with_block=True):
+    """两行 markdown：第一行价格/面积/呎价/楼层，第二行摘要+中介。"""
+    prefix = f"[{r['block']}] " if with_block else ""
+    meta = [fmt_price(r.get('price')), f"{r.get('area')} sqft"]
+    ps = psf(r)
+    if ps:
+        meta.append(ps)
+    fd = r.get('floor_desc') or r.get('floor')
+    if fd:
+        meta.append(fd)
+    line1 = f"- **{prefix}{' · '.join(meta)}**"
+    # 第二行：摘要（中介卖点）+ 中介名 + 链接
+    summ = r.get('summary') or "（无摘要）"
+    agent = f" · 中介: {r['agent']}" if r.get('agent') else ""
+    line2 = f"  - {summ}{agent}\n  - {r['url']}"
+    return line1 + "\n" + line2
+
+
 def build_report(date_str, kept, excluded, prev, new_ids, sold_ids):
     L = []
     L.append("# HDB 4-room 订阅日报 · Telok Blangah Parcview")
@@ -163,7 +239,7 @@ def build_report(date_str, kept, excluded, prev, new_ids, sold_ids):
         L.append("## 🆕 今日上新")
         for i in new_ids:
             r = kept[i]
-            L.append(f"- [{r['block']}] {fmt_price(r['price'])} · {r['area']} sqft · {r['floor']} — {r['url']}")
+            L.append(fmt_listing(r))
         L.append("")
     if sold_ids:
         L.append("## ✅ 今日卖出 / 下架（先前在售，今日已消失）")
@@ -181,7 +257,7 @@ def build_report(date_str, kept, excluded, prev, new_ids, sold_ids):
         if not items:
             L.append("- 无")
         for r in sorted(items, key=lambda x: (x['price'] or 0), reverse=True):
-            L.append(f"- {fmt_price(r['price'])} · {r['area']} sqft · {r['floor']} — {r['url']}")
+            L.append(fmt_listing(r, with_block=False))
         L.append("")
     L.append("---")
     L.append(f"_生成时间 {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} · 数据来源 PropertyGuru（curl_cffi 抓取）_")
@@ -211,6 +287,23 @@ def git_commit(msg):
         log("git commit 跳过: " + str(e)[:120])
 
 
+def git_push():
+    """把 master 推到远程 hdb-monitor 分支（dulwich，无需 git 二进制）。"""
+    if not HAVE_DULWICH:
+        log("dulwich 不可用，跳过 git push")
+        return
+    try:
+        r = Repo(HOME)
+        # 确保 remote 存在
+        if not r.get_config().has_section((b'remote', GIT_REMOTE.encode())):
+            porcelain.remote_add(HOME, GIT_REMOTE, GIT_REMOTE_URL)
+        res = porcelain.push(HOME, GIT_REMOTE,
+                             [f'{GIT_LOCAL_REF}:{GIT_REMOTE_REF}'])
+        log(f"已 git push -> {GIT_REMOTE}/{GIT_REMOTE_REF.split('/')[-1]} ({res})")
+    except Exception as e:
+        log("git push 跳过: " + str(e)[:160])
+
+
 def main():
     os.makedirs(REPORT_DIR, exist_ok=True)
     date_str = datetime.datetime.now().strftime('%Y-%m-%d')
@@ -237,6 +330,7 @@ def main():
 
     new_ids = [i for i in kept if i not in prev]
     sold_ids = [i for i in prev if i not in kept]
+    enrich_summaries(kept, prev)
     report = build_report(date_str, kept, excluded, prev, new_ids, sold_ids)
     with open(STATE_FILE, 'w') as f:
         json.dump(kept, f, indent=2)
@@ -246,6 +340,7 @@ def main():
         f.write(report)
     log("日报已生成")
     git_commit(f"daily report {date_str}")
+    git_push()
     print("\n===== 日报摘要 =====")
     print(report)
 
