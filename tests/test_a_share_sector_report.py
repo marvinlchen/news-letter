@@ -146,8 +146,10 @@ class DeterministicReportTest(unittest.TestCase):
         states = {code: "早期观察" for code in evidence}
         return industries, evidence, candidates, metrics, states
 
-    def render(self, industries=None):
+    def render(self, industries=None, evidence_transform=None):
         base_industries, evidence, candidates, metrics, states = self.make_inputs()
+        if evidence_transform:
+            evidence_transform(evidence)
         return reporter.format_report(
             "2026-07-17",
             "v-test",
@@ -170,6 +172,9 @@ class DeterministicReportTest(unittest.TestCase):
                 "claim_count": 1,
                 "evidence_ref_count": 3,
                 "semantic_utilization": 1 / 6,
+                "ai_recovery_batches": 1,
+                "evidence_engine_version": "rules-recovery-v1",
+                "engine_sha256": "abcdef0123456789",
             },
         )
 
@@ -181,6 +186,8 @@ class DeterministicReportTest(unittest.TestCase):
         self.assertNotIn("## 产业证据雷达 Top 8", rendered)
         self.assertIn("修复回填（不计前瞻）", rendered)
         self.assertIn("2026-07-17 / 2026-07-16", rendered)
+        self.assertIn("模型协议规则恢复 | 1 批", rendered)
+        self.assertIn("rules-recovery-v1 @ abcdef012345", rendered)
 
     def test_free_model_prose_never_leaks(self) -> None:
         rendered = self.render()
@@ -203,6 +210,23 @@ class DeterministicReportTest(unittest.TestCase):
         second = self.render(list(reversed(industries)))
         self.assertEqual(first, second)
         self.assertLess(first.index("### 1. 行业乙"), first.index("### 2. 行业甲"))
+
+    def test_rules_recovery_watch_explains_why_partial_s_does_not_pass(self) -> None:
+        def mark_recovery(evidence):
+            evidence["801002"].update(
+                {
+                    "decision_source": "rules_recovery",
+                    "gate_eligible_categories": ["E"],
+                    "gate_eligible_entities": ["乙公司"],
+                    "gate_eligible_url_count": 1,
+                    "gate_blockers": ["规则恢复可入门的成分公司O/E类别不足2类"],
+                }
+            )
+
+        rendered = self.render(evidence_transform=mark_recovery)
+
+        self.assertIn("规则恢复可入门O/E：类别E；成分公司主体1/2；独立URL1/2", rendered)
+        self.assertIn("成分公司O/E类别不足2类", rendered)
 
 
 if __name__ == "__main__":

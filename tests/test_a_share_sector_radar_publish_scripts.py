@@ -39,7 +39,7 @@ def git(project: Path, *args: str) -> str:
     return run(["git", *args], project).stdout.strip()
 
 
-def write_artifacts_and_status(project: Path) -> list[str]:
+def write_artifacts_and_status(project: Path, status_overrides: dict | None = None) -> list[str]:
     report_dir = project / "published" / "a-share-sector-radar-weekly"
     snapshot_dir = report_dir / "snapshots"
     status_dir = project / "var" / "a-share-sector-radar-weekly-status"
@@ -73,6 +73,7 @@ def write_artifacts_and_status(project: Path) -> list[str]:
         "publish_commit": "",
         "publish_error": "",
     }
+    artifact_status.update(status_overrides or {})
     run_status = {
         "date": REPORT_DATE,
         "artifact_date": REPORT_DATE,
@@ -136,6 +137,44 @@ class PublisherIntegrationTest(unittest.TestCase):
             self.assertEqual(artifact_status["publish_commit"], report_commit)
             self.assertEqual(run_status["publish_commit"], report_commit)
             self.assertTrue(run_status["publish_required"])
+
+    def test_audited_evidence_recovery_is_publishable(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            project = Path(tmp)
+            self.init_project(project)
+            artifact_paths = write_artifacts_and_status(
+                project,
+                {
+                    "mode": "codebuddy+rules-recovery",
+                    "fallback_used": True,
+                    "fallback_kind": "audited_evidence_recovery",
+                    "ai_recovery_used": True,
+                    "ai_recovery_batches": 1,
+                    "evidence_engine_version": "rules-recovery-v1",
+                    "engine_sha256": "a" * 64,
+                },
+            )
+            git(project, "add", *artifact_paths)
+            git(project, "commit", "-m", "recovered report")
+
+            result = run([str(PUBLISHER)], project, self.publisher_env(project))
+
+            self.assertIn("is unchanged; existing commit", result.stdout)
+
+    def test_unknown_fallback_is_not_publishable(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            project = Path(tmp)
+            self.init_project(project)
+            write_artifacts_and_status(
+                project,
+                {
+                    "fallback_used": True,
+                    "fallback_kind": "untrusted_placeholder",
+                },
+            )
+
+            with self.assertRaisesRegex(AssertionError, "status is not publishable"):
+                run([str(PUBLISHER)], project, self.publisher_env(project))
 
     def test_diff_commit_contains_only_artifacts_and_trailer_then_pushes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

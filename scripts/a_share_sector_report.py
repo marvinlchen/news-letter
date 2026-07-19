@@ -292,16 +292,28 @@ def _evidence_gap_parts(item: dict, candidates: dict[str, list[dict]], code: str
     urls = _distinct_urls(item, candidates, code)
     contrary = _contrary_ids(item)
     flags = _quality_flags(item)
+    gate_blockers = _unique_strings(_values(item.get("gate_blockers")))
     missing_categories = max(0, 2 - len(categories))
     missing_entities = max(0, 2 - len(entities))
     missing_urls = max(0, 2 - len(urls))
-    return [
+    parts = [
         f"类别：{','.join(categories) if categories else '无'}（还缺{missing_categories}类）",
         f"主体：{len(entities)}/2（还缺{missing_entities}个）",
         f"独立URL：{len(urls)}/2（还缺{missing_urls}个）",
         f"相反证据：{str(len(contrary)) + '条' if contrary else '无'}",
         f"质量旗标：{','.join(flags) if flags else '无'}",
     ]
+    if _text(item.get("decision_source"), "") == "rules_recovery":
+        eligible_categories = _unique_strings(_values(item.get("gate_eligible_categories")))
+        eligible_entities = _unique_strings(_values(item.get("gate_eligible_entities")))
+        eligible_urls = _safe_int(item.get("gate_eligible_url_count"))
+        parts.append(
+            "规则恢复可入门O/E："
+            f"类别{','.join(eligible_categories) if eligible_categories else '无'}；"
+            f"成分公司主体{len(eligible_entities)}/2；独立URL{eligible_urls}/2；"
+            f"阻断：{'；'.join(gate_blockers) if gate_blockers else '无'}"
+        )
+    return parts
 
 
 def _gap_count(item: dict, candidates: dict[str, list[dict]], code: str) -> int:
@@ -311,6 +323,7 @@ def _gap_count(item: dict, candidates: dict[str, list[dict]], code: str) -> int:
         + max(0, 2 - len(_distinct_urls(item, candidates, code)))
         + len(_contrary_ids(item))
         + len(_quality_flags(item))
+        + len(_unique_strings(_values(item.get("gate_blockers"))))
     )
 
 
@@ -446,6 +459,9 @@ def format_report(
     quality_eligible = [code for code in pass_codes if len(_quality_flags(evidence.get(code, {}))) < 2]
     noncrowded = [code for code in quality_eligible if not _is_crowded(metrics.get(code, {}))]
     market_confirmed = [code for code in noncrowded if _market_pass_count(metrics.get(code, {})) >= 2]
+    engine_version = _text(run_quality.get("evidence_engine_version"), "未提供")
+    engine_sha = _text(run_quality.get("engine_sha256"), "")
+    engine_label = engine_version + (f" @ {engine_sha[:12]}" if engine_sha else "")
 
     lines = [
         f"# A股产业领先信号周报｜{report_date}",
@@ -461,6 +477,7 @@ def format_report(
         f"| 观察窗口 | {window_start} 至 {report_date} |",
         f"| 行情应到 / 实到 | {_cell(expected_date or '未提供')} / {_cell(source_date or '未提供')} |",
         f"| 策略版本 | `{_cell(strategy_version)}` |",
+        f"| 证据引擎 | `{_cell(engine_label)}` |",
         f"| 候选 / claim / 采用引用 | {candidate_count} / {claims_count} / {refs_count} |",
         f"| 候选行业覆盖 | {covered_count}/{len(codes)} |",
         f"| 语义利用率 | {_fmt_utilization(run_quality.get('semantic_utilization'))} |",
@@ -475,6 +492,9 @@ def format_report(
     source_errors = run_quality.get("source_error_total")
     if source_errors is not None:
         lines.append(f"| 数据源错误 | {_safe_int(source_errors)} |")
+    recovery_batches = _safe_int(run_quality.get("ai_recovery_batches"))
+    if recovery_batches:
+        lines.append(f"| 模型协议规则恢复 | {recovery_batches} 批；仅采用标题、实体、时点与TTL均通过脚本校验的字段 |")
 
     if new_activations:
         lines += ["", "本周新增激活：" + "、".join(names.get(code, code) for code in new_activations) + "。"]

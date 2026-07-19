@@ -87,6 +87,7 @@ class MarketFreshnessTest(unittest.TestCase):
         expected = today.isoformat()
         actual = (today - timedelta(days=1)).isoformat()
         args = radar.build_parser().parse_args(["--date", expected])
+        radar.RUN_STATS["ai_recovery_batches"] = 9
 
         with mock.patch.object(radar, "fetch_reference_trading_dates", return_value=[actual, expected]), mock.patch.object(
             radar, "fetch_all_sw_histories", return_value={}
@@ -104,6 +105,7 @@ class MarketFreshnessTest(unittest.TestCase):
         fetch_components.assert_not_called()
         collect_news.assert_not_called()
         analyze.assert_not_called()
+        self.assertEqual(radar.RUN_STATS["ai_recovery_batches"], 0)
 
 
 class EvidenceProtocolV2Test(unittest.TestCase):
@@ -238,6 +240,31 @@ class EvidenceProtocolV2Test(unittest.TestCase):
         self.assertEqual(item["component_entity_count"], 1)
         self.assertEqual(item["event_clusters"], ["earnings-two", "order-one"])
 
+    def test_model_cannot_omit_script_detected_contrary_evidence(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"].append(
+            {
+                "id": "801080-N3",
+                "title": "PCB订单同比下降30%",
+                "url": "https://example.test/negative",
+                "pub_date": "2026-07-12",
+                "category_tags": ["O"],
+                "positive_category_tags": [],
+                "negative_category_tags": ["O"],
+                "entity_names": ["PCB"],
+                "component_entities": [],
+                "event_cluster": "negative-three",
+                "source_type": "trusted_news",
+            }
+        )
+        raw = (
+            "EVIDENCE\t801080\tPASS\tO@801080-N1@甲方科技,E@801080-N2@PCB"
+            "\tNONE\tPCB\t模型错误遗漏了负向订单\tNONE"
+        )
+
+        with self.assertRaisesRegex(ValueError, "PASS硬门槛"):
+            self.parse(raw, candidates=candidates)
+
     def test_explicit_positive_tags_block_directionless_claim(self) -> None:
         candidates = copy.deepcopy(self.candidates)
         candidates["801080"][0]["positive_category_tags"] = []
@@ -262,8 +289,10 @@ class CandidateDirectionTest(unittest.TestCase):
     def test_demand_and_supply_titles_have_local_direction(self) -> None:
         self.assertEqual(radar.title_positive_category_tags("铜需求回暖"), ["S"])
         self.assertEqual(radar.title_positive_category_tags("铜需求下降"), [])
+        self.assertEqual(radar.title_negative_category_tags("铜需求下降"), ["S"])
         self.assertEqual(radar.title_positive_category_tags("铜供给收缩"), ["S"])
         self.assertEqual(radar.title_positive_category_tags("铜供应过剩"), [])
+        self.assertEqual(radar.title_negative_category_tags("铜供应过剩"), ["S"])
 
     def test_single_character_industry_alias_requires_signal_context(self) -> None:
         industry = {"name": "有色金属", "aliases": ["铜"]}
@@ -283,6 +312,20 @@ class CandidateDirectionTest(unittest.TestCase):
                 [],
             )
         )
+
+    def test_downstream_input_price_increase_is_not_positive_supply_evidence(self) -> None:
+        bound = radar.bind_candidate(
+            {
+                "title": "PCB原材料价格上涨，企业成本压力加大",
+                "url": "https://example.test/input-cost",
+            },
+            {"name": "电子", "aliases": ["PCB"]},
+            [],
+        )
+
+        self.assertIsNotNone(bound)
+        self.assertEqual(bound["positive_category_tags"], [])
+        self.assertEqual(bound["negative_category_tags"], ["S"])
 
     def test_positive_direction_does_not_bleed_across_categories(self) -> None:
         self.assertEqual(radar.title_positive_category_tags("甲公司订单增长，利润承压"), ["O"])
@@ -354,12 +397,215 @@ class EvidenceSemanticValidationTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "重复的全WATCH空claim"):
             radar.validate_evidence_semantics(evidence, candidates)
 
+    def test_stale_positive_official_is_not_mandatory(self) -> None:
+        evidence = {"801001": self.empty_watch("公告已超过TTL")}
+        candidates = {
+            "801001": [
+                {
+                    "id": "801001-N1",
+                    "source_type": "announcement",
+                    "pub_date": "2026-01-01",
+                    "positive_category_tags": ["E"],
+                    "component_entities": ["甲公司"],
+                }
+            ]
+        }
+
+        radar.validate_evidence_semantics(
+            evidence,
+            candidates,
+            "2026-07-16",
+            {"S": 45, "O": 120, "E": 120},
+        )
+
+
+class DeterministicEvidenceRecoveryTest(unittest.TestCase):
+    def setUp(self) -> None:
+        self.industries = [{"code": "801080", "name": "电子", "aliases": ["PCB"], "template": "订单"}]
+        self.components = {
+            "801080": [
+                {"code": "000001", "name": "甲方科技"},
+                {"code": "000002", "name": "乙方电子"},
+            ]
+        }
+        self.candidates = {
+            "801080": [
+                {
+                    "id": "801080-N1",
+                    "title": "甲方科技预计净利润同比增长80%",
+                    "url": "https://example.test/earnings",
+                    "pub_date": "2026-07-10",
+                    "source_type": "announcement",
+                    "positive_category_tags": ["E"],
+                    "negative_category_tags": [],
+                    "entity_names": ["甲方科技"],
+                    "component_entities": ["甲方科技"],
+                    "event_cluster": "earnings-one",
+                },
+                {
+                    "id": "801080-N2",
+                    "title": "乙方电子新增订单增长50%",
+                    "url": "https://example.test/order",
+                    "pub_date": "2026-07-11",
+                    "source_type": "trusted_news",
+                    "positive_category_tags": ["O"],
+                    "negative_category_tags": [],
+                    "entity_names": ["乙方电子"],
+                    "component_entities": ["乙方电子"],
+                    "event_cluster": "order-two",
+                },
+            ]
+        }
+        self.ttl = {"S": 45, "O": 120, "E": 120}
+
+    def build(self, candidates: dict[str, list[dict]] | None = None) -> dict:
+        return radar.deterministic_grounded_evidence(
+            "2026-07-16",
+            self.industries,
+            candidates or self.candidates,
+            self.ttl,
+            self.components,
+        )
+
+    def test_recovery_can_pass_only_with_grounded_independent_fields(self) -> None:
+        item = self.build()["801080"]
+
+        self.assertEqual(item["gate"], "PASS")
+        self.assertEqual(item["categories"], ["E", "O"])
+        self.assertEqual(item["evidence_ids"], ["801080-N1", "801080-N2"])
+        self.assertEqual(item["component_entity_count"], 2)
+
+    def test_multitag_official_prefers_gate_eligible_earnings_over_supply(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"][0]["positive_category_tags"] = ["E", "S"]
+
+        item = self.build(candidates)["801080"]
+
+        official_claim = next(claim for claim in item["claims"] if claim["evidence_id"] == "801080-N1")
+        self.assertEqual(official_claim["category"], "E")
+        self.assertEqual(item["gate_eligible_categories"], ["E", "O"])
+        self.assertEqual(item["gate"], "PASS")
+
+    def test_multitag_official_chooses_category_complementing_other_company(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"][0]["positive_category_tags"] = ["E", "O"]
+
+        item = self.build(candidates)["801080"]
+
+        official_claim = next(claim for claim in item["claims"] if claim["evidence_id"] == "801080-N1")
+        self.assertEqual(official_claim["category"], "E")
+        self.assertEqual(item["gate_eligible_categories"], ["E", "O"])
+        self.assertEqual(item["gate"], "PASS")
+
+    def test_negative_title_is_contrary_and_forces_watch(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"].append(
+            {
+                "id": "801080-N3",
+                "title": "PCB订单同比下降30%",
+                "url": "https://example.test/negative",
+                "pub_date": "2026-07-12",
+                "source_type": "trusted_news",
+                "positive_category_tags": [],
+                "negative_category_tags": ["O"],
+                "entity_names": ["PCB"],
+                "component_entities": [],
+                "event_cluster": "negative-three",
+            }
+        )
+
+        item = self.build(candidates)["801080"]
+
+        self.assertEqual(item["gate"], "WATCH")
+        self.assertEqual(item["contrary_ids"], ["801080-N3"])
+
+    def test_news_only_recovery_never_auto_passes(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"][0]["source_type"] = "trusted_news"
+
+        item = self.build(candidates)["801080"]
+
+        self.assertEqual(item["gate"], "WATCH")
+        self.assertIn("缺少公司公告锚点", item["summary"])
+
+    def test_industry_alias_announcement_is_not_a_company_anchor(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"][0].update(
+            {
+                "title": "PCB利润增长",
+                "entity_names": ["PCB"],
+                "component_entities": [],
+            }
+        )
+
+        item = self.build(candidates)["801080"]
+
+        self.assertEqual(item["gate"], "WATCH")
+        self.assertIn("缺少公司公告锚点", item["summary"])
+
+    def test_mixed_direction_selected_claim_remains_contrary(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"][1]["title"] = "乙方电子利润增长但订单下降"
+        candidates["801080"][1]["negative_category_tags"] = ["O"]
+
+        item = self.build(candidates)["801080"]
+
+        self.assertIn("801080-N2", item["evidence_ids"])
+        self.assertIn("801080-N2", item["contrary_ids"])
+        self.assertEqual(item["gate"], "WATCH")
+
+    def test_supply_signal_does_not_contribute_to_rules_recovery_pass(self) -> None:
+        candidates = copy.deepcopy(self.candidates)
+        candidates["801080"][1].update(
+            {
+                "title": "乙方电子产品价格上涨",
+                "positive_category_tags": ["S"],
+                "negative_category_tags": [],
+            }
+        )
+
+        item = self.build(candidates)["801080"]
+
+        self.assertIn("S", item["categories"])
+        self.assertEqual(item["gate"], "WATCH")
+        self.assertEqual(item["decision_source"], "rules_recovery")
+        self.assertEqual(item["gate_eligible_categories"], ["E"])
+        self.assertTrue(any("成分公司O/E类别不足2类" in gap for gap in item["gate_blockers"]))
+
+    def test_three_invalid_model_attempts_use_audited_recovery(self) -> None:
+        before = copy.deepcopy(radar.RUN_STATS)
+        radar.RUN_STATS["ai_recovery_batches"] = 0
+        try:
+            with mock.patch.object(radar, "call_ai", return_value="not a protocol") as call_ai:
+                evidence, raw = radar.analyze_evidence(
+                    "2026-07-16",
+                    self.industries,
+                    self.candidates,
+                    "codebuddy",
+                    "hy3",
+                    self.ttl,
+                    self.components,
+                )
+
+            self.assertEqual(call_ai.call_count, 3)
+            self.assertEqual(evidence["801080"]["gate"], "PASS")
+            self.assertIn("RULES_RECOVERY_BATCH_1", raw)
+            self.assertIn("response_sha256=", raw)
+            self.assertNotIn("not a protocol", raw)
+            self.assertEqual(radar.RUN_STATS["ai_recovery_batches"], 1)
+        finally:
+            radar.RUN_STATS.clear()
+            radar.RUN_STATS.update(before)
+
 
 class DecisionHashTest(unittest.TestCase):
     def setUp(self) -> None:
         self.payload = {
             "generated_at": "2026-07-19T10:00:00+08:00",
             "ai_raw_protocol": "model prose A",
+            "ai_recovery_batches": 0,
+            "evidence_engine_version": "rules-recovery-v1",
+            "engine_sha256": "a" * 64,
             "evidence": {"801080": {"gate": "WATCH", "categories": ["O"]}},
             "candidates": {
                 "801080": [
@@ -376,6 +622,7 @@ class DecisionHashTest(unittest.TestCase):
         changed = copy.deepcopy(self.payload)
         changed["generated_at"] = "2026-07-20T10:00:00+08:00"
         changed["ai_raw_protocol"] = "model prose B"
+        changed["ai_recovery_batches"] = 2
         changed["candidates"]["801080"][0]["fetched_at"] = "2026-07-20T09:00:00+08:00"
 
         self.assertEqual(
@@ -389,9 +636,12 @@ class DecisionHashTest(unittest.TestCase):
         gate_changed["evidence"]["801080"]["gate"] = "PASS"
         title_changed = copy.deepcopy(self.payload)
         title_changed["candidates"]["801080"][0]["title"] = "甲方科技订单下滑"
+        engine_changed = copy.deepcopy(self.payload)
+        engine_changed["engine_sha256"] = "b" * 64
 
         self.assertNotEqual(baseline, radar.decision_sha256(gate_changed))
         self.assertNotEqual(baseline, radar.decision_sha256(title_changed))
+        self.assertNotEqual(baseline, radar.decision_sha256(engine_changed))
 
 
 class BatchedEvidenceAnalysisTest(unittest.TestCase):
@@ -597,7 +847,15 @@ class RepairRunIntegrationTest(unittest.TestCase):
             self.assertEqual(repaired_ledger["active_cycles"], {})
             self.assertEqual(repaired_snapshot["new_activations"], [])
             self.assertEqual(repaired_snapshot["sample_eligibility"], "excluded_repair")
-            self.assertIn("修复回填（不计前瞻）", (output / f"{report_date}.md").read_text(encoding="utf-8"))
+            self.assertEqual(repaired_snapshot["evidence_engine_version"], "rules-recovery-v1")
+            self.assertRegex(repaired_snapshot["engine_sha256"], r"^[0-9a-f]{64}$")
+            self.assertEqual(
+                repaired_ledger["weekly_snapshots"][-1]["engine_sha256"],
+                repaired_snapshot["engine_sha256"],
+            )
+            rendered = (output / f"{report_date}.md").read_text(encoding="utf-8")
+            self.assertIn("修复回填（不计前瞻）", rendered)
+            self.assertIn("rules-recovery-v1", rendered)
 
 
 class ReuseStatusTest(unittest.TestCase):
@@ -629,7 +887,13 @@ class ReuseStatusTest(unittest.TestCase):
             artifact_status = {
                 "date": report_date,
                 "strategy_version": "v-test",
-                "mode": "codebuddy",
+                "evidence_engine_version": "rules-recovery-v1",
+                "engine_sha256": "a" * 64,
+                "mode": "codebuddy+rules-recovery",
+                "fallback_used": True,
+                "fallback_kind": "audited_evidence_recovery",
+                "ai_recovery_used": True,
+                "ai_recovery_batches": 1,
                 "publishable": True,
                 "publish_status": "pending",
                 "report_sha256": digest(report),
@@ -654,6 +918,10 @@ class ReuseStatusTest(unittest.TestCase):
 
             self.assertTrue(run_status["publish_required"])
             self.assertEqual(run_status["outcome"], "reused_pending_publish")
+            self.assertEqual(run_status["evidence_engine_version"], "rules-recovery-v1")
+            self.assertEqual(run_status["engine_sha256"], "a" * 64)
+            self.assertTrue(run_status["fallback_used"])
+            self.assertEqual(run_status["fallback_kind"], "audited_evidence_recovery")
             self.assertTrue(json.loads((status_dir / "latest-run.json").read_text())["publish_required"])
             self.assertEqual(before, {path: path.read_bytes() for path in before})
 

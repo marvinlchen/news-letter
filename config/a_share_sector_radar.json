@@ -1,5 +1,6 @@
 {
   "strategy_version": "v0.2-F.2-pilot",
+  "evidence_engine_version": "rules-recovery-v1",
   "radar_limit": 8,
   "activation_limit": 3,
   "news_lookback_days": 180,

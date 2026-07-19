@@ -83,7 +83,17 @@ status = json.loads(status_path.read_text(encoding="utf-8"))
 report_date = str(status.get("date", ""))
 if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", report_date):
     raise SystemExit("publish: invalid status date")
-if not status.get("publishable") or status.get("fallback_used") or status.get("codex_error") or status.get("error"):
+fallback_used = bool(status.get("fallback_used"))
+audited_recovery = (
+    fallback_used
+    and status.get("fallback_kind") == "audited_evidence_recovery"
+    and status.get("ai_recovery_used") is True
+    and int(status.get("ai_recovery_batches") or 0) > 0
+    and "+rules-recovery" in str(status.get("mode", ""))
+    and re.fullmatch(r"[a-z0-9][a-z0-9._-]{2,63}", str(status.get("evidence_engine_version", "")))
+    and re.fullmatch(r"[0-9a-f]{64}", str(status.get("engine_sha256", "")))
+)
+if not status.get("publishable") or (fallback_used and not audited_recovery) or status.get("codex_error") or status.get("error"):
     raise SystemExit("publish: status is not publishable")
 if status.get("mode") == "rules-diagnostic":
     raise SystemExit("publish: diagnostic report is forbidden")

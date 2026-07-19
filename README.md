@@ -208,8 +208,15 @@ latest common Shenwan industry date with an independent Shanghai Composite
 trading calendar and stops before news, AI and ledger writes when Shenwan is
 behind. Evidence candidates combine company-bound news with CNInfo official
 announcements; the model audits industries in small batches and WATCH rows
-retain grounded partial claims. A semantically empty all-WATCH response fails
-closed.
+retain grounded partial claims. Invalid or semantically empty model rows are
+rejected. If one batch still fails after three attempts, a visibly labeled
+rules-recovery path derives claims only from script-validated direction,
+entity binding, timestamps and TTL; model prose is never copied into the
+report. Recovery artifacts use `fallback_used=true` with
+`fallback_kind=audited_evidence_recovery`; the publisher allows only that
+explicit audited fallback and rejects other fallback kinds. Every public
+snapshot, run status and ledger sample freezes `evidence_engine_version` plus
+the combined SHA-256 of the evidence and report engines.
 
 For a non-publishing diagnostic run, use `PUBLISH_TO_GITHUB=0`. Rebuilding a
 known-invalid same-day artifact requires the explicit `--repair-existing`
