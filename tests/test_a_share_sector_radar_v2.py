@@ -24,6 +24,40 @@ SPEC.loader.exec_module(radar)
 
 
 class MarketFreshnessTest(unittest.TestCase):
+    def test_tencent_reference_calendar_parses_sessions_and_cutoff(self) -> None:
+        payload = {
+            "data": {
+                "sh000001": {
+                    "day": [
+                        ["2026-07-16", "1", "1"],
+                        ["2026-07-17", "1", "1"],
+                        ["2026-07-20", "1", "1"],
+                    ]
+                }
+            }
+        }
+        with mock.patch.object(radar, "request_json", return_value=payload):
+            self.assertEqual(
+                radar.fetch_tencent_reference_trading_dates(date(2026, 7, 19)),
+                ["2026-07-16", "2026-07-17"],
+            )
+
+    def test_reference_calendar_falls_back_to_tencent(self) -> None:
+        expected = ["2026-07-16", "2026-07-17"]
+        with mock.patch.object(radar, "request_json", side_effect=ConnectionError("eastmoney closed")), mock.patch.object(
+            radar, "fetch_tencent_reference_trading_dates", return_value=expected
+        ) as tencent:
+            self.assertEqual(radar.fetch_reference_trading_dates(date(2026, 7, 19)), expected)
+
+        tencent.assert_called_once_with(date(2026, 7, 19))
+
+    def test_reference_calendar_fails_closed_when_both_sources_fail(self) -> None:
+        with mock.patch.object(radar, "request_json", side_effect=ConnectionError("eastmoney closed")), mock.patch.object(
+            radar, "fetch_tencent_reference_trading_dates", side_effect=RuntimeError("tencent unavailable")
+        ):
+            with self.assertRaisesRegex(RuntimeError, "东财: eastmoney closed；腾讯: tencent unavailable"):
+                radar.fetch_reference_trading_dates(date(2026, 7, 19))
+
     def test_one_missing_session_is_stale(self) -> None:
         result = radar.assess_market_freshness(
             "2026-07-16",

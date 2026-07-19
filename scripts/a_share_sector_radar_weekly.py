@@ -54,6 +54,7 @@ DEFAULT_CACHE_DIR = PROJECT_ROOT / "var" / "a-share-sector-radar-cache"
 SW_HISTORY_URL = "https://www.swsresearch.com/institute-sw/api/index_publish/trend/"
 SW_COMPONENT_URL = "https://www.swsresearch.com/institute-sw/api/index_publish/details/component_stocks/"
 EASTMONEY_KLINE_URL = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
+TENCENT_KLINE_URL = "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get"
 SW_SOURCE_URL = "https://www.swsresearch.com/institute_sw/allIndex/releasedIndex"
 CNINFO_STOCK_INDEX_URL = "https://www.cninfo.com.cn/new/data/szse_stock.json"
 CNINFO_ANNOUNCEMENT_URL = "https://www.cninfo.com.cn/new/hisAnnouncement/query"
@@ -272,30 +273,66 @@ def load_config(path: Path) -> dict:
     return config
 
 
-def fetch_reference_trading_dates(cutoff: date) -> list[str]:
-    """Return Shanghai Composite sessions up to cutoff as the freshness calendar."""
-    begin = (cutoff - timedelta(days=60)).strftime("%Y%m%d")
+def fetch_tencent_reference_trading_dates(cutoff: date) -> list[str]:
+    """Return Shanghai Composite sessions from Tencent's independent feed."""
+    begin = (cutoff - timedelta(days=60)).isoformat()
     payload = request_json(
-        EASTMONEY_KLINE_URL,
-        {
-            "secid": "1.000001",
-            "klt": 101,
-            "fqt": 1,
-            "beg": begin,
-            "end": cutoff.strftime("%Y%m%d"),
-            "lmt": 80,
-            "fields1": "f1,f2,f3,f4,f5,f6",
-            "fields2": "f51,f52,f53",
-        },
+        TENCENT_KLINE_URL,
+        {"param": f"sh000001,day,{begin},{cutoff.isoformat()},100,qfq"},
         timeout=15,
         retries=2,
     )
-    raw_rows = ((payload.get("data") or {}).get("klines") or [])
-    rows = normalize_stock_prices(raw_rows, cutoff.isoformat())
-    dates = sorted({row["date"] for row in rows})
-    if not dates:
-        raise RuntimeError("上证指数交易日历为空，无法判断申万行情是否完整")
-    return dates
+    node = ((payload.get("data") or {}).get("sh000001") or {})
+    raw_rows = node.get("qfqday") or node.get("day") or []
+    result = sorted(
+        {
+            parsed.isoformat()
+            for row in raw_rows
+            if isinstance(row, list) and row and (parsed := parse_iso_date(str(row[0]))) and parsed <= cutoff
+        }
+    )
+    if not result:
+        raise RuntimeError("腾讯上证指数交易日历为空，无法判断申万行情是否完整")
+    return result
+
+
+def fetch_reference_trading_dates(cutoff: date) -> list[str]:
+    """Return an independent exchange-session calendar up to cutoff."""
+    begin = (cutoff - timedelta(days=60)).strftime("%Y%m%d")
+    eastmoney_error = ""
+    try:
+        payload = request_json(
+            EASTMONEY_KLINE_URL,
+            {
+                "secid": "1.000001",
+                "klt": 101,
+                "fqt": 1,
+                "beg": begin,
+                "end": cutoff.strftime("%Y%m%d"),
+                "lmt": 80,
+                "fields1": "f1,f2,f3,f4,f5,f6",
+                "fields2": "f51,f52,f53",
+            },
+            timeout=15,
+            retries=2,
+        )
+        raw_rows = ((payload.get("data") or {}).get("klines") or [])
+        rows = normalize_stock_prices(raw_rows, cutoff.isoformat())
+        dates = sorted({row["date"] for row in rows})
+        if not dates:
+            raise RuntimeError("上证指数交易日历为空")
+        return dates
+    except Exception as exc:
+        eastmoney_error = str(exc)
+
+    try:
+        dates = fetch_tencent_reference_trading_dates(cutoff)
+        print(f"[WARN] 东财上证交易日历不可用，改用腾讯上证指数: {eastmoney_error}", file=sys.stderr)
+        return dates
+    except Exception as tencent_exc:
+        raise RuntimeError(
+            f"独立交易日历获取失败；东财: {eastmoney_error}；腾讯: {tencent_exc}"
+        ) from tencent_exc
 
 
 def assess_market_freshness(actual: str, expected: str, reference_dates: list[str]) -> dict:
