@@ -1925,8 +1925,20 @@ def fetch_all_components(industries: list[dict], cache_dir: Path) -> dict[str, l
 
 
 def eastmoney_secid(stock_code: str) -> str:
-    market = "1" if stock_code.startswith(("5", "6", "9")) else "0"
+    is_shanghai = stock_code.startswith(("5", "6", "9")) and not stock_code.startswith("92")
+    market = "1" if is_shanghai else "0"
     return f"{market}.{stock_code}"
+
+
+def tencent_stock_symbol(stock_code: str) -> str:
+    """Return Tencent's exchange-prefixed symbol for an A-share code."""
+    if stock_code.startswith(("4", "8", "92")):
+        market = "bj"
+    elif stock_code.startswith(("5", "6", "9")):
+        market = "sh"
+    else:
+        market = "sz"
+    return f"{market}{stock_code}"
 
 
 def stock_cache_path(cache_dir: Path, stock_code: str) -> Path:
@@ -1934,42 +1946,89 @@ def stock_cache_path(cache_dir: Path, stock_code: str) -> Path:
 
 
 def normalize_stock_prices(rows: list, cutoff: str) -> list[dict]:
+    cutoff_date = parse_iso_date(cutoff)
+    if cutoff_date is None:
+        raise ValueError(f"无效行情截止日: {cutoff}")
     result: list[dict] = []
+    seen_dates: set[str] = set()
     for row in rows:
         if isinstance(row, str):
             fields = row.split(",")
             if len(fields) < 3:
-                continue
+                raise ValueError("行情行字段不足")
             day, close_text = fields[0], fields[2]
+        elif isinstance(row, list):
+            if len(row) < 3:
+                raise ValueError("行情行字段不足")
+            day, close_text = str(row[0]), row[2]
         elif isinstance(row, dict):
             day, close_text = str(row.get("date", "")), row.get("close")
         else:
-            continue
+            raise ValueError("行情行格式无效")
+        parsed_day = parse_iso_date(day)
+        if parsed_day is None or parsed_day.isoformat() != day:
+            raise ValueError(f"行情日期无效: {day}")
         try:
             close = float(close_text)
         except (TypeError, ValueError):
+            raise ValueError(f"行情收盘价无效: {close_text}") from None
+        if not math.isfinite(close) or close <= 0:
+            raise ValueError(f"行情收盘价无效: {close_text}")
+        if parsed_day > cutoff_date:
             continue
-        if day <= cutoff and close > 0:
-            result.append({"date": day, "close": close})
+        if day in seen_dates:
+            raise ValueError(f"行情日期重复: {day}")
+        seen_dates.add(day)
+        result.append({"date": day, "close": close})
     result.sort(key=lambda item: item["date"])
     return result
 
 
-def fetch_stock_prices(stock_code: str, report_date: str, cache_dir: Path) -> list[dict]:
-    cache_path = stock_cache_path(cache_dir, stock_code)
-    if cache_path.exists():
-        try:
-            cached = json.loads(cache_path.read_text(encoding="utf-8"))
-            rows = normalize_stock_prices(cached.get("rows") or [], report_date)
-            if rows and rows[-1]["date"] >= report_date:
-                with STATS_LOCK:
-                    RUN_STATS["breadth_stock_cache_hits"] = int(RUN_STATS["breadth_stock_cache_hits"]) + 1
-                return rows
-        except Exception:
-            pass
-    with STATS_LOCK:
-        RUN_STATS["breadth_stock_requests"] = int(RUN_STATS["breadth_stock_requests"]) + 1
-    begin = (parse_iso_date(report_date) - timedelta(days=180)).strftime("%Y%m%d")
+def validate_stock_price_series(prices: list[dict], report_date: str, source: str) -> list[dict]:
+    cutoff = parse_iso_date(report_date)
+    if cutoff is None:
+        raise ValueError(f"无效报告日期: {report_date}")
+    if len(prices) < 60:
+        raise RuntimeError(f"{source}有效日线不足60条: {len(prices)}")
+    latest = parse_iso_date(prices[-1]["date"])
+    if latest is None or latest > cutoff:
+        raise RuntimeError(f"{source}日线末日无效: {prices[-1].get('date', '')}")
+    return prices
+
+
+def stock_price_series_is_fresh(prices: list[dict], report_date: str) -> bool:
+    latest = parse_iso_date(prices[-1]["date"] if prices else "")
+    cutoff = parse_iso_date(report_date)
+    max_stale_days = max(0, int(os.environ.get("A_SHARE_SECTOR_RADAR_MAX_STALE_STOCK_DAYS", "10")))
+    return bool(latest and cutoff and 0 <= (cutoff - latest).days <= max_stale_days)
+
+
+def fetch_tencent_stock_prices(stock_code: str, report_date: str) -> list[dict]:
+    cutoff = parse_iso_date(report_date)
+    if cutoff is None:
+        raise ValueError(f"无效报告日期: {report_date}")
+    symbol = tencent_stock_symbol(stock_code)
+    begin = (cutoff - timedelta(days=180)).isoformat()
+    payload = request_json(
+        TENCENT_KLINE_URL,
+        {"param": f"{symbol},day,{begin},{report_date},200,qfq"},
+        timeout=10,
+        retries=1,
+    )
+    node = ((payload.get("data") or {}).get(symbol) or {})
+    raw_rows = node.get("qfqday") or []
+    if not raw_rows:
+        raw_count = len(node.get("day") or [])
+        raise RuntimeError(f"腾讯{symbol}缺少前复权日线（原始日线{raw_count}条）")
+    prices = normalize_stock_prices(raw_rows, report_date)
+    return validate_stock_price_series(prices, report_date, f"腾讯{symbol}")
+
+
+def fetch_eastmoney_stock_prices(stock_code: str, report_date: str) -> list[dict]:
+    cutoff = parse_iso_date(report_date)
+    if cutoff is None:
+        raise ValueError(f"无效报告日期: {report_date}")
+    begin = (cutoff - timedelta(days=180)).strftime("%Y%m%d")
     payload = request_json(
         EASTMONEY_KLINE_URL,
         {
@@ -1987,8 +2046,61 @@ def fetch_stock_prices(stock_code: str, report_date: str, cache_dir: Path) -> li
     )
     raw = ((payload.get("data") or {}).get("klines") or [])
     prices = normalize_stock_prices(raw, report_date)
-    if prices:
-        atomic_write_json(cache_path, {"fetched_on": date.today().isoformat(), "rows": prices})
+    return validate_stock_price_series(prices, report_date, f"东财{stock_code}")
+
+
+def fetch_stock_prices(stock_code: str, report_date: str, cache_dir: Path) -> list[dict]:
+    cache_path = stock_cache_path(cache_dir, stock_code)
+    cached_rows: list[dict] = []
+    if cache_path.exists():
+        try:
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            cached_rows = normalize_stock_prices(cached.get("rows") or [], report_date)
+            cached_rows = validate_stock_price_series(cached_rows, report_date, f"缓存{stock_code}")
+            if cached_rows[-1]["date"] >= report_date:
+                with STATS_LOCK:
+                    RUN_STATS["breadth_stock_cache_hits"] = int(RUN_STATS["breadth_stock_cache_hits"]) + 1
+                return cached_rows
+        except Exception:
+            cached_rows = []
+    with STATS_LOCK:
+        RUN_STATS["breadth_stock_requests"] = int(RUN_STATS["breadth_stock_requests"]) + 1
+    tencent_error = ""
+    tencent_prices: list[dict] = []
+    try:
+        tencent_prices = fetch_tencent_stock_prices(stock_code, report_date)
+    except Exception as exc:
+        tencent_error = str(exc)
+
+    eastmoney_error = ""
+    eastmoney_prices: list[dict] = []
+    if not tencent_prices or not stock_price_series_is_fresh(tencent_prices, report_date):
+        try:
+            eastmoney_prices = fetch_eastmoney_stock_prices(stock_code, report_date)
+        except Exception as exc:
+            eastmoney_error = str(exc)
+
+    available = [
+        (source, rows)
+        for source, rows in (
+            ("tencent", tencent_prices),
+            ("eastmoney", eastmoney_prices),
+            ("cache", cached_rows),
+        )
+        if rows
+    ]
+    if available:
+        selected_source, prices = max(available, key=lambda item: (item[1][-1]["date"], len(item[1])))
+        if selected_source == "cache":
+            with STATS_LOCK:
+                RUN_STATS["breadth_stock_cache_hits"] = int(RUN_STATS["breadth_stock_cache_hits"]) + 1
+    else:
+        if eastmoney_error:
+            raise RuntimeError(
+                f"{stock_code}成分股日线双源失败；腾讯: {tencent_error}；东财: {eastmoney_error}"
+            )
+        raise RuntimeError(f"{stock_code}成分股日线不可用；腾讯: {tencent_error}")
+    atomic_write_json(cache_path, {"fetched_on": date.today().isoformat(), "rows": prices})
     return prices
 
 

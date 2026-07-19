@@ -108,6 +108,268 @@ class MarketFreshnessTest(unittest.TestCase):
         self.assertEqual(radar.RUN_STATS["ai_recovery_batches"], 0)
 
 
+class StockPriceSourceTest(unittest.TestCase):
+    def test_eastmoney_symbol_keeps_new_beijing_codes_off_shanghai(self) -> None:
+        expected = {
+            "000001": "0.000001",
+            "430047": "0.430047",
+            "830000": "0.830000",
+            "920001": "0.920001",
+            "600000": "1.600000",
+            "688981": "1.688981",
+            "900901": "1.900901",
+        }
+        for stock_code, secid in expected.items():
+            with self.subTest(stock_code=stock_code):
+                self.assertEqual(radar.eastmoney_secid(stock_code), secid)
+
+    def test_tencent_symbol_maps_shenzhen_shanghai_and_beijing(self) -> None:
+        expected = {
+            "000001": "sz000001",
+            "300750": "sz300750",
+            "600000": "sh600000",
+            "688981": "sh688981",
+            "430047": "bj430047",
+            "830000": "bj830000",
+            "920001": "bj920001",
+            "900901": "sh900901",
+        }
+        for stock_code, symbol in expected.items():
+            with self.subTest(stock_code=stock_code):
+                self.assertEqual(radar.tencent_stock_symbol(stock_code), symbol)
+
+    def test_tencent_stock_prices_parse_qfq_rows_and_apply_cutoff(self) -> None:
+        start = date(2026, 5, 17)
+        qfq_rows = [
+            [
+                (start + timedelta(days=offset)).isoformat(),
+                "10.0",
+                str(10.5 + offset / 10),
+                "20.0",
+            ]
+            for offset in range(61)
+        ]
+        qfq_rows.append(["2026-07-17", "11.0", "99.0", "100.0"])
+        payload = {
+            "data": {
+                "sz000652": {
+                    "qfqday": qfq_rows,
+                }
+            }
+        }
+        with mock.patch.object(radar, "request_json", return_value=payload) as request:
+            prices = radar.fetch_tencent_stock_prices("000652", "2026-07-16")
+
+        self.assertEqual(len(prices), 61)
+        self.assertEqual(prices[0], {"date": "2026-05-17", "close": 10.5})
+        self.assertEqual(prices[-1], {"date": "2026-07-16", "close": 16.5})
+        request.assert_called_once_with(
+            radar.TENCENT_KLINE_URL,
+            {"param": "sz000652,day,2026-01-17,2026-07-16,200,qfq"},
+            timeout=10,
+            retries=1,
+        )
+
+    def test_tencent_stock_prices_reject_day_rows_when_qfq_is_missing(self) -> None:
+        payload = {
+            "data": {
+                "sh600000": {
+                    "day": [["2026-07-16", "10.0", "10.8", "11.0"]] * 60,
+                }
+            }
+        }
+        with mock.patch.object(radar, "request_json", return_value=payload):
+            with self.assertRaisesRegex(RuntimeError, "缺少前复权日线（原始日线60条）"):
+                radar.fetch_tencent_stock_prices("600000", "2026-07-16")
+
+    def test_normalize_stock_prices_rejects_bad_duplicate_or_nonfinite_rows(self) -> None:
+        invalid_cases = (
+            [["2026/07/16", "10.0", "10.8"]],
+            [["2026-07-16", "10.0", "inf"]],
+            [
+                ["2026-07-16", "10.0", "10.8"],
+                ["2026-07-16", "10.0", "10.8"],
+            ],
+        )
+        for rows in invalid_cases:
+            with self.subTest(rows=rows):
+                with self.assertRaises(ValueError):
+                    radar.normalize_stock_prices(rows, "2026-07-16")
+
+    def test_validate_stock_price_series_rejects_sparse_but_preserves_stale_rows(self) -> None:
+        sparse = [{"date": "2026-07-16", "close": 10.0}] * 59
+        with self.assertRaisesRegex(RuntimeError, "有效日线不足60条"):
+            radar.validate_stock_price_series(sparse, "2026-07-16", "测试源")
+
+        stale = [
+            {"date": (date(2026, 4, 1) + timedelta(days=offset)).isoformat(), "close": 10.0}
+            for offset in range(60)
+        ]
+        self.assertEqual(radar.validate_stock_price_series(stale, "2026-07-16", "测试源"), stale)
+        self.assertFalse(radar.stock_price_series_is_fresh(stale, "2026-07-16"))
+
+    def test_eastmoney_stock_prices_request_qfq_for_new_beijing_code(self) -> None:
+        start = date(2026, 5, 18)
+        klines = [
+            f"{(start + timedelta(days=offset)).isoformat()},10.0,10.8"
+            for offset in range(60)
+        ]
+        payload = {"data": {"klines": klines}}
+        with mock.patch.object(radar, "request_json", return_value=payload) as request:
+            prices = radar.fetch_eastmoney_stock_prices("920001", "2026-07-16")
+
+        self.assertEqual(len(prices), 60)
+        request.assert_called_once_with(
+            radar.EASTMONEY_KLINE_URL,
+            {
+                "secid": "0.920001",
+                "klt": 101,
+                "fqt": 1,
+                "beg": "20260117",
+                "end": "20260716",
+                "lmt": 160,
+                "fields1": "f1,f2,f3,f4,f5,f6",
+                "fields2": "f51,f52,f53",
+            },
+            timeout=10,
+            retries=1,
+        )
+
+    def test_stock_prices_use_tencent_without_eastmoney(self) -> None:
+        rows = [{"date": "2026-07-16", "close": 11.0}]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(
+            radar, "fetch_tencent_stock_prices", return_value=rows
+        ) as tencent, mock.patch.object(radar, "fetch_eastmoney_stock_prices") as eastmoney:
+            result = radar.fetch_stock_prices("000652", "2026-07-16", Path(tmp))
+
+        self.assertEqual(result, rows)
+        tencent.assert_called_once_with("000652", "2026-07-16")
+        eastmoney.assert_not_called()
+
+    def test_sparse_same_day_cache_is_ignored_and_refreshed(self) -> None:
+        start = date(2026, 5, 19)
+        cached_rows = [
+            {"date": (start + timedelta(days=offset)).isoformat(), "close": 10.0}
+            for offset in range(59)
+        ]
+        remote_rows = [{"date": "2026-07-16", "close": 11.0}]
+        with tempfile.TemporaryDirectory() as tmp:
+            cache_dir = Path(tmp)
+            radar.atomic_write_json(
+                radar.stock_cache_path(cache_dir, "000652"),
+                {"fetched_on": "2026-07-16", "rows": cached_rows},
+            )
+            with mock.patch.object(
+                radar, "fetch_tencent_stock_prices", return_value=remote_rows
+            ) as tencent, mock.patch.object(radar, "fetch_eastmoney_stock_prices") as eastmoney:
+                result = radar.fetch_stock_prices("000652", "2026-07-16", cache_dir)
+
+        self.assertEqual(result, remote_rows)
+        tencent.assert_called_once_with("000652", "2026-07-16")
+        eastmoney.assert_not_called()
+
+    def test_valid_same_day_cache_avoids_both_network_sources(self) -> None:
+        start = date(2026, 5, 18)
+        cached_rows = [
+            {"date": (start + timedelta(days=offset)).isoformat(), "close": 10.0}
+            for offset in range(60)
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            cache_dir = Path(tmp)
+            radar.atomic_write_json(
+                radar.stock_cache_path(cache_dir, "000652"),
+                {"fetched_on": "2026-07-16", "rows": cached_rows},
+            )
+            with mock.patch.object(radar, "fetch_tencent_stock_prices") as tencent, mock.patch.object(
+                radar, "fetch_eastmoney_stock_prices"
+            ) as eastmoney:
+                result = radar.fetch_stock_prices("000652", "2026-07-16", cache_dir)
+
+        self.assertEqual(result, cached_rows)
+        tencent.assert_not_called()
+        eastmoney.assert_not_called()
+
+    def test_stock_prices_fall_back_to_eastmoney_and_cache_success(self) -> None:
+        rows = [{"date": "2026-07-16", "close": 11.0}]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(
+            radar, "fetch_tencent_stock_prices", side_effect=ConnectionError("tencent unavailable")
+        ), mock.patch.object(radar, "fetch_eastmoney_stock_prices", return_value=rows) as eastmoney:
+            cache_dir = Path(tmp)
+            result = radar.fetch_stock_prices("000652", "2026-07-16", cache_dir)
+            cached = json.loads(radar.stock_cache_path(cache_dir, "000652").read_text(encoding="utf-8"))
+
+        self.assertEqual(result, rows)
+        self.assertEqual(cached["rows"], rows)
+        eastmoney.assert_called_once_with("000652", "2026-07-16")
+
+    def test_stale_tencent_prices_probe_eastmoney_and_choose_newer_series(self) -> None:
+        tencent_rows = [{"date": "2026-07-05", "close": 10.0}]
+        eastmoney_rows = [{"date": "2026-07-15", "close": 11.0}]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(
+            radar, "fetch_tencent_stock_prices", return_value=tencent_rows
+        ), mock.patch.object(
+            radar, "fetch_eastmoney_stock_prices", return_value=eastmoney_rows
+        ) as eastmoney:
+            result = radar.fetch_stock_prices("000652", "2026-07-16", Path(tmp))
+
+        self.assertEqual(result, eastmoney_rows)
+        eastmoney.assert_called_once_with("000652", "2026-07-16")
+
+    def test_stale_tencent_prices_survive_eastmoney_failure_for_endpoint_filtering(self) -> None:
+        tencent_rows = [{"date": "2026-07-05", "close": 10.0}]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(
+            radar, "fetch_tencent_stock_prices", return_value=tencent_rows
+        ), mock.patch.object(
+            radar, "fetch_eastmoney_stock_prices", side_effect=ConnectionError("eastmoney unavailable")
+        ):
+            result = radar.fetch_stock_prices("000652", "2026-07-16", Path(tmp))
+
+        self.assertEqual(result, tencent_rows)
+
+    def test_newer_cache_survives_source_date_regression(self) -> None:
+        start = date(2026, 5, 17)
+        cached_rows = [
+            {"date": (start + timedelta(days=offset)).isoformat(), "close": 10.0}
+            for offset in range(60)
+        ]
+        tencent_rows = [{"date": "2026-07-05", "close": 9.0}]
+        with tempfile.TemporaryDirectory() as tmp:
+            cache_dir = Path(tmp)
+            cache_path = radar.stock_cache_path(cache_dir, "000652")
+            radar.atomic_write_json(cache_path, {"fetched_on": "2026-07-15", "rows": cached_rows})
+            with mock.patch.object(
+                radar, "fetch_tencent_stock_prices", return_value=tencent_rows
+            ), mock.patch.object(
+                radar, "fetch_eastmoney_stock_prices", side_effect=ConnectionError("eastmoney unavailable")
+            ):
+                result = radar.fetch_stock_prices("000652", "2026-07-16", cache_dir)
+            persisted = json.loads(cache_path.read_text(encoding="utf-8"))["rows"]
+
+        self.assertEqual(result, cached_rows)
+        self.assertEqual(persisted, cached_rows)
+
+    def test_stale_series_is_filtered_per_breadth_endpoint(self) -> None:
+        start = date(2026, 4, 17)
+        prices = [
+            {"date": (start + timedelta(days=offset)).isoformat(), "close": float(offset + 1)}
+            for offset in range(80)
+        ]
+        self.assertIsNone(radar.above_ma60(prices, "2026-07-16"))
+        self.assertTrue(radar.above_ma60(prices, "2026-07-10"))
+
+    def test_stock_prices_report_both_source_failures(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(
+            radar, "fetch_tencent_stock_prices", side_effect=ConnectionError("tencent unavailable")
+        ), mock.patch.object(
+            radar, "fetch_eastmoney_stock_prices", side_effect=RuntimeError("eastmoney unavailable")
+        ):
+            with self.assertRaisesRegex(
+                RuntimeError,
+                "000652成分股日线双源失败；腾讯: tencent unavailable；东财: eastmoney unavailable",
+            ):
+                radar.fetch_stock_prices("000652", "2026-07-16", Path(tmp))
+
+
 class EvidenceProtocolV2Test(unittest.TestCase):
     def setUp(self) -> None:
         self.industries = [
