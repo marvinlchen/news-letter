@@ -11,14 +11,18 @@
 | 观察窗口 | 2026-07-10 至 2026-07-16 |
 | 行情应到 / 实到 | 2026-07-16 / 2026-07-16 |
 | 策略版本 | `v0.2-F.2-pilot` |
-| 证据引擎 | `rules-recovery-v1 @ 5733f73054ee` |
-| 候选 / claim / 采用引用 | 212 / 46 / 46 |
+| 证据引擎 | `rules-recovery-v1 @ 026863801a2c` |
+| 候选 / claim / 采用引用 | 202 / 46 / 46 |
 | 候选行业覆盖 | 31/31 |
-| 语义利用率 | 21.7% |
+| 语义利用率 | 22.8% |
 | 新激活 / 持有确认 | 0 / 0 |
-| 本次检查时间 | 2026-07-19T14:07:15+08:00 |
+| 本次检查时间 | 2026-07-19T14:40:01+08:00 |
 | 数据源错误 | 1 |
+| 广度成分股请求 / 缓存命中 | 2 / 285 |
 | 模型协议规则恢复 | 6 批；仅采用标题、实体、时点与TTL均通过脚本校验的字段 |
+
+数据源错误明细（最多3条，已清洗）：
+- 801740/688132成分股日线失败: 688132成分股日线双源失败；腾讯: 腾讯sh688132缺少前复权日线（原始日线118条）；东财: Remote end closed connection without response
 
 ## 市场概览
 
@@ -34,7 +38,7 @@
 
 | 阶段 | 行业数 | 说明 |
 |---|---:|---|
-| 有候选输入 | 31 | 共212条候选 |
+| 有候选输入 | 31 | 共202条候选 |
 | 硬证据PASS | 3 | 至少2类、2主体、2个独立URL、2个事件簇，且含成分公司 |
 | 质量可用 | 3 | 少于2个质量旗标 |
 | 排除拥挤后 | 2 | 不新增追逐成熟周期或短期急涨 |
@@ -52,6 +56,7 @@
 ### 综合｜结构化证据审计
 
 - 证据缺口/核对：类别：E,O（还缺0类）；主体：3/2（还缺0个）；独立URL：4/2（还缺0个）；相反证据：无；质量旗标：无；规则恢复可入门O/E：类别E,O；成分公司主体3/2；独立URL4/2；阻断：无。
+- 市场核对：20日收益-4.25%；排名第16；相对端点（旧→新）：2026-07-02=+6.25%；2026-07-09=+5.35%；2026-07-16=+0.00%；相对连续改善：否（相对门未通过）；成交分位59.4%；成交占比（前期→本期）：0.190%→0.193%（成交门通过）；广度端点（旧→新）：2026-07-02=10.0%（覆盖100.0%）；2026-07-09=10.0%（覆盖100.0%）；2026-07-16=10.0%（覆盖100.0%）；广度连续改善：否（广度门未通过）。
 - 已绑定的部分claim：
   - [综艺股份：综艺股份2026年半年度业绩预增公告](https://static.cninfo.com.cn/finalpage/2026-07-14/1225420800.PDF)；E / 综艺股份；2026-07-14
   - [东阳光：东阳光关于控股子公司签署算力服务采购合同的公告](https://static.cninfo.com.cn/finalpage/2026-07-11/1225420208.PDF)；O / 东阳光；2026-07-11
@@ -61,6 +66,7 @@
 ### 环保｜结构化证据审计
 
 - 证据缺口/核对：类别：E,O（还缺0类）；主体：3/2（还缺0个）；独立URL：4/2（还缺0个）；相反证据：无；质量旗标：无；规则恢复可入门O/E：类别E,O；成分公司主体3/2；独立URL4/2；阻断：无。
+- 市场核对：20日收益-9.84%；排名第24；相对端点（旧→新）：2026-07-02=+0.76%；2026-07-09=-0.60%；2026-07-16=-5.59%；相对连续改善：否（相对门未通过）；成交分位2.1%；成交占比（前期→本期）：0.706%→0.632%（成交门未通过）；广度端点（旧→新）：2026-07-02=18.5%（覆盖100.0%）；2026-07-09=15.4%（覆盖100.0%）；2026-07-16=10.8%（覆盖100.0%）；广度连续改善：否（广度门未通过）。
 - 已绑定的部分claim：
   - [高能环境：高能环境2026年半年度业绩预增公告](https://static.cninfo.com.cn/finalpage/2026-07-10/1225417293.PDF)；E / 高能环境；2026-07-10
   - [东江环保子公司中标欧冶物流配送项目 金额1849万元 - 观点网](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBSRHAyYU9QakFCRDU4SzRxWW9ydVpCRkl1ajBNRDNsVjFuSUJjOUdTRFlGanNkMVlfeHplUGRVVnhYeHVFa1VIVE1xWk44dE9VWEJ4aGxuRnVGeGo3T2syM2xB?oc=5)；O / 东江环保；2026-07-09
@@ -70,6 +76,7 @@
 ### 国防军工｜结构化证据审计
 
 - 证据缺口/核对：类别：E,O（还缺0类）；主体：2/2（还缺0个）；独立URL：2/2（还缺0个）；相反证据：无；质量旗标：无；规则恢复可入门O/E：类别E,O；成分公司主体2/2；独立URL2/2；阻断：无。
+- 市场核对：20日收益-13.73%；排名第27；相对端点（旧→新）：2026-07-02=+4.74%；2026-07-09=+5.89%；2026-07-16=-9.49%；相对连续改善：否（相对门未通过）；成交分位48.9%；成交占比（前期→本期）：2.922%→3.160%（成交门通过）；广度端点（旧→新）：2026-07-02=23.5%（覆盖99.3%）；2026-07-09=19.1%（覆盖99.3%）；2026-07-16=4.4%（覆盖99.3%）；广度连续改善：否（广度门未通过）。
 - 已绑定的部分claim：
   - [中国船舶：中国船舶工业股份有限公司2026年半年度业绩预增公告](https://static.cninfo.com.cn/finalpage/2026-07-14/1225420864.PDF)；E / 中国船舶；2026-07-14
   - [光启技术：关于签订超材料产品批产合同以及研制合同的自愿性信息披露公告](https://static.cninfo.com.cn/finalpage/2026-06-23/1225380443.PDF)；O / 光启技术；2026-06-23
@@ -81,10 +88,11 @@
 ### 1. 计算机
 
 - 行情：20日-4.11%、排名第15；相对通过 / 广度未计算 / 成交通过。
-- 证据缺口：类别：O（还缺1类）；主体：2/2（还缺0个）；独立URL：3/2（还缺0个）；相反证据：无；质量旗标：无；规则恢复可入门O/E：类别O；成分公司主体2/2；独立URL3/2；阻断：规则恢复可入门的成分公司O/E类别不足2类；规则恢复缺少公司公告锚点。
+- 证据缺口：类别：O（还缺1类）；主体：3/2（还缺0个）；独立URL：4/2（还缺0个）；相反证据：无；质量旗标：无；规则恢复可入门O/E：类别O；成分公司主体3/2；独立URL4/2；阻断：规则恢复可入门的成分公司O/E类别不足2类；规则恢复缺少公司公告锚点。
 - 已绑定的部分claim：
   - [凌志软件中标金融街证券标签画像平台项目 - Moomoo](https://news.google.com/rss/articles/CBMiV0FVX3lxTE52N2dhMW1JQWpWX1h0QXZ6Nml3WFpHT3lpdEtwcHZ4M201c1kzcWxwem5KNi1pcGVjV3BnWFRYV05pc2RmWU5NRV9Qb2gwUnYxMGZ2N2ctQQ?oc=5)；O / 凌志软件；2026-07-16
   - [东华软件中标：国家税务总局苏州市税务局2026年备份一体机更新项目合同 - 搜狐网](https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fYWlPelB5SllzU2JiT1NkUHdrX0pmSHdiZ2FRbVV3emNzeFhKZTFsOF82OUFGQ0ZiaHlXd29KNm1xY004bHl6aVpxMmN1SU5GWVpMYV9n?oc=5)；O / 东华软件；2026-07-16
+  - [科蓝软件中标某股份制城市商业银行多系统采购项目 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE04cTR4c05TNm5kalV4VDdhZks1OWxMY2V1b0ZrenZpbnVZT2hJcU82WkNFN1FDUzlyZE1kMVB2VGNIMmVrTVY0TXhfQzFocWRPdXliX09VT0tJZFViVDNUTVVJamlEdw?oc=5)；O / 科蓝软件；2026-07-08
   - [东华软件中标：中国进出口银行二代征信前置查询系统信息技术应用创新改造项目单一来源采购论证和供应商征集结果公示 - 搜狐网](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBQOHlyT3dqYng4TVZwNVQ3U0wxVXAxejVTX3dwTm5rYm1RUWl5c3E3dXdOTk1rLVBuWGpEX1ZKUUlURy1WMVhsTmtCMWtDSmdIR0hBdUxR?oc=5)；O / 东华软件；2026-07-16
 
 ### 2. 煤炭
@@ -109,8 +117,8 @@
 - 行情：20日+14.97%、排名第1；相对通过 / 广度未计算 / 成交通过。
 - 证据缺口：类别：无（还缺2类）；主体：0/2（还缺2个）；独立URL：0/2（还缺2个）；相反证据：无；质量旗标：无；规则恢复可入门O/E：类别无；成分公司主体0/2；独立URL0/2；阻断：规则恢复可入门的成分公司O/E类别不足2类；规则恢复可入门的独立成分公司不足2个；规则恢复可入门的独立URL或事件不足2个；规则恢复缺少公司公告锚点。
 - 未被证据门采用的候选标题（最多2条）：
-  - [美议员致函贸易代表，敦促对涉强迫劳动仿制药供应链加征关税 - 美国之音](https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQmU4bFpCOWJvNUNpT1liODZ2b3MxUUNWbHc3eWJiSFlYWEVqTWxCSEpsV3BicWx0UVNGN21vcURSV2FnaWloQU93M0JwRElCcmY4eEU0ZjhCb0lTNU11eVJpZERWWUJiek52aUpzWVVoTGt0cFF4OHN5MWs0Y25TMWpJby1zellHZzJtd0RYZktUaDhMcjdobVNKRHRvSFF0ajFxdTB4VWxjcVJOdDR6YzVYOW5OLTBBQjZxR2hZSVBOVjNsSW1RSzVCeEt1VWl6djk2bWpTcFhOeXJSZXBYNkN0NUxQQWE3aVptVzBB0gHwAUFVX3lxTE94cGNQUU0tRTlNWXNPYnF4dU5UcWRHZGRhdHRDVlo5MUFLNFZLU3M2YkpKZ29MbzV5NXl3bXExYTRlTHlCbG0yZVN2ZC03NWlvcnU3MndSd0lLLV91X1M3LWliNTgzb282RzJtQTR5b3F0dF90bWZicmxSaE5uYTRwZkJ5eHo1UlJDeWpGbGd6bm5VVHlLN2VLMXdTaTFNWHIzNjdjazlCZXhwVWU0dmlFYjVjY1MwYzk0b3JHdjFEYnFqaHhiX0ZrQWZ4ZklTbldXRmhyS0FfbjhKX0k2NG5taFZ2clVjdmhTSWNOZi0tNw?oc=5)（2026-07-08）
   - [2.7倍成本鸿沟！麦肯锡报告拆解中国生物制药“速度经济学” - phirda.com](https://news.google.com/rss/articles/CBMiekFVX3lxTE5nbjktbTdsRGpDSl9jdE9acFhNRnExMk1qa25oT0UyZkpZRkpCYjdLdW5xUFFqXzdwRlNzN2xvVmYxbDRuM0UzSDFfVXNIcHhhQjZRbDFiOXJkR0p0ZHRlWkptalpMTjNMV2pJMGpzZ2dNXzJ2Z0NBU2lR?oc=5)（2026-07-08）
+  - [美议员致函贸易代表，敦促对涉强迫劳动仿制药供应链加征关税 - 美国之音](https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQmU4bFpCOWJvNUNpT1liODZ2b3MxUUNWbHc3eWJiSFlYWEVqTWxCSEpsV3BicWx0UVNGN21vcURSV2FnaWloQU93M0JwRElCcmY4eEU0ZjhCb0lTNU11eVJpZERWWUJiek52aUpzWVVoTGt0cFF4OHN5MWs0Y25TMWpJby1zellHZzJtd0RYZktUaDhMcjdobVNKRHRvSFF0ajFxdTB4VWxjcVJOdDR6YzVYOW5OLTBBQjZxR2hZSVBOVjNsSW1RSzVCeEt1VWl6djk2bWpTcFhOeXJSZXBYNkN0NUxQQWE3aVptVzBB0gHwAUFVX3lxTE94cGNQUU0tRTlNWXNPYnF4dU5UcWRHZGRhdHRDVlo5MUFLNFZLU3M2YkpKZ29MbzV5NXl3bXExYTRlTHlCbG0yZVN2ZC03NWlvcnU3MndSd0lLLV91X1M3LWliNTgzb282RzJtQTR5b3F0dF90bWZicmxSaE5uYTRwZkJ5eHo1UlJDeWpGbGd6bm5VVHlLN2VLMXdTaTFNWHIzNjdjazlCZXhwVWU0dmlFYjVjY1MwYzk0b3JHdjFEYnFqaHhiX0ZrQWZ4ZklTbldXRmhyS0FfbjhKX0k2NG5taFZ2clVjdmhTSWNOZi0tNw?oc=5)（2026-07-08）
 
 ### 5. 农林牧渔
 
@@ -170,15 +178,15 @@
 | 12 | 交通运输 | +1.17% | -3.06% | +1.18% | 2.5% | 未计算 | 2 | WATCH | S | 1 / 1 | - | 证据观察 |
 | 13 | 商贸零售 | +4.43% | -3.55% | +0.69% | 2.9% | 未计算 | 2 | WATCH | O | 1 / 1 | - | 证据观察 |
 | 14 | 石油石化 | +1.37% | -3.78% | +0.47% | 50.0% | 未计算 | 2 | WATCH | E,S | 2 / 2 | 周期成熟 | 证据观察 |
-| 15 | 计算机 | -3.21% | -4.11% | +0.13% | 6.5% | 未计算 | 2 | WATCH | O | 2 / 3 | - | 证据观察 |
+| 15 | 计算机 | -3.21% | -4.11% | +0.13% | 6.5% | 未计算 | 2 | WATCH | O | 3 / 4 | - | 证据观察 |
 | 16 | 综合 | -3.37% | -4.25% | +0.00% | 59.4% | 10.0% | 1 | PASS | E,O | 3 / 4 | 周期成熟 | 周期成熟 |
 | 17 | 钢铁 | +2.72% | -7.15% | -2.90% | 1.2% | 未计算 | 1 | WATCH | E | 1 / 1 | - | 证据观察 |
 | 18 | 汽车 | -1.21% | -7.44% | -3.19% | 1.3% | 未计算 | 0 | WATCH | S | 1 / 1 | - | 证据观察 |
-| 19 | 轻工制造 | -1.13% | -7.64% | -3.40% | 0.7% | 未计算 | 0 | WATCH | E | 1 / 1 | - | 证据观察 |
+| 19 | 轻工制造 | -1.13% | -7.64% | -3.40% | 0.7% | 未计算 | 0 | WATCH | - | 0 / 0 | - | 证据观察 |
 | 20 | 建筑装饰 | -1.93% | -8.56% | -4.31% | 0.5% | 未计算 | 0 | WATCH | O | 1 / 1 | - | 证据观察 |
 | 21 | 社会服务 | -1.02% | -8.75% | -4.50% | 1.9% | 未计算 | 0 | WATCH | E | 1 / 1 | - | 证据观察 |
 | 22 | 公用事业 | -0.02% | -9.07% | -4.83% | 33.7% | 未计算 | 1 | WATCH | - | 0 / 0 | - | 证据观察 |
-| 23 | 电子 | -16.31% | -9.66% | -5.42% | 98.9% | 未计算 | 0 | WATCH | S | 3 / 3 | 周期成熟 | 证据观察 |
+| 23 | 电子 | -16.31% | -9.66% | -5.42% | 98.9% | 未计算 | 0 | WATCH | E,S | 3 / 3 | 周期成熟 | 证据观察 |
 | 24 | 环保 | -3.76% | -9.84% | -5.59% | 2.1% | 10.8% | 0 | PASS | E,O | 3 / 4 | - | 早期雷达 |
 | 25 | 基础化工 | -6.15% | -13.19% | -8.94% | 54.4% | 未计算 | 0 | WATCH | E,S | 3 / 3 | - | 证据观察 |
 | 26 | 机械设备 | -9.56% | -13.62% | -9.38% | 51.5% | 未计算 | 0 | WATCH | - | 0 / 0 | - | 证据观察 |

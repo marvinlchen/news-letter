@@ -14,15 +14,15 @@
   ],
   "schema_version": 1,
   "strategy_version": "v0.2-F.2-pilot",
-  "updated_at": "2026-07-19T14:07:15+08:00",
+  "updated_at": "2026-07-19T14:40:00+08:00",
   "weekly_snapshots": [
     {
       "date": "2026-07-16",
-      "decision_sha256": "2cafb4e30b591f8c70be6ba171533ad04e9b74832e3549b77cebe81f81534a2f",
-      "engine_sha256": "5733f73054eeac1b24e92af6a23a1fc4d841da2db745901b1a6b73421913a749",
+      "decision_sha256": "9a0b133de3dd70233a2aa9cdc4c13a857c23392b4431a3f967b2c97df17e826f",
+      "engine_sha256": "026863801a2c200914eab25ae20f0611115729d455172f865cd3c0dc1ce1a3d2",
       "evidence_engine_version": "rules-recovery-v1",
       "hold_confirmations": [],
-      "input_sha256": "8f8e27ae0010b198fde5a76a99f20309731e17e84c4014fd820027336028881f",
+      "input_sha256": "381cca5071415885ff71e37a157cf15fd223890a1281965e255f557166365449",
       "new_activations": [],
       "radar": [
         "801230",

@@ -1,5 +1,5 @@
 {
-  "ai_raw_protocol": "# INVALID_AI_BATCH_1 response_sha256=94f4718d18ee4c8b26a5babf1676e82577520207186f1afac8738f9562e52a1a\n# RULES_RECOVERY_BATCH_1 validation_error=ValueError\n# INVALID_AI_BATCH_2 response_sha256=f1501309ac4165dd54a4b172e92287eda4cd17e5696805bd779c1fd4514a0ebe\n# RULES_RECOVERY_BATCH_2 validation_error=ValueError\n# INVALID_AI_BATCH_3 response_sha256=86e928b4e9cfed61a4312e5d4678d6d70176c4c7fa5efc3c324cec0db024e6f3\n# RULES_RECOVERY_BATCH_3 validation_error=ValueError\n# INVALID_AI_BATCH_4 response_sha256=545239dd0b9afd0acebef0b59064f6c4a067296d47ff80a607e20899be2b8120\n# RULES_RECOVERY_BATCH_4 validation_error=ValueError\n# INVALID_AI_BATCH_5 response_sha256=bd520ef52f60906d44745baf0666dc5da12cf2db103d136a0b5b441df6f6f7ff\n# RULES_RECOVERY_BATCH_5 validation_error=ValueError\n# INVALID_AI_BATCH_6 response_sha256=b3958b8a4bb4b7ef06d5624ba361632c98992755c78d56cf6fa9c2f52f1cb3f1\n# RULES_RECOVERY_BATCH_6 validation_error=ValueError\n",
+  "ai_raw_protocol": "# INVALID_AI_BATCH_1 response_sha256=59193d31d5acd8f70d5ecec84b60e17b59c65bdb5f184fda930e1ffcfb79d8da\n# RULES_RECOVERY_BATCH_1 validation_error=ValueError\n# INVALID_AI_BATCH_2 response_sha256=f559767f79dac583184c60530c22dd090b0dcfeb47ed4da1948404466f77ec94\n# RULES_RECOVERY_BATCH_2 validation_error=ValueError\n# INVALID_AI_BATCH_3 response_sha256=b86aa4fdd0793082e06284174979f20c90aef4cdb61d413b5771554647b56f70\n# RULES_RECOVERY_BATCH_3 validation_error=ValueError\n# INVALID_AI_BATCH_4 response_sha256=118281317fbf1fec8bc711c17a9b53f826884b23e0b67a978c18aa6639c84b5a\n# RULES_RECOVERY_BATCH_4 validation_error=ValueError\n# INVALID_AI_BATCH_5 response_sha256=2b8bd175127bd616e0fff163e3f97963a9c5aebd11968407c9619b9d09af766d\n# RULES_RECOVERY_BATCH_5 validation_error=ValueError\n# INVALID_AI_BATCH_6 response_sha256=eb461d14948b501701c99c32ce66fe07b1df4b7529c2a690339bf2a0e004fe11\n# RULES_RECOVERY_BATCH_6 validation_error=ValueError\n",
   "ai_recovery_batches": 6,
   "candidates": {
     "801010": [
@@ -14,7 +14,7 @@
           "牧原股份"
         ],
         "event_cluster": "598ba9d784b1e429",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801010-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -35,7 +35,7 @@
           "正邦科技"
         ],
         "event_cluster": "efc845f4215e5762",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801010-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -54,7 +54,7 @@
           "养殖"
         ],
         "event_cluster": "6d0891ec9e4e8bd7",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801010-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -73,7 +73,7 @@
           "生猪"
         ],
         "event_cluster": "ede55d31c7e00d02",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801010-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -93,7 +93,7 @@
           "养殖"
         ],
         "event_cluster": "c567edb2cdba0afc",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801010-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -112,7 +112,7 @@
           "生猪"
         ],
         "event_cluster": "5d97db13ab027ef5",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801010-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -135,7 +135,7 @@
           "万华化学"
         ],
         "event_cluster": "0315352ba99cc0a3",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -158,7 +158,7 @@
           "藏格矿业"
         ],
         "event_cluster": "109bbc06f99da0a6",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -179,7 +179,7 @@
           "盐湖股份"
         ],
         "event_cluster": "57c9b64ce1f18901",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -200,7 +200,7 @@
           "盐湖股份"
         ],
         "event_cluster": "cd75c60afc2612b0",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -221,7 +221,7 @@
           "化工"
         ],
         "event_cluster": "bf3c677ee2675339",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N5",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -243,7 +243,7 @@
           "化工"
         ],
         "event_cluster": "67b320ce692392c2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N6",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -266,7 +266,7 @@
           "化工"
         ],
         "event_cluster": "7029fe865b958634",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -285,7 +285,7 @@
           "化工"
         ],
         "event_cluster": "c4ca981875ae9a28",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N8",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -304,7 +304,7 @@
           "轮胎"
         ],
         "event_cluster": "39908511b2f8bd02",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801030-N9",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -327,7 +327,7 @@
           "钒钛股份"
         ],
         "event_cluster": "7949645c8f06ad25",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -348,7 +348,7 @@
           "包钢股份"
         ],
         "event_cluster": "bce01275a7348a84",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -370,7 +370,7 @@
           "钢材"
         ],
         "event_cluster": "6ea91a320aae566d",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -390,7 +390,7 @@
           "钢材"
         ],
         "event_cluster": "4bcf75b50247d084",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N4",
         "negative_category_tags": [
           "S"
@@ -412,7 +412,7 @@
           "特钢"
         ],
         "event_cluster": "a7a46b8617165c7f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -431,7 +431,7 @@
           "钢材"
         ],
         "event_cluster": "d5182491449eaad2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -450,7 +450,7 @@
           "钢铁"
         ],
         "event_cluster": "22ab08bd2a4900f3",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N7",
         "negative_category_tags": [
           "S"
@@ -471,7 +471,7 @@
           "钢材"
         ],
         "event_cluster": "82c994cca1f174ee",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N8",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -490,7 +490,7 @@
           "钢材"
         ],
         "event_cluster": "0179bcea60ac50ea",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801040-N9",
         "negative_category_tags": [
           "S"
@@ -498,7 +498,7 @@
         "positive_category_tags": [],
         "pub_date": "2026-07-13 08:25",
         "source": "东方财富",
-        "source_type": "trusted_news",
+        "source_type": "google_news",
         "title": "钢银电商：本周全国城市钢材库存环比增加0.56万吨 建材累库热卷去库 - 东方财富",
         "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4xdFR0YmVCcjQ0Q2RvcV95V3NMV3ZMdk1IY0FtT2d4T3ljQ2NscHp3eDRESHNKb0RfQUR0VE1Gak4yalRRZUFkdFRPYUJBUG1PejVPVGx1amMwN21XODZ2aHZudXUxUQ?oc=5"
       }
@@ -516,7 +516,7 @@
           "稀土"
         ],
         "event_cluster": "dd20d6f134ad8f37",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801050-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -539,7 +539,7 @@
           "中国铝业"
         ],
         "event_cluster": "ae347c451177bbff",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801050-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -562,7 +562,7 @@
           "洛阳钼业"
         ],
         "event_cluster": "bb873c4bfaff5c6a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801050-N3",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -585,7 +585,7 @@
           "紫金矿业"
         ],
         "event_cluster": "40d2525c0b779e98",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801050-N4",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -606,7 +606,7 @@
           "黄金"
         ],
         "event_cluster": "9221cecc1f4aba52",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801050-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -626,7 +626,7 @@
           "铜"
         ],
         "event_cluster": "68ddc7b498cbd405",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801050-N6",
         "negative_category_tags": [
           "S"
@@ -649,7 +649,7 @@
           "稀土"
         ],
         "event_cluster": "1ba696db85d35ac3",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801050-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -672,7 +672,7 @@
           "东山精密"
         ],
         "event_cluster": "32eb57397fa25106",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801080-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -693,7 +693,7 @@
           "德明利"
         ],
         "event_cluster": "8028751d36b9b813",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801080-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -708,87 +708,23 @@
           "E"
         ],
         "component_entities": [
-          "沪电股份"
+          "兆易创新"
         ],
         "entity_names": [
-          "沪电股份"
+          "兆易创新"
         ],
-        "event_cluster": "d5de2f0269ba5f43",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "event_cluster": "48e4484f664ad71f",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801080-N3",
         "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-14",
-        "source": "巨潮资讯",
-        "source_type": "announcement",
-        "title": "沪电股份：2026年半年度业绩预告",
-        "url": "https://static.cninfo.com.cn/finalpage/2026-07-14/1225421314.PDF"
-      },
-      {
-        "category_tags": [
+        "positive_category_tags": [
           "E"
         ],
-        "component_entities": [
-          "沪电股份"
-        ],
-        "entity_names": [
-          "沪电股份"
-        ],
-        "event_cluster": "de42379dddd9e770",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801080-N4",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-04-14",
+        "pub_date": "2026-07-10",
         "source": "巨潮资讯",
         "source_type": "announcement",
-        "title": "沪电股份：2026年第一季度业绩预告",
-        "url": "https://static.cninfo.com.cn/finalpage/2026-04-14/1225097796.PDF"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
-          "半导体"
-        ],
-        "event_cluster": "1f170a2dae82f536",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801080-N5",
-        "negative_category_tags": [],
-        "positive_category_tags": [
-          "S"
-        ],
-        "pub_date": "2026-07-16 13:57",
-        "source": "东方财富网",
-        "source_type": "trusted_news",
-        "title": "半导体行业涨价潮蔓延！光刻机巨头据悉酝酿提价 台积电反对 - 东方财富网",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBDeWtXOEN3emtFeVJNVDhXRE9CNWNCNmNZdGxXNWRiRW9NeVRyYm9aS1ZUdEpaOWhaX0lzNGxhakVGNm9uMzZscldBa0FWNHA4bTlFd3M0aUpQak5OTF9lag?oc=5"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [
-          "沪电股份"
-        ],
-        "entity_names": [
-          "沪电股份",
-          "PCB"
-        ],
-        "event_cluster": "2415c7fa191db94f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801080-N6",
-        "negative_category_tags": [],
-        "positive_category_tags": [
-          "S"
-        ],
-        "pub_date": "2026-07-16 05:38",
-        "source": "东方财富网",
-        "source_type": "trusted_news",
-        "title": "沪电股份：布局高阶PCB产能 深度绑定AI服务器与汽车算力赛道 - 东方财富网",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE51X19aODcyekl2UHNXYUdCejBWRXRxVy1XMFlCU1l0OEE0bWFyQUNtVDhYY2lWY1p3UFRoaHM1TmR4Z1Z0bzZPby1sVE45V0IyclY2WkNvNVlNNVRGbTZqMg?oc=5"
+        "title": "兆易创新：兆易创新2026年半年度业绩预增公告",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-07-10/1225417171.PDF"
       },
       {
         "category_tags": [
@@ -803,17 +739,38 @@
           "存储"
         ],
         "event_cluster": "17e80354fb72df8e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801080-N7",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801080-N4",
         "negative_category_tags": [],
         "positive_category_tags": [
           "S"
         ],
         "pub_date": "2026-07-14 14:55",
         "source": "东方财富网",
-        "source_type": "google_news",
+        "source_type": "trusted_news",
         "title": "AI驱动存储需求增长 德明利上半年最高预盈65亿元 但Q2净利润环比最高预降近30% - 东方财富网",
         "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBacWJGY0VyU2ZTUlJsVnlRWEhwdWdzTC1HX0VOTEgwd25mR3JNQUM0Z0VTUkJPRUNfaEI4dzdQbTIteHAxcWtLM3d1RlphTTJuT0VwTHJqaG92aFl5WGRmZw?oc=5"
+      },
+      {
+        "category_tags": [
+          "S"
+        ],
+        "component_entities": [],
+        "entity_names": [
+          "半导体"
+        ],
+        "event_cluster": "1f170a2dae82f536",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801080-N5",
+        "negative_category_tags": [],
+        "positive_category_tags": [
+          "S"
+        ],
+        "pub_date": "2026-07-16 13:57",
+        "source": "东方财富网",
+        "source_type": "trusted_news",
+        "title": "半导体行业涨价潮蔓延！光刻机巨头据悉酝酿提价 台积电反对 - 东方财富网",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBDeWtXOEN3emtFeVJNVDhXRE9CNWNCNmNZdGxXNWRiRW9NeVRyYm9aS1ZUdEpaOWhaX0lzNGxhakVGNm9uMzZscldBa0FWNHA4bTlFd3M0aUpQak5OTF9lag?oc=5"
       }
     ],
     "801110": [
@@ -826,7 +783,7 @@
           "家电"
         ],
         "event_cluster": "b443708af826b29e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801110-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -845,7 +802,7 @@
           "家电"
         ],
         "event_cluster": "916aea01b233aa1f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801110-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -864,7 +821,7 @@
           "空调"
         ],
         "event_cluster": "10b1fcc063ec65a4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801110-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -883,7 +840,7 @@
           "空调"
         ],
         "event_cluster": "94f74a89b240f83a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801110-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -906,7 +863,7 @@
           "五粮液"
         ],
         "event_cluster": "5a8885b3346f491b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801120-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -925,7 +882,7 @@
           "饮料"
         ],
         "event_cluster": "0d37746f19688dcc",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801120-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -944,7 +901,7 @@
           "食品"
         ],
         "event_cluster": "04f3e75454204afb",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801120-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -960,30 +917,11 @@
         ],
         "component_entities": [],
         "entity_names": [
-          "白酒"
-        ],
-        "event_cluster": "1e3f9bf3b6a1750f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801120-N4",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-14 18:22",
-        "source": "新浪财经",
-        "source_type": "trusted_news",
-        "title": "7月上旬白酒价格微涨0.03%，名酒上涨基酒走弱行情趋稳 - 新浪财经",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNTNZYm5iOF9Eczl6Q1RkQm1tZEdoRFhtNlFyOFpiVGNxNUtlUnl3TlVQVmhnNVNLR0ZNU1FGeWlUWmJaY1FnM1pzc29ycjBKbkJ3VWxqY0hyRjRfeVpYOWdwc0FEMEZsOVpITFBWZ2J0dTJFajFIQkF1VGY3Xzczak9SaHBYaG5ORGc?oc=5"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
           "食品"
         ],
         "event_cluster": "0a298e66aa7fbeed",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801120-N5",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801120-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-06 15:37",
@@ -1001,8 +939,8 @@
           "食品"
         ],
         "event_cluster": "3461ec0b80be53c1",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801120-N6",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801120-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-03 15:00",
@@ -1020,8 +958,8 @@
           "食品"
         ],
         "event_cluster": "9351bdda274f747a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801120-N7",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801120-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-06-29 15:00",
@@ -1039,8 +977,8 @@
           "食品"
         ],
         "event_cluster": "ab1e0232f5200b25",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801120-N8",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801120-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-06-29 15:00",
@@ -1057,8 +995,29 @@
         "entity_names": [
           "食品"
         ],
+        "event_cluster": "c6ff8a4709fce950",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801120-N8",
+        "negative_category_tags": [],
+        "positive_category_tags": [
+          "S"
+        ],
+        "pub_date": "2026-05-15 15:00",
+        "source": "观察者",
+        "source_type": "trusted_news",
+        "title": "关税、战争、天气连击，美国遭四年来最剧烈食品涨价 - 观察者",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9OTTBYaUtVRVZrc0NLcFBJdmdkQWxobm5kaU1ZaXdfeGpEbHJxbHdtR0tydmhwM1pVMzE3RnVSbmFLQ0FPUlhwMWJfTUlfR045Z2lYUXFrUV8yTlFXLUpudzhjeGlUcXhVMnc?oc=5"
+      },
+      {
+        "category_tags": [
+          "S"
+        ],
+        "component_entities": [],
+        "entity_names": [
+          "食品"
+        ],
         "event_cluster": "2b7c381500cc1e60",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801120-N9",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1074,20 +1033,18 @@
         ],
         "component_entities": [],
         "entity_names": [
-          "食品"
+          "白酒"
         ],
-        "event_cluster": "c6ff8a4709fce950",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "event_cluster": "1e3f9bf3b6a1750f",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801120-N10",
         "negative_category_tags": [],
-        "positive_category_tags": [
-          "S"
-        ],
-        "pub_date": "2026-05-15 15:00",
-        "source": "观察者",
+        "positive_category_tags": [],
+        "pub_date": "2026-07-14 18:22",
+        "source": "新浪财经",
         "source_type": "google_news",
-        "title": "关税、战争、天气连击，美国遭四年来最剧烈食品涨价 - 观察者",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9OTTBYaUtVRVZrc0NLcFBJdmdkQWxobm5kaU1ZaXdfeGpEbHJxbHdtR0tydmhwM1pVMzE3RnVSbmFLQ0FPUlhwMWJfTUlfR045Z2lYUXFrUV8yTlFXLUpudzhjeGlUcXhVMnc?oc=5"
+        "title": "7月上旬白酒价格微涨0.03%，名酒上涨基酒走弱行情趋稳 - 新浪财经",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNTNZYm5iOF9Eczl6Q1RkQm1tZEdoRFhtNlFyOFpiVGNxNUtlUnl3TlVQVmhnNVNLR0ZNU1FGeWlUWmJaY1FnM1pzc29ycjBKbkJ3VWxqY0hyRjRfeVpYOWdwc0FEMEZsOVpITFBWZ2J0dTJFajFIQkF1VGY3Xzczak9SaHBYaG5ORGc?oc=5"
       }
     ],
     "801130": [
@@ -1102,7 +1059,7 @@
           "探路者"
         ],
         "event_cluster": "22c6c96fd24f1711",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801130-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1121,7 +1078,7 @@
           "棉花"
         ],
         "event_cluster": "a096dbaabb5270ce",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801130-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1140,7 +1097,7 @@
           "棉花"
         ],
         "event_cluster": "eb90551de549cab0",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801130-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1159,7 +1116,7 @@
           "棉花"
         ],
         "event_cluster": "e70f369421fa87ff",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801130-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1178,7 +1135,7 @@
           "棉花"
         ],
         "event_cluster": "2516816fd3071bae",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801130-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1192,52 +1149,6 @@
     "801140": [
       {
         "category_tags": [
-          "E"
-        ],
-        "component_entities": [
-          "五洲特纸"
-        ],
-        "entity_names": [
-          "五洲特纸"
-        ],
-        "event_cluster": "8dcd5d7868cfd954",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801140-N1",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-09",
-        "source": "巨潮资讯",
-        "source_type": "announcement",
-        "title": "五洲特纸：五洲特种纸业集团股份有限公司2026年半年度业绩预告",
-        "url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225414646.PDF"
-      },
-      {
-        "category_tags": [
-          "E",
-          "S"
-        ],
-        "component_entities": [
-          "五洲特纸"
-        ],
-        "entity_names": [
-          "五洲特纸",
-          "包装"
-        ],
-        "event_cluster": "7b6d5a5ea0f67292",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801140-N2",
-        "negative_category_tags": [],
-        "positive_category_tags": [
-          "E"
-        ],
-        "pub_date": "2026-07-08 15:54",
-        "source": "同花顺",
-        "source_type": "trusted_news",
-        "title": "新增特种纸、工业包装纸产能充分释放！五洲特纸上半年净利预增86%~94% - 同花顺",
-        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBPeHRWUXdEWnowX3d2azhWYzZyM1dZam54S1FOQmZMbzJmcVRCUXBKNTBpUkhDTEFVMlNyTEdhVVVXMU5weVNyaG1mbzZCSFpzNG50Vko1eUtodFVvM3c?oc=5"
-      },
-      {
-        "category_tags": [
           "S"
         ],
         "component_entities": [],
@@ -1245,8 +1156,8 @@
           "包装"
         ],
         "event_cluster": "ecb72917c1877fe2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801140-N3",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801140-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-14 22:47",
@@ -1264,8 +1175,8 @@
           "包装"
         ],
         "event_cluster": "b7201afd279e1b01",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801140-N4",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801140-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-14 15:19",
@@ -1283,8 +1194,8 @@
           "家居"
         ],
         "event_cluster": "ab39bcc8298a1862",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801140-N5",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801140-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-14 15:33",
@@ -1302,8 +1213,8 @@
           "包装"
         ],
         "event_cluster": "c6fec58b27159302",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801140-N6",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801140-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-13 18:27",
@@ -1321,8 +1232,8 @@
           "家居"
         ],
         "event_cluster": "d27f397839dd784b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801140-N7",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801140-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-01 16:29",
@@ -1344,7 +1255,7 @@
           "迈瑞医疗"
         ],
         "event_cluster": "78a7b95459ea2d25",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801150-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1353,25 +1264,6 @@
         "source_type": "announcement",
         "title": "迈瑞医疗：关于注销库存股通知债权人的公告",
         "url": "https://static.cninfo.com.cn/finalpage/2026-05-19/1225318288.PDF"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
-          "制药"
-        ],
-        "event_cluster": "9f774feb3616ee31",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801150-N2",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-08 15:00",
-        "source": "美国之音",
-        "source_type": "trusted_news",
-        "title": "美议员致函贸易代表，敦促对涉强迫劳动仿制药供应链加征关税 - 美国之音",
-        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQmU4bFpCOWJvNUNpT1liODZ2b3MxUUNWbHc3eWJiSFlYWEVqTWxCSEpsV3BicWx0UVNGN21vcURSV2FnaWloQU93M0JwRElCcmY4eEU0ZjhCb0lTNU11eVJpZERWWUJiek52aUpzWVVoTGt0cFF4OHN5MWs0Y25TMWpJby1zellHZzJtd0RYZktUaDhMcjdobVNKRHRvSFF0ajFxdTB4VWxjcVJOdDR6YzVYOW5OLTBBQjZxR2hZSVBOVjNsSW1RSzVCeEt1VWl6djk2bWpTcFhOeXJSZXBYNkN0NUxQQWE3aVptVzBB0gHwAUFVX3lxTE94cGNQUU0tRTlNWXNPYnF4dU5UcWRHZGRhdHRDVlo5MUFLNFZLU3M2YkpKZ29MbzV5NXl3bXExYTRlTHlCbG0yZVN2ZC03NWlvcnU3MndSd0lLLV91X1M3LWliNTgzb282RzJtQTR5b3F0dF90bWZicmxSaE5uYTRwZkJ5eHo1UlJDeWpGbGd6bm5VVHlLN2VLMXdTaTFNWHIzNjdjazlCZXhwVWU0dmlFYjVjY1MwYzk0b3JHdjFEYnFqaHhiX0ZrQWZ4ZklTbldXRmhyS0FfbjhKX0k2NG5taFZ2clVjdmhTSWNOZi0tNw?oc=5"
       },
       {
         "category_tags": [
@@ -1384,13 +1276,13 @@
           "制药"
         ],
         "event_cluster": "db4cde6732faafe5",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801150-N3",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801150-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-01 17:02",
         "source": "财联社",
-        "source_type": "google_news",
+        "source_type": "trusted_news",
         "title": "券商晨会精华：创新药产业链发展明确 制药供应链订单趋势良好 - 财联社",
         "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1IbjBxNEh4YUNyX3kwSThkT3JVdUJUQmh4Mi04YzUwQ1NEcFNIM2pJazlPZXdWQmtCX0g0WV9rYjRkTlgza2c?oc=5"
       },
@@ -1403,15 +1295,34 @@
           "制药"
         ],
         "event_cluster": "6c522a1fc5263943",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801150-N4",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801150-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-08 10:11",
         "source": "phirda.com",
-        "source_type": "google_news",
+        "source_type": "trusted_news",
         "title": "2.7倍成本鸿沟！麦肯锡报告拆解中国生物制药“速度经济学” - phirda.com",
         "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5nbjktbTdsRGpDSl9jdE9acFhNRnExMk1qa25oT0UyZkpZRkpCYjdLdW5xUFFqXzdwRlNzN2xvVmYxbDRuM0UzSDFfVXNIcHhhQjZRbDFiOXJkR0p0ZHRlWkptalpMTjNMV2pJMGpzZ2dNXzJ2Z0NBU2lR?oc=5"
+      },
+      {
+        "category_tags": [
+          "S"
+        ],
+        "component_entities": [],
+        "entity_names": [
+          "制药"
+        ],
+        "event_cluster": "9f774feb3616ee31",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801150-N4",
+        "negative_category_tags": [],
+        "positive_category_tags": [],
+        "pub_date": "2026-07-08 15:00",
+        "source": "美国之音",
+        "source_type": "trusted_news",
+        "title": "美议员致函贸易代表，敦促对涉强迫劳动仿制药供应链加征关税 - 美国之音",
+        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQmU4bFpCOWJvNUNpT1liODZ2b3MxUUNWbHc3eWJiSFlYWEVqTWxCSEpsV3BicWx0UVNGN21vcURSV2FnaWloQU93M0JwRElCcmY4eEU0ZjhCb0lTNU11eVJpZERWWUJiek52aUpzWVVoTGt0cFF4OHN5MWs0Y25TMWpJby1zellHZzJtd0RYZktUaDhMcjdobVNKRHRvSFF0ajFxdTB4VWxjcVJOdDR6YzVYOW5OLTBBQjZxR2hZSVBOVjNsSW1RSzVCeEt1VWl6djk2bWpTcFhOeXJSZXBYNkN0NUxQQWE3aVptVzBB0gHwAUFVX3lxTE94cGNQUU0tRTlNWXNPYnF4dU5UcWRHZGRhdHRDVlo5MUFLNFZLU3M2YkpKZ29MbzV5NXl3bXExYTRlTHlCbG0yZVN2ZC03NWlvcnU3MndSd0lLLV91X1M3LWliNTgzb282RzJtQTR5b3F0dF90bWZicmxSaE5uYTRwZkJ5eHo1UlJDeWpGbGd6bm5VVHlLN2VLMXdTaTFNWHIzNjdjazlCZXhwVWU0dmlFYjVjY1MwYzk0b3JHdjFEYnFqaHhiX0ZrQWZ4ZklTbldXRmhyS0FfbjhKX0k2NG5taFZ2clVjdmhTSWNOZi0tNw?oc=5"
       }
     ],
     "801160": [
@@ -1426,7 +1337,7 @@
           "三峡能源"
         ],
         "event_cluster": "30a1e94f42c5551a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801160-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1445,7 +1356,7 @@
           "电力"
         ],
         "event_cluster": "3aa4317de89e6ed4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801160-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1465,30 +1376,9 @@
         "entity_names": [
           "港口"
         ],
-        "event_cluster": "3cd47a62f48fc818",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801170-N1",
-        "negative_category_tags": [
-          "S"
-        ],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-16 17:48",
-        "source": "同花顺",
-        "source_type": "trusted_news",
-        "title": "【库存】7月15日当周铝土矿港口库存较上一周增加104.90万吨 - 同花顺",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TWHY0anF1Wl9mR0Rhb3d2Y1NYcUNDZ3hCVzhKbVRWdzlCQ3pnajRuWHB2LWl3Y2wzTDV2N1hYNzE1Snk1V2tvaEpEVTd1aS00azJIVksxQ3dOT1RaYUpqWA?oc=5"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
-          "港口"
-        ],
         "event_cluster": "1fd20ead8ab26f90",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801170-N2",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801170-N1",
         "negative_category_tags": [
           "S"
         ],
@@ -1508,8 +1398,8 @@
           "港口"
         ],
         "event_cluster": "1dac530719e94fb4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801170-N3",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801170-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
           "S"
@@ -1529,8 +1419,8 @@
           "物流"
         ],
         "event_cluster": "d2aa75aa175e3f14",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801170-N4",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801170-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-15 20:23",
@@ -1551,8 +1441,8 @@
           "物流"
         ],
         "event_cluster": "e913c6a06a092ba8",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801170-N5",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801170-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-15 23:24",
@@ -1570,8 +1460,8 @@
           "物流"
         ],
         "event_cluster": "7de072090b981d43",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801170-N6",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801170-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-14 19:02",
@@ -1579,27 +1469,6 @@
         "source_type": "trusted_news",
         "title": "打通物流与供应链上下游供需堵点，这场对接会干货满满 - 上观新闻",
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85WTFfYkZHSnFSdThCLWtCSm5meHNpUEhCa29VNXY2UmZqSVBGRTZLOVFHeHFfNE9vb2xET1lTeFptVzJoX0k5cWgxNUxrekRUVkJEd0VrN2xfZw?oc=5"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
-          "物流"
-        ],
-        "event_cluster": "d49fb92b8530f21a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801170-N7",
-        "negative_category_tags": [
-          "S"
-        ],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-16 09:23",
-        "source": "亿邦动力网",
-        "source_type": "google_news",
-        "title": "亚马逊旺季配送费10月15日生效卖家物流成本将迎来上涨- 跨境电商 - 亿邦动力网",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5MT2JVRjl4S1Nid2Z6QzNUNGdqMmdNYlQ4WE1EWC11X1hVWUYzZTJLWm16enNPQmRZTEZHbEg2M21nUUlWeVJHRjlUTVhoMEN6NVY5eWNn?oc=5"
       }
     ],
     "801180": [
@@ -1614,7 +1483,7 @@
           "万科A"
         ],
         "event_cluster": "75d6fe8d281f2b1d",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801180-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1634,7 +1503,7 @@
           "地产"
         ],
         "event_cluster": "d3d9d7c19bffad9f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801180-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1653,7 +1522,7 @@
           "楼市"
         ],
         "event_cluster": "a44302757884e6c6",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801180-N3",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1675,7 +1544,7 @@
           "地产"
         ],
         "event_cluster": "18dd47542ed619ef",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801180-N4",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1696,7 +1565,7 @@
           "楼市"
         ],
         "event_cluster": "6a667b3466a5c327",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801180-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1719,7 +1588,7 @@
           "中国中免"
         ],
         "event_cluster": "b151b4fbfa27d097",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801200-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1738,7 +1607,7 @@
           "商超"
         ],
         "event_cluster": "65e533cb0357a6d6",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801200-N2",
         "negative_category_tags": [
           "S"
@@ -1759,7 +1628,7 @@
           "免税"
         ],
         "event_cluster": "fa861b98760bb5c3",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801200-N3",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1782,7 +1651,7 @@
           "农产品"
         ],
         "event_cluster": "c38e4100d4998c12",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801200-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1805,7 +1674,7 @@
           "华测检测"
         ],
         "event_cluster": "c8c7884b1d2d4ae8",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801210-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1824,7 +1693,7 @@
           "餐饮"
         ],
         "event_cluster": "9e6cf3f38f0d6489",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801210-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1849,7 +1718,7 @@
           "粤桂股份"
         ],
         "event_cluster": "d26a8de829dee6bd",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801230-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -1870,7 +1739,7 @@
           "综艺股份"
         ],
         "event_cluster": "d9556dc16c4c9501",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801230-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1893,7 +1762,7 @@
           "东阳光"
         ],
         "event_cluster": "869099326ef0e765",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801230-N3",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1916,7 +1785,7 @@
           "时代新材"
         ],
         "event_cluster": "7b0f7f2eeedead8d",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801230-N4",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1939,7 +1808,7 @@
           "东阳光"
         ],
         "event_cluster": "dfe551bd4619a718",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801230-N5",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1964,7 +1833,7 @@
           "中国巨石"
         ],
         "event_cluster": "4a8ee86ad103a323",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801710-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -1987,7 +1856,7 @@
           "宏和科技"
         ],
         "event_cluster": "d4d02dcd4ef0e70f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801710-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2010,7 +1879,7 @@
           "电子布"
         ],
         "event_cluster": "40675663b9cc2db3",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801710-N3",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -2035,7 +1904,7 @@
           "电子布"
         ],
         "event_cluster": "dc11cdcd102dd9f0",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801710-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2054,7 +1923,7 @@
           "玻璃"
         ],
         "event_cluster": "ce5ed6b7493e7b7b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801710-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2073,7 +1942,7 @@
           "水泥"
         ],
         "event_cluster": "d674337ac42f4492",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801710-N6",
         "negative_category_tags": [
           "S"
@@ -2098,7 +1967,7 @@
           "中国建筑"
         ],
         "event_cluster": "82e3938bd7287721",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -2120,7 +1989,7 @@
           "装修"
         ],
         "event_cluster": "1885d9f9abe27e7f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2140,7 +2009,7 @@
           "基建"
         ],
         "event_cluster": "ea7699f0bbff73e2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2159,7 +2028,7 @@
           "装修"
         ],
         "event_cluster": "65c76983a647b68d",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2178,7 +2047,7 @@
           "装修"
         ],
         "event_cluster": "79bd6a943f0a9e7b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2199,7 +2068,7 @@
           "同济科技"
         ],
         "event_cluster": "e375293a3d552775",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2218,7 +2087,7 @@
           "装修"
         ],
         "event_cluster": "76d7d3f41931f575",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2237,7 +2106,7 @@
           "基建"
         ],
         "event_cluster": "d40f7e6fc9063630",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N8",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2256,7 +2125,7 @@
           "装修"
         ],
         "event_cluster": "44d66850e0084909",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N9",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2275,7 +2144,7 @@
           "装修"
         ],
         "event_cluster": "6ea217b856e04561",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801720-N10",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2298,7 +2167,7 @@
           "思源电气"
         ],
         "event_cluster": "fe72519dfd0617a3",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801730-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2319,7 +2188,7 @@
           "思源电气"
         ],
         "event_cluster": "ccb92b40c2e4ac0a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801730-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2338,7 +2207,7 @@
           "储能"
         ],
         "event_cluster": "a3d8d0f11e227a39",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801730-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2347,25 +2216,6 @@
         "source_type": "trusted_news",
         "title": "AI基建撬动储能需求 LG新能源切入谷歌链 为其最大“光储一体”项目供货 - 财联社",
         "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5uV1JaVkM0UTR3Qlg3bkNYWV9RMG5BV1hxQWNxT1hIQTZ1MDJKOWZqOHhJamMzbUlNZzVYR014M2JuUkI2MEI4Vg?oc=5"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
-          "储能"
-        ],
-        "event_cluster": "f6ef2def631ac98c",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801730-N4",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-15 01:41",
-        "source": "东方财富网",
-        "source_type": "google_news",
-        "title": "投行唱多全球储能需求，A股储能板块为何“不买账”？ 实探储能产业园：行业并不像资本市场那么悲观 - 东方财富网",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA3SnRZOXFLNlJTd2ZOUHlLM0h0bXpHUk4zdkd6alNtMkVLanJld2o4b3NIZHhmdlRzbHZSMFBzYmdPNGJmTFVfdnpBUEE0Z1c5WTRtVTRlbEVDNTZWZElhQw?oc=5"
       }
     ],
     "801740": [
@@ -2381,7 +2231,7 @@
           "船舶"
         ],
         "event_cluster": "80b3fedf54b92036",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -2404,7 +2254,7 @@
           "光启技术"
         ],
         "event_cluster": "01f83dd45424dc98",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -2429,7 +2279,7 @@
           "船舶"
         ],
         "event_cluster": "fe78379a5485622a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2448,7 +2298,7 @@
           "船舶"
         ],
         "event_cluster": "01bed90cf380727b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2467,7 +2317,7 @@
           "船舶"
         ],
         "event_cluster": "1dfe905fb79fb609",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2489,7 +2339,7 @@
           "军工"
         ],
         "event_cluster": "3f3e00501fa1499a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2508,7 +2358,7 @@
           "军工"
         ],
         "event_cluster": "786e466abd51a7b2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2527,7 +2377,7 @@
           "船舶"
         ],
         "event_cluster": "2bda3ce4188b266e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N8",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2546,7 +2396,7 @@
           "船舶"
         ],
         "event_cluster": "c0c5096241a2fea0",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N9",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2565,7 +2415,7 @@
           "船舶"
         ],
         "event_cluster": "a23720d22f553a4e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N10",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2584,7 +2434,7 @@
           "船舶"
         ],
         "event_cluster": "dd81e5fdbbb35b98",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801740-N11",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2607,7 +2457,7 @@
           "科大讯飞"
         ],
         "event_cluster": "2ad73e7dabd3a01b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2630,7 +2480,7 @@
           "软件"
         ],
         "event_cluster": "c0a23ecbe634d3c8",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -2652,7 +2502,7 @@
           "网络安全"
         ],
         "event_cluster": "86bffc1248b98be2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2674,7 +2524,7 @@
           "软件"
         ],
         "event_cluster": "cc7d73f8b6f0fa26",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N4",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -2698,7 +2548,7 @@
           "软件"
         ],
         "event_cluster": "e1ee3d391a7c105a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N5",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -2722,7 +2572,7 @@
           "软件"
         ],
         "event_cluster": "83708cee01ce8df9",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2741,7 +2591,7 @@
           "云计算"
         ],
         "event_cluster": "7049fbb4c3bfb9aa",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2760,7 +2610,7 @@
           "软件"
         ],
         "event_cluster": "34e1d1cf41ddfd64",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N8",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2779,7 +2629,7 @@
           "云计算"
         ],
         "event_cluster": "e7711cbb7ae69105",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N9",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2791,22 +2641,27 @@
       },
       {
         "category_tags": [
-          "S"
+          "O"
         ],
-        "component_entities": [],
+        "component_entities": [
+          "科蓝软件"
+        ],
         "entity_names": [
+          "科蓝软件",
           "软件"
         ],
-        "event_cluster": "fa9b1cc1e4ccc916",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "event_cluster": "56244d5fdf17b81b",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N10",
         "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-06-30 15:00",
-        "source": "NVIDIA",
+        "positive_category_tags": [
+          "O"
+        ],
+        "pub_date": "2026-07-08 17:49",
+        "source": "东方财富",
         "source_type": "trusted_news",
-        "title": "NVIDIA 推理软件栈如何助力实现更低 Token 成本 - NVIDIA",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5hT1lNTkhxRVFwYWlIaVpMSU5oVHhsdHo0V2dsd0pLTVhhTGxWaG82Tnh0bnB3NTB4UG95blBodDhuTl9rT0RiWERqN3RRZzBHbGxWNExQMUJJTVV0eTJZWkNtaWs5UzZnRHV5bXhpYlozNWZw?oc=5"
+        "title": "科蓝软件中标某股份制城市商业银行多系统采购项目 - 东方财富",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE04cTR4c05TNm5kalV4VDdhZks1OWxMY2V1b0ZrenZpbnVZT2hJcU82WkNFN1FDUzlyZE1kMVB2VGNIMmVrTVY0TXhfQzFocWRPdXliX09VT0tJZFViVDNUTVVJamlEdw?oc=5"
       },
       {
         "category_tags": [
@@ -2814,18 +2669,18 @@
         ],
         "component_entities": [],
         "entity_names": [
-          "云计算"
+          "软件"
         ],
-        "event_cluster": "4ee6405a2a8d7c01",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "event_cluster": "fa9b1cc1e4ccc916",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801750-N11",
         "negative_category_tags": [],
         "positive_category_tags": [],
-        "pub_date": "2026-07-13 08:09",
-        "source": "证券之星",
-        "source_type": "google_news",
-        "title": "海外科技行业周报：云计算需求持续验证，Opus 4.7级别模型价格带或面临松动_行业研究_研报 - 证券之星",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9WU3FnemU1U3J5MTBxc3BaTzdVWWRra0pZTWpHdktFbVM2SU1qWXVlakpSekl6THBmUk5LU3VlUUFRcUY5Zzk3V2xMT3VWYk1pTHZYMWJBYXVXdjkyYkZOUlNn?oc=5"
+        "pub_date": "2026-06-30 15:00",
+        "source": "NVIDIA",
+        "source_type": "trusted_news",
+        "title": "NVIDIA 推理软件栈如何助力实现更低 Token 成本 - NVIDIA",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5hT1lNTkhxRVFwYWlIaVpMSU5oVHhsdHo0V2dsd0pLTVhhTGxWaG82Tnh0bnB3NTB4UG95blBodDhuTl9rT0RiWERqN3RRZzBHbGxWNExQMUJJTVV0eTJZWkNtaWs5UzZnRHV5bXhpYlozNWZw?oc=5"
       }
     ],
     "801760": [
@@ -2840,7 +2695,7 @@
           "世纪华通"
         ],
         "event_cluster": "049c897df1384d51",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801760-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2859,7 +2714,7 @@
           "游戏"
         ],
         "event_cluster": "6385186f20594da0",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801760-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2878,7 +2733,7 @@
           "广告"
         ],
         "event_cluster": "1575a68673d384f9",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801760-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2897,7 +2752,7 @@
           "广告"
         ],
         "event_cluster": "520c2ce3ee69b855",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801760-N4",
         "negative_category_tags": [
           "E"
@@ -2918,7 +2773,7 @@
           "广告"
         ],
         "event_cluster": "a6066b3aa2d8bbcd",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801760-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2937,7 +2792,7 @@
           "游戏"
         ],
         "event_cluster": "a90a277d6611adbf",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801760-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2956,7 +2811,7 @@
           "广告"
         ],
         "event_cluster": "775c1ea6c42f176e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801760-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -2971,6 +2826,29 @@
           "E"
         ],
         "component_entities": [
+          "世纪华通",
+          "新华网"
+        ],
+        "entity_names": [
+          "世纪华通",
+          "新华网"
+        ],
+        "event_cluster": "af2cade5dbeafecd",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801760-N8",
+        "negative_category_tags": [],
+        "positive_category_tags": [],
+        "pub_date": "2026-04-30 15:00",
+        "source": "新华网",
+        "source_type": "trusted_news",
+        "title": "世纪华通财报：2025全年营收379亿 一季度首破110亿 实现全域增长 - 新华网",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNVZlQTF2X1RIVzRPejRjdUFNU1FNaEVtbEFnUzMwRV9HR0o5akNsTTJPd2xNOGd5Qjg5U0NHYXNmRldEWEozVGNBOE9TTjVLdDJ4N01QTXZfbHhwbDJlRU81R0JwTVhPaEZpRUxBY280NGd5SUV2N1U4MHFGQVlJSGpn?oc=5"
+      },
+      {
+        "category_tags": [
+          "E"
+        ],
+        "component_entities": [
           "新华网"
         ],
         "entity_names": [
@@ -2978,8 +2856,8 @@
           "广告"
         ],
         "event_cluster": "9b5f1a91d4cc6fb9",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801760-N8",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801760-N9",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-04-07 15:00",
@@ -2997,8 +2875,8 @@
           "游戏"
         ],
         "event_cluster": "5976c20d4af2978e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801760-N9",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801760-N10",
         "negative_category_tags": [],
         "positive_category_tags": [
           "E"
@@ -3008,29 +2886,6 @@
         "source_type": "trusted_news",
         "title": "贪玩去年游戏收入大降超三成，凭金融投资、减少买量扭亏 - 东方财富网",
         "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZWE9zakdULTRWeFJiWWtsMkJMc1dwRFF2Q0RSd3ctVTl4bGd3dlNhU3lNWmFYZDF3c3hrdE1VVEZYYXRFaTI0Nlg0UTEzeWFKQTJ6RzZWc1VsLTZ2SHFnNg?oc=5"
-      },
-      {
-        "category_tags": [
-          "E"
-        ],
-        "component_entities": [
-          "世纪华通",
-          "新华网"
-        ],
-        "entity_names": [
-          "世纪华通",
-          "新华网"
-        ],
-        "event_cluster": "af2cade5dbeafecd",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801760-N10",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-04-30 15:00",
-        "source": "新华网",
-        "source_type": "google_news",
-        "title": "世纪华通财报：2025全年营收379亿 一季度首破110亿 实现全域增长 - 新华网",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNVZlQTF2X1RIVzRPejRjdUFNU1FNaEVtbEFnUzMwRV9HR0o5akNsTTJPd2xNOGd5Qjg5U0NHYXNmRldEWEozVGNBOE9TTjVLdDJ4N01QTXZfbHhwbDJlRU81R0JwTVhPaEZpRUxBY280NGd5SUV2N1U4MHFGQVlJSGpn?oc=5"
       }
     ],
     "801770": [
@@ -3045,7 +2900,7 @@
           "亨通光电"
         ],
         "event_cluster": "d1f8cd9d16f25eda",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801770-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3066,7 +2921,7 @@
           "数据中心"
         ],
         "event_cluster": "9e9b3ed96204ec6e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801770-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3085,15 +2940,15 @@
           "光模块"
         ],
         "event_cluster": "3a300bf4f3f1c941",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801770-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
-        "pub_date": "2026-07-16 15:00",
-        "source": "21财经",
+        "pub_date": "2026-07-16 14:27",
+        "source": "东方财富网",
         "source_type": "trusted_news",
-        "title": "算力基建火热，光模块需求高增，云计算ETF招商（159890）放量上涨1.88%！ - 21财经",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObDNpbDdDMEpndTJCemxnTTh5NmpxcW1SU2FQdkVRODhmQU9VM1IzV1J6NXNpenNSbUZZbVNvOWR4V0FNMUdjbkpRd003eC1HNHdQU21lR2dETGJuVmhjeW9sQlRXUFVwNlNUM0RRV1lYbVhtNDUwc3FUT0dHb245X004aVZRQUJDWER0WmZfTjZlcHdh?oc=5"
+        "title": "算力基建火热，光模块需求高增，云计算ETF招商（159890）放量上涨1.88%！ - 东方财富网",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zak9zNlFjZ0doSzNCeTllYndVaEdWXzVSbEx4eGRpRVdTYWpTVFNpZTlRLUg4Q1lOcGdKRi14SnlGcThndjg2NTQ2NjhabXZUbVplTFpoOVBZMzBlSlFEbw?oc=5"
       },
       {
         "category_tags": [
@@ -3104,7 +2959,7 @@
           "通信"
         ],
         "event_cluster": "8816ab4202f7cf5e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801770-N4",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3128,7 +2983,7 @@
           "通信"
         ],
         "event_cluster": "856f54ed6aa37712",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801770-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3150,7 +3005,7 @@
           "光模块"
         ],
         "event_cluster": "98f626413292e3f4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801770-N6",
         "negative_category_tags": [
           "S"
@@ -3174,7 +3029,7 @@
           "信贷"
         ],
         "event_cluster": "4e853df4e9a5f64f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3196,7 +3051,7 @@
           "信贷"
         ],
         "event_cluster": "62f22328e7e57780",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3216,7 +3071,7 @@
           "信贷"
         ],
         "event_cluster": "18edcae5e0507a49",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3235,7 +3090,7 @@
           "信贷"
         ],
         "event_cluster": "c329921ee2c46b23",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3254,7 +3109,7 @@
           "银行"
         ],
         "event_cluster": "8d712d0ece03538f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3273,7 +3128,7 @@
           "存款"
         ],
         "event_cluster": "12ccacac35583e94",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3292,7 +3147,7 @@
           "信贷"
         ],
         "event_cluster": "b81cc42780235ebd",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3311,7 +3166,7 @@
           "银行"
         ],
         "event_cluster": "3483422cdfbacae4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N8",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3333,7 +3188,7 @@
           "银行"
         ],
         "event_cluster": "f9eff40baa19340e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N9",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3352,7 +3207,7 @@
           "信贷"
         ],
         "event_cluster": "f738bfea4a8f9127",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N10",
         "negative_category_tags": [
           "O"
@@ -3373,7 +3228,7 @@
           "银行"
         ],
         "event_cluster": "ae866fc34933175b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801780-N11",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3397,7 +3252,7 @@
           "证券"
         ],
         "event_cluster": "bd2bcf1ff32619d8",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3420,7 +3275,7 @@
           "东方财富"
         ],
         "event_cluster": "dc1497a0a6b4a0fe",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3441,7 +3296,7 @@
           "证券"
         ],
         "event_cluster": "2e84cf61f33e135b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N3",
         "negative_category_tags": [
           "S"
@@ -3465,7 +3320,7 @@
           "证券"
         ],
         "event_cluster": "813cbfd18a1bffd4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3489,7 +3344,7 @@
           "证券"
         ],
         "event_cluster": "2016f938f6f0cbea",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3508,7 +3363,7 @@
           "保险"
         ],
         "event_cluster": "79e612ad0a779576",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3527,7 +3382,7 @@
           "保险"
         ],
         "event_cluster": "76f7296dc71c7c72",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3549,7 +3404,7 @@
           "券商"
         ],
         "event_cluster": "0a7d27c3462a7a30",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801790-N8",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3565,50 +3420,6 @@
     "801880": [
       {
         "category_tags": [
-          "E"
-        ],
-        "component_entities": [
-          "广汽集团"
-        ],
-        "entity_names": [
-          "广汽集团"
-        ],
-        "event_cluster": "b12ef3fae67e6176",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801880-N1",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-11",
-        "source": "巨潮资讯",
-        "source_type": "announcement",
-        "title": "广汽集团：广汽集团2026年半年度业绩预告",
-        "url": "https://static.cninfo.com.cn/finalpage/2026-07-11/1225420234.PDF"
-      },
-      {
-        "category_tags": [
-          "O"
-        ],
-        "component_entities": [
-          "广汽集团"
-        ],
-        "entity_names": [
-          "广汽集团",
-          "汽车",
-          "整车"
-        ],
-        "event_cluster": "d40114e8edd6798b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801880-N2",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-16 10:28",
-        "source": "汽车商业评论",
-        "source_type": "trusted_news",
-        "title": "广汽集团第3000万辆整车完成交付 - 汽车商业评论",
-        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9iVENOY0J4RmNMVTc2bC1DQmNlaTlXc2lmU0FfTjM4eFNacDQzNU82N2xYdGdQUkdBa3pITU14cW9kUQ?oc=5"
-      },
-      {
-        "category_tags": [
           "S"
         ],
         "component_entities": [],
@@ -3617,8 +3428,8 @@
           "新能源汽车"
         ],
         "event_cluster": "12d1f7281418b508",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801880-N3",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801880-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-16 13:02",
@@ -3636,8 +3447,8 @@
           "汽车"
         ],
         "event_cluster": "7ce65e94708bbe4d",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801880-N4",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801880-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-16 23:27",
@@ -3655,8 +3466,8 @@
           "汽车"
         ],
         "event_cluster": "4bb6cec99214b36b",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801880-N5",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801880-N3",
         "negative_category_tags": [],
         "positive_category_tags": [
           "S"
@@ -3681,7 +3492,7 @@
           "机械"
         ],
         "event_cluster": "31aef916ac03cc83",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801890-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3702,7 +3513,7 @@
           "机器人"
         ],
         "event_cluster": "0089dfd4e1138608",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801890-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3724,7 +3535,7 @@
           "机械"
         ],
         "event_cluster": "e3066ccbff1dc54f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801890-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3745,7 +3556,7 @@
           "机器人"
         ],
         "event_cluster": "06afb8487c8ebcf2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801890-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3766,7 +3577,7 @@
           "机器人"
         ],
         "event_cluster": "208c5b8faeb02425",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801890-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3787,7 +3598,7 @@
           "机器人"
         ],
         "event_cluster": "4708c7a9cecc9d5c",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801890-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3810,7 +3621,7 @@
           "中国神华"
         ],
         "event_cluster": "0fdf2e1b457be0e1",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3831,7 +3642,7 @@
           "兖矿能源"
         ],
         "event_cluster": "1885b91a7ad63e56",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3854,7 +3665,7 @@
           "陕西煤业"
         ],
         "event_cluster": "c7cd1439bdad4ad6",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N3",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3877,7 +3688,7 @@
           "动力煤"
         ],
         "event_cluster": "c04f920de1a8a85a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N4",
         "negative_category_tags": [
           "S"
@@ -3898,7 +3709,7 @@
           "煤矿"
         ],
         "event_cluster": "5317608cff6411b4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3917,7 +3728,7 @@
           "煤炭"
         ],
         "event_cluster": "67d613ae3d01daf4",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N6",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3936,7 +3747,7 @@
           "煤炭"
         ],
         "event_cluster": "996b4e9a94e34e31",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3955,7 +3766,7 @@
           "煤炭"
         ],
         "event_cluster": "463e67f3714d9449",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N8",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -3977,7 +3788,7 @@
           "煤炭"
         ],
         "event_cluster": "a6d977d90427ef04",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N9",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -3998,7 +3809,7 @@
           "煤炭"
         ],
         "event_cluster": "5d25141ca51a4f42",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801950-N10",
         "negative_category_tags": [
           "S"
@@ -4009,25 +3820,6 @@
         "source_type": "trusted_news",
         "title": "成本抬升需求托底 第十轮提价激活煤炭股 - 东方财富",
         "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1PNks1WWJVOXI4MEVYcFRRemhWenN5REZTcU5ra3pERmRNU05lNHlsWEozRW9MNXJIaWRvdnJaQXIzNUY3RWM1YVdiM25TUlFONlNVdGo4REFEZGROLVUxVGh5X2tRUQ?oc=5"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
-          "煤炭"
-        ],
-        "event_cluster": "9c2dae173c43400e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801950-N11",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-05-03 15:00",
-        "source": "人民日报",
-        "source_type": "trusted_news",
-        "title": "全年煤炭市场供需预计总体平衡 - 人民日报",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONDYwZF9saHRmNHVDdUR1akoySnJMaTBsX1R2c0R5R2hqYkJUbUZXNUo1a2NDbGcwU2x1LUJKdkpYRmNHUjl1UlVtRExNbENSY0o5d04zQW02dmx1QkNDQlltdVVqZ3dRelRZVHRkblVPOVlOZFZ6YTZyYTNDOTZ3Vg?oc=5"
       }
     ],
     "801960": [
@@ -4042,7 +3834,7 @@
           "桐昆股份"
         ],
         "event_cluster": "854c441100fd2fbb",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801960-N1",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -4063,7 +3855,7 @@
           "原油"
         ],
         "event_cluster": "5c49387a030fe630",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801960-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4082,7 +3874,7 @@
           "原油"
         ],
         "event_cluster": "97a5428b88be3d2f",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801960-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4101,7 +3893,7 @@
           "原油"
         ],
         "event_cluster": "86f56655581eb2aa",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801960-N4",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -4127,7 +3919,7 @@
           "环保"
         ],
         "event_cluster": "cf45e284f073e477",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4148,7 +3940,7 @@
           "高能环境"
         ],
         "event_cluster": "a77d4ade38b33530",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N2",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -4170,7 +3962,7 @@
           "环保"
         ],
         "event_cluster": "d37ec4890b92a4bf",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4189,7 +3981,7 @@
           "环保"
         ],
         "event_cluster": "d0fe62bd07737e5d",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4208,7 +4000,7 @@
           "环保"
         ],
         "event_cluster": "6b2252afd896f914",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N5",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4230,7 +4022,7 @@
           "环保"
         ],
         "event_cluster": "5e5a812d9f647f69",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N6",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -4250,28 +4042,9 @@
         "entity_names": [
           "垃圾焚烧"
         ],
-        "event_cluster": "c270f4b8c86ddfe2",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801970-N7",
-        "negative_category_tags": [],
-        "positive_category_tags": [],
-        "pub_date": "2026-07-09 15:56",
-        "source": "见道网",
-        "source_type": "trusted_news",
-        "title": "中企承建巴厘岛首座垃圾焚烧电站开工 - 见道网",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IbHNSbFJkVjdRVlFETDJIWGp3eU15TU9nU1RlWHJvZDh5QWEwMDU5cjdoZWpZT0Myb3JDYk5lc3p4UWdjVTdIbTlUaVVIOVQ5UWE1WA?oc=5"
-      },
-      {
-        "category_tags": [
-          "S"
-        ],
-        "component_entities": [],
-        "entity_names": [
-          "垃圾焚烧"
-        ],
         "event_cluster": "388f8164950b5966",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801970-N8",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801970-N7",
         "negative_category_tags": [],
         "positive_category_tags": [],
         "pub_date": "2026-07-08 15:00",
@@ -4292,8 +4065,8 @@
           "环保"
         ],
         "event_cluster": "ac3f4c1bea5afd4d",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
-        "id": "801970-N9",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801970-N8",
         "negative_category_tags": [],
         "positive_category_tags": [
           "O"
@@ -4309,6 +4082,28 @@
           "O"
         ],
         "component_entities": [
+          "惠城环保"
+        ],
+        "entity_names": [
+          "惠城环保",
+          "环保"
+        ],
+        "event_cluster": "b1eb4a5d2bf1af04",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
+        "id": "801970-N9",
+        "negative_category_tags": [],
+        "positive_category_tags": [],
+        "pub_date": "2026-07-06 15:00",
+        "source": "东方财富",
+        "source_type": "trusted_news",
+        "title": "惠城环保：公司将按生产计划及订单情况有序安排生产 - 东方财富",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9DN3cyY3Nkd1lPSmpkbDBFN1QtcVlvZzdkQmdPY1IzRjVfVm9QM1YyWmxkQVBpWENJMEJPUzlnVE44eVBEZlJtdy14QmdNdkNDeVNiR2FiQ0k0NDBRXzJITjZRekpiUQ?oc=5"
+      },
+      {
+        "category_tags": [
+          "O"
+        ],
+        "component_entities": [
           "永清环保"
         ],
         "entity_names": [
@@ -4316,7 +4111,7 @@
           "环保"
         ],
         "event_cluster": "de137315e595b960",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N10",
         "negative_category_tags": [],
         "positive_category_tags": [
@@ -4337,7 +4132,7 @@
           "垃圾焚烧"
         ],
         "event_cluster": "68a9ee0908592a5e",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N11",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4356,7 +4151,7 @@
           "环保"
         ],
         "event_cluster": "8d8175c64fc52794",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801970-N12",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4377,7 +4172,7 @@
           "美妆"
         ],
         "event_cluster": "00fcfb860062a792",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801980-N1",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4396,7 +4191,7 @@
           "美妆"
         ],
         "event_cluster": "f03b98dcd4d8ab1a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801980-N2",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4415,7 +4210,7 @@
           "美妆"
         ],
         "event_cluster": "9624a8e99234023a",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801980-N3",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4434,7 +4229,7 @@
           "美妆"
         ],
         "event_cluster": "a73cee5986e73f21",
-        "fetched_at": "2026-07-19T14:03:12+08:00",
+        "fetched_at": "2026-07-19T14:36:09+08:00",
         "id": "801980-N4",
         "negative_category_tags": [],
         "positive_category_tags": [],
@@ -4513,8 +4308,8 @@
     "801980": "32b521988d100498d07197bf82b434a0d38ab15f0d347f10cbf3072a61a2d1d5"
   },
   "config_sha256": "77a9cd9509018a7365fef062be462415d30f58b25e4f10c1f86b322904bcee7c",
-  "decision_sha256": "2cafb4e30b591f8c70be6ba171533ad04e9b74832e3549b77cebe81f81534a2f",
-  "engine_sha256": "5733f73054eeac1b24e92af6a23a1fc4d841da2db745901b1a6b73421913a749",
+  "decision_sha256": "9a0b133de3dd70233a2aa9cdc4c13a857c23392b4431a3f967b2c97df17e826f",
+  "engine_sha256": "026863801a2c200914eab25ae20f0611115729d455172f865cd3c0dc1ce1a3d2",
   "evidence": {
     "801010": {
       "categories": [],
@@ -4749,19 +4544,20 @@
     },
     "801080": {
       "categories": [
+        "E",
         "S"
       ],
       "claims": [
         {
-          "category": "S",
-          "entity": "沪电股份",
-          "evidence_id": "801080-N6",
-          "published_at": "2026-07-16"
+          "category": "E",
+          "entity": "兆易创新",
+          "evidence_id": "801080-N3",
+          "published_at": "2026-07-10"
         },
         {
           "category": "S",
           "entity": "德明利",
-          "evidence_id": "801080-N7",
+          "evidence_id": "801080-N4",
           "published_at": "2026-07-14"
         },
         {
@@ -4774,40 +4570,45 @@
       "component_entity_count": 2,
       "contrary_ids": [],
       "decision_source": "rules_recovery",
-      "driver": "供需",
+      "driver": "盈利/供需",
       "entities": [
-        "沪电股份",
+        "兆易创新",
         "德明利",
         "半导体"
       ],
       "event_clusters": [
         "17e80354fb72df8e",
         "1f170a2dae82f536",
-        "2415c7fa191db94f"
+        "48e4484f664ad71f"
       ],
       "evidence_ids": [
-        "801080-N6",
-        "801080-N7",
+        "801080-N3",
+        "801080-N4",
         "801080-N5"
       ],
       "gate": "WATCH",
       "gate_blockers": [
         "规则恢复可入门的成分公司O/E类别不足2类",
         "规则恢复可入门的独立成分公司不足2个",
-        "规则恢复可入门的独立URL或事件不足2个",
-        "规则恢复缺少公司公告锚点"
+        "规则恢复可入门的独立URL或事件不足2个"
       ],
-      "gate_eligible_categories": [],
-      "gate_eligible_entities": [],
-      "gate_eligible_event_cluster_count": 0,
-      "gate_eligible_evidence_ids": [],
-      "gate_eligible_url_count": 0,
+      "gate_eligible_categories": [
+        "E"
+      ],
+      "gate_eligible_entities": [
+        "兆易创新"
+      ],
+      "gate_eligible_event_cluster_count": 1,
+      "gate_eligible_evidence_ids": [
+        "801080-N3"
+      ],
+      "gate_eligible_url_count": 1,
       "quality_flags": [],
       "source_types": [
-        "google_news",
+        "announcement",
         "trusted_news"
       ],
-      "summary": "规则恢复可入门的成分公司O/E类别不足2类；规则恢复可入门的独立成分公司不足2个；规则恢复可入门的独立URL或事件不足2个；规则恢复缺少公司公告锚点"
+      "summary": "规则恢复可入门的成分公司O/E类别不足2类；规则恢复可入门的独立成分公司不足2个；规则恢复可入门的独立URL或事件不足2个"
     },
     "801110": {
       "categories": [],
@@ -4888,30 +4689,15 @@
       "summary": "规则恢复可入门的成分公司O/E类别不足2类；规则恢复可入门的独立成分公司不足2个；规则恢复可入门的独立URL或事件不足2个；规则恢复缺少公司公告锚点"
     },
     "801140": {
-      "categories": [
-        "E"
-      ],
-      "claims": [
-        {
-          "category": "E",
-          "entity": "五洲特纸",
-          "evidence_id": "801140-N2",
-          "published_at": "2026-07-08"
-        }
-      ],
-      "component_entity_count": 1,
+      "categories": [],
+      "claims": [],
+      "component_entity_count": 0,
       "contrary_ids": [],
       "decision_source": "rules_recovery",
-      "driver": "盈利",
-      "entities": [
-        "五洲特纸"
-      ],
-      "event_clusters": [
-        "7b6d5a5ea0f67292"
-      ],
-      "evidence_ids": [
-        "801140-N2"
-      ],
+      "driver": "待验证",
+      "entities": [],
+      "event_clusters": [],
+      "evidence_ids": [],
       "gate": "WATCH",
       "gate_blockers": [
         "规则恢复可入门的成分公司O/E类别不足2类",
@@ -4919,23 +4705,13 @@
         "规则恢复可入门的独立URL或事件不足2个",
         "规则恢复缺少公司公告锚点"
       ],
-      "gate_eligible_categories": [
-        "E"
-      ],
-      "gate_eligible_entities": [
-        "五洲特纸"
-      ],
-      "gate_eligible_event_cluster_count": 1,
-      "gate_eligible_evidence_ids": [
-        "801140-N2"
-      ],
-      "gate_eligible_url_count": 1,
-      "quality_flags": [
-        "SINGLE_COMPANY"
-      ],
-      "source_types": [
-        "trusted_news"
-      ],
+      "gate_eligible_categories": [],
+      "gate_eligible_entities": [],
+      "gate_eligible_event_cluster_count": 0,
+      "gate_eligible_evidence_ids": [],
+      "gate_eligible_url_count": 0,
+      "quality_flags": [],
+      "source_types": [],
       "summary": "规则恢复可入门的成分公司O/E类别不足2类；规则恢复可入门的独立成分公司不足2个；规则恢复可入门的独立URL或事件不足2个；规则恢复缺少公司公告锚点"
     },
     "801150": {
@@ -4998,15 +4774,13 @@
         {
           "category": "S",
           "entity": "港口",
-          "evidence_id": "801170-N3",
+          "evidence_id": "801170-N2",
           "published_at": "2026-07-16"
         }
       ],
       "component_entity_count": 0,
       "contrary_ids": [
-        "801170-N2",
-        "801170-N1",
-        "801170-N7"
+        "801170-N1"
       ],
       "decision_source": "rules_recovery",
       "driver": "供需",
@@ -5017,7 +4791,7 @@
         "1dac530719e94fb4"
       ],
       "evidence_ids": [
-        "801170-N3"
+        "801170-N2"
       ],
       "gate": "WATCH",
       "gate_blockers": [
@@ -5477,20 +5251,28 @@
         },
         {
           "category": "O",
+          "entity": "科蓝软件",
+          "evidence_id": "801750-N10",
+          "published_at": "2026-07-08"
+        },
+        {
+          "category": "O",
           "entity": "东华软件",
           "evidence_id": "801750-N2",
           "published_at": "2026-07-16"
         }
       ],
-      "component_entity_count": 2,
+      "component_entity_count": 3,
       "contrary_ids": [],
       "decision_source": "rules_recovery",
       "driver": "订单",
       "entities": [
         "凌志软件",
-        "东华软件"
+        "东华软件",
+        "科蓝软件"
       ],
       "event_clusters": [
+        "56244d5fdf17b81b",
         "c0a23ecbe634d3c8",
         "cc7d73f8b6f0fa26",
         "e1ee3d391a7c105a"
@@ -5498,6 +5280,7 @@
       "evidence_ids": [
         "801750-N5",
         "801750-N4",
+        "801750-N10",
         "801750-N2"
       ],
       "gate": "WATCH",
@@ -5510,15 +5293,17 @@
       ],
       "gate_eligible_entities": [
         "凌志软件",
-        "东华软件"
+        "东华软件",
+        "科蓝软件"
       ],
-      "gate_eligible_event_cluster_count": 3,
+      "gate_eligible_event_cluster_count": 4,
       "gate_eligible_evidence_ids": [
         "801750-N5",
         "801750-N4",
+        "801750-N10",
         "801750-N2"
       ],
-      "gate_eligible_url_count": 3,
+      "gate_eligible_url_count": 4,
       "quality_flags": [],
       "source_types": [
         "trusted_news"
@@ -5533,7 +5318,7 @@
         {
           "category": "E",
           "entity": "游戏",
-          "evidence_id": "801760-N9",
+          "evidence_id": "801760-N10",
           "published_at": "2026-03-28"
         }
       ],
@@ -5550,7 +5335,7 @@
         "5976c20d4af2978e"
       ],
       "evidence_ids": [
-        "801760-N9"
+        "801760-N10"
       ],
       "gate": "WATCH",
       "gate_blockers": [
@@ -5761,7 +5546,7 @@
         {
           "category": "S",
           "entity": "汽车",
-          "evidence_id": "801880-N5",
+          "evidence_id": "801880-N3",
           "published_at": "2026-07-13"
         }
       ],
@@ -5776,7 +5561,7 @@
         "4bb6cec99214b36b"
       ],
       "evidence_ids": [
-        "801880-N5"
+        "801880-N3"
       ],
       "gate": "WATCH",
       "gate_blockers": [
@@ -5977,7 +5762,7 @@
         {
           "category": "O",
           "entity": "永清环保",
-          "evidence_id": "801970-N9",
+          "evidence_id": "801970-N8",
           "published_at": "2026-07-07"
         },
         {
@@ -6005,7 +5790,7 @@
       "evidence_ids": [
         "801970-N2",
         "801970-N6",
-        "801970-N9",
+        "801970-N8",
         "801970-N10"
       ],
       "gate": "PASS",
@@ -6023,7 +5808,7 @@
       "gate_eligible_evidence_ids": [
         "801970-N2",
         "801970-N6",
-        "801970-N9",
+        "801970-N8",
         "801970-N10"
       ],
       "gate_eligible_url_count": 4,
@@ -6062,7 +5847,7 @@
     }
   },
   "evidence_engine_version": "rules-recovery-v1",
-  "generated_at": "2026-07-19T14:07:15+08:00",
+  "generated_at": "2026-07-19T14:40:01+08:00",
   "history_sha256": {
     "801010": "d1dca459370ec44cf030c0d06899a5b372d27db4e4813fc4ae57830cdb62c846",
     "801030": "8f040c7855dce5c3f229508380601f97ccf6567a1917e672a1f806901acad4f9",
@@ -6097,7 +5882,7 @@
     "801980": "91b315cc9cfb4c9bfd10219a5fe4d5ef3d7b91635078b18934791722d9ea2dae"
   },
   "hold_confirmations": [],
-  "input_sha256": "8f8e27ae0010b198fde5a76a99f20309731e17e84c4014fd820027336028881f",
+  "input_sha256": "381cca5071415885ff71e37a157cf15fd223890a1281965e255f557166365449",
   "market_freshness": {
     "actual": "2026-07-16",
     "expected": "2026-07-16",
@@ -6829,8 +6614,8 @@
     "801740"
   ],
   "repair_of": {
-    "report_sha256": "2ace9a90d6ba9411d32ef710094442e0a1e9be3b9790dd4d022528618853257a",
-    "snapshot_sha256": "acd034beb16a71cdde5d25595826a69e0e84f0a3eff441a64f7b550d2e7397d0",
+    "report_sha256": "77766f7409f681adbba2995b94b6a12125a4630bf2dcf08b78253a20539780e0",
+    "snapshot_sha256": "3561519a3fa433d0f81d59b6ffa88a7c09dfd2377933f25d713ce09b37c8baf1",
     "strategy_version": "v0.2-F.2-pilot"
   },
   "report_date": "2026-07-16",
