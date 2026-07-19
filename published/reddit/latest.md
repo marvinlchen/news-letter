@@ -4,19 +4,7 @@
 
 ## 宏观经济 社区讨论 Top 3
 
-### 1. Has the increasing concentration of AI-related companies in the S&P 500 created systemic economic risks, or is this simply the result of genuine productivity gains?
-
-- **社区热度：** 日榜来源 r/AskEconomics / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T03:39:51+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/AskEconomics/comments/1uzkzjj/has_the_increasing_concentration_of_airelated/)
-- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
-- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
-- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
-- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
-- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
-- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
-
-### 2. What would be the economic benefits of Western countries switching to 32-hour, 4 day work weeks without a reduction in pay?
+### 1. What would be the economic benefits of Western countries switching to 32-hour, 4 day work weeks without a reduction in pay?
 
 - **社区热度：** 日榜来源 r/AskEconomics / 摘要采样 0 条评论 / 价值投资相关度 0
 - **发布时间：** 2026-07-18T15:49:10+00:00
@@ -28,7 +16,7 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. II. High public debt and shifting financial markets: challenges for central banks
+### 2. II. High public debt and shifting financial markets: challenges for central banks
 
 - **社区热度：** 日榜来源 r/Economics / 摘要采样 0 条评论 / 价值投资相关度 0
 - **发布时间：** 2026-07-18T12:05:04+00:00
@@ -40,13 +28,25 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
+### 3. Russia is one of the world's top oil producers. Why isn't it as incredibly wealthy as the oil-rich Arab nations?
+
+- **社区热度：** 日榜来源 r/AskEconomics / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T08:28:59+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/AskEconomics/comments/1uzqb8z/russia_is_one_of_the_worlds_top_oil_producers_why/)
+- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
+- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
+- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
+- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
+- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
+- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
+
 ## 航运与供应链 社区讨论 Top 3
 
-### 1. Space-X Rocket Debris
+### 1. Through my porthole #4
 
 - **社区热度：** 日榜来源 r/maritime / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T05:02:02+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/maritime/comments/1uzmljv/spacex_rocket_debris/)
+- **发布时间：** 2026-07-18T10:10:52+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/maritime/comments/1uzs18c/through_my_porthole_4/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -54,19 +54,7 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 2. Another big boy coming in😎
-
-- **社区热度：** 日榜来源 r/maritime / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-17T22:53:29+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/maritime/comments/1uzeu0q/another_big_boy_coming_in/)
-- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
-- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
-- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
-- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
-- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
-- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
-
-### 3. Freight forwarder check
+### 2. Freight forwarder check
 
 - **社区热度：** 日榜来源 r/logistics / 摘要采样 0 条评论 / 价值投资相关度 0
 - **发布时间：** 2026-07-18T14:21:06+00:00
@@ -78,13 +66,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-## 大宗商品 社区讨论 Top 3
+### 3. Military Transition
 
-### 1. China's batteries move beyond capacity scale-up꞉ utility-scale storage could have shifted 23 TWh more clean power in 2025 | Ember
-
-- **社区热度：** 日榜来源 r/energy / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T04:36:45+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/energy/comments/1uzm3ty/chinas_batteries_move_beyond_capacity_scaleup/)
+- **社区热度：** 日榜来源 r/logistics / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T11:56:06+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/logistics/comments/1uztx4w/military_transition/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -92,7 +78,9 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 2. The Little Frenchman illustrated June 6, 1903 School museum - The mine by Christophe
+## 大宗商品 社区讨论 Top 3
+
+### 1. The Little Frenchman illustrated June 6, 1903 School museum - The mine by Christophe
 
 - **社区热度：** 日榜来源 r/mining / 摘要采样 0 条评论 / 价值投资相关度 0
 - **发布时间：** 2026-07-18T08:54:01+00:00
@@ -104,11 +92,23 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. Becoming a Commodity Recruiter
+### 2. Trump may have to choose between an endless quagmire and ceding the Strait of Hormuz to Iran. As the world's reserves dangerously dwindle and prices again rise, Trump appears to have lost the upper hand and faces a stark choice: escalate the conflict or let Iran control the world's energy artery.
 
-- **社区热度：** 日榜来源 r/Commodities / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T04:47:23+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/Commodities/comments/1uzmb7l/becoming_a_commodity_recruiter/)
+- **社区热度：** 日榜来源 r/energy / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T15:23:36+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/energy/comments/1uzyqkp/trump_may_have_to_choose_between_an_endless/)
+- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
+- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
+- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
+- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
+- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
+- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
+
+### 3. A massive 125 tonne boulder of lead silver galena, from the Silverton silver rush of the 1890s, West Kootenay British Columbia Canada
+
+- **社区热度：** 日榜来源 r/mining / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T12:43:15+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/mining/comments/1uzuwv9/a_massive_125_tonne_boulder_of_lead_silver_galena/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -118,11 +118,11 @@
 
 ## 股票市场 社区讨论 Top 3
 
-### 1. Micron will peak and leave all you retail with heavy bags
+### 1. Is Nvidia priced for perfection?
 
-- **社区热度：** 日榜来源 r/investing / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T05:59:00+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/investing/comments/1uzno5c/micron_will_peak_and_leave_all_you_retail_with/)
+- **社区热度：** 日榜来源 r/ValueInvesting / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T13:01:18+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/ValueInvesting/comments/1uzvbhd/is_nvidia_priced_for_perfection/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -130,11 +130,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 2. AMC will be beat earnings expectations on Monday
+### 2. CSL (ASX: CSL) Follow-Up: The Probability Model Behind My Investment Thesis (Challenges Welcome)
 
-- **社区热度：** 日榜来源 r/stocks / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T14:38:55+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/stocks/comments/1uzxmi2/amc_will_be_beat_earnings_expectations_on_monday/)
+- **社区热度：** 日榜来源 r/ValueInvesting / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T07:54:01+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/ValueInvesting/comments/1uzppud/csl_asx_csl_followup_the_probability_model_behind/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -142,11 +142,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. Netflix beat earnings, did its biggest buyback and then restricted access to its engagement data and fell 12% through two days.
+### 3. Tracking DCF portfolio vs index - S&P 500
 
-- **社区热度：** 日榜来源 r/stocks / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T14:01:18+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/stocks/comments/1uzwpa8/netflix_beat_earnings_did_its_biggest_buyback_and/)
+- **社区热度：** 日榜来源 r/ValueInvesting / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T12:07:12+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/ValueInvesting/comments/1uzu5qx/tracking_dcf_portfolio_vs_index_sp_500/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -180,11 +180,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. What surprised an engineer after spending 13 years on SQL Server and then working on Postgres? on the Talking Postgres podcast
+### 3. Tin Whiskers destroy satellites
 
-- **社区热度：** 日榜来源 r/programming / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-17T22:50:43+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/programming/comments/1uzerp7/what_surprised_an_engineer_after_spending_13/)
+- **社区热度：** 日榜来源 r/Semiconductors / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T13:43:26+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/Semiconductors/comments/1uzwa0o/tin_whiskers_destroy_satellites/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -218,11 +218,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. Dunhams Sports FT switch
+### 3. Does anyone actually check Lighthouse/PageSpeed & Schema markup validation before buying a theme on Shopify, or is that just a developer thing?
 
-- **社区热度：** 日榜来源 r/retail / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T01:10:57+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/retail/comments/1uzhxj6/dunhams_sports_ft_switch/)
+- **社区热度：** 日榜来源 r/ecommerce / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T09:08:15+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/ecommerce/comments/1uzqz4a/does_anyone_actually_check_lighthousepagespeed/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -244,11 +244,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 2. How can you ensure you are monitoring all critical areas?
+### 2. Article: Topology-Aware GPU scheduling with KAI Scheduler
 
-- **社区热度：** 日榜来源 r/sre / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-17T22:28:49+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/sre/comments/1uze8u6/how_can_you_ensure_you_are_monitoring_all/)
+- **社区热度：** 日榜来源 r/kubernetes / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T12:32:03+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/kubernetes/comments/1uzuo6a/article_topologyaware_gpu_scheduling_with_kai/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -256,11 +256,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. I can't describe how galactically stupid this idea is.
+### 3. NIC teaming Windows server 2025
 
-- **社区热度：** 日榜来源 r/sysadmin / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-17T21:08:40+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/sysadmin/comments/1uzca8p/i_cant_describe_how_galactically_stupid_this_idea/)
+- **社区热度：** 日榜来源 r/networking / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T06:11:36+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/networking/comments/1uznwmv/nic_teaming_windows_server_2025/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -270,31 +270,7 @@
 
 ## AI 前沿 社区讨论 Top 3
 
-### 1. Kimi moment. I think the writing is on the wall for Anthropic and OpenAi
-
-- **社区热度：** 日榜来源 r/LocalLLaMA / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T01:50:03+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/LocalLLaMA/comments/1uziqyt/kimi_moment_i_think_the_writing_is_on_the_wall/)
-- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
-- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
-- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
-- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
-- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
-- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
-
-### 2. Attributing LLM inference costs across teams in production
-
-- **社区热度：** 日榜来源 r/artificial / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-17T23:11:57+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/artificial/comments/1uzf9xx/attributing_llm_inference_costs_across_teams_in/)
-- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
-- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
-- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
-- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
-- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
-- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
-
-### 3. Did blatant AI Slop just win a 25K USD Deepmind / Kaggle Grand Prize? [D]
+### 1. Did blatant AI Slop just win a 25K USD Deepmind / Kaggle Grand Prize? [D]
 
 - **社区热度：** 日榜来源 r/MachineLearning / 摘要采样 0 条评论 / 价值投资相关度 0
 - **发布时间：** 2026-07-18T15:10:52+00:00
@@ -305,3 +281,34 @@
 - **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
+
+### 2. I cut a RAG pipeline's response time from 90 seconds to 4. Never touched the model
+
+- **社区热度：** 日榜来源 r/artificial / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T15:47:54+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/artificial/comments/1uzzcef/i_cut_a_rag_pipelines_response_time_from_90/)
+- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
+- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
+- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
+- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
+- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
+- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
+
+### 3. Which MCP servers are worth installing for non-dev work in 2026?? Sharing what I found beyond coding
+
+- **社区热度：** 日榜来源 r/artificial / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T13:47:51+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/artificial/comments/1uzwdtm/which_mcp_servers_are_worth_installing_for_nondev/)
+- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
+- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
+- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
+- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
+- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
+- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
+
+## 数据源状态
+
+- `r/SupplyChainManagement`：HTTP Error 429: Too Many Requests
+- `r/OilAndGas`：HTTP Error 429: Too Many Requests
+- `r/stocks`：HTTP Error 429: Too Many Requests
+- `r/investing`：HTTP Error 429: Too Many Requests
