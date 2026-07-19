@@ -118,35 +118,35 @@
 
 ## 股票市场 社区讨论 Top 3
 
-### 1. Is Nvidia priced for perfection?
+### 1. AMC will be beat earnings expectations on Monday
+
+- **社区热度：** 日榜来源 r/stocks / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T14:38:55+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/stocks/comments/1uzxmi2/amc_will_be_beat_earnings_expectations_on_monday/)
+- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
+- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
+- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
+- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
+- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
+- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
+
+### 2. Netflix beat earnings, did its biggest buyback and then restricted access to its engagement data and fell 12% through two days.
+
+- **社区热度：** 日榜来源 r/stocks / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T14:01:18+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/stocks/comments/1uzwpa8/netflix_beat_earnings_did_its_biggest_buyback_and/)
+- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
+- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
+- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
+- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
+- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
+- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
+
+### 3. Is Nvidia priced for perfection?
 
 - **社区热度：** 日榜来源 r/ValueInvesting / 摘要采样 0 条评论 / 价值投资相关度 0
 - **发布时间：** 2026-07-18T13:01:18+00:00
 - **原帖：** [查看原帖](https://old.reddit.com/r/ValueInvesting/comments/1uzvbhd/is_nvidia_priced_for_perfection/)
-- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
-- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
-- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
-- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
-- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
-- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
-
-### 2. CSL (ASX: CSL) Follow-Up: The Probability Model Behind My Investment Thesis (Challenges Welcome)
-
-- **社区热度：** 日榜来源 r/ValueInvesting / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T07:54:01+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/ValueInvesting/comments/1uzppud/csl_asx_csl_followup_the_probability_model_behind/)
-- **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
-- **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
-- **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
-- **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
-- **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
-- **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
-
-### 3. Tracking DCF portfolio vs index - S&P 500
-
-- **社区热度：** 日榜来源 r/ValueInvesting / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T12:07:12+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/ValueInvesting/comments/1uzu5qx/tracking_dcf_portfolio_vs_index_sp_500/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -168,11 +168,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 2. H1B for Fresh International Hire
+### 2. Tin Whiskers destroy satellites
 
 - **社区热度：** 日榜来源 r/Semiconductors / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T06:38:32+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/Semiconductors/comments/1uzoe5z/h1b_for_fresh_international_hire/)
+- **发布时间：** 2026-07-18T13:43:26+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/Semiconductors/comments/1uzwa0o/tin_whiskers_destroy_satellites/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -180,11 +180,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. Tin Whiskers destroy satellites
+### 3. [ServeTheHome] The AMD Instinct MI350P is a HBM PCIe AI Accelerator That Has Been All Over
 
-- **社区热度：** 日榜来源 r/Semiconductors / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T13:43:26+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/Semiconductors/comments/1uzwa0o/tin_whiskers_destroy_satellites/)
+- **社区热度：** 日榜来源 r/hardware / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T12:04:12+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/hardware/comments/1uzu3iu/servethehome_the_amd_instinct_mi350p_is_a_hbm/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -256,11 +256,11 @@
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
 
-### 3. NIC teaming Windows server 2025
+### 3. What M365 technical skills you are studying to stay relevant?
 
-- **社区热度：** 日榜来源 r/networking / 摘要采样 0 条评论 / 价值投资相关度 0
-- **发布时间：** 2026-07-18T06:11:36+00:00
-- **原帖：** [查看原帖](https://old.reddit.com/r/networking/comments/1uznwmv/nic_teaming_windows_server_2025/)
+- **社区热度：** 日榜来源 r/sysadmin / 摘要采样 0 条评论 / 价值投资相关度 0
+- **发布时间：** 2026-07-18T12:38:48+00:00
+- **原帖：** [查看原帖](https://old.reddit.com/r/sysadmin/comments/1uzutb6/what_m365_technical_skills_you_are_studying_to/)
 - **讨论摘要：** 该帖子进入相关社区当日高热度候选。当前未能调用 Codex 生成具体摘要，需要结合原帖和高质量评论进一步判断其事实依据与专业价值。
 - **社区信号：** 规则模式无法可靠提炼社区信号；报告已保留原帖入口，建议核查高赞评论。
 - **基本面影响：** 规则模式无法判断该讨论对收入、利润率、现金流、资本回报或行业结构的长期影响。
@@ -305,10 +305,3 @@
 - **价值投资者视角：** 当前只能将其作为研究线索，不能据此形成价值投资判断或买卖结论。
 - **关键风险：** 主要风险包括社区选择偏差、未经验证的陈述，以及短期事件被误判为长期趋势。
 - **待验证数据：** 投资前应核查公司披露、行业数据、竞争格局、资本配置、估值与长期现金流影响。
-
-## 数据源状态
-
-- `r/SupplyChainManagement`：HTTP Error 429: Too Many Requests
-- `r/OilAndGas`：HTTP Error 429: Too Many Requests
-- `r/stocks`：HTTP Error 429: Too Many Requests
-- `r/investing`：HTTP Error 429: Too Many Requests
