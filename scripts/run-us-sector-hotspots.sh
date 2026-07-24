@@ -16,7 +16,10 @@ echo "时间: $(date)"
 
 SECTOR_HOTSPOTS_AI_MODEL="${SECTOR_HOTSPOTS_AI_MODEL:-codebuddy}" \
 SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-hy3}" \
-  python3 "$SCRIPT" --market us --output-dir "$REPORTS_DIR" --status-dir-name us-sector-hotspots-status --top "${US_SECTOR_HOTSPOTS_TOP:-15}"
+US_SECTOR_HOTSPOTS_TOP="${US_SECTOR_HOTSPOTS_TOP:-30}" \
+US_SECTOR_HOTSPOTS_STOCK_LIMIT="${US_SECTOR_HOTSPOTS_STOCK_LIMIT:-6}" \
+US_SECTOR_HOTSPOTS_CONFIG="${US_SECTOR_HOTSPOTS_CONFIG:-$PROJECT_DIR/config/us_sector_hotspots.json}" \
+  python3 "$SCRIPT" --market us --output-dir "$REPORTS_DIR" --status-dir-name us-sector-hotspots-status --top "${US_SECTOR_HOTSPOTS_TOP:-30}"
 
 echo "=== 美股板块热点分析完成 ==="
 echo "报告保存在: $REPORTS_DIR"

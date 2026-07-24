@@ -156,6 +156,31 @@ US_SECTOR_ETFS = (
         "representatives": ("RTX", "BA", "LMT", "NOC", "GD", "TDG", "LHX", "HWM"),
     },
 )
+
+
+def load_us_sector_etfs():
+    """载入美股细分板块 ETF 代理池。
+
+    优先读取外部配置 (US_SECTOR_HOTSPOTS_CONFIG 或 config/us_sector_hotspots.json)，
+    便于在不改动代码的前提下调整板块粒度；配置缺失或为空时回退到内置的宏观板块默认池。
+    """
+    cfg_path = os.environ.get("US_SECTOR_HOTSPOTS_CONFIG")
+    if not cfg_path:
+        cfg_path = str(PROJECT_ROOT / "config" / "us_sector_hotspots.json")
+    try:
+        with open(cfg_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        etfs = data.get("etfs") if isinstance(data, dict) else data
+        if isinstance(etfs, list) and etfs:
+            print(f"[INFO] 载入美股细分板块配置 {cfg_path}: {len(etfs)} 个ETF代理", file=sys.stderr)
+            return etfs
+        print(f"[WARN] 美股细分板块配置为空, 回退内置默认 {len(US_SECTOR_ETFS)} 个", file=sys.stderr)
+    except Exception as exc:
+        print(f"[WARN] 美股细分板块配置载入失败 ({exc}), 回退内置默认 {len(US_SECTOR_ETFS)} 个", file=sys.stderr)
+    return US_SECTOR_ETFS
+
+
+US_SECTOR_ETFS = load_us_sector_etfs()
 DEFAULT_US_TOP = int(os.environ.get("US_SECTOR_HOTSPOTS_TOP", str(len(US_SECTOR_ETFS))))
 US_REPRESENTATIVE_STOCK_LIMIT = int(os.environ.get("US_SECTOR_HOTSPOTS_STOCK_LIMIT", "8"))
 
@@ -681,7 +706,7 @@ def attach_us_representative_movers(sector, symbols):
             stocks.append({"symbol": symbol, **quote})
         except Exception as exc:
             record_source_error(f"美股代表股 {symbol} 行情获取失败: {exc}")
-        time.sleep(0.03)
+        time.sleep(0.05)
     stocks.sort(key=lambda item: item.get("change_pct") if item.get("change_pct") is not None else -999, reverse=True)
     sector["representative_stocks"] = stocks
     sector["stock_count"] = len(stocks)
@@ -717,7 +742,7 @@ def fetch_us_hotspots(limit):
             attach_us_representative_movers(rows[-1], meta.get("representatives", ()))
         except Exception as exc:
             record_source_error(f"美股ETF {symbol} 行情获取失败: {exc}")
-        time.sleep(0.15)
+        time.sleep(0.2)
     rows.sort(key=lambda item: item.get("change_pct") if item.get("change_pct") is not None else -999, reverse=True)
     hot = assign_ids(rows[:limit], "US")
     weak = sorted(rows, key=lambda item: item.get("change_pct") if item.get("change_pct") is not None else 999)[:5]
@@ -810,7 +835,7 @@ def attach_news_candidates(sectors, target_date, market_news=None):
                 raw.extend(fetch_google_news_rss(query, limit=NEWS_FETCH_LIMIT, locale=locale))
             except Exception as exc:
                 record_source_error(f"新闻搜索失败 ({sector.get('name')}, {query}): {exc}")
-            time.sleep(0.15)
+            time.sleep(0.2)
         sector["raw_news_count"] = len(raw)
         sector["news"] = rank_news_candidates(raw, sector, target_date=target_date, limit=NEWS_PROMPT_LIMIT)
     return sectors

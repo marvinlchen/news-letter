@@ -1,0 +1,278 @@
+{
+  "description": "美股细分板块/主题 ETF 代理池（替代宏观 GICS 行业 SPDR）。按当日涨跌幅排名展示前 N 个。",
+  "etfs": [
+    {
+      "symbol": "BOTZ",
+      "name_zh": "人工智能与机器人",
+      "name_en": "AI & Robotics",
+      "keywords": "artificial intelligence robotics automation AI chips",
+      "representatives": ["NVDA", "PLTR", "AMD", "AVGO", "TSM", "ASML", "SMCI", "MU"]
+    },
+    {
+      "symbol": "CLOU",
+      "name_zh": "云计算",
+      "name_en": "Cloud Computing",
+      "keywords": "cloud computing SaaS infrastructure software",
+      "representatives": ["NET", "CRWD", "ZS", "DDOG", "MDB", "TWLO", "HUBS", "ESTC"]
+    },
+    {
+      "symbol": "CIBR",
+      "name_zh": "网络安全",
+      "name_en": "Cybersecurity",
+      "keywords": "cybersecurity information security cyber",
+      "representatives": ["PANW", "CRWD", "FTNT", "ZS", "OKTA", "VRSN", "BAH", "CHKP"]
+    },
+    {
+      "symbol": "IGV",
+      "name_zh": "软件",
+      "name_en": "Software",
+      "keywords": "software enterprise SaaS applications",
+      "representatives": ["MSFT", "ORCL", "CRM", "NOW", "ADBE", "INTU", "PANW", "PLTR"]
+    },
+    {
+      "symbol": "SMH",
+      "name_zh": "半导体",
+      "name_en": "Semiconductors",
+      "keywords": "semiconductor chips AI data center",
+      "representatives": ["NVDA", "TSM", "AVGO", "AMD", "ASML", "QCOM", "MU", "AMAT"]
+    },
+    {
+      "symbol": "FDN",
+      "name_zh": "互联网与数字媒体",
+      "name_en": "Internet & Digital Media",
+      "keywords": "internet digital media ecommerce social",
+      "representatives": ["AMZN", "META", "GOOGL", "NFLX", "BKNG", "TCOM", "EXPE", "EBAY"]
+    },
+    {
+      "symbol": "ESPO",
+      "name_zh": "电子游戏与电竞",
+      "name_en": "Video Games & eSports",
+      "keywords": "video games esports gaming interactive entertainment",
+      "representatives": ["NVDA", "TSM", "EA", "TTWO", "RBLX", "SONY", "NTDOY", "MSFT"]
+    },
+    {
+      "symbol": "FINX",
+      "name_zh": "金融科技",
+      "name_en": "Fintech",
+      "keywords": "fintech payments financial technology blockchain",
+      "representatives": ["V", "MA", "PYPL", "XYZ", "FI", "FIS", "AXP", "COIN"]
+    },
+    {
+      "symbol": "XRT",
+      "name_zh": "美国零售",
+      "name_en": "US Retail",
+      "keywords": "retail consumer discretionary stores ecommerce",
+      "representatives": ["AMZN", "HD", "LOW", "TGT", "WMT", "COST", "TJX", "MCD"]
+    },
+    {
+      "symbol": "ITB",
+      "name_zh": "房屋建筑",
+      "name_en": "Home Construction",
+      "keywords": "homebuilders housing construction real estate",
+      "representatives": ["DHI", "LEN", "PHM", "TOL", "NVR", "KBH", "MTH", "TPH"]
+    },
+    {
+      "symbol": "JETS",
+      "name_zh": "航空",
+      "name_en": "Airlines",
+      "keywords": "airlines air travel travel leisure",
+      "representatives": ["DAL", "UAL", "AAL", "LUV", "ALK", "JBLU", "ALGT", "ULCC"]
+    },
+    {
+      "symbol": "ITA",
+      "name_zh": "航空航天与军工",
+      "name_en": "Aerospace & Defense",
+      "keywords": "aerospace defense military orders budget",
+      "representatives": ["RTX", "BA", "LMT", "NOC", "GD", "TDG", "LHX", "HWM"]
+    },
+    {
+      "symbol": "IYT",
+      "name_zh": "运输物流",
+      "name_en": "Transportation & Logistics",
+      "keywords": "transportation logistics freight rails trucking",
+      "representatives": ["UPS", "FDX", "JBHT", "UNP", "CSX", "NSC", "CHRW", "LSTR"]
+    },
+    {
+      "symbol": "PAVE",
+      "name_zh": "基建",
+      "name_en": "Infrastructure",
+      "keywords": "infrastructure construction materials aggregates",
+      "representatives": ["CAT", "DE", "VMC", "MLM", "FLR", "ACM", "PWR", "EME"]
+    },
+    {
+      "symbol": "KBE",
+      "name_zh": "银行",
+      "name_en": "Banks",
+      "keywords": "banks banking lenders rates credit",
+      "representatives": ["JPM", "BAC", "WFC", "C", "USB", "PNC", "TFC", "FITB"]
+    },
+    {
+      "symbol": "KRE",
+      "name_zh": "地区银行",
+      "name_en": "Regional Banks",
+      "keywords": "regional banks community banks lenders",
+      "representatives": ["ZION", "CFG", "FITB", "RF", "HBAN", "MTB", "KEY", "FNB"]
+    },
+    {
+      "symbol": "KIE",
+      "name_zh": "保险",
+      "name_en": "Insurance",
+      "keywords": "insurance P&C life reinsurance brokers",
+      "representatives": ["PGR", "AIG", "MET", "PRU", "ALL", "TRV", "AFL", "L"]
+    },
+    {
+      "symbol": "VNQ",
+      "name_zh": "房地产信托",
+      "name_en": "REITs",
+      "keywords": "REITs real estate investment trusts property",
+      "representatives": ["PLD", "AMT", "EQIX", "WELL", "SPG", "PSA", "O", "DLR"]
+    },
+    {
+      "symbol": "IBB",
+      "name_zh": "生物科技",
+      "name_en": "Biotechnology",
+      "keywords": "biotechnology FDA drug trials pharma",
+      "representatives": ["AMGN", "GILD", "VRTX", "REGN", "MRNA", "BIIB", "ALNY", "BMRN"]
+    },
+    {
+      "symbol": "XPH",
+      "name_zh": "制药",
+      "name_en": "Pharmaceuticals",
+      "keywords": "pharmaceuticals drugs prescriptions pipelines",
+      "representatives": ["PFE", "MRK", "JNJ", "ABBV", "BMY", "LLY", "AMGN", "GILD"]
+    },
+    {
+      "symbol": "XHE",
+      "name_zh": "医疗器械",
+      "name_en": "Medical Devices",
+      "keywords": "medical devices health care equipment diagnostics",
+      "representatives": ["ABT", "MDT", "SYK", "ISRG", "BAX", "BSX", "EW", "ZBH"]
+    },
+    {
+      "symbol": "XOP",
+      "name_zh": "油气开采",
+      "name_en": "Oil & Gas E&P",
+      "keywords": "oil gas exploration production energy crude",
+      "representatives": ["DVN", "OXY", "APA", "FANG", "EOG", "HAL", "SLB", "COP"]
+    },
+    {
+      "symbol": "OIH",
+      "name_zh": "油田服务",
+      "name_en": "Oilfield Services",
+      "keywords": "oilfield services energy drilling offshore",
+      "representatives": ["SLB", "HAL", "BKR", "NOV", "FTI", "HP", "LBRT", "WTTR"]
+    },
+    {
+      "symbol": "ICLN",
+      "name_zh": "清洁能源",
+      "name_en": "Clean Energy",
+      "keywords": "clean energy renewable wind solar ESG",
+      "representatives": ["ENPH", "FSLR", "PLUG", "BE", "RUN", "NEE", "SEDG", "NXT"]
+    },
+    {
+      "symbol": "TAN",
+      "name_zh": "太阳能",
+      "name_en": "Solar",
+      "keywords": "solar energy photovoltaic renewable",
+      "representatives": ["ENPH", "FSLR", "SEDG", "RUN", "NXT", "ARRY", "CSIQ", "JKS"]
+    },
+    {
+      "symbol": "URA",
+      "name_zh": "铀与核电",
+      "name_en": "Uranium & Nuclear",
+      "keywords": "uranium nuclear energy fuel reactors",
+      "representatives": ["CCJ", "UUUU", "URG", "DNN", "NXE", "LEU", "UEC", "SMR"]
+    },
+    {
+      "symbol": "GDX",
+      "name_zh": "黄金矿商",
+      "name_en": "Gold Miners",
+      "keywords": "gold miners gold mining precious metals",
+      "representatives": ["NEM", "GOLD", "AEM", "FNV", "AU", "KGC", "AGI", "WPM"]
+    },
+    {
+      "symbol": "COPX",
+      "name_zh": "铜与矿业",
+      "name_en": "Copper & Mining",
+      "keywords": "copper mining metals commodities materials",
+      "representatives": ["FCX", "SCCO", "TECK", "BHP", "VALE", "RIO", "ERO", "CENX"]
+    },
+    {
+      "symbol": "LIT",
+      "name_zh": "锂与电池",
+      "name_en": "Lithium & Battery",
+      "keywords": "lithium battery EV materials energy storage",
+      "representatives": ["ALB", "SQM", "ALTM", "PLL", "FMC", "LAC", "MGA", "BAK"]
+    },
+    {
+      "symbol": "DRIV",
+      "name_zh": "电动车",
+      "name_en": "Electric Vehicles",
+      "keywords": "electric vehicles EV autos autos mobility",
+      "representatives": ["TSLA", "BYDDY", "RIVN", "NIO", "XPEV", "LI", "GM", "F"]
+    },
+    {
+      "symbol": "IYZ",
+      "name_zh": "电信与无线",
+      "name_en": "Telecom & Wireless",
+      "keywords": "telecom wireless communication mobile broadband",
+      "representatives": ["VZ", "T", "TMUS", "CHTR", "LUMN", "VG", "TDS", "CCOI"]
+    },
+    {
+      "symbol": "SIL",
+      "name_zh": "白银矿商",
+      "name_en": "Silver Miners",
+      "keywords": "silver miners silver precious metals mining",
+      "representatives": ["PAAS", "HL", "CDE", "MAG", "AG", "SSRM", "EXK", "BVN"]
+    },
+    {
+      "symbol": "MSOS",
+      "name_zh": "大麻",
+      "name_en": "Cannabis",
+      "keywords": "cannabis marijuana weed THC CBD",
+      "representatives": ["CGC", "TLRY", "CURLF", "CRON", "ACB", "CRLBF", "GTBIF", "VFF"]
+    },
+    {
+      "symbol": "BLOK",
+      "name_zh": "区块链与加密",
+      "name_en": "Blockchain & Crypto",
+      "keywords": "blockchain crypto bitcoin digital assets custody",
+      "representatives": ["COIN", "MSTR", "RIOT", "MARA", "SQ", "HUT", "CLSK", "BITF"]
+    },
+    {
+      "symbol": "MOO",
+      "name_zh": "农业",
+      "name_en": "Agribusiness",
+      "keywords": "agribusiness agriculture fertilizer seeds food",
+      "representatives": ["DE", "ADM", "NTR", "MOS", "FMC", "TSN", "BG", "CALM"]
+    },
+    {
+      "symbol": "PHO",
+      "name_zh": "水资源",
+      "name_en": "Water",
+      "keywords": "water utilities infrastructure treatment",
+      "representatives": ["AWK", "XYL", "PNR", "ECL", "WTS", "MAS", "AOS", "IEX"]
+    },
+    {
+      "symbol": "IHF",
+      "name_zh": "医疗提供商与服务",
+      "name_en": "Healthcare Providers",
+      "keywords": "healthcare providers insurance managed care hospitals",
+      "representatives": ["UNH", "CVS", "CI", "HUM", "ELV", "THC", "HCA", "DVA"]
+    },
+    {
+      "symbol": "PBJ",
+      "name_zh": "食品饮料",
+      "name_en": "Food & Beverage",
+      "keywords": "food beverage packaged consumer staples snacks",
+      "representatives": ["MDLZ", "KHC", "GIS", "CAG", "HRL", "SJM", "CPB", "KDP"]
+    },
+    {
+      "symbol": "XME",
+      "name_zh": "金属与采矿",
+      "name_en": "Metals & Mining",
+      "keywords": "metals mining steel materials commodities producers",
+      "representatives": ["NUE", "STLD", "RS", "CMC", "X", "CLF", "VALE", "FCX"]
+    }
+  ]
+}
