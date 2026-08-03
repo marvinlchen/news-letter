@@ -240,8 +240,12 @@ def psf(r):
     return ""
 
 
-def fmt_listing(r, with_block=True):
-    """两行 markdown：第一行价格/面积/呎价/楼层，第二行摘要+中介+平台显示上架+链接。"""
+_NO_PRICE = object()  # 哨兵：区分"调用方未传 old_price"与"传了 None（此前价格未公开）"
+
+
+def fmt_listing(r, with_block=True, old_price=_NO_PRICE):
+    """两行 markdown：第一行价格/面积/呎价/楼层，第二行摘要+中介+平台显示上架+链接。
+    old_price: 若该单位此前记录的价格不同，传入以追加一行"价格变动"提示；不传则不显示。"""
     prefix = f"[{r['block']}] " if with_block else ""
     meta = [fmt_price(r.get('price')), f"{r.get('area')} sqft"]
     ps = psf(r)
@@ -257,6 +261,9 @@ def fmt_listing(r, with_block=True):
     lo = r.get('listed_on')
     if lo:
         line2 += f"\n  - 🕒 平台显示上架: {lo}（平台会刷新上架时间，仅供参考）"
+    if old_price is not _NO_PRICE and old_price != r.get('price'):
+        old_s = "价格未公开" if old_price is None else fmt_price(old_price)
+        line2 += f"\n  - 💱 价格变动: {old_s} → {fmt_price(r.get('price'))}"
     line2 += f"\n  - {r['url']}"
     return line1 + "\n" + line2
 
@@ -289,7 +296,7 @@ def load_state():
     return {"listings": listings, "history": history}
 
 
-def build_report(date_str, kept, excluded, state, truly_new, returned, sold):
+def build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed):
     history = state["history"]
     L = []
     L.append("# HDB 4-room 订阅日报 · Telok Blangah Parcview")
@@ -305,6 +312,7 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold):
     L.append(f"- 当前在售(非低楼层): **{len(kept)}** 套")
     L.append(f"- 🆕 今日上新(全新房源，监控以来首次出现): **{len(truly_new)}** 套")
     L.append(f"- 🔄 重新上架/刷新(历史出现过、此前下架后重现): **{len(returned)}** 套")
+    L.append(f"- 💰 今日价格变动(同一单位仍在售、价格较上次抓取不同): **{len(price_changed)}** 套")
     L.append(f"- ✅ 今日卖出/下架(连续消失≥{GRACE_DAYS}天): **{len(sold)}** 套")
     excluded_total = sum(len(e) for e in excluded.values())
     L.append(f"- 🚫 已排除低楼层: {excluded_total} 套（不计入上方在售）")
@@ -317,7 +325,13 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold):
     if returned:
         L.append("## 🔄 重新上架 / 刷新（历史出现过，此前已下架，今日重现）")
         for i in returned:
-            L.append(fmt_listing(kept[i]))
+            old = history.get(i, {}).get('last_price')
+            L.append(fmt_listing(kept[i], old_price=old))
+        L.append("")
+    if price_changed:
+        L.append("## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）")
+        for i, prev, _cur in price_changed:
+            L.append(fmt_listing(kept[i], old_price=prev))
         L.append("")
     if sold:
         L.append("## ✅ 今日卖出 / 下架（先前在售，连续消失≥%d天）" % GRACE_DAYS)
@@ -408,6 +422,16 @@ def main():
     truly_new = [i for i in cur_ids if i not in ever]
     returned = [i for i in cur_ids if (i in history) and (i not in listings)]
     missing = [i for i in listings if i not in cur_ids]
+    # 💰 价格变动：仍在售(listings)且今日抓取到的单位，价格较上次记录不同
+    # （不含全新房：无历史价可比较；重新上架单位的价格变动已在 🔄 段落内联展示）
+    price_changed = []
+    for i in cur_ids:
+        if i not in listings:
+            continue
+        prev_price = listings[i].get('price')
+        cur_price = kept[i].get('price')
+        if cur_price != prev_price:
+            price_changed.append((i, prev_price, cur_price))
     sold = []
     for i in missing:
         last = listings[i].get("last_seen")
@@ -446,14 +470,14 @@ def main():
         }
     state = {"listings": new_listings, "history": new_history}
 
-    report = build_report(date_str, kept, excluded, state, truly_new, returned, sold)
+    report = build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed)
     with open(STATE_FILE, 'w') as f:
         json.dump(state, f, indent=2)
     with open(os.path.join(REPORT_DIR, f'report_{date_str}.md'), 'w') as f:
         f.write(report)
     with open(os.path.join(REPORT_DIR, 'latest.md'), 'w') as f:
         f.write(report)
-    log("日报已生成（上新 %d / 重新上架 %d / 卖出 %d）" % (len(truly_new), len(returned), len(sold)))
+    log("日报已生成（上新 %d / 重新上架 %d / 价格变动 %d / 卖出 %d）" % (len(truly_new), len(returned), len(price_changed), len(sold)))
     git_commit(f"daily report {date_str}")
     git_push()
     print("\n===== 日报摘要 =====")

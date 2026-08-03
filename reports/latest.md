@@ -8,8 +8,16 @@
 - 当前在售(非低楼层): **33** 套
 - 🆕 今日上新(全新房源，监控以来首次出现): **0** 套
 - 🔄 重新上架/刷新(历史出现过、此前下架后重现): **0** 套
+- 💰 今日价格变动(同一单位仍在售、价格较上次抓取不同): **1** 套
 - ✅ 今日卖出/下架(连续消失≥7天): **0** 套
 - 🚫 已排除低楼层: 2 套（不计入上方在售）
+
+## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）
+- **[92B] S$940,000 · 1001 sqft · S$939/sqft · High Floor**
+  - Genuine seller! High floor corner unit! Amazing view! No extension! · 中介: Kyean Lim
+  - 🕒 平台显示上架: 20 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 💱 价格变动: S$890,000 → S$940,000
+  - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847
 
 ## 📋 当前在售清单（按 block，已排除低楼层）
 ### 80A （4 套）
@@ -77,7 +85,7 @@
 - **S$1,100,000 · 1000 sqft · S$1,100/sqft · Middle Floor**
   - Greenery And Fitness Lover Quiet Environment Nice Neighbour Level 08 · 中介: Patsy Sim
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500176972
-- **S$890,000 · 1001 sqft · S$889/sqft · High Floor**
+- **S$940,000 · 1001 sqft · S$939/sqft · High Floor**
   - Genuine seller! High floor corner unit! Amazing view! No extension! · 中介: Kyean Lim
   - 🕒 平台显示上架: 20 Jul 2026（平台会刷新上架时间，仅供参考）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847
@@ -140,4 +148,4 @@
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711
 
 ---
-_生成时间 2026-08-03 09:01:17 · 数据来源 PropertyGuru（curl_cffi 抓取）_
+_生成时间 2026-08-03 14:55:15 · 数据来源 PropertyGuru（curl_cffi 抓取）_
