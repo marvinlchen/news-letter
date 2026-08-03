@@ -1,48 +1,16 @@
 {
   "listings": {
-    "500178368": {
-      "id": "500178368",
-      "price": 915000,
+    "500190370": {
+      "id": "500190370",
+      "price": 975000,
       "area": 1001,
       "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368",
-      "block": "93B",
+      "title": "90B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190370",
+      "block": "90B",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Don't Miss! Spacious 4-Rm HDB in Telok Blangah \u2013 Mins to MRT & Sentosa",
-      "agent": "Gates Lee",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500185017": {
-      "id": "500185017",
-      "price": 1098000,
-      "area": 1023,
-      "beds": null,
-      "title": "80A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017",
-      "block": "80A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High Floor 4 Room, Panoramic Sea View, Move-In Condition",
-      "agent": "Dave Choy",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500199397": {
-      "id": "500199397",
-      "price": 960000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C.H.E.A.P beautifully renovated unit 50k below last transacted",
-      "agent": "Nicholas Cho",
+      "summary": "C.H.E.A.P. Super Rare, High Floor, Unblocked View. C.H.E.A.P",
+      "agent": "Jared Tan",
       "floor_desc": "High Floor",
       "listed_on": null,
       "first_seen": "baseline",
@@ -64,6 +32,22 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
+    "60176902": {
+      "id": "60176902",
+      "price": 800000,
+      "area": 1001,
+      "beds": null,
+      "title": "92B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902",
+      "block": "92B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Spacious, Well-kept High Floor Corner Unit for Sale!",
+      "agent": "He Yifei",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
     "500176972": {
       "id": "500176972",
       "price": 1100000,
@@ -80,130 +64,34 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
-    "500152159": {
-      "id": "500152159",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "90A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159",
-      "block": "90A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Rare Sanctuary Park, Sea Glimpse & Sunset, Premium Finishes",
-      "agent": "Steven Liew",
-      "floor_desc": "Middle Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "60095956": {
-      "id": "60095956",
-      "price": 938000,
-      "area": 1001,
-      "beds": null,
-      "title": "91A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-60095956",
-      "block": "91A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Renovated! In Prime Location surrounded by Lush Greenery & Amenities",
-      "agent": "Den Ng \u9ec4\u709c\u709c",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500207099": {
-      "id": "500207099",
+    "500199397": {
+      "id": "500199397",
       "price": 960000,
       "area": 1001,
       "beds": null,
       "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397",
       "block": "93B",
       "floor": "\u975e\u4f4e\u697c\u5c42",
       "summary": "C.H.E.A.P beautifully renovated unit 50k below last transacted",
-      "agent": "Georgiana Ong",
-      "floor_desc": "High Floor",
-      "listed_on": "21 Jul 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500130028": {
-      "id": "500130028",
-      "price": 999999,
-      "area": 1022,
-      "beds": null,
-      "title": "80A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500130028",
-      "block": "80A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High floor, bright, windy and surrounded by amazing views",
-      "agent": "Faris Malik",
+      "agent": "Nicholas Cho",
       "floor_desc": "High Floor",
       "listed_on": null,
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
-    "500205417": {
-      "id": "500205417",
-      "price": 950000,
-      "area": 1001,
-      "beds": null,
-      "title": "90B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500205417",
-      "block": "90B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High Floor Corner Windy Unit Unblocked View Zero Extension",
-      "agent": "Dennis Chua",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500055397": {
-      "id": "500055397",
+    "500044356": {
+      "id": "500044356",
       "price": 1000000,
       "area": 1001,
       "beds": null,
-      "title": "90A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397",
-      "block": "90A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C H E A P! 4rm with a stunning view at Telok Blangah",
-      "agent": "Mary Tang Ji&#x27;Ai",
-      "floor_desc": "",
-      "listed_on": "2 Aug 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500128530": {
-      "id": "500128530",
-      "price": 1030000,
-      "area": 1001,
-      "beds": null,
       "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500128530",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500044356",
       "block": "93B",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Unblocked high floor view cosy living",
-      "agent": "Ginny Tien (Ginnie Tien)",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500190370": {
-      "id": "500190370",
-      "price": 975000,
-      "area": 1001,
-      "beds": null,
-      "title": "90B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190370",
-      "block": "90B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C.H.E.A.P. Super Rare, High Floor, Unblocked View. C.H.E.A.P",
-      "agent": "Jared Tan",
-      "floor_desc": "High Floor",
+      "summary": "Stop scrolling: This designer home in 93B Telok Blangah!",
+      "agent": "Adrian Chua",
+      "floor_desc": "",
       "listed_on": null,
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
@@ -224,6 +112,54 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
+    "500061711": {
+      "id": "500061711",
+      "price": 899999,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Corner, North South Facing, Quiet, Renovated, Unblocked View!",
+      "agent": "Kavin Kuah",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500072222": {
+      "id": "500072222",
+      "price": 1028000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072222",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Brand New High Level 4-Room Unit near Vivocity!",
+      "agent": "Xiao Yang \u5c0f\u6768",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500190495": {
+      "id": "500190495",
+      "price": 985000,
+      "area": 1001,
+      "beds": null,
+      "title": "90B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190495",
+      "block": "90B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Super C.H.E.A.P, high floor, south-facing 4-room for sale!",
+      "agent": "Lynn Choo",
+      "floor_desc": "High Floor",
+      "listed_on": "17 Jul 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
     "500077059": {
       "id": "500077059",
       "price": 910000,
@@ -240,17 +176,17 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
-    "500079192": {
-      "id": "500079192",
-      "price": 1000000,
+    "500128530": {
+      "id": "500128530",
+      "price": 1030000,
       "area": 1001,
       "beds": null,
-      "title": "93A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500079192",
-      "block": "93A",
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500128530",
+      "block": "93B",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High floor, maintained in tip top condition!",
-      "agent": "Yuna Lim",
+      "summary": "Unblocked high floor view cosy living",
+      "agent": "Ginny Tien (Ginnie Tien)",
       "floor_desc": "High Floor",
       "listed_on": null,
       "first_seen": "baseline",
@@ -288,6 +224,102 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
+    "500207847": {
+      "id": "500207847",
+      "price": 940000,
+      "area": 1001,
+      "beds": null,
+      "title": "92B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847",
+      "block": "92B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Genuine seller! High floor corner unit! Amazing view! No extension!",
+      "agent": "Kyean Lim",
+      "floor_desc": "High Floor",
+      "listed_on": "20 Jul 2026",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-08-03"
+    },
+    "500055397": {
+      "id": "500055397",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "90A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397",
+      "block": "90A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C H E A P! 4rm with a stunning view at Telok Blangah",
+      "agent": "Mary Tang Ji&#x27;Ai",
+      "floor_desc": "",
+      "listed_on": "2 Aug 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "60095956": {
+      "id": "60095956",
+      "price": 938000,
+      "area": 1001,
+      "beds": null,
+      "title": "91A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-60095956",
+      "block": "91A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Renovated! In Prime Location surrounded by Lush Greenery & Amenities",
+      "agent": "Den Ng \u9ec4\u709c\u709c",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500016121": {
+      "id": "500016121",
+      "price": 950000,
+      "area": 1001,
+      "beds": null,
+      "title": "90A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500016121",
+      "block": "90A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C.H.E.A.P. Corner 4 Room H.D.B. In Telok Blangah",
+      "agent": "Zhi Sheng",
+      "floor_desc": "Middle Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500199441": {
+      "id": "500199441",
+      "price": 965000,
+      "area": 1001,
+      "beds": null,
+      "title": "93A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500199441",
+      "block": "93A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "No extension, Exclusive, Super High Floor, Renovated",
+      "agent": "Hedi Ong",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500185017": {
+      "id": "500185017",
+      "price": 1098000,
+      "area": 1023,
+      "beds": null,
+      "title": "80A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017",
+      "block": "80A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High Floor 4 Room, Panoramic Sea View, Move-In Condition",
+      "agent": "Dave Choy",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
     "500204526": {
       "id": "500204526",
       "price": 1120000,
@@ -299,6 +331,38 @@
       "floor": "\u975e\u4f4e\u697c\u5c42",
       "summary": "93B Telok Blangah street 31",
       "agent": "Martin Ng",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500205417": {
+      "id": "500205417",
+      "price": 950000,
+      "area": 1001,
+      "beds": null,
+      "title": "90B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500205417",
+      "block": "90B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High Floor Corner Windy Unit Unblocked View Zero Extension",
+      "agent": "Dennis Chua",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500079192": {
+      "id": "500079192",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "93A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500079192",
+      "block": "93A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High floor, maintained in tip top condition!",
+      "agent": "Yuna Lim",
       "floor_desc": "High Floor",
       "listed_on": null,
       "first_seen": "baseline",
@@ -336,114 +400,18 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
-    "500016121": {
-      "id": "500016121",
-      "price": 950000,
-      "area": 1001,
-      "beds": null,
-      "title": "90A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500016121",
-      "block": "90A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C.H.E.A.P. Corner 4 Room H.D.B. In Telok Blangah",
-      "agent": "Zhi Sheng",
-      "floor_desc": "Middle Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500207847": {
-      "id": "500207847",
-      "price": 940000,
-      "area": 1001,
-      "beds": null,
-      "title": "92B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847",
-      "block": "92B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Genuine seller! High floor corner unit! Amazing view! No extension!",
-      "agent": "Kyean Lim",
-      "floor_desc": "High Floor",
-      "listed_on": "20 Jul 2026",
-      "first_seen": "2026-07-21",
-      "last_seen": "2026-08-03"
-    },
-    "500131573": {
-      "id": "500131573",
-      "price": 998000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500131573",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Stunning 3 Bedroom HDB at 93B, Telok Blangah St 31",
-      "agent": "Ken Chen",
-      "floor_desc": "High Floor",
-      "listed_on": "16 Jul 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500114729": {
-      "id": "500114729",
-      "price": 999999,
-      "area": 1022,
-      "beds": null,
-      "title": "80A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729",
-      "block": "80A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Rare High Floor 3 Bedroom with Scenic Views",
-      "agent": "Melvin Fang",
-      "floor_desc": "High Floor",
-      "listed_on": "21 Jul 2026",
-      "first_seen": "2026-07-22",
-      "last_seen": "2026-08-03"
-    },
-    "500190495": {
-      "id": "500190495",
-      "price": 985000,
-      "area": 1001,
-      "beds": null,
-      "title": "90B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190495",
-      "block": "90B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Super C.H.E.A.P, high floor, south-facing 4-room for sale!",
-      "agent": "Lynn Choo",
-      "floor_desc": "High Floor",
-      "listed_on": "17 Jul 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500072222": {
-      "id": "500072222",
-      "price": 1028000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072222",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Brand New High Level 4-Room Unit near Vivocity!",
-      "agent": "Xiao Yang \u5c0f\u6768",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500044356": {
-      "id": "500044356",
+    "500152159": {
+      "id": "500152159",
       "price": 1000000,
       "area": 1001,
       "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500044356",
-      "block": "93B",
+      "title": "90A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159",
+      "block": "90A",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Stop scrolling: This designer home in 93B Telok Blangah!",
-      "agent": "Adrian Chua",
-      "floor_desc": "",
+      "summary": "Rare Sanctuary Park, Sea Glimpse & Sunset, Premium Finishes",
+      "agent": "Steven Liew",
+      "floor_desc": "Middle Floor",
       "listed_on": null,
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
@@ -464,19 +432,35 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
-    "500199441": {
-      "id": "500199441",
-      "price": 965000,
+    "500131573": {
+      "id": "500131573",
+      "price": 998000,
       "area": 1001,
       "beds": null,
-      "title": "93A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500199441",
-      "block": "93A",
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500131573",
+      "block": "93B",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "No extension, Exclusive, Super High Floor, Renovated",
-      "agent": "Hedi Ong",
+      "summary": "Stunning 3 Bedroom HDB at 93B, Telok Blangah St 31",
+      "agent": "Ken Chen",
       "floor_desc": "High Floor",
-      "listed_on": null,
+      "listed_on": "16 Jul 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-03"
+    },
+    "500207099": {
+      "id": "500207099",
+      "price": 960000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C.H.E.A.P beautifully renovated unit 50k below last transacted",
+      "agent": "Georgiana Ong",
+      "floor_desc": "High Floor",
+      "listed_on": "21 Jul 2026",
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
@@ -496,33 +480,49 @@
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
-    "60176902": {
-      "id": "60176902",
-      "price": 800000,
-      "area": 1001,
+    "500114729": {
+      "id": "500114729",
+      "price": 999999,
+      "area": 1022,
       "beds": null,
-      "title": "92B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902",
-      "block": "92B",
+      "title": "80A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729",
+      "block": "80A",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Spacious, Well-kept High Floor Corner Unit for Sale!",
-      "agent": "He Yifei",
+      "summary": "Rare High Floor 3 Bedroom with Scenic Views",
+      "agent": "Melvin Fang",
+      "floor_desc": "High Floor",
+      "listed_on": "21 Jul 2026",
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-08-03"
+    },
+    "500130028": {
+      "id": "500130028",
+      "price": 999999,
+      "area": 1022,
+      "beds": null,
+      "title": "80A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500130028",
+      "block": "80A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High floor, bright, windy and surrounded by amazing views",
+      "agent": "Faris Malik",
       "floor_desc": "High Floor",
       "listed_on": null,
       "first_seen": "baseline",
       "last_seen": "2026-08-03"
     },
-    "500061711": {
-      "id": "500061711",
-      "price": 899999,
+    "500178368": {
+      "id": "500178368",
+      "price": 915000,
       "area": 1001,
       "beds": null,
       "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368",
       "block": "93B",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Corner, North South Facing, Quiet, Renovated, Unblocked View!",
-      "agent": "Kavin Kuah",
+      "summary": "Don't Miss! Spacious 4-Rm HDB in Telok Blangah \u2013 Mins to MRT & Sentosa",
+      "agent": "Gates Lee",
       "floor_desc": "",
       "listed_on": null,
       "first_seen": "baseline",
@@ -914,5 +914,2571 @@
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729",
       "area": 1022
     }
+  },
+  "price_history": {
+    "500130028": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        999999
+      ],
+      [
+        "2026-07-20",
+        999999
+      ],
+      [
+        "2026-07-21",
+        999999
+      ],
+      [
+        "2026-07-22",
+        999999
+      ],
+      [
+        "2026-07-23",
+        999999
+      ],
+      [
+        "2026-07-24",
+        999999
+      ],
+      [
+        "2026-07-25",
+        999999
+      ],
+      [
+        "2026-07-26",
+        999999
+      ],
+      [
+        "2026-07-27",
+        999999
+      ],
+      [
+        "2026-07-28",
+        999999
+      ],
+      [
+        "2026-07-29",
+        999999
+      ],
+      [
+        "2026-07-30",
+        999999
+      ],
+      [
+        "2026-07-31",
+        999999
+      ],
+      [
+        "2026-08-01",
+        999999
+      ],
+      [
+        "2026-08-02",
+        999999
+      ],
+      [
+        "2026-08-03",
+        999999
+      ]
+    ],
+    "500166946": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1220000
+      ],
+      [
+        "2026-07-20",
+        1220000
+      ],
+      [
+        "2026-07-21",
+        1220000
+      ],
+      [
+        "2026-07-22",
+        1220000
+      ],
+      [
+        "2026-07-23",
+        1220000
+      ],
+      [
+        "2026-07-24",
+        1220000
+      ],
+      [
+        "2026-07-25",
+        1220000
+      ],
+      [
+        "2026-07-26",
+        1220000
+      ],
+      [
+        "2026-07-27",
+        1220000
+      ],
+      [
+        "2026-07-28",
+        1220000
+      ],
+      [
+        "2026-07-29",
+        1220000
+      ],
+      [
+        "2026-07-30",
+        1220000
+      ],
+      [
+        "2026-07-31",
+        1220000
+      ],
+      [
+        "2026-08-01",
+        1220000
+      ],
+      [
+        "2026-08-02",
+        1220000
+      ],
+      [
+        "2026-08-03",
+        1220000
+      ]
+    ],
+    "500185017": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1098000
+      ],
+      [
+        "2026-07-20",
+        1098000
+      ],
+      [
+        "2026-07-21",
+        1098000
+      ],
+      [
+        "2026-07-22",
+        1098000
+      ],
+      [
+        "2026-07-23",
+        1098000
+      ],
+      [
+        "2026-07-24",
+        1098000
+      ],
+      [
+        "2026-07-25",
+        1098000
+      ],
+      [
+        "2026-07-26",
+        1098000
+      ],
+      [
+        "2026-07-27",
+        1098000
+      ],
+      [
+        "2026-07-28",
+        1098000
+      ],
+      [
+        "2026-07-29",
+        1098000
+      ],
+      [
+        "2026-07-30",
+        1098000
+      ],
+      [
+        "2026-07-31",
+        1098000
+      ],
+      [
+        "2026-08-01",
+        1098000
+      ],
+      [
+        "2026-08-02",
+        1098000
+      ],
+      [
+        "2026-08-03",
+        1098000
+      ]
+    ],
+    "500176977": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1100000
+      ],
+      [
+        "2026-07-20",
+        1100000
+      ],
+      [
+        "2026-07-21",
+        1100000
+      ],
+      [
+        "2026-07-28",
+        null
+      ]
+    ],
+    "500131573": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1020000
+      ],
+      [
+        "2026-07-20",
+        1020000
+      ],
+      [
+        "2026-07-21",
+        998000
+      ],
+      [
+        "2026-07-22",
+        998000
+      ],
+      [
+        "2026-07-23",
+        998000
+      ],
+      [
+        "2026-07-24",
+        998000
+      ],
+      [
+        "2026-07-25",
+        998000
+      ],
+      [
+        "2026-07-26",
+        998000
+      ],
+      [
+        "2026-07-27",
+        998000
+      ],
+      [
+        "2026-07-28",
+        998000
+      ],
+      [
+        "2026-07-29",
+        998000
+      ],
+      [
+        "2026-07-30",
+        998000
+      ],
+      [
+        "2026-07-31",
+        998000
+      ],
+      [
+        "2026-08-01",
+        998000
+      ],
+      [
+        "2026-08-02",
+        998000
+      ],
+      [
+        "2026-08-03",
+        998000
+      ]
+    ],
+    "500093229": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1030000
+      ],
+      [
+        "2026-07-20",
+        1030000
+      ],
+      [
+        "2026-07-21",
+        1030000
+      ],
+      [
+        "2026-07-22",
+        1030000
+      ],
+      [
+        "2026-07-23",
+        1030000
+      ],
+      [
+        "2026-07-24",
+        1030000
+      ],
+      [
+        "2026-07-25",
+        1030000
+      ],
+      [
+        "2026-07-26",
+        1030000
+      ],
+      [
+        "2026-07-27",
+        1030000
+      ],
+      [
+        "2026-07-28",
+        1030000
+      ],
+      [
+        "2026-07-29",
+        1030000
+      ],
+      [
+        "2026-07-30",
+        1030000
+      ],
+      [
+        "2026-07-31",
+        1030000
+      ],
+      [
+        "2026-08-01",
+        1030000
+      ],
+      [
+        "2026-08-02",
+        1030000
+      ],
+      [
+        "2026-08-03",
+        1030000
+      ]
+    ],
+    "500061711": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        899999
+      ],
+      [
+        "2026-07-20",
+        899999
+      ],
+      [
+        "2026-07-21",
+        899999
+      ],
+      [
+        "2026-07-22",
+        899999
+      ],
+      [
+        "2026-07-23",
+        899999
+      ],
+      [
+        "2026-07-24",
+        899999
+      ],
+      [
+        "2026-07-25",
+        899999
+      ],
+      [
+        "2026-07-26",
+        899999
+      ],
+      [
+        "2026-07-27",
+        899999
+      ],
+      [
+        "2026-07-28",
+        899999
+      ],
+      [
+        "2026-07-29",
+        899999
+      ],
+      [
+        "2026-07-30",
+        899999
+      ],
+      [
+        "2026-07-31",
+        899999
+      ],
+      [
+        "2026-08-01",
+        899999
+      ],
+      [
+        "2026-08-02",
+        899999
+      ],
+      [
+        "2026-08-03",
+        899999
+      ]
+    ],
+    "500204526": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1120000
+      ],
+      [
+        "2026-07-20",
+        1120000
+      ],
+      [
+        "2026-07-21",
+        1120000
+      ],
+      [
+        "2026-07-22",
+        1120000
+      ],
+      [
+        "2026-07-23",
+        1120000
+      ],
+      [
+        "2026-07-24",
+        1120000
+      ],
+      [
+        "2026-07-25",
+        1120000
+      ],
+      [
+        "2026-07-26",
+        1120000
+      ],
+      [
+        "2026-07-27",
+        1120000
+      ],
+      [
+        "2026-07-28",
+        1120000
+      ],
+      [
+        "2026-07-29",
+        1120000
+      ],
+      [
+        "2026-07-30",
+        1120000
+      ],
+      [
+        "2026-07-31",
+        1120000
+      ],
+      [
+        "2026-08-01",
+        1120000
+      ],
+      [
+        "2026-08-02",
+        1120000
+      ],
+      [
+        "2026-08-03",
+        1120000
+      ]
+    ],
+    "500199397": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        960000
+      ],
+      [
+        "2026-07-20",
+        960000
+      ],
+      [
+        "2026-07-21",
+        960000
+      ],
+      [
+        "2026-07-22",
+        960000
+      ],
+      [
+        "2026-07-23",
+        960000
+      ],
+      [
+        "2026-07-24",
+        960000
+      ],
+      [
+        "2026-07-25",
+        960000
+      ],
+      [
+        "2026-07-26",
+        960000
+      ],
+      [
+        "2026-07-27",
+        960000
+      ],
+      [
+        "2026-07-28",
+        960000
+      ],
+      [
+        "2026-07-29",
+        960000
+      ],
+      [
+        "2026-07-30",
+        960000
+      ],
+      [
+        "2026-07-31",
+        960000
+      ],
+      [
+        "2026-08-01",
+        960000
+      ],
+      [
+        "2026-08-02",
+        960000
+      ],
+      [
+        "2026-08-03",
+        960000
+      ]
+    ],
+    "500178368": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        915000
+      ],
+      [
+        "2026-07-20",
+        915000
+      ],
+      [
+        "2026-07-21",
+        915000
+      ],
+      [
+        "2026-07-22",
+        915000
+      ],
+      [
+        "2026-07-23",
+        915000
+      ],
+      [
+        "2026-07-24",
+        915000
+      ],
+      [
+        "2026-07-25",
+        915000
+      ],
+      [
+        "2026-07-26",
+        915000
+      ],
+      [
+        "2026-07-27",
+        915000
+      ],
+      [
+        "2026-07-28",
+        915000
+      ],
+      [
+        "2026-07-29",
+        915000
+      ],
+      [
+        "2026-07-30",
+        915000
+      ],
+      [
+        "2026-07-31",
+        915000
+      ],
+      [
+        "2026-08-01",
+        915000
+      ],
+      [
+        "2026-08-02",
+        915000
+      ],
+      [
+        "2026-08-03",
+        915000
+      ]
+    ],
+    "500072233": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1029000
+      ],
+      [
+        "2026-07-20",
+        1029000
+      ],
+      [
+        "2026-07-21",
+        1029000
+      ],
+      [
+        "2026-07-22",
+        1029000
+      ],
+      [
+        "2026-07-23",
+        1029000
+      ],
+      [
+        "2026-07-24",
+        1029000
+      ],
+      [
+        "2026-07-25",
+        1029000
+      ],
+      [
+        "2026-07-26",
+        1029000
+      ],
+      [
+        "2026-07-27",
+        1029000
+      ],
+      [
+        "2026-07-28",
+        1029000
+      ],
+      [
+        "2026-07-29",
+        1029000
+      ],
+      [
+        "2026-07-30",
+        1029000
+      ],
+      [
+        "2026-07-31",
+        1029000
+      ],
+      [
+        "2026-08-01",
+        1029000
+      ],
+      [
+        "2026-08-02",
+        1029000
+      ],
+      [
+        "2026-08-03",
+        1029000
+      ]
+    ],
+    "500044356": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1000000
+      ],
+      [
+        "2026-07-20",
+        1000000
+      ],
+      [
+        "2026-07-21",
+        1000000
+      ],
+      [
+        "2026-07-22",
+        1000000
+      ],
+      [
+        "2026-07-23",
+        1000000
+      ],
+      [
+        "2026-07-24",
+        1000000
+      ],
+      [
+        "2026-07-25",
+        1000000
+      ],
+      [
+        "2026-07-26",
+        1000000
+      ],
+      [
+        "2026-07-27",
+        1000000
+      ],
+      [
+        "2026-07-28",
+        1000000
+      ],
+      [
+        "2026-07-29",
+        1000000
+      ],
+      [
+        "2026-07-30",
+        1000000
+      ],
+      [
+        "2026-07-31",
+        1000000
+      ],
+      [
+        "2026-08-01",
+        1000000
+      ],
+      [
+        "2026-08-02",
+        1000000
+      ],
+      [
+        "2026-08-03",
+        1000000
+      ]
+    ],
+    "500072222": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1028000
+      ],
+      [
+        "2026-07-20",
+        1028000
+      ],
+      [
+        "2026-07-21",
+        1028000
+      ],
+      [
+        "2026-07-22",
+        1028000
+      ],
+      [
+        "2026-07-23",
+        1028000
+      ],
+      [
+        "2026-07-24",
+        1028000
+      ],
+      [
+        "2026-07-25",
+        1028000
+      ],
+      [
+        "2026-07-26",
+        1028000
+      ],
+      [
+        "2026-07-27",
+        1028000
+      ],
+      [
+        "2026-07-28",
+        1028000
+      ],
+      [
+        "2026-07-29",
+        1028000
+      ],
+      [
+        "2026-07-30",
+        1028000
+      ],
+      [
+        "2026-07-31",
+        1028000
+      ],
+      [
+        "2026-08-01",
+        1028000
+      ],
+      [
+        "2026-08-02",
+        1028000
+      ],
+      [
+        "2026-08-03",
+        1028000
+      ]
+    ],
+    "500128530": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1030000
+      ],
+      [
+        "2026-07-20",
+        1030000
+      ],
+      [
+        "2026-07-21",
+        1030000
+      ],
+      [
+        "2026-07-22",
+        1030000
+      ],
+      [
+        "2026-07-23",
+        1030000
+      ],
+      [
+        "2026-07-24",
+        1030000
+      ],
+      [
+        "2026-07-25",
+        1030000
+      ],
+      [
+        "2026-07-26",
+        1030000
+      ],
+      [
+        "2026-07-27",
+        1030000
+      ],
+      [
+        "2026-07-28",
+        1030000
+      ],
+      [
+        "2026-07-29",
+        1030000
+      ],
+      [
+        "2026-07-30",
+        1030000
+      ],
+      [
+        "2026-07-31",
+        1030000
+      ],
+      [
+        "2026-08-01",
+        1030000
+      ],
+      [
+        "2026-08-02",
+        1030000
+      ],
+      [
+        "2026-08-03",
+        1030000
+      ]
+    ],
+    "500152159": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1000000
+      ],
+      [
+        "2026-07-20",
+        1000000
+      ],
+      [
+        "2026-07-21",
+        1000000
+      ],
+      [
+        "2026-07-22",
+        1000000
+      ],
+      [
+        "2026-07-23",
+        1000000
+      ],
+      [
+        "2026-07-24",
+        1000000
+      ],
+      [
+        "2026-07-25",
+        1000000
+      ],
+      [
+        "2026-07-26",
+        1000000
+      ],
+      [
+        "2026-07-27",
+        1000000
+      ],
+      [
+        "2026-07-28",
+        1000000
+      ],
+      [
+        "2026-07-29",
+        1000000
+      ],
+      [
+        "2026-07-30",
+        1000000
+      ],
+      [
+        "2026-07-31",
+        1000000
+      ],
+      [
+        "2026-08-01",
+        1000000
+      ],
+      [
+        "2026-08-02",
+        1000000
+      ],
+      [
+        "2026-08-03",
+        1000000
+      ]
+    ],
+    "500055397": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        980000
+      ],
+      [
+        "2026-07-20",
+        980000
+      ],
+      [
+        "2026-07-21",
+        980000
+      ],
+      [
+        "2026-07-22",
+        980000
+      ],
+      [
+        "2026-07-23",
+        980000
+      ],
+      [
+        "2026-07-24",
+        980000
+      ],
+      [
+        "2026-07-25",
+        980000
+      ],
+      [
+        "2026-07-26",
+        980000
+      ],
+      [
+        "2026-07-27",
+        980000
+      ],
+      [
+        "2026-07-28",
+        980000
+      ],
+      [
+        "2026-07-29",
+        980000
+      ],
+      [
+        "2026-07-30",
+        980000
+      ],
+      [
+        "2026-07-31",
+        980000
+      ],
+      [
+        "2026-08-01",
+        980000
+      ],
+      [
+        "2026-08-02",
+        980000
+      ],
+      [
+        "2026-08-03",
+        1000000
+      ]
+    ],
+    "500016121": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        950000
+      ],
+      [
+        "2026-07-20",
+        950000
+      ],
+      [
+        "2026-07-21",
+        950000
+      ],
+      [
+        "2026-07-22",
+        950000
+      ],
+      [
+        "2026-07-23",
+        950000
+      ],
+      [
+        "2026-07-24",
+        950000
+      ],
+      [
+        "2026-07-25",
+        950000
+      ],
+      [
+        "2026-07-26",
+        950000
+      ],
+      [
+        "2026-07-27",
+        950000
+      ],
+      [
+        "2026-07-28",
+        950000
+      ],
+      [
+        "2026-07-29",
+        950000
+      ],
+      [
+        "2026-07-30",
+        950000
+      ],
+      [
+        "2026-07-31",
+        950000
+      ],
+      [
+        "2026-08-01",
+        950000
+      ],
+      [
+        "2026-08-02",
+        950000
+      ],
+      [
+        "2026-08-03",
+        950000
+      ]
+    ],
+    "500078891": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        950000
+      ],
+      [
+        "2026-07-20",
+        950000
+      ],
+      [
+        "2026-07-21",
+        950000
+      ],
+      [
+        "2026-07-22",
+        950000
+      ],
+      [
+        "2026-07-23",
+        950000
+      ],
+      [
+        "2026-07-24",
+        950000
+      ],
+      [
+        "2026-07-25",
+        950000
+      ],
+      [
+        "2026-07-26",
+        950000
+      ],
+      [
+        "2026-07-27",
+        950000
+      ],
+      [
+        "2026-07-28",
+        950000
+      ],
+      [
+        "2026-07-29",
+        950000
+      ],
+      [
+        "2026-07-30",
+        950000
+      ],
+      [
+        "2026-07-31",
+        950000
+      ],
+      [
+        "2026-08-01",
+        950000
+      ],
+      [
+        "2026-08-02",
+        950000
+      ],
+      [
+        "2026-08-03",
+        950000
+      ]
+    ],
+    "500077059": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        920000
+      ],
+      [
+        "2026-07-20",
+        920000
+      ],
+      [
+        "2026-07-21",
+        920000
+      ],
+      [
+        "2026-07-22",
+        920000
+      ],
+      [
+        "2026-07-23",
+        920000
+      ],
+      [
+        "2026-07-24",
+        920000
+      ],
+      [
+        "2026-07-25",
+        910000
+      ],
+      [
+        "2026-07-26",
+        910000
+      ],
+      [
+        "2026-07-27",
+        910000
+      ],
+      [
+        "2026-07-28",
+        910000
+      ],
+      [
+        "2026-07-29",
+        910000
+      ],
+      [
+        "2026-07-30",
+        910000
+      ],
+      [
+        "2026-07-31",
+        910000
+      ],
+      [
+        "2026-08-01",
+        910000
+      ],
+      [
+        "2026-08-02",
+        910000
+      ],
+      [
+        "2026-08-03",
+        910000
+      ]
+    ],
+    "500169751": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1098888
+      ],
+      [
+        "2026-07-20",
+        1098888
+      ],
+      [
+        "2026-07-21",
+        1050000
+      ],
+      [
+        "2026-07-22",
+        1050000
+      ],
+      [
+        "2026-07-23",
+        1050000
+      ],
+      [
+        "2026-07-24",
+        1050000
+      ],
+      [
+        "2026-07-25",
+        1050000
+      ],
+      [
+        "2026-07-26",
+        1050000
+      ],
+      [
+        "2026-07-27",
+        1050000
+      ],
+      [
+        "2026-07-28",
+        1050000
+      ],
+      [
+        "2026-07-29",
+        1050000
+      ],
+      [
+        "2026-07-30",
+        1050000
+      ],
+      [
+        "2026-07-31",
+        1050000
+      ],
+      [
+        "2026-08-01",
+        1050000
+      ],
+      [
+        "2026-08-02",
+        1050000
+      ]
+    ],
+    "500190495": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        975000
+      ],
+      [
+        "2026-07-20",
+        975000
+      ],
+      [
+        "2026-07-21",
+        985000
+      ],
+      [
+        "2026-07-22",
+        985000
+      ],
+      [
+        "2026-07-23",
+        985000
+      ],
+      [
+        "2026-07-24",
+        985000
+      ],
+      [
+        "2026-07-25",
+        985000
+      ],
+      [
+        "2026-07-26",
+        985000
+      ],
+      [
+        "2026-07-27",
+        985000
+      ],
+      [
+        "2026-07-28",
+        985000
+      ],
+      [
+        "2026-07-29",
+        985000
+      ],
+      [
+        "2026-07-30",
+        985000
+      ],
+      [
+        "2026-07-31",
+        985000
+      ],
+      [
+        "2026-08-01",
+        985000
+      ],
+      [
+        "2026-08-02",
+        985000
+      ],
+      [
+        "2026-08-03",
+        985000
+      ]
+    ],
+    "500189009": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        975000
+      ],
+      [
+        "2026-07-20",
+        975000
+      ],
+      [
+        "2026-07-21",
+        985000
+      ],
+      [
+        "2026-07-22",
+        985000
+      ],
+      [
+        "2026-07-23",
+        985000
+      ],
+      [
+        "2026-07-24",
+        985000
+      ],
+      [
+        "2026-07-25",
+        985000
+      ],
+      [
+        "2026-07-26",
+        985000
+      ],
+      [
+        "2026-07-27",
+        985000
+      ],
+      [
+        "2026-07-28",
+        985000
+      ],
+      [
+        "2026-07-29",
+        985000
+      ],
+      [
+        "2026-07-30",
+        985000
+      ],
+      [
+        "2026-07-31",
+        985000
+      ],
+      [
+        "2026-08-01",
+        985000
+      ],
+      [
+        "2026-08-02",
+        985000
+      ],
+      [
+        "2026-08-03",
+        985000
+      ]
+    ],
+    "500190370": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        975000
+      ],
+      [
+        "2026-07-20",
+        975000
+      ],
+      [
+        "2026-07-21",
+        975000
+      ],
+      [
+        "2026-07-22",
+        975000
+      ],
+      [
+        "2026-07-23",
+        975000
+      ],
+      [
+        "2026-07-24",
+        975000
+      ],
+      [
+        "2026-07-25",
+        975000
+      ],
+      [
+        "2026-07-26",
+        975000
+      ],
+      [
+        "2026-07-27",
+        975000
+      ],
+      [
+        "2026-07-28",
+        975000
+      ],
+      [
+        "2026-07-29",
+        975000
+      ],
+      [
+        "2026-07-30",
+        975000
+      ],
+      [
+        "2026-07-31",
+        975000
+      ],
+      [
+        "2026-08-01",
+        975000
+      ],
+      [
+        "2026-08-02",
+        975000
+      ],
+      [
+        "2026-08-03",
+        975000
+      ]
+    ],
+    "500205417": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        950000
+      ],
+      [
+        "2026-07-20",
+        950000
+      ],
+      [
+        "2026-07-21",
+        950000
+      ],
+      [
+        "2026-07-22",
+        950000
+      ],
+      [
+        "2026-07-23",
+        950000
+      ],
+      [
+        "2026-07-24",
+        950000
+      ],
+      [
+        "2026-07-25",
+        950000
+      ],
+      [
+        "2026-07-26",
+        950000
+      ],
+      [
+        "2026-07-27",
+        950000
+      ],
+      [
+        "2026-07-28",
+        950000
+      ],
+      [
+        "2026-07-29",
+        950000
+      ],
+      [
+        "2026-07-30",
+        950000
+      ],
+      [
+        "2026-07-31",
+        950000
+      ],
+      [
+        "2026-08-01",
+        950000
+      ],
+      [
+        "2026-08-02",
+        950000
+      ],
+      [
+        "2026-08-03",
+        950000
+      ]
+    ],
+    "500166851": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        900000
+      ],
+      [
+        "2026-07-20",
+        900000
+      ],
+      [
+        "2026-07-21",
+        900000
+      ],
+      [
+        "2026-07-22",
+        900000
+      ],
+      [
+        "2026-07-23",
+        900000
+      ],
+      [
+        "2026-07-24",
+        900000
+      ],
+      [
+        "2026-07-25",
+        900000
+      ],
+      [
+        "2026-07-26",
+        900000
+      ],
+      [
+        "2026-07-27",
+        900000
+      ],
+      [
+        "2026-07-28",
+        900000
+      ],
+      [
+        "2026-07-29",
+        900000
+      ],
+      [
+        "2026-07-30",
+        900000
+      ],
+      [
+        "2026-07-31",
+        900000
+      ]
+    ],
+    "500144622": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        970000
+      ],
+      [
+        "2026-07-20",
+        970000
+      ],
+      [
+        "2026-07-21",
+        970000
+      ],
+      [
+        "2026-07-28",
+        null
+      ]
+    ],
+    "60095956": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        938000
+      ],
+      [
+        "2026-07-20",
+        938000
+      ],
+      [
+        "2026-07-21",
+        938000
+      ],
+      [
+        "2026-07-22",
+        938000
+      ],
+      [
+        "2026-07-23",
+        938000
+      ],
+      [
+        "2026-07-24",
+        938000
+      ],
+      [
+        "2026-07-25",
+        938000
+      ],
+      [
+        "2026-07-26",
+        938000
+      ],
+      [
+        "2026-07-27",
+        938000
+      ],
+      [
+        "2026-07-28",
+        938000
+      ],
+      [
+        "2026-07-29",
+        938000
+      ],
+      [
+        "2026-07-30",
+        938000
+      ],
+      [
+        "2026-07-31",
+        938000
+      ],
+      [
+        "2026-08-01",
+        938000
+      ],
+      [
+        "2026-08-02",
+        938000
+      ],
+      [
+        "2026-08-03",
+        938000
+      ]
+    ],
+    "60127662": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        900000
+      ],
+      [
+        "2026-07-20",
+        900000
+      ],
+      [
+        "2026-07-21",
+        900000
+      ],
+      [
+        "2026-07-22",
+        900000
+      ],
+      [
+        "2026-07-23",
+        900000
+      ],
+      [
+        "2026-07-24",
+        900000
+      ],
+      [
+        "2026-07-25",
+        900000
+      ],
+      [
+        "2026-07-26",
+        900000
+      ],
+      [
+        "2026-07-27",
+        900000
+      ],
+      [
+        "2026-07-28",
+        900000
+      ],
+      [
+        "2026-07-29",
+        900000
+      ]
+    ],
+    "500176972": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1100000
+      ],
+      [
+        "2026-07-20",
+        1100000
+      ],
+      [
+        "2026-07-21",
+        1100000
+      ],
+      [
+        "2026-07-22",
+        1100000
+      ],
+      [
+        "2026-07-23",
+        1100000
+      ],
+      [
+        "2026-07-24",
+        1100000
+      ],
+      [
+        "2026-07-25",
+        1100000
+      ],
+      [
+        "2026-07-26",
+        1100000
+      ],
+      [
+        "2026-07-27",
+        1100000
+      ],
+      [
+        "2026-07-28",
+        1100000
+      ],
+      [
+        "2026-07-29",
+        1100000
+      ],
+      [
+        "2026-07-30",
+        1100000
+      ],
+      [
+        "2026-07-31",
+        1100000
+      ],
+      [
+        "2026-08-01",
+        1100000
+      ],
+      [
+        "2026-08-02",
+        1100000
+      ],
+      [
+        "2026-08-03",
+        1100000
+      ]
+    ],
+    "60205795": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        899000
+      ],
+      [
+        "2026-07-20",
+        899000
+      ],
+      [
+        "2026-07-21",
+        899000
+      ],
+      [
+        "2026-07-22",
+        899000
+      ],
+      [
+        "2026-07-23",
+        899000
+      ],
+      [
+        "2026-07-24",
+        899000
+      ],
+      [
+        "2026-07-25",
+        899000
+      ],
+      [
+        "2026-07-26",
+        899000
+      ],
+      [
+        "2026-07-27",
+        899000
+      ],
+      [
+        "2026-07-28",
+        899000
+      ],
+      [
+        "2026-07-29",
+        899000
+      ],
+      [
+        "2026-07-30",
+        899000
+      ]
+    ],
+    "500180493": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        899000
+      ],
+      [
+        "2026-07-20",
+        899000
+      ],
+      [
+        "2026-07-21",
+        899000
+      ],
+      [
+        "2026-07-22",
+        899000
+      ],
+      [
+        "2026-07-23",
+        899000
+      ],
+      [
+        "2026-07-24",
+        899000
+      ],
+      [
+        "2026-07-25",
+        899000
+      ],
+      [
+        "2026-08-01",
+        null
+      ]
+    ],
+    "60176902": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        800000
+      ],
+      [
+        "2026-07-20",
+        800000
+      ],
+      [
+        "2026-07-21",
+        800000
+      ],
+      [
+        "2026-07-22",
+        800000
+      ],
+      [
+        "2026-07-23",
+        800000
+      ],
+      [
+        "2026-07-24",
+        800000
+      ],
+      [
+        "2026-07-25",
+        800000
+      ],
+      [
+        "2026-07-26",
+        800000
+      ],
+      [
+        "2026-07-27",
+        800000
+      ],
+      [
+        "2026-07-28",
+        800000
+      ],
+      [
+        "2026-07-29",
+        800000
+      ],
+      [
+        "2026-07-30",
+        800000
+      ],
+      [
+        "2026-07-31",
+        800000
+      ],
+      [
+        "2026-08-01",
+        800000
+      ],
+      [
+        "2026-08-02",
+        800000
+      ],
+      [
+        "2026-08-03",
+        800000
+      ]
+    ],
+    "60117042": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1000000
+      ],
+      [
+        "2026-07-20",
+        1000000
+      ],
+      [
+        "2026-07-21",
+        1000000
+      ],
+      [
+        "2026-07-22",
+        1000000
+      ],
+      [
+        "2026-07-23",
+        1000000
+      ],
+      [
+        "2026-07-24",
+        1000000
+      ],
+      [
+        "2026-07-25",
+        1000000
+      ],
+      [
+        "2026-07-26",
+        1000000
+      ],
+      [
+        "2026-07-27",
+        1000000
+      ],
+      [
+        "2026-07-28",
+        1000000
+      ],
+      [
+        "2026-07-29",
+        1000000
+      ],
+      [
+        "2026-07-30",
+        1000000
+      ],
+      [
+        "2026-07-31",
+        1000000
+      ],
+      [
+        "2026-08-01",
+        1000000
+      ],
+      [
+        "2026-08-02",
+        1000000
+      ],
+      [
+        "2026-08-03",
+        1000000
+      ]
+    ],
+    "500079192": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1000000
+      ],
+      [
+        "2026-07-20",
+        1000000
+      ],
+      [
+        "2026-07-21",
+        1000000
+      ],
+      [
+        "2026-07-22",
+        1000000
+      ],
+      [
+        "2026-07-23",
+        1000000
+      ],
+      [
+        "2026-07-24",
+        1000000
+      ],
+      [
+        "2026-07-25",
+        1000000
+      ],
+      [
+        "2026-07-26",
+        1000000
+      ],
+      [
+        "2026-07-27",
+        1000000
+      ],
+      [
+        "2026-07-28",
+        1000000
+      ],
+      [
+        "2026-07-29",
+        1000000
+      ],
+      [
+        "2026-07-30",
+        1000000
+      ],
+      [
+        "2026-07-31",
+        1000000
+      ],
+      [
+        "2026-08-01",
+        1000000
+      ],
+      [
+        "2026-08-02",
+        1000000
+      ],
+      [
+        "2026-08-03",
+        1000000
+      ]
+    ],
+    "60208239": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1000000
+      ],
+      [
+        "2026-07-20",
+        1000000
+      ],
+      [
+        "2026-07-21",
+        1000000
+      ],
+      [
+        "2026-07-22",
+        1000000
+      ],
+      [
+        "2026-07-29",
+        1000000
+      ],
+      [
+        "2026-07-30",
+        1000000
+      ],
+      [
+        "2026-07-31",
+        1000000
+      ],
+      [
+        "2026-08-01",
+        1000000
+      ],
+      [
+        "2026-08-02",
+        1000000
+      ],
+      [
+        "2026-08-03",
+        1000000
+      ]
+    ],
+    "25614626": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        1000000
+      ],
+      [
+        "2026-07-20",
+        1000000
+      ],
+      [
+        "2026-07-21",
+        1000000
+      ],
+      [
+        "2026-07-22",
+        1000000
+      ],
+      [
+        "2026-07-23",
+        1000000
+      ],
+      [
+        "2026-07-24",
+        1000000
+      ],
+      [
+        "2026-07-25",
+        1000000
+      ],
+      [
+        "2026-07-26",
+        1000000
+      ],
+      [
+        "2026-07-27",
+        1000000
+      ],
+      [
+        "2026-07-28",
+        1000000
+      ],
+      [
+        "2026-07-29",
+        1000000
+      ],
+      [
+        "2026-07-30",
+        1000000
+      ],
+      [
+        "2026-07-31",
+        1000000
+      ],
+      [
+        "2026-08-01",
+        1000000
+      ],
+      [
+        "2026-08-02",
+        1000000
+      ],
+      [
+        "2026-08-03",
+        1000000
+      ]
+    ],
+    "500199441": [
+      [
+        "2026-07-18",
+        null
+      ],
+      [
+        "2026-07-19",
+        965000
+      ],
+      [
+        "2026-07-20",
+        965000
+      ],
+      [
+        "2026-07-21",
+        965000
+      ],
+      [
+        "2026-07-22",
+        965000
+      ],
+      [
+        "2026-07-23",
+        965000
+      ],
+      [
+        "2026-07-24",
+        965000
+      ],
+      [
+        "2026-07-25",
+        965000
+      ],
+      [
+        "2026-07-26",
+        965000
+      ],
+      [
+        "2026-07-27",
+        965000
+      ],
+      [
+        "2026-07-28",
+        965000
+      ],
+      [
+        "2026-07-29",
+        965000
+      ],
+      [
+        "2026-07-30",
+        965000
+      ],
+      [
+        "2026-07-31",
+        965000
+      ],
+      [
+        "2026-08-01",
+        965000
+      ],
+      [
+        "2026-08-02",
+        965000
+      ],
+      [
+        "2026-08-03",
+        965000
+      ]
+    ],
+    "500207099": [
+      [
+        "2026-07-19",
+        950000
+      ],
+      [
+        "2026-07-20",
+        950000
+      ],
+      [
+        "2026-07-21",
+        950000
+      ],
+      [
+        "2026-07-22",
+        960000
+      ],
+      [
+        "2026-07-23",
+        960000
+      ],
+      [
+        "2026-07-24",
+        960000
+      ],
+      [
+        "2026-07-25",
+        960000
+      ],
+      [
+        "2026-07-26",
+        960000
+      ],
+      [
+        "2026-07-27",
+        960000
+      ],
+      [
+        "2026-07-28",
+        960000
+      ],
+      [
+        "2026-07-29",
+        960000
+      ],
+      [
+        "2026-07-30",
+        960000
+      ],
+      [
+        "2026-07-31",
+        960000
+      ],
+      [
+        "2026-08-01",
+        960000
+      ],
+      [
+        "2026-08-02",
+        960000
+      ],
+      [
+        "2026-08-03",
+        960000
+      ]
+    ],
+    "500207847": [
+      [
+        "2026-07-21",
+        890000
+      ],
+      [
+        "2026-07-22",
+        890000
+      ],
+      [
+        "2026-07-23",
+        890000
+      ],
+      [
+        "2026-07-24",
+        890000
+      ],
+      [
+        "2026-07-25",
+        890000
+      ],
+      [
+        "2026-07-26",
+        890000
+      ],
+      [
+        "2026-07-27",
+        890000
+      ],
+      [
+        "2026-07-28",
+        890000
+      ],
+      [
+        "2026-07-29",
+        890000
+      ],
+      [
+        "2026-07-30",
+        890000
+      ],
+      [
+        "2026-07-31",
+        890000
+      ],
+      [
+        "2026-08-01",
+        890000
+      ],
+      [
+        "2026-08-02",
+        890000
+      ],
+      [
+        "2026-08-03",
+        940000
+      ]
+    ],
+    "500114729": [
+      [
+        "2026-07-22",
+        999999
+      ],
+      [
+        "2026-07-23",
+        999999
+      ],
+      [
+        "2026-07-24",
+        999999
+      ],
+      [
+        "2026-07-25",
+        999999
+      ],
+      [
+        "2026-07-26",
+        999999
+      ],
+      [
+        "2026-07-27",
+        999999
+      ],
+      [
+        "2026-07-28",
+        999999
+      ],
+      [
+        "2026-07-29",
+        999999
+      ],
+      [
+        "2026-07-30",
+        999999
+      ],
+      [
+        "2026-07-31",
+        999999
+      ],
+      [
+        "2026-08-01",
+        999999
+      ],
+      [
+        "2026-08-02",
+        999999
+      ],
+      [
+        "2026-08-03",
+        999999
+      ]
+    ]
   }
 }

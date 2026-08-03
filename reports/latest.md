@@ -8,31 +8,28 @@
 - 当前在售(非低楼层): **33** 套
 - 🆕 今日上新(全新房源，监控以来首次出现): **0** 套
 - 🔄 重新上架/刷新(历史出现过、此前下架后重现): **0** 套
-- 💰 今日价格变动(同一单位仍在售、价格较上次抓取不同): **1** 套
+- 💰 今日价格变动(同一单位仍在售、价格较上次抓取不同): **0** 套
 - ✅ 今日卖出/下架(连续消失≥7天): **0** 套
 - 🚫 已排除低楼层: 2 套（不计入上方在售）
-
-## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）
-- **[92B] S$940,000 · 1001 sqft · S$939/sqft · High Floor**
-  - Genuine seller! High floor corner unit! Amazing view! No extension! · 中介: Kyean Lim
-  - 🕒 平台显示上架: 20 Jul 2026（平台会刷新上架时间，仅供参考）
-  - 💱 价格变动: S$890,000 → S$940,000
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847
 
 ## 📋 当前在售清单（按 block，已排除低楼层）
 ### 80A （4 套）
 - **S$1,220,000 · 1023 sqft · S$1,193/sqft · High Floor**
   - Sea View with Very High Floor · 中介: Justin Zaw
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,220,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500166946
 - **S$1,098,000 · 1023 sqft · S$1,073/sqft · 非低楼层**
   - High Floor 4 Room, Panoramic Sea View, Move-In Condition · 中介: Dave Choy
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,098,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017
 - **S$999,999 · 1022 sqft · S$978/sqft · High Floor**
   - High floor, bright, windy and surrounded by amazing views · 中介: Faris Malik
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$999,999（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500130028
 - **S$999,999 · 1022 sqft · S$978/sqft · High Floor**
   - Rare High Floor 3 Bedroom with Scenic Views · 中介: Melvin Fang
   - 🕒 平台显示上架: 21 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-22 ~ 2026-08-03 均 S$999,999（13 次记录）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729
 
 ### 80B （0 套）
@@ -45,107 +42,136 @@
 - **S$1,000,000 · 1001 sqft · S$999/sqft · 非低楼层**
   - C H E A P! 4rm with a stunning view at Telok Blangah · 中介: Mary Tang Ji&#x27;Ai
   - 🕒 平台显示上架: 2 Aug 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,000,000（17 次记录，3 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397
 - **S$1,000,000 · 1001 sqft · S$999/sqft · Middle Floor**
   - Rare Sanctuary Park, Sea Glimpse & Sunset, Premium Finishes · 中介: Steven Liew
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,000,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159
 - **S$950,000 · 1001 sqft · S$949/sqft · Middle Floor**
   - C.H.E.A.P. Corner 4 Room H.D.B. In Telok Blangah · 中介: Zhi Sheng
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$950,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500016121
 - **S$950,000 · 1001 sqft · S$949/sqft · 非低楼层**
   - Super Cheap 4A HDB for Sale in Prime Area · 中介: Faris Ar
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$950,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500078891
 - **S$910,000 · 1001 sqft · S$909/sqft · Middle Floor**
   - No restrictions, all can buy, no extension, view to offer! · 中介: Lin Sallee 林玥廷
   - 🕒 平台显示上架: 24 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$910,000（17 次记录，3 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500077059
 
 ### 90B （4 套）
 - **S$985,000 · 1001 sqft · S$984/sqft · High Floor**
   - Super C.H.E.A.P, high floor, south-facing 4-room for sale! · 中介: Lynn Choo
   - 🕒 平台显示上架: 17 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$985,000（17 次记录，3 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190495
 - **S$985,000 · 1001 sqft · S$984/sqft · High Floor**
   - Very well-maintained 4A unit, high floor and unblocked · 中介: Stephanie Neo
   - 🕒 平台显示上架: 17 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$985,000（17 次记录，3 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500189009
 - **S$975,000 · 1001 sqft · S$974/sqft · High Floor**
   - C.H.E.A.P. Super Rare, High Floor, Unblocked View. C.H.E.A.P · 中介: Jared Tan
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$975,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190370
 - **S$950,000 · 1001 sqft · S$949/sqft · High Floor**
   - High Floor Corner Windy Unit Unblocked View Zero Extension · 中介: Dennis Chua
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$950,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500205417
 
 ### 91A （1 套）
 - **S$938,000 · 1001 sqft · S$937/sqft · 非低楼层**
   - Renovated! In Prime Location surrounded by Lush Greenery & Amenities · 中介: Den Ng 黄炜炜
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$938,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-60095956
 
 ### 92B （3 套）
 - **S$1,100,000 · 1000 sqft · S$1,100/sqft · Middle Floor**
   - Greenery And Fitness Lover Quiet Environment Nice Neighbour Level 08 · 中介: Patsy Sim
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,100,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500176972
 - **S$940,000 · 1001 sqft · S$939/sqft · High Floor**
   - Genuine seller! High floor corner unit! Amazing view! No extension! · 中介: Kyean Lim
   - 🕒 平台显示上架: 20 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-21 S$890,000 → 2026-08-03 S$940,000（14 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847
 - **S$800,000 · 1001 sqft · S$799/sqft · High Floor**
   - Spacious, Well-kept High Floor Corner Unit for Sale! · 中介: He Yifei
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$800,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902
 
 ### 93A （5 套）
 - **S$1,000,000 · 1001 sqft · S$999/sqft · High Floor**
   - 93 Telok Blangah Street 31 For Sales · 中介: Christina Oh
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,000,000（11 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60208239
 - **S$1,000,000 · 1001 sqft · S$999/sqft · High Floor**
   - High floor, maintained in tip top condition! · 中介: Yuna Lim
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,000,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500079192
 - **S$1,000,000 · 1001 sqft · S$999/sqft · High Floor**
   - 93 Telok Blangah Street 31 For Sales · 中介: Gary Koh
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,000,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60117042
 - **S$1,000,000 · 1001 sqft · S$999/sqft · High Floor**
   - High Floor, almost as new, well kept. remain 92 yrs plus. Prime area · 中介: Tan Hock Siew
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,000,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-25614626
 - **S$965,000 · 1001 sqft · S$964/sqft · High Floor**
   - No extension, Exclusive, Super High Floor, Renovated · 中介: Hedi Ong
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$965,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500199441
 
 ### 93B （11 套）
 - **S$1,120,000 · 1001 sqft · S$1,119/sqft · High Floor**
   - 93B Telok Blangah street 31 · 中介: Martin Ng
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,120,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500204526
 - **S$1,030,000 · 1001 sqft · S$1,029/sqft · 非低楼层**
   - High floor  N S facing unblocked view no west sun no extension · 中介: Dennis Kang
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,030,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500093229
 - **S$1,030,000 · 1001 sqft · S$1,029/sqft · High Floor**
   - Unblocked high floor view cosy living · 中介: Ginny Tien (Ginnie Tien)
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,030,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500128530
 - **S$1,029,000 · 1001 sqft · S$1,028/sqft · High Floor**
   - Brand New High level 4-Room Unit near Vivocity · 中介: Alvin Tay
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,029,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072233
 - **S$1,028,000 · 1001 sqft · S$1,027/sqft · High Floor**
   - Brand New High Level 4-Room Unit near Vivocity! · 中介: Xiao Yang 小杨
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,028,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072222
 - **S$1,000,000 · 1001 sqft · S$999/sqft · 非低楼层**
   - Stop scrolling: This designer home in 93B Telok Blangah! · 中介: Adrian Chua
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$1,000,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500044356
 - **S$998,000 · 1001 sqft · S$997/sqft · High Floor**
   - Stunning 3 Bedroom HDB at 93B, Telok Blangah St 31 · 中介: Ken Chen
   - 🕒 平台显示上架: 16 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$998,000（17 次记录，3 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500131573
 - **S$960,000 · 1001 sqft · S$959/sqft · High Floor**
   - C.H.E.A.P beautifully renovated unit 50k below last transacted · 中介: Nicholas Cho
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$960,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397
 - **S$960,000 · 1001 sqft · S$959/sqft · High Floor**
   - C.H.E.A.P beautifully renovated unit 50k below last transacted · 中介: Georgiana Ong
   - 🕒 平台显示上架: 21 Jul 2026（平台会刷新上架时间，仅供参考）
+  - 📈 历史价格: 2026-07-19 S$950,000 → 2026-08-03 S$960,000（16 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099
 - **S$915,000 · 1001 sqft · S$914/sqft · 非低楼层**
   - Don't Miss! Spacious 4-Rm HDB in Telok Blangah – Mins to MRT & Sentosa · 中介: Gates Lee
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$915,000（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368
 - **S$899,999 · 1001 sqft · S$899/sqft · 非低楼层**
   - Corner, North South Facing, Quiet, Renovated, Unblocked View! · 中介: Kavin Kuah
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-08-03 S$899,999（17 次记录，2 个价）
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711
 
 ---
-_生成时间 2026-08-03 14:55:15 · 数据来源 PropertyGuru（curl_cffi 抓取）_
+_生成时间 2026-08-03 15:29:42 · 数据来源 PropertyGuru（curl_cffi 抓取）_

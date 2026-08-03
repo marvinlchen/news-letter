@@ -243,7 +243,21 @@ def psf(r):
 _NO_PRICE = object()  # 哨兵：区分"调用方未传 old_price"与"传了 None（此前价格未公开）"
 
 
-def fmt_listing(r, with_block=True, old_price=_NO_PRICE):
+def fmt_trend(ph):
+    """ph: list of [date, price]。返回紧凑的"价格走势"行；不足 2 个点返回 None。"""
+    if not ph or len(ph) < 2:
+        return None
+    first_d, first_p = ph[0]
+    last_d, last_p = ph[-1]
+    distinct = {p for _, p in ph}
+    if len(distinct) == 1:
+        return (f"📈 历史价格: {first_d} ~ {last_d} 均 {fmt_price(first_p)}"
+                f"（{len(ph)} 次记录）")
+    return (f"📈 历史价格: {first_d} {fmt_price(first_p)} → {last_d} {fmt_price(last_p)}"
+            f"（{len(ph)} 次记录，{len(distinct)} 个价）")
+
+
+def fmt_listing(r, with_block=True, old_price=_NO_PRICE, ph=None):
     """两行 markdown：第一行价格/面积/呎价/楼层，第二行摘要+中介+平台显示上架+链接。
     old_price: 若该单位此前记录的价格不同，传入以追加一行"价格变动"提示；不传则不显示。"""
     prefix = f"[{r['block']}] " if with_block else ""
@@ -264,6 +278,9 @@ def fmt_listing(r, with_block=True, old_price=_NO_PRICE):
     if old_price is not _NO_PRICE and old_price != r.get('price'):
         old_s = "价格未公开" if old_price is None else fmt_price(old_price)
         line2 += f"\n  - 💱 价格变动: {old_s} → {fmt_price(r.get('price'))}"
+    tr = fmt_trend(ph)
+    if tr:
+        line2 += f"\n  - {tr}"
     line2 += f"\n  - {r['url']}"
     return line1 + "\n" + line2
 
@@ -298,6 +315,7 @@ def load_state():
 
 def build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed):
     history = state["history"]
+    phist = state.get("price_history", {})
     L = []
     L.append("# HDB 4-room 订阅日报 · Telok Blangah Parcview")
     L.append(f"**日期**: {date_str}  ")
@@ -320,18 +338,18 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
     if truly_new:
         L.append("## 🆕 今日上新（全新房源，监控以来首次出现）")
         for i in truly_new:
-            L.append(fmt_listing(kept[i]))
+            L.append(fmt_listing(kept[i], ph=phist.get(i)))
         L.append("")
     if returned:
         L.append("## 🔄 重新上架 / 刷新（历史出现过，此前已下架，今日重现）")
         for i in returned:
             old = history.get(i, {}).get('last_price')
-            L.append(fmt_listing(kept[i], old_price=old))
+            L.append(fmt_listing(kept[i], old_price=old, ph=phist.get(i)))
         L.append("")
     if price_changed:
         L.append("## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）")
         for i, prev, _cur in price_changed:
-            L.append(fmt_listing(kept[i], old_price=prev))
+            L.append(fmt_listing(kept[i], old_price=prev, ph=phist.get(i)))
         L.append("")
     if sold:
         L.append("## ✅ 今日卖出 / 下架（先前在售，连续消失≥%d天）" % GRACE_DAYS)
@@ -352,7 +370,7 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
         if not items:
             L.append("- 无")
         for r in sorted(items, key=lambda x: (x['price'] or 0), reverse=True):
-            L.append(fmt_listing(r, with_block=False))
+            L.append(fmt_listing(r, with_block=False, ph=phist.get(r['id'])))
         L.append("")
     L.append("---")
     L.append(f"_生成时间 {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} · 数据来源 PropertyGuru（curl_cffi 抓取）_")
@@ -416,6 +434,7 @@ def main():
     state = load_state()
     listings = state["listings"]
     history = state["history"]
+    price_history = {k: list(v) for k, v in state.get("price_history", {}).items()}
     ever = set(history) | set(listings)          # 监控以来出现过的全部 ID
     cur_ids = set(kept)
 
@@ -469,6 +488,16 @@ def main():
             "area": rec.get("area"),
         }
     state = {"listings": new_listings, "history": new_history}
+
+    # 维护价格走势：为今日仍在售的单位追加 (date, price) 点（同日去重更新）
+    for i in cur_ids:
+        pts = price_history.setdefault(i, [])
+        price = kept[i].get('price')
+        if pts and pts[-1][0] == date_str:
+            pts[-1] = [date_str, price]
+        else:
+            pts.append([date_str, price])
+    state["price_history"] = price_history
 
     report = build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed)
     with open(STATE_FILE, 'w') as f:
