@@ -1,293 +1,5 @@
 {
   "listings": {
-    "500190370": {
-      "id": "500190370",
-      "price": 975000,
-      "area": 1001,
-      "beds": null,
-      "title": "90B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190370",
-      "block": "90B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C.H.E.A.P. Super Rare, High Floor, Unblocked View. C.H.E.A.P",
-      "agent": "Jared Tan",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "60208239": {
-      "id": "60208239",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "93A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60208239",
-      "block": "93A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "93 Telok Blangah Street 31 For Sales",
-      "agent": "Christina Oh",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "60176902": {
-      "id": "60176902",
-      "price": 800000,
-      "area": 1001,
-      "beds": null,
-      "title": "92B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902",
-      "block": "92B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Spacious, Well-kept High Floor Corner Unit for Sale!",
-      "agent": "He Yifei",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500176972": {
-      "id": "500176972",
-      "price": 1100000,
-      "area": 1000,
-      "beds": null,
-      "title": "92B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500176972",
-      "block": "92B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Greenery And Fitness Lover Quiet Environment Nice Neighbour Level 08",
-      "agent": "Patsy Sim",
-      "floor_desc": "Middle Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500199397": {
-      "id": "500199397",
-      "price": 960000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C.H.E.A.P beautifully renovated unit 50k below last transacted",
-      "agent": "Nicholas Cho",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500044356": {
-      "id": "500044356",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500044356",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Stop scrolling: This designer home in 93B Telok Blangah!",
-      "agent": "Adrian Chua",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "60117042": {
-      "id": "60117042",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "93A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60117042",
-      "block": "93A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "93 Telok Blangah Street 31 For Sales",
-      "agent": "Gary Koh",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500061711": {
-      "id": "500061711",
-      "price": 899999,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Corner, North South Facing, Quiet, Renovated, Unblocked View!",
-      "agent": "Kavin Kuah",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500072222": {
-      "id": "500072222",
-      "price": 1028000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072222",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Brand New High Level 4-Room Unit near Vivocity!",
-      "agent": "Xiao Yang \u5c0f\u6768",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500190495": {
-      "id": "500190495",
-      "price": 985000,
-      "area": 1001,
-      "beds": null,
-      "title": "90B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190495",
-      "block": "90B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Super C.H.E.A.P, high floor, south-facing 4-room for sale!",
-      "agent": "Lynn Choo",
-      "floor_desc": "High Floor",
-      "listed_on": "17 Jul 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500077059": {
-      "id": "500077059",
-      "price": 910000,
-      "area": 1001,
-      "beds": null,
-      "title": "90A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500077059",
-      "block": "90A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "No restrictions, all can buy, no extension, view to offer!",
-      "agent": "Lin Sallee \u6797\u73a5\u5ef7",
-      "floor_desc": "Middle Floor",
-      "listed_on": "24 Jul 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500128530": {
-      "id": "500128530",
-      "price": 1030000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500128530",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Unblocked high floor view cosy living",
-      "agent": "Ginny Tien (Ginnie Tien)",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "25614626": {
-      "id": "25614626",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "93A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-25614626",
-      "block": "93A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High Floor, almost as new, well kept. remain 92 yrs plus. Prime area",
-      "agent": "Tan Hock Siew",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500093229": {
-      "id": "500093229",
-      "price": 1030000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500093229",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High floor  N S facing unblocked view no west sun no extension",
-      "agent": "Dennis Kang",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500207847": {
-      "id": "500207847",
-      "price": 940000,
-      "area": 1001,
-      "beds": null,
-      "title": "92B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847",
-      "block": "92B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Genuine seller! High floor corner unit! Amazing view! No extension!",
-      "agent": "Kyean Lim",
-      "floor_desc": "High Floor",
-      "listed_on": "20 Jul 2026",
-      "first_seen": "2026-07-21",
-      "last_seen": "2026-08-03"
-    },
-    "500055397": {
-      "id": "500055397",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "90A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397",
-      "block": "90A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C H E A P! 4rm with a stunning view at Telok Blangah",
-      "agent": "Mary Tang Ji&#x27;Ai",
-      "floor_desc": "",
-      "listed_on": "2 Aug 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "60095956": {
-      "id": "60095956",
-      "price": 938000,
-      "area": 1001,
-      "beds": null,
-      "title": "91A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-60095956",
-      "block": "91A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Renovated! In Prime Location surrounded by Lush Greenery & Amenities",
-      "agent": "Den Ng \u9ec4\u709c\u709c",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500016121": {
-      "id": "500016121",
-      "price": 950000,
-      "area": 1001,
-      "beds": null,
-      "title": "90A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500016121",
-      "block": "90A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C.H.E.A.P. Corner 4 Room H.D.B. In Telok Blangah",
-      "agent": "Zhi Sheng",
-      "floor_desc": "Middle Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
     "500199441": {
       "id": "500199441",
       "price": 965000,
@@ -302,119 +14,23 @@
       "floor_desc": "High Floor",
       "listed_on": null,
       "first_seen": "baseline",
-      "last_seen": "2026-08-03"
+      "last_seen": "2026-08-04"
     },
-    "500185017": {
-      "id": "500185017",
-      "price": 1098000,
-      "area": 1023,
-      "beds": null,
-      "title": "80A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017",
-      "block": "80A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High Floor 4 Room, Panoramic Sea View, Move-In Condition",
-      "agent": "Dave Choy",
-      "floor_desc": "",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500204526": {
-      "id": "500204526",
-      "price": 1120000,
+    "60176902": {
+      "id": "60176902",
+      "price": 899000,
       "area": 1001,
       "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500204526",
-      "block": "93B",
+      "title": "92B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902",
+      "block": "92B",
       "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "93B Telok Blangah street 31",
-      "agent": "Martin Ng",
+      "summary": "Spacious, Well-kept High Floor Corner Unit for Sale!",
+      "agent": "He Yifei",
       "floor_desc": "High Floor",
-      "listed_on": null,
+      "listed_on": "4 Aug 2026",
       "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500205417": {
-      "id": "500205417",
-      "price": 950000,
-      "area": 1001,
-      "beds": null,
-      "title": "90B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500205417",
-      "block": "90B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High Floor Corner Windy Unit Unblocked View Zero Extension",
-      "agent": "Dennis Chua",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500079192": {
-      "id": "500079192",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "93A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500079192",
-      "block": "93A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High floor, maintained in tip top condition!",
-      "agent": "Yuna Lim",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500166946": {
-      "id": "500166946",
-      "price": 1220000,
-      "area": 1023,
-      "beds": null,
-      "title": "80A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500166946",
-      "block": "80A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Sea View with Very High Floor",
-      "agent": "Justin Zaw",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500189009": {
-      "id": "500189009",
-      "price": 985000,
-      "area": 1001,
-      "beds": null,
-      "title": "90B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500189009",
-      "block": "90B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Very well-maintained 4A unit, high floor and unblocked",
-      "agent": "Stephanie Neo",
-      "floor_desc": "High Floor",
-      "listed_on": "17 Jul 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500152159": {
-      "id": "500152159",
-      "price": 1000000,
-      "area": 1001,
-      "beds": null,
-      "title": "90A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159",
-      "block": "90A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Rare Sanctuary Park, Sea Glimpse & Sunset, Premium Finishes",
-      "agent": "Steven Liew",
-      "floor_desc": "Middle Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
+      "last_seen": "2026-08-04"
     },
     "500078891": {
       "id": "500078891",
@@ -430,7 +46,23 @@
       "floor_desc": "",
       "listed_on": null,
       "first_seen": "baseline",
-      "last_seen": "2026-08-03"
+      "last_seen": "2026-08-04"
+    },
+    "500044356": {
+      "id": "500044356",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500044356",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Stop scrolling: This designer home in 93B Telok Blangah!",
+      "agent": "Adrian Chua",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
     },
     "500131573": {
       "id": "500131573",
@@ -446,55 +78,7 @@
       "floor_desc": "High Floor",
       "listed_on": "16 Jul 2026",
       "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500207099": {
-      "id": "500207099",
-      "price": 960000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "C.H.E.A.P beautifully renovated unit 50k below last transacted",
-      "agent": "Georgiana Ong",
-      "floor_desc": "High Floor",
-      "listed_on": "21 Jul 2026",
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500072233": {
-      "id": "500072233",
-      "price": 1029000,
-      "area": 1001,
-      "beds": null,
-      "title": "93B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072233",
-      "block": "93B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Brand New High level 4-Room Unit near Vivocity",
-      "agent": "Alvin Tay",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-08-03"
-    },
-    "500114729": {
-      "id": "500114729",
-      "price": 999999,
-      "area": 1022,
-      "beds": null,
-      "title": "80A Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729",
-      "block": "80A",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "Rare High Floor 3 Bedroom with Scenic Views",
-      "agent": "Melvin Fang",
-      "floor_desc": "High Floor",
-      "listed_on": "21 Jul 2026",
-      "first_seen": "2026-07-22",
-      "last_seen": "2026-08-03"
+      "last_seen": "2026-08-04"
     },
     "500130028": {
       "id": "500130028",
@@ -510,7 +94,311 @@
       "floor_desc": "High Floor",
       "listed_on": null,
       "first_seen": "baseline",
-      "last_seen": "2026-08-03"
+      "last_seen": "2026-08-04"
+    },
+    "500189009": {
+      "id": "500189009",
+      "price": 985000,
+      "area": 1001,
+      "beds": null,
+      "title": "90B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500189009",
+      "block": "90B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Very well-maintained 4A unit, high floor and unblocked",
+      "agent": "Stephanie Neo",
+      "floor_desc": "High Floor",
+      "listed_on": "17 Jul 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "60205795": {
+      "id": "60205795",
+      "price": 899000,
+      "area": 1001,
+      "beds": null,
+      "title": "92B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60205795",
+      "block": "92B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High Floor 4 Room HDB at Telok Blangah",
+      "agent": "Gary Wang",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500199397": {
+      "id": "500199397",
+      "price": 960000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C.H.E.A.P beautifully renovated unit 50k below last transacted",
+      "agent": "Nicholas Cho",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "60117042": {
+      "id": "60117042",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "93A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60117042",
+      "block": "93A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "93 Telok Blangah Street 31 For Sales",
+      "agent": "Gary Koh",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500061711": {
+      "id": "500061711",
+      "price": 899999,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Corner, North South Facing, Quiet, Renovated, Unblocked View!",
+      "agent": "Kavin Kuah",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500185017": {
+      "id": "500185017",
+      "price": 1098000,
+      "area": 1023,
+      "beds": null,
+      "title": "80A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017",
+      "block": "80A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High Floor 4 Room, Panoramic Sea View, Move-In Condition",
+      "agent": "Dave Choy",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "60208239": {
+      "id": "60208239",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "93A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60208239",
+      "block": "93A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "93 Telok Blangah Street 31 For Sales",
+      "agent": "Christina Oh",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500016121": {
+      "id": "500016121",
+      "price": 950000,
+      "area": 1001,
+      "beds": null,
+      "title": "90A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500016121",
+      "block": "90A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C.H.E.A.P. Corner 4 Room H.D.B. In Telok Blangah",
+      "agent": "Zhi Sheng",
+      "floor_desc": "Middle Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500055397": {
+      "id": "500055397",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "90A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397",
+      "block": "90A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C H E A P! 4rm with a stunning view at Telok Blangah",
+      "agent": "Mary Tang Ji&#x27;Ai",
+      "floor_desc": "",
+      "listed_on": "2 Aug 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "60095956": {
+      "id": "60095956",
+      "price": 938000,
+      "area": 1001,
+      "beds": null,
+      "title": "91A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-60095956",
+      "block": "91A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Renovated! In Prime Location surrounded by Lush Greenery & Amenities",
+      "agent": "Den Ng \u9ec4\u709c\u709c",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500114729": {
+      "id": "500114729",
+      "price": 999999,
+      "area": 1022,
+      "beds": null,
+      "title": "80A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729",
+      "block": "80A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Rare High Floor 3 Bedroom with Scenic Views",
+      "agent": "Melvin Fang",
+      "floor_desc": "High Floor",
+      "listed_on": "21 Jul 2026",
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-08-04"
+    },
+    "500077059": {
+      "id": "500077059",
+      "price": 910000,
+      "area": 1001,
+      "beds": null,
+      "title": "90A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500077059",
+      "block": "90A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "No restrictions, all can buy, no extension, view to offer!",
+      "agent": "Lin Sallee \u6797\u73a5\u5ef7",
+      "floor_desc": "Middle Floor",
+      "listed_on": "24 Jul 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500207099": {
+      "id": "500207099",
+      "price": 960000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C.H.E.A.P beautifully renovated unit 50k below last transacted",
+      "agent": "Georgiana Ong",
+      "floor_desc": "High Floor",
+      "listed_on": "21 Jul 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500152159": {
+      "id": "500152159",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "90A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159",
+      "block": "90A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Rare Sanctuary Park, Sea Glimpse & Sunset, Premium Finishes",
+      "agent": "Steven Liew",
+      "floor_desc": "Middle Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500166946": {
+      "id": "500166946",
+      "price": 1220000,
+      "area": 1023,
+      "beds": null,
+      "title": "80A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500166946",
+      "block": "80A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Sea View with Very High Floor",
+      "agent": "Justin Zaw",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500079192": {
+      "id": "500079192",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "93A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500079192",
+      "block": "93A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High floor, maintained in tip top condition!",
+      "agent": "Yuna Lim",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500205417": {
+      "id": "500205417",
+      "price": 950000,
+      "area": 1001,
+      "beds": null,
+      "title": "90B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500205417",
+      "block": "90B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High Floor Corner Windy Unit Unblocked View Zero Extension",
+      "agent": "Dennis Chua",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500204526": {
+      "id": "500204526",
+      "price": 1120000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500204526",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "93B Telok Blangah street 31",
+      "agent": "Martin Ng",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500072233": {
+      "id": "500072233",
+      "price": 1029000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072233",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Brand New High level 4-Room Unit near Vivocity",
+      "agent": "Alvin Tay",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
     },
     "500178368": {
       "id": "500178368",
@@ -526,7 +414,135 @@
       "floor_desc": "",
       "listed_on": null,
       "first_seen": "baseline",
-      "last_seen": "2026-08-03"
+      "last_seen": "2026-08-04"
+    },
+    "500128530": {
+      "id": "500128530",
+      "price": 1030000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500128530",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Unblocked high floor view cosy living",
+      "agent": "Ginny Tien (Ginnie Tien)",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "25614626": {
+      "id": "25614626",
+      "price": 1000000,
+      "area": 1001,
+      "beds": null,
+      "title": "93A Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-25614626",
+      "block": "93A",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High Floor, almost as new, well kept. remain 92 yrs plus. Prime area",
+      "agent": "Tan Hock Siew",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500190495": {
+      "id": "500190495",
+      "price": 985000,
+      "area": 1001,
+      "beds": null,
+      "title": "90B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190495",
+      "block": "90B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Super C.H.E.A.P, high floor, south-facing 4-room for sale!",
+      "agent": "Lynn Choo",
+      "floor_desc": "High Floor",
+      "listed_on": "17 Jul 2026",
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500190370": {
+      "id": "500190370",
+      "price": 975000,
+      "area": 1001,
+      "beds": null,
+      "title": "90B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190370",
+      "block": "90B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "C.H.E.A.P. Super Rare, High Floor, Unblocked View. C.H.E.A.P",
+      "agent": "Jared Tan",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500207847": {
+      "id": "500207847",
+      "price": 940000,
+      "area": 1001,
+      "beds": null,
+      "title": "92B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847",
+      "block": "92B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Genuine seller! High floor corner unit! Amazing view! No extension!",
+      "agent": "Kyean Lim",
+      "floor_desc": "High Floor",
+      "listed_on": "20 Jul 2026",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-08-04"
+    },
+    "500072222": {
+      "id": "500072222",
+      "price": 1028000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072222",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Brand New High Level 4-Room Unit near Vivocity!",
+      "agent": "Xiao Yang \u5c0f\u6768",
+      "floor_desc": "High Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500093229": {
+      "id": "500093229",
+      "price": 1030000,
+      "area": 1001,
+      "beds": null,
+      "title": "93B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500093229",
+      "block": "93B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "High floor  N S facing unblocked view no west sun no extension",
+      "agent": "Dennis Kang",
+      "floor_desc": "",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
+    },
+    "500176972": {
+      "id": "500176972",
+      "price": 1100000,
+      "area": 1000,
+      "beds": null,
+      "title": "92B Telok Blangah Street 31",
+      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500176972",
+      "block": "92B",
+      "floor": "\u975e\u4f4e\u697c\u5c42",
+      "summary": "Greenery And Fitness Lover Quiet Environment Nice Neighbour Level 08",
+      "agent": "Patsy Sim",
+      "floor_desc": "Middle Floor",
+      "listed_on": null,
+      "first_seen": "baseline",
+      "last_seen": "2026-08-04"
     },
     "500169751": {
       "id": "500169751",
@@ -560,22 +576,6 @@
       "first_seen": "baseline",
       "last_seen": "2026-07-31"
     },
-    "60205795": {
-      "id": "60205795",
-      "price": 899000,
-      "area": 1001,
-      "beds": null,
-      "title": "92B Telok Blangah Street 31",
-      "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60205795",
-      "block": "92B",
-      "floor": "\u975e\u4f4e\u697c\u5c42",
-      "summary": "High Floor 4 Room HDB at Telok Blangah",
-      "agent": "Gary Wang",
-      "floor_desc": "High Floor",
-      "listed_on": null,
-      "first_seen": "baseline",
-      "last_seen": "2026-07-30"
-    },
     "60127662": {
       "id": "60127662",
       "price": 900000,
@@ -596,7 +596,7 @@
   "history": {
     "500130028": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 999999,
       "block": "80A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500130028",
@@ -604,7 +604,7 @@
     },
     "500166946": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1220000,
       "block": "80A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500166946",
@@ -612,7 +612,7 @@
     },
     "500185017": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1098000,
       "block": "80A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017",
@@ -628,7 +628,7 @@
     },
     "500055397": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1000000,
       "block": "90A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397",
@@ -636,7 +636,7 @@
     },
     "500077059": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 910000,
       "block": "90A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500077059",
@@ -644,7 +644,7 @@
     },
     "500152159": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1000000,
       "block": "90A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159",
@@ -652,7 +652,7 @@
     },
     "500016121": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 950000,
       "block": "90A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500016121",
@@ -660,7 +660,7 @@
     },
     "500078891": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 950000,
       "block": "90A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500078891",
@@ -668,7 +668,7 @@
     },
     "500190495": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 985000,
       "block": "90B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190495",
@@ -676,7 +676,7 @@
     },
     "500189009": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 985000,
       "block": "90B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500189009",
@@ -692,7 +692,7 @@
     },
     "500205417": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 950000,
       "block": "90B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500205417",
@@ -708,7 +708,7 @@
     },
     "500190370": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 975000,
       "block": "90B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500190370",
@@ -716,7 +716,7 @@
     },
     "60095956": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 938000,
       "block": "91A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-60095956",
@@ -740,15 +740,15 @@
     },
     "60176902": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
-      "last_price": 800000,
+      "last_seen": "2026-08-04",
+      "last_price": 899000,
       "block": "92B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902",
       "area": 1001
     },
     "500176972": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1100000,
       "block": "92B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500176972",
@@ -756,7 +756,7 @@
     },
     "60205795": {
       "first_seen": "baseline",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-04",
       "last_price": 899000,
       "block": "92B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60205795",
@@ -772,7 +772,7 @@
     },
     "60117042": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1000000,
       "block": "93A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60117042",
@@ -780,7 +780,7 @@
     },
     "500079192": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1000000,
       "block": "93A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500079192",
@@ -788,7 +788,7 @@
     },
     "60208239": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1000000,
       "block": "93A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60208239",
@@ -796,7 +796,7 @@
     },
     "500199441": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 965000,
       "block": "93A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500199441",
@@ -804,7 +804,7 @@
     },
     "25614626": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1000000,
       "block": "93A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-25614626",
@@ -812,7 +812,7 @@
     },
     "500131573": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 998000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500131573",
@@ -820,7 +820,7 @@
     },
     "500061711": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 899999,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500061711",
@@ -828,7 +828,7 @@
     },
     "500093229": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1030000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500093229",
@@ -836,7 +836,7 @@
     },
     "500204526": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1120000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500204526",
@@ -844,7 +844,7 @@
     },
     "500199397": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 960000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397",
@@ -852,7 +852,7 @@
     },
     "500178368": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 915000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368",
@@ -860,7 +860,7 @@
     },
     "500207099": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 960000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099",
@@ -868,7 +868,7 @@
     },
     "500072233": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1029000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072233",
@@ -876,7 +876,7 @@
     },
     "500044356": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1000000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500044356",
@@ -884,7 +884,7 @@
     },
     "500072222": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1028000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072222",
@@ -892,7 +892,7 @@
     },
     "500128530": {
       "first_seen": "baseline",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 1030000,
       "block": "93B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500128530",
@@ -900,7 +900,7 @@
     },
     "500207847": {
       "first_seen": "2026-07-21",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 940000,
       "block": "92B",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-500207847",
@@ -908,7 +908,7 @@
     },
     "500114729": {
       "first_seen": "2026-07-22",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "last_price": 999999,
       "block": "80A",
       "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729",
@@ -984,6 +984,10 @@
       [
         "2026-08-03",
         999999
+      ],
+      [
+        "2026-08-04",
+        999999
       ]
     ],
     "500166946": [
@@ -1054,6 +1058,10 @@
       [
         "2026-08-03",
         1220000
+      ],
+      [
+        "2026-08-04",
+        1220000
       ]
     ],
     "500185017": [
@@ -1123,6 +1131,10 @@
       ],
       [
         "2026-08-03",
+        1098000
+      ],
+      [
+        "2026-08-04",
         1098000
       ]
     ],
@@ -1216,6 +1228,10 @@
       [
         "2026-08-03",
         998000
+      ],
+      [
+        "2026-08-04",
+        998000
       ]
     ],
     "500093229": [
@@ -1285,6 +1301,10 @@
       ],
       [
         "2026-08-03",
+        1030000
+      ],
+      [
+        "2026-08-04",
         1030000
       ]
     ],
@@ -1356,6 +1376,10 @@
       [
         "2026-08-03",
         899999
+      ],
+      [
+        "2026-08-04",
+        899999
       ]
     ],
     "500204526": [
@@ -1425,6 +1449,10 @@
       ],
       [
         "2026-08-03",
+        1120000
+      ],
+      [
+        "2026-08-04",
         1120000
       ]
     ],
@@ -1496,6 +1524,10 @@
       [
         "2026-08-03",
         960000
+      ],
+      [
+        "2026-08-04",
+        960000
       ]
     ],
     "500178368": [
@@ -1565,6 +1597,10 @@
       ],
       [
         "2026-08-03",
+        915000
+      ],
+      [
+        "2026-08-04",
         915000
       ]
     ],
@@ -1636,6 +1672,10 @@
       [
         "2026-08-03",
         1029000
+      ],
+      [
+        "2026-08-04",
+        1029000
       ]
     ],
     "500044356": [
@@ -1705,6 +1745,10 @@
       ],
       [
         "2026-08-03",
+        1000000
+      ],
+      [
+        "2026-08-04",
         1000000
       ]
     ],
@@ -1776,6 +1820,10 @@
       [
         "2026-08-03",
         1028000
+      ],
+      [
+        "2026-08-04",
+        1028000
       ]
     ],
     "500128530": [
@@ -1845,6 +1893,10 @@
       ],
       [
         "2026-08-03",
+        1030000
+      ],
+      [
+        "2026-08-04",
         1030000
       ]
     ],
@@ -1916,6 +1968,10 @@
       [
         "2026-08-03",
         1000000
+      ],
+      [
+        "2026-08-04",
+        1000000
       ]
     ],
     "500055397": [
@@ -1985,6 +2041,10 @@
       ],
       [
         "2026-08-03",
+        1000000
+      ],
+      [
+        "2026-08-04",
         1000000
       ]
     ],
@@ -2056,6 +2116,10 @@
       [
         "2026-08-03",
         950000
+      ],
+      [
+        "2026-08-04",
+        950000
       ]
     ],
     "500078891": [
@@ -2126,6 +2190,10 @@
       [
         "2026-08-03",
         950000
+      ],
+      [
+        "2026-08-04",
+        950000
       ]
     ],
     "500077059": [
@@ -2195,6 +2263,10 @@
       ],
       [
         "2026-08-03",
+        910000
+      ],
+      [
+        "2026-08-04",
         910000
       ]
     ],
@@ -2332,6 +2404,10 @@
       [
         "2026-08-03",
         985000
+      ],
+      [
+        "2026-08-04",
+        985000
       ]
     ],
     "500189009": [
@@ -2401,6 +2477,10 @@
       ],
       [
         "2026-08-03",
+        985000
+      ],
+      [
+        "2026-08-04",
         985000
       ]
     ],
@@ -2472,6 +2552,10 @@
       [
         "2026-08-03",
         975000
+      ],
+      [
+        "2026-08-04",
+        975000
       ]
     ],
     "500205417": [
@@ -2541,6 +2625,10 @@
       ],
       [
         "2026-08-03",
+        950000
+      ],
+      [
+        "2026-08-04",
         950000
       ]
     ],
@@ -2692,6 +2780,10 @@
       [
         "2026-08-03",
         938000
+      ],
+      [
+        "2026-08-04",
+        938000
       ]
     ],
     "60127662": [
@@ -2812,6 +2904,10 @@
       [
         "2026-08-03",
         1100000
+      ],
+      [
+        "2026-08-04",
+        1100000
       ]
     ],
     "60205795": [
@@ -2865,6 +2961,10 @@
       ],
       [
         "2026-07-30",
+        899000
+      ],
+      [
+        "2026-08-04",
         899000
       ]
     ],
@@ -2974,6 +3074,10 @@
       [
         "2026-08-03",
         800000
+      ],
+      [
+        "2026-08-04",
+        899000
       ]
     ],
     "60117042": [
@@ -3043,6 +3147,10 @@
       ],
       [
         "2026-08-03",
+        1000000
+      ],
+      [
+        "2026-08-04",
         1000000
       ]
     ],
@@ -3114,6 +3222,10 @@
       [
         "2026-08-03",
         1000000
+      ],
+      [
+        "2026-08-04",
+        1000000
       ]
     ],
     "60208239": [
@@ -3159,6 +3271,10 @@
       ],
       [
         "2026-08-03",
+        1000000
+      ],
+      [
+        "2026-08-04",
         1000000
       ]
     ],
@@ -3230,6 +3346,10 @@
       [
         "2026-08-03",
         1000000
+      ],
+      [
+        "2026-08-04",
+        1000000
       ]
     ],
     "500199441": [
@@ -3300,6 +3420,10 @@
       [
         "2026-08-03",
         965000
+      ],
+      [
+        "2026-08-04",
+        965000
       ]
     ],
     "500207099": [
@@ -3366,6 +3490,10 @@
       [
         "2026-08-03",
         960000
+      ],
+      [
+        "2026-08-04",
+        960000
       ]
     ],
     "500207847": [
@@ -3424,6 +3552,10 @@
       [
         "2026-08-03",
         940000
+      ],
+      [
+        "2026-08-04",
+        940000
       ]
     ],
     "500114729": [
@@ -3477,6 +3609,10 @@
       ],
       [
         "2026-08-03",
+        999999
+      ],
+      [
+        "2026-08-04",
         999999
       ]
     ]
