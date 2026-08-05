@@ -257,9 +257,22 @@ def fmt_trend(ph):
             f"（{len(ph)} 次记录，{len(distinct)} 个价）")
 
 
-def fmt_listing(r, with_block=True, old_price=_NO_PRICE, ph=None):
+def price_date_for(ph, price):
+    """在价格走势 ph（[[date, price], ...]）中，返回 price 最近一次出现的日期；找不到返回 None。
+    用于"价格变动"行标注对比基准价的记录日期，说明"跟哪一次价格相比"。"""
+    if not ph:
+        return None
+    match = None
+    for d, p in ph:
+        if p == price:
+            match = d
+    return match
+
+
+def fmt_listing(r, with_block=True, old_price=_NO_PRICE, old_price_date=None, ph=None):
     """两行 markdown：第一行价格/面积/呎价/楼层，第二行摘要+中介+平台显示上架+链接。
-    old_price: 若该单位此前记录的价格不同，传入以追加一行"价格变动"提示；不传则不显示。"""
+    old_price: 若该单位此前记录的价格不同，传入以追加一行"价格变动"提示；不传则不显示。
+    old_price_date: 该对比基准价的记录日期（来自 price_history），标注"跟哪一次价格相比"。"""
     prefix = f"[{r['block']}] " if with_block else ""
     meta = [fmt_price(r.get('price')), f"{r.get('area')} sqft"]
     ps = psf(r)
@@ -277,7 +290,9 @@ def fmt_listing(r, with_block=True, old_price=_NO_PRICE, ph=None):
         line2 += f"\n  - 🕒 平台显示上架: {lo}（平台会刷新上架时间，仅供参考）"
     if old_price is not _NO_PRICE and old_price != r.get('price'):
         old_s = "价格未公开" if old_price is None else fmt_price(old_price)
-        line2 += f"\n  - 💱 价格变动: {old_s} → {fmt_price(r.get('price'))}"
+        if old_price is not None and old_price_date:
+            old_s += f"（{old_price_date}）"
+        line2 += f"\n  - 💱 价格变动: {old_s} → {fmt_price(r.get('price'))}（今日）"
     tr = fmt_trend(ph)
     if tr:
         line2 += f"\n  - {tr}"
@@ -344,12 +359,14 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
         L.append("## 🔄 重新上架 / 刷新（历史出现过，此前已下架，今日重现）")
         for i in returned:
             old = history.get(i, {}).get('last_price')
-            L.append(fmt_listing(kept[i], old_price=old, ph=phist.get(i)))
+            old_d = price_date_for(phist.get(i), old)
+            L.append(fmt_listing(kept[i], old_price=old, old_price_date=old_d, ph=phist.get(i)))
         L.append("")
     if price_changed:
         L.append("## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）")
         for i, prev, _cur in price_changed:
-            L.append(fmt_listing(kept[i], old_price=prev, ph=phist.get(i)))
+            old_d = price_date_for(phist.get(i), prev)
+            L.append(fmt_listing(kept[i], old_price=prev, old_price_date=old_d, ph=phist.get(i)))
         L.append("")
     if sold:
         L.append("## ✅ 今日卖出 / 下架（先前在售，连续消失≥%d天）" % GRACE_DAYS)
