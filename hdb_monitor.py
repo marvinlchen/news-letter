@@ -355,6 +355,10 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
         for i in truly_new:
             L.append(fmt_listing(kept[i], ph=phist.get(i)))
         L.append("")
+    else:
+        L.append("## 🆕 今日上新（全新房源，监控以来首次出现）")
+        L.append("- 无")
+        L.append("")
     if returned:
         L.append("## 🔄 重新上架 / 刷新（历史出现过，此前已下架，今日重现）")
         for i in returned:
@@ -367,6 +371,10 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
         for i, prev, _cur in price_changed:
             old_d = price_date_for(phist.get(i), prev)
             L.append(fmt_listing(kept[i], old_price=prev, old_price_date=old_d, ph=phist.get(i)))
+        L.append("")
+    else:
+        L.append("## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）")
+        L.append("- 无")
         L.append("")
     if sold:
         L.append("## ✅ 今日卖出 / 下架（先前在售，连续消失≥%d天）" % GRACE_DAYS)
