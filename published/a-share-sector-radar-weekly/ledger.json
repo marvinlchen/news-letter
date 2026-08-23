@@ -1,30 +1,73 @@
 {
   "active_cycles": {
-    "801030": {
-      "name": "基础化工",
-      "signal_date": "2026-08-14"
-    },
-    "801740": {
-      "name": "国防军工",
-      "signal_date": "2026-08-14"
+    "801170": {
+      "name": "交通运输",
+      "signal_date": "2026-08-21"
     },
     "801950": {
       "name": "煤炭",
       "signal_date": "2026-08-14"
     }
   },
-  "cycle_closures": [],
+  "cycle_closures": [
+    {
+      "close_date": "2026-08-21",
+      "code": "801030",
+      "name": "基础化工",
+      "reason": "证据门失效",
+      "signal_date": "2026-08-14"
+    },
+    {
+      "close_date": "2026-08-21",
+      "code": "801740",
+      "name": "国防军工",
+      "reason": "证据门失效",
+      "signal_date": "2026-08-14"
+    }
+  ],
   "events": [
     {
       "code": "801740",
-      "entry_date": "",
-      "entry_price": null,
+      "entry_date": "2026-08-17",
+      "entry_price": 1670.59,
       "future_20d": null,
       "future_60d": null,
       "name": "国防军工",
       "signal_date": "2026-08-14",
-      "status": "等待下一交易日"
+      "status": "观察中"
     },
+    {
+      "code": "801950",
+      "entry_date": "2026-08-17",
+      "entry_price": 3267.74,
+      "future_20d": null,
+      "future_60d": null,
+      "name": "煤炭",
+      "signal_date": "2026-08-14",
+      "status": "观察中"
+    },
+    {
+      "code": "801030",
+      "entry_date": "2026-08-17",
+      "entry_price": 4355.1,
+      "future_20d": null,
+      "future_60d": null,
+      "name": "基础化工",
+      "signal_date": "2026-08-14",
+      "status": "观察中"
+    },
+    {
+      "code": "801170",
+      "entry_date": "",
+      "entry_price": null,
+      "future_20d": null,
+      "future_60d": null,
+      "name": "交通运输",
+      "signal_date": "2026-08-21",
+      "status": "等待下一交易日"
+    }
+  ],
+  "hold_observations": [
     {
       "code": "801950",
       "entry_date": "",
@@ -32,22 +75,12 @@
       "future_20d": null,
       "future_60d": null,
       "name": "煤炭",
-      "signal_date": "2026-08-14",
-      "status": "等待下一交易日"
-    },
-    {
-      "code": "801030",
-      "entry_date": "",
-      "entry_price": null,
-      "future_20d": null,
-      "future_60d": null,
-      "name": "基础化工",
-      "signal_date": "2026-08-14",
-      "status": "等待下一交易日"
+      "signal_date": "2026-08-21",
+      "status": "等待下一交易日",
+      "type": "hold"
     }
   ],
-  "hold_observations": [],
-  "last_report_date": "2026-08-14",
+  "last_report_date": "2026-08-21",
   "migrations": [
     {
       "from": "v0.2-F.1-pilot",
@@ -58,7 +91,7 @@
   ],
   "schema_version": 1,
   "strategy_version": "v0.2-F.2-pilot",
-  "updated_at": "2026-08-16T10:22:14+08:00",
+  "updated_at": "2026-08-23T10:15:32+08:00",
   "weekly_snapshots": [
     {
       "date": "2026-07-16",
@@ -211,6 +244,62 @@
         "801950": "新激活",
         "801960": "证据观察",
         "801970": "待激活（容量外）",
+        "801980": "证据观察"
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "decision_sha256": "2463acddf5c775c67b5ad774317bb9e17ef225072653f2a42749f138fc3e6c2c",
+      "engine_sha256": "026863801a2c200914eab25ae20f0611115729d455172f865cd3c0dc1ce1a3d2",
+      "evidence_engine_version": "rules-recovery-v1",
+      "hold_confirmations": [
+        "801950"
+      ],
+      "input_sha256": "d07c29fda7197c9c19087126f369eb6343443a5002774dabdb32cef1a0a9b576",
+      "new_activations": [
+        "801170"
+      ],
+      "radar": [
+        "801950",
+        "801790",
+        "801970",
+        "801960",
+        "801170",
+        "801730"
+      ],
+      "sample_eligibility": "formal_forward",
+      "simulated_activations": [],
+      "states": {
+        "801010": "证据观察",
+        "801030": "证据观察",
+        "801040": "证据观察",
+        "801050": "证据观察",
+        "801080": "证据观察",
+        "801110": "证据观察",
+        "801120": "证据观察",
+        "801130": "证据观察",
+        "801140": "证据观察",
+        "801150": "证据观察",
+        "801160": "证据观察",
+        "801170": "新激活",
+        "801180": "证据观察",
+        "801200": "证据观察",
+        "801210": "证据观察",
+        "801230": "证据观察",
+        "801710": "证据观察",
+        "801720": "证据观察",
+        "801730": "早期雷达",
+        "801740": "证据观察",
+        "801750": "证据观察",
+        "801760": "证据观察",
+        "801770": "证据观察",
+        "801780": "证据观察",
+        "801790": "早期雷达",
+        "801880": "证据观察",
+        "801890": "证据观察",
+        "801950": "持有确认",
+        "801960": "周期成熟",
+        "801970": "早期雷达",
         "801980": "证据观察"
       }
     }
