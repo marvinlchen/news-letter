@@ -1,8 +1,12 @@
 {
   "active_cycles": {
-    "801950": {
-      "name": "煤炭",
-      "signal_date": "2026-08-14"
+    "801210": {
+      "name": "社会服务",
+      "signal_date": "2026-09-11"
+    },
+    "801720": {
+      "name": "建筑装饰",
+      "signal_date": "2026-09-11"
     }
   },
   "cycle_closures": [
@@ -26,6 +30,13 @@
       "name": "交通运输",
       "reason": "证据门失效",
       "signal_date": "2026-08-21"
+    },
+    {
+      "close_date": "2026-09-11",
+      "code": "801950",
+      "name": "煤炭",
+      "reason": "本年已于2026-08-31触及E30",
+      "signal_date": "2026-08-14"
     }
   ],
   "events": [
@@ -33,31 +44,46 @@
       "code": "801740",
       "entry_date": "2026-08-17",
       "entry_price": 1670.59,
-      "future_20d": null,
+      "future_20d": {
+        "end_date": "2026-09-11",
+        "rank": 7,
+        "return": 0.01943624707438696,
+        "top8": true
+      },
       "future_60d": null,
       "name": "国防军工",
       "signal_date": "2026-08-14",
-      "status": "观察中"
+      "status": "20日已完成"
     },
     {
       "code": "801950",
       "entry_date": "2026-08-17",
       "entry_price": 3267.74,
-      "future_20d": null,
+      "future_20d": {
+        "end_date": "2026-09-11",
+        "rank": 4,
+        "return": 0.030709297557333315,
+        "top8": true
+      },
       "future_60d": null,
       "name": "煤炭",
       "signal_date": "2026-08-14",
-      "status": "观察中"
+      "status": "20日已完成"
     },
     {
       "code": "801030",
       "entry_date": "2026-08-17",
       "entry_price": 4355.1,
-      "future_20d": null,
+      "future_20d": {
+        "end_date": "2026-09-11",
+        "rank": 20,
+        "return": -0.03187986498587869,
+        "top8": false
+      },
       "future_60d": null,
       "name": "基础化工",
       "signal_date": "2026-08-14",
-      "status": "观察中"
+      "status": "20日已完成"
     },
     {
       "code": "801170",
@@ -68,6 +94,26 @@
       "name": "交通运输",
       "signal_date": "2026-08-21",
       "status": "观察中"
+    },
+    {
+      "code": "801720",
+      "entry_date": "",
+      "entry_price": null,
+      "future_20d": null,
+      "future_60d": null,
+      "name": "建筑装饰",
+      "signal_date": "2026-09-11",
+      "status": "等待下一交易日"
+    },
+    {
+      "code": "801210",
+      "entry_date": "",
+      "entry_price": null,
+      "future_20d": null,
+      "future_60d": null,
+      "name": "社会服务",
+      "signal_date": "2026-09-11",
+      "status": "等待下一交易日"
     }
   ],
   "hold_observations": [
@@ -84,17 +130,17 @@
     },
     {
       "code": "801950",
-      "entry_date": "",
-      "entry_price": null,
+      "entry_date": "2026-08-31",
+      "entry_price": 3536.59,
       "future_20d": null,
       "future_60d": null,
       "name": "煤炭",
       "signal_date": "2026-08-28",
-      "status": "等待下一交易日",
+      "status": "观察中",
       "type": "hold"
     }
   ],
-  "last_report_date": "2026-08-28",
+  "last_report_date": "2026-09-11",
   "migrations": [
     {
       "from": "v0.2-F.1-pilot",
@@ -105,7 +151,7 @@
   ],
   "schema_version": 1,
   "strategy_version": "v0.2-F.2-pilot",
-  "updated_at": "2026-08-30T10:18:43+08:00",
+  "updated_at": "2026-09-13T10:18:40+08:00",
   "weekly_snapshots": [
     {
       "date": "2026-07-16",
@@ -364,6 +410,59 @@
         "801880": "证据观察",
         "801890": "证据观察",
         "801950": "持有确认",
+        "801960": "证据观察",
+        "801970": "证据观察",
+        "801980": "证据观察"
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "decision_sha256": "20985a8f6c237962f087ee08db31df8c88c8ff3bb39a57642dfe50df71cd36a3",
+      "engine_sha256": "026863801a2c200914eab25ae20f0611115729d455172f865cd3c0dc1ce1a3d2",
+      "evidence_engine_version": "rules-recovery-v1",
+      "hold_confirmations": [],
+      "input_sha256": "9d00b5ef65ff8792188de62b9419dd2df2202339413bca905324f0c70c92a2ff",
+      "new_activations": [
+        "801720",
+        "801210"
+      ],
+      "radar": [
+        "801720",
+        "801210",
+        "801950",
+        "801050"
+      ],
+      "sample_eligibility": "formal_forward",
+      "simulated_activations": [],
+      "states": {
+        "801010": "证据观察",
+        "801030": "证据观察",
+        "801040": "证据观察",
+        "801050": "周期成熟",
+        "801080": "证据观察",
+        "801110": "证据观察",
+        "801120": "证据观察",
+        "801130": "证据观察",
+        "801140": "证据观察",
+        "801150": "证据观察",
+        "801160": "证据观察",
+        "801170": "证据观察",
+        "801180": "证据观察",
+        "801200": "证据观察",
+        "801210": "新激活",
+        "801230": "证据观察",
+        "801710": "证据观察",
+        "801720": "新激活",
+        "801730": "证据观察",
+        "801740": "证据观察",
+        "801750": "证据观察",
+        "801760": "证据观察",
+        "801770": "证据观察",
+        "801780": "证据观察",
+        "801790": "证据观察",
+        "801880": "证据观察",
+        "801890": "证据观察",
+        "801950": "周期成熟",
         "801960": "证据观察",
         "801970": "证据观察",
         "801980": "证据观察"
