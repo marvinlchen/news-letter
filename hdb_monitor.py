@@ -604,6 +604,19 @@ def main():
     # 摘要补充：用 listings 作为缓存来源（含历史 rec 的 summary/price）
     enrich_summaries(kept, listings)
 
+    # 新出现房源补充详情（平时 0-2 套/天，仅口径升级首日会多；封顶 25 套以免触发限流）
+    n_extra = [i for i in new_any if i not in kept][:25]
+    if n_extra:
+        log(f"新出现房源补详情：{len(n_extra)} 套")
+    for n, i in enumerate(n_extra, 1):
+        log(f"  新出现 {n}/{len(n_extra)}: {all_units[i].get('utype')} {i}")
+        s = fetch_summary(all_units[i]['url'])
+        all_units[i]['summary'] = s.get('summary') or all_units[i].get('title') or ''
+        all_units[i]['agent'] = s.get('agent', '')
+        all_units[i]['floor_desc'] = s.get('floor_desc', '')
+        all_units[i]['listed_on'] = s.get('listed_on', '')
+        time.sleep(2 + random.random())
+
     # 构建新 state
     new_listings = {}
     for i in cur_ids:

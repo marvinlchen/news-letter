@@ -145,4 +145,4 @@
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368
 
 ---
-_生成时间 2026-09-16 10:44:19 · 数据来源 PropertyGuru（curl_cffi 抓取）_
+_生成时间 2026-09-16 10:46:10 · 数据来源 PropertyGuru（curl_cffi 抓取）_
