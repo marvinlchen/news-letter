@@ -26,21 +26,18 @@ blocks: 80A/80B/80C + 90A/90B/91A/92B/93A/93B (Telok Blangah Street 31)
                      分页漏抓造成的"假卖出→次日假上新"抖动）。
 - state.json 结构：
     listings: 当前在售(含宽限期内暂时消失) id -> rec(first_seen/last_seen 内嵌)
-    history : 所有曾经出现过的 id -> {first_seen,last_seen,last_price,block,url,area,utype,scope}
-    price_history: 各 id 的 (date, price) 走势点（只记主口径 4-room）
-    scope_version : 监控口径版本，见下方 v2
+    history : 所有曾经出现过的 id -> {first_seen,last_seen,last_price,block,url,area}
+    price_history: 各 id 的 (date, price) 走势点
 
-【口径 v2（2026-09-16）—— 覆盖被主口径过滤掉的新增供应】
-- 主清单仍严格是 4-room 非低楼层（行为与 v1 完全一致，便于历史对比）。
-- 新增「🏠 新出现房源 · 全部户型」板块：把 3房 / 5房+ / 低楼层 4-room 的 ID 也记入 history，
-  凡监控以来首次出现的都列出。原因：实测这些 block 的新增供应几乎全部落在主口径之外
-  （3房 731/732 sqft、5房+ 1463 sqft、低楼层 4-room），只看主清单会误判"完全没有新房源"。
-- 首次升级到 v2 时会一次性列出存量（报告内标注"首次运行"），此后只列真正新出现者。
+【口径固定 —— 不要放宽】
+- 本监控只收 4-room（950~1055 sqft 或 3 卧室）**且非低楼层**的房源。这是定义，不是过滤瑕疵。
+- 3房 / 5房+ / 低楼层 4-room 一律不进报告。若觉得"看不到新房源"，先确认新增是否落在
+  这些被排除的类型里，再考虑是否调整口径；默认不要改，改了就与历史数据不可比。
 
 【健壮性（2026-09-16）】
 - block 抓取失败与"该 block 没有房源"必须区分：失败时该 block 不参与"消失/卖出"判定，
   否则连续抓取失败会被误判成"连续消失 ≥7 天 → 卖出"。
-- 低楼层过滤查询失败时不做排除（宁可多列、标"楼层未知"，也不静默把低楼层当非低楼层）。
+- 低楼层过滤查询失败时不做排除（标"楼层未知"，宁可暴露也不静默把低楼层当非低楼层）。
 - 单页截断告警：搜索页单页固定 20 条，`?page=N` 会被 Cloudflare 403（实测），无法翻页，
   因此只能对"结果条数已达 20"的 block 发告警，无法自动补齐。
 """
@@ -82,13 +79,6 @@ GRACE_DAYS = 7
 # PropertyGuru 搜索页单页条数（实测 = 20）。翻页参数 ?page=N 会被 Cloudflare 直接 403，
 # 所以无法翻页；只能对"结果是否触及单页上限"做截断告警，无法自动补齐。
 PAGE_SIZE = 20
-
-# 监控口径版本。
-#   v1: 只跟踪 4-room 非低楼层。
-#   v2: 额外把 3房/5房+/低楼层 4-room 记入 history，用于"新出现房源（全部户型）"板块，
-#       以便看到被原口径过滤掉的新增供应。首次升级时会一次性列出存量（报告内标注），
-#       之后该板块只列真正新出现的房源。
-SCOPE_VERSION = 2
 
 
 def log(msg):
@@ -186,47 +176,29 @@ def is_four_room(d):
     return False
 
 
-def unit_type(d):
-    """按面积给房源分型，用于把非 4-room 也纳入"新出现房源"监控。"""
-    if is_four_room(d):
-        return '4R'
-    a = d.get('area')
-    if a:
-        if 690 <= a <= 800:
-            return '3R'
-        if a > 1055:
-            return '5R+'
-    return '其他'
-
-
 def block_data(block):
-    """返回 (kept, excluded_low, all_units, ok, low_ok)。每个 block 抓 2 次(全部 + LOW)。
-    kept     : 4-room 非低楼层（主口径，逻辑与 v1 完全一致）
+    """返回 (kept, excluded_low, ok, low_ok)。每个 block 抓 2 次(全部 + LOW)。
+    kept     : 4-room 非低楼层（唯一进入报告的口径）
     excluded : 被排除的低楼层 4-room
-    all_units: 该 block 全部在售房源（含 3房/5房+/低楼层），供"新出现房源（全部户型）"使用
     ok       : 主力抓取是否成功；False 时该 block 不得参与任何"消失/卖出"判定
-    low_ok   : 低楼层过滤查询是否成功；False 时不做低楼层排除（宁可多列，也不静默标错）"""
+    low_ok   : 低楼层过滤查询是否成功；False 时不做低楼层排除（标"楼层未知"，宁可暴露也不静默标错）"""
     info, _, ok = extract_listings(block)
     if not ok:
-        return {}, {}, {}, False, False
+        return {}, {}, False, False
     time.sleep(1.5)
     low_set, _, low_ok = extract_listings(block, '&floorLevel=LOW')
-    kept, excluded, all_units = {}, {}, {}
+    kept, excluded = {}, {}
     for lid, d in info.items():
+        if not is_four_room(d):
+            continue          # 3房 / 5房+ 不属于监控范围，直接不采集
         d['block'] = block
-        t = unit_type(d)
-        d['utype'] = t
-        d['floor'] = '非低楼层' if low_ok else '楼层未知(未过滤)'
         if low_ok and lid in low_set:
             d['floor'] = '低楼层(已排除)'
-        all_units[lid] = d
-        if t != '4R':
-            continue
-        if low_ok and lid in low_set:
             excluded[lid] = d
         else:
+            d['floor'] = '非低楼层' if low_ok else '楼层未知(未过滤)'
             kept[lid] = d
-    return kept, excluded, all_units, True, low_ok
+    return kept, excluded, True, low_ok
 
 
 def fmt_price(p):
@@ -382,20 +354,15 @@ def load_state():
 
 
 def build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed,
-                 new_any=None, all_units=None, warnings=None, scope_upgrade=False,
-                 failed_blocks=None):
+                 warnings=None, failed_blocks=None):
     history = state["history"]
     phist = state.get("price_history", {})
-    new_any = new_any or []
-    all_units = all_units or {}
     warnings = warnings or []
     failed_blocks = failed_blocks or []
     L = []
     L.append("# HDB 4-room 订阅日报 · Telok Blangah Parcview")
     L.append(f"**日期**: {date_str}  ")
-    L.append(f"**范围**: blocks 80A/80B/80C + 90A/90B/91A/92B/93A/93B，4-room HDB 在售（已排除低楼层 LOW）  ")
-    L.append("**监控口径**: v%d —— 主清单只收 4-room 非低楼层；另设「新出现房源（全部户型）」"
-             "板块覆盖 3房 / 5房+ / 低楼层 4-room，避免新增供应被口径过滤掉。" % SCOPE_VERSION)
+    L.append("**范围**: blocks 80A/80B/80C + 90A/90B/91A/92B/93A/93B，4-room HDB 在售（已排除低楼层 LOW）")
     L.append("")
     L.append("> ⚠️ **关于\"上新\"的判定说明**：PropertyGuru 会在中介刷新/重发房源时把\"上架时间\"改写成本日，"
              "平台自身的\"新上\"信号不可靠。本日报**完全不依赖平台的上架时间**，而是以**房源 ID** 为身份、"
@@ -415,8 +382,6 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
     L.append(f"- ✅ 今日卖出/下架(连续消失≥{GRACE_DAYS}天): **{len(sold)}** 套")
     excluded_total = sum(len(e) for e in excluded.values())
     L.append(f"- 🚫 已排除低楼层: {excluded_total} 套（不计入上方在售）")
-    L.append(f"- 🏠 新出现房源(全部户型，监控以来首次出现): **{len(new_any)}** 套"
-             f"，其中 3房/5房+/低楼层 **{len([i for i in new_any if i not in kept])}** 套")
     L.append("")
     if truly_new:
         L.append("## 🆕 今日上新（全新房源，监控以来首次出现）")
@@ -427,21 +392,6 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
         L.append("## 🆕 今日上新（全新房源，监控以来首次出现）")
         L.append("- 无")
         L.append("")
-    L.append("## 🏠 新出现房源 · 全部户型（含 3房 / 5房+ / 低楼层 4-room）")
-    if new_any:
-        if scope_upgrade:
-            L.append("> 本次为口径升级 v%d 后的**首次运行**：以下房源此前不在监控范围内"
-                     "（3房 / 5房+ / 低楼层 4-room），并非本次新上架，仅作一次性纳入提示。"
-                     "此后本板块只列真正新出现的房源。" % SCOPE_VERSION)
-        for i in sorted(new_any, key=lambda x: (all_units[x].get('utype') or 'zz',
-                                                -(all_units[x].get('price') or 0))):
-            r = dict(all_units[i])
-            if not r.get('summary'):
-                r['summary'] = r.get('title') or ''
-            L.append(fmt_listing(r))
-    else:
-        L.append("- 无")
-    L.append("")
     if returned:
         L.append("## 🔄 重新上架 / 刷新（历史出现过，此前已下架，今日重现）")
         for i in returned:
@@ -531,11 +481,11 @@ def git_push():
 def main():
     os.makedirs(REPORT_DIR, exist_ok=True)
     date_str = datetime.datetime.now().strftime('%Y-%m-%d')
-    kept, excluded, all_units = {}, {}, {}
+    kept, excluded = {}, {}
     failed_blocks, truncated, low_unfiltered = [], [], []
     for b in BLOCKS:
         log(f"block {b}: 抓取中...")
-        k, e, au, ok, low_ok = block_data(b)
+        k, e, ok, low_ok = block_data(b)
         if not ok:
             failed_blocks.append(b)
             log(f"  !! block {b} 抓取失败 —— 本次不参与任何\"消失/卖出\"判定")
@@ -543,16 +493,14 @@ def main():
         if not low_ok:
             low_unfiltered.append(b)
             log(f"  ! block {b} 低楼层过滤查询失败，本次不做低楼层排除")
-        if len(au) >= PAGE_SIZE:
+        if len(k) + len(e) >= PAGE_SIZE:
             truncated.append(b)
-            log(f"  ! block {b} 单页返回 {len(au)} 条，已达单页上限 {PAGE_SIZE}，可能被截断")
+            log(f"  ! block {b} 单页 4-room 已返回 {len(k) + len(e)} 条，接近/达到单页上限 {PAGE_SIZE}，可能被截断")
         kept.update(k)
         excluded[b] = e
-        all_units.update(au)
         time.sleep(1)
     log(f"抓取完成：在售(非低楼层) {len(kept)} 套；排除低楼层 "
-        f"{sum(len(v) for v in excluded.values())} 套；全部户型 {len(all_units)} 套；"
-        f"失败 block {failed_blocks if failed_blocks else '无'}")
+        f"{sum(len(v) for v in excluded.values())} 套；失败 block {failed_blocks if failed_blocks else '无'}")
 
     if len(failed_blocks) == len(BLOCKS):
         log("全部 block 抓取失败（Cloudflare 拦截/限流），保留旧状态不更新。")
@@ -565,8 +513,6 @@ def main():
     price_history = {k: list(v) for k, v in state.get("price_history", {}).items()}
     ever = set(history) | set(listings)          # 监控以来出现过的全部 ID
     cur_ids = set(kept)
-    all_ids = set(all_units)
-    scope_upgrade = state.get("scope_version", 1) < SCOPE_VERSION
 
     truly_new = [i for i in cur_ids if i not in ever]
     returned = [i for i in cur_ids if (i in history) and (i not in listings)]
@@ -580,8 +526,6 @@ def main():
             log(f"  {i} 所属 block {blk} 本次抓取失败，保留在售、不判定卖出")
             continue
         missing.append(i)
-    # 🏠 全部户型的新出现房源（含 3房/5房+/低楼层），用于看被主口径过滤掉的新增供应
-    new_any = [i for i in all_ids if i not in ever]
     # 💰 价格变动：仍在售(listings)且今日抓取到的单位，价格较上次记录不同
     # （不含全新房：无历史价可比较；重新上架单位的价格变动已在 🔄 段落内联展示）
     price_changed = []
@@ -604,19 +548,6 @@ def main():
     # 摘要补充：用 listings 作为缓存来源（含历史 rec 的 summary/price）
     enrich_summaries(kept, listings)
 
-    # 新出现房源补充详情（平时 0-2 套/天，仅口径升级首日会多；封顶 25 套以免触发限流）
-    n_extra = [i for i in new_any if i not in kept][:25]
-    if n_extra:
-        log(f"新出现房源补详情：{len(n_extra)} 套")
-    for n, i in enumerate(n_extra, 1):
-        log(f"  新出现 {n}/{len(n_extra)}: {all_units[i].get('utype')} {i}")
-        s = fetch_summary(all_units[i]['url'])
-        all_units[i]['summary'] = s.get('summary') or all_units[i].get('title') or ''
-        all_units[i]['agent'] = s.get('agent', '')
-        all_units[i]['floor_desc'] = s.get('floor_desc', '')
-        all_units[i]['listed_on'] = s.get('listed_on', '')
-        time.sleep(2 + random.random())
-
     # 构建新 state
     new_listings = {}
     for i in cur_ids:
@@ -624,8 +555,6 @@ def main():
         old = listings.get(i) or history.get(i) or {}
         rec["first_seen"] = old.get("first_seen") or date_str
         rec["last_seen"] = date_str
-        rec["utype"] = "4R"
-        rec["scope"] = "tracked"
         new_listings[i] = rec
     for i in missing:
         if i not in sold:
@@ -642,27 +571,8 @@ def main():
             "block": rec.get("block"),
             "url": rec.get("url"),
             "area": rec.get("area"),
-            "utype": rec.get("utype") or "4R",
-            "scope": rec.get("scope") or "tracked",
         }
-    # v2：把非主口径房源（3房/5房+/低楼层 4-room）也永久记入 history，
-    # 否则它们每天都会被当成"首次出现"，新出现板块将失去意义。
-    for i, rec in all_units.items():
-        if i in new_listings:
-            continue
-        prev = new_history.get(i) or history.get(i) or {}
-        new_history[i] = {
-            "first_seen": prev.get("first_seen") or date_str,
-            "last_seen": date_str,
-            "last_price": rec.get("price"),
-            "block": rec.get("block"),
-            "url": rec.get("url"),
-            "area": rec.get("area"),
-            "utype": rec.get("utype"),
-            "scope": "watch",
-        }
-    state = {"listings": new_listings, "history": new_history,
-             "scope_version": SCOPE_VERSION}
+    state = {"listings": new_listings, "history": new_history}
 
     # 维护价格走势：为今日仍在售的单位追加 (date, price) 点（同日去重更新）
     for i in cur_ids:
@@ -679,24 +589,22 @@ def main():
         warnings.append("以下 block 本次抓取失败，其房源未参与\"消失/卖出\"判定，"
                         "该 block 数字可能偏低：**%s**" % ", ".join(failed_blocks))
     if truncated:
-        warnings.append("以下 block 单页结果已达上限 %d 条，**可能被截断**"
+        warnings.append("以下 block 单页 4-room 结果已达/接近上限 %d 条，**可能被截断**"
                         "（PropertyGuru 的 ?page=N 会被 Cloudflare 403，无法翻页补齐）：**%s**"
                         % (PAGE_SIZE, ", ".join(truncated)))
     if low_unfiltered:
         warnings.append("以下 block 的低楼层过滤查询失败，本次**未做低楼层排除**，"
-                        "其低楼层房源可能混入在售：**%s**" % ", ".join(low_unfiltered))
+                        "其低楼层房源可能混入在售（已标\"楼层未知\"）：**%s**" % ", ".join(low_unfiltered))
 
     report = build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed,
-                          new_any=new_any, all_units=all_units, warnings=warnings,
-                          scope_upgrade=scope_upgrade, failed_blocks=failed_blocks)
+                          warnings=warnings, failed_blocks=failed_blocks)
     with open(STATE_FILE, 'w') as f:
         json.dump(state, f, indent=2)
     with open(os.path.join(REPORT_DIR, f'report_{date_str}.md'), 'w') as f:
         f.write(report)
     with open(os.path.join(REPORT_DIR, 'latest.md'), 'w') as f:
         f.write(report)
-    log("日报已生成（上新 %d / 全部户型新出现 %d / 重新上架 %d / 价格变动 %d / 卖出 %d）"
-        % (len(truly_new), len(new_any), len(returned), len(price_changed), len(sold)))
+    log("日报已生成（上新 %d / 重新上架 %d / 价格变动 %d / 卖出 %d）" % (len(truly_new), len(returned), len(price_changed), len(sold)))
     git_commit(f"daily report {date_str}")
     git_push()
     print("\n===== 日报摘要 =====")
