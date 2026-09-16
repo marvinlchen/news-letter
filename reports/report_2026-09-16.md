@@ -12,58 +12,13 @@
 - 💰 今日价格变动(同一单位仍在售、价格较上次抓取不同): **0** 套
 - ✅ 今日卖出/下架(连续消失≥7天): **0** 套
 - 🚫 已排除低楼层: 3 套（不计入上方在售）
-- 🏠 新出现房源(全部户型，监控以来首次出现): **15** 套，其中 3房/5房+/低楼层 **15** 套
+- 🏠 新出现房源(全部户型，监控以来首次出现): **0** 套，其中 3房/5房+/低楼层 **0** 套
 
 ## 🆕 今日上新（全新房源，监控以来首次出现）
 - 无
 
 ## 🏠 新出现房源 · 全部户型（含 3房 / 5房+ / 低楼层 4-room）
-> 本次为口径升级 v2 后的**首次运行**：以下房源此前不在监控范围内（3房 / 5房+ / 低楼层 4-room），并非本次新上架，仅作一次性纳入提示。此后本板块只列真正新出现的房源。
-- **[93B] S$948,000 · 732 sqft · S$1,295/sqft · 非低楼层**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-25644185
-- **[93B] S$900,000 · 732 sqft · S$1,230/sqft · 非低楼层**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500085620
-- **[93A] S$790,000 · 732 sqft · S$1,079/sqft · 非低楼层**
-  - 93A Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500099718
-- **[91A] S$788,000 · 732 sqft · S$1,077/sqft · 非低楼层**
-  - 91A Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-500231726
-- **[91A] S$788,000 · 732 sqft · S$1,077/sqft · 非低楼层**
-  - 91A Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-500227525
-- **[93B] S$780,000 · 732 sqft · S$1,066/sqft · 非低楼层**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500195084
-- **[80C] S$770,000 · 732 sqft · S$1,052/sqft · 非低楼层**
-  - 80C Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-80c-telok-blangah-street-31-500084252
-- **[93B] S$748,888 · 731 sqft · S$1,024/sqft · 非低楼层**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500159348
-- **[91A] S$738,888 · 732 sqft · S$1,009/sqft · 非低楼层**
-  - 91A Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-500245246
-- **[93B] S$696,600 · 732 sqft · S$952/sqft · 非低楼层**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500146552
-- **[93B] S$696,600 · 732 sqft · S$952/sqft · 非低楼层**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500260651
-- **[93B] S$922,000 · 1001 sqft · S$921/sqft · 低楼层(已排除)**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500237004
-- **[93A] S$900,000 · 1001 sqft · S$899/sqft · 低楼层(已排除)**
-  - 93A Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500167762
-- **[90B] S$898,888 · 1001 sqft · S$898/sqft · 低楼层(已排除)**
-  - 90B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-90b-telok-blangah-street-31-500168333
-- **[93B] S$2,189,999 · 1463 sqft · S$1,497/sqft · 非低楼层**
-  - 93B Telok Blangah Street 31
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500253722
+- 无
 
 ## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）
 - 无
@@ -190,4 +145,4 @@
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368
 
 ---
-_生成时间 2026-09-16 10:42:50 · 数据来源 PropertyGuru（curl_cffi 抓取）_
+_生成时间 2026-09-16 10:44:19 · 数据来源 PropertyGuru（curl_cffi 抓取）_
