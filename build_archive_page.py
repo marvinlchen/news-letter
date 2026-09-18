@@ -300,13 +300,13 @@ INDEX_TPL = r"""<!DOCTYPE html>
   <h1>监控归档总入口</h1>
   <p class="sub">
     覆盖 blocks 80A/80B/80C · 90A/90B/91A/92B/93A/93B（Telok Blangah Street 31）。
-    每天 09:00 自动抓取 PropertyGuru 在售房源、归档详情页、生成下列两个页面。
+    每天 09:00 自动抓取 PropertyGuru 在售房源、归档详情页，并生成下列页面。
   </p>
 
   <a class="card" href="hdb-archive.html">
     <div class="t">房源实拍照片档案</div>
     <div class="d">在售期间抓下来的实拍照片、户型图与完整描述。房源下架后 PropertyGuru 会清空详情页内容，这里是唯一还留得住的地方。</div>
-    <div class="n">%(nphoto)s 套房源 · %(photos)s 张照片 · %(plans)s 张户型图 · %(mb)s MB</div>
+    <div class="n">%(nphoto)s 套有内容 · %(photos)s 张照片 · %(plans)s 张户型图 · %(mb)s MB</div>
   </a>
 
   <a class="card" href="hdb-sold-snapshot.html">
