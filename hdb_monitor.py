@@ -354,7 +354,10 @@ def load_state():
 
 
 def build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed,
-                 warnings=None, failed_blocks=None):
+                 warnings=None, failed_blocks=None, listings=None):
+    # listings: 今日运行前的那份"在售"映射。卖出/宽限名单里的房源完整明细只在这里，
+    # 必须显式传入才能在 ✅ 段落里还原（history 里只有价格和 block）。
+    listings = listings or {}
     history = state["history"]
     phist = state.get("price_history", {})
     warnings = warnings or []
@@ -412,11 +415,45 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
     if sold:
         L.append("## ✅ 今日卖出 / 下架（先前在售，连续消失≥%d天）" % GRACE_DAYS)
         for i in sold:
+            # 以前这里直接读 history["last_price"] 拼一行 `[block] 价格 · 链接`。
+            # 但卖出房源不在 new_listings 里，重建 history 时 last_price 被写成 None，
+            # 于是每条都只剩"价格未公开"，且 summary/中介/楼层全部丢失。
+            # 改为：以 listings 的完整记录为准，history 兜底。
             h = history.get(i, {})
-            b = h.get('block', '?')
-            p = fmt_price(h.get('last_price'))
-            u = h.get('url', '')
-            L.append(f"- [{b}] {p} · {u}")
+            src_rec = listings.get(i) or {}
+            rec = {
+                'block': src_rec.get('block') or h.get('block') or '?',
+                'url': src_rec.get('url') or h.get('url') or '',
+                'area': src_rec.get('area') or h.get('area'),
+                'price': (src_rec.get('price')
+                          if src_rec.get('price') is not None
+                          else h.get('last_price')),
+                'summary': src_rec.get('summary') or h.get('summary'),
+                'agent': src_rec.get('agent') or h.get('agent'),
+                'floor_desc': (src_rec.get('floor_desc') or src_rec.get('floor')
+                               or h.get('floor_desc')),
+                'listed_on': src_rec.get('listed_on') or h.get('listed_on'),
+            }
+            last = (src_rec.get('last_seen') or h.get('last_seen') or '?')
+            absent = days_between(last, date_str)
+            L.append(fmt_listing(rec, ph=phist.get(i)))
+            note = f"  - ✅ 判定卖出：最后一次在售 {last}"
+            if absent is not None:
+                note += f"，连续消失 {absent} 天"
+            note += f"（宽限 {GRACE_DAYS} 天）· 原链接下架后会被 PropertyGuru 清空"
+            L.append(note)
+            arc = os.path.join('archive', str(i))
+            if os.path.isdir(arc):
+                try:
+                    nj = len(os.listdir(os.path.join(arc, 'photos')))
+                except OSError:
+                    nj = 0
+                bits = [b for b in (f"照片 {nj} 张" if nj else None,
+                                    "原始 HTML 存档"
+                                    if os.path.exists(os.path.join(arc, 'page.html.gz'))
+                                    else None) if b]
+                L.append(f"  - 🗄 已归档详情页: archive/{i}/"
+                         + (f"（{' · '.join(bits)}）" if bits else ""))
         L.append("")
     L.append("## 📋 当前在售清单（按 block，已排除低楼层）")
     by_block = {}
@@ -562,15 +599,27 @@ def main():
 
     # 重建 history：new_listings ∪ history 的合集，更新 first/last seen
     new_history = {}
-    src = {**history, **new_listings}   # new_listings 优先（含今日最新 last_seen）
+    # 卖出/宽限名单里的房源，其完整明细只存在于 listings —— 必须并进 src，
+    # 否则判定卖出的当天这些字段就被永久丢弃（且 last_price 被误写成 None）。
+    sold_recs = {i: listings[i] for i in sold if i in listings}
+    src = {**history, **new_listings, **sold_recs}
     for i, rec in src.items():
+        cur_price = rec.get("price")
+        prev_price = rec.get("last_price")
         new_history[i] = {
             "first_seen": rec.get("first_seen") or date_str,
             "last_seen": rec.get("last_seen") or date_str,
-            "last_price": rec.get("price"),
+            # 优先用已知价格；两者都为空才记 None（该房源确实从未公开价格）
+            "last_price": cur_price if cur_price is not None else prev_price,
             "block": rec.get("block"),
             "url": rec.get("url"),
             "area": rec.get("area"),
+            # 房源明细：卖出后仍保留，供日后复盘"当时是什么样的房源"
+            "summary": rec.get("summary"),
+            "agent": rec.get("agent"),
+            "floor_desc": rec.get("floor_desc") or rec.get("floor"),
+            "listed_on": rec.get("listed_on"),
+            "sold_on": rec.get("sold_on") or (date_str if i in sold else None),
         }
     state = {"listings": new_listings, "history": new_history}
 
@@ -597,7 +646,7 @@ def main():
                         "其低楼层房源可能混入在售（已标\"楼层未知\"）：**%s**" % ", ".join(low_unfiltered))
 
     report = build_report(date_str, kept, excluded, state, truly_new, returned, sold, price_changed,
-                          warnings=warnings, failed_blocks=failed_blocks)
+                          warnings=warnings, failed_blocks=failed_blocks, listings=listings)
     with open(STATE_FILE, 'w') as f:
         json.dump(state, f, indent=2)
     with open(os.path.join(REPORT_DIR, f'report_{date_str}.md'), 'w') as f:
