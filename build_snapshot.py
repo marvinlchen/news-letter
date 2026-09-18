@@ -42,6 +42,9 @@ OUT_FILE = os.path.join(HERE, "hdb-sold-snapshot.html")
 
 REPO = "https://github.com/marvinlchen/news-letter"
 BRANCH = "hdb-monitor"
+# Absolute URLs so archived photos render no matter where this HTML is hosted
+# (githack / Pages / htmlpreview all resolve an absolute raw URL identically).
+REPO_RAW = "https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/"
 
 RE_DATE = re.compile(r"report_(\d{4}-\d{2}-\d{2})\.md$")
 RE_ID = re.compile(r"-(\d+)$")
@@ -514,15 +517,16 @@ def write_html(rows, latest_date, n_reports, first_report):
         spark = build_sparkline(price_history_points(r))
 
         # --- archived photos / floor plans (only for listings archived while live)
+        base = REPO_RAW + "archive/" + str(r["id"]) + "/"
         gal, plans = [], []
         for p in r["photos"]:
             gal.append('<a class="shot" href="%s" target="_blank" rel="noopener">'
                        '<img loading="lazy" src="%s" alt="%s %s photo"></a>'
-                       % (esc(p), esc(p), esc(r["block"]), esc(r["id"])))
+                       % (esc(base + p), esc(base + p), esc(r["block"]), esc(r["id"])))
         for p in r["floorplans"]:
             plans.append('<a class="shot plan" href="%s" target="_blank" rel="noopener">'
                          '<img loading="lazy" src="%s" alt="floor plan"></a>'
-                         % (esc(p), esc(p)))
+                         % (esc(base + p), esc(base + p)))
         if gal or plans:
             gallery = ('<div class="galwrap"><div class="gallab">已归档的实拍照片'
                        '（%d 张）%s</div><div class="gallery">%s</div>%s</div>'
