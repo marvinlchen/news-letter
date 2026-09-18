@@ -82,6 +82,19 @@
   .dim{color:var(--fg3);font-size:12px}
   .snapbox{margin-top:9px;background:#10151d;border:1px solid var(--line);border-radius:9px;padding:12px 14px;overflow-x:auto}
   .snapbox pre{margin:0;font-family:var(--mono);font-size:12.5px;color:var(--fg2);white-space:pre-wrap;word-break:break-all}
+  .galwrap{margin-top:16px}
+  .gallab{font-size:12px;color:var(--fg3);margin-bottom:8px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:7px}
+  .gallery.plano{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-top:7px}
+  .shot{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+    background:#0d1219;line-height:0;transition:.15s}
+  .shot:hover{border-color:var(--acc);transform:translateY(-1px)}
+  .shot img{width:100%;height:78px;object-fit:cover;display:block}
+  .shot.plan img{height:110px;object-fit:contain;background:#0d1219}
+  .galwrap.nophoto{font-size:12.5px;color:var(--fg3);background:#12171f;
+    border:1px dashed var(--line2);border-radius:9px;padding:10px 12px}
+  .descbox{margin-top:9px;background:#10151d;border:1px solid var(--line);border-radius:9px;
+    padding:12px 14px;font-size:13px;color:var(--fg2);line-height:1.7;max-height:340px;overflow:auto}
   .card-f{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;
     margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}
   .dates{font-size:12.5px;color:var(--fg2)}
@@ -117,8 +130,10 @@
   <div class="note">
     <b>判定口径：</b>某房源连续消失 ≥ 7 天后才记为"卖出/下架"（宽限期用于过滤 PropertyGuru 限流/漏抓造成的假消失）。
     因此"卖出判定日"是<b>最后一次被看到在售之后约一周</b>，并非真实成交日；<b>挂牌价 ≠ 成交价</b>，本页不含任何成交价数据。
-    <br><br><b>为什么原链接打不开：</b>房源下架后 PropertyGuru 会删除详情页（403/404）。本页的"原始记录快照"与"当日原始日报"是本仓库独有的存档，
-    也是目前唯一能回看当时房源长什么样的地方。
+    <br><br><b>为什么原链接打不开：</b>房源下架后 PropertyGuru 会删除详情页（返回 200 但内容清空）。
+    本页的"原始记录快照"、"完整房源描述"与实拍照片是本仓库独有的存档，也是目前唯一能回看当时房源长什么样的地方。
+    <br><br><b>照片是怎么来的：</b>由 <code>archive_listing.py</code> 在房源<b>还在售时</b>抓取并归档（照片 / 户型图 / 完整描述 / 原始 HTML）。
+    监控开始归档之前就已下架的房源，PropertyGuru 那边已经清空，照片<b>永久不可恢复</b>——这类卡片会明确标注。
   </div>
 
   <div class="kpis"><div class="kpi"><span class="kv">累计卖出</span><span class="kl">21</span></div><div class="kpi"><span class="kv">已彻底下架</span><span class="kl">20</span></div><div class="kpi"><span class="kv">重新上架</span><span class="kl">1</span></div><div class="kpi"><span class="kv">平均挂牌价</span><span class="kl">S$978,394</span></div><div class="kpi"><span class="kv">中位挂牌价</span><span class="kl">S$980,000</span></div><div class="kpi"><span class="kv">平均单价</span><span class="kl">S$977</span></div><div class="kpi"><span class="kv">平均在售时长</span><span class="kl">26 天</span></div></div>
@@ -140,6 +155,8 @@
   <div class="card-body">
     <p class="summary">High Floor 4 Room HDB at Telok Blangah</p>
     <div class="meta">1,001 sqft · S$898/sqft · High Floor · 在售 ≥53 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
     
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Gary Wang</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-10</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 53 天（49 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-09-10 S$899,000（49 次记录，2 个价）</span></div></div>
     <details class="snap">
@@ -173,6 +190,8 @@
   <div class="card-body">
     <p class="summary">High Floor Family Gem In Bukit Merah</p>
     <div class="meta">1,001 sqft · S$979/sqft · High Floor · 在售 ≥22 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
     
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Tan Hock Siew</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">16 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-08-17</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-08</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 22 天（21 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-08-17 ~ 2026-09-08 均 S$980,000（21 次记录）</span></div></div>
     <details class="snap">
@@ -208,6 +227,8 @@
     <p class="summary">Stunning 3 Bedroom HDB at 93B, Telok Blangah St 31</p>
     <div class="meta">1,001 sqft · S$997/sqft · High Floor · 在售 ≥50 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,3.0 8.29,3.0 13.58,41.0 18.88,41.0 24.17,41.0 29.46,41.0 34.75,41.0 40.04,41.0 45.33,41.0 50.62,41.0 55.92,41.0 61.21,41.0 66.5,41.0 71.79,41.0 77.08,41.0 82.38,41.0 87.67,41.0 92.96,41.0 98.25,41.0 103.54,41.0 108.83,41.0 114.12,41.0 119.42,41.0 124.71,41.0 130.0,41.0 135.29,41.0 140.58,41.0 145.88,41.0 151.17,41.0 156.46,41.0 161.75,41.0 167.04,41.0 172.33,41.0 177.62,41.0 182.92,41.0 188.21,41.0 193.5,41.0 198.79,41.0 204.08,41.0 209.38,41.0 214.67,41.0 219.96,41.0 225.25,41.0 230.54,41.0 235.83,41.0 241.12,41.0 246.42,41.0 251.71,41.0 257.0,41.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,3.0 8.29,3.0 13.58,41.0 18.88,41.0 24.17,41.0 29.46,41.0 34.75,41.0 40.04,41.0 45.33,41.0 50.62,41.0 55.92,41.0 61.21,41.0 66.5,41.0 71.79,41.0 77.08,41.0 82.38,41.0 87.67,41.0 92.96,41.0 98.25,41.0 103.54,41.0 108.83,41.0 114.12,41.0 119.42,41.0 124.71,41.0 130.0,41.0 135.29,41.0 140.58,41.0 145.88,41.0 151.17,41.0 156.46,41.0 161.75,41.0 167.04,41.0 172.33,41.0 177.62,41.0 182.92,41.0 188.21,41.0 193.5,41.0 198.79,41.0 204.08,41.0 209.38,41.0 214.67,41.0 219.96,41.0 225.25,41.0 230.54,41.0 235.83,41.0 241.12,41.0 246.42,41.0 251.71,41.0 257.0,41.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Ken Chen</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">16 Jul 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-07</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 50 天（50 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-09-07 S$998,000（50 次记录，3 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-09-07 当日日报中的完整条目）</span></summary>
@@ -242,6 +263,8 @@
     <p class="summary">93 Telok Blangah Street 31 For Sales</p>
     <div class="meta">1,001 sqft · S$979/sqft · High Floor · 在售 ≥49 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,3.0 8.64,3.0 14.29,3.0 19.93,3.0 25.58,3.0 31.22,3.0 36.87,3.0 42.51,3.0 48.16,3.0 53.8,3.0 59.44,3.0 65.09,3.0 70.73,3.0 76.38,3.0 82.02,3.0 87.67,3.0 93.31,3.0 98.96,3.0 104.6,3.0 110.24,3.0 115.89,3.0 121.53,3.0 127.18,3.0 132.82,3.0 138.47,3.0 144.11,3.0 149.76,3.0 155.4,41.0 161.04,41.0 166.69,41.0 172.33,41.0 177.98,41.0 183.62,41.0 189.27,41.0 194.91,41.0 200.56,41.0 206.2,41.0 211.84,41.0 217.49,41.0 223.13,41.0 228.78,41.0 234.42,41.0 240.07,41.0 245.71,41.0 251.36,41.0 257.0,41.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,3.0 8.64,3.0 14.29,3.0 19.93,3.0 25.58,3.0 31.22,3.0 36.87,3.0 42.51,3.0 48.16,3.0 53.8,3.0 59.44,3.0 65.09,3.0 70.73,3.0 76.38,3.0 82.02,3.0 87.67,3.0 93.31,3.0 98.96,3.0 104.6,3.0 110.24,3.0 115.89,3.0 121.53,3.0 127.18,3.0 132.82,3.0 138.47,3.0 144.11,3.0 149.76,3.0 155.4,41.0 161.04,41.0 166.69,41.0 172.33,41.0 177.98,41.0 183.62,41.0 189.27,41.0 194.91,41.0 200.56,41.0 206.2,41.0 211.84,41.0 217.49,41.0 223.13,41.0 228.78,41.0 234.42,41.0 240.07,41.0 245.71,41.0 251.36,41.0 257.0,41.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Gary Koh</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">16 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-06</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 49 天（47 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-09-06 S$980,000（47 次记录，3 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-09-06 当日日报中的完整条目）</span></summary>
@@ -276,6 +299,8 @@
     <p class="summary">Genuine seller! High floor corner unit! Amazing view! No extension!</p>
     <div class="meta">1,001 sqft · S$898/sqft · High Floor · 在售 ≥43 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,41.0 9.2,41.0 15.39,41.0 21.59,41.0 27.78,41.0 33.98,41.0 40.17,41.0 46.37,41.0 52.56,41.0 58.76,41.0 64.95,41.0 71.15,41.0 77.34,41.0 83.54,3.0 89.73,3.0 95.93,34.16 102.12,34.16 108.32,34.16 114.51,34.16 120.71,34.16 126.9,34.16 133.1,34.16 139.29,34.16 145.49,34.16 151.68,34.16 157.88,34.16 164.07,34.16 170.27,34.16 176.46,34.16 182.66,34.16 188.85,34.16 195.05,34.16 201.24,34.16 207.44,34.16 213.63,34.16 219.83,34.16 226.02,34.16 232.22,34.16 238.41,34.16 244.61,34.16 250.8,34.16 257.0,34.16 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,41.0 9.2,41.0 15.39,41.0 21.59,41.0 27.78,41.0 33.98,41.0 40.17,41.0 46.37,41.0 52.56,41.0 58.76,41.0 64.95,41.0 71.15,41.0 77.34,41.0 83.54,3.0 89.73,3.0 95.93,34.16 102.12,34.16 108.32,34.16 114.51,34.16 120.71,34.16 126.9,34.16 133.1,34.16 139.29,34.16 145.49,34.16 151.68,34.16 157.88,34.16 164.07,34.16 170.27,34.16 176.46,34.16 182.66,34.16 188.85,34.16 195.05,34.16 201.24,34.16 207.44,34.16 213.63,34.16 219.83,34.16 226.02,34.16 232.22,34.16 238.41,34.16 244.61,34.16 250.8,34.16 257.0,34.16" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Kyean Lim</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">5 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-21</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-02</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 43 天（42 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-21 S$890,000 → 2026-09-02 S$899,000（42 次记录，3 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-09-02 当日日报中的完整条目）</span></summary>
@@ -310,6 +335,8 @@
     <p class="summary">No restrictions, all can buy, no extension, view to offer!</p>
     <div class="meta">1,001 sqft · S$897/sqft · Middle Floor · 在售 ≥45 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,3.0 8.91,3.0 14.81,3.0 20.72,3.0 26.63,3.0 32.53,3.0 38.44,20.27 44.35,20.27 50.26,20.27 56.16,20.27 62.07,20.27 67.98,20.27 73.88,20.27 79.79,20.27 85.7,20.27 91.6,20.27 97.51,20.27 103.42,20.27 109.33,20.27 115.23,20.27 121.14,20.27 127.05,20.27 132.95,20.27 138.86,20.27 144.77,20.27 150.67,20.27 156.58,41.0 162.49,41.0 168.4,41.0 174.3,41.0 180.21,41.0 186.12,41.0 192.02,41.0 197.93,41.0 203.84,41.0 209.74,41.0 215.65,41.0 221.56,41.0 227.47,41.0 233.37,41.0 239.28,41.0 245.19,41.0 251.09,41.0 257.0,41.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,3.0 8.91,3.0 14.81,3.0 20.72,3.0 26.63,3.0 32.53,3.0 38.44,20.27 44.35,20.27 50.26,20.27 56.16,20.27 62.07,20.27 67.98,20.27 73.88,20.27 79.79,20.27 85.7,20.27 91.6,20.27 97.51,20.27 103.42,20.27 109.33,20.27 115.23,20.27 121.14,20.27 127.05,20.27 132.95,20.27 138.86,20.27 144.77,20.27 150.67,20.27 156.58,41.0 162.49,41.0 168.4,41.0 174.3,41.0 180.21,41.0 186.12,41.0 192.02,41.0 197.93,41.0 203.84,41.0 209.74,41.0 215.65,41.0 221.56,41.0 227.47,41.0 233.37,41.0 239.28,41.0 245.19,41.0 251.09,41.0 257.0,41.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Lin Sallee 林玥廷</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">14 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-02</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 45 天（45 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-09-02 S$898,000（45 次记录，4 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-09-02 当日日报中的完整条目）</span></summary>
@@ -344,7 +371,9 @@
     <p class="summary">High floor, maintained in tip top condition!</p>
     <div class="meta">1,001 sqft · S$999/sqft · High Floor · 在售 ≥61 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,3.0 7.79,3.0 12.58,3.0 17.38,3.0 22.17,3.0 26.96,3.0 31.75,3.0 36.55,3.0 41.34,3.0 46.13,3.0 50.92,3.0 55.72,3.0 60.51,3.0 65.3,3.0 70.09,3.0 74.89,3.0 79.68,3.0 84.47,3.0 89.26,3.0 94.06,3.0 98.85,3.0 103.64,3.0 108.43,3.0 113.23,3.0 118.02,3.0 122.81,3.0 127.6,3.0 132.4,3.0 137.19,3.0 141.98,3.0 146.77,3.0 151.57,3.0 156.36,3.0 161.15,3.0 165.94,3.0 170.74,3.0 175.53,3.0 180.32,41.0 185.11,41.0 189.91,41.0 194.7,41.0 199.49,41.0 204.28,41.0 209.08,41.0 213.87,41.0 218.66,41.0 223.45,41.0 228.25,41.0 233.04,41.0 237.83,41.0 242.62,41.0 247.42,41.0 252.21,41.0 257.0,41.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,3.0 7.79,3.0 12.58,3.0 17.38,3.0 22.17,3.0 26.96,3.0 31.75,3.0 36.55,3.0 41.34,3.0 46.13,3.0 50.92,3.0 55.72,3.0 60.51,3.0 65.3,3.0 70.09,3.0 74.89,3.0 79.68,3.0 84.47,3.0 89.26,3.0 94.06,3.0 98.85,3.0 103.64,3.0 108.43,3.0 113.23,3.0 118.02,3.0 122.81,3.0 127.6,3.0 132.4,3.0 137.19,3.0 141.98,3.0 146.77,3.0 151.57,3.0 156.36,3.0 161.15,3.0 165.94,3.0 170.74,3.0 175.53,3.0 180.32,41.0 185.11,41.0 189.91,41.0 194.7,41.0 199.49,41.0 204.28,41.0 209.08,41.0 213.87,41.0 218.66,41.0 223.45,41.0 228.25,41.0 233.04,41.0 237.83,41.0 242.62,41.0 247.42,41.0 252.21,41.0 257.0,41.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
-    <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Yuna Lim</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-18</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 61 天（55 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-25 S$1,000,000（38 次记录，2 个价）</span></div></div>
+    <div class="galwrap"><div class="gallab">已归档的实拍照片（15 张） · 户型图 1 张</div><div class="gallery"><a class="shot" href="photos/01.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/01.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/02.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/02.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/03.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/03.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/04.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/04.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/05.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/05.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/06.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/06.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/07.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/07.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/08.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/08.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/09.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/09.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/10.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/10.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/11.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/11.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/12.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/12.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/13.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/13.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/14.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/14.jpg" alt="93A 500079192 photo"></a><a class="shot" href="photos/15.jpg" target="_blank" rel="noopener"><img loading="lazy" src="photos/15.jpg" alt="93A 500079192 photo"></a></div><div class="gallery plano"><a class="shot plan" href="floorplans/01.jpg" target="_blank" rel="noopener"><img loading="lazy" src="floorplans/01.jpg" alt="floor plan"></a></div></div>
+    <details class="snap desc"><summary>完整房源描述 <span class="dim">（归档自详情页，日报里没有这一项）</span></summary><div class="descbox">FOR SALE!<br><br>--- UNIT DETAILS ---<br>• High floor<br><br>• Minimalistic in design  <br><br>• Unit is bright &amp; breezy  <br><br>• Unit maintained in tip top condition as is owners weekend home <br><br>• Top and bottom kitchen cabinets fitted in pristine condition <br><br>• Open concept kitchen <br><br>• Main door facing South<br><br>• 5 Mins walk to market <br><br>• Within 10 mins walk to Telok Blangah MRT which is 1 stop to Vivo City Mall<br><br><br><br><br>Viewing By Appt at 9091 9441<br><br><br><br><br>Looking for a Dream Home of yours? ( BUY / SELL / RENT ) ,<br>call or sms us your criteria. Our team of committed agents are here to assist you.<br><br>Seller looking to Sell , you can contact me for more details, pricing and information. EXPERIENCE THE DIFFERENCE, S.E.A DELIVERS RESULT!<br><br>Call 9091 9441 for Viewing / details<br><br>Yuna Lim <br>District Director<br>S.E.A Delivers Result<br><br>•No. 1 Top Producer ( 1st Position ) 2013/ 2014/ 2015 / 2016 / 2017 / 2018 / 2019 / 2020/ 2021/ 2022/ 2023 / 2024 / 2025•</div></details>
+    <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Yuna Lim <span class="dim">执照 R007707D</span></span></div><div class="fact"><span class="k2">详情页真实发布时间</span><span class="v">2026-03-13 17:26:03</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-18</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 61 天（55 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-25 S$1,000,000（38 次记录，2 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-08-25 当日日报中的完整条目）</span></summary>
       <div class="snapbox"><pre>- **S$980,000 · 1,001 sqft · S$999/sqft · High Floor**
@@ -376,6 +405,8 @@
   <div class="card-body">
     <p class="summary">Located close to Telok Blangah Hills. Lots of greenery, mins to MRT.</p>
     <div class="meta">1,001 sqft · S$1,099/sqft · High Floor · 在售 ≥3 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
     
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Quah Susan</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">19 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-08-20</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-23</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 3 天（4 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-08-20 ~ 2026-08-23 均 S$1,099,900（4 次记录）</span></div></div>
     <details class="snap">
@@ -411,6 +442,8 @@
     <p class="summary">Greenery And Fitness Lover Quiet Environment Nice Neighbour Level 08</p>
     <div class="meta">1,000 sqft · S$1,100/sqft · Middle Floor · 在售 ≥33 天</div>
     
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Patsy Sim</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-21</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 33 天（34 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-21 S$1,100,000（34 次记录，2 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-08-21 当日日报中的完整条目）</span></summary>
@@ -443,6 +476,8 @@
   <div class="card-body">
     <p class="summary">High Floor, almost as new, well kept. remain 92 yrs plus. Prime area</p>
     <div class="meta">1,001 sqft · S$999/sqft · High Floor · 在售 ≥31 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
     
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Tan Hock Siew</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-19</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 31 天（32 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-19 S$1,000,000（32 次记录，2 个价）</span></div></div>
     <details class="snap">
@@ -477,6 +512,8 @@
     <p class="summary">Super C.H.E.A.P, high floor, south-facing 4-room for sale!</p>
     <div class="meta">1,001 sqft · S$984/sqft · High Floor · 在售 ≥31 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,41.0 11.47,41.0 19.93,3.0 28.4,3.0 36.87,3.0 45.33,3.0 53.8,3.0 62.27,3.0 70.73,3.0 79.2,3.0 87.67,3.0 96.13,3.0 104.6,3.0 113.07,3.0 121.53,3.0 130.0,3.0 138.47,3.0 146.93,3.0 155.4,3.0 163.87,3.0 172.33,3.0 180.8,3.0 189.27,3.0 197.73,3.0 206.2,3.0 214.67,3.0 223.13,3.0 231.6,3.0 240.07,3.0 248.53,3.0 257.0,3.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,41.0 11.47,41.0 19.93,3.0 28.4,3.0 36.87,3.0 45.33,3.0 53.8,3.0 62.27,3.0 70.73,3.0 79.2,3.0 87.67,3.0 96.13,3.0 104.6,3.0 113.07,3.0 121.53,3.0 130.0,3.0 138.47,3.0 146.93,3.0 155.4,3.0 163.87,3.0 172.33,3.0 180.8,3.0 189.27,3.0 197.73,3.0 206.2,3.0 214.67,3.0 223.13,3.0 231.6,3.0 240.07,3.0 248.53,3.0 257.0,3.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Lynn Choo</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">17 Jul 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-19</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 31 天（32 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-19 S$985,000（32 次记录，3 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-08-19 当日日报中的完整条目）</span></summary>
@@ -511,6 +548,8 @@
     <p class="summary">Very well-maintained 4A unit, high floor and unblocked</p>
     <div class="meta">1,001 sqft · S$984/sqft · High Floor · 在售 ≥30 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,41.0 11.76,41.0 20.52,3.0 29.28,3.0 38.03,3.0 46.79,3.0 55.55,3.0 64.31,3.0 73.07,3.0 81.83,3.0 90.59,3.0 99.34,3.0 108.1,3.0 116.86,3.0 125.62,3.0 134.38,3.0 143.14,3.0 151.9,3.0 160.66,3.0 169.41,3.0 178.17,3.0 186.93,3.0 195.69,3.0 204.45,3.0 213.21,3.0 221.97,3.0 230.72,3.0 239.48,3.0 248.24,3.0 257.0,3.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,41.0 11.76,41.0 20.52,3.0 29.28,3.0 38.03,3.0 46.79,3.0 55.55,3.0 64.31,3.0 73.07,3.0 81.83,3.0 90.59,3.0 99.34,3.0 108.1,3.0 116.86,3.0 125.62,3.0 134.38,3.0 143.14,3.0 151.9,3.0 160.66,3.0 169.41,3.0 178.17,3.0 186.93,3.0 195.69,3.0 204.45,3.0 213.21,3.0 221.97,3.0 230.72,3.0 239.48,3.0 248.24,3.0 257.0,3.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Stephanie Neo</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">17 Jul 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-18</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 30 天（31 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-18 S$985,000（31 次记录，3 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-08-18 当日日报中的完整条目）</span></summary>
@@ -545,6 +584,8 @@
     <p class="summary">Corner, North South Facing, Quiet, Renovated, Unblocked View!</p>
     <div class="meta">1,001 sqft · S$899/sqft · 非低楼层 · 在售 ≥29 天</div>
     
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Kavin Kuah</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-17</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 29 天（30 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-17 S$899,999（30 次记录，2 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-08-17 当日日报中的完整条目）</span></summary>
@@ -577,6 +618,8 @@
   <div class="card-body">
     <p class="summary">High Floor Corner Windy Unit Unblocked View Zero Extension</p>
     <div class="meta">1,001 sqft · S$949/sqft · High Floor · 在售 ≥29 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
     
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Dennis Chua</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-17</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 29 天（30 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-17 S$950,000（30 次记录，2 个价）</span></div></div>
     <details class="snap">
@@ -611,6 +654,8 @@
     <p class="summary">C.H.E.A.P. Super Rare, High Floor, Unblocked View. C.H.E.A.P</p>
     <div class="meta">1,001 sqft · S$974/sqft · High Floor · 在售 ≥24 天</div>
     
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Jared Tan</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-12</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 24 天（25 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-12 S$975,000（25 次记录，2 个价）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-08-12 当日日报中的完整条目）</span></summary>
@@ -643,6 +688,8 @@
   <div class="card-body">
     <p class="summary">Stop scrolling: This designer home in 93B Telok Blangah!</p>
     <div class="meta">1,001 sqft · S$999/sqft · 非低楼层 · 在售 ≥16 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
     
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Adrian Chua</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-04</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 16 天（18 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-08-04 S$1,000,000（18 次记录，2 个价）</span></div></div>
     <details class="snap">
@@ -677,6 +724,8 @@
     <p class="summary">Rare Corner High Floor Unit with Greenery View For Sale</p>
     <div class="meta">1,001 sqft · S$1,049/sqft · High Floor · 在售 ≥14 天</div>
     <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,3.0 21.14,3.0 39.29,41.0 57.43,41.0 75.57,41.0 93.71,41.0 111.86,41.0 130.0,41.0 148.14,41.0 166.29,41.0 184.43,41.0 202.57,41.0 220.71,41.0 238.86,41.0 257.0,41.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,3.0 21.14,3.0 39.29,41.0 57.43,41.0 75.57,41.0 93.71,41.0 111.86,41.0 130.0,41.0 148.14,41.0 166.29,41.0 184.43,41.0 202.57,41.0 220.71,41.0 238.86,41.0 257.0,41.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">George Ng</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">11 Jul 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-08-02</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 14 天（16 次抓取）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-08-02 当日日报中的完整条目）</span></summary>
@@ -710,6 +759,8 @@
     <p class="summary">Serious seller.</p>
     <div class="meta">1,001 sqft · S$899/sqft · Middle Floor · 在售 ≥12 天</div>
     
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Kelly Sutina Tan</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-07-31</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 12 天（14 次抓取）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-07-31 当日日报中的完整条目）</span></summary>
@@ -741,6 +792,8 @@
   <div class="card-body">
     <p class="summary">Rare 4 Room HDB with unblocked view facing Greater Southern Waterfront</p>
     <div class="meta">1,001 sqft · S$898/sqft · 非低楼层 · 在售 ≥6 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
     
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Homer Lau</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-07-25</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 6 天（9 次抓取）</span></div></div>
     <details class="snap">
@@ -774,6 +827,8 @@
     <p class="summary">High floor, unblocked views!</p>
     <div class="meta">1,001 sqft · S$969/sqft · High Floor · 在售 ≥2 天</div>
     
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Robbie Chen Chee Howe</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-07-21</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 2 天（5 次抓取）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-07-21 当日日报中的完整条目）</span></summary>
@@ -806,6 +861,8 @@
     <p class="summary">Rare unblock seaview 4 room flat for sale</p>
     <div class="meta">1,001 sqft · S$1,099/sqft · High Floor · 在售 ≥2 天</div>
     
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
     <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">David Chun</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-07-21</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 2 天（5 次抓取）</span></div></div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（2026-07-21 当日日报中的完整条目）</span></summary>
@@ -827,7 +884,7 @@
   <div class="empty" id="empty" style="display:none">该 block 没有卖出/下架记录。</div>
 
   <footer class="bottom">
-    快照生成于 2026-09-18 17:40 ｜ 数据源：61 份日报归档（2026-07-18 ~ 2026-09-18）+ state.json ｜
+    快照生成于 2026-09-18 18:01 ｜ 数据源：61 份日报归档（2026-07-18 ~ 2026-09-18）+ state.json ｜
     <a href="https://github.com/marvinlchen/news-letter/tree/hdb-monitor/reports" target="_blank" rel="noopener">在 GitHub 查看全部日报归档 ↗</a>
     <br>本页为静态快照文件，可离线保存；重新生成不会丢失历史，只会补入新的卖出记录。
   </footer>

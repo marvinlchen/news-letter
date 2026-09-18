@@ -37,6 +37,7 @@ GIT_REMOTE_REF = 'refs/heads/hdb-monitor'
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPORT_DIR = os.path.join(HERE, "reports")
 STATE_FILE = os.path.join(HERE, "state.json")
+ARCHIVE_DIR = os.path.join(HERE, "archive")
 OUT_FILE = os.path.join(HERE, "hdb-sold-snapshot.html")
 
 REPO = "https://github.com/marvinlchen/news-letter"
@@ -237,6 +238,23 @@ def git_commit_push(files, msg):
         return False
 
 
+def load_archive_meta(lid):
+    """Full detail-page archive captured while the listing was still live.
+
+    Only exists for listings the archiver saw on-market. Listings that were
+    already gone before archiving started have nothing — PropertyGuru deletes
+    photos and description as soon as a listing goes off-market.
+    """
+    p = os.path.join(ARCHIVE_DIR, str(lid), "meta.json")
+    if not os.path.exists(p):
+        return None
+    try:
+        with open(p, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser(description="HDB 卖出/下架 房源快照归档生成器")
     ap.add_argument("--push", action="store_true",
@@ -304,6 +322,8 @@ def main():
         currently_active = lid in cur_listings
         status = "relisted" if currently_active else "gone"
 
+        arc = load_archive_meta(lid) or {}
+
         out.append({
             "id": lid,
             "block": block,
@@ -326,6 +346,14 @@ def main():
             "obs_days": len(traj),
             "span_days": days_between(first_date or h.get("first_seen"), last_seen),
             "traj": traj,
+            "photos": arc.get("photos") or [],
+            "floorplans": arc.get("floorplans") or [],
+            "description": arc.get("description"),
+            "first_posted": arc.get("first_posted"),
+            "agent_license": arc.get("agent_license"),
+            "archived_at": arc.get("archived_at"),
+            "raw_html_gz": os.path.exists(os.path.join(
+                ARCHIVE_DIR, str(lid), "page.html.gz")),
             "status": status,
             "report_link": "%s/blob/%s/reports/report_%s.md" % (REPO, BRANCH, snap_date) if snap_date else None,
             "sold_report_link": "%s/blob/%s/reports/report_%s.md" % (REPO, BRANCH, sold_date),
@@ -438,9 +466,13 @@ def write_html(rows, latest_date, n_reports, first_report):
 
         facts = []
         if r["agent"]:
-            facts.append(("中介", esc(r["agent"])))
+            facts.append(("中介", esc(r["agent"]) + (
+                ' <span class="dim">执照 %s</span>' % esc(r["agent_license"])
+                if r["agent_license"] else "")))
         if r["listed_on"]:
             facts.append(("平台显示上架", esc(r["listed_on"])))
+        if r["first_posted"]:
+            facts.append(("详情页真实发布时间", esc(r["first_posted"])))
         if r["first_date"]:
             facts.append(("首次出现在售", esc(r["first_date"])))
         if r["last_seen"]:
@@ -481,6 +513,34 @@ def write_html(rows, latest_date, n_reports, first_report):
                      % esc(r["report_link"])) if r["report_link"] else ""
         spark = build_sparkline(price_history_points(r))
 
+        # --- archived photos / floor plans (only for listings archived while live)
+        gal, plans = [], []
+        for p in r["photos"]:
+            gal.append('<a class="shot" href="%s" target="_blank" rel="noopener">'
+                       '<img loading="lazy" src="%s" alt="%s %s photo"></a>'
+                       % (esc(p), esc(p), esc(r["block"]), esc(r["id"])))
+        for p in r["floorplans"]:
+            plans.append('<a class="shot plan" href="%s" target="_blank" rel="noopener">'
+                         '<img loading="lazy" src="%s" alt="floor plan"></a>'
+                         % (esc(p), esc(p)))
+        if gal or plans:
+            gallery = ('<div class="galwrap"><div class="gallab">已归档的实拍照片'
+                       '（%d 张）%s</div><div class="gallery">%s</div>%s</div>'
+                       % (len(gal),
+                          (' · 户型图 %d 张' % len(plans)) if plans else '',
+                          "".join(gal),
+                          ('<div class="gallery plano">%s</div>' % "".join(plans)) if plans else ''))
+        else:
+            gallery = ('<div class="galwrap nophoto">该房源下架前未被归档，'
+                       'PropertyGuru 已删除照片与描述，照片不可恢复</div>')
+
+        descblock = ""
+        if r["description"]:
+            descblock = ('<details class="snap desc"><summary>完整房源描述 <span class="dim">'
+                         '（归档自详情页，日报里没有这一项）</span></summary>'
+                         '<div class="descbox">%s</div></details>'
+                         % esc(r["description"]).replace("\n", "<br>"))
+
         cards.append(sub_tpl("""
 <article class="card %(status)s" data-block="%(block)s" data-price="%(pricev)s">
   <header class="card-h">
@@ -497,6 +557,8 @@ def write_html(rows, latest_date, n_reports, first_report):
     <p class="summary">%(summary)s</p>
     <div class="meta">%(meta)s</div>
     %(sparkhtml)s
+    %(gallery)s
+    %(descblock)s
     <div class="facts">%(facts)s</div>
     <details class="snap">
       <summary>原始记录快照 <span class="dim">（%(snap_date)s 当日日报中的完整条目）</span></summary>
@@ -531,6 +593,8 @@ def write_html(rows, latest_date, n_reports, first_report):
         "snap_link": snap_link,
         "url": esc(r["url"]),
         "sold_link": esc(r["sold_report_link"]),
+        "gallery": gallery,
+        "descblock": descblock,
     }))
 
     key_rows = "".join(
@@ -654,6 +718,19 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .dim{color:var(--fg3);font-size:12px}
   .snapbox{margin-top:9px;background:#10151d;border:1px solid var(--line);border-radius:9px;padding:12px 14px;overflow-x:auto}
   .snapbox pre{margin:0;font-family:var(--mono);font-size:12.5px;color:var(--fg2);white-space:pre-wrap;word-break:break-all}
+  .galwrap{margin-top:16px}
+  .gallab{font-size:12px;color:var(--fg3);margin-bottom:8px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:7px}
+  .gallery.plano{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-top:7px}
+  .shot{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+    background:#0d1219;line-height:0;transition:.15s}
+  .shot:hover{border-color:var(--acc);transform:translateY(-1px)}
+  .shot img{width:100%;height:78px;object-fit:cover;display:block}
+  .shot.plan img{height:110px;object-fit:contain;background:#0d1219}
+  .galwrap.nophoto{font-size:12.5px;color:var(--fg3);background:#12171f;
+    border:1px dashed var(--line2);border-radius:9px;padding:10px 12px}
+  .descbox{margin-top:9px;background:#10151d;border:1px solid var(--line);border-radius:9px;
+    padding:12px 14px;font-size:13px;color:var(--fg2);line-height:1.7;max-height:340px;overflow:auto}
   .card-f{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;
     margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}
   .dates{font-size:12.5px;color:var(--fg2)}
@@ -689,8 +766,10 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="note">
     <b>判定口径：</b>某房源连续消失 ≥ 7 天后才记为"卖出/下架"（宽限期用于过滤 PropertyGuru 限流/漏抓造成的假消失）。
     因此"卖出判定日"是<b>最后一次被看到在售之后约一周</b>，并非真实成交日；<b>挂牌价 ≠ 成交价</b>，本页不含任何成交价数据。
-    <br><br><b>为什么原链接打不开：</b>房源下架后 PropertyGuru 会删除详情页（403/404）。本页的"原始记录快照"与"当日原始日报"是本仓库独有的存档，
-    也是目前唯一能回看当时房源长什么样的地方。
+    <br><br><b>为什么原链接打不开：</b>房源下架后 PropertyGuru 会删除详情页（返回 200 但内容清空）。
+    本页的"原始记录快照"、"完整房源描述"与实拍照片是本仓库独有的存档，也是目前唯一能回看当时房源长什么样的地方。
+    <br><br><b>照片是怎么来的：</b>由 <code>archive_listing.py</code> 在房源<b>还在售时</b>抓取并归档（照片 / 户型图 / 完整描述 / 原始 HTML）。
+    监控开始归档之前就已下架的房源，PropertyGuru 那边已经清空，照片<b>永久不可恢复</b>——这类卡片会明确标注。
   </div>
 
   <div class="kpis">%(kpis)s</div>
