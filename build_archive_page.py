@@ -266,6 +266,98 @@ def build_html(rows):
     })
 
 
+INDEX_FILE = os.path.join(HERE, 'index.html')
+
+INDEX_TPL = r"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telok Blangah Parcview · HDB 4-room 监控归档</title>
+<style>
+  :root{--bg:#0e1116;--card:#161c26;--line:#252d3c;--line2:#323c4e;
+    --fg:#e8edf5;--fg2:#a8b3c5;--fg3:#6f7c92;--acc:#5b9dff;--acc2:#8bb8ff}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:radial-gradient(1100px 560px at 20% -10%,#1a2333 0%,var(--bg) 58%) no-repeat,var(--bg);
+    color:var(--fg);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;display:flex;align-items:center;justify-content:center;padding:48px 24px}
+  .wrap{max-width:760px;width:100%}
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:600}
+  h1{font-size:27px;margin:10px 0 10px;letter-spacing:-.01em}
+  p.sub{color:var(--fg2);font-size:14px;margin:0 0 26px}
+  a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);
+    border-left:3px solid var(--acc);border-radius:14px;padding:18px 20px;margin-bottom:14px;transition:.15s}
+  a.card:hover{border-color:var(--line2);transform:translateY(-2px)}
+  .t{font-size:17px;font-weight:650;margin-bottom:5px}
+  .d{font-size:13.5px;color:var(--fg2)}
+  .n{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;color:var(--fg3);margin-top:8px}
+  footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);color:var(--fg3);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Telok Blangah Parcview · HDB 4-room 非低楼层</div>
+  <h1>监控归档总入口</h1>
+  <p class="sub">
+    覆盖 blocks 80A/80B/80C · 90A/90B/91A/92B/93A/93B（Telok Blangah Street 31）。
+    每天 09:00 自动抓取 PropertyGuru 在售房源、归档详情页、生成下列两个页面。
+  </p>
+
+  <a class="card" href="hdb-archive.html">
+    <div class="t">房源实拍照片档案</div>
+    <div class="d">在售期间抓下来的实拍照片、户型图与完整描述。房源下架后 PropertyGuru 会清空详情页内容，这里是唯一还留得住的地方。</div>
+    <div class="n">%(nphoto)s 套房源 · %(photos)s 张照片 · %(plans)s 张户型图 · %(mb)s MB</div>
+  </a>
+
+  <a class="card" href="hdb-sold-snapshot.html">
+    <div class="t">卖出 / 下架 房源快照</div>
+    <div class="d">每一条"连续消失 ≥7 天"的卖出记录，还原成它在挂牌期间的样子：价格、面积、楼层、中介、营销文案、挂牌天数与价格走势。</div>
+    <div class="n">%(nsold)s 条卖出记录 · 其中 %(ngone)s 条已彻底下架</div>
+  </a>
+
+  <a class="card" href="reports/latest.md">
+    <div class="t">最新一期日报（Markdown）</div>
+    <div class="d">当日在上新 / 重新上架 / 价格变动 / 卖出 四个维度的完整清单。</div>
+    <div class="n">reports/report_*.md · 共 %(nreports)s 份归档</div>
+  </a>
+
+  <footer>
+    生成于 %(generated)s ｜ 数据全部归档在本仓库的 <code>hdb-monitor</code> 分支，不依赖任何第三方存档服务。
+  </footer>
+</div>
+</body>
+</html>
+"""
+
+
+def write_index(rows):
+    """Landing page so the repo root works as a GitHub Pages entry point."""
+    ok = [m for m in rows if not m.get('unavailable')]
+    photos = sum(len(m.get('photos') or []) for m in ok)
+    plans = sum(len(m.get('floorplans') or []) for m in ok)
+    mb = sum(m.get('archive_bytes') or 0 for m in rows) / 1048576.0
+    rdir = os.path.join(HERE, 'reports')
+    nreports = (len([f for f in os.listdir(rdir) if f.startswith('report_')])
+                if os.path.isdir(rdir) else 0)
+    nsold = ngone = 0
+    sfile = os.path.join(HERE, 'hdb-sold-snapshot.html')
+    if os.path.exists(sfile):
+        try:
+            with open(sfile, encoding='utf-8') as f:
+                t = f.read()
+            nsold = t.count('<article class="card ')
+            ngone = t.count('badge gone')
+        except Exception:
+            pass
+    with open(INDEX_FILE, 'w', encoding='utf-8') as f:
+        f.write(sub_tpl(INDEX_TPL, {
+            'nphoto': len(ok), 'photos': photos, 'plans': plans, 'mb': '%.1f' % mb,
+            'nsold': nsold, 'ngone': ngone, 'nreports': nreports,
+            'generated': datetime.now().strftime('%Y-%m-%d %H:%M'),
+        }))
+    log('已写出 %s' % INDEX_FILE)
+
+
 def git_commit_push(files, msg):
     if not HAVE_DULWICH or not os.path.exists(os.path.join(HERE, '.git')):
         log('dulwich/.git 不可用，跳过提交推送')
@@ -305,9 +397,10 @@ def main():
     with open(OUT_FILE, 'w', encoding='utf-8') as f:
         f.write(build_html(rows))
     log('已写出 %s（%d 套）' % (OUT_FILE, len(rows)))
+    write_index(rows)
     if args.push:
         git_commit_push(
-            ['build_archive_page.py', 'hdb-archive.html'],
+            ['build_archive_page.py', 'hdb-archive.html', 'index.html'],
             'archive gallery %s (%d listings)'
             % (datetime.now().strftime('%Y-%m-%d'), len(rows)))
 
