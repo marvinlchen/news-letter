@@ -25,6 +25,8 @@ from datetime import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ARCHIVE_DIR = os.path.join(HERE, 'archive')
+RAW = ('https://raw.githubusercontent.com/marvinlchen/news-letter/'
+       'hdb-monitor/')
 OUT_FILE = os.path.join(HERE, 'hdb-archive.html')
 
 GIT_AUTHOR = b'marvinlchen <marvinlchen@users.noreply.github.com>'
@@ -95,15 +97,16 @@ def card(m):
 
     photos = m.get('photos') or []
     plans = m.get('floorplans') or []
+    base = RAW + 'archive/' + str(m.get('id')) + '/'
     shots = ''.join(
         '<a class="shot" href="%s" target="_blank" rel="noopener">'
         '<img loading="lazy" src="%s" alt="%s photo %d"></a>'
-        % (esc(p), esc(p), esc(m.get('block')), i)
+        % (base + p, base + p, esc(m.get('block')), i)
         for i, p in enumerate(photos, 1))
     plan_shots = ''.join(
         '<a class="shot plan" href="%s" target="_blank" rel="noopener">'
         '<img loading="lazy" src="%s" alt="floor plan %d"></a>'
-        % (esc(p), esc(p), i) for i, p in enumerate(plans, 1))
+        % (base + p, base + p, i) for i, p in enumerate(plans, 1))
 
     desc = m.get('description') or ''
     desc_html = ('<details class="desc"><summary>完整房源描述</summary>'
@@ -128,7 +131,7 @@ def card(m):
   <header class="h">
     <span class="blk">%(blk)s</span><span class="id">#%(id)s</span>
     <span class="pr">%(price)s</span>
-    <span class="cnt">%(np)d 照片%(plans)s</span>
+    <span class="cnt">%(np)s 照片%(plans)s</span>
   </header>
   <p class="head">%(headline)s</p>
   <p class="meta">%(psf)s%(area)s</p>
@@ -138,7 +141,7 @@ def card(m):
   %(desc)s
   <footer class="f2">
     <a class="btn" href="%(url)s" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
-    <a class="btn ghost" href="archive/%(id)s/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
+    <a class="btn ghost" href="%(raw)s" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
 </article>""", {
         'blk': esc(m.get('block')), 'id': esc(m.get('id')),
@@ -151,6 +154,7 @@ def card(m):
         'planshtml': ('<div class="gallery plano">%s</div>' % plan_shots) if plan_shots else '',
         'facts': ''.join(facts), 'desc': desc_html,
         'url': esc(m.get('url') or ''),
+        'raw': base + 'page.html.gz',
     })
 
 
@@ -229,7 +233,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="kpis">%(kpis)s</div>
   <div class="cards">%(cards)s</div>
   <footer class="bottom">
-    生成于 %(generated)s ｜ 共 %(n)d 套房源 · %(np)d 张照片 · %(nf)d 张户型图 · 归档体积 %(mb)s MB<br>
+    生成于 %(generated)s ｜ 共 %(n)s 套房源 · %(np)s 张照片 · %(nf)s 张户型图 · 归档体积 %(mb)s MB<br>
     原始 HTML 存档为 <code>archive/&lt;id&gt;/page.html.gz</code>，解压后即为完整的详情页源码。
   </footer>
 </div>
