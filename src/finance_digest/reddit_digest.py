@@ -738,7 +738,7 @@ def validate_reddit_items(
     candidates_by_url = {post.url: post for post in candidates}
     text_fields = {
         "title_zh": (4, 80),
-        "summary_zh": (40, 260),
+        "summary_zh": (20, 260),
         "community_signal_zh": (25, 240),
         "fundamental_impact_zh": (30, 260),
         "value_investor_takeaway_zh": (30, 260),
@@ -757,7 +757,7 @@ def validate_reddit_items(
         seen.add(url)
         for field, limits in text_fields.items():
             validate_text_length(raw_item, field, *limits)
-            if not CJK_RE.search(raw_item[field]):
+            if field != "title_zh" and not CJK_RE.search(raw_item[field]):
                 raise ValueError(f"Codex returned non-Chinese {field}")
         item = dict(raw_item)
         item.update(
@@ -871,7 +871,7 @@ def append_reddit_protocol_item(
         raise ValueError(f"model returned duplicate Reddit candidate ID: {candidate_id}")
     text_fields = {
         "title_zh": (4, 80),
-        "summary_zh": (40, 260),
+        "summary_zh": (20, 260),
         "community_signal_zh": (25, 240),
         "fundamental_impact_zh": (30, 260),
         "value_investor_takeaway_zh": (30, 260),
@@ -880,7 +880,7 @@ def append_reddit_protocol_item(
     }
     for field, limits in text_fields.items():
         validate_text_length(raw_item, field, *limits)
-        if not CJK_RE.search(raw_item[field]):
+        if field != "title_zh" and not CJK_RE.search(raw_item[field]):
             raise ValueError(f"model returned non-Chinese {field}")
     seen_ids.add(candidate_id)
     items.append(

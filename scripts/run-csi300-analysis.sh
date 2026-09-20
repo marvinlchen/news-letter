@@ -25,8 +25,9 @@ fi
 echo "=== 开始生成沪深300涨跌分析 ==="
 echo "时间: $(date)"
 
+# 模型留空 = 使用 CodeBuddy 全局模型（~/.codebuddy/settings.json 的 model）
 CSI300_AI_MODEL="${CSI300_AI_MODEL:-codebuddy}" \
-CSI300_AI_MODEL_NAME="${CSI300_AI_MODEL_NAME:-hy3}" \
+CSI300_AI_MODEL_NAME="${CSI300_AI_MODEL_NAME:-}" \
   python3 "$SCRIPT" --index csi300 --output-dir "$REPORTS_DIR" --top "${CSI300_TOP:-20}"
 
 echo "=== 分析完成 ==="

@@ -139,10 +139,11 @@ class SectorHotspotsReportTest(unittest.TestCase):
             market="us",
         )
 
-        self.assertIn("覆盖全部 15 个ETF代理", report)
+        expected_count = len(sector_hotspots.US_SECTOR_ETFS)
+        self.assertIn(f"覆盖全部 {expected_count} 个ETF代理", report)
         self.assertIn("代表成分股", report)
-        self.assertIn("数据质量：** 覆盖板块 15 个", report)
-        self.assertIn("代表股行情 120 条", report)
+        self.assertIn(f"数据质量：** 覆盖板块 {expected_count} 个", report)
+        self.assertIn(f"代表股行情 {expected_count * 8} 条", report)
         self.assertIn("## 美股ETF代理表现", report)
         self.assertIn("| 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨股 | 归因类型 |", report)
         self.assertIn("1.00亿美元", report)

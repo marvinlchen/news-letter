@@ -675,7 +675,7 @@ def run(argv: list[str] | None = None) -> int:
     print(report_md)
     if not articles:
         return 2
-    if args.require_codex and mode != "codex":
+    if args.require_codex and mode not in {"codex", "codebuddy"}:
         return 3
     return 0
 

@@ -13,7 +13,15 @@ US_SECTOR_HOTSPOTS_MARKER="# finance-us-sector-hotspots"
 NATIONAL_TEAM_ETF_MARKER="# finance-national-team-etf-weekly"
 A_SHARE_SECTOR_RADAR_MARKER="# finance-a-share-sector-radar-weekly"
 ARCHIVE_MARKER="# finance-archive-legacy"
+REDDIT_ENV_FILE="${REDDIT_ENV_FILE:-$HOME/.config/finance-news-digest/reddit.env}"
 mkdir -p "$PROJECT_ROOT/var/log"
+
+reddit_oauth_configured=0
+if [[ -f "$REDDIT_ENV_FILE" ]] \
+  && grep -Eq '^[[:space:]]*(export[[:space:]]+)?REDDIT_CLIENT_ID=' "$REDDIT_ENV_FILE" \
+  && grep -Eq '^[[:space:]]*(export[[:space:]]+)?REDDIT_CLIENT_SECRET=' "$REDDIT_ENV_FILE"; then
+  reddit_oauth_configured=1
+fi
 
 if command -v flock >/dev/null 2>&1; then
   COMMAND="/usr/bin/flock -n $PROJECT_ROOT/var/run.lock $PROJECT_ROOT/scripts/run-daily.sh"
@@ -98,8 +106,12 @@ printf '0 4 * * * %s >> %s/var/log/cron.log 2>&1 %s\n' \
   "$COMMAND" "$PROJECT_ROOT" "$MARKER" >> "$tmp"
 printf '0 5 * * 0 %s >> %s/var/log/deep-reads.log 2>&1 %s\n' \
   "$DEEP_COMMAND" "$PROJECT_ROOT" "$DEEP_MARKER" >> "$tmp"
-printf '30 4 * * * %s >> %s/var/log/reddit-digest.log 2>&1 %s\n' \
-  "$REDDIT_COMMAND" "$PROJECT_ROOT" "$REDDIT_MARKER" >> "$tmp"
+if [[ "$reddit_oauth_configured" == "1" ]]; then
+  printf '30 4 * * * %s >> %s/var/log/reddit-digest.log 2>&1 %s\n' \
+    "$REDDIT_COMMAND" "$PROJECT_ROOT" "$REDDIT_MARKER" >> "$tmp"
+else
+  echo "[WARN] Reddit cron disabled: add REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to $REDDIT_ENV_FILE to re-enable it." >&2
+fi
 printf '0 7 * * 2-6 %s >> %s/var/log/us-sector-hotspots.log 2>&1 %s\n' \
   "$US_SECTOR_HOTSPOTS_COMMAND" "$PROJECT_ROOT" "$US_SECTOR_HOTSPOTS_MARKER" >> "$tmp"
 printf '30 15 * * 1-5 %s >> %s/var/log/csi300-analysis.log 2>&1 %s\n' \

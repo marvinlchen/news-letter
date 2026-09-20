@@ -81,7 +81,7 @@ def configure_index(index_type):
     AI_MODEL = os.environ.get(f"{p}_AI_MODEL", "codebuddy")
     AI_MODEL_NAME = os.environ.get(f"{p}_AI_MODEL_NAME", "")
     NEWS_FETCH_LIMIT = int(os.environ.get(f"{p}_NEWS_FETCH_LIMIT", "8"))
-    NEWS_PROMPT_LIMIT = int(os.environ.get(f"{p}_NEWS_PROMPT_LIMIT", "6"))
+    NEWS_PROMPT_LIMIT = int(os.environ.get(f"{p}_NEWS_PROMPT_LIMIT", "4"))
     NEWS_EVIDENCE_LIMIT = int(os.environ.get(f"{p}_NEWS_EVIDENCE_LIMIT", "2"))
     NEWS_LOOKBACK_DAYS = int(os.environ.get(f"{p}_NEWS_LOOKBACK_DAYS", "7"))
     NEWS_SOURCE_LIMIT = int(os.environ.get(f"{p}_NEWS_SOURCE_LIMIT", "6"))
@@ -91,7 +91,7 @@ def configure_index(index_type):
     EASTMONEY_STOCK_NEWS_LIMIT = int(os.environ.get(f"{p}_EASTMONEY_STOCK_NEWS_LIMIT", "8"))
     EASTMONEY_MARKET_NEWS_LIMIT = int(os.environ.get(f"{p}_EASTMONEY_MARKET_NEWS_LIMIT", "20"))
     THS_HOT_REASON_LIMIT = int(os.environ.get(f"{p}_THS_HOT_REASON_LIMIT", "300"))
-    MARKET_NEWS_PROMPT_LIMIT = int(os.environ.get(f"{p}_MARKET_NEWS_PROMPT_LIMIT", "8"))
+    MARKET_NEWS_PROMPT_LIMIT = int(os.environ.get(f"{p}_MARKET_NEWS_PROMPT_LIMIT", "5"))
 
     print(f"[INFO] 配置指数: {INDEX_DISPLAY_NAME} (code={INDEX_CODE}, board={INDEX_BOARD_FS or 'akshare'})", file=sys.stderr)
 
@@ -100,7 +100,7 @@ def configure_index(index_type):
 AI_MODEL = os.environ.get("CSI300_AI_MODEL", "codebuddy")
 AI_MODEL_NAME = os.environ.get("CSI300_AI_MODEL_NAME", "")
 NEWS_FETCH_LIMIT = int(os.environ.get("CSI300_NEWS_FETCH_LIMIT", "8"))
-NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_NEWS_PROMPT_LIMIT", "6"))
+NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_NEWS_PROMPT_LIMIT", "4"))
 NEWS_EVIDENCE_LIMIT = int(os.environ.get("CSI300_NEWS_EVIDENCE_LIMIT", "2"))
 NEWS_LOOKBACK_DAYS = int(os.environ.get("CSI300_NEWS_LOOKBACK_DAYS", "7"))
 NEWS_SOURCE_LIMIT = int(os.environ.get("CSI300_NEWS_SOURCE_LIMIT", "6"))
@@ -110,7 +110,7 @@ TOP_N_DEFAULT = int(os.environ.get("CSI300_TOP", "20"))
 EASTMONEY_STOCK_NEWS_LIMIT = int(os.environ.get("CSI300_EASTMONEY_STOCK_NEWS_LIMIT", "8"))
 EASTMONEY_MARKET_NEWS_LIMIT = int(os.environ.get("CSI300_EASTMONEY_MARKET_NEWS_LIMIT", "20"))
 THS_HOT_REASON_LIMIT = int(os.environ.get("CSI300_THS_HOT_REASON_LIMIT", "300"))
-MARKET_NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_MARKET_NEWS_PROMPT_LIMIT", "8"))
+MARKET_NEWS_PROMPT_LIMIT = int(os.environ.get("CSI300_MARKET_NEWS_PROMPT_LIMIT", "5"))
 REJECT_SCORE = -100
 EASTMONEY_PUSH2 = "https://push2.eastmoney.com/api/qt/clist/get"
 EASTMONEY_PUSH2_FALLBACK = "https://push2delay.eastmoney.com/api/qt/clist/get"
@@ -120,6 +120,18 @@ CNINFO_STOCK_INDEX_CACHE = None
 THS_HOT_REASON_CACHE = {}
 EASTMONEY_MARKET_NEWS_CACHE = {}
 CSI_RUN_STATS = {}
+
+
+def effective_ai_model_name():
+    if AI_MODEL_NAME:
+        return AI_MODEL_NAME
+    if AI_MODEL != "codebuddy":
+        return AI_MODEL
+    try:
+        settings = json.loads((Path.home() / ".codebuddy" / "settings.json").read_text(encoding="utf-8"))
+        return settings.get("model") or "codebuddy"
+    except (OSError, ValueError, TypeError):
+        return "codebuddy"
 PUSH2_HEADERS = {
     "User-Agent": "Mozilla/5.0",
     "Referer": "https://quote.eastmoney.com/",
@@ -320,7 +332,7 @@ def reset_csi_run_stats(target_date=None, top_n=None, skip_ai=False):
         "index": INDEX_TYPE,
         "index_display_name": INDEX_DISPLAY_NAME,
         "mode": "skip-ai" if skip_ai else AI_MODEL,
-        "ai_model_name": AI_MODEL_NAME,
+        "ai_model_name": effective_ai_model_name(),
         "top_n": top_n,
         "codex_error": False,
         "fallback_used": False,
@@ -870,37 +882,343 @@ def parse_codebuddy_protocol(raw, gainers, losers):
     )
 
 
-def run_codebuddy_analysis(prompt, gainers, losers, max_attempts=2):
-    """Call CodeBuddy with a compact protocol and tolerate partial outputs."""
-    last_error = None
-    attempts = [
-        prompt,
-        (
-            prompt
-            + "\n\n## 重新输出要求\n"
-            + "上一次输出不是机器协议行，已被脚本拒绝。请重新输出完整结果："
-            + "第一行必须以 MARKET_SUMMARY<TAB> 开头；"
-            + "只允许纯文本协议记录、TAB 分隔、不要 JSON、不要 Markdown、不要代码块、不要空行、不要解释任务已完成。"
-            + "股票行必须为 5 列：TAG、股票代码、归因类型、原因、证据ID列表。"
-            + "第三列归因类型只能是直接催化/行业带动/资金交易/弱证据待复核；"
-            + "第五列填写 0-2 个候选证据 ID，用逗号分隔；没有合适证据时留空。"
-        ),
-    ]
-    for attempt in range(max_attempts):
-        CSI_RUN_STATS["parse_attempts"] = attempt + 1
-        raw = call_ai(attempts[min(attempt, len(attempts) - 1)], max_tokens=4096, expect_json=False)
-        try:
-            return parse_codebuddy_protocol(raw, gainers, losers)
-        except Exception as exc:
-            last_error = exc
-            CSI_RUN_STATS.setdefault("codebuddy_parse_errors", []).append(str(exc))
-            print(f"[WARN] CodeBuddy 输出解析失败，第 {attempt + 1} 次尝试: {exc}", file=sys.stderr)
-            print(f"[DEBUG] AI 原始输出:\n{raw}", file=sys.stderr)
+# ── 乱码修复（U+FFFD 替换字符） ────────────────────────────────────────────────
+# hy3 等长文本生成偶发把多字节中文替换成 U+FFFD 替换字符（�），且多出现在模型
+# “复述”新闻标题或固定术语的位置。这些干净原文就在候选新闻标题 / 市场快讯 /
+# 固定归因类型里，可用上下文锚定做精确回填，消除发布报告中的乱码。
 
-    print(f"[WARN] CodeBuddy 多次输出失败，使用兜底报告: {last_error}", file=sys.stderr)
-    CSI_RUN_STATS["codex_error"] = True
-    CSI_RUN_STATS["fallback_used"] = True
-    return build_fallback_result(gainers, losers)
+FINANCIAL_REPAIR_TERMS = [
+    "沪指", "深成指", "深证成指", "创指", "创业板指", "科创板", "创业板",
+    "中证1000", "中证500", "沪深300", "上证指数", "深证指数",
+    "全面赋能", "资金交易", "直接催化", "行业带动", "弱证据待复核",
+    "拟收购", "收购", "重组", "复牌", "涨停", "跌停",
+]
+
+
+def build_repair_corpus(gainers, losers, market_news_context=None):
+    """收集生成时可用的干净原文，作为乱码回填的候选语料。"""
+    corpus = []
+    seen = set()
+
+    def add(s):
+        if not s or not isinstance(s, str):
+            return
+        if chr(0xfffd) in s:
+            return
+        if s not in seen:
+            seen.add(s)
+            corpus.append(s)
+
+    for stocks in (gainers or [], losers or []):
+        for st in stocks:
+            add(st.get("name", ""))
+            for news in (st.get("news") or [])[:NEWS_PROMPT_LIMIT]:
+                add(news.get("title", ""))
+                add(news.get("summary", ""))
+    for news in (market_news_context or []):
+        add(news.get("title", ""))
+        add(news.get("summary", ""))
+    for t in FINANCIAL_REPAIR_TERMS:
+        add(t)
+    return corpus
+
+
+def repair_garbled_text(text, corpus):
+    """把文本中被替换成 U+FFFD 的中文字段，依据干净语料回填。
+
+    返回 (修复后文本, 已修复处数)。无法确定的残留 U+FFFD 直接去掉，
+    避免把替换字符发布到报告中。
+    """
+    rc = chr(0xfffd)
+    if rc not in text:
+        return text, 0
+
+    corpus = corpus or []
+    out = []
+    i = 0
+    n = len(text)
+    fixed = 0
+    while i < n:
+        if text[i] == rc:
+            j = i
+            while j < n and text[j] == rc:
+                j += 1
+            left = text[max(0, i - 10):i]
+            right = text[j:j + 12]
+            repl = _find_garbled_replacement(left, right, corpus)
+            if repl is None:
+                repl = ""
+            out.append(repl)
+            if repl != "":
+                fixed += 1
+            i = j
+        else:
+            out.append(text[i])
+            i += 1
+    return "".join(out), fixed
+
+
+_PUNCT_RE = re.compile(
+    r"[\u3000\s，。、；：,.!！?？;:()（）\[\]【】\"'“”‘’《》<>—\-~·/]"
+)
+
+
+def _norm_text(s):
+    return _PUNCT_RE.sub("", s)
+
+
+def _raw_pre_before_norm(raw_s, sn, pos):
+    """Return the raw prefix of raw_s whose normalized form ends at normalized pos."""
+    raw_idx = 0
+    norm_len = 0
+    for ch in raw_s:
+        if norm_len >= pos:
+            break
+        raw_idx += 1
+        if _PUNCT_RE.match(ch) is None:
+            norm_len += 1
+    return raw_s[:raw_idx]
+
+
+def _find_garbled_replacement(left, right, corpus):
+    """根据左右上下文，从语料中找出被替换掉的原文片段。
+
+    对右侧上下文做标点容错（模型复述时标点可能与原文不同），并取 right
+    在语料中出现的最长前缀来定位；左侧用 left 的最长后缀锚定，容忍 left 中
+    多出的无关字符（如“属资” vs 语料“资金”）。
+    """
+    rc = chr(0xfffd)
+    right_norm = _norm_text(right) if right else ""
+    best = None
+    best_quality = -1
+    best_len = None
+    for s in corpus:
+        sn = _norm_text(s)
+        if right_norm:
+            # 取 right_norm 在语料中出现的最长前缀，容忍尾部多余上下文与
+            # 模型对中间文字的压缩/改写（如“科创板今日平均换手率”被压成“科创板换手率”）。
+            pre_raw = None
+            for rlen in range(len(right_norm), 0, -1):
+                sub = right_norm[:rlen]
+                p = sn.find(sub)
+                if p >= 0:
+                    pre_raw = _raw_pre_before_norm(s, sn, p)
+                    break
+            if pre_raw is None:
+                continue
+        else:
+            if not left or left not in s:
+                continue
+            k = s.rfind(left)
+            pre_raw = s[k + len(left):]
+        # 用 left 的最长后缀锚定 pre_raw，确定 gap。quality 取匹配后缀长度 L：
+        # 匹配越长越可信，未锚定（fallback）为 0，确保带锚定的候选优先于仅靠
+        # right 前邻字符的候选（例如“自研AI引擎”锚定应压过“赣能股份”的巧合匹配）。
+        gap = None
+        if left:
+            for L in range(len(left), 0, -1):
+                suf = left[-L:]
+                p = pre_raw.rfind(suf)
+                if p >= 0:
+                    gap = pre_raw[p + len(suf):]
+                    quality = L
+                    break
+        if gap is None:
+            # left 无法锚定：取 right 前紧邻的少量字符作为候选（低优先级）
+            if len(pre_raw) <= 4:
+                gap = pre_raw
+            else:
+                gap = pre_raw[-1:]
+            quality = 0
+        if rc in gap:
+            continue
+        gap_len = len(gap)
+        if gap_len < 1 or gap_len > 10:
+            continue
+        if quality > best_quality or (
+            quality == best_quality and (best_len is None or gap_len < best_len)
+        ):
+            best_quality = quality
+            best_len = gap_len
+            best = gap
+    return best
+
+
+def parse_protocol_summaries(raw):
+    """Extract the 3 summary lines from a CodeBuddy protocol response."""
+    cleaned = strip_code_fences(raw or "")
+    market_summary = gainers_summary = losers_summary = ""
+    summary_pattern = re.compile(
+        r"^(MARKET_SUMMARY|GAINERS_SUMMARY|LOSERS_SUMMARY)\s*(?:\t|\||:|：)\s*(.+)$",
+        re.IGNORECASE,
+    )
+    for raw_line in cleaned.splitlines():
+        line = re.sub(r"^\s*(?:[-*]|\d+[.)])\s*", "", raw_line.strip())
+        if not line:
+            continue
+        m = summary_pattern.match(line)
+        if m:
+            tag = m.group(1).upper()
+            val = normalize_inline_text(m.group(2))
+            if tag == "MARKET_SUMMARY":
+                market_summary = val
+            elif tag == "GAINERS_SUMMARY":
+                gainers_summary = val
+            elif tag == "LOSERS_SUMMARY":
+                losers_summary = val
+    return market_summary, gainers_summary, losers_summary
+
+
+def parse_protocol_stocks(raw, stocks, tag):
+    """Extract GAINER/LOSER per-stock lines for one board from a CodeBuddy response."""
+    cleaned = strip_code_fences(raw or "")
+    reasons = {}
+    attribution = {}
+    evidence_ids = {}
+    stock_pattern = re.compile(
+        r"^(GAINER|LOSER)\s*(?:\t|\||:|：)\s*([0-9]{6})\s*(?:\t|\||:)\s*(.+)$",
+        re.IGNORECASE,
+    )
+    valid_codes = {st.get("code", "") for st in stocks}
+    for raw_line in cleaned.splitlines():
+        line = re.sub(r"^\s*(?:[-*]|\d+[.)])\s*", "", raw_line.strip())
+        if not line:
+            continue
+        fields = split_protocol_fields(line)
+        if len(fields) >= 3 and fields[0].upper() in {"GAINER", "LOSER"} and re.fullmatch(r"[0-9]{6}", fields[1]):
+            t = fields[0].upper()
+            code = fields[1]
+            if t != tag:
+                continue
+            if len(fields) >= 5 and any(item in fields[2] for item in ATTRIBUTION_TYPES):
+                attribution_type = normalize_attribution_type(fields[2])
+                reason = normalize_inline_text(fields[3])
+                selected_ids = parse_evidence_ids(fields[4])
+            else:
+                attribution_type = ""
+                reason = normalize_inline_text(fields[2])
+                selected_ids = parse_evidence_ids(fields[3]) if len(fields) >= 4 else []
+        else:
+            m = stock_pattern.match(line)
+            if not m:
+                continue
+            t = m.group(1).upper()
+            code = m.group(2)
+            if t != tag:
+                continue
+            attribution_type = ""
+            reason = normalize_inline_text(m.group(3))
+            selected_ids = parse_evidence_ids(reason)
+            if selected_ids:
+                reason = normalize_inline_text(re.sub(
+                    r"(?:\t|\||[,，;；])?\s*(?:[GL]\d+-\d+\s*[,，;；]?\s*)+$",
+                    "",
+                    reason,
+                    flags=re.IGNORECASE,
+                ))
+        if code not in valid_codes:
+            continue
+        reasons[code] = reason
+        if attribution_type:
+            attribution[code] = attribution_type
+        evidence_ids[code] = selected_ids
+    return reasons, attribution, evidence_ids
+
+
+def run_codebuddy_analysis(prompt, gainers, losers, max_attempts=2, market_news_context=None, target_date=None):
+    """Call CodeBuddy with small batched prompts so each response fits the output cap.
+
+    Historical failure: a single oversized prompt made CodeBuddy emit the short
+    summaries first and then truncate the long per-stock tail, so every stock fell
+    back to "弱证据待复核". CodeBuddy exposes no --max-tokens flag, so instead we
+    split into (1) a tiny summaries-only call and (2) per-stock batches (default 12
+    stocks each). Each response is now small enough to never be truncated.
+    """
+    if target_date is None:
+        target_date = CSI_RUN_STATS.get("target_date")
+    repair_corpus = build_repair_corpus(gainers, losers, market_news_context)
+
+    def ai_call(p):
+        CSI_RUN_STATS["parse_attempts"] = int(CSI_RUN_STATS.get("parse_attempts", 0) or 0) + 1
+        raw = call_ai(p, max_tokens=4096, expect_json=False)
+        # 回填模型偶发的 U+FFFD 乱码（以干净候选语料为基准）
+        raw, n_fixed = repair_garbled_text(raw, repair_corpus)
+        if n_fixed:
+            CSI_RUN_STATS["garbled_repaired"] = int(CSI_RUN_STATS.get("garbled_repaired", 0) or 0) + n_fixed
+        return raw
+
+    # 1) summaries (tiny output)
+    market_summary = gainers_summary = losers_summary = ""
+    try:
+        sum_prompt = build_codebuddy_prompt(
+            target_date, gainers, losers, market_news_context=market_news_context, mode="summaries"
+        )
+        sum_raw = ai_call(sum_prompt)
+        market_summary, gainers_summary, losers_summary = parse_protocol_summaries(sum_raw)
+    except Exception as exc:
+        CSI_RUN_STATS.setdefault("codebuddy_parse_errors", []).append(f"summaries: {exc}")
+    if not (market_summary and gainers_summary and losers_summary):
+        CSI_RUN_STATS.setdefault("partial_stock_fallback", []).append("SUMMARY")
+        market_summary = market_summary or f"{target_date} {INDEX_DISPLAY_NAME}成分股涨跌分化，详见下方板块分析。"
+        gainers_summary = gainers_summary or "涨幅股共性需结合候选新闻确认。"
+        losers_summary = losers_summary or "跌幅股共性需结合候选新闻确认。"
+
+    # 2) per-stock batches (small output each)
+    gainer_reasons, gainer_attribution, gainer_evidence = {}, {}, {}
+    loser_reasons, loser_attribution, loser_evidence = {}, {}, {}
+    batch_size = int(os.environ.get(f"{INDEX_TYPE}_STOCK_BATCH_SIZE", "12"))
+    for stocks, mode, tag, is_gainers in (
+        (gainers, "gainers", "GAINER", True),
+        (losers, "losers", "LOSER", False),
+    ):
+        for start in range(0, max(len(stocks), 1), batch_size):
+            chunk = stocks[start:start + batch_size]
+            if not chunk:
+                continue
+            batch_gainers = chunk if is_gainers else []
+            batch_losers = [] if is_gainers else chunk
+            try:
+                bp = build_codebuddy_prompt(
+                    target_date, batch_gainers, batch_losers, market_news_context=None, mode=mode
+                )
+                raw = ai_call(bp)
+                reasons, attribution, ev_ids = parse_protocol_stocks(raw, chunk, tag)
+            except Exception as exc:
+                CSI_RUN_STATS.setdefault("codebuddy_parse_errors", []).append(f"{mode}[{start}]: {exc}")
+                reasons, attribution, ev_ids = {}, {}, {}
+            catalog = build_evidence_catalog(batch_gainers, batch_losers)
+            for st in chunk:
+                code = st.get("code", "")
+                if code not in reasons or not (reasons[code] or "").strip():
+                    reasons[code] = build_fallback_reason(
+                        st, "当日涨幅居前" if is_gainers else "当日跌幅居前"
+                    )
+                    CSI_RUN_STATS.setdefault("partial_stock_fallback", []).append(code)
+                ev = resolve_evidence_ids(st, ev_ids.get(code, []), catalog)
+                if is_gainers:
+                    gainer_reasons[code] = reasons[code]
+                    if code in attribution:
+                        gainer_attribution[code] = attribution[code]
+                    gainer_evidence[code] = ev
+                else:
+                    loser_reasons[code] = reasons[code]
+                    if code in attribution:
+                        loser_attribution[code] = attribution[code]
+                    loser_evidence[code] = ev
+
+    return build_result(
+        gainers,
+        losers,
+        market_summary,
+        gainers_summary,
+        losers_summary,
+        gainer_reasons,
+        loser_reasons,
+        gainer_evidence,
+        loser_evidence,
+        gainer_attribution,
+        loser_attribution,
+    )
 
 
 def extract_json_response(text):
@@ -987,21 +1305,55 @@ def _extract_from_parsed_object(parsed):
 def _recover_protocol_from_raw(text):
     """Recover the assistant protocol from truncated / malformed CodeBuddy output.
 
-    Scans for complete JSON string values on `output_text` / `text` / `result` keys,
-    JSON-unescapes them, and returns the one that best matches the compact protocol shape
-    (starts with MARKET_SUMMARY, most summary + stock lines). The large prompt echo is
-    excluded because it carries `<user_query>` and is not protocol-shaped.
+    Handles two real-world truncation shapes (the summary lines are emitted FIRST in
+    the protocol, so a partial capture is still useful):
+      * complete JSON string values (normal, or only the trailing `result` event cut) ->
+        the value is unescaped and scored normally;
+      * string values cut mid-stream by the output cap (no closing quote) -> the partial
+        body is recovered as-is, so the already-written MARKET_SUMMARY / *_SUMMARY lines
+        are not lost.
+
+    The large prompt echo (a `text` value carrying `<user_query>`) is excluded by scoring.
     """
-    pat = re.compile(r'"(?:output_text|text|result)"\s*:\s*"((?:[^"\\]|\\.)*)"', re.DOTALL)
     best = None
     best_score = -1
-    for m in pat.findall(text):
-        u = _json_unescape_string(m)
+    # Match the opening quote of any `output_text` / `text` / `result` string value.
+    for m in re.finditer(r'"(?:output_text|text|result)"\s*:\s*"', text):
+        start = m.end()  # char immediately after the opening quote
+        body, truncated = _scan_json_string(text, start)
+        u = _best_effort_unescape(body) if truncated else _json_unescape_string(body)
         score = _protocol_score(u)
         if score > best_score:
             best_score = score
             best = u
     return best
+
+
+def _scan_json_string(text, start):
+    """Scan a JSON string body beginning at the char after its opening quote.
+
+    Returns (body, truncated). `truncated` is True when no closing unescaped quote is
+    found before end-of-text, i.e. the value was cut off by an output cap.
+    """
+    i = start
+    n = len(text)
+    while i < n:
+        c = text[i]
+        if c == "\\":
+            i += 2  # skip the escaped char
+            continue
+        if c == '"':
+            return text[start:i], False
+        i += 1
+    return text[start:], True
+
+
+def _best_effort_unescape(body):
+    """Unescape a (possibly incomplete) JSON string body for recovery purposes."""
+    try:
+        return json.loads('"' + body + '"')
+    except (json.JSONDecodeError, ValueError):
+        return body.replace("\\n", "\n").replace("\\t", "\t").replace('\\"', '"')
 
 
 def _protocol_score(u):
@@ -1061,10 +1413,10 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
             if schema_path:
                 cmd.extend(["--output-schema", schema_path])
             cmd.append(prompt)
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+            result = subprocess.run(cmd, capture_output=True, text=True, errors="replace", timeout=600)
             if result.returncode != 0:
                 raise RuntimeError((result.stderr or result.stdout).strip())
-            text = Path(output_path).read_text(encoding="utf-8").strip()
+            text = Path(output_path).read_text(encoding="utf-8", errors="replace").strip()
             if not text:
                 text = result.stdout.strip()
             return extract_json_response(text) if expect_json else text
@@ -1083,9 +1435,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
         codebuddy_executable = shutil.which("codebuddy")
         if codebuddy_executable:
             if AI_MODEL_NAME:
-                cmd = [codebuddy_executable, "-p", "--output-format", "json", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
+                cmd = [codebuddy_executable, "-p", "--output-format", "text", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
             else:
-                cmd = [codebuddy_executable, "-p", "--output-format", "json", "--input-format", "text"]
+                cmd = [codebuddy_executable, "-p", "--output-format", "text", "--input-format", "text"]
         else:
             cmd = None
 
@@ -1106,9 +1458,9 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
                         continue
                     # 如果成功，使用 node 直接运行 codebuddy
                     if AI_MODEL_NAME:
-                        cmd = [node_path, cb_path, "-p", "--output-format", "json", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
+                        cmd = [node_path, cb_path, "-p", "--output-format", "text", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
                     else:
-                        cmd = [node_path, cb_path, "-p", "--output-format", "json", "--input-format", "text"]
+                        cmd = [node_path, cb_path, "-p", "--output-format", "text", "--input-format", "text"]
                     break
                 except Exception:
                     continue
@@ -1116,22 +1468,17 @@ def call_ai(prompt, max_tokens=4096, expect_json=True):
         if cmd is None:
             # 如果都找不到，使用默认命令（会失败并抛出错误）
             if AI_MODEL_NAME:
-                cmd = ["codebuddy", "-p", "--output-format", "json", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
+                cmd = ["codebuddy", "-p", "--output-format", "text", "--input-format", "text", f"--model={AI_MODEL_NAME}"]
             else:
-                cmd = ["codebuddy", "-p", "--output-format", "json", "--input-format", "text"]
+                cmd = ["codebuddy", "-p", "--output-format", "text", "--input-format", "text"]
         
-        result = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=600)
+        result = subprocess.run(cmd, input=prompt, capture_output=True, text=True, errors="replace", timeout=600)
         if result.returncode != 0:
             raise RuntimeError((result.stderr or result.stdout).strip())
         text = result.stdout.strip()
 
-        # 解析 codebuddy 的输出（--output-format json）。
-        # 输出通常是事件数组：user message、file-history-snapshot、assistant message、result。
-        # 稳健策略：
-        #  1) 用 strict=False 解析，容忍字符串内的裸控制符（TAB/换行未转义时 strict 会抛错）。
-        #  2) 优先取 type=="result" 且非 is_error 的 result 字段（CLI 规范化的最终输出）。
-        #  3) 回退：拼接所有 assistant 消息里的 text/output_text 片段。
-        #  4) 全部失败时保留原始文本。
+        # text 模式不会回显大 prompt，可避开 CodeBuddy 约 64KB 的 stdout 截断。
+        # 保留提取器兼容调用方显式切回 JSON 的情况；纯文本会原样保留。
         extracted = _extract_codebuddy_text(text)
         if extracted is not None:
             text = extracted
@@ -2185,8 +2532,21 @@ def build_prompt(date_str, gainers, losers, market_news_context=None):
     return "\n".join(lines)
 
 
-def build_codebuddy_prompt(date_str, gainers, losers, market_news_context=None):
-    """Build a compact line-based prompt for CodeBuddy."""
+def build_codebuddy_prompt(date_str, gainers, losers, market_news_context=None, mode="full"):
+    """Build a compact line-based prompt for CodeBuddy.
+
+    mode="full"       -> legacy single-call prompt (summaries + all per-stock lines)
+    mode="summaries"  -> only the 3 summary lines (tiny output)
+    mode="gainers"/"losers" -> only that board's per-stock lines (small output)
+
+    Splitting into these modes keeps each CodeBuddy response small enough to avoid
+    output truncation, which previously caused every stock to fall back to
+    "弱证据待复核" because the long per-stock tail was cut off.
+    """
+    if mode == "summaries":
+        return _build_summaries_prompt(date_str, gainers, losers, market_news_context)
+    if mode in ("gainers", "losers"):
+        return _build_perstock_prompt(date_str, gainers, losers, mode)
     top_n = max(len(gainers), len(losers))
     lines = [
         "机器协议模式：你的回复会被脚本逐行解析，任何自然语言开场、总结、Markdown、代码块或空行都会导致任务失败。",
@@ -2200,6 +2560,7 @@ def build_codebuddy_prompt(date_str, gainers, losers, market_news_context=None):
         "最终输出必须是纯文本记录，每行一条，不要 JSON，不要 Markdown，不要代码块，不要空行。",
         "字段分隔符统一使用 TAB。",
         "summary 和 reason 必须是单行文本，不能包含 TAB 或换行。",
+        "输出必须是合法 UTF-8 中文，禁止出现替换字符（�）或任何乱码；若不确定用字，请用近义中文词代替，不要输出空替换符。",
         "严格按照以下顺序输出：",
         "MARKET_SUMMARY<TAB>指数概况",
         "GAINERS_SUMMARY<TAB>涨幅板块共性",
@@ -2278,6 +2639,131 @@ def build_codebuddy_prompt(date_str, gainers, losers, market_news_context=None):
             lines.append("NEWS （暂无候选新闻）")
         lines.append("")
 
+    return "\n".join(lines)
+
+
+def _build_summaries_prompt(date_str, gainers, losers, market_news_context):
+    """Build a prompt that asks CodeBuddy for ONLY the 3 summary lines.
+
+    Includes the full stock + news context (so it can summarise) but requests a
+    tiny output, which fits comfortably within the model's output cap.
+    """
+    top_n = max(len(gainers), len(losers))
+    lines = [
+        "机器协议模式：你的回复会被脚本逐行解析，任何自然语言开场、总结、Markdown、代码块或空行都会导致任务失败。",
+        "只输出 3 行协议行（指数概况、涨幅板块共性、跌幅板块共性），不要输出任何 GAINER/LOSER 行。",
+        "第一行必须是 MARKET_SUMMARY<TAB>指数概况；第二行 GAINERS_SUMMARY<TAB>涨幅板块共性；第三行 LOSERS_SUMMARY<TAB>跌幅板块共性。",
+        "禁止使用项目符号、标题、编号列表、表格、加粗、代码围栏。",
+        "",
+        "# 任务",
+        f"你是专业财经分析师。请分析 {date_str} {INDEX_DISPLAY_NAME}指数成分股涨跌幅 Top {top_n}。",
+        "只能基于下方行情数据、新闻候选和市场/板块快讯做概括，不要编造信息。",
+        "最终输出必须是纯文本记录，每行一条，不要 JSON，不要 Markdown，不要代码块，不要空行。",
+        "字段分隔符统一使用 TAB。summary 必须是单行文本，不能包含 TAB 或换行。",
+        "输出必须是合法 UTF-8 中文，禁止出现替换字符（�）或任何乱码；若不确定用字，请用近义中文词代替。",
+        "严格按照以下顺序输出：",
+        "MARKET_SUMMARY<TAB>指数概况",
+        "GAINERS_SUMMARY<TAB>涨幅板块共性",
+        "LOSERS_SUMMARY<TAB>跌幅板块共性",
+        "market_summary 结合市场/板块快讯概括板块分化、资金主线和核心驱动力；gainers_summary 和 losers_summary 分别总结板块共性。",
+        "归因类型只能是：直接催化、行业带动、资金交易、弱证据待复核。",
+        "",
+        "## 输出骨架",
+        "MARKET_SUMMARY\t待填写",
+        "GAINERS_SUMMARY\t待填写",
+        "LOSERS_SUMMARY\t待填写",
+        "",
+        "## 数据",
+        "",
+    ]
+    if market_news_context:
+        lines.append("### 市场/板块快讯候选")
+        for idx, news in enumerate(market_news_context[:MARKET_NEWS_PROMPT_LIMIT], 1):
+            title = normalize_inline_text(news.get("title", ""))
+            summary = normalize_inline_text(news.get("summary", ""))
+            pub_date = normalize_inline_text(news.get("pub_date", ""))
+            if summary:
+                title = f"{title}；摘要：{summary}"
+            lines.append(f"MARKET_NEWS\tM{idx}\t{pub_date}\t{title}".strip())
+        lines.append("")
+    lines += [f"### Top {len(gainers)} 涨幅股", ""]
+    for i, st in enumerate(gainers, 1):
+        chg = f"{st['change_pct']:+.2f}%" if st.get("change_pct") is not None else "（暂无）"
+        week = f"{st['week_change']:+.2f}%" if st.get("week_change") is not None else "（暂无）"
+        ytd = f"{st['ytd_change']:+.2f}%" if st.get("ytd_change") is not None else "（暂无）"
+        lines.append(f"{i}. {st['code']} {st['name']} 当日{chg} 本周{week} 年初至今{ytd}")
+        for news_index, news in enumerate(st.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
+            evidence_id = f"G{i}-{news_index}"
+            title = normalize_inline_text(news.get("title", ""))
+            pub_date = normalize_inline_text(news.get("pub_date", ""))
+            category = news_candidate_category(news)
+            lines.append(f"NEWS\t{evidence_id}\t{pub_date}\t{category}\t{title}".strip())
+        if not st.get("news"):
+            lines.append("NEWS （暂无候选新闻）")
+        lines.append("")
+    lines += [f"### Top {len(losers)} 跌幅股", ""]
+    for i, st in enumerate(losers, 1):
+        chg = f"{st['change_pct']:+.2f}%" if st.get("change_pct") is not None else "（暂无）"
+        week = f"{st['week_change']:+.2f}%" if st.get("week_change") is not None else "（暂无）"
+        ytd = f"{st['ytd_change']:+.2f}%" if st.get("ytd_change") is not None else "（暂无）"
+        lines.append(f"{i}. {st['code']} {st['name']} 当日{chg} 本周{week} 年初至今{ytd}")
+        for news_index, news in enumerate(st.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
+            evidence_id = f"L{i}-{news_index}"
+            title = normalize_inline_text(news.get("title", ""))
+            pub_date = normalize_inline_text(news.get("pub_date", ""))
+            category = news_candidate_category(news)
+            lines.append(f"NEWS\t{evidence_id}\t{pub_date}\t{category}\t{title}".strip())
+        if not st.get("news"):
+            lines.append("NEWS （暂无候选新闻）")
+        lines.append("")
+    return "\n".join(lines)
+
+
+def _build_perstock_prompt(date_str, gainers, losers, mode):
+    """Build a prompt that asks CodeBuddy for ONLY one board's per-stock lines.
+
+    Includes only that board's stock + news data, so the output is small and never
+    truncated. `gainers`/`losers` are already filtered by the caller (one empty).
+    """
+    if mode == "gainers":
+        stocks = gainers
+        tag = "GAINER"
+        prefix = "G"
+    else:
+        stocks = losers
+        tag = "LOSER"
+        prefix = "L"
+    top_n = len(stocks)
+    lines = [
+        "机器协议模式：你的回复会被脚本逐行解析，任何自然语言开场、总结、Markdown、代码块或空行都会导致任务失败。",
+        f"只输出 {top_n} 行{tag}协议行，不要输出 MARKET_SUMMARY/GAINERS_SUMMARY/LOSERS_SUMMARY，不要自然语言、空行、Markdown。",
+        f"每行格式：{tag}<TAB>股票代码<TAB>归因类型<TAB>原因<TAB>证据ID列表",
+        "归因类型只能是：直接催化、行业带动、资金交易、弱证据待复核。",
+        "公告/业绩/订单/停产/减持/监管问询优先标为直接催化；板块/产业链/题材带动标为行业带动；主力资金、北向、龙虎榜、融资融券标为资金交易；只看到触及涨跌停、ETF风向标、行情描述或证据不足时标为弱证据待复核。",
+        "原因要结合行业、公司事件、资金风格或基本面；reason 必须是单行文本，不能包含 TAB 或换行。",
+        "证据ID列表最多 2 个，用英文逗号分隔；只能从该股票下方 NEWS 行选择，不要编造 ID；没有合适证据时第五列留空。",
+        "输出必须是合法 UTF-8 中文，禁止出现替换字符（�）或任何乱码；若不确定用字，请用近义中文词代替。",
+        "",
+        "## 输出骨架",
+        "必须逐行输出，TAG 和股票代码必须保持不变：",
+    ]
+    for st in stocks:
+        lines.append(f"{tag}\t{st.get('code', '')}\t弱证据待复核\t待填写\t")
+    lines += ["", "## 数据", ""]
+    for i, st in enumerate(stocks, 1):
+        chg = f"{st['change_pct']:+.2f}%" if st.get("change_pct") is not None else "（暂无）"
+        week = f"{st['week_change']:+.2f}%" if st.get("week_change") is not None else "（暂无）"
+        ytd = f"{st['ytd_change']:+.2f}%" if st.get("ytd_change") is not None else "（暂无）"
+        lines.append(f"{i}. {st['code']} {st['name']} 当日{chg} 本周{week} 年初至今{ytd}")
+        for news_index, news in enumerate(st.get("news", [])[:NEWS_PROMPT_LIMIT], 1):
+            evidence_id = f"{prefix}{i}-{news_index}"
+            title = normalize_inline_text(news.get("title", ""))
+            pub_date = normalize_inline_text(news.get("pub_date", ""))
+            category = news_candidate_category(news)
+            lines.append(f"NEWS\t{evidence_id}\t{pub_date}\t{category}\t{title}".strip())
+        if not st.get("news"):
+            lines.append("NEWS （暂无候选新闻）")
+        lines.append("")
     return "\n".join(lines)
 
 
@@ -2385,12 +2871,14 @@ def write_csi_status(target_date, result, gainers, losers, market_news_context, 
         "index": INDEX_TYPE,
         "index_display_name": INDEX_DISPLAY_NAME,
         "mode": CSI_RUN_STATS.get("mode", AI_MODEL),
-        "ai_model_name": CSI_RUN_STATS.get("ai_model_name", AI_MODEL_NAME),
+        "ai_model_name": CSI_RUN_STATS.get("ai_model_name") or effective_ai_model_name(),
         "top_n": CSI_RUN_STATS.get("top_n"),
         "codex_error": bool(CSI_RUN_STATS.get("codex_error", False)),
         "fallback_used": bool(CSI_RUN_STATS.get("fallback_used", False)),
         "parse_attempts": int(CSI_RUN_STATS.get("parse_attempts", 0) or 0),
         "codebuddy_parse_errors": CSI_RUN_STATS.get("codebuddy_parse_errors", []),
+        "garbled_repaired": int(CSI_RUN_STATS.get("garbled_repaired", 0) or 0),
+        "garbled_remaining_in_report": int(CSI_RUN_STATS.get("garbled_remaining_in_report", 0) or 0),
         "source_error_count": int(CSI_RUN_STATS.get("source_error_count", 0) or 0),
         "news_cutoff": {
             "target_date": target_date,
@@ -2652,9 +3140,16 @@ def main():
         prompt = build_prompt(target_date, gainers, losers, market_news_context=market_news_context)
         print(f"[INFO] 调用 AI ({AI_MODEL}) ...", file=sys.stderr)
         if AI_MODEL == "codebuddy":
-            result = run_codebuddy_analysis(prompt, gainers, losers)
+            result = run_codebuddy_analysis(
+                prompt,
+                gainers,
+                losers,
+                market_news_context=market_news_context,
+                target_date=target_date,
+            )
         else:
             raw = call_ai(prompt, max_tokens=4096, expect_json=True)
+            raw, _ = repair_garbled_text(raw, build_repair_corpus(gainers, losers, market_news_context))
 
             # 4. 解析 JSON（带预处理）
             try:
@@ -2667,6 +3162,10 @@ def main():
 
     # 5. 生成报告
     report = format_report(result, target_date, gainers=gainers, losers=losers)
+    # 最后兜底：确保发布文件不含 U+FFFD 替换字符
+    if chr(0xfffd) in report:
+        CSI_RUN_STATS["garbled_remaining_in_report"] = report.count(chr(0xfffd))
+        report = report.replace(chr(0xfffd), "")
     output_dir = args.output_dir_opt or args.output_dir
     if output_dir:
         out_dir = Path(output_dir)

@@ -21,8 +21,9 @@ fi
 echo "=== 开始生成A股板块热点分析 ==="
 echo "时间: $(date)"
 
+# 模型留空 = 使用 CodeBuddy 全局模型（~/.codebuddy/settings.json 的 model）
 SECTOR_HOTSPOTS_AI_MODEL="${SECTOR_HOTSPOTS_AI_MODEL:-codebuddy}" \
-SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-hy3}" \
+SECTOR_HOTSPOTS_AI_MODEL_NAME="${SECTOR_HOTSPOTS_AI_MODEL_NAME:-}" \
   python3 "$SCRIPT" --market a --output-dir "$REPORTS_DIR" --top "${SECTOR_HOTSPOTS_TOP:-12}"
 
 echo "=== A股板块热点分析完成 ==="

@@ -32,6 +32,18 @@ NEWS_PROMPT_LIMIT = int(os.environ.get("SECTOR_HOTSPOTS_NEWS_PROMPT_LIMIT", "4")
 MARKET_NEWS_LIMIT = int(os.environ.get("SECTOR_HOTSPOTS_MARKET_NEWS_LIMIT", "40"))
 DEFAULT_TOP = int(os.environ.get("SECTOR_HOTSPOTS_TOP", "12"))
 
+
+def effective_ai_model_name():
+    if AI_MODEL_NAME:
+        return AI_MODEL_NAME
+    if AI_MODEL != "codebuddy":
+        return AI_MODEL
+    try:
+        settings = json.loads((Path.home() / ".codebuddy" / "settings.json").read_text(encoding="utf-8"))
+        return settings.get("model") or "codebuddy"
+    except (OSError, ValueError, TypeError):
+        return "codebuddy"
+
 EASTMONEY_PUSH2_DELAY = "https://push2delay.eastmoney.com/api/qt/clist/get"
 EASTMONEY_FAST_NEWS = "https://np-weblist.eastmoney.com/comm/web/getFastNewsList"
 PUSH2_HEADERS = {
@@ -882,13 +894,13 @@ def call_ai(prompt):
 
     codebuddy = shutil.which("codebuddy")
     if codebuddy:
-        cmd = [codebuddy, "-p", "--output-format", "json", "--input-format", "text"]
+        cmd = [codebuddy, "-p", "--output-format", "text", "--input-format", "text"]
         if AI_MODEL_NAME:
             cmd.append(f"--model={AI_MODEL_NAME}")
     else:
         node_path = "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/bin/node"
         cb_path = "/home/ME/.local/lib/nodejs/node-v22.22.3-linux-x64/lib/node_modules/@tencent-ai/codebuddy-code/bin/codebuddy"
-        cmd = [node_path, cb_path, "-p", "--output-format", "json", "--input-format", "text"]
+        cmd = [node_path, cb_path, "-p", "--output-format", "text", "--input-format", "text"]
         if AI_MODEL_NAME:
             cmd.append(f"--model={AI_MODEL_NAME}")
 
@@ -1356,7 +1368,7 @@ def write_status(report_date, result, sectors, report_path=None, latest_path=Non
         "date": report_date,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "mode": AI_MODEL,
-        "ai_model_name": AI_MODEL_NAME,
+        "ai_model_name": effective_ai_model_name(),
         "market": market,
         "us_data_date": us_data_date,
         "news_lookback_days": NEWS_LOOKBACK_DAYS,

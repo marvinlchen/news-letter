@@ -51,6 +51,18 @@ DEFAULT_REPORT_DIR = PROJECT_ROOT / "published" / "a-share-sector-radar-weekly"
 DEFAULT_STATUS_DIR = PROJECT_ROOT / "var" / "a-share-sector-radar-weekly-status"
 DEFAULT_CACHE_DIR = PROJECT_ROOT / "var" / "a-share-sector-radar-cache"
 
+
+def effective_model_name(model: str, model_name: str) -> str:
+    if model_name:
+        return model_name
+    if model != "codebuddy":
+        return model
+    try:
+        settings = json.loads((Path.home() / ".codebuddy" / "settings.json").read_text(encoding="utf-8"))
+        return settings.get("model") or "codebuddy"
+    except (OSError, ValueError, TypeError):
+        return "codebuddy"
+
 SW_HISTORY_URL = "https://www.swsresearch.com/institute-sw/api/index_publish/trend/"
 SW_COMPONENT_URL = "https://www.swsresearch.com/institute-sw/api/index_publish/details/component_stocks/"
 EASTMONEY_KLINE_URL = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
@@ -3023,7 +3035,7 @@ def run(args: argparse.Namespace) -> dict:
         raise RuntimeError(f"证据候选覆盖不足：有至少2条候选的行业仅{candidate_coverage}/31，门槛{minimum_coverage}")
 
     model = os.environ.get("A_SHARE_SECTOR_RADAR_AI_MODEL", "codebuddy")
-    model_name = os.environ.get("A_SHARE_SECTOR_RADAR_AI_MODEL_NAME", "hy3")
+    model_name = os.environ.get("A_SHARE_SECTOR_RADAR_AI_MODEL_NAME", "")  # 空 = 使用 CodeBuddy 全局模型
     if args.skip_ai:
         evidence = watch_only_evidence(industries)
         ai_raw = ""
@@ -3228,7 +3240,7 @@ def run(args: argparse.Namespace) -> dict:
         "evidence_engine_version": evidence_engine_version,
         "engine_sha256": engine_sha256,
         "mode": model_label,
-        "ai_model_name": model_name if not args.skip_ai else "",
+        "ai_model_name": effective_model_name(model, model_name) if not args.skip_ai else "",
         "codex_error": False,
         "fallback_used": bool(RUN_STATS.get("ai_recovery_batches", 0)),
         "fallback_kind": "audited_evidence_recovery" if RUN_STATS.get("ai_recovery_batches", 0) else "",

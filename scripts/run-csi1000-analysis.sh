@@ -25,8 +25,9 @@ fi
 echo "=== 开始生成中证1000涨跌分析 ==="
 echo "时间: $(date)"
 
+# 模型留空 = 使用 CodeBuddy 全局模型（~/.codebuddy/settings.json 的 model）
 CSI1000_AI_MODEL="${CSI1000_AI_MODEL:-codebuddy}" \
-CSI1000_AI_MODEL_NAME="${CSI1000_AI_MODEL_NAME:-hy3}" \
+CSI1000_AI_MODEL_NAME="${CSI1000_AI_MODEL_NAME:-}" \
   python3 "$SCRIPT" --index csi1000 --output-dir "$REPORTS_DIR" --top "${CSI1000_TOP:-20}"
 
 echo "=== 分析完成 ==="
