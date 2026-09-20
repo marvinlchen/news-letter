@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09",
+  "updated": "2026-07-11",
   "window_days": 1,
   "stocks": [
     {
@@ -30,7 +30,8 @@
       "name_zh": "中联重科",
       "name_en": "Zoomlion",
       "ticker": "1157.HK",
-      "market": "HK"
+      "market": "HK",
+      "group": "中联重科"
     },
     {
       "name_zh": "腾讯",
@@ -49,6 +50,375 @@
       "name_en": "Wuliangye",
       "ticker": "000858.SZ",
       "market": "SZ"
+    },
+    {
+      "name_zh": "Sea",
+      "name_en": "Sea Limited",
+      "ticker": "SE",
+      "market": "US"
+    },
+    {
+      "name_zh": "中国人民保险集团",
+      "name_en": "PICC Group",
+      "ticker": "01339.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "泡泡玛特",
+      "name_en": "Pop Mart",
+      "ticker": "09992.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "周黑鸭",
+      "name_en": "Zhou Hei Ya",
+      "ticker": "01458.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中国再保险",
+      "name_en": "China Reinsurance Group",
+      "ticker": "01508.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中船防务",
+      "name_en": "CSSC Defence Technology",
+      "ticker": "00317.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中国财险",
+      "name_en": "PICC P&C",
+      "ticker": "02328.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "恒隆集团",
+      "name_en": "Hang Lung Group",
+      "ticker": "00010.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "华润电力",
+      "name_en": "China Resources Power",
+      "ticker": "00836.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "蒙牛乳业",
+      "name_en": "Mengniu Dairy",
+      "ticker": "02319.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "龙源电力",
+      "name_en": "China Longyuan Power",
+      "ticker": "00916.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中国海外发展",
+      "name_en": "China Overseas Land",
+      "ticker": "00688.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "康师傅控股",
+      "name_en": "Tingyi",
+      "ticker": "00322.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中国飞鹤",
+      "name_en": "China Feihe",
+      "ticker": "06186.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "华润饮料",
+      "name_en": "China Resources Beverage",
+      "ticker": "02460.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "招商局港口",
+      "name_en": "China Merchants Port",
+      "ticker": "00144.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中远海运港口",
+      "name_en": "COSCO Shipping Ports",
+      "ticker": "01199.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "香港小轮",
+      "name_en": "Hong Kong Ferry",
+      "ticker": "00050.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "华润啤酒",
+      "name_en": "China Resources Beer",
+      "ticker": "00291.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "李宁",
+      "name_en": "Li Ning",
+      "ticker": "02331.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中国石油股份",
+      "name_en": "PetroChina",
+      "ticker": "00857.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中国石油化工股份",
+      "name_en": "Sinopec",
+      "ticker": "00386.HK",
+      "market": "HK"
+    },
+    {
+      "name_zh": "中国神华",
+      "name_en": "China Shenhua Energy",
+      "ticker": "01088.HK",
+      "market": "HK",
+      "group": "中国神华"
+    },
+    {
+      "name_zh": "埃氏金业",
+      "name_en": "Eldorado Gold",
+      "ticker": "EGO",
+      "market": "US"
+    },
+    {
+      "name_zh": "巴里克黄金",
+      "name_en": "Barrick Gold",
+      "ticker": "GOLD",
+      "market": "US"
+    },
+    {
+      "name_zh": "美国美盛",
+      "name_en": "Mosaic",
+      "ticker": "MOS",
+      "market": "US"
+    },
+    {
+      "name_zh": "阿特斯太阳能",
+      "name_en": "Canadian Solar",
+      "ticker": "CSIQ",
+      "market": "US"
+    },
+    {
+      "name_zh": "微博",
+      "name_en": "Weibo",
+      "ticker": "WB",
+      "market": "US"
+    },
+    {
+      "name_zh": "携程网",
+      "name_en": "Trip.com",
+      "ticker": "TCOM",
+      "market": "US"
+    },
+    {
+      "name_zh": "霍顿房屋",
+      "name_en": "D.R. Horton",
+      "ticker": "DHI",
+      "market": "US"
+    },
+    {
+      "name_zh": "汽车之家",
+      "name_en": "Autohome",
+      "ticker": "ATHM",
+      "market": "US"
+    },
+    {
+      "name_zh": "卡夫亨氏",
+      "name_en": "Kraft Heinz",
+      "ticker": "KHC",
+      "market": "US"
+    },
+    {
+      "name_zh": "达仁堂",
+      "name_en": "Tianjin Darentang",
+      "ticker": "T14.SI",
+      "market": "SG"
+    },
+    {
+      "name_zh": "云顶新加坡",
+      "name_en": "Genting Singapore",
+      "ticker": "G13.SI",
+      "market": "SG"
+    },
+    {
+      "name_zh": "珍宝餐饮集团",
+      "name_en": "Jumbo Group",
+      "ticker": "42R.SI",
+      "market": "SG"
+    },
+    {
+      "name_zh": "星展集团控股",
+      "name_en": "DBS Group",
+      "ticker": "D05.SI",
+      "market": "SG"
+    },
+    {
+      "name_zh": "大华银行",
+      "name_en": "UOB",
+      "ticker": "U11.SI",
+      "market": "SG"
+    },
+    {
+      "name_zh": "扬子江船业",
+      "name_en": "Yangzijiang Shipbuilding",
+      "ticker": "BS6.SI",
+      "market": "SG"
+    },
+    {
+      "name_zh": "虎豹企业",
+      "name_en": "Haw Par",
+      "ticker": "H02.SI",
+      "market": "SG"
+    },
+    {
+      "name_zh": "牧原股份",
+      "name_en": "Muyuan Foods",
+      "ticker": "002714.SZ",
+      "market": "SZ"
+    },
+    {
+      "name_zh": "海尔智家",
+      "name_en": "Haier Smart Home",
+      "ticker": "600690.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "格力电器",
+      "name_en": "Gree Electric",
+      "ticker": "000651.SZ",
+      "market": "SZ"
+    },
+    {
+      "name_zh": "赣粤高速",
+      "name_en": "Jiangxi Ganyue Expressway",
+      "ticker": "600269.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "歌尔股份",
+      "name_en": "Goertek",
+      "ticker": "002241.SZ",
+      "market": "SZ"
+    },
+    {
+      "name_zh": "恒瑞医药",
+      "name_en": "Hengrui Medicine",
+      "ticker": "600276.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "顺丰控股",
+      "name_en": "SF Holding",
+      "ticker": "002352.SZ",
+      "market": "SZ"
+    },
+    {
+      "name_zh": "保利发展",
+      "name_en": "Poly Developments",
+      "ticker": "600048.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "Grab Holdings",
+      "name_en": "Grab Holdings",
+      "ticker": "GRAB",
+      "market": "US"
+    },
+    {
+      "name_zh": "布伦特原油",
+      "name_en": "Brent Crude",
+      "ticker": "BZmain",
+      "market": "US"
+    },
+    {
+      "name_zh": "西方石油",
+      "name_en": "Occidental Petroleum",
+      "ticker": "OXY",
+      "market": "US"
+    },
+    {
+      "name_zh": "京东",
+      "name_en": "JD.com",
+      "ticker": "JD",
+      "market": "US"
+    },
+    {
+      "name_zh": "富途控股",
+      "name_en": "Futu Holdings",
+      "ticker": "FUTU",
+      "market": "US"
+    },
+    {
+      "name_zh": "招商银行",
+      "name_en": "China Merchants Bank",
+      "ticker": "600036.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "海螺水泥",
+      "name_en": "Anhui Conch Cement",
+      "ticker": "600585.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "英科医疗",
+      "name_en": "Intco Medical",
+      "ticker": "300677.SZ",
+      "market": "SZ"
+    },
+    {
+      "name_zh": "长江电力",
+      "name_en": "China Yangtze Power",
+      "ticker": "600900.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "国投电力",
+      "name_en": "SDIC Power",
+      "ticker": "600886.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "紫金矿业",
+      "name_en": "Zijin Mining",
+      "ticker": "601899.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "中联重科A股",
+      "name_en": "Zoomlion A",
+      "ticker": "000157.SZ",
+      "market": "SZ",
+      "group": "中联重科"
+    },
+    {
+      "name_zh": "三一重工",
+      "name_en": "Sany Heavy Industry",
+      "ticker": "600031.SS",
+      "market": "SS"
+    },
+    {
+      "name_zh": "中国神华A股",
+      "name_en": "China Shenhua Energy A",
+      "ticker": "601088.SS",
+      "market": "SS",
+      "group": "中国神华"
     }
   ]
 }
