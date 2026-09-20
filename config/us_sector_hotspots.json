@@ -48,14 +48,14 @@
       "name_zh": "电子游戏与电竞",
       "name_en": "Video Games & eSports",
       "keywords": "video games esports gaming interactive entertainment",
-      "representatives": ["NVDA", "TSM", "EA", "TTWO", "RBLX", "SONY", "NTDOY", "MSFT"]
+      "representatives": ["NVDA", "TSM", "TTWO", "RBLX", "SONY", "NTDOY", "MSFT"]
     },
     {
       "symbol": "FINX",
       "name_zh": "金融科技",
       "name_en": "Fintech",
       "keywords": "fintech payments financial technology blockchain",
-      "representatives": ["V", "MA", "PYPL", "XYZ", "FI", "FIS", "AXP", "COIN"]
+      "representatives": ["V", "MA", "PYPL", "XYZ", "FISV", "FIS", "AXP", "COIN"]
     },
     {
       "symbol": "XRT",
@@ -202,7 +202,7 @@
       "name_zh": "锂与电池",
       "name_en": "Lithium & Battery",
       "keywords": "lithium battery EV materials energy storage",
-      "representatives": ["ALB", "SQM", "ALTM", "PLL", "FMC", "LAC", "MGA", "BAK"]
+      "representatives": ["ALB", "SQM", "ELVR", "FMC", "LAC", "MGA", "BAK"]
     },
     {
       "symbol": "DRIV",
@@ -223,7 +223,7 @@
       "name_zh": "白银矿商",
       "name_en": "Silver Miners",
       "keywords": "silver miners silver precious metals mining",
-      "representatives": ["PAAS", "HL", "CDE", "MAG", "AG", "SSRM", "EXK", "BVN"]
+      "representatives": ["PAAS", "HL", "CDE", "AG", "SSRM", "EXK", "BVN"]
     },
     {
       "symbol": "MSOS",
@@ -237,7 +237,7 @@
       "name_zh": "区块链与加密",
       "name_en": "Blockchain & Crypto",
       "keywords": "blockchain crypto bitcoin digital assets custody",
-      "representatives": ["COIN", "MSTR", "RIOT", "MARA", "SQ", "HUT", "CLSK", "BITF"]
+      "representatives": ["COIN", "MSTR", "RIOT", "MARA", "XYZ", "HUT", "CLSK", "BITF"]
     },
     {
       "symbol": "MOO",
@@ -272,7 +272,7 @@
       "name_zh": "金属与采矿",
       "name_en": "Metals & Mining",
       "keywords": "metals mining steel materials commodities producers",
-      "representatives": ["NUE", "STLD", "RS", "CMC", "X", "CLF", "VALE", "FCX"]
+      "representatives": ["NUE", "STLD", "RS", "CMC", "CLF", "VALE", "FCX"]
     }
   ]
 }

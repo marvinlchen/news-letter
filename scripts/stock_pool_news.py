@@ -36,9 +36,6 @@ import json as _json
 import ssl as _ssl
 
 _EDGAR_CTX = _ssl.create_default_context()
-_EDGAR_CTX.check_hostname = False
-_EDGAR_CTX.verify_mode = _ssl.CERT_NONE
-_EDGAR_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 _CIK_MAP = None
 _ASH_CACHE = {}
 
@@ -54,8 +51,23 @@ class Announcement:
         self.url = url
 
 
+def _edgar_user_agent():
+    """SEC requires a declared application and real contact email, kept off Git."""
+    value = os.environ.get("SEC_EDGAR_USER_AGENT", "").strip()
+    if not value:
+        config = Path.home() / ".config/finance-news-digest/edgar.json"
+        if config.exists():
+            value = str(_json.loads(config.read_text())["user_agent"]).strip()
+    if "\n" in value or "\r" in value or not re.search(r"\S+@\S+\.\S+", value):
+        raise ValueError(
+            "请配置 SEC_EDGAR_USER_AGENT 或 ~/.config/finance-news-digest/edgar.json "
+            "的 user_agent（应用名称及真实联系邮箱）"
+        )
+    return value
+
+
 def _http_get(url, timeout=25, headers=None):
-    h = {"User-Agent": _EDGAR_UA}
+    h = {"User-Agent": _edgar_user_agent(), "Accept": "application/json"}
     if headers:
         h.update(headers)
     req = _urllib_req.Request(url, headers=h)
@@ -83,7 +95,8 @@ def _load_cik_map():
     if _CIK_MAP is None:
         try:
             data = _json.loads(_http_get("https://www.sec.gov/files/company_tickers.json"))
-            _CIK_MAP = {k.upper(): v["cik_str"] for k, v in data.items()}
+            # SEC keys are row numbers, not ticker symbols; cik_str is an integer.
+            _CIK_MAP = {v["ticker"].upper(): str(v["cik_str"]) for v in data.values()}
         except Exception as exc:
             print(f"[WARN] EDGAR CIK 映射加载失败（美股权威披露暂不可用，回退 Google News）: {exc}",
                   file=sys.stderr)
@@ -100,7 +113,7 @@ def fetch_edgar(ticker, tday):
         cik = _load_cik_map().get(ticker)
         if not cik:
             return []
-        cik10 = cik.zfill(10)
+        cik10 = str(cik).zfill(10)
         sub = _json.loads(_http_get(f"https://data.sec.gov/submissions/CIK{cik10}.json"))
         rec = sub.get("filings", {}).get("recent", {})
         dates = rec.get("filingDate", [])

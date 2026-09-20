@@ -109,6 +109,16 @@ queried through Google News indexes restricted to their official domains.
 The raw SEC EDGAR index is configured but disabled until a company watchlist and
 filing-event parser can distinguish material filings from routine documents.
 
+The separate stock-pool report (`scripts/stock_pool_news.py`) retrieves SEC
+company filings for its US watchlist. Configure `SEC_EDGAR_USER_AGENT` with an
+application name and a real contact email, or store the same value in
+`~/.config/finance-news-digest/edgar.json` under `user_agent` (file mode `600`).
+Keep this machine-specific contact out of Git. The cron wrapper and direct
+Python runs both use this configuration. SEC requests verify TLS certificates;
+missing contact configuration or an HTTP error is reported and leaves the
+existing Google News fallback in place. See
+[SEC access policy](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data).
+
 ## Run Locally
 
 No Python packages are required.
