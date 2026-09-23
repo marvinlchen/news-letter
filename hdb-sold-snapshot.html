@@ -47,7 +47,9 @@
   .chip.active{background:rgba(91,157,255,.14);border-color:var(--acc);color:var(--acc2)}
   .chip b{font-weight:600;opacity:.85;margin-left:3px}
   .cards{display:flex;flex-direction:column;gap:14px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.15s}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.15s;scroll-margin-top:18px}
+  /* 日报里的 #L<listingId> 深链落点高亮 */
+  .card:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(91,157,255,.35)}
   .card:hover{border-color:var(--line2)}
   .card.gone{border-left:3px solid var(--gone)}
   .card.relisted{border-left:3px solid var(--back)}
@@ -136,12 +138,120 @@
     监控开始归档之前就已下架的房源，PropertyGuru 那边已经清空，照片<b>永久不可恢复</b>——这类卡片会明确标注。
   </div>
 
-  <div class="kpis"><div class="kpi"><span class="kv">累计卖出</span><span class="kl">21</span></div><div class="kpi"><span class="kv">已彻底下架</span><span class="kl">20</span></div><div class="kpi"><span class="kv">重新上架</span><span class="kl">1</span></div><div class="kpi"><span class="kv">平均挂牌价</span><span class="kl">S$978,394</span></div><div class="kpi"><span class="kv">中位挂牌价</span><span class="kl">S$980,000</span></div><div class="kpi"><span class="kv">平均单价</span><span class="kl">S$977</span></div><div class="kpi"><span class="kv">平均在售时长</span><span class="kl">26 天</span></div></div>
+  <div class="kpis"><div class="kpi"><span class="kv">累计卖出</span><span class="kl">24</span></div><div class="kpi"><span class="kv">已彻底下架</span><span class="kl">23</span></div><div class="kpi"><span class="kv">重新上架</span><span class="kl">1</span></div><div class="kpi"><span class="kv">平均挂牌价</span><span class="kl">S$978,039</span></div><div class="kpi"><span class="kv">中位挂牌价</span><span class="kl">S$980,000</span></div><div class="kpi"><span class="kv">平均单价</span><span class="kl">S$977</span></div><div class="kpi"><span class="kv">平均在售时长</span><span class="kl">28 天</span></div></div>
 
-  <div class="toolbar" id="chips"><button class="chip active" data-b="all">全部 <b>21</b></button><button class="chip" data-b="80C">80C <b>1</b></button><button class="chip" data-b="90A">90A <b>2</b></button><button class="chip" data-b="90B">90B <b>6</b></button><button class="chip" data-b="91A">91A <b>1</b></button><button class="chip" data-b="92B">92B <b>4</b></button><button class="chip" data-b="93A">93A <b>4</b></button><button class="chip" data-b="93B">93B <b>3</b></button></div>
+  <div class="toolbar" id="chips"><button class="chip active" data-b="all">全部 <b>24</b></button><button class="chip" data-b="80C">80C <b>1</b></button><button class="chip" data-b="90A">90A <b>4</b></button><button class="chip" data-b="90B">90B <b>6</b></button><button class="chip" data-b="91A">91A <b>1</b></button><button class="chip" data-b="92B">92B <b>5</b></button><button class="chip" data-b="93A">93A <b>4</b></button><button class="chip" data-b="93B">93B <b>3</b></button></div>
 
   <div class="cards" id="cards">
-<article class="card gone" data-block="92B" data-price="899000">
+<article class="card gone" id="L500055397" data-block="90A" data-price="1000000">
+  <header class="card-h">
+    <div class="card-title">
+      <span class="blocktag">90A</span>
+      <span class="lid">#500055397</span>
+      <span class="badge gone">已下架</span>
+    </div>
+    <div class="card-price">
+      <strong>S$1,000,000</strong><span class="delta down">+20,000</span>
+    </div>
+  </header>
+  <div class="card-body">
+    <p class="summary">C H E A P! 4rm with a stunning view at Telok Blangah</p>
+    <div class="meta">1,001 sqft · S$999/sqft · 非低楼层 · 在售 ≥57 天</div>
+    <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,41.0 7.62,41.0 12.24,41.0 16.85,41.0 21.47,41.0 26.09,41.0 30.71,41.0 35.33,41.0 39.95,41.0 44.56,41.0 49.18,41.0 53.8,41.0 58.42,41.0 63.04,41.0 67.65,41.0 72.27,3.0 76.89,3.0 81.51,3.0 86.13,3.0 90.75,3.0 95.36,3.0 99.98,3.0 104.6,3.0 109.22,3.0 113.84,3.0 118.45,3.0 123.07,3.0 127.69,3.0 132.31,3.0 136.93,3.0 141.55,3.0 146.16,3.0 150.78,3.0 155.4,3.0 160.02,3.0 164.64,3.0 169.25,3.0 173.87,3.0 178.49,3.0 183.11,3.0 187.73,3.0 192.35,3.0 196.96,3.0 201.58,3.0 206.2,3.0 210.82,3.0 215.44,3.0 220.05,3.0 224.67,3.0 229.29,3.0 233.91,3.0 238.53,3.0 243.15,3.0 247.76,3.0 252.38,3.0 257.0,3.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,41.0 7.62,41.0 12.24,41.0 16.85,41.0 21.47,41.0 26.09,41.0 30.71,41.0 35.33,41.0 39.95,41.0 44.56,41.0 49.18,41.0 53.8,41.0 58.42,41.0 63.04,41.0 67.65,41.0 72.27,3.0 76.89,3.0 81.51,3.0 86.13,3.0 90.75,3.0 95.36,3.0 99.98,3.0 104.6,3.0 109.22,3.0 113.84,3.0 118.45,3.0 123.07,3.0 127.69,3.0 132.31,3.0 136.93,3.0 141.55,3.0 146.16,3.0 150.78,3.0 155.4,3.0 160.02,3.0 164.64,3.0 169.25,3.0 173.87,3.0 178.49,3.0 183.11,3.0 187.73,3.0 192.35,3.0 196.96,3.0 201.58,3.0 206.2,3.0 210.82,3.0 215.44,3.0 220.05,3.0 224.67,3.0 229.29,3.0 233.91,3.0 238.53,3.0 243.15,3.0 247.76,3.0 252.38,3.0 257.0,3.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
+    <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Mary Tang Ji&amp;#x27;Ai</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">2 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-14</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 57 天（57 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-09-14 S$1,000,000（57 次记录，3 个价）</span></div></div>
+    <details class="snap">
+      <summary>原始记录快照 <span class="dim">（2026-09-14 当日日报中的完整条目）</span></summary>
+      <div class="snapbox"><pre>- **S$1,000,000 · 1,001 sqft · S$999/sqft · 非低楼层**
+  - C H E A P! 4rm with a stunning view at Telok Blangah · 中介: Mary Tang Ji&amp;#x27;Ai
+  - 🕒 平台显示上架: 2 Aug 2026
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-09-14 S$1,000,000（57 次记录，3 个价）
+  - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397</pre></div>
+    </details>
+    <footer class="card-f">
+      <span class="dates">卖出判定 <b>2026-09-21</b> · 挂牌期内 1 次调价</span>
+      <span class="links">
+        <a class="btn" href="https://github.com/marvinlchen/news-letter/blob/hdb-monitor/reports/report_2026-09-14.md" target="_blank" rel="noopener">查看当日原始日报 ↗</a>
+        <a class="btn ghost" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500055397" target="_blank" rel="noopener" title="PropertyGuru 原页面大概率已失效">原链接（多半已失效）↗</a>
+        <a class="btn ghost" href="https://github.com/marvinlchen/news-letter/blob/hdb-monitor/reports/report_2026-09-21.md" target="_blank" rel="noopener">卖出当日日报 ↗</a>
+      </span>
+    </footer>
+  </div>
+</article>
+<article class="card gone" id="L60176902" data-block="92B" data-price="899000">
+  <header class="card-h">
+    <div class="card-title">
+      <span class="blocktag">92B</span>
+      <span class="lid">#60176902</span>
+      <span class="badge gone">已下架</span>
+    </div>
+    <div class="card-price">
+      <strong>S$899,000</strong><span class="delta down">+99,000</span>
+    </div>
+  </header>
+  <div class="card-body">
+    <p class="summary">Spacious, Well-kept High Floor Corner Unit for Sale!</p>
+    <div class="meta">1,001 sqft · S$898/sqft · High Floor · 在售 ≥55 天</div>
+    <div class="sparkwrap"><svg class="spark" viewBox="0 0 260 44" preserveAspectRatio="none" aria-hidden="true"><polygon points="3.0,44 3.0,41.0 7.79,41.0 12.58,41.0 17.38,41.0 22.17,41.0 26.96,41.0 31.75,41.0 36.55,41.0 41.34,41.0 46.13,41.0 50.92,41.0 55.72,41.0 60.51,41.0 65.3,41.0 70.09,41.0 74.89,41.0 79.68,3.0 84.47,3.0 89.26,3.0 94.06,3.0 98.85,3.0 103.64,3.0 108.43,3.0 113.23,3.0 118.02,3.0 122.81,3.0 127.6,3.0 132.4,3.0 137.19,3.0 141.98,3.0 146.77,3.0 151.57,3.0 156.36,3.0 161.15,3.0 165.94,3.0 170.74,3.0 175.53,3.0 180.32,3.0 185.11,3.0 189.91,3.0 194.7,3.0 199.49,3.0 204.28,3.0 209.08,3.0 213.87,3.0 218.66,3.0 223.45,3.0 228.25,3.0 233.04,3.0 237.83,3.0 242.62,3.0 247.42,3.0 252.21,3.0 257.0,3.0 257.0,44" fill="var(--spark-fill)"/><polyline points="3.0,41.0 7.79,41.0 12.58,41.0 17.38,41.0 22.17,41.0 26.96,41.0 31.75,41.0 36.55,41.0 41.34,41.0 46.13,41.0 50.92,41.0 55.72,41.0 60.51,41.0 65.3,41.0 70.09,41.0 74.89,41.0 79.68,3.0 84.47,3.0 89.26,3.0 94.06,3.0 98.85,3.0 103.64,3.0 108.43,3.0 113.23,3.0 118.02,3.0 122.81,3.0 127.6,3.0 132.4,3.0 137.19,3.0 141.98,3.0 146.77,3.0 151.57,3.0 156.36,3.0 161.15,3.0 165.94,3.0 170.74,3.0 175.53,3.0 180.32,3.0 185.11,3.0 189.91,3.0 194.7,3.0 199.49,3.0 204.28,3.0 209.08,3.0 213.87,3.0 218.66,3.0 223.45,3.0 228.25,3.0 233.04,3.0 237.83,3.0 242.62,3.0 247.42,3.0 252.21,3.0 257.0,3.0" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="sparklab">挂牌期价格走势</span></div>
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
+    <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">He Yifei</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">4 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-07-19</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-12</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 55 天（55 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-07-18 价格未公开 → 2026-09-12 S$899,000（55 次记录，3 个价）</span></div></div>
+    <details class="snap">
+      <summary>原始记录快照 <span class="dim">（2026-09-12 当日日报中的完整条目）</span></summary>
+      <div class="snapbox"><pre>- **S$899,000 · 1,001 sqft · S$898/sqft · High Floor**
+  - Spacious, Well-kept High Floor Corner Unit for Sale! · 中介: He Yifei
+  - 🕒 平台显示上架: 4 Aug 2026
+  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-09-12 S$899,000（55 次记录，3 个价）
+  - https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902</pre></div>
+    </details>
+    <footer class="card-f">
+      <span class="dates">卖出判定 <b>2026-09-19</b> · 挂牌期内 1 次调价</span>
+      <span class="links">
+        <a class="btn" href="https://github.com/marvinlchen/news-letter/blob/hdb-monitor/reports/report_2026-09-12.md" target="_blank" rel="noopener">查看当日原始日报 ↗</a>
+        <a class="btn ghost" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-92b-telok-blangah-street-31-60176902" target="_blank" rel="noopener" title="PropertyGuru 原页面大概率已失效">原链接（多半已失效）↗</a>
+        <a class="btn ghost" href="https://github.com/marvinlchen/news-letter/blob/hdb-monitor/reports/report_2026-09-19.md" target="_blank" rel="noopener">卖出当日日报 ↗</a>
+      </span>
+    </footer>
+  </div>
+</article>
+<article class="card gone" id="L500247423" data-block="90A" data-price="1028000">
+  <header class="card-h">
+    <div class="card-title">
+      <span class="blocktag">90A</span>
+      <span class="lid">#500247423</span>
+      <span class="badge gone">已下架</span>
+    </div>
+    <div class="card-price">
+      <strong>S$1,028,000</strong>
+    </div>
+  </header>
+  <div class="card-body">
+    <p class="summary">Elevated Comfort with Breezy Unblocked Views at 90A Telok Blangah St 3</p>
+    <div class="meta">1,001 sqft · S$1,027/sqft · High Floor · 在售 ≥14 天</div>
+    
+    <div class="galwrap nophoto">该房源下架前未被归档，PropertyGuru 已删除照片与描述，照片不可恢复</div>
+    
+    <div class="facts"><div class="fact"><span class="k2">中介</span><span class="v">Alvin Tyh</span></div><div class="fact"><span class="k2">平台显示上架</span><span class="v">28 Aug 2026</span></div><div class="fact"><span class="k2">首次出现在售</span><span class="v">2026-08-29</span></div><div class="fact"><span class="k2">最后一次在售</span><span class="v">2026-09-12</span></div><div class="fact"><span class="k2">在售时长</span><span class="v">≥ 14 天（15 次抓取）</span></div><div class="fact"><span class="k2">挂牌期价格轨迹</span><span class="v">2026-08-29 ~ 2026-09-12 均 S$1,028,000（15 次记录）</span></div></div>
+    <details class="snap">
+      <summary>原始记录快照 <span class="dim">（2026-09-12 当日日报中的完整条目）</span></summary>
+      <div class="snapbox"><pre>- **S$1,028,000 · 1,001 sqft · S$1,027/sqft · High Floor**
+  - Elevated Comfort with Breezy Unblocked Views at 90A Telok Blangah St 3 · 中介: Alvin Tyh
+  - 🕒 平台显示上架: 28 Aug 2026
+  - 📈 历史价格: 2026-08-29 ~ 2026-09-12 均 S$1,028,000（15 次记录）
+  - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500247423</pre></div>
+    </details>
+    <footer class="card-f">
+      <span class="dates">卖出判定 <b>2026-09-19</b></span>
+      <span class="links">
+        <a class="btn" href="https://github.com/marvinlchen/news-letter/blob/hdb-monitor/reports/report_2026-09-12.md" target="_blank" rel="noopener">查看当日原始日报 ↗</a>
+        <a class="btn ghost" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500247423" target="_blank" rel="noopener" title="PropertyGuru 原页面大概率已失效">原链接（多半已失效）↗</a>
+        <a class="btn ghost" href="https://github.com/marvinlchen/news-letter/blob/hdb-monitor/reports/report_2026-09-19.md" target="_blank" rel="noopener">卖出当日日报 ↗</a>
+      </span>
+    </footer>
+  </div>
+</article>
+<article class="card gone" id="L60205795" data-block="92B" data-price="899000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">92B</span>
@@ -176,7 +286,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="93A" data-price="980000">
+<article class="card gone" id="L500235350" data-block="93A" data-price="980000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">93A</span>
@@ -212,7 +322,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="93B" data-price="998000">
+<article class="card gone" id="L500131573" data-block="93B" data-price="998000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">93B</span>
@@ -248,7 +358,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="93A" data-price="980000">
+<article class="card gone" id="L60117042" data-block="93A" data-price="980000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">93A</span>
@@ -284,7 +394,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="92B" data-price="899000">
+<article class="card gone" id="L500207847" data-block="92B" data-price="899000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">92B</span>
@@ -320,7 +430,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90A" data-price="898000">
+<article class="card gone" id="L500077059" data-block="90A" data-price="898000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90A</span>
@@ -356,7 +466,7 @@
     </footer>
   </div>
 </article>
-<article class="card relisted" data-block="93A" data-price="980000">
+<article class="card relisted" id="L500079192" data-block="93A" data-price="980000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">93A</span>
@@ -391,7 +501,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90A" data-price="1099900">
+<article class="card gone" id="L500081935" data-block="90A" data-price="1099900">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90A</span>
@@ -427,7 +537,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="92B" data-price="1100000">
+<article class="card gone" id="L500176972" data-block="92B" data-price="1100000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">92B</span>
@@ -462,7 +572,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="93A" data-price="1000000">
+<article class="card gone" id="L25614626" data-block="93A" data-price="1000000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">93A</span>
@@ -497,7 +607,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90B" data-price="985000">
+<article class="card gone" id="L500190495" data-block="90B" data-price="985000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90B</span>
@@ -533,7 +643,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90B" data-price="985000">
+<article class="card gone" id="L500189009" data-block="90B" data-price="985000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90B</span>
@@ -569,7 +679,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="93B" data-price="899999">
+<article class="card gone" id="L500061711" data-block="93B" data-price="899999">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">93B</span>
@@ -604,7 +714,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90B" data-price="950000">
+<article class="card gone" id="L500205417" data-block="90B" data-price="950000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90B</span>
@@ -639,7 +749,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90B" data-price="975000">
+<article class="card gone" id="L500190370" data-block="90B" data-price="975000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90B</span>
@@ -674,7 +784,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="93B" data-price="1000000">
+<article class="card gone" id="L500044356" data-block="93B" data-price="1000000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">93B</span>
@@ -709,7 +819,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90B" data-price="1050000">
+<article class="card gone" id="L500169751" data-block="90B" data-price="1050000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90B</span>
@@ -744,7 +854,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="90B" data-price="900000">
+<article class="card gone" id="L500166851" data-block="90B" data-price="900000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">90B</span>
@@ -778,7 +888,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="92B" data-price="899000">
+<article class="card gone" id="L500180493" data-block="92B" data-price="899000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">92B</span>
@@ -812,7 +922,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="91A" data-price="970000">
+<article class="card gone" id="L500144622" data-block="91A" data-price="970000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">91A</span>
@@ -846,7 +956,7 @@
     </footer>
   </div>
 </article>
-<article class="card gone" data-block="80C" data-price="1100000">
+<article class="card gone" id="L500176977" data-block="80C" data-price="1100000">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">80C</span>
@@ -884,7 +994,7 @@
   <div class="empty" id="empty" style="display:none">该 block 没有卖出/下架记录。</div>
 
   <footer class="bottom">
-    快照生成于 2026-09-23 09:01 ｜ 数据源：66 份日报归档（2026-07-18 ~ 2026-09-23）+ state.json ｜
+    快照生成于 2026-09-23 12:18 ｜ 数据源：66 份日报归档（2026-07-18 ~ 2026-09-23）+ state.json ｜
     <a href="https://github.com/marvinlchen/news-letter/tree/hdb-monitor/reports" target="_blank" rel="noopener">在 GitHub 查看全部日报归档 ↗</a>
     <br>本页为静态快照文件，可离线保存；重新生成不会丢失历史，只会补入新的卖出记录。
   </footer>

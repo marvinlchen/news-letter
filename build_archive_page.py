@@ -88,12 +88,12 @@ def load_all():
 
 def card(m):
     if m.get('unavailable'):
-        return ('<article class="card dead"><header class="h">'
+        return ('<article class="card dead" id="L%s"><header class="h">'
                 '<span class="blk">%s</span><span class="id">#%s</span>'
                 '<span class="bad">已下架 · 未归档</span></header>'
                 '<p class="note">归档时 PropertyGuru 已删除该房源内容，'
                 '照片与描述均不可恢复。</p></article>'
-                % (esc(m.get('block')), esc(m.get('id'))))
+                % (esc(m.get('id')), esc(m.get('block')), esc(m.get('id'))))
 
     photos = m.get('photos') or []
     plans = m.get('floorplans') or []
@@ -127,7 +127,7 @@ def card(m):
             facts.append('<div class="f"><span class="fk">%s</span>'
                          '<span class="fv">%s</span></div>' % (esc(k), esc(v)))
 
-    return sub_tpl("""<article class="card">
+    return sub_tpl("""<article class="card" id="L%(id)s">
   <header class="h">
     <span class="blk">%(blk)s</span><span class="id">#%(id)s</span>
     <span class="pr">%(price)s</span>
@@ -184,7 +184,9 @@ TEMPLATE = r"""<!DOCTYPE html>
   .kv{display:block;font-size:19px;font-weight:650;white-space:nowrap}
   .kl{display:block;font-size:11.5px;color:var(--fg3);margin-top:3px}
   .cards{display:flex;flex-direction:column;gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 15px;border-left:3px solid var(--acc)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 15px;border-left:3px solid var(--acc);scroll-margin-top:18px}
+  /* 日报里的 #L<listingId> 深链落点高亮 */
+  .card:target{border-color:var(--acc2);box-shadow:0 0 0 2px rgba(91,157,255,.35)}
   .card.dead{border-left-color:var(--gone)}
   .h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:9px}
   .blk{font-family:var(--mono);font-weight:700;background:#222b3a;border:1px solid var(--line2);border-radius:7px;padding:2px 8px}

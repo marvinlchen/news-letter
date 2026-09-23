@@ -24,7 +24,9 @@
   .kv{display:block;font-size:19px;font-weight:650;white-space:nowrap}
   .kl{display:block;font-size:11.5px;color:var(--fg3);margin-top:3px}
   .cards{display:flex;flex-direction:column;gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 15px;border-left:3px solid var(--acc)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 15px;border-left:3px solid var(--acc);scroll-margin-top:18px}
+  /* 日报里的 #L<listingId> 深链落点高亮 */
+  .card:target{border-color:var(--acc2);box-shadow:0 0 0 2px rgba(91,157,255,.35)}
   .card.dead{border-left-color:var(--gone)}
   .h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:9px}
   .blk{font-family:var(--mono);font-weight:700;background:#222b3a;border:1px solid var(--line2);border-radius:7px;padding:2px 8px}
@@ -71,7 +73,7 @@
     一旦房源下架，PropertyGuru 会清空详情页内容（页面仍返回 200，但照片和数据全部消失），届时再也取不回来。
   </p>
   <div class="kpis"><div class="kpi"><span class="kv">已归档房源</span><span class="kl">20</span></div><div class="kpi"><span class="kv">实拍照片</span><span class="kl">203</span></div><div class="kpi"><span class="kv">户型图</span><span class="kl">16</span></div><div class="kpi"><span class="kv">平均挂牌价</span><span class="kl">S$1,003,849</span></div><div class="kpi"><span class="kv">归档体积</span><span class="kl">10.4 MB</span></div></div>
-  <div class="cards"><article class="card">
+  <div class="cards"><article class="card" id="L500114729">
   <header class="h">
     <span class="blk">80A</span><span class="id">#500114729</span>
     <span class="pr">S$999,999</span>
@@ -87,7 +89,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500114729" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500114729/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500130028">
   <header class="h">
     <span class="blk">80A</span><span class="id">#500130028</span>
     <span class="pr">S$999,999</span>
@@ -103,7 +105,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500130028" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500130028/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500166946">
   <header class="h">
     <span class="blk">80A</span><span class="id">#500166946</span>
     <span class="pr">S$1,150,000</span>
@@ -119,7 +121,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500166946" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500166946/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500185017">
   <header class="h">
     <span class="blk">80A</span><span class="id">#500185017</span>
     <span class="pr">S$1,098,000</span>
@@ -135,7 +137,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500185017/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500016121">
   <header class="h">
     <span class="blk">90A</span><span class="id">#500016121</span>
     <span class="pr">S$950,000</span>
@@ -151,7 +153,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500016121" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500016121/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500078891">
   <header class="h">
     <span class="blk">90A</span><span class="id">#500078891</span>
     <span class="pr">S$950,000</span>
@@ -167,7 +169,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500078891" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500078891/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500152159">
   <header class="h">
     <span class="blk">90A</span><span class="id">#500152159</span>
     <span class="pr">S$1,050,000</span>
@@ -183,7 +185,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500152159/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L60095956">
   <header class="h">
     <span class="blk">91A</span><span class="id">#60095956</span>
     <span class="pr">S$938,000</span>
@@ -199,7 +201,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-91a-telok-blangah-street-31-60095956" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/60095956/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500079192">
   <header class="h">
     <span class="blk">93A</span><span class="id">#500079192</span>
     <span class="pr">S$980,000</span>
@@ -215,7 +217,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500079192" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500079192/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500199441">
   <header class="h">
     <span class="blk">93A</span><span class="id">#500199441</span>
     <span class="pr">S$980,000</span>
@@ -231,7 +233,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500199441" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500199441/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500250405">
   <header class="h">
     <span class="blk">93A</span><span class="id">#500250405</span>
     <span class="pr">S$950,000</span>
@@ -247,7 +249,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-500250405" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500250405/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card dead"><header class="h"><span class="blk">93A</span><span class="id">#60208239</span><span class="bad">已下架 · 未归档</span></header><p class="note">归档时 PropertyGuru 已删除该房源内容，照片与描述均不可恢复。</p></article><article class="card">
+</article><article class="card dead" id="L60208239"><header class="h"><span class="blk">93A</span><span class="id">#60208239</span><span class="bad">已下架 · 未归档</span></header><p class="note">归档时 PropertyGuru 已删除该房源内容，照片与描述均不可恢复。</p></article><article class="card" id="L500072222">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500072222</span>
     <span class="pr">S$1,039,999</span>
@@ -263,7 +265,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072222" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500072222/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500072233">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500072233</span>
     <span class="pr">S$1,039,999</span>
@@ -279,7 +281,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500072233" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500072233/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500093229">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500093229</span>
     <span class="pr">S$1,018,000</span>
@@ -295,7 +297,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500093229" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500093229/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500128530">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500128530</span>
     <span class="pr">S$1,018,000</span>
@@ -311,7 +313,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500128530" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500128530/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500178368">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500178368</span>
     <span class="pr">S$915,000</span>
@@ -327,7 +329,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500178368/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500199397">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500199397</span>
     <span class="pr">S$950,000</span>
@@ -343,7 +345,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500199397/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500204526">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500204526</span>
     <span class="pr">S$1,150,000</span>
@@ -359,7 +361,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500204526" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500204526/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500207099">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500207099</span>
     <span class="pr">S$950,000</span>
@@ -375,7 +377,7 @@
     <a class="btn" href="https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099" target="_blank" rel="noopener">原链接（多半已失效）↗</a>
     <a class="btn ghost" href="https://raw.githubusercontent.com/marvinlchen/news-letter/hdb-monitor/archive/500207099/page.html.gz" target="_blank" rel="noopener">原始 HTML 存档 (.gz)</a>
   </footer>
-</article><article class="card">
+</article><article class="card" id="L500236003">
   <header class="h">
     <span class="blk">93B</span><span class="id">#500236003</span>
     <span class="pr">S$950,000</span>
@@ -393,7 +395,7 @@
   </footer>
 </article></div>
   <footer class="bottom">
-    生成于 2026-09-23 09:01 ｜ 共 20 套房源 · 203 张照片 · 16 张户型图 · 归档体积 10.4 MB<br>
+    生成于 2026-09-23 12:18 ｜ 共 20 套房源 · 203 张照片 · 16 张户型图 · 归档体积 10.4 MB<br>
     原始 HTML 存档为 <code>archive/&lt;id&gt;/page.html.gz</code>，解压后即为完整的详情页源码。
   </footer>
 </div>

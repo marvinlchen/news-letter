@@ -76,6 +76,15 @@ REPORT_DIR = os.path.join(HOME, 'reports')
 # 期内暂时消失的房源保留在宽限名单里，不算卖出，重现时也不算上新。
 GRACE_DAYS = 7
 
+# 自有存档页基址。PropertyGuru 在房源下架后会清空原页面（照片/描述永久丢失），
+# 所以 ✅ 卖出/下架 条目必须给出自家快照的链接。
+# GitHub 的 blob 视图只显示 HTML 源码、raw/cdn 会按 text/plain 下发，都不渲染页面，
+# 因此用 githack（按 text/html 提供）；日后若开启 GitHub Pages，替换成 Pages 地址即可。
+# 锚点 id="L<listingId>" 由 build_snapshot.py / build_archive_page.py 生成。
+GITHACK = 'https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/'
+SNAPSHOT_PAGE = GITHACK + 'hdb-sold-snapshot.html'   # 卖出/下架 汇总快照
+ARCHIVE_PAGE = GITHACK + 'hdb-archive.html'          # 实拍照片 + 原始 HTML 归档
+
 # PropertyGuru 搜索页单页条数（实测 = 20）。翻页参数 ?page=N 会被 Cloudflare 直接 403，
 # 所以无法翻页；只能对"结果是否触及单页上限"做截断告警，无法自动补齐。
 PAGE_SIZE = 20
@@ -442,17 +451,20 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
                 note += f"，连续消失 {absent} 天"
             note += f"（宽限 {GRACE_DAYS} 天）· 原链接下架后会被 PropertyGuru 清空"
             L.append(note)
+            # 下架后原页面必然被清空，所以每条都给出自家快照的深链；
+            # 若该房源曾在售期间被归档，再补一条实拍照片/原始 HTML 的链接。
+            L.append(f"  - 🗄 下架快照（价格/面积/楼层/中介/文案）: {SNAPSHOT_PAGE}#L{i}")
             arc = os.path.join('archive', str(i))
             if os.path.isdir(arc):
                 try:
                     nj = len(os.listdir(os.path.join(arc, 'photos')))
                 except OSError:
                     nj = 0
-                bits = [b for b in (f"照片 {nj} 张" if nj else None,
+                bits = [b for b in (f"实拍照片 {nj} 张" if nj else None,
                                     "原始 HTML 存档"
                                     if os.path.exists(os.path.join(arc, 'page.html.gz'))
                                     else None) if b]
-                L.append(f"  - 🗄 已归档详情页: archive/{i}/"
+                L.append(f"  - 📷 照片归档: {ARCHIVE_PAGE}#L{i}"
                          + (f"（{' · '.join(bits)}）" if bits else ""))
         L.append("")
     L.append("## 📋 当前在售清单（按 block，已排除低楼层）")

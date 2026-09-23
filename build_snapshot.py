@@ -106,14 +106,19 @@ def parse_report(path):
     listings = {}
     sold = []
 
-    mode = None
-    cur = None
+    mode = None          # 'active' | 'sold' | None
+    cur = None           # 正在解析的条目
+    cur_section = None   # cur 属于哪个段落（决定 flush 时进 listings 还是 sold）
 
     def flush():
-        nonlocal cur
+        nonlocal cur, cur_section
         if cur and cur.get("id"):
-            listings[cur["id"]] = cur
+            if cur_section == "sold":
+                sold.append(cur)
+            else:
+                listings[cur["id"]] = cur
         cur = None
+        cur_section = None
 
     for ln in lines:
         if ln.startswith("## "):
@@ -126,7 +131,10 @@ def parse_report(path):
                 mode = None
             continue
 
-        if mode == "sold":
+        # 卖出段落里的"旧格式"单行条目（2026-09-18 之前）：- [90A] 价格 · URL
+        # 注意：新格式的块首是 "- **[90A] ...**"、子行是 "  - ..."，
+        # 都不能在这里被吃掉，必须继续走下面的通用解析。
+        if mode == "sold" and ln.startswith("- ["):
             sm = RE_SOLD_LINE.match(ln)
             if sm:
                 mid = RE_ID.search(sm.group("url").rstrip("/"))
@@ -137,9 +145,9 @@ def parse_report(path):
                         "url": sm.group("url"),
                         "price_text": sm.group("price").strip(),
                     })
-            continue
+                continue
 
-        if mode != "active":
+        if mode not in ("active", "sold"):
             continue
 
         if ln.startswith("- **"):
@@ -148,6 +156,14 @@ def parse_report(path):
             if not hm:
                 continue
             parts = [p.strip() for p in hm.group(1).split("·")]
+            # 卖出段落没有 "### 90A" 小标题，block 写在条目里：
+            #   - **[90A] S$1,000,000 · 1001 sqft · ...· 非低楼层**
+            block = None
+            if parts:
+                bm = re.match(r"^\[([^\]]+)\]\s*(.*)$", parts[0])
+                if bm:
+                    block = bm.group(1).strip()
+                    parts[0] = bm.group(2).strip()
             price = parse_price(parts[0]) if parts else None
             area = psf = floor = None
             for p in parts[1:]:
@@ -161,9 +177,22 @@ def parse_report(path):
                     floor = p
             cur = {"date": rdate, "price": price, "area": area, "psf": psf,
                    "floor": floor, "price_text": parts[0] if parts else None}
+            if block:
+                cur["block"] = block
+            cur_section = mode
             continue
 
         if cur is None:
+            continue
+
+        # 卖出条目的元信息行（判定说明 / 快照链接）不能落进 RE_SUB，
+        # 否则会把真正的营销文案 summary 覆盖成 "✅ 判定卖出：..."。
+        head = ln.lstrip()
+        if head.startswith("- ✅ 判定卖出"):
+            cur["sold_note"] = head[2:].strip()
+            continue
+        if head.startswith("- 🗄") or head.startswith("- 📷"):
+            cur.setdefault("snapshots", []).append(head[2:].strip())
             continue
 
         um = RE_URL.match(ln)
@@ -313,6 +342,12 @@ def main():
         if snap is None:  # never captured on-market (e.g. removed same day)
             snap = {}
             snap_date = None
+        # 新格式卖出条目（2026-09-18 起）自身就带完整明细；在售期快照缺失时用它兜底，
+        # 这样"下架"条目也总能显示价格/面积/楼层/文案/中介。
+        for _f in ("price", "area", "psf", "floor", "url", "summary", "agent",
+                   "listed_on", "price_hist_text"):
+            if snap.get(_f) in (None, "") and s.get(_f) not in (None, ""):
+                snap[_f] = s[_f]
 
         traj = price_history.get(lid) or []
         prices = [(d, p) for d, p in traj if p]
@@ -546,7 +581,7 @@ def write_html(rows, latest_date, n_reports, first_report):
                          % esc(r["description"]).replace("\n", "<br>"))
 
         cards.append(sub_tpl("""
-<article class="card %(status)s" data-block="%(block)s" data-price="%(pricev)s">
+<article class="card %(status)s" id="L%(id)s" data-block="%(block)s" data-price="%(pricev)s">
   <header class="card-h">
     <div class="card-title">
       <span class="blocktag">%(block)s</span>
@@ -687,7 +722,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .chip.active{background:rgba(91,157,255,.14);border-color:var(--acc);color:var(--acc2)}
   .chip b{font-weight:600;opacity:.85;margin-left:3px}
   .cards{display:flex;flex-direction:column;gap:14px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.15s}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.15s;scroll-margin-top:18px}
+  /* 日报里的 #L<listingId> 深链落点高亮 */
+  .card:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(91,157,255,.35)}
   .card:hover{border-color:var(--line2)}
   .card.gone{border-left:3px solid var(--gone)}
   .card.relisted{border-left:3px solid var(--back)}
