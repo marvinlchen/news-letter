@@ -678,7 +678,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HDB 卖出/下架 房源快照 · Telok Blangah Parcview</title>
+<title>HDB 卖出/下架 房源快照 · Telok Blangah（Parcview + Ridgeview）</title>
 <style>
   :root{
     --bg:#0e1116; --bg2:#141922; --card:#161c26; --card2:#1b2230;
@@ -797,7 +797,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <div class="eyebrow">HDB Resale Monitor · 永久快照</div>
     <h1>✅ 今日卖出 / 下架 —— 房源快照档案</h1>
     <p class="sub">
-      Telok Blangah Parcview（80A/80B/80C · 90A/90B/91A/92B/93A/93B，Telok Blangah Street 31）4-room 非低楼层。
+      Telok Blangah（Parcview + Ridgeview）：Ridgeview 70A/70B/70C（Telok Blangah Heights）·
+      Parcview 80A/80B/80C · 90A/90B/91A/92B/93A/93B（Telok Blangah Street 31），4-room 非低楼层。
       日报里这一栏只有一行 <code>[block] 价格未公开 · 链接</code>，等房源真的卖掉后 PropertyGuru 页面会被删除，
       原链接点进去就什么都没有了。本页把每一条"卖出/下架"记录**还原成它在挂牌期间的样子**——
       价格、面积、单价、楼层、中介、营销文案、挂牌天数与价格走势——全部取自当日日报归档，不可再生的数据。
