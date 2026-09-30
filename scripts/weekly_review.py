@@ -189,7 +189,17 @@ def fetch_index_kline(secid, end_date, lmt=40):
             last_error = exc
             time.sleep(2 * (attempt + 1))
     else:
-        raise RuntimeError(f"日K重试3次仍失败: {last_error}")
+        # 东财失败 → 腾讯日K降级（无成交额字段）
+        try:
+            tencent_rows = fetch_index_kline_tencent(secid, lmt=lmt)
+        except Exception as tencent_exc:
+            raise RuntimeError(
+                f"日K重试3次仍失败: {last_error}；腾讯降级也失败: {tencent_exc}"
+            )
+        if tencent_rows:
+            print(f"[INFO] {secid} 日K已降级使用腾讯数据源（无成交额）")
+            return tencent_rows
+        raise RuntimeError(f"日K重试3次仍失败: {last_error}；腾讯降级无数据")
     rows = []
     for line in klines:
         parts = line.split(",")
@@ -209,6 +219,45 @@ def fetch_index_kline(secid, end_date, lmt=40):
     return rows
 
 
+TENCENT_KLINE = "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get"
+TENCENT_HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+    "Referer": "https://gu.qq.com/",
+}
+
+
+def tencent_code(secid):
+    """东财 secid '1.000300' → 腾讯 'sh000300'；'0.399006' → 'sz399006'。"""
+    market, symbol = secid.split(".", 1)
+    return ("sh" if market == "1" else "sz") + symbol
+
+
+def fetch_index_kline_tencent(secid, lmt=40):
+    """腾讯日K降级源（东财被限流时用）。无成交额字段，amount=None。"""
+    code = tencent_code(secid)
+    payload = request_json(
+        TENCENT_KLINE + "?" + urllib.parse.urlencode({"param": f"{code},day,,,{lmt},qfq"}),
+        headers=TENCENT_HEADERS,
+    )
+    node = ((payload.get("data") or {}).get(code)) or {}
+    rows = []
+    for parts in node.get("day") or []:
+        if len(parts) < 6:
+            continue
+        rows.append(
+            {
+                "date": parts[0],
+                "open": float(parts[1]),
+                "close": float(parts[2]),
+                "high": float(parts[3]),
+                "low": float(parts[4]),
+                "volume": float(parts[5]),
+                "amount": None,
+            }
+        )
+    return rows
+
+
 def index_week_metrics(secid, name, monday, friday):
     """窗口内实际交易日由 K 线日期决定；周涨幅=窗口末日收盘/窗口前一日收盘-1。"""
     rows = fetch_index_kline(secid, friday)
@@ -223,11 +272,17 @@ def index_week_metrics(secid, name, monday, friday):
     base_close = before[-1]["close"] if before else window[0]["open"]
     week_change = (window[-1]["close"] / base_close - 1) * 100
 
-    # 上一个等长窗口（同一批日历日的前一周）做成交对比
+    # 上一个等长窗口（同一批日历日的前一周）做成交对比；降级源无成交额则置 None
     prev_days = len(window)
     prev = before[-prev_days:] if len(before) >= prev_days else before
-    avg_amount = sum(r["amount"] for r in window) / len(window)
-    prev_avg_amount = sum(r["amount"] for r in prev) / len(prev) if prev else None
+    window_amounts = [r["amount"] for r in window if r.get("amount") is not None]
+    prev_amounts = [r["amount"] for r in prev if r.get("amount") is not None]
+    avg_amount = (
+        sum(window_amounts) / len(window_amounts) if window_amounts else None
+    )
+    prev_avg_amount = (
+        sum(prev_amounts) / len(prev_amounts) if prev_amounts else None
+    )
 
     return {
         "name": name,
