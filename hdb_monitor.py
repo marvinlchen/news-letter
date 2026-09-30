@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-HDB 4-room 订阅监控 - Telok Blangah Parcview
-blocks: 80A/80B/80C + 90A/90B/91A/92B/93A/93B (Telok Blangah Street 31)
+HDB 4-room 订阅监控 - Telok Blangah（Parcview + Ridgeview）
+blocks: 70A/70B/70C (Telok Blangah Heights · Ridgeview)
+        + 80A/80B/80C · 90A/90B/91A/92B/93A/93B (Telok Blangah Street 31 · Parcview)
 每天抓取 PropertyGuru 在售 4-room HDB，排除低楼层(LOW)，生成日报（上新 / 卖出）。
 
 实现要点：
@@ -61,8 +62,44 @@ GIT_REMOTE_URL = 'git@github.com:marvinlchen/news-letter.git'
 GIT_LOCAL_REF = 'refs/heads/master'
 GIT_REMOTE_REF = 'refs/heads/hdb-monitor'  # 独立分支，避免覆盖 finance-news-digest 的 main
 
-# 新加的 block 放前面，优先在限流前抓到
-BLOCKS = ['80A', '80B', '80C', '90A', '90B', '91A', '92B', '93A', '93B']
+# 新加的 block 放前面，优先在限流前抓到。
+#
+# block -> 街道名。PropertyGuru 的 freetext 是"block + 街道"的模糊搜索，**不能把街道写死**：
+# 70A/70B/70C 在 Telok Blangah Heights（Ridgeview），其余 block 在 Telok Blangah Street 31
+# （Parcview）。写死街道会让新 block 搜不到、或搜出一堆不相干的房源。
+BLOCK_STREET = {
+    # Telok Blangah Ridgeview（TOP 2017，4-room = 1001 sqft / 93 sqm）
+    '70A': 'Telok Blangah Heights',
+    '70B': 'Telok Blangah Heights',
+    '70C': 'Telok Blangah Heights',
+    # Telok Blangah Parcview
+    '80A': 'Telok Blangah Street 31',
+    '80B': 'Telok Blangah Street 31',
+    '80C': 'Telok Blangah Street 31',
+    '90A': 'Telok Blangah Street 31',
+    '90B': 'Telok Blangah Street 31',
+    '91A': 'Telok Blangah Street 31',
+    '92B': 'Telok Blangah Street 31',
+    '93A': 'Telok Blangah Street 31',
+    '93B': 'Telok Blangah Street 31',
+}
+BLOCKS = list(BLOCK_STREET)                                # 抓取 / 展示顺序
+STREET_ORDER = list(dict.fromkeys(BLOCK_STREET.values()))  # 分组展示顺序
+# 街道 -> 展示标签（项目名）
+STREET_LABEL = {
+    'Telok Blangah Heights': 'Telok Blangah Heights · Ridgeview',
+    'Telok Blangah Street 31': 'Telok Blangah Street 31 · Parcview',
+}
+
+
+def scope_desc():
+    """把 BLOCK_STREET 渲染成一行范围描述，避免标题/范围与实际抓取范围脱节。"""
+    groups = {}
+    for b, s in BLOCK_STREET.items():
+        groups.setdefault(s, []).append(b)
+    return " + ".join(f"{'/'.join(v)}（{STREET_LABEL.get(k, k)}）" for k, v in groups.items())
+
+
 BASE = 'https://www.propertyguru.com.sg'
 HDR = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
@@ -140,7 +177,10 @@ def extract_listings(block, extra=''):
     """返回 (info_dict, allids_list, ok)。
     ok=False 表示抓取失败——注意这与"该 block 确实没有房源"是两回事，
     调用方必须区分，否则抓取失败会被误判成房源消失/卖出。"""
-    url = f'{BASE}/property-for-sale?freetext={block}%20Telok%20Blangah%20Street%2031{extra}'
+    # 街道必须跟着 block 走（见 BLOCK_STREET 注释）
+    street = BLOCK_STREET.get(block, '')
+    query = f'{block} {street}'.strip().replace(' ', '%20')
+    url = f'{BASE}/property-for-sale?freetext={query}{extra}'
     t = fetch(url)
     if not t:
         return {}, [], False
@@ -372,9 +412,9 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
     warnings = warnings or []
     failed_blocks = failed_blocks or []
     L = []
-    L.append("# HDB 4-room 订阅日报 · Telok Blangah Parcview")
+    L.append("# HDB 4-room 订阅日报 · Telok Blangah（Parcview + Ridgeview）")
     L.append(f"**日期**: {date_str}  ")
-    L.append("**范围**: blocks 80A/80B/80C + 90A/90B/91A/92B/93A/93B，4-room HDB 在售（已排除低楼层 LOW）")
+    L.append(f"**范围**: blocks {scope_desc()}，4-room HDB 在售（已排除低楼层 LOW）")
     L.append("")
     L.append("> ⚠️ **关于\"上新\"的判定说明**：PropertyGuru 会在中介刷新/重发房源时把\"上架时间\"改写成本日，"
              "平台自身的\"新上\"信号不可靠。本日报**完全不依赖平台的上架时间**，而是以**房源 ID** 为身份、"
@@ -471,19 +511,26 @@ def build_report(date_str, kept, excluded, state, truly_new, returned, sold, pri
     by_block = {}
     for r in kept.values():
         by_block.setdefault(r['block'], []).append(r)
-    for b in BLOCKS:
-        if b in failed_blocks:
-            L.append(f"### {b} （抓取失败）")
-            L.append("- ⚠️ 本次该 block 抓取失败，数据不可用（未参与\"卖出\"判定）")
+    # 多个项目时先按街道分组（### 街道 -> #### block），只有一个项目时保持扁平的 ### block
+    multi_street = len(STREET_ORDER) > 1
+    for st in STREET_ORDER:
+        if multi_street:
+            L.append(f"### {STREET_LABEL.get(st, st)}")
             L.append("")
-            continue
-        items = by_block.get(b, [])
-        L.append(f"### {b} （{len(items)} 套）")
-        if not items:
-            L.append("- 无")
-        for r in sorted(items, key=lambda x: (x['price'] or 0), reverse=True):
-            L.append(fmt_listing(r, with_block=False, ph=phist.get(r['id'])))
-        L.append("")
+        bhead = '#### ' if multi_street else '### '
+        for b in [x for x in BLOCKS if BLOCK_STREET.get(x) == st]:
+            if b in failed_blocks:
+                L.append(f"{bhead}{b} （抓取失败）")
+                L.append("- ⚠️ 本次该 block 抓取失败，数据不可用（未参与\"卖出\"判定）")
+                L.append("")
+                continue
+            items = by_block.get(b, [])
+            L.append(f"{bhead}{b} （{len(items)} 套）")
+            if not items:
+                L.append("- 无")
+            for r in sorted(items, key=lambda x: (x['price'] or 0), reverse=True):
+                L.append(fmt_listing(r, with_block=False, ph=phist.get(r['id'])))
+            L.append("")
     L.append("---")
     L.append(f"_生成时间 {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} · 数据来源 PropertyGuru（curl_cffi 抓取）_")
     return "\n".join(L)
