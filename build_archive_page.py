@@ -163,7 +163,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HDB 实拍照片归档 · Telok Blangah Parcview</title>
+<title>HDB 实拍照片归档 · Telok Blangah（Parcview + Ridgeview）</title>
 <style>
   :root{
     --bg:#0e1116;--card:#161c26;--line:#252d3c;--line2:#323c4e;
@@ -228,7 +228,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="eyebrow">HDB Resale Monitor · 实拍照片归档</div>
   <h1>房源实拍照片档案</h1>
   <p class="sub">
-    Telok Blangah Parcview（80A/80B/80C · 90A/90B/91A/92B/93A/93B，Telok Blangah Street 31）4-room 非低楼层。
+    Telok Blangah（Parcview + Ridgeview）：Ridgeview 70A/70B/70C（Telok Blangah Heights）· Parcview 80A/80B/80C · 90A/90B/91A/92B/93A/93B（Telok Blangah Street 31），4-room 非低楼层。
     这些照片、户型图与完整描述，是在房源<b>还在 PropertyGuru 上挂着的时候</b>抓下来存进本仓库的 ——
     一旦房源下架，PropertyGuru 会清空详情页内容（页面仍返回 200，但照片和数据全部消失），届时再也取不回来。
   </p>
@@ -275,7 +275,7 @@ INDEX_TPL = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Telok Blangah Parcview · HDB 4-room 监控归档</title>
+<title>Telok Blangah（Parcview + Ridgeview）· HDB 4-room 监控归档</title>
 <style>
   :root{--bg:#0e1116;--card:#161c26;--line:#252d3c;--line2:#323c4e;
     --fg:#e8edf5;--fg2:#a8b3c5;--fg3:#6f7c92;--acc:#5b9dff;--acc2:#8bb8ff}
@@ -298,10 +298,11 @@ INDEX_TPL = r"""<!DOCTYPE html>
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow">Telok Blangah Parcview · HDB 4-room 非低楼层</div>
+  <div class="eyebrow">Telok Blangah（Parcview + Ridgeview）· HDB 4-room 非低楼层</div>
   <h1>监控归档总入口</h1>
   <p class="sub">
-    覆盖 blocks 80A/80B/80C · 90A/90B/91A/92B/93A/93B（Telok Blangah Street 31）。
+    覆盖 blocks 70A/70B/70C（Telok Blangah Heights · Ridgeview）·
+    80A/80B/80C · 90A/90B/91A/92B/93A/93B（Telok Blangah Street 31 · Parcview）。
     每天 09:00 自动抓取 PropertyGuru 在售房源、归档详情页，并生成下列页面。
   </p>
 
