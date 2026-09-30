@@ -11,6 +11,7 @@ CSI1000_MARKER="# finance-csi1000-analysis"
 SECTOR_HOTSPOTS_MARKER="# finance-sector-hotspots"
 US_SECTOR_HOTSPOTS_MARKER="# finance-us-sector-hotspots"
 NATIONAL_TEAM_ETF_MARKER="# finance-national-team-etf-weekly"
+WEEKLY_REVIEW_MARKER="# finance-weekly-review"
 A_SHARE_SECTOR_RADAR_MARKER="# finance-a-share-sector-radar-weekly"
 ARCHIVE_MARKER="# finance-archive-legacy"
 REDDIT_ENV_FILE="${REDDIT_ENV_FILE:-$HOME/.config/finance-news-digest/reddit.env}"
@@ -69,6 +70,11 @@ else
   NATIONAL_TEAM_ETF_COMMAND="$PROJECT_ROOT/scripts/run-national-team-etf-weekly.sh"
 fi
 if command -v flock >/dev/null 2>&1; then
+  WEEKLY_REVIEW_COMMAND="/usr/bin/flock -n $PROJECT_ROOT/var/weekly-review-run.lock $PROJECT_ROOT/scripts/run-weekly-review.sh"
+else
+  WEEKLY_REVIEW_COMMAND="$PROJECT_ROOT/scripts/run-weekly-review.sh"
+fi
+if command -v flock >/dev/null 2>&1; then
   A_SHARE_SECTOR_RADAR_COMMAND="/usr/bin/flock -n $PROJECT_ROOT/var/a-share-sector-radar-weekly-run.lock $PROJECT_ROOT/scripts/run-a-share-sector-radar-weekly.sh"
 else
   A_SHARE_SECTOR_RADAR_COMMAND="$PROJECT_ROOT/scripts/run-a-share-sector-radar-weekly.sh"
@@ -86,6 +92,7 @@ crontab -l 2>/dev/null \
   | grep -vF "$SECTOR_HOTSPOTS_MARKER" \
   | grep -vF "$US_SECTOR_HOTSPOTS_MARKER" \
   | grep -vF "$NATIONAL_TEAM_ETF_MARKER" \
+  | grep -vF "$WEEKLY_REVIEW_MARKER" \
   | grep -vF "$A_SHARE_SECTOR_RADAR_MARKER" \
   | grep -v 'run-csi300-analysis.sh' \
   | grep -v 'run-csi500-analysis.sh' \
@@ -124,9 +131,11 @@ printf '0 16 * * 1-5 %s >> %s/var/log/sector-hotspots.log 2>&1 %s\n' \
   "$SECTOR_HOTSPOTS_COMMAND" "$PROJECT_ROOT" "$SECTOR_HOTSPOTS_MARKER" >> "$tmp"
 printf '10 9 * * 6 %s >> %s/var/log/national-team-etf-weekly.log 2>&1 %s\n' \
   "$NATIONAL_TEAM_ETF_COMMAND" "$PROJECT_ROOT" "$NATIONAL_TEAM_ETF_MARKER" >> "$tmp"
+printf '30 9 * * 6 %s >> %s/var/log/weekly-review.log 2>&1 %s\n' \
+  "$WEEKLY_REVIEW_COMMAND" "$PROJECT_ROOT" "$WEEKLY_REVIEW_MARKER" >> "$tmp"
 printf '0 10 * * 0 %s >> %s/var/log/a-share-sector-radar-weekly.log 2>&1 %s\n' \
   "$A_SHARE_SECTOR_RADAR_COMMAND" "$PROJECT_ROOT" "$A_SHARE_SECTOR_RADAR_MARKER" >> "$tmp"
 printf '30 3 * * * /usr/bin/flock -n %s/var/archive-legacy.lock %s/scripts/archive-legacy.sh >> %s/var/log/archive-legacy.log 2>&1 %s\n' \
   "$PROJECT_ROOT" "$PROJECT_ROOT" "$PROJECT_ROOT" "$ARCHIVE_MARKER" >> "$tmp"
 crontab "$tmp"
-crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest|finance-csi[0-9]+-analysis|finance-sector-hotspots|finance-us-sector-hotspots|finance-national-team-etf-weekly|finance-a-share-sector-radar-weekly'
+crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest|finance-csi[0-9]+-analysis|finance-sector-hotspots|finance-us-sector-hotspots|finance-national-team-etf-weekly|finance-weekly-review|finance-a-share-sector-radar-weekly'

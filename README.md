@@ -233,6 +233,33 @@ known-invalid same-day artifact requires the explicit `--repair-existing`
 flag. Such a report is labeled `excluded_repair`, may be published for audit,
 but never enters the forward activation or hit-rate denominator.
 
+Generate the weekly all-market investment review:
+
+```bash
+./scripts/run-weekly-review.sh            # 完整版（CodeBuddy 综述）
+./scripts/run-weekly-review.sh --skip-ai  # 规则版（诊断用，不发布）
+```
+
+The weekly review covers the Monday-Friday trading window before the run date
+(designed to run on Saturday). Index weekly metrics, full-market 5-day
+gainers/losers, and board 5-day rankings come directly from Eastmoney
+endpoints and are the numeric authority. The week's daily sector-hotspots,
+us-sector-hotspots, stock-pool, and CSI reports are parsed only for
+continuity signals (days on list), cumulative daily-compounded sector
+returns, cumulative main net inflow, recurring CSI movers, and per-stock news
+digests; parse failures degrade those subsections without blocking the run.
+CodeBuddy writes the weekly summary and next-week outlook; failures fall back
+to a rules-only summary recorded via `mode` in
+`var/weekly-review-status/latest-run.json`.
+
+Weekly review artifacts are written to:
+
+```text
+published/weekly-review/YYYY-MM-DD.md
+published/weekly-review/latest.md
+var/weekly-review-status/latest-run.json
+```
+
 Without credentials, the collector uses Reddit's public Topic `top/day` RSS
 feeds at a deliberately conservative request rate. RSS mode does not fetch
 thread comments. For accurate scores, total comment counts, sampled Top
@@ -297,6 +324,9 @@ previous two weeks, and writes logs to
 The A-share sector-leading-signal report runs every Sunday at `10:00` China
 Standard Time, uses the latest common Shenwan trading day, and writes logs to
 `var/log/a-share-sector-radar-weekly.log`.
+The weekly all-market investment review runs every Saturday at `09:30` China
+Standard Time, covers the Monday-Friday trading window just ended, and writes
+logs to `var/log/weekly-review.log`.
 
 After a successful digest run, `scripts/publish-report.sh` commits and pushes
 the dated report and `reports/latest.md` to the configured `origin` remote.
