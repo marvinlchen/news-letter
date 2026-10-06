@@ -1,0 +1,933 @@
+{
+ "id": "500284012",
+ "block": "70C",
+ "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-70c-telok-blangah-heights-500284012",
+ "archived_at": "2026-10-06 09:02:08",
+ "price": 998000,
+ "price_display": "S$ 998,000",
+ "psf": "S$ 997.00 psf",
+ "headline": "Renovated High Floor Corner Unit For Sale! Mins To Telok Blangah Mrt!",
+ "title": {
+  "en": "70C Telok Blangah Heights"
+ },
+ "description": "**Call or Sms Shaun How at Nine117 Nine372 NOW!**\nAll Agents & Buyers are Welcome\n\n**New Listing at 70C Telok Blangah Heights**\n4-Room HDB Unit for Sale\n\n■ 5 Years Newly Renovated Unit\n■ High Floor Unit\n■ Corner Unit\n■ Quiet Facing\n■ Spacious Squarish Rooms\n■ 5 - 8 Mins Walk To Telok Blangah Mrt\n■ 3 months extension needed\n\nAsking ONLY $988,000 nego\n\nAll Agents & Buyers are Welcome\n**Call Shaun How at Nine117 Nine372 to view NOW!**",
+ "bedrooms": "3 Bedrooms",
+ "bathrooms": "2 Bathrooms",
+ "furnishing": "Unfurnished",
+ "address": "70C Telok Blangah Heights, Harbourfront / Telok Blangah",
+ "postal_code": "103070",
+ "lat": 1.2759274,
+ "lon": 103.8109424,
+ "agent": "Shaun How",
+ "agent_license": "R048244J",
+ "agent_verified": false,
+ "first_posted": "2026-10-05 11:02:46",
+ "content_updated": "2026-10-05 11:01:23",
+ "expiry": "2026-11-06 11:02:46",
+ "reference_note": null,
+ "status_code": "ACT",
+ "photo_count": 6,
+ "floorplan_count": 0,
+ "photos": [
+  "photos/01.jpg",
+  "photos/02.jpg",
+  "photos/03.jpg",
+  "photos/04.jpg",
+  "photos/05.jpg",
+  "photos/06.jpg"
+ ],
+ "floorplans": [],
+ "raw_listing_detail": {
+  "cobroke": false,
+  "lister": {
+   "type": "agent",
+   "metaByType": {
+    "agent": {
+     "id": 255492,
+     "legacyId": null,
+     "name": "Shaun How",
+     "isVerified": false,
+     "jobTitle": "Associate Group Director",
+     "description": "I have years of experience in the real estate industry and I will ensure you will find your DREAM Property regardless of HDB ,Private Condominiums or Landed Property. \r\n\r\nLet me have a chance to advise you on all your Property Needs\r\n\r\nCall me NOW at 91179372!",
+     "license": "R048244J",
+     "showProfile": true,
+     "alternativeAgent": null,
+     "alternativeLicense": null,
+     "isPremiumAccount": true,
+     "account": {
+      "code": "NORMAL",
+      "subTypeCode": null
+     },
+     "badges": null,
+     "showSellerProfile": true,
+     "agentAwards": [],
+     "awards": [],
+     "contacts": [
+      {
+       "pretty": "+65 9117 9372",
+       "type": "mobile",
+       "value": "+6591179372"
+      }
+     ]
+    }
+   }
+  },
+  "notes": null,
+  "listingType": {
+   "code": "SALE",
+   "subTypeCode": null,
+   "text": "For Sale"
+  },
+  "project": {
+   "type": "verified",
+   "metaByType": {
+    "verified": {
+     "id": "xim0y3",
+     "legacyId": 23002,
+     "projectId": 20363,
+     "name": "70C Telok Blangah Heights",
+     "statusCode": null,
+     "tenure": {
+      "code": "L99",
+      "text": "99-year Leasehold"
+     },
+     "developer": "Housing & Development Board (HDB)",
+     "totalUnits": null,
+     "facilities": [],
+     "floors": 25,
+     "newProject": false,
+     "completionMonth": null,
+     "completionYear": 2016,
+     "availableUnits": null,
+     "categoryType": {
+      "code": "R",
+      "text": "Residential"
+     },
+     "property": {
+      "type": {
+       "code": "H",
+       "text": "HDB"
+      },
+      "subType": {
+       "code": "HDB",
+       "text": "HDB Flat"
+      },
+      "unitType": {
+       "code": null,
+       "text": null
+      }
+     }
+    }
+   }
+  },
+  "isUnifiedCredit": null,
+  "media": {
+   "agencyLogos": [
+    {
+     "sortOrder": 101973653,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/agency/4647/CLOGO.101973653.${viewType}.jpg",
+     "caption": null,
+     "id": 101973653,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "CONF",
+     "thumbnailUrl": null
+    }
+   ],
+   "agent": [
+    {
+     "sortOrder": 132001337,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/agent/255492/APHO.132001337.${viewType}.jpg",
+     "caption": null,
+     "id": 132001337,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "CONF",
+     "thumbnailUrl": null
+    }
+   ],
+   "agentLogos": [],
+   "cover": [
+    {
+     "sortOrder": 1,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500284012/UPHO.161827679.${viewType}.jpg",
+     "caption": "Living Room",
+     "id": 161827679,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": true,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    }
+   ],
+   "developerLogos": [],
+   "excludedProjectPhotos": [],
+   "includedProjectFloorPlans": [
+    161565608
+   ],
+   "includedVirtualTours": [],
+   "hasFloorPlans": true,
+   "hasStream": false,
+   "included": [],
+   "listingImages": [
+    {
+     "sortOrder": 1,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500284012/UPHO.161827679.${viewType}/70C-Telok-Blangah-Heights-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "caption": "Living Room",
+     "id": 161827679,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": true,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    },
+    {
+     "sortOrder": 2,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500284012/UPHO.161827678.${viewType}/70C-Telok-Blangah-Heights-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "caption": "Kitchen",
+     "id": 161827678,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    },
+    {
+     "sortOrder": 3,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500284012/UPHO.161827682.${viewType}/70C-Telok-Blangah-Heights-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "caption": "Study",
+     "id": 161827682,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    },
+    {
+     "sortOrder": 4,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500284012/UPHO.161827677.${viewType}/70C-Telok-Blangah-Heights-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "caption": "Bedroom",
+     "id": 161827677,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    },
+    {
+     "sortOrder": 5,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500284012/UPHO.161827681.${viewType}/70C-Telok-Blangah-Heights-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "caption": "Bedroom",
+     "id": 161827681,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    },
+    {
+     "sortOrder": 6,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500284012/UPHO.161827680.${viewType}/70C-Telok-Blangah-Heights-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "caption": "Bathroom",
+     "id": 161827680,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    }
+   ],
+   "listingAwardBadges": [],
+   "listingDocuments": [],
+   "listingFloorPlans": [],
+   "listingHeroVideos": [],
+   "listingSitePlans": [],
+   "listingVideos": [],
+   "coverVideo": [],
+   "listingVirtualTours": [],
+   "projectLogos": [],
+   "project": [],
+   "projectFloorPlans": [
+    {
+     "sortOrder": 161565608,
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/projectnet-unit/2097/ZUVFP.161565608.${viewType}.jpg",
+     "caption": "2D",
+     "id": 161565608,
+     "mimeType": "image/jpg",
+     "type": "IMAGE",
+     "isCover": false,
+     "statusCode": "ACT",
+     "thumbnailUrl": null
+    }
+   ],
+   "projectSitePlans": [],
+   "propertyBrochures": [],
+   "reviewCovers": [],
+   "unitTypes": {
+    "listing": [],
+    "project": []
+   }
+  },
+  "title": {
+   "en": "70C Telok Blangah Heights"
+  },
+  "crossListingType": "ORIGINAL",
+  "descriptions": [
+   {
+    "text": "**Call or Sms Shaun How at Nine117 Nine372 NOW!**\nAll Agents & Buyers are Welcome\n\n**New Listing at 70C Telok Blangah Heights**\n4-Room HDB Unit for Sale\n\n■ 5 Years Newly Renovated Unit\n■ High Floor Unit\n■ Corner Unit\n■ Quiet Facing\n■ Spacious Squarish Rooms\n■ 5 - 8 Mins Walk To Telok Blangah Mrt\n■ 3 months extension needed\n\nAsking ONLY $988,000 nego\n\nAll Agents & Buyers are Welcome\n**Call Shaun How at Nine117 Nine372 to view NOW!**",
+    "locale": "en",
+    "brand": "pg"
+   }
+  ],
+  "purchaseType": "STANDARD",
+  "urls": {
+   "listing": {
+    "api": "https://api.propertyguru.com/v5/listings/500284012?brand=pg&country=sg",
+    "internal": "https://listings.kgw.guruestate.com/v5/listings/500284012?brand=pg&country=sg",
+    "desktopByLocales": {
+     "en": "https://www.propertyguru.com.sg/listing/hdb-for-sale-70c-telok-blangah-heights-500284012"
+    },
+    "mobile": "https://www.propertyguru.com.sg/listing/hdb-for-sale-70c-telok-blangah-heights-500284012",
+    "desktop": "https://www.propertyguru.com.sg/listing/hdb-for-sale-70c-telok-blangah-heights-500284012"
+   }
+  },
+  "postedOnBrands": {
+   "pg": true,
+   "ipp": false
+  },
+  "unitTypes": [],
+  "price": {
+   "min": 998000,
+   "max": 998000,
+   "formatted": "S$ 998,000",
+   "currency": "SGD",
+   "perArea": {
+    "floor": [
+     {
+      "uom": "sqft",
+      "min": 997,
+      "max": 997,
+      "text": "S$ 997.00 psf"
+     }
+    ],
+    "land": []
+   },
+   "maintenanceFee": null,
+   "maintenanceFeePerUnit": null,
+   "type": {
+    "code": "NEG",
+    "text": "Negotiable"
+   }
+  },
+  "qualityScore": 100,
+  "qualityScoreDetails": null,
+  "isSearchHidden": false,
+  "propertySpecialist": null,
+  "id": 500284012,
+  "offerings": {
+   "isAutoRepost": false,
+   "isBoost": false,
+   "isBoosted": false,
+   "isDowngraded": false,
+   "isFeatured": false,
+   "isFeaturedListing": false,
+   "isGalleryFeatured": false,
+   "isMainFeatured": false,
+   "isNonPaid": false,
+   "isPremium": false,
+   "isPremiumPlus": false,
+   "isPremiumProjectListing": false,
+   "isPrimaryBasic": false,
+   "isPrimaryGold": false,
+   "isPrimaryPlatinum": false,
+   "isPromotedListing": false,
+   "isPropertySpecialistListing": false,
+   "isRankedSpotlight": false,
+   "isShowcase": false,
+   "isSpotlight": false,
+   "isStandard": false,
+   "isSuperBoost": false,
+   "isTurbo": false,
+   "isTurboPro": false,
+   "isDegraded": false,
+   "isRegular": false,
+   "tier": 0,
+   "tracking": {
+    "refType": ""
+   }
+  },
+  "verification": {
+   "isVerified": false,
+   "expiryDate": null,
+   "statusUpdatedAt": "2026-10-05 11:02:28",
+   "status": "eligible"
+  },
+  "unitDetails": {
+   "dimensions": {
+    "floor": {
+     "length": null,
+     "width": null,
+     "size": [
+      {
+       "uom": "sqft",
+       "formatted": "1,001 sqft",
+       "value": 1001
+      }
+     ]
+    },
+    "land": {
+     "length": null,
+     "width": null,
+     "size": []
+    },
+    "room": {
+     "size": []
+    }
+   },
+   "configuration": {
+    "bedrooms": {
+     "value": 3,
+     "text": "3 Bedrooms"
+    },
+    "bathrooms": {
+     "value": 2,
+     "text": "2 Bathrooms"
+    },
+    "extrarooms": {
+     "value": null,
+     "text": null
+    }
+   },
+   "parkingSpots": null,
+   "condition": null,
+   "furnishing": {
+    "code": "UNFUR",
+    "description": "Unfurnished"
+   },
+   "isAvailableNow": true,
+   "features": [
+    {
+     "code": "ARCON",
+     "description": "Air Conditioner"
+    }
+   ],
+   "furnishingDetails": [],
+   "isBumiLot": null,
+   "ceilingHeight": null,
+   "tenancy": {
+    "tenantedUntilDate": {
+     "date": null,
+     "timestamp": null
+    },
+    "value": "UNTENANTED"
+   },
+   "propertyUses": [],
+   "centralAircon": null,
+   "centralAirconHours": null,
+   "electricity": {
+    "phase": null,
+    "supply": null
+   },
+   "direction": null,
+   "floorLoadingCapacity": null,
+   "floorLoadingCategory": null,
+   "hdbType": {
+    "code": "4A",
+    "description": "4A"
+   },
+   "isHighCeiling": null,
+   "lift": {
+    "capacity": null,
+    "cargo": null,
+    "totalPassenger": null
+   },
+   "occupancy": null,
+   "ownerType": null,
+   "parkingFee": null,
+   "quotaEthnic": false,
+   "quotaSpr": null,
+   "ramp": null,
+   "sellerEthnic": {
+    "code": "CN",
+    "description": "Chinese"
+   },
+   "sellerResidency": {
+    "code": "CIT",
+    "description": "Citizen / Malaysian SPR"
+   },
+   "roomType": null,
+   "cookingType": null,
+   "tenantGender": null,
+   "maxTenants": null,
+   "petFriendly": null,
+   "ownerStays": null,
+   "wifiIncluded": null,
+   "utilitiesIncluded": null,
+   "visitorsAllowed": null,
+   "floorLevel": null,
+   "titleType": null,
+   "landTitleType": null,
+   "rentalType": null,
+   "tenantEligibility": false
+  },
+  "metas": {
+   "title": "70C Telok Blangah Heights, 70C Telok Blangah Heights, Harbourfront / Telok Blangah, 3 Bedrooms, 1001 sqft, HDB Flats for sale, by Shaun How, S$ 998,000, 500284012",
+   "description": "View details, photos and map of property listing 500284012 - for sale - 70C Telok Blangah Heights - 70C Telok Blangah Heights, Harbourfront / Telok Blangah, 3 Bedrooms, 1001 sqft, S$ 998,000",
+   "keywords": "agent, listing, real estate, property, sale, rent, apartment, house, expatriate, housing, hdb, location, condominium, map"
+  },
+  "dependencyErrors": [],
+  "rotation": null,
+  "dates": {
+   "timezone": "UTC+08:00",
+   "available": null,
+   "auction": null,
+   "created": {
+    "date": "2026-10-05 11:01:22",
+    "timestamp": 1791169282
+   },
+   "contentUpdated": {
+    "date": "2026-10-05 11:01:23",
+    "timestamp": 1791169283
+   },
+   "updated": {
+    "date": "2026-10-05 11:02:46",
+    "timestamp": 1791169366
+   },
+   "expiry": {
+    "date": "2026-11-06 11:02:46",
+    "timestamp": 1793934166
+   },
+   "firstPosted": {
+    "date": "2026-10-05 11:02:46",
+    "timestamp": 1791169366
+   },
+   "lastPosted": {
+    "date": "2026-10-05 11:02:46",
+    "timestamp": 1791169366
+   }
+  },
+  "version": 3,
+  "publishingSource": {
+   "code": "WEB"
+  },
+  "referenceNote": null,
+  "projectListingSubType": null,
+  "pointOfInterest": {
+   "mrt": [
+    {
+     "walkingDistanceKm": 0.83,
+     "walkingDurationMins": 10,
+     "name": "CC28 Telok Blangah MRT Station",
+     "distanceKm": 0.59,
+     "id": "1673",
+     "point": {
+      "lon": 103.809878,
+      "lat": 1.2707152
+     },
+     "stationId": "CC28"
+    }
+   ],
+   "schools": [
+    {
+     "walkingDistanceKm": 0.32,
+     "walkingDurationMins": 4,
+     "name": "Blangah Rise Primary School",
+     "distanceKm": 0.26,
+     "id": "11000",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.808629,
+      "lat": 1.27612
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.25,
+     "walkingDurationMins": 15,
+     "name": "Iss International School",
+     "distanceKm": 0.78,
+     "id": "11298",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.805691,
+      "lat": 1.280633
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.37,
+     "walkingDurationMins": 16,
+     "name": "Hyper Island Institute of Higher Education",
+     "distanceKm": 0.87,
+     "id": "11278",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.8034,
+      "lat": 1.273891
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.87,
+     "walkingDurationMins": 22,
+     "name": "Rha Academy",
+     "distanceKm": 0.96,
+     "id": "11359",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.813673,
+      "lat": 1.284078
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.87,
+     "walkingDurationMins": 22,
+     "name": "The Logistics Academy",
+     "distanceKm": 0.96,
+     "id": "11418",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.813673,
+      "lat": 1.284078
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.35,
+     "walkingDurationMins": 16,
+     "name": "Shelton College International",
+     "distanceKm": 1.05,
+     "id": "11376",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.820236,
+      "lat": 1.274271
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.55,
+     "walkingDurationMins": 19,
+     "name": "Singapore Raffles Music College",
+     "distanceKm": 1.07,
+     "id": "11389",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.80133,
+      "lat": 1.275215
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.55,
+     "walkingDurationMins": 19,
+     "name": "Kingston International School",
+     "distanceKm": 1.07,
+     "id": "11308",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.80133,
+      "lat": 1.275215
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.51,
+     "walkingDurationMins": 18,
+     "name": "SP Jain School of Global Management",
+     "distanceKm": 1.08,
+     "id": "25030",
+     "category": "EDUCATION",
+     "subcategory": "UNIVERSITY",
+     "point": {
+      "lon": 103.802162,
+      "lat": 1.280156
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.09,
+     "walkingDurationMins": 25,
+     "name": "Bukit Merah Secondary School",
+     "distanceKm": 1.12,
+     "id": "12087",
+     "category": "EDUCATION",
+     "subcategory": "SECONDARY SCHOOL",
+     "point": {
+      "lon": 103.813439,
+      "lat": 1.285693
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.48,
+     "walkingDurationMins": 18,
+     "name": "Inspiration Design International School",
+     "distanceKm": 1.13,
+     "id": "11284",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818527,
+      "lat": 1.282638
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.48,
+     "walkingDurationMins": 18,
+     "name": "Coleman College",
+     "distanceKm": 1.13,
+     "id": "11224",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818527,
+      "lat": 1.282638
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.48,
+     "walkingDurationMins": 18,
+     "name": "Siso Academy",
+     "distanceKm": 1.13,
+     "id": "11393",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818527,
+      "lat": 1.282638
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.8,
+     "walkingDurationMins": 22,
+     "name": "Baking Industry Training College",
+     "distanceKm": 1.14,
+     "id": "11202",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.817466,
+      "lat": 1.283837
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.8,
+     "walkingDurationMins": 22,
+     "name": "Allspice Institute",
+     "distanceKm": 1.14,
+     "id": "11183",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.817466,
+      "lat": 1.283837
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.61,
+     "walkingDurationMins": 19,
+     "name": "S P Jain School of Global Management",
+     "distanceKm": 1.17,
+     "id": "11362",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.801274,
+      "lat": 1.280023
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.49,
+     "walkingDurationMins": 18,
+     "name": "Parkway College of Nursing and Allied Health",
+     "distanceKm": 1.17,
+     "id": "11350",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818799,
+      "lat": 1.282932
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.36,
+     "walkingDurationMins": 28,
+     "name": "Gan Eng Seng Primary School",
+     "distanceKm": 1.19,
+     "id": "11041",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.815547,
+      "lat": 1.285595
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.87,
+     "walkingDurationMins": 22,
+     "name": "Chij St. Theresa's Convent",
+     "distanceKm": 1.28,
+     "id": "12096",
+     "category": "EDUCATION",
+     "subcategory": "SECONDARY SCHOOL",
+     "point": {
+      "lon": 103.822441,
+      "lat": 1.275352
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.73,
+     "walkingDurationMins": 21,
+     "name": "Radin Mas Primary School",
+     "distanceKm": 1.48,
+     "id": "11107",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.824188,
+      "lat": 1.274958
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.58,
+     "walkingDurationMins": 31,
+     "name": "Zhangde Primary School",
+     "distanceKm": 1.91,
+     "id": "11163",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.825952,
+      "lat": 1.284212
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.31,
+     "walkingDurationMins": 28,
+     "name": "Chij (Kellock)",
+     "distanceKm": 1.92,
+     "id": "11012",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.828158,
+      "lat": 1.275023
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 3.23,
+     "walkingDurationMins": 39,
+     "name": "Queenstown Secondary School",
+     "distanceKm": 1.97,
+     "id": "12160",
+     "category": "EDUCATION",
+     "subcategory": "SECONDARY SCHOOL",
+     "point": {
+      "lon": 103.813191,
+      "lat": 1.293521
+     },
+     "stationId": null
+    }
+   ]
+  },
+  "headlines": [
+   {
+    "text": "Renovated High Floor Corner Unit For Sale! Mins To Telok Blangah Mrt!",
+    "locale": "en",
+    "brand": "pg"
+   }
+  ],
+  "organization": {
+   "id": 4647,
+   "legacyId": null,
+   "name": "HUTTONS ASIA PTE LTD",
+   "license": "L3008899K",
+   "brandColor": null,
+   "active": true,
+   "address": null
+  },
+  "location": {
+   "id": 41551,
+   "address": {
+    "formatted": "70C Telok Blangah Heights, Harbourfront / Telok Blangah",
+    "maskUnitNumber": true,
+    "block": null,
+    "unit": null,
+    "floor": null,
+    "streetNumber": "70C",
+    "postalCode": "103070",
+    "maskLocation": false
+   },
+   "hdbEstate": {
+    "code": 5,
+    "text": "Bukit Merah"
+   },
+   "street": "Telok Blangah Heights",
+   "streetName2": null,
+   "zoneIds": [
+    "40004"
+   ],
+   "subZoneIds": [
+    "41043"
+   ],
+   "streetId": null,
+   "point": {
+    "lat": 1.2759274,
+    "lon": 103.8109424
+   },
+   "levels": [
+    {
+     "level": 200,
+     "levelName": "region",
+     "id": "A",
+     "value": "City & South West (D01-08)",
+     "slug": "city-south-west-d01-08"
+    },
+    {
+     "level": 500,
+     "levelName": "district",
+     "id": "D04",
+     "value": "Harbourfront / Telok Blangah",
+     "slug": "harbourfront-telok-blangah"
+    }
+   ],
+   "noLevel600": false,
+   "noLevel700": false,
+   "noLevel800": false,
+   "streetName": "Telok Blangah Heights"
+  },
+  "lease": {
+   "code": null,
+   "text": null,
+   "remaining": null
+  },
+  "statusCode": "ACT"
+ },
+ "archive_bytes": 281960,
+ "html_bytes": 348746,
+ "image_errors": []
+}
