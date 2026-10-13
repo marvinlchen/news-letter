@@ -1,0 +1,978 @@
+{
+ "id": "500291206",
+ "block": "93B",
+ "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500291206",
+ "archived_at": "2026-10-13 12:39:28",
+ "price": 999000,
+ "price_display": "S$ 999,000",
+ "psf": "S$ 998.00 psf",
+ "headline": "Telok blangah parcview 4rm high floor unblock geenery view",
+ "title": {
+  "en": "93B Telok Blangah Street 31"
+ },
+ "description": "Telok Blangah Parcview – 4rm High Floor Unblock Greenery View \nCentral location, with nature parks and vary shopping malls nearby and Greater Southern Waterfront Transformation in the pipeline.\n\nUnit Features:\n- Seaview corridor with relaxing unblock greenery view\n- High floor with nice unit number\n- No Direct West Sun (Main door face South- outward)\n- Bright and breezy throughout the whole year\n- Newly MOP Unit\n- Close to amenities like wet market, food centre and bus stop, community centre.\n- 3 Months Extension required \n\nUnit Beauty:\nLong and elegant wall feature in the Living hall with lots of storage space\nBig and spacious Wardrobe in the MasterRoom\nUnique Dry and Wet Kitchen Concept – Condo alike feel\nCustomise Dining table with breakfast table for your daily needs \nExtended Kitchen to servicing yard\nRenovated Modern design for both Toilets \n \nTrains \nTelok Blangah MRT (CC28) 0.58 km \nLabrador Park MRT (CC27) 0.64 km \n\nBus Stops \nBlk 67 (Bus: 120, 273) 0.23 km \n\nGroceries & Supermarts \nNTUC Fairprice (Telok Blangah) 0.27 km \nNTUC Fairprice (Depot) 0.68 km \nNTUC Fairprice (PSA Branch) 0.73 km \n\nSchools \nBlangah Rise Primary School 0.13 km \nISS International School (Preston Campus) 0.67 km \n\nParks\nThe Southern Ridges 0.52m \nTelok Blangah Hill Park 0.68m  \nHort Park - The Gardening Hub 0.9m \n\nLifestyle \nThe PSA Club 0.87 km \nKeppel Club 0.91 km \nSAFRA Mt Faber 1.10 km \nMarina at Keppel Bay 1.40 km\nJadelyn Ang  \n8338 8712 | JadelynProperty.com  \nGuiding Your Property Wealth Progression",
+ "bedrooms": "3 Bedrooms",
+ "bathrooms": "2 Bathrooms",
+ "furnishing": "Partially Furnished",
+ "address": "93B 93B, Harbourfront / Telok Blangah",
+ "postal_code": "102093",
+ "lat": 1.2754531631149066,
+ "lon": 103.80766474603274,
+ "agent": "Jadelyn Ang",
+ "agent_license": "R043907C",
+ "agent_verified": false,
+ "first_posted": "2026-10-12 12:25:51",
+ "content_updated": "2026-10-12 12:14:22",
+ "expiry": "2026-11-13 12:25:51",
+ "reference_note": null,
+ "status_code": "ACT",
+ "photo_count": 7,
+ "floorplan_count": 1,
+ "photos": [
+  "photos/01.jpg",
+  "photos/02.jpg",
+  "photos/03.jpg",
+  "photos/04.jpg",
+  "photos/05.jpg",
+  "photos/06.jpg",
+  "photos/07.jpg"
+ ],
+ "floorplans": [
+  "floorplans/01.jpg"
+ ],
+ "raw_listing_detail": {
+  "cobroke": false,
+  "lister": {
+   "type": "agent",
+   "metaByType": {
+    "agent": {
+     "id": 196722,
+     "legacyId": null,
+     "name": "Jadelyn Ang",
+     "isVerified": false,
+     "jobTitle": null,
+     "description": "Jadelyn Ang is a young and enthusiastic lady who loves to strive for the best in her life. She loves to expose herself to a wide variety of activities, always trying to learn new knowledge and skills to overcome challenges in every aspect in life. She is a Certified Real Estate Salesperson practicing in Singapore, a graduate with Bachelor of Business (Economic & Finance) and a holder for Diploma of merit in Industrial Design. With the broad ranges of knowledge in different industries area, she is well-equipped to assist and advise her clients from current property market, international financial economic and interior design ideas. With that she is certain to bring your dream home come into reality.",
+     "license": "R043907C",
+     "showProfile": true,
+     "alternativeAgent": null,
+     "alternativeLicense": null,
+     "isPremiumAccount": true,
+     "account": {
+      "code": "NORMAL",
+      "subTypeCode": null
+     },
+     "badges": null,
+     "showSellerProfile": true,
+     "agentAwards": [],
+     "awards": [],
+     "contacts": [
+      {
+       "type": "mobile",
+       "value": "+6583388712",
+       "pretty": "+65 8338 8712"
+      }
+     ]
+    }
+   }
+  },
+  "notes": null,
+  "listingType": {
+   "code": "SALE",
+   "subTypeCode": null,
+   "text": "For Sale"
+  },
+  "project": {
+   "type": "verified",
+   "metaByType": {
+    "verified": {
+     "id": "ar289p",
+     "legacyId": 22748,
+     "projectId": 20115,
+     "name": "93B Telok Blangah Street 31",
+     "statusCode": "4TOP",
+     "tenure": {
+      "code": "L99",
+      "text": "99-year Leasehold"
+     },
+     "developer": "Housing & Development Board (HDB)",
+     "totalUnits": 284,
+     "facilities": [
+      {
+       "code": "AFS",
+       "description": "Adult Fitness Stations"
+      },
+      {
+       "code": "CLWYS",
+       "description": "Covered Linkways"
+      },
+      {
+       "code": "DOP",
+       "description": "Drop Off Point"
+      },
+      {
+       "code": "EAT",
+       "description": "Eateries"
+      },
+      {
+       "code": "ESS",
+       "description": "Electrical Sub-Station"
+      },
+      {
+       "code": "EWS",
+       "description": "Elderly Wellness Stations"
+      },
+      {
+       "code": "MMAR",
+       "description": "Mini-Mart"
+      },
+      {
+       "code": "MSCP",
+       "description": "Multi-Storey Car Park"
+      },
+      {
+       "code": "PLAY",
+       "description": "Playground"
+      },
+      {
+       "code": "PP",
+       "description": "Precinct Pavilion"
+      },
+      {
+       "code": "SH",
+       "description": "Shelters"
+      }
+     ],
+     "floors": 30,
+     "newProject": false,
+     "completionMonth": 12,
+     "completionYear": 2018,
+     "availableUnits": null,
+     "categoryType": {
+      "code": "R",
+      "text": "Residential"
+     },
+     "property": {
+      "type": {
+       "code": "H",
+       "text": "HDB"
+      },
+      "subType": {
+       "code": "HDB",
+       "text": "HDB Flat"
+      },
+      "unitType": {
+       "code": null,
+       "text": null
+      }
+     }
+    }
+   }
+  },
+  "isUnifiedCredit": null,
+  "media": {
+   "agencyLogos": [
+    {
+     "id": 154057721,
+     "caption": null,
+     "statusCode": "ACT",
+     "sortOrder": 154057721,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/agency/4618/CLOGO.154057721.${viewType}.jpg",
+     "isCover": false
+    }
+   ],
+   "agent": [
+    {
+     "id": 147620868,
+     "caption": null,
+     "statusCode": "ACT",
+     "sortOrder": 147620868,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/agent/196722/APHO.147620868.${viewType}.jpg",
+     "isCover": false
+    }
+   ],
+   "agentLogos": [],
+   "cover": [
+    {
+     "id": 161916264,
+     "caption": "Living hall",
+     "statusCode": "ACT",
+     "sortOrder": 1,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916264.${viewType}.jpg",
+     "isCover": true
+    }
+   ],
+   "developerLogos": [],
+   "excludedProjectPhotos": [],
+   "includedProjectFloorPlans": [],
+   "includedVirtualTours": [],
+   "hasFloorPlans": true,
+   "hasStream": true,
+   "included": [],
+   "listingImages": [
+    {
+     "id": 161916264,
+     "caption": "Living hall",
+     "statusCode": "ACT",
+     "sortOrder": 1,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916264.${viewType}/93B-Telok-Blangah-Street-31-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "isCover": true
+    },
+    {
+     "id": 161916274,
+     "caption": "Dry Kitchen and Dining hall",
+     "statusCode": "ACT",
+     "sortOrder": 3,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916274.${viewType}/93B-Telok-Blangah-Street-31-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "isCover": false
+    },
+    {
+     "id": 161916273,
+     "caption": "Long kitchen",
+     "statusCode": "ACT",
+     "sortOrder": 6,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916273.${viewType}/93B-Telok-Blangah-Street-31-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "isCover": false
+    },
+    {
+     "id": 161916272,
+     "caption": "Wall Feature",
+     "statusCode": "ACT",
+     "sortOrder": 8,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916272.${viewType}/93B-Telok-Blangah-Street-31-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "isCover": false
+    },
+    {
+     "id": 161916278,
+     "caption": "Masterroom Wardrobe",
+     "statusCode": "ACT",
+     "sortOrder": 10,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916278.${viewType}/93B-Telok-Blangah-Street-31-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "isCover": false
+    },
+    {
+     "id": 161916277,
+     "caption": "Common toilet",
+     "statusCode": "ACT",
+     "sortOrder": 13,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916277.${viewType}/93B-Telok-Blangah-Street-31-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "isCover": false
+    },
+    {
+     "id": 161916275,
+     "caption": "Corridor Seaview",
+     "statusCode": "ACT",
+     "sortOrder": 16,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UPHO.161916275.${viewType}/93B-Telok-Blangah-Street-31-Harbourfront-Telok-Blangah-Singapore.jpg",
+     "isCover": false
+    }
+   ],
+   "listingAwardBadges": [],
+   "listingDocuments": [],
+   "listingFloorPlans": [
+    {
+     "id": 161916276,
+     "caption": null,
+     "statusCode": "ACT",
+     "sortOrder": 3530142,
+     "thumbnailUrl": null,
+     "type": "IMAGE",
+     "mimeType": "image/jpg",
+     "urlTemplate": "https://sg1-cdn.pgimgs.com/listing/500291206/UFLOO.161916276.${viewType}.jpg",
+     "isCover": false
+    }
+   ],
+   "listingHeroVideos": [],
+   "listingSitePlans": [],
+   "listingVideos": [
+    {
+     "isConverted": false,
+     "url": null,
+     "id": 161916257,
+     "type": "EMBEDDED",
+     "mimeType": "video/htm",
+     "caption": "youTubeVideoPasted",
+     "statusCode": "ACT",
+     "sortOrder": 3530143,
+     "embedHtml": "<iframe src=\"https://new.8prop.com/model/iKW1bKGy3yH\" sandbox=\"allow-same-origin allow-scripts allow-presentation\" allowfullscreen frameborder=\"0\"></iframe>",
+     "thumbnailUrl": "https://sg1-cdn.pgimgs.com/listing/500291206/UMOV.161916257.${viewType}.jpg?v=166963430",
+     "isCover": false,
+     "generatedBy": "CUSTOM",
+     "recommendedForFeed": false
+    }
+   ],
+   "coverVideo": [],
+   "listingVirtualTours": [],
+   "projectLogos": [],
+   "project": [],
+   "projectFloorPlans": [],
+   "projectSitePlans": [],
+   "propertyBrochures": [],
+   "reviewCovers": [],
+   "unitTypes": {
+    "listing": [],
+    "project": []
+   }
+  },
+  "title": {
+   "en": "93B Telok Blangah Street 31"
+  },
+  "crossListingType": "ORIGINAL",
+  "descriptions": [
+   {
+    "text": "Telok Blangah Parcview – 4rm High Floor Unblock Greenery View \nCentral location, with nature parks and vary shopping malls nearby and Greater Southern Waterfront Transformation in the pipeline.\n\nUnit Features:\n- Seaview corridor with relaxing unblock greenery view\n- High floor with nice unit number\n- No Direct West Sun (Main door face South- outward)\n- Bright and breezy throughout the whole year\n- Newly MOP Unit\n- Close to amenities like wet market, food centre and bus stop, community centre.\n- 3 Months Extension required \n\nUnit Beauty:\nLong and elegant wall feature in the Living hall with lots of storage space\nBig and spacious Wardrobe in the MasterRoom\nUnique Dry and Wet Kitchen Concept – Condo alike feel\nCustomise Dining table with breakfast table for your daily needs \nExtended Kitchen to servicing yard\nRenovated Modern design for both Toilets \n \nTrains \nTelok Blangah MRT (CC28) 0.58 km \nLabrador Park MRT (CC27) 0.64 km \n\nBus Stops \nBlk 67 (Bus: 120, 273) 0.23 km \n\nGroceries & Supermarts \nNTUC Fairprice (Telok Blangah) 0.27 km \nNTUC Fairprice (Depot) 0.68 km \nNTUC Fairprice (PSA Branch) 0.73 km \n\nSchools \nBlangah Rise Primary School 0.13 km \nISS International School (Preston Campus) 0.67 km \n\nParks\nThe Southern Ridges 0.52m \nTelok Blangah Hill Park 0.68m  \nHort Park - The Gardening Hub 0.9m \n\nLifestyle \nThe PSA Club 0.87 km \nKeppel Club 0.91 km \nSAFRA Mt Faber 1.10 km \nMarina at Keppel Bay 1.40 km\nJadelyn Ang  \n8338 8712 | JadelynProperty.com  \nGuiding Your Property Wealth Progression",
+    "locale": "en",
+    "brand": "pg"
+   }
+  ],
+  "purchaseType": "STANDARD",
+  "urls": {
+   "listing": {
+    "api": "https://api.propertyguru.com/v5/listings/500291206?brand=pg&country=sg",
+    "internal": "https://listings.kgw.guruestate.com/v5/listings/500291206?brand=pg&country=sg",
+    "desktopByLocales": {
+     "en": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500291206"
+    },
+    "mobile": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500291206",
+    "desktop": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500291206"
+   }
+  },
+  "postedOnBrands": {
+   "pg": true,
+   "ipp": false
+  },
+  "unitTypes": [],
+  "price": {
+   "min": 999000,
+   "max": 999000,
+   "formatted": "S$ 999,000",
+   "currency": "SGD",
+   "perArea": {
+    "floor": [
+     {
+      "text": "S$ 998.00 psf",
+      "uom": "sqft",
+      "min": 998,
+      "max": 998
+     }
+    ],
+    "land": []
+   },
+   "maintenanceFee": null,
+   "maintenanceFeePerUnit": null,
+   "type": null
+  },
+  "qualityScore": 100,
+  "qualityScoreDetails": null,
+  "isSearchHidden": false,
+  "propertySpecialist": null,
+  "id": 500291206,
+  "offerings": {
+   "isAutoRepost": false,
+   "isBoost": false,
+   "isBoosted": false,
+   "isDowngraded": false,
+   "isFeatured": false,
+   "isFeaturedListing": false,
+   "isGalleryFeatured": false,
+   "isMainFeatured": false,
+   "isNonPaid": false,
+   "isPremium": false,
+   "isPremiumPlus": false,
+   "isPremiumProjectListing": false,
+   "isPrimaryBasic": false,
+   "isPrimaryGold": false,
+   "isPrimaryPlatinum": false,
+   "isPromotedListing": false,
+   "isPropertySpecialistListing": false,
+   "isRankedSpotlight": false,
+   "isShowcase": false,
+   "isSpotlight": false,
+   "isStandard": false,
+   "isSuperBoost": false,
+   "isTurbo": false,
+   "isTurboPro": false,
+   "isDegraded": false,
+   "isRegular": false,
+   "tier": 0,
+   "tracking": {
+    "refType": ""
+   }
+  },
+  "verification": {
+   "isVerified": false,
+   "expiryDate": null,
+   "statusUpdatedAt": "2026-10-12 12:14:22",
+   "status": "inactive"
+  },
+  "unitDetails": {
+   "dimensions": {
+    "floor": {
+     "length": null,
+     "width": null,
+     "size": [
+      {
+       "formatted": "1,001 sqft",
+       "uom": "sqft",
+       "value": 1001
+      }
+     ]
+    },
+    "land": {
+     "length": null,
+     "width": null,
+     "size": []
+    },
+    "room": {
+     "size": []
+    }
+   },
+   "configuration": {
+    "bedrooms": {
+     "value": 3,
+     "text": "3 Bedrooms"
+    },
+    "bathrooms": {
+     "value": 2,
+     "text": "2 Bathrooms"
+    },
+    "extrarooms": {
+     "value": null,
+     "text": null
+    }
+   },
+   "parkingSpots": null,
+   "condition": null,
+   "furnishing": {
+    "code": "PART",
+    "description": "Partially Furnished"
+   },
+   "isAvailableNow": true,
+   "features": [
+    {
+     "code": "RENO",
+     "description": "Renovated"
+    },
+    {
+     "code": "SEAV",
+     "description": "Sea View"
+    }
+   ],
+   "furnishingDetails": [],
+   "isBumiLot": null,
+   "ceilingHeight": null,
+   "tenancy": {
+    "tenantedUntilDate": {
+     "date": null,
+     "timestamp": null
+    },
+    "value": "UNTENANTED"
+   },
+   "propertyUses": [],
+   "centralAircon": null,
+   "centralAirconHours": null,
+   "electricity": {
+    "phase": null,
+    "supply": null
+   },
+   "direction": null,
+   "floorLoadingCapacity": null,
+   "floorLoadingCategory": null,
+   "hdbType": null,
+   "isHighCeiling": null,
+   "lift": {
+    "capacity": null,
+    "cargo": null,
+    "totalPassenger": null
+   },
+   "occupancy": null,
+   "ownerType": null,
+   "parkingFee": null,
+   "quotaEthnic": false,
+   "quotaSpr": null,
+   "ramp": null,
+   "sellerEthnic": {
+    "code": "CN",
+    "description": "Chinese"
+   },
+   "sellerResidency": {
+    "code": "CIT",
+    "description": "Citizen / Malaysian SPR"
+   },
+   "roomType": null,
+   "cookingType": null,
+   "tenantGender": null,
+   "maxTenants": null,
+   "petFriendly": null,
+   "ownerStays": null,
+   "wifiIncluded": null,
+   "utilitiesIncluded": null,
+   "visitorsAllowed": null,
+   "floorLevel": {
+    "code": "HIGH",
+    "description": "High Floor"
+   },
+   "titleType": null,
+   "landTitleType": null,
+   "rentalType": null,
+   "tenantEligibility": false
+  },
+  "metas": {
+   "title": "93B Telok Blangah Street 31, 93B 93B, Harbourfront / Telok Blangah, 3 Bedrooms, 1001 sqft, HDB Flats for sale, by Jadelyn Ang, S$ 999,000, 500291206",
+   "description": "View details, photos and map of property listing 500291206 - for sale - 93B Telok Blangah Street 31 - 93B 93B, Harbourfront / Telok Blangah, 3 Bedrooms, 1001 sqft, S$ 999,000",
+   "keywords": "agent, listing, real estate, property, sale, rent, apartment, house, expatriate, housing, hdb, location, condominium, map"
+  },
+  "dependencyErrors": [],
+  "rotation": null,
+  "dates": {
+   "timezone": "UTC+08:00",
+   "available": null,
+   "auction": null,
+   "created": {
+    "date": "2026-10-12 12:14:22",
+    "timestamp": 1791778462
+   },
+   "contentUpdated": {
+    "date": "2026-10-12 12:14:22",
+    "timestamp": 1791778462
+   },
+   "updated": {
+    "date": "2026-10-12 12:25:51",
+    "timestamp": 1791779151
+   },
+   "expiry": {
+    "date": "2026-11-13 12:25:51",
+    "timestamp": 1794543951
+   },
+   "firstPosted": {
+    "date": "2026-10-12 12:25:51",
+    "timestamp": 1791779151
+   },
+   "lastPosted": {
+    "date": "2026-10-12 12:25:51",
+    "timestamp": 1791779151
+   }
+  },
+  "recommendedForFeed": false,
+  "version": 3,
+  "publishingSource": {
+   "code": "WEB"
+  },
+  "referenceNote": null,
+  "projectListingSubType": null,
+  "pointOfInterest": {
+   "mrt": [
+    {
+     "walkingDistanceKm": 0.88,
+     "walkingDurationMins": 11,
+     "name": "CC28 Telok Blangah MRT Station",
+     "distanceKm": 0.58,
+     "id": "1673",
+     "point": {
+      "lon": 103.809878,
+      "lat": 1.2707152
+     },
+     "stationId": "CC28"
+    },
+    {
+     "walkingDistanceKm": 0.86,
+     "walkingDurationMins": 10,
+     "name": "CC27 Labrador Park MRT Station",
+     "distanceKm": 0.68,
+     "id": "1670",
+     "point": {
+      "lon": 103.8025575,
+      "lat": 1.2721259
+     },
+     "stationId": "CC27"
+    }
+   ],
+   "schools": [
+    {
+     "walkingDistanceKm": 0.75,
+     "walkingDurationMins": 9,
+     "name": "Blangah Rise Primary School",
+     "distanceKm": 0.13,
+     "id": "11000",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.808629,
+      "lat": 1.27612
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 0.9,
+     "walkingDurationMins": 11,
+     "name": "Hyper Island Institute of Higher Education",
+     "distanceKm": 0.5,
+     "id": "11278",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.8034,
+      "lat": 1.273891
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.23,
+     "walkingDurationMins": 15,
+     "name": "Iss International School",
+     "distanceKm": 0.62,
+     "id": "11298",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.805691,
+      "lat": 1.280633
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.07,
+     "walkingDurationMins": 13,
+     "name": "Singapore Raffles Music College",
+     "distanceKm": 0.7,
+     "id": "11389",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.80133,
+      "lat": 1.275215
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.07,
+     "walkingDurationMins": 13,
+     "name": "Kingston International School",
+     "distanceKm": 0.7,
+     "id": "11308",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.80133,
+      "lat": 1.275215
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.49,
+     "walkingDurationMins": 18,
+     "name": "SP Jain School of Global Management",
+     "distanceKm": 0.8,
+     "id": "25030",
+     "category": "EDUCATION",
+     "subcategory": "UNIVERSITY",
+     "point": {
+      "lon": 103.802162,
+      "lat": 1.280156
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 1.58,
+     "walkingDurationMins": 19,
+     "name": "S P Jain School of Global Management",
+     "distanceKm": 0.87,
+     "id": "11362",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.801274,
+      "lat": 1.280023
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.5,
+     "walkingDurationMins": 30,
+     "name": "Rha Academy",
+     "distanceKm": 1.17,
+     "id": "11359",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.813673,
+      "lat": 1.284078
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.5,
+     "walkingDurationMins": 30,
+     "name": "The Logistics Academy",
+     "distanceKm": 1.17,
+     "id": "11418",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.813673,
+      "lat": 1.284078
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.69,
+     "walkingDurationMins": 32,
+     "name": "Bukit Merah Secondary School",
+     "distanceKm": 1.31,
+     "id": "12087",
+     "category": "EDUCATION",
+     "subcategory": "SECONDARY SCHOOL",
+     "point": {
+      "lon": 103.813439,
+      "lat": 1.285693
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.13,
+     "walkingDurationMins": 26,
+     "name": "Shelton College International",
+     "distanceKm": 1.4,
+     "id": "11376",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.820236,
+      "lat": 1.274271
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 3.1,
+     "walkingDurationMins": 37,
+     "name": "Gan Eng Seng Primary School",
+     "distanceKm": 1.43,
+     "id": "11041",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.815547,
+      "lat": 1.285595
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.54,
+     "walkingDurationMins": 31,
+     "name": "Baking Industry Training College",
+     "distanceKm": 1.43,
+     "id": "11202",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.817466,
+      "lat": 1.283837
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.54,
+     "walkingDurationMins": 31,
+     "name": "Allspice Institute",
+     "distanceKm": 1.43,
+     "id": "11183",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.817466,
+      "lat": 1.283837
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.22,
+     "walkingDurationMins": 27,
+     "name": "Inspiration Design International School",
+     "distanceKm": 1.45,
+     "id": "11284",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818527,
+      "lat": 1.282638
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.22,
+     "walkingDurationMins": 27,
+     "name": "Coleman College",
+     "distanceKm": 1.45,
+     "id": "11224",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818527,
+      "lat": 1.282638
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.22,
+     "walkingDurationMins": 27,
+     "name": "Siso Academy",
+     "distanceKm": 1.45,
+     "id": "11393",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818527,
+      "lat": 1.282638
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.24,
+     "walkingDurationMins": 27,
+     "name": "Parkway College of Nursing and Allied Health",
+     "distanceKm": 1.49,
+     "id": "11350",
+     "category": "EDUCATION",
+     "subcategory": "PRIVATE SCHOOL",
+     "point": {
+      "lon": 103.818799,
+      "lat": 1.282932
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.66,
+     "walkingDurationMins": 32,
+     "name": "Chij St. Theresa's Convent",
+     "distanceKm": 1.64,
+     "id": "12096",
+     "category": "EDUCATION",
+     "subcategory": "SECONDARY SCHOOL",
+     "point": {
+      "lon": 103.822441,
+      "lat": 1.275352
+     },
+     "stationId": null
+    },
+    {
+     "walkingDistanceKm": 2.51,
+     "walkingDurationMins": 30,
+     "name": "Radin Mas Primary School",
+     "distanceKm": 1.84,
+     "id": "11107",
+     "category": "EDUCATION",
+     "subcategory": "PRIMARY SCHOOL",
+     "point": {
+      "lon": 103.824188,
+      "lat": 1.274958
+     },
+     "stationId": null
+    }
+   ]
+  },
+  "headlines": [
+   {
+    "text": "Telok blangah parcview 4rm high floor unblock geenery view",
+    "locale": "en",
+    "brand": "pg"
+   }
+  ],
+  "organization": {
+   "id": 4618,
+   "legacyId": null,
+   "name": "PROPNEX REALTY PTE. LTD.",
+   "license": "L3008022J",
+   "brandColor": null,
+   "active": true,
+   "address": null
+  },
+  "location": {
+   "id": 40985,
+   "address": {
+    "formatted": "93B 93B, Harbourfront / Telok Blangah",
+    "maskUnitNumber": false,
+    "block": null,
+    "unit": null,
+    "floor": null,
+    "streetNumber": "93B",
+    "postalCode": "102093",
+    "maskLocation": false
+   },
+   "hdbEstate": {
+    "code": 5,
+    "text": "Bukit Merah"
+   },
+   "street": "93B",
+   "streetName2": null,
+   "zoneIds": [
+    "40004"
+   ],
+   "subZoneIds": [
+    "41043"
+   ],
+   "streetId": null,
+   "point": {
+    "lat": 1.2754531631149066,
+    "lon": 103.80766474603274
+   },
+   "levels": [
+    {
+     "levelName": "region",
+     "level": 200,
+     "id": "A",
+     "value": "City & South West (D01-08)",
+     "slug": "city-south-west-d01-08"
+    },
+    {
+     "levelName": "district",
+     "level": 500,
+     "id": "D04",
+     "value": "Harbourfront / Telok Blangah",
+     "slug": "harbourfront-telok-blangah"
+    }
+   ],
+   "noLevel600": false,
+   "noLevel700": false,
+   "noLevel800": false,
+   "streetName": "93B"
+  },
+  "lease": {
+   "code": null,
+   "text": null,
+   "remaining": null
+  },
+  "statusCode": "ACT"
+ },
+ "archive_bytes": 345261,
+ "html_bytes": 364777,
+ "image_errors": []
+}
