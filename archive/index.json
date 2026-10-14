@@ -318,5 +318,15 @@
   "price": null,
   "unavailable": true,
   "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-93a-telok-blangah-street-31-60208239"
+ },
+ "60238351": {
+  "archived_at": "2026-10-14 17:28:32",
+  "block": "70A",
+  "bytes": 292695,
+  "floorplans": 1,
+  "photos": 7,
+  "price": 975000,
+  "unavailable": false,
+  "url": "https://www.propertyguru.com.sg/listing/hdb-for-sale-70a-telok-blangah-heights-60238351"
  }
 }
