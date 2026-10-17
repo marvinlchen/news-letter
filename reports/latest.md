@@ -6,73 +6,17 @@
 
 ## 📊 概览
 - 当前在售(非低楼层): **27** 套
-- 🆕 今日上新(全新房源，监控以来首次出现): **4** 套
-- 🔄 重新上架/刷新(历史出现过、此前下架后重现): **1** 套
+- 🆕 今日上新(全新房源，监控以来首次出现): **0** 套
+- 🔄 重新上架/刷新(历史出现过、此前下架后重现): **0** 套
 - 💰 今日价格变动(同一单位仍在售、价格较上次抓取不同): **0** 套
-- ✅ 今日卖出/下架(连续消失≥7天): **4** 套
+- ✅ 今日卖出/下架(连续消失≥7天): **0** 套
 - 🚫 已排除低楼层: 3 套（不计入上方在售）
 
 ## 🆕 今日上新（全新房源，监控以来首次出现）
-- **[93B] S$999,000 · 1001 sqft · S$998/sqft · High Floor**
-  - Telok blangah parcview 4rm high floor unblock geenery view · 中介: Jadelyn Ang
-  - 🕒 平台显示上架: 12 Oct 2026（平台会刷新上架时间，仅供参考）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500291206
-- **[80C] S$1,200,000 · 1001 sqft · S$1,199/sqft · High Floor**
-  - Rare 4Room high floor HDB Premium Apartments for sale. · 中介: Yeo Tong Boon
-  - 🕒 平台显示上架: 12 Oct 2026（平台会刷新上架时间，仅供参考）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-80c-telok-blangah-street-31-500291972
-- **[70A] S$975,000 · 1001 sqft · S$974/sqft · Middle Floor**
-  - 70A Telok Blangah Heights · 中介: Daniel Lim
-  - 🕒 平台显示上架: 13 Oct 2026（平台会刷新上架时间，仅供参考）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-70a-telok-blangah-heights-60238351
-- **[90A] S$1,100,000 · 1001 sqft · S$1,099/sqft · High Floor**
-  - Beautiful Park Facing 4-Room HDB for Sale. No Extension Needed · 中介: Jax Lim
-  - 🕒 平台显示上架: 9 Oct 2026（平台会刷新上架时间，仅供参考）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500289418
-
-## 🔄 重新上架 / 刷新（历史出现过，此前已下架，今日重现）
-- **[80A] S$1,098,000 · 1023 sqft · S$1,073/sqft · 非低楼层**
-  - High Floor 4 Room, Panoramic Sea View, Move-In Condition · 中介: Dave Choy
-  - 🕒 平台显示上架: 12 Oct 2026（平台会刷新上架时间，仅供参考）
-  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-10-17 S$1,098,000（72 次记录，2 个价）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-80a-telok-blangah-street-31-500185017
+- 无
 
 ## 💰 今日价格变动（同一单位仍在售，价格较上一次记录不同）
 - 无
-
-## ✅ 今日卖出 / 下架（先前在售，连续消失≥7天）
-- **[93B] S$950,000 · 1001 sqft · S$949/sqft · High Floor**
-  - C.H.E.A.P beautifully renovated unit 50k below last transacted · 中介: Georgiana Ong
-  - 🕒 平台显示上架: 16 Aug 2026（平台会刷新上架时间，仅供参考）
-  - 📈 历史价格: 2026-07-19 S$950,000 → 2026-10-08 S$950,000（80 次记录，2 个价）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500207099
-  - ✅ 判定卖出：最后一次在售 2026-10-08，连续消失 9 天（宽限 7 天）· 原链接下架后会被 PropertyGuru 清空
-  - 🗄 下架快照（价格/面积/楼层/中介/文案）: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-sold-snapshot.html#L500207099
-  - 📷 照片归档: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-archive.html#L500207099（实拍照片 13 张 · 原始 HTML 存档）
-- **[90A] S$1,050,000 · 1001 sqft · S$1,049/sqft · Middle Floor**
-  - Rare Sanctuary Park, Sea Glimpse & Sunset, Premium Finishes · 中介: Steven Liew
-  - 🕒 平台显示上架: 31 Jul 2026（平台会刷新上架时间，仅供参考）
-  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-10-04 S$1,050,000（76 次记录，3 个价）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-90a-telok-blangah-street-31-500152159
-  - ✅ 判定卖出：最后一次在售 2026-10-04，连续消失 13 天（宽限 7 天）· 原链接下架后会被 PropertyGuru 清空
-  - 🗄 下架快照（价格/面积/楼层/中介/文案）: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-sold-snapshot.html#L500152159
-  - 📷 照片归档: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-archive.html#L500152159（实拍照片 20 张 · 原始 HTML 存档）
-- **[93B] S$950,000 · 1001 sqft · S$949/sqft · High Floor**
-  - C.H.E.A.P beautifully renovated unit 50k below last transacted · 中介: Nicholas Cho
-  - 🕒 平台显示上架: 10 Aug 2026（平台会刷新上架时间，仅供参考）
-  - 📈 历史价格: 2026-07-18 价格未公开 → 2026-10-03 S$950,000（76 次记录，3 个价）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500199397
-  - ✅ 判定卖出：最后一次在售 2026-10-03，连续消失 14 天（宽限 7 天）· 原链接下架后会被 PropertyGuru 清空
-  - 🗄 下架快照（价格/面积/楼层/中介/文案）: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-sold-snapshot.html#L500199397
-  - 📷 照片归档: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-archive.html#L500199397（实拍照片 12 张 · 原始 HTML 存档）
-- **[93B] S$950,000 · 1001 sqft · S$949/sqft · High Floor**
-  - 93b Telok Blangah Street 31 · 中介: Jasper Koh
-  - 🕒 平台显示上架: 17 Aug 2026（平台会刷新上架时间，仅供参考）
-  - 📈 历史价格: 2026-08-18 ~ 2026-10-03 均 S$950,000（46 次记录）
-  - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500236003
-  - ✅ 判定卖出：最后一次在售 2026-10-03，连续消失 14 天（宽限 7 天）· 原链接下架后会被 PropertyGuru 清空
-  - 🗄 下架快照（价格/面积/楼层/中介/文案）: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-sold-snapshot.html#L500236003
-  - 📷 照片归档: https://raw.githack.com/marvinlchen/news-letter/hdb-monitor/hdb-archive.html#L500236003（实拍照片 3 张 · 原始 HTML 存档）
 
 ## 📋 当前在售清单（按 block，已排除低楼层）
 ### Telok Blangah Heights · Ridgeview
@@ -232,4 +176,4 @@
   - https://www.propertyguru.com.sg/listing/hdb-for-sale-93b-telok-blangah-street-31-500178368
 
 ---
-_生成时间 2026-10-17 09:02:05 · 数据来源 PropertyGuru（curl_cffi 抓取）_
+_生成时间 2026-10-17 16:50:32 · 数据来源 PropertyGuru（curl_cffi 抓取）_
