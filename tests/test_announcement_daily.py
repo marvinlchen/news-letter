@@ -103,14 +103,14 @@ class ReportPolicyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             base=Path(folder); root=base/'real'; root.mkdir(); alias=base/'alias'; alias.symlink_to(root,target_is_directory=True)
             out=root/'published/a-share-announcements'; out.mkdir(parents=True)
-            contents={'report.pdf':b'%PDF test','latest.pdf':b'%PDF test','2026-10-16.md':b'report','latest.md':b'report','2026-10-16.json':b'{}'}
+            contents={'2026-10-16.md':b'report','latest.md':b'report','2026-10-16.json':b'{}'}
             for name,value in contents.items(): (out/name).write_bytes(value)
-            status={'date':'2026-10-16','publishable':True,'fact_review':{'passed':True},'layout_review':{'passed':True},'output_path':str(out/'report.pdf'),'report_sha256':hashlib.sha256(b'%PDF test').hexdigest(),'markdown_sha256':hashlib.sha256(b'report').hexdigest(),'json_sha256':hashlib.sha256(b'{}').hexdigest()}
+            status={'date':'2026-10-16','publishable':True,'fact_review':{'passed':True},'output_format':'markdown','markdown_review':{'passed':True},'output_path':str(out/'2026-10-16.md'),'markdown_path':str(out/'2026-10-16.md'),'json_path':str(out/'2026-10-16.json'),'report_filename':'2026-10-16.md','report_sha256':hashlib.sha256(b'report').hexdigest(),'markdown_sha256':hashlib.sha256(b'report').hexdigest(),'json_sha256':hashlib.sha256(b'{}').hexdigest()}
             status_path=root/'status.json'; status_path.write_text(json.dumps(status))
             result=subprocess.run([sys.executable,'-',str(status_path),str(alias)],input=gate,text=True,capture_output=True)
             self.assertEqual(result.returncode,0,result.stderr)
             self.assertEqual(result.stdout.splitlines()[-1],'2026-10-16')
-            self.assertEqual(len(result.stdout.splitlines()),6)
+            self.assertEqual(len(result.stdout.splitlines()),4)
     def test_parser_accepts_fenced_json_but_rejects_prose(self):
         self.assertEqual(m.parse_model_json('```json\n{"items": []}\n```'), {'items':[]})
         with self.assertRaises(ValueError): m.parse_model_json('今天市场很好')

@@ -12,29 +12,34 @@ mapfile -t artifacts < <(python3 - "$STATUS_PATH" "$PROJECT_ROOT" <<'PY'
 import hashlib,json,re,sys
 from pathlib import Path
 s=json.load(open(sys.argv[1])); root=Path(sys.argv[2]).resolve(); folder=root/'published/a-share-announcements'
-if not s.get('publishable') or s.get('diagnostic') or s.get('error') or s.get('fallback_used') or not s.get('fact_review',{}).get('passed') or not s.get('layout_review',{}).get('passed'):
- raise SystemExit('publish gate: report did not pass both audits')
+if (s.get('output_format')!='markdown' or not s.get('publishable') or s.get('diagnostic') or s.get('error') or s.get('fallback_used')
+    or not s.get('fact_review',{}).get('passed') or not s.get('markdown_review',{}).get('passed')):
+ raise SystemExit('publish gate: Markdown did not pass fact and content audits')
 date=s.get('date','')
 if not re.fullmatch(r'20\d{2}-\d{2}-\d{2}',date): raise SystemExit('invalid report date')
-pdf=Path(s['output_path']).resolve()
-if pdf.parent.resolve()!=folder.resolve() or hashlib.sha256(pdf.read_bytes()).hexdigest()!=s['report_sha256']: raise SystemExit('PDF path/hash mismatch')
-if (folder/'latest.pdf').read_bytes()!=pdf.read_bytes(): raise SystemExit('latest PDF differs')
-for name,key in [(date+'.md','markdown_sha256'),(date+'.json','json_sha256')]:
- if hashlib.sha256((folder/name).read_bytes()).hexdigest()!=s.get(key): raise SystemExit('report artifact hash mismatch')
-if (folder/'latest.md').read_bytes()!=(folder/(date+'.md')).read_bytes(): raise SystemExit('latest Markdown differs')
-for p in [pdf, folder/'latest.pdf', folder/(date+'.md'),folder/'latest.md',folder/(date+'.json')]:
- if not p.is_file(): raise SystemExit('missing artifact')
+md=Path(s['output_path']).resolve(); expected_md=folder/(date+'.md'); expected_json=folder/(date+'.json')
+if (md!=expected_md or s.get('report_filename')!=date+'.md'
+    or Path(s.get('markdown_path','')).resolve()!=expected_md
+    or Path(s.get('json_path','')).resolve()!=expected_json):
+ raise SystemExit('Markdown/JSON path mismatch')
+for artifact in [expected_md,folder/'latest.md',expected_json]:
+ if not artifact.is_file() or artifact.resolve()!=artifact: raise SystemExit('missing or redirected artifact')
+md_hash=hashlib.sha256(md.read_bytes()).hexdigest()
+if md_hash!=s.get('report_sha256') or md_hash!=s.get('markdown_sha256'): raise SystemExit('Markdown hash mismatch')
+if hashlib.sha256(expected_json.read_bytes()).hexdigest()!=s.get('json_sha256'): raise SystemExit('JSON hash mismatch')
+if (folder/'latest.md').read_bytes()!=md.read_bytes(): raise SystemExit('latest Markdown differs')
+for p in [md,folder/'latest.md',expected_json]:
  print(p.relative_to(root))
 print(date)
 PY
 )
-# Process substitution does not propagate Python failure; require all six returned lines.
-if [[ "${#artifacts[@]}" != 6 ]]; then
+# Process substitution does not propagate Python failure; require all four returned lines.
+if [[ "${#artifacts[@]}" != 4 ]]; then
   echo 'publish gate failed' >&2
   exit 2
 fi
-REPORT_DATE="${artifacts[5]}"
-ARTIFACT_PATHS=("${artifacts[@]:0:5}")
+REPORT_DATE="${artifacts[3]}"
+ARTIFACT_PATHS=("${artifacts[@]:0:3}")
 [[ "$(git branch --show-current)" == "$PUBLISH_BRANCH" ]] || { echo 'publish: wrong branch' >&2; exit 2; }
 export GIT_SSH_COMMAND='ssh -o BatchMode=yes -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=2'
 git fetch origin "$PUBLISH_BRANCH"

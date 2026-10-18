@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Daily major SSE/SZSE announcements, evidence-checked CodeBuddy analysis and PDF."""
+"""Daily major SSE/SZSE announcements with evidence-checked Markdown delivery."""
 import argparse
 import collections
 from concurrent.futures import ThreadPoolExecutor
 import datetime as dt
 import hashlib
+import html
 import json
 import os
 from pathlib import Path
 import re
-import shutil
 import subprocess
 import sys
 import time
+from urllib.parse import quote, urlsplit
 
 TZ = dt.timezone(dt.timedelta(hours=8))
 CATEGORIES = {'业绩','重组','增减持','股权激励','实控人','股权转让','对外投资','风险警示','合同中标','产品获批'}
@@ -31,6 +32,14 @@ def atomic_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(path.suffix + '.tmp')
     temp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    temp.replace(path)
+
+
+def atomic_text(path, value):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temp = path.with_suffix(path.suffix + '.tmp')
+    temp.write_text(value, encoding='utf-8')
     temp.replace(path)
 
 
@@ -103,8 +112,6 @@ def validate_selection(rows, groups):
         for datum in data:
             value = str(datum.get('value','')).strip()
             quote = str(datum.get('evidence','')).strip()
-            if len(value)>100 or len(str(datum.get('label','')))>35:
-                raise ValueError('key_data '+code+' '+str(datum.get('label',''))+'：标签≤35字、value≤100字，请摘录最关键的原文短句')
             if not datum.get('label') or not value:
                 raise ValueError('empty key data: '+code)
             if value != '数据待核' and (not quote or compact(quote) not in all_evidence or compact(value) not in compact(quote)):
@@ -169,7 +176,7 @@ def model_prompt(groups, date, ifind=False):
 任务：覆盖输入中每一家股票，筛选当日重要性为“重大”的公告，一般性/例行小额事项排除。十大类仅为：业绩、重组、增减持、股权激励、实控人、股权转让、对外投资、风险警示、合同中标、产品获批。同一公司合并一个条目，逐份列出真正重大公告ID，不把无关例行公告混进来。警惕“重大”仅是标题法律套话，审批程序/进展重复公告不一定实质重大；不得单纯据标题判断利好利空。
 逐一输出字段：code，important(bool)。若false须reason；若true另含 announcement_ids（输入原始id列表），categories（以上多标签），direction（利好/中性/利空），score（重大利好3~5、仅框架性合同/单一获批1~2、重大利空-3~-5、中性0），expectation（业绩仅标无一致预期，本任务无可靠市场一致预期数据），event（70字以内一句话，详细数字放表格），conclusion（60字以内明确结论），analysis（JSON字符串数组，默认2个字符串，每个字符串是一句，每句80字以内、合计160字以内；确有必要才3句且合计不超过200字，说明基本面/估值/股权影响、业绩弹性或风险逻辑，避免复述表格全部数字），key_data（1~10个{label,value,evidence}），focus（后续关注节点1~3条）。
 analysis类型示例：{"analysis":["基本面影响一句话。","风险与确认节点一句话。"]}。
-版式预算：key_data的label≤30字、value≤80字，原因摘关键短句，较长原文放evidence而不塞进value；focus每条≤35字，避免重复。key_data须覆盖适用字段：业绩=报告期/归母净利及同比/扣非及同比/营收及同比/变动原因；重组投资股权合同=对方/标的/金额比例/定价/支付/进度/承诺；产品=名称/文号/用途/持有人/结论；风险=触发条件/金额/时限/状态。每个value必须是原文连续摘录，evidence必须原文连续摘录且包含value，缺失为“数据待核”。金额单位若单独列在表头，key_data追加unit与unit_evidence；unit_evidence必须是同一公告中同时包含唯一“单位：该单位”表头和该value的连续原文，不可仅引单位表头。unit为元/万元/亿元/股/万股等原文精确单位。表格标签会据此标明单位。不要自行换算或四舍五入数字；分析中任何数字也必须原文原样存在。资料不足评估重大性的条目请明确排除理由“原文证据不足”，不可补写。
+key_data须覆盖适用字段：业绩=报告期/归母净利及同比/扣非及同比/营收及同比/变动原因；重组投资股权合同=对方/标的/金额比例/定价/支付/进度/承诺；产品=名称/文号/用途/持有人/结论；风险=触发条件/金额/时限/状态。每个value必须是原文连续摘录，evidence必须原文连续摘录且包含value，缺失为“数据待核”。金额单位若单独列在表头，key_data追加unit与unit_evidence；unit_evidence必须是同一公告中同时包含唯一“单位：该单位”表头和该value的连续原文，不可仅引单位表头。unit为元/万元/亿元/股/万股等原文精确单位。表格标签会据此标明单位。不要自行换算或四舍五入数字；分析中任何数字也必须原文原样存在。资料不足评估重大性的条目请明确排除理由“原文证据不足”，不可补写。
 不要生成任何技术指标、行业新闻或股价预言。输出严格JSON对象{"items":[...]}，每家股票恰好一条，无Markdown、无前言。公告日期：'''
     if ifind:
         header = header.replace('禁止调用工具、读取其他文件、编造数据或输出JSON以外文字。', '仅允许iFinD MCP检索与WaitForMcpServers等待连接；禁止读取其他文件、编造数据或输出JSON以外文字。')
@@ -259,29 +266,127 @@ def batches(groups,limit=45000,max_stocks=6):
     if batch: yield batch
 
 
-def report_markdown(report, pdf_filename):
-    counts=collections.Counter(i['direction'] for i in report['items'])
-    lines=[f"# A股重大公告利好利空日报 · {report['date']}", '',f"[下载PDF]({pdf_filename})",'',f"重大股票 {len(report['items'])} 只；重大公告 {report['announcement_count']} 份。利好 {counts['利好']}、中性 {counts['中性']}、利空 {counts['利空']}。",'', '公告日期及行情截止：'+report['date']+'；触发时间：次日05:00（UTC+8）。','']
-    for note in report['source_notes']: lines.append('- '+note)
-    if report['gaps']:
-        lines+=['','## 数据缺口']+['- '+x for x in report['gaps']]
+def markdown_value(value):
+    """Keep each supplied value in one safe Markdown table cell or prose line."""
+    if value is None or (isinstance(value, str) and not value.strip()):
+        return '数据待核'
+    text = html.escape(str(value), quote=False).replace('\\', '\\\\')
+    text = re.sub(r'([`*_{}\[\]|])', r'\\\1', text)
+    return text.replace('\r\n', '\n').replace('\r', '\n').replace('\n', '<br>')
+
+
+def markdown_url(value):
+    text = str(value or '').strip()
+    if urlsplit(text).scheme not in {'http', 'https'} or not urlsplit(text).netloc:
+        return ''
+    return quote(text, safe=":/?#@!$&'*+,;=%~-._")
+
+
+def stock_heading(item):
+    return f"## {markdown_value(item['name'])}（{markdown_value(item['code'])}）· {item['direction']} {item['score']:+d}"
+
+
+def technical_rows(item):
+    technical = item.get('technical') or {}
+    bullish = technical.get('bullish')
+    alignment = '多头排列' if bullish is True else '非多头排列' if bullish is False else '数据待核'
+    count = technical.get('limit_up_count')
+    count = str(count)+'家' if type(count) is int else count
+    return [
+        ('行情状态', technical.get('status')), ('行情截至日', technical.get('price_date', item.get('date'))),
+        ('收盘价', technical.get('close')), ('MA5', technical.get('ma5')),
+        ('MA10', technical.get('ma10')), ('MA20', technical.get('ma20')), ('MA60', technical.get('ma60')),
+        ('多头排列', alignment), ('周线DIF', technical.get('weekly_dif')), ('周线DEA', technical.get('weekly_dea')),
+        ('周线MACD柱', technical.get('weekly_macd')), ('周线MACD关系', technical.get('weekly_trend')),
+        ('周线零轴位置', technical.get('weekly_axis')), ('周线柱变化', technical.get('weekly_hist_change')),
+        ('周线背离', technical.get('divergence')), ('所属行业', technical.get('industry')),
+        ('行业技术指标', technical.get('industry_technical')), ('行业涨停数', count),
+    ]
+
+
+def markdown_table_row(label, value):
+    return '| '+markdown_value(label)+' | '+markdown_value(value)+' |'
+
+
+def announcement_line(announcement):
+    title = markdown_value(announcement.get('title'))
+    url = markdown_url(announcement.get('url'))
+    link = '['+title+']('+url+')' if url else title+'（公告链接：数据待核）'
+    return '- '+link+'；事件：'+markdown_value(announcement.get('event'))
+
+
+def report_markdown(report):
+    counts = collections.Counter(i['direction'] for i in report['items'])
+    lines = [f"# A股重大公告利好利空日报 · {report['date']}", '', '## 概览', '',
+             f"采集公告 {report['collection_count']} 份；重大股票 {len(report['items'])} 只；重大公告 {report['announcement_count']} 份。",
+             f"利好 {counts['利好']}、中性 {counts['中性']}、利空 {counts['利空']}；按利好→中性→利空、同方向按分值绝对值降序排列。", '',
+             '公告日期及行情截止：'+report['date']+'；触发时间：次日05:00（UTC+8）。',
+             '生成时间：'+markdown_value(report.get('generated_at'))+'。', '', '## 数据来源与口径', '']
+    lines += ['- '+markdown_value(note) for note in report.get('source_notes', [])] or ['- 数据待核']
+    lines += ['', '## 数据缺口', '']
+    lines += ['- '+markdown_value(gap) for gap in report.get('gaps', [])] or ['- 本次采集与核验未发现数据缺口。']
+    if not report['items']:
+        lines += ['', '当日未筛选出符合重大性标准的公告。']
     for item in report['items']:
-        lines+=['',f"## {item['name']}（{item['code']}）· {item['direction']} {item['score']:+d}",item['conclusion'],' '.join(item['analysis'])]
-        lines+=['- '+a['title']+' · '+a['url'] for a in item['announcements']]
+        lines += ['', stock_heading(item), '',
+                  '公告日期：'+markdown_value(item.get('date'))+'；重要性：重大；类别：'+markdown_value('、'.join(item.get('categories', [])))+'。',
+                  '业绩预期：'+markdown_value(item.get('expectation'))+'。', '',
+                  '### 公告与事件', '', '核心事件：'+markdown_value(item.get('event')), '']
+        lines += [announcement_line(announcement) for announcement in item.get('announcements', [])]
+        if item.get('source_note'):
+            lines += ['', '原文核验：'+markdown_value(item['source_note'])]
+        lines += ['', '### 结论与分析', '', '**'+markdown_value(item.get('conclusion'))+'**', '']
+        lines += [markdown_value(sentence) for sentence in item.get('analysis', [])]
+        lines += ['', '### 关键数据', '', '| 项目 | 公告披露 |', '| --- | --- |']
+        lines += [markdown_table_row(datum.get('label'), datum.get('value')) for datum in item.get('key_data', [])]
+        lines += ['', '### 技术指标与行业', '', '| 指标 | 截至公告日数据 |', '| --- | --- |']
+        lines += [markdown_table_row(label, value) for label, value in technical_rows(item)]
+        lines += ['', '### 行业新闻', '', markdown_value(item.get('industry_news')), '', '### 后续关注', '']
+        lines += ['- '+markdown_value(node) for node in item.get('focus', [])]
     return '\n'.join(lines)+'\n'
 
 
-def summarize_gaps(gaps):
-    if not gaps:
-        return []
-    categories=collections.Counter()
-    for gap in gaps:
-        if gap.startswith('官方交叉核验缺口:'): label='官方原文交叉核验'
-        elif '涨停' in gap: label='行业涨停统计'
-        elif '行业' in gap: label='行业行情/映射'
-        else: label='个股行情/技术指标'
-        categories[label]+=1
-    return ['；'.join(f'{key}待核{count}项' for key,count in categories.items())+'。逐股缺失见卡片，完整明细见同日日报JSON。']
+def review_markdown(report, text):
+    """Audit complete stock coverage, order, source links, and every displayed value."""
+    items = report['items']
+    if items != sort_items(items) or len({item['code'] for item in items}) != len(items):
+        raise ValueError('Markdown review failed: company order or uniqueness')
+    if any(str(item.get('date')) != report['date'] for item in items):
+        raise ValueError('Markdown review failed: stock date differs from report date')
+    if report['announcement_count'] != sum(len(item['announcements']) for item in items):
+        raise ValueError('Markdown review failed: announcement count')
+    required = [f"# A股重大公告利好利空日报 · {report['date']}", '## 概览', '## 数据来源与口径', '## 数据缺口',
+                f"采集公告 {report['collection_count']} 份；重大股票 {len(items)} 只；重大公告 {report['announcement_count']} 份。",
+                '公告日期及行情截止：'+report['date'], markdown_value(report.get('generated_at'))]
+    counts = collections.Counter(item['direction'] for item in items)
+    required += [f"利好 {counts['利好']}、中性 {counts['中性']}、利空 {counts['利空']}"]
+    required += ['- '+markdown_value(value) for value in report.get('source_notes', [])+report.get('gaps', [])]
+    if any(value not in text for value in required):
+        raise ValueError('Markdown review failed: overview, sources or gaps missing')
+    headings = [stock_heading(item) for item in items]
+    actual_headings = [line for line in text.splitlines() if line.startswith('## ') and line not in {'## 概览', '## 数据来源与口径', '## 数据缺口'}]
+    if actual_headings != headings:
+        raise ValueError('Markdown review failed: stock coverage or order')
+    for index, item in enumerate(items):
+        begin = text.index(headings[index])
+        end = text.index(headings[index+1]) if index+1 < len(items) else len(text)
+        block = text[begin:end]
+        required = ['### 公告与事件', '### 结论与分析', '### 关键数据', '### 技术指标与行业', '### 行业新闻', '### 后续关注',
+                    '重要性：重大', markdown_value('、'.join(item.get('categories', []))), markdown_value(item.get('expectation')),
+                    '核心事件：'+markdown_value(item.get('event')), '**'+markdown_value(item.get('conclusion'))+'**',
+                    markdown_value(item.get('industry_news'))]
+        required += [markdown_value(sentence) for sentence in item.get('analysis', [])]
+        required += [markdown_table_row(datum.get('label'), datum.get('value')) for datum in item.get('key_data', [])]
+        required += [markdown_table_row(label, value) for label, value in technical_rows(item)]
+        required += [announcement_line(announcement) for announcement in item.get('announcements', [])]
+        required += ['- '+markdown_value(node) for node in item.get('focus', [])]
+        if item.get('source_note'):
+            required += ['原文核验：'+markdown_value(item['source_note'])]
+        if any(value not in block for value in required):
+            raise ValueError('Markdown review failed: incomplete stock details '+item['code'])
+    return {'passed': True, 'content_complete': True, 'sort_verified': True, 'overview_verified': True,
+            'stock_count': len(items), 'announcement_count': report['announcement_count'],
+            'source_notes_count': len(report.get('source_notes', [])), 'gap_count': len(report.get('gaps', []))}
 
 
 def main(argv=None):
@@ -300,7 +405,7 @@ def main(argv=None):
     out=args.output_dir or root/('var/a-share-announcements-diagnostic' if diagnostic else 'published/a-share-announcements')
     status_dir=args.status_dir or root/('var/a-share-announcements-diagnostic-status' if diagnostic else 'var/a-share-announcements-status')
     cache_dir=args.cache_dir or root/'var/a-share-announcements-cache'
-    status={'date':str(date),'generated_at':dt.datetime.now(TZ).isoformat(),'mode':'codebuddy','publishable':False,'publish_required':False,'diagnostic':diagnostic,'error':'','fallback_used':False}
+    status={'date':str(date),'generated_at':dt.datetime.now(TZ).isoformat(),'mode':'codebuddy','output_format':'markdown','publishable':False,'publish_required':False,'diagnostic':diagnostic,'error':'','fallback_used':False}
     out.mkdir(parents=True,exist_ok=True)
     status_dir.mkdir(parents=True,exist_ok=True)
     started=time.monotonic()
@@ -357,32 +462,16 @@ def main(argv=None):
         gaps=collection.get('gaps',[])+gaps
         items=sort_items(items)
         status['fact_review']={'coverage_companies':len(decisions),'candidate_companies':len(groups),'source_quotes_verified':True,'unknown_fields_marked':True,'passed':True}
-        report={'date':str(date),'generated_at':dt.datetime.now(TZ).isoformat(),'items':items,'collection_count':collection['total_count'],'announcement_count':sum(len(i['announcements']) for i in items),'source_notes':collection.get('source_notes',[])+['CodeBuddy依据公告原文判定重大性；'+ifind_note,'MA及MACD由截至公告日收盘的历史行情计算；每周最后一个有效收盘构成周线，未使用公告日后数据。','周线金叉/死叉标签采用标准中的DIF与DEA大小关系；缺少可靠历史背离证据标数据待核。','PDF解析仅清除已验证的连续页码及固定免责声明，原始官方PDF完整保留供核查。','每页4个卡位，末页不足4只时留空，不补造股票；红色利好、灰色中性、绿色利空。'],'gaps':gaps}
-        from announcement_pdf import render_report
-        base=f'{date.month}月{date.day}日-A股重大公告利好利空日报.pdf'
-        filename=base
-        # Version duplicates without overwriting a previously delivered report.
-        version=2
-        while (out/filename).exists():
-            filename=f'{date.month}月{date.day}日-V{version}-A股重大公告利好利空日报.pdf'
-            version+=1
-        temp=out/('draft-'+filename)
-        view_report=dict(report)
-        view_report['source_notes']=['公告：东方财富全量索引及巨潮官方原文；行情：腾讯截至日K线及公开申万行业数据。'+ifind_note, 'MA及MACD(12/26/9)截至公告日收盘；周线由当周有效日线聚合。每页四卡位，末页不足留空，缺失数值不补造。']
-        view_report['gaps']=summarize_gaps(gaps)
-        layout=render_report(view_report,temp)
-        if not layout.get('page_count'):
-            raise ValueError('PDF layout audit did not return page count')
-        temp.replace(out/filename)
+        report={'date':str(date),'generated_at':dt.datetime.now(TZ).isoformat(),'items':items,'collection_count':collection['total_count'],'announcement_count':sum(len(i['announcements']) for i in items),'source_notes':collection.get('source_notes',[])+['CodeBuddy依据公告原文判定重大性；'+ifind_note,'MA及MACD由截至公告日收盘的历史行情计算；每周最后一个有效收盘构成周线，未使用公告日后数据。','周线金叉/死叉标签采用标准中的DIF与DEA大小关系；缺少可靠历史背离证据标数据待核。','公告原文解析仅清除已验证的连续页码及固定免责声明，原始官方文件完整保留供核查。'],'gaps':gaps}
+        markdown=report_markdown(report)
+        review=review_markdown(report,markdown)
+        filename=str(date)+'.md'
+        atomic_text(out/filename,markdown)
         atomic_json(out/(str(date)+'.json'),report)
-        markdown=report_markdown(report,filename)
-        (out/(str(date)+'.md')).write_text(markdown,encoding='utf-8')
         if not diagnostic:
-            shutil.copyfile(out/filename,out/'latest.pdf')
-            shutil.copyfile(out/filename,root/filename)
-            (out/'latest.md').write_text(markdown,encoding='utf-8')
-        layout.update(passed=True,sort_verified=items==sort_items(items),overview_verified=True)
-        status.update(state='generated',publishable=not diagnostic,publish_required=not diagnostic,publish_status='pending' if not diagnostic else 'diagnostic',output_path=str(out/filename),markdown_path=str(out/(str(date)+'.md')),json_path=str(out/(str(date)+'.json')),report_filename=filename,report_sha256=hashlib.sha256((out/filename).read_bytes()).hexdigest(),markdown_sha256=hashlib.sha256((out/(str(date)+'.md')).read_bytes()).hexdigest(),json_sha256=hashlib.sha256((out/(str(date)+'.json')).read_bytes()).hexdigest(),stock_count=len(items),announcement_count=report['announcement_count'],direction_counts=dict(collections.Counter(i['direction'] for i in items)),data_gaps=gaps,layout_review=layout)
+            atomic_text(out/'latest.md',markdown)
+        markdown_sha256=hashlib.sha256((out/filename).read_bytes()).hexdigest()
+        status.update(state='generated',publishable=not diagnostic,publish_required=not diagnostic,publish_status='pending' if not diagnostic else 'diagnostic',output_path=str(out/filename),markdown_path=str(out/filename),json_path=str(out/(str(date)+'.json')),report_filename=filename,report_sha256=markdown_sha256,markdown_sha256=markdown_sha256,json_sha256=hashlib.sha256((out/(str(date)+'.json')).read_bytes()).hexdigest(),stock_count=len(items),announcement_count=report['announcement_count'],direction_counts=dict(collections.Counter(i['direction'] for i in items)),data_gaps=gaps,markdown_review=review)
         save()
         if not diagnostic: atomic_json(status_dir/'latest-artifact.json',status)
         print(str(out/filename))
