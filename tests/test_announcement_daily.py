@@ -30,6 +30,18 @@ class ReportPolicyTests(unittest.TestCase):
         self.assertEqual(items[0]['announcements'][0]['title'],'重大合同')
         raw['key_data'][0]['evidence']='合同金额200亿元'
         with self.assertRaises(ValueError): m.validate_selection([raw],source)
+    def test_two_sentence_analysis_string_preserves_text_and_decimals(self):
+        raw={'code':'600000','important':True,'announcement_ids':['known'],'categories':['合同中标'],'direction':'利好','score':3,'event':'签订合同','conclusion':'订单增加','analysis':'合同金额100.25亿元。同比增长2.5%，关注履约！','key_data':[{'label':'合同金额','value':'100.25亿元','evidence':'合同金额100.25亿元'}],'focus':['关注履约']}
+        source={'600000':[{'id':'known','name':'示例','title':'重大合同','text':'合同金额100.25亿元，同比增长2.5%。','url':'https://example.org/a.pdf','date':'2026-10-16'}]}
+        item=m.validate_selection([raw],source)[0]
+        self.assertEqual(item['analysis'],['合同金额100.25亿元。','同比增长2.5%，关注履约！'])
+        self.assertEqual(''.join(item['analysis']),raw['analysis'])
+    def test_analysis_string_still_requires_two_to_three_sentences(self):
+        raw={'code':'600000','important':True,'announcement_ids':['known'],'categories':['合同中标'],'direction':'利好','score':3,'event':'签订合同','conclusion':'订单增加','key_data':[{'label':'合同金额','value':'100亿元','evidence':'合同金额100亿元'}],'focus':['关注履约']}
+        source={'600000':[{'id':'known','name':'示例','title':'重大合同','text':'合同金额100亿元。','url':'https://example.org/a.pdf','date':'2026-10-16'}]}
+        for analysis in ['合同已签订。','合同已签订。收入确认待履约。注意回款。关注进度。']:
+            with self.subTest(analysis=analysis),self.assertRaisesRegex(ValueError,'analysis'):
+                m.validate_selection([{**raw,'analysis':analysis}],source)
     def test_narrative_cannot_change_monetary_units(self):
         raw={'code':'600000','important':True,'announcement_ids':['known'],'categories':['合同中标'],'direction':'利好','score':5,'event':'合同金额100亿元','conclusion':'订单增加','analysis':['合同金额100亿元。','收入确认以履约为准。'],'key_data':[{'label':'合同金额','value':'100万元','evidence':'合同金额100万元'}],'focus':['关注履约']}
         source={'600000':[{'id':'known','name':'浦发银行','title':'重大合同','text':'公司签署合同金额100万元','url':'https://example.org/a.pdf','date':'2026-10-16'}]}

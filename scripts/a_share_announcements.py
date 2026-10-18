@@ -91,6 +91,8 @@ def validate_selection(rows, groups):
             if not isinstance(row.get(field),str) or not row[field].strip() or len(row[field]) > limit:
                 raise ValueError('missing or excessive '+field+': '+code)
         analysis = row.get('analysis',[])
+        if isinstance(analysis,str):
+            analysis = [sentence for sentence in re.split(r'(?<=[。！？!?])',analysis) if sentence.strip()]
         if not isinstance(analysis,list) or not 2 <= len(analysis) <= 3 or any(not isinstance(x,str) or len(x)>110 for x in analysis) or sum(map(len,analysis))>200:
             raise ValueError('analysis须为JSON字符串数组，含2至3句，每句≤110字、合计≤200字；请保留事实精简重复表述：'+code)
         data = row.get('key_data',[])
