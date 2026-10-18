@@ -215,7 +215,9 @@ def batches(groups,limit=45000,max_stocks=6):
     length = 0
     for code,records in groups.items():
         size = sum(len(r.get('text',''))+len(r.get('title','')) for r in records)
-        if batch and (length+size>limit or len(batch)>=max_stocks):
+        # Reserve prompt/retry space while keeping an oversized company intact.
+        json_bytes = len(json.dumps({**batch,code:records},ensure_ascii=False).encode('utf-8'))
+        if batch and (length+size>limit or len(batch)>=max_stocks or json_bytes>100000):
             yield batch
             batch,length = {},0
         batch[code] = records

@@ -60,6 +60,21 @@ class ReportPolicyTests(unittest.TestCase):
     def test_direction_then_absolute_score_sort(self):
         items=[{'direction':'利空','score':-5,'code':'3'},{'direction':'利好','score':2,'code':'2'},{'direction':'中性','score':0,'code':'0'},{'direction':'利好','score':5,'code':'1'}]
         self.assertEqual([x['code'] for x in m.sort_items(items)],['1','2','0','3'])
+    def test_chinese_batches_split_on_utf8_budget_without_losing_sources(self):
+        groups={str(600001+number):[{'id':str(number),'title':'重大合同','text':'中'*12000}]
+                for number in range(3)}
+        self.assertLess(sum(len(row['text'])+len(row['title']) for rows in groups.values() for row in rows),45000)
+        result=list(m.batches(groups))
+        self.assertEqual(len(result),2)
+        self.assertTrue(all(len(json.dumps(batch,ensure_ascii=False).encode('utf-8'))<=100000 for batch in result))
+        self.assertEqual({code:rows for batch in result for code,rows in batch.items()},groups)
+    def test_company_over_utf8_budget_remains_complete_in_its_own_batch(self):
+        groups={'600001':[{'id':'large','title':'重大合同','text':'中'*34000}],
+                '600002':[{'id':'small','title':'重大合同','text':'完整原文'}]}
+        result=list(m.batches(groups))
+        self.assertEqual(len(result),2)
+        self.assertEqual(result[0],{'600001':groups['600001']})
+        self.assertEqual({code:rows for batch in result for code,rows in batch.items()},groups)
     def test_diagnostic_default_output_cannot_touch_published_or_live_status(self):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder)
