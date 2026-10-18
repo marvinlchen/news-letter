@@ -5,6 +5,11 @@ export TZ=Asia/Shanghai
 PROJECT_ROOT="${PROJECT_ROOT:-$HOME/finance-news-digest}"
 export CODEBUDDY_BIN="${CODEBUDDY_BIN:-codebuddy}"
 export ANNOUNCEMENTS_AI_MODEL="${ANNOUNCEMENTS_AI_MODEL:-}"
+# Only this report loads the private iFinD connection; give HTTP MCP time to start.
+if [[ -z "${ANNOUNCEMENTS_IFIND_MCP_CONFIG+x}" && -f "$HOME/.config/finance-news-digest/ifind-mcp.json" ]]; then
+  export ANNOUNCEMENTS_IFIND_MCP_CONFIG="$HOME/.config/finance-news-digest/ifind-mcp.json"
+fi
+export CODEBUDDY_FIRST_RUN_MCP_PREWAIT_TIMEOUT_MS="${CODEBUDDY_FIRST_RUN_MCP_PREWAIT_TIMEOUT_MS:-60000}"
 STATUS_DIR="$PROJECT_ROOT/var/a-share-announcements-status"
 PYTHON="${ANNOUNCEMENTS_PYTHON:-$PROJECT_ROOT/var/a-share-announcements-venv/bin/python}"
 mkdir -p "$PROJECT_ROOT/var/log" "$STATUS_DIR"

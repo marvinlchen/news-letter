@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import unittest
 import tempfile
+from unittest.mock import patch
+from types import SimpleNamespace
 
 P = Path(__file__).parent / 'scripts' / 'a_share_announcements.py'
 if not P.exists():
@@ -112,5 +114,58 @@ class ReportPolicyTests(unittest.TestCase):
     def test_parser_accepts_fenced_json_but_rejects_prose(self):
         self.assertEqual(m.parse_model_json('```json\n{"items": []}\n```'), {'items':[]})
         with self.assertRaises(ValueError): m.parse_model_json('今天市场很好')
+
+class IfindIntegrationTests(unittest.TestCase):
+    groups={'600000':[{'id':'a','name':'示例','title':'公告','text':'例行公告','url':'https://example.org/a.pdf'}]}
+    result=json.dumps({'items':[{'code':'600000','important':False,'reason':'一般事项'}]})
+
+    def config(self,root):
+        from announcement_ifind import OFFICIAL_URL
+        path=root/'private.json'
+        path.write_text(json.dumps({'mcpServers':{'ifind':{'type':'http','url':OFFICIAL_URL,'alwaysLoad':True,'headers':{'Authorization':'test-secret-never-log'}}}}))
+        path.chmod(0o600)
+        return path
+
+    def stream(self,date='2026-10-16'):
+        events=[{'type':'assistant','message':{'content':[{'type':'tool_use','id':'n1','name':'mcp__ifind__search_notice','input':{'query':'600000公告','size':5,'time_start':date,'time_end':date}}]}},
+                {'type':'user','message':{'content':[{'type':'tool_result','tool_use_id':'n1','content':[{'type':'text','text':'{"code":1,"data":{"answer":"无相关公告"}}'}]}]}},
+                {'type':'result','is_error':False,'result':self.result}]
+        return '\n'.join(json.dumps(e,ensure_ascii=False) for e in events)
+
+    def test_mcp_batch_requires_real_call_and_keeps_secret_out_of_argv_and_logs(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);config=self.config(root)
+            raw=self.stream()+'\n'+json.dumps({'type':'system','message':'test-secret-never-log'})
+            with patch.dict(m.os.environ,{'ANNOUNCEMENTS_IFIND_MCP_CONFIG':str(config)}), patch.object(m.subprocess,'run',return_value=SimpleNamespace(returncode=0,stdout=raw,stderr='')) as run:
+                selected,decisions,evidence=m.analyze_batch(self.groups,dt.date(2026,10,16),root/'ai')
+            self.assertEqual(selected,[])
+            self.assertEqual(len(evidence),1)
+            argv=run.call_args.args[0]
+            self.assertIn('stream-json',argv)
+            self.assertIn('--strict-mcp-config',argv)
+            self.assertNotIn('test-secret-never-log',' '.join(argv))
+            self.assertEqual(decisions[0]['important'],False)
+            self.assertNotIn('test-secret-never-log',''.join(p.read_text() for p in (root/'ai').iterdir()))
+            self.assertTrue(list((root/'ai').glob('*-ifind-evidence-1.json')))
+
+    def test_wrong_date_or_model_claim_without_real_calls_cannot_pass(self):
+        for raw in [self.stream('2026-10-17'),json.dumps({'type':'result','is_error':False,'result':self.result})]:
+            with self.subTest(raw=raw[:30]), tempfile.TemporaryDirectory() as folder:
+                root=Path(folder);config=self.config(root)
+                with patch.dict(m.os.environ,{'ANNOUNCEMENTS_IFIND_MCP_CONFIG':str(config)}), patch.object(m.subprocess,'run',return_value=SimpleNamespace(returncode=0,stdout=raw,stderr='')):
+                    with self.assertRaises(ValueError):m.analyze_batch(self.groups,dt.date(2026,10,16),root/'ai')
+                self.assertFalse(list((root/'ai').glob('*-ifind-evidence-*.json')))
+
+    def test_timeout_partial_output_is_redacted(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);config=self.config(root)
+            with patch.dict(m.os.environ,{'ANNOUNCEMENTS_IFIND_MCP_CONFIG':str(config)}), patch.object(m.subprocess,'run',side_effect=m.subprocess.TimeoutExpired('codebuddy',300,output=b'test-secret-never-log')):
+                with self.assertRaises(ValueError):m.analyze_batch(self.groups,dt.date(2026,10,16),root/'ai')
+            self.assertEqual(next((root/'ai').glob('*timeout*')).read_text(),'[REDACTED]')
+
+    def test_unconfigured_batch_preserves_text_mode(self):
+        with tempfile.TemporaryDirectory() as folder, patch.dict(m.os.environ,{'ANNOUNCEMENTS_IFIND_MCP_CONFIG':''}), patch.object(m.subprocess,'run',return_value=SimpleNamespace(returncode=0,stdout=self.result,stderr='')) as run:
+            self.assertEqual(m.analyze_batch(self.groups,dt.date(2026,10,16),Path(folder))[2],[])
+            self.assertIn('text',run.call_args.args[0])
 
 if __name__ == '__main__': unittest.main()
