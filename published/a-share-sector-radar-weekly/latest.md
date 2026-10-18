@@ -1,4 +1,4 @@
-# A股产业领先信号周报｜2026-09-30
+# A股产业领先信号周报｜2026-10-16
 
 > 产业证据与市场确认分开审计。PASS不等于买入；行业指数不可直接交易；本报告不构成投资建议。
 
@@ -8,153 +8,141 @@
 |---|---|
 | 样本性质 | **正式前瞻样本** |
 | 本周动作 | 按冻结规则发布；新增激活从下一共同交易日开盘代理记账。 |
-| 观察窗口 | 2026-09-24 至 2026-09-30 |
-| 行情应到 / 实到 | 2026-09-30 / 2026-09-30 |
+| 观察窗口 | 2026-10-10 至 2026-10-16 |
+| 行情应到 / 实到 | 2026-10-16 / 2026-10-16 |
 | 策略版本 | `v0.2-F.2-pilot` |
 | 证据引擎 | `rules-recovery-v1 @ 3b7088cc9288` |
-| 候选 / claim / 采用引用 | 200 / 51 / 51 |
-| 候选行业覆盖 | 30/31 |
-| 语义利用率 | 25.5% |
-| 新激活 / 持有确认 | 0 / 0 |
-| 本次检查时间 | 2026-10-04T10:13:44+08:00 |
-| 数据源错误 | 8 |
-| 广度成分股请求 / 缓存命中 | 554 / 0 |
+| 候选 / claim / 采用引用 | 260 / 62 / 60 |
+| 候选行业覆盖 | 31/31 |
+| 语义利用率 | 23.1% |
+| 新激活 / 持有确认 | 2 / 0 |
+| 本次检查时间 | 2026-10-18T10:12:38+08:00 |
+| 数据源错误 | 2 |
+| 广度成分股请求 / 缓存命中 | 394 / 0 |
 
 数据源错误明细（最多3条，已清洗）：
-- 801750/688316成分股日线失败: 688316成分股日线双源失败；腾讯: 腾讯sh688316缺少前复权日线（原始日线123条）；东财: Remote end closed connection without response
-- 801750/688561成分股日线失败: 688561成分股日线双源失败；腾讯: 腾讯sh688561缺少前复权日线（原始日线123条）；东财: Remote end closed connection without response
-- 801750/688246成分股日线失败: 688246成分股日线双源失败；腾讯: 腾讯sh688246缺少前复权日线（原始日线123条）；东财: Remote end closed connection without response
+- 801770/688387成分股日线失败: 688387成分股日线双源失败；腾讯: 腾讯sh688387缺少前复权日线（原始日线120条）；东财: Remote end closed connection without response
+- 801770/688635成分股日线失败: 688635成分股日线双源失败；腾讯: 腾讯sh688635缺少前复权日线（原始日线96条）；东财: Remote end closed connection without response
 
-本周没有候选同时通过证据、质量、防追高与市场三选二，不为凑数激活。
+本周新增激活：建筑装饰、交通运输。
 
 ## 市场概览
 
 | 指标 | 结果 |
 |---|---|
-| 20日上涨行业 | 3/31（其余未计算0） |
-| 31行业20日中位数 | -4.51% |
+| 20日上涨行业 | 2/31（其余未计算0） |
+| 31行业20日中位数 | -7.35% |
 | 防追高行业 | 7 |
-| 广度未计算 | 27/31；未计算不视为失败 |
-| 20日排名前三 | 房地产 +6.41%（第1）；医药生物 +1.99%（第2）；银行 +0.44%（第3） |
+| 广度未计算 | 28/31；未计算不视为失败 |
+| 20日排名前三 | 银行 +2.52%（第1）；食品饮料 +0.36%（第2）；煤炭 -1.32%（第3） |
 
 ## 信号漏斗
 
 | 阶段 | 行业数 | 说明 |
 |---|---:|---|
-| 有候选输入 | 30 | 共200条候选 |
-| 硬证据PASS | 4 | 至少2类、2主体、2个独立URL、2个事件簇，且含成分公司 |
-| 质量可用 | 4 | 少于2个质量旗标 |
+| 有候选输入 | 31 | 共260条候选 |
+| 硬证据PASS | 3 | 至少2类、2主体、2个独立URL、2个事件簇，且含成分公司 |
+| 质量可用 | 3 | 少于2个质量旗标 |
 | 排除拥挤后 | 2 | 不新增追逐成熟周期或短期急涨 |
-| 市场三选二 | 0 | 未计算的广度不计通过、也不计失败 |
-| 雷达 / 新激活 | 4 / 0 | 雷达上限8，新激活上限3 |
+| 市场三选二 | 2 | 未计算的广度不计通过、也不计失败 |
+| 雷达 / 新激活 | 3 / 2 | 雷达上限8，新激活上限3 |
 
 ## 已通过证据门的雷达
 
 | 雷达序号 | 行业 | S/O/E | 主体 | 独立URL | 市场三项 | 20日排名 | 状态 |
 |---:|---|---|---:|---:|---|---:|---|
-| 1 | 计算机 | O,S | 3 | 4 | 相对未通过 / 广度未通过 / 成交通过 | 30 | 早期雷达 |
-| 2 | 非银金融 | O,S | 3 | 3 | 相对未通过 / 广度未通过 / 成交通过 | 27 | 早期雷达 |
-| 3 | 通信 | E,O | 2 | 2 | 相对未通过 / 广度未通过 / 成交未通过 | 17 | 周期成熟 |
-| 4 | 综合 | E,O | 2 | 2 | 相对通过 / 广度未通过 / 成交通过 | 11 | 周期成熟 |
+| 1 | 建筑装饰 | E,O,S | 3 | 4 | 相对通过 / 广度未通过 / 成交通过 | 13 | 新激活 |
+| 2 | 通信 | E,S | 3 | 3 | 相对未通过 / 广度未通过 / 成交未通过 | 31 | 周期成熟 |
+| 3 | 交通运输 | O,S | 3 | 3 | 相对通过 / 广度未通过 / 成交通过 | 7 | 新激活 |
 
-### 计算机｜结构化证据审计
+### 建筑装饰｜结构化证据审计
 
-- 证据缺口/核对：类别：O,S（还缺0类）；主体：3/2（还缺0个）；独立URL：4/2（还缺0个）；相反证据：无；质量旗标：无。
-- 市场核对：20日收益-8.23%；排名第30；相对端点（旧→新）：2026-09-15=-4.52%；2026-09-22=+1.16%；2026-09-30=-3.71%；相对连续改善：否（相对门未通过）；成交分位4.5%；成交占比（前期→本期）：4.599%→4.615%（成交门通过）；广度端点（旧→新）：2026-09-15=32.6%（覆盖98.2%）；2026-09-22=65.2%（覆盖98.2%）；2026-09-30=42.1%（覆盖98.2%）；广度连续改善：否（广度门未通过）。
+- 证据缺口/核对：类别：E,O,S（还缺0类）；主体：3/2（还缺0个）；独立URL：4/2（还缺0个）；相反证据：无；质量旗标：无。
+- 市场核对：20日收益-6.39%；排名第13；相对端点（旧→新）：2026-09-23=-0.59%；2026-10-08=+0.91%；2026-10-16=+0.96%；相对连续改善：是（相对门通过）；成交分位7.3%；成交占比（前期→本期）：1.180%→1.251%（成交门通过）；广度端点（旧→新）：2026-09-23=58.9%（覆盖99.3%）；2026-10-08=52.4%（覆盖100.0%）；2026-10-16=32.0%（覆盖100.0%）；广度连续改善：否（广度门未通过）。
 - 已绑定的部分claim：
-  - [宝信软件中标金钼集团智能化工厂建设EPC项目 - 中国有色网](https://news.google.com/rss/articles/CBMiXEFVX3lxTE4xVVVsajN2VmZlaXhfMlctaGFmSkFIV3FpN254NlVfcUR5OEJjN0VZMnRmQ0taTkxSN3pEYThGQ2RkN1ZDYnFYRHFUenRZeVhDVGhpckNzTjZQTnFT?oc=5)；O / 宝信软件；2026-09-30
-  - [雷神科技中标中山农商银行信创台式机采购项目 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LdDFTLXZPR0tIbzBWNkQ2dmxTY1dLLUt1WWx0QXlKNmhrRV9oSHVrTm50YWFVYkJBQXFQd3A4WU1FMWRiYXFnbm8zcnZvRTFxZzFMZGFJQ3d6Q0RLZ0lPRw?oc=5)；O / 信创；2026-09-29
-  - [软通计算机中标中国移动部件焕新服务器集中采购项目 - 东方财富](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1UUVJ4dUFnSEVYOVNDRXJyZ2VFaTBrMnFta0JwWlhfbzRVX21aWDRPeHF4bnF5enBKamtUTDZHaHNBMVZCbkU5MU8teXBHa1c2dG55RXJvZ1pVRGpBdEdB?oc=5)；O / 计算机；2026-09-12
-  - [8月平板电脑、计算机价格同比上涨两成 - 21财经](https://news.google.com/rss/articles/CBMijAFBVV95cUxOS0RjOUVRRGx2bVhIMmlTN25NMUJFM3k1SjIxSDVWUXR0dUViQm53QTJqOHdCaEtfZlJaWW9zSFRZeno1UE01dElyV09SWU43WWVmNmhqcWFVZHlCaDljWlBnMy02b0V2ZkZhWFN6VnZmWDA1Q0hDYkxBeHBEN3E0a0hhU1YzZWZIajAtcA?oc=5)；S / 计算机；2026-09-09
-
-### 非银金融｜结构化证据审计
-
-- 证据缺口/核对：类别：O,S（还缺0类）；主体：3/2（还缺0个）；独立URL：3/2（还缺0个）；相反证据：无；质量旗标：无。
-- 市场核对：20日收益-7.30%；排名第27；相对端点（旧→新）：2026-09-15=+2.92%；2026-09-22=-0.81%；2026-09-30=-2.79%；相对连续改善：否（相对门未通过）；成交分位2.2%；成交占比（前期→本期）：1.485%→1.495%（成交门通过）；广度端点（旧→新）：2026-09-15=20.3%（覆盖100.0%）；2026-09-22=45.6%（覆盖100.0%）；2026-09-30=26.0%（覆盖97.5%）；广度连续改善：否（广度门未通过）。
-- 已绑定的部分claim：
-  - [东方财富：东方财富信息股份有限公司关于签署最高额保证合同的公告](https://static.cninfo.com.cn/finalpage/2026-09-24/1225579911.PDF)；O / 东方财富；2026-09-24
-  - [中信证券：中秋国庆假期出游需求或旺盛 关注美妆医美珠宝旺季 - 观点网](https://news.google.com/rss/articles/CBMiYkFVX3lxTE02RS1oMHJIM0lrbE1DSWsxMVBwV3BaQ3ZpUi1FaEl4UFNBUGYyVTM2cXZOREpTZzFzMC1xUDRzdEptamZpOXNwaThET1N1UkJISlFRZjd4WThxMTZnUVY3REl3?oc=5)；S / 中信证券；2026-09-29
-  - [供应偏紧需求支撑 化工商品集体回暖 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5ZT1lodGVZQXhCN1JZTUhjNE5lRE1hMW9pMXIyenRMMEdaNXBmX3JMZ1VlOXl4eTVsVDBVRVVodW1PRTIzU2xHYkJjamN0QTJfOENzaFVUdWNFSEZORGZHa2N3?oc=5)；S / 证券；2026-09-30
+  - [中国电建：中国电力建设股份有限公司关于签署重大合同的公告](https://static.cninfo.com.cn/finalpage/2026-10-14/1225603143.PDF)；O / 中国电建；2026-10-14
+  - [中国能建：中国能源建设股份有限公司重大工程中标公告](https://static.cninfo.com.cn/finalpage/2026-09-10/1225555700.PDF)；O / 中国能建；2026-09-10
+  - [受益于全球AI算力基建扩容，腾景科技第三季度净利同比预增超六成 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ZSHBUQkdfcEdXRk5BYkJxRTlhd1BnWEVnM1hyTDhCc25MNnlkQ0xINFI1UzQ1UDVBXzJ2eV82QTREbWgtZ0NwRWgzQ25PbTEtdG4tc2tZMldUM3pDMW1oVVpqZVVRZw?oc=5)；E / 基建；2026-10-16
+  - [基建提速带动大宗商品仓储需求回暖\|库存\|品种\|百分点\|价格\|业务量 - finance.sina.com.cn](https://news.google.com/rss/articles/CBMieEFVX3lxTE9xN1d1RVcxYklHSnQtTTV6V2pwNDVFclhFdy1NekxqaHA0QXo4N3NrSG9MdE82NThvdzh2dlJTVTVLQXJ1QlFnQ2dnNlhvOEowSmFNeHBWWlZra3NlQ0F0ZmhPZGtOLW13TUE4UVhTeE9VaEpZQktkUw?oc=5)；S / 基建；2026-10-16
 
 ### 通信｜结构化证据审计
 
-- 证据缺口/核对：类别：E,O（还缺0类）；主体：2/2（还缺0个）；独立URL：2/2（还缺0个）；相反证据：无；质量旗标：无。
-- 市场核对：20日收益-4.85%；排名第17；相对端点（旧→新）：2026-09-15=-4.46%；2026-09-22=+8.00%；2026-09-30=-0.34%；相对连续改善：否（相对门未通过）；成交分位82.9%；成交占比（前期→本期）：9.094%→7.325%（成交门未通过）；广度端点（旧→新）：2026-09-15=47.9%（覆盖98.3%）；2026-09-22=74.8%（覆盖98.3%）；2026-09-30=44.5%（覆盖98.3%）；广度连续改善：否（广度门未通过）。
+- 证据缺口/核对：类别：E,S（还缺0类）；主体：3/2（还缺0个）；独立URL：3/2（还缺0个）；相反证据：无；质量旗标：无。
+- 市场核对：20日收益-20.99%；排名第31；相对端点（旧→新）：2026-09-23=+8.14%；2026-10-08=-2.60%；2026-10-16=-13.64%；相对连续改善：否（相对门未通过）；成交分位71.2%；成交占比（前期→本期）：7.419%→6.465%（成交门未通过）；广度端点（旧→新）：2026-09-23=73.9%（覆盖98.3%）；2026-10-08=31.1%（覆盖98.3%）；2026-10-16=10.1%（覆盖98.3%）；广度连续改善：否（广度门未通过）。
 - 已绑定的部分claim：
-  - [长飞光纤：长飞光纤光缆股份有限公司2026年半年度业绩预增公告](https://static.cninfo.com.cn/finalpage/2026-07-15/1225423222.PDF)；E / 长飞光纤；2026-07-15
-  - [长盈通获保偏光纤订单，总金额暂定1.47亿元 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IbGFiUUJ4N2ExLXFPMUk4WkxnMGRDUEdzMUxURkVWV2MtdF9YaHpfUnJyb0ViX0d5XzNPUGNBNUxOUHlCakJRU2lCZGdxSGczMGZsZDBLTk5nbEREb0I1SlhINTYxZw?oc=5)；O / 长盈通；2026-09-29
+  - [亨通光电：前三季度净利润同比预增151%-168% 光通信市场需求增长、价格上涨 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9yRjFzZXlUdWl3QnBKMjhSNmZ3UE5lTDFvNDkzMng5M0lVakVDVVRTem94dkVEZVZLZFRVWVB3cTdqVHdzNFl4Zks1Y0dKcVU2b2VMWTc2c3hNOGxnUEllZw?oc=5)；E / 亨通光电；2026-10-16
+  - [亨通光电：前三季度净利润同比预增151%-168% 光通信市场需求增长、价格上涨 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9yRjFzZXlUdWl3QnBKMjhSNmZ3UE5lTDFvNDkzMng5M0lVakVDVVRTem94dkVEZVZLZFRVWVB3cTdqVHdzNFl4Zks1Y0dKcVU2b2VMWTc2c3hNOGxnUEllZw?oc=5)；S / 亨通光电；2026-10-16
+  - [数通光模块需求增长，光迅科技前三季度净利预增超六成，年内股价涨约90% - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE5RY2pJMHpYRHJHYUhRa3hwT1hLTjV4Sl8tYXpINnNMd2M3VVU5SFBtcWFvVzc4NWUxckRJOFVVUGRwWDdVbDBqc1VpTndhazM1d2VweTJ2RGljTHlzbF9aYw?oc=5)；E / 光迅科技；2026-10-15
+  - [AI算力驱动光模块景气度上行 光库科技前三季度净利预增超1.4倍｜财报解读 - 财联社](https://news.google.com/rss/articles/CBMiSEFVX3lxTE5hRUJpWmYxUVJMdTh2cGlORmktbmNIQ2g3Nkw1eW1wV2JhdXRtclRrdEZQYkpvZXI5bWVfUXRMeFk4M052WHdJdQ?oc=5)；E / 光库科技；2026-10-15
 
-### 综合｜结构化证据审计
+### 交通运输｜结构化证据审计
 
-- 证据缺口/核对：类别：E,O（还缺0类）；主体：2/2（还缺0个）；独立URL：2/2（还缺0个）；相反证据：无；质量旗标：无。
-- 市场核对：20日收益-3.11%；排名第11；相对端点（旧→新）：2026-09-15=-5.35%；2026-09-22=+0.23%；2026-09-30=+1.41%；相对连续改善：是（相对门通过）；成交分位60.3%；成交占比（前期→本期）：0.185%→0.194%（成交门通过）；广度端点（旧→新）：2026-09-15=50.0%（覆盖100.0%）；2026-09-22=80.0%（覆盖100.0%）；2026-09-30=75.0%（覆盖100.0%）；广度连续改善：否（广度门未通过）。
+- 证据缺口/核对：类别：O,S（还缺0类）；主体：3/2（还缺0个）；独立URL：3/2（还缺0个）；相反证据：无；质量旗标：无。
+- 市场核对：20日收益-3.00%；排名第7；相对端点（旧→新）：2026-09-23=-0.85%；2026-10-08=+5.04%；2026-10-16=+4.34%；相对连续改善：否（相对门通过）；成交分位50.5%；成交占比（前期→本期）：1.268%→1.590%（成交门通过）；广度端点（旧→新）：2026-09-23=64.3%（覆盖100.0%）；2026-10-08=67.5%（覆盖100.0%）；2026-10-16=54.8%（覆盖100.0%）；广度连续改善：否（广度门未通过）。
 - 已绑定的部分claim：
-  - [综艺股份：综艺股份2026年半年度业绩预增公告](https://static.cninfo.com.cn/finalpage/2026-07-14/1225420800.PDF)；E / 综艺股份；2026-07-14
-  - [时代新材：关于签署日常经营合同的自愿性披露公告](https://static.cninfo.com.cn/finalpage/2026-07-04/1225409491.PDF)；O / 时代新材；2026-07-04
+  - [招商轮船：招商轮船关于下属全资子公司签署日常经营重大合同的公告](https://static.cninfo.com.cn/finalpage/2026-10-01/1225590002.PDF)；O / 招商轮船；2026-10-01
+  - [双11叠加“反内卷”政策，义乌等多地快递掀新一轮涨价潮 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE9sbWVzNUxFZ1E0T3FXa0dyaEdyQi1KYWMwSUxPeEp1Wjc2eWxvNHNjLTBSaGhiV1BmNGRqdzZIOGFyRGtqQmtNb0VJdS1XTmlnTTRRWGVxbzNtTkFxblNQSlh0UTdiUQ?oc=5)；S / 快递；2026-10-15
+  - [中国蓝观察丨物流需求回暖，释放了什么信号？ - 新蓝网](https://news.google.com/rss/articles/CBMiT0FVX3lxTFBuX3cyS0FyTTZmTmlUa1duVm5RbG96X2l4Ull3eWVCOE9JRXNIWGZ2cWtfdnZZSVZIbjdWTzBqQnFmRkVoN29sVUVvX0R3RDQ?oc=5)；S / 物流；2026-10-12
 
 ## 行情领先但证据未闭环（近失配 Top 5）
 
 排序依次考虑市场通过数、证据缺口、质量旗标、证据覆盖、20日排名和行业代码；同一快照结果固定。
 
-### 1. 环保
+### 1. 公用事业
 
-- 行情：20日-5.18%、排名第20；相对通过 / 广度未计算 / 成交通过。
-- 证据缺口：类别：O（还缺1类）；主体：4/2（还缺0个）；独立URL：4/2（还缺0个）；相反证据：无；质量旗标：无。
+- 行情：20日-1.73%、排名第4；相对通过 / 广度未计算 / 成交通过。
+- 证据缺口：类别：S（还缺1类）；主体：1/2（还缺1个）；独立URL：2/2（还缺0个）；相反证据：无；质量旗标：无。
 - 已绑定的部分claim：
-  - [伟明环保：伟明环保关于垃圾焚烧发电项目中标的公告](https://static.cninfo.com.cn/finalpage/2026-09-19/1225571790.PDF)；O / 伟明环保；2026-09-19
-  - [中国光大环境联合体中标青海海南州贵德县温泉生活垃圾焚烧发电项目 - 搜狐网](https://news.google.com/rss/articles/CBMijAFBVV95cUxQdWYzSnFFU2lUUkpkSmlNSmZMdWJiYlhTTUJwZFhBZGFweEVoMmNtWGs5NG9wTFg1NDhzWHdMdWZsRl81VDN0WjNMYU5jZjdaQlh6LW1lRjhVMzVHZWQwNkhSTlV1Z0I3a2h4QTRfWkd1WlI1THktNmhkR1ptRWpJOVJHWmpIZDduWThzcA?oc=5)；O / 垃圾焚烧；2026-09-29
-  - [南京万德斯环保科技股份有限公司关于自愿披露中标神东煤炭大柳塔煤矿活鸡兔井矿井水提标治理二期项目EPC的公告 - 新浪财经](https://news.google.com/rss/articles/CBMi3wRBVV95cUxPYUZwSGVqbzdRdDIwOS1Yak9NbnRYRUdVM3RHTGRjMDlQY3hPNGNrbE1tY2tHT3RZcEROeVdkZHpObWlHZUNBN25TVFpEeVNaSlJYekw5VEJuWXFjY1dSSjl2SXZpaUVoMWt4UWx4WEEyWVh1RE5uckZvdVh5dmtoWkxfVHBYa25XRENBRUpuMHUtdHNVLU0zbkp2bGhYS3I5UTJ2MGVWU0JZWDE3Y3phLXk4VEgwZ0p0bVo2ZkdoM1ZjTHp5S2Z1MHNQQTNXOFc4YWdETXY3TUtqbDNLQjA3dHJ0b3h1TE5XMFRXZVMzUTZmQnpDY3BpZXJ1R1Z6Y3VRTzNad0V3YXkzYlZyM1NhWDVUb1ZtbGtUZTMwbHhibkNrZVc0ZGkyUlpDMFZKQ01Obkw5WS1TbmNwQnlYVlNTbUFXSDdwRzJMQkFkNWhJWUlzT2ptcGI4SHNWbEE2cEo1THB0aEozTXIwU3hFVFh3RHVsem5Ub2U4aVVvU3kzbEFVWmtUenduLWFDWC00OEVHVnJGRTJiQ3I5QTEtNzBTQ2NVY3V2SGNjLUdIcHIyYldyWG9lZnhOMVh5S3M2V3JmZHpQZ1YyYXBEQXY5Y0ZwY05LUXo5d2hvZURJQmE0Tzh3c3NxV2ppMFhybjdFZnJ5QW9PREd3WVZ5VTVrWWZtcm45b3lsMDVER3JtS25odUpIZGJILXRMQ0dXNktoVGVWWkNzWHZHTWxQU2R5Nmx4UUcxdHV6X0xkVXhJb1Y4NnNXdUxuVUhNaFdsR0FrTFYtcFBza3lFU3lWci1EMXBz?oc=5)；O / 万德斯；2026-09-29
-  - [武汉天源集团成功中标图们市生活垃圾焚烧发电项目-公司动态 - static.weeklyonstock.com](https://news.google.com/rss/articles/CBMiZkFVX3lxTFB4ZVdxcWlmcUJVSUJFU3NXMkl3YWNnYXF2VDFvRzIxcDJ1VXR1RFZ2Z1NUWUt6OWVkQzhWWFdnempjTDkyTFhnVVp6T3B0eXB5RU5RaGI0QXpTSURTM004ZTF3RU52dw?oc=5)；O / 武汉天源；2026-09-19
+  - [海关总署：中企为应对全球算力、电力需求增长提供坚实支撑\|固态硬盘\|风力发电\|国新办\|财联社\|充电宝 - 新浪财经](https://news.google.com/rss/articles/CBMi9wJBVV95cUxNbTFacGFqZ3JjWDBrM1pjWWpFeVVDNHhjOElfUDhlRlZacjlKV2NDRVN2LWdwWWw3SVVtbGtVRmV2bjlhUEcyQVVOMkxMb2tRWlM5Mm9fTHI2MGhfOTQydUROOHpNUk1Ic3hRWWhKcHloZlRoYkhER080MUp5a2NzSG43VzRieTJvYXNlckkyNnJyVWxtdDlYRUllSFNiMy1zLW1uX2FFS00zWXAzWFNib3lKYmptc2k1amREbDVoWU5iTmFDVDl0ZVl1RVV6ekMtRkpmaEtHakd5cW1aTzNKQklKdVBQVElzMEJvWVc2MS14VFkzRGYySXljMFF5TnREdG5KUWJGb3JPSTRXXzFnTnExTjY2dGNST0U3dnlYYzZ6RFcwcW5VUTE1Zk8wZ0Z3cE9ENHFvbWU5eUlMRFgyYTB0SjFVSGJYeGI2UjVjc3FfdDFjbUlJYmNwUEtuSnJSY05sc3R5VVZ6U3FrQlA2VXhqUmZQREE?oc=5)；S / 电力；2026-10-15
+  - [海关总署：我国为应对全球算力和电力需求增长提供坚实的支撑 - 搜狐](https://news.google.com/rss/articles/CBMi1gFBVV95cUxQcXRZdWx6WG1iM0NrV3lFV21EOF9NWkY5aXdYRTZVUWZkemNFLVB5ZDlrYXIxVzRPSjNsWktBSlZEaXFqVVBNY1lwcm4tc0lIYjZOSHFtX1NVeERwY09oTDhZUXlVRnVFWWFaaVFtN0o4bktEdUN6endKRUNiOFhkeWZxVVpxeXR2a09LWmJrMVVJaVhVRU9oa1BTN3hCXzVIeHJaNzFDUnBQMjlOb1J2U1M4blZPeDBGUmhia0ZxUGVraFVqNkpqMGw1aWFldlN5WDNWRV9R?oc=5)；S / 电力；2026-10-14
 
-### 2. 银行
+### 2. 食品饮料
 
-- 行情：20日+0.44%、排名第3；相对通过 / 广度未计算 / 成交通过。
-- 证据缺口：类别：O（还缺1类）；主体：2/2（还缺0个）；独立URL：3/2（还缺0个）；相反证据：无；质量旗标：无。
+- 行情：20日+0.36%、排名第2；相对通过 / 广度未计算 / 成交通过。
+- 证据缺口：类别：S（还缺1类）；主体：2/2（还缺0个）；独立URL：2/2（还缺0个）；相反证据：1条；质量旗标：SINGLE_COMPANY。
 - 已绑定的部分claim：
-  - [高科物业中标中国农业银行榆林分行2026-2028年物业后勤服务外包项目 - 观点网](https://news.google.com/rss/articles/CBMiTkFVX3lxTE96UVZaME1mM0tVUlVGWGQyWkRRYWZGUzd6eWdXYkhkdzZMd2dFTEtmaUtsdVJ6MFdsMnlsNEVCbVlHV2dqR2t4Vl9JZTd2Zw?oc=5)；O / 农业银行；2026-09-28
-  - [雷神科技中标中山农商银行信创台式机采购项目 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LdDFTLXZPR0tIbzBWNkQ2dmxTY1dLLUt1WWx0QXlKNmhrRV9oSHVrTm50YWFVYkJBQXFQd3A4WU1FMWRiYXFnbm8zcnZvRTFxZzFMZGFJQ3d6Q0RLZ0lPRw?oc=5)；O / 银行；2026-09-29
-  - [三部门：购房人在签订贷款合同时 同步授权银行代为办理贴息 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTFBMRUtUYlA2WlJWM2NKWHFpbDhtamlXWFN6YzlqNE1TME96Z2llRHZNNHJIdnBWaWs3dzJYbXJ2bU42X2V3X0VLejhVei10Q1FwTTZzQkZOeGFiWUJscjFSZTdGbFV4dmF1VUdiOWMwUm82REtYd0kxbg?oc=5)；O / 银行；2026-09-30
+  - [皇台酒业、金种子酒直线涨停！明年白酒需求或改善，关注这些机会 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTFA3dTAyQjUyMkpaZEtPeGtEbzRtbGZpcmpmRDhSU1Q3OVZLeFhReXFINEZabkdIenhNbi1rX2pVLUM2anczcGN4d044MlJDRmt4d0JfUHY0dEtVR0pZYWo2WTZ2X2p1UQ?oc=5)；S / 皇台酒业；2026-10-13
+  - [受天气和运输受阻影响 粮农组织食品价格指数9月上涨 - UN News](https://news.google.com/rss/articles/CBMiV0FVX3lxTFBwaHAwbDFWcHVaYVNuVkJjTDdDX3BVNGJicjFLY1JFWWdQWS1KSkxQUXZZUHVNOTREaWJuRGRaYlpORnVzVi1DdmctTGdyYjBMT0xFNWxFbw?oc=5)；S / 食品；2026-10-02
 
-### 3. 建筑装饰
+### 3. 美容护理
 
-- 行情：20日-3.39%、排名第12；相对通过 / 广度未计算 / 成交通过。
-- 证据缺口：类别：O（还缺1类）；主体：2/2（还缺0个）；独立URL：2/2（还缺0个）；相反证据：无；质量旗标：无。
+- 行情：20日-2.01%、排名第5；相对通过 / 广度未计算 / 成交通过。
+- 证据缺口：类别：S（还缺1类）；主体：2/2（还缺0个）；独立URL：1/2（还缺1个）；相反证据：无；质量旗标：SINGLE_COMPANY。
 - 已绑定的部分claim：
-  - [金螳螂：关于2026年9月工程项目中标的自愿性披露公告](https://static.cninfo.com.cn/finalpage/2026-09-30/1225586695.PDF)；O / 金螳螂；2026-09-30
-  - [中国中铁：中国中铁重大工程中标公告](https://static.cninfo.com.cn/finalpage/2026-07-22/1225434618.PDF)；O / 中国中铁；2026-07-22
+  - [中信证券：中秋国庆假期出游需求或旺盛 关注美妆医美珠宝旺季 - 观点网](https://news.google.com/rss/articles/CBMiYkFVX3lxTE02RS1oMHJIM0lrbE1DSWsxMVBwV3BaQ3ZpUi1FaEl4UFNBUGYyVTM2cXZOREpTZzFzMC1xUDRzdEptamZpOXNwaThET1N1UkJISlFRZjd4WThxMTZnUVY3REl3?oc=5)；S / 美妆；2026-09-29
+  - [中信证券：中秋国庆假期出游需求或旺盛 关注美妆医美珠宝旺季 - 观点网](https://news.google.com/rss/articles/CBMiYkFVX3lxTE02RS1oMHJIM0lrbE1DSWsxMVBwV3BaQ3ZpUi1FaEl4UFNBUGYyVTM2cXZOREpTZzFzMC1xUDRzdEptamZpOXNwaThET1N1UkJISlFRZjd4WThxMTZnUVY3REl3?oc=5)；S / 医美；2026-09-29
 
-### 4. 食品饮料
+### 4. 传媒
 
-- 行情：20日-2.58%、排名第8；相对通过 / 广度未计算 / 成交通过。
-- 证据缺口：类别：S（还缺1类）；主体：1/2（还缺1个）；独立URL：1/2（还缺1个）；相反证据：无；质量旗标：无。
+- 行情：20日-4.06%、排名第10；相对通过 / 广度未计算 / 成交通过。
+- 证据缺口：类别：E（还缺1类）；主体：2/2（还缺0个）；独立URL：3/2（还缺0个）；相反证据：3条；质量旗标：无。
 - 已绑定的部分claim：
-  - [日本10月逾3000种食品将涨价 - 上观新闻](https://news.google.com/rss/articles/CBMib0FVX3lxTFBMQWdlcDM3X3lFa1ZmckFoQW1JQWJuRzBKckluR1lhQ3V5SjF6SXB6OGJlR2JnLUdVNks0SjFyeC11eVVzZXRhTmZRTFJpODdGNndXV01SczhiWkoxOEZlRjN0cTJOTDFvWHNhYUtBUQ?oc=5)；S / 食品；2026-09-28
+  - [广告收入增长28%，哔哩哔哩能否把内容优势变成利润优势？-证券之星 - 证券之星](https://news.google.com/rss/articles/CBMiXkFVX3lxTE96QWdWZDlyUU5rZnh3YUw2eDBFbk9UWUdwcEhvMkFqN2NlaUc0MGlMN01INTVnVWFVQXN1azdRQ3VqQUEySTBHcHlhVWYwWllsNkkzNzZ0NlNMclhva2c?oc=5)；E / 广告；2026-10-16
+  - [欢聚25Q4财报：BIGO Ads收入同比增长61.5% 三方广告同比大增82.5% - 霞光社](https://news.google.com/rss/articles/CBMiSEFVX3lxTFBKb0I5N1VERzdTUHNISU1lYnN0X3hCMDdUMVlzOWVHWU1xN0duUkVzUG5CVVRvWHBtUTllRkRpaGhjdC1sNm5iWg?oc=5)；E / 广告；2026-10-15
+  - [8月国内游戏市场收入316.27亿元 同比增长8.08% - 观点网](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1GUW1GU2RteFpwdTBweFJJd1NiWEMwS0MyY3Y4QnF0N1JERC0xOEh5a19sMi1iZzc5RklLbUlSTU52RHlidEJ5ZFUydkk0akxZME1IZ3ZYR3htaFcwQ2d3RndR?oc=5)；E / 游戏；2026-09-30
 
-### 5. 轻工制造
+### 5. 银行
 
-- 行情：20日-2.79%、排名第10；相对通过 / 广度未计算 / 成交通过。
-- 证据缺口：类别：S（还缺1类）；主体：1/2（还缺1个）；独立URL：1/2（还缺1个）；相反证据：无；质量旗标：无。
+- 行情：20日+2.52%、排名第1；相对通过 / 广度未计算 / 成交通过。
+- 证据缺口：类别：O（还缺1类）；主体：1/2（还缺1个）；独立URL：1/2（还缺1个）；相反证据：无；质量旗标：SINGLE_COMPANY。
 - 已绑定的部分claim：
-  - [玻璃包装修正剂 二极管市场趋势、需求和增长 - Spherical Insights](https://news.google.com/rss/articles/CBMiiwFBVV95cUxOalZrYjBSSXFRQWdZaGkxQWRTSF9VcnVXeklHWl9FX3NfTnlOOWkxMk53bW9Bcmo5ODJJVUNPMzlyX2hfZHM4c0JqYkoyZXNZX2I4MGZCeWxlcTJ6Q0pYQmVENlYwTzdDVG1jdUpYUF9DN25wZ3VoZDlLTWs4SGxYRXcyUjJhQmgzbV9V?oc=5)；S / 包装；2026-09-30
+  - [玉禾田与三家银行签署四份保证合同为子公司授信提供担保 - 观点网](https://news.google.com/rss/articles/CBMiYkFVX3lxTE0yUmhKVVF3N1RUOGYxNlE5UXBHTXVQY18xQXgxb2ZlUnE1ZmRpQkNOc0FWV2xkTngydnR2MWp1YVNYRklpblFzVG1qaFZQRHVFcUduSnlTWGtqWWFjQTZyMzln?oc=5)；O / 银行；2026-10-16
 
 ## 证据领先、市场尚未确认
 
-| 行业 | S/O/E | 主体 / URL | 市场三项 | 处理 |
-|---|---|---|---|---|
-| 非银金融 | O,S | 3 / 3 | 相对未通过 / 广度未通过 / 成交通过 | 继续观察，不提前激活 |
-| 计算机 | O,S | 3 / 4 | 相对未通过 / 广度未通过 / 成交通过 | 继续观察，不提前激活 |
+本期无“证据PASS但市场少于两项确认”的非拥挤行业。
 
 ## 拥挤防追高
 
 | 20日排名 | 行业 | 拥挤状态 | 触发原因 | 证据门 | 处理 |
 |---:|---|---|---|---|---|
-| 9 | 建筑材料 | 周期成熟 | 本年已于2026-06-16触及E30 | WATCH | 禁止新增，不等于看空 |
-| 11 | 综合 | 周期成熟 | 本年已于2026-02-24触及E30 | PASS | 禁止新增，不等于看空 |
-| 17 | 通信 | 周期成熟 | 本年已于2026-04-17触及E30 | PASS | 禁止新增，不等于看空 |
-| 18 | 煤炭 | 周期成熟 | 本年已于2026-08-31触及E30 | WATCH | 禁止新增，不等于看空 |
-| 22 | 电子 | 周期成熟 | 本年已于2026-05-07触及E30 | WATCH | 禁止新增，不等于看空 |
-| 25 | 石油石化 | 周期成熟 | 本年已于2026-03-03触及E30 | WATCH | 禁止新增，不等于看空 |
-| 31 | 有色金属 | 周期成熟 | 本年已于2026-01-28触及E30 | WATCH | 禁止新增，不等于看空 |
+| 3 | 煤炭 | 周期成熟 | 本年已于2026-08-31触及E30 | WATCH | 禁止新增，不等于看空 |
+| 11 | 石油石化 | 周期成熟 | 本年已于2026-03-03触及E30 | WATCH | 禁止新增，不等于看空 |
+| 21 | 建筑材料 | 周期成熟 | 本年已于2026-06-16触及E30 | WATCH | 禁止新增，不等于看空 |
+| 25 | 综合 | 周期成熟 | 本年已于2026-02-24触及E30 | WATCH | 禁止新增，不等于看空 |
+| 29 | 电子 | 周期成熟 | 本年已于2026-05-07触及E30 | WATCH | 禁止新增，不等于看空 |
+| 30 | 有色金属 | 周期成熟 | 本年已于2026-01-28触及E30 | WATCH | 禁止新增，不等于看空 |
+| 31 | 通信 | 周期成熟 | 本年已于2026-04-17触及E30 | PASS | 禁止新增，不等于看空 |
 
 ## 前瞻激活账本
 
@@ -168,6 +156,8 @@
 | 2026-08-21 | 交通运输 | 2026-08-24 | +0.74% / 第14 | 未完成 | 20日已完成 |
 | 2026-09-11 | 建筑装饰 | 2026-09-14 | 未完成 | 未完成 | 观察中 |
 | 2026-09-11 | 社会服务 | 2026-09-14 | 未完成 | 未完成 | 观察中 |
+| 2026-10-16 | 建筑装饰 | 待定 | 未完成 | 未完成 | 等待下一交易日 |
+| 2026-10-16 | 交通运输 | 待定 | 未完成 | 未完成 | 等待下一交易日 |
 
 ### 持有确认观察（不进入新激活分母）
 
@@ -191,37 +181,37 @@
 
 | 20日排名 | 行业 | 5日 | 20日 | 相对20日 | 成交分位 | 广度 | 市场通过数 | 证据门 | S/O/E | 主体 / URL | 拥挤 | 状态 |
 |---:|---|---:|---:|---:|---:|---|---:|---|---|---|---|---|
-| 1 | 房地产 | +1.16% | +6.41% | +10.92% | 77.9% | 未计算 | 2 | WATCH | O | 1 / 2 | - | 证据观察 |
-| 2 | 医药生物 | -0.13% | +1.99% | +6.50% | 76.5% | 未计算 | 2 | WATCH | - | 0 / 0 | - | 证据观察 |
-| 3 | 银行 | +1.37% | +0.44% | +4.95% | 40.5% | 未计算 | 2 | WATCH | O | 2 / 3 | - | 证据观察 |
-| 4 | 美容护理 | -0.82% | -0.77% | +3.74% | 40.2% | 未计算 | 2 | WATCH | S | 2 / 3 | - | 证据观察 |
-| 5 | 公用事业 | -0.58% | -1.33% | +3.18% | 40.7% | 未计算 | 1 | WATCH | - | 0 / 0 | - | 证据观察 |
-| 6 | 交通运输 | -0.97% | -1.44% | +3.07% | 21.6% | 未计算 | 1 | WATCH | S | 1 / 1 | - | 证据观察 |
-| 7 | 国防军工 | -5.17% | -1.92% | +2.59% | 15.2% | 未计算 | 1 | WATCH | O | 1 / 1 | - | 证据观察 |
-| 8 | 食品饮料 | -0.19% | -2.58% | +1.93% | 29.2% | 未计算 | 2 | WATCH | S | 1 / 1 | - | 证据观察 |
-| 9 | 建筑材料 | -6.54% | -2.77% | +1.74% | 96.6% | 未计算 | 1 | WATCH | S | 2 / 3 | 周期成熟 | 证据观察 |
-| 10 | 轻工制造 | -2.87% | -2.79% | +1.73% | 48.1% | 未计算 | 2 | WATCH | S | 1 / 1 | - | 证据观察 |
-| 11 | 综合 | -3.45% | -3.11% | +1.41% | 60.3% | 75.0% | 2 | PASS | E,O | 2 / 2 | 周期成熟 | 周期成熟 |
-| 12 | 建筑装饰 | -2.57% | -3.39% | +1.12% | 4.5% | 未计算 | 2 | WATCH | O | 2 / 2 | - | 证据观察 |
-| 13 | 农林牧渔 | -2.06% | -3.55% | +0.96% | 79.9% | 未计算 | 1 | WATCH | S | 1 / 2 | - | 证据观察 |
-| 14 | 汽车 | -2.00% | -3.62% | +0.89% | 20.0% | 未计算 | 2 | WATCH | - | 0 / 0 | - | 证据观察 |
-| 15 | 社会服务 | -3.66% | -4.34% | +0.17% | 25.5% | 未计算 | 2 | WATCH | O | 1 / 1 | - | 证据观察 |
-| 16 | 家用电器 | -1.87% | -4.51% | +0.00% | 13.0% | 未计算 | 1 | WATCH | S | 1 / 1 | - | 证据观察 |
-| 17 | 通信 | -11.19% | -4.85% | -0.34% | 82.9% | 44.5% | 0 | PASS | E,O | 2 / 2 | 周期成熟 | 周期成熟 |
-| 18 | 煤炭 | -1.52% | -4.97% | -0.46% | 37.6% | 未计算 | 1 | WATCH | E | 1 / 1 | 周期成熟 | 证据观察 |
-| 19 | 纺织服饰 | -2.65% | -5.17% | -0.65% | 30.2% | 未计算 | 2 | WATCH | - | 0 / 0 | - | 证据观察 |
-| 20 | 环保 | -3.32% | -5.18% | -0.66% | 10.1% | 未计算 | 2 | WATCH | O | 4 / 4 | - | 证据观察 |
-| 21 | 传媒 | -4.90% | -5.28% | -0.77% | 25.3% | 未计算 | 1 | WATCH | E | 1 / 2 | - | 证据观察 |
-| 22 | 电子 | -8.96% | -5.40% | -0.88% | 89.8% | 未计算 | 0 | WATCH | S | 1 / 1 | 周期成熟 | 证据观察 |
-| 23 | 钢铁 | -1.26% | -5.47% | -0.96% | 10.1% | 未计算 | 1 | WATCH | E,S | 3 / 4 | - | 证据观察 |
-| 24 | 商贸零售 | -3.56% | -5.66% | -1.15% | 18.4% | 未计算 | 1 | WATCH | S | 1 / 1 | - | 证据观察 |
-| 25 | 石油石化 | -1.12% | -6.48% | -1.97% | 46.2% | 未计算 | 1 | WATCH | - | 0 / 0 | 周期成熟 | 证据观察 |
-| 26 | 机械设备 | -6.03% | -7.21% | -2.70% | 77.1% | 未计算 | 1 | WATCH | - | 0 / 0 | - | 证据观察 |
-| 27 | 非银金融 | -3.47% | -7.30% | -2.79% | 2.2% | 26.0% | 1 | PASS | O,S | 3 / 3 | - | 早期雷达 |
-| 28 | 基础化工 | -4.68% | -7.38% | -2.87% | 73.4% | 未计算 | 1 | WATCH | E,O,S | 3 / 4 | - | 证据观察 |
-| 29 | 电力设备 | -3.88% | -8.16% | -3.64% | 42.6% | 未计算 | 2 | WATCH | O | 1 / 1 | - | 证据观察 |
-| 30 | 计算机 | -5.61% | -8.23% | -3.71% | 4.5% | 42.1% | 1 | PASS | O,S | 3 / 4 | - | 早期雷达 |
-| 31 | 有色金属 | -6.46% | -11.90% | -7.38% | 41.7% | 未计算 | 0 | WATCH | E | 1 / 1 | 周期成熟 | 证据观察 |
+| 1 | 银行 | +0.43% | +2.52% | +9.86% | 67.1% | 未计算 | 2 | WATCH | O | 1 / 1 | - | 证据观察 |
+| 2 | 食品饮料 | +2.57% | +0.36% | +7.70% | 31.6% | 未计算 | 2 | WATCH | S | 2 / 2 | - | 证据观察 |
+| 3 | 煤炭 | +1.43% | -1.32% | +6.03% | 59.1% | 未计算 | 2 | WATCH | E,S | 2 / 2 | 周期成熟 | 证据观察 |
+| 4 | 公用事业 | -1.53% | -1.73% | +5.62% | 60.1% | 未计算 | 2 | WATCH | S | 1 / 2 | - | 证据观察 |
+| 5 | 美容护理 | -1.12% | -2.01% | +5.33% | 48.9% | 未计算 | 2 | WATCH | S | 2 / 1 | - | 证据观察 |
+| 6 | 房地产 | -6.27% | -2.36% | +4.98% | 34.5% | 未计算 | 1 | WATCH | - | 0 / 0 | - | 证据观察 |
+| 7 | 交通运输 | -1.65% | -3.00% | +4.34% | 50.5% | 54.8% | 2 | PASS | O,S | 3 / 3 | - | 新激活 |
+| 8 | 医药生物 | -4.63% | -3.85% | +3.50% | 70.9% | 未计算 | 1 | WATCH | S | 1 / 1 | - | 证据观察 |
+| 9 | 家用电器 | -0.24% | -3.94% | +3.41% | 13.5% | 未计算 | 1 | WATCH | - | 0 / 0 | - | 证据观察 |
+| 10 | 传媒 | +3.83% | -4.06% | +3.29% | 77.2% | 未计算 | 2 | WATCH | E | 2 / 3 | - | 证据观察 |
+| 11 | 石油石化 | -1.02% | -5.45% | +1.90% | 64.2% | 未计算 | 2 | WATCH | S | 2 / 3 | 周期成熟 | 证据观察 |
+| 12 | 纺织服饰 | -1.95% | -5.69% | +1.66% | 37.2% | 未计算 | 2 | WATCH | S | 1 / 1 | - | 证据观察 |
+| 13 | 建筑装饰 | -2.15% | -6.39% | +0.96% | 7.3% | 32.0% | 2 | PASS | E,O,S | 3 / 4 | - | 新激活 |
+| 14 | 非银金融 | +0.17% | -6.41% | +0.94% | 13.6% | 未计算 | 2 | WATCH | O | 1 / 1 | - | 证据观察 |
+| 15 | 钢铁 | -1.66% | -6.75% | +0.60% | 11.4% | 未计算 | 2 | WATCH | E | 1 / 1 | - | 证据观察 |
+| 16 | 轻工制造 | -4.15% | -7.35% | +0.00% | 35.7% | 未计算 | 0 | WATCH | S | 1 / 1 | - | 证据观察 |
+| 17 | 计算机 | -2.80% | -8.50% | -1.15% | 6.5% | 未计算 | 1 | WATCH | O | 2 / 4 | - | 证据观察 |
+| 18 | 汽车 | -4.22% | -9.03% | -1.68% | 15.5% | 未计算 | 0 | WATCH | O | 1 / 1 | - | 证据观察 |
+| 19 | 国防军工 | -3.57% | -9.28% | -1.93% | 25.3% | 未计算 | 1 | WATCH | O,S | 2 / 3 | - | 证据观察 |
+| 20 | 社会服务 | -3.50% | -9.81% | -2.47% | 18.9% | 未计算 | 0 | WATCH | S | 1 / 1 | - | 证据观察 |
+| 21 | 建筑材料 | -7.19% | -9.91% | -2.56% | 85.8% | 未计算 | 0 | WATCH | E,S | 3 / 3 | 周期成熟 | 证据观察 |
+| 22 | 商贸零售 | -2.12% | -10.02% | -2.68% | 28.2% | 未计算 | 1 | WATCH | - | 0 / 0 | - | 证据观察 |
+| 23 | 环保 | -6.38% | -10.39% | -3.04% | 31.5% | 未计算 | 1 | WATCH | O | 3 / 4 | - | 证据观察 |
+| 24 | 农林牧渔 | -1.34% | -10.63% | -3.28% | 94.4% | 未计算 | 0 | WATCH | - | 0 / 0 | - | 证据观察 |
+| 25 | 综合 | -5.70% | -11.01% | -3.66% | 82.5% | 未计算 | 1 | WATCH | O | 1 / 1 | 周期成熟 | 证据观察 |
+| 26 | 基础化工 | -6.31% | -12.58% | -5.23% | 77.5% | 未计算 | 1 | WATCH | E,S | 4 / 4 | - | 证据观察 |
+| 27 | 电力设备 | -6.86% | -13.07% | -5.72% | 71.7% | 未计算 | 1 | WATCH | O,S | 3 / 3 | - | 证据观察 |
+| 28 | 机械设备 | -7.84% | -16.42% | -9.07% | 33.9% | 未计算 | 0 | WATCH | - | 0 / 0 | - | 证据观察 |
+| 29 | 电子 | -10.09% | -17.11% | -9.76% | 86.1% | 未计算 | 0 | WATCH | E,S | 4 / 4 | 周期成熟 | 证据观察 |
+| 30 | 有色金属 | -5.31% | -17.22% | -9.88% | 44.8% | 未计算 | 1 | WATCH | E,S | 2 / 3 | 周期成熟 | 证据观察 |
+| 31 | 通信 | -11.63% | -20.99% | -13.64% | 71.2% | 10.1% | 0 | PASS | E,S | 3 / 3 | 周期成熟 | 周期成熟 |
 
 ## 固定规则与数据限制
 
@@ -235,4 +225,4 @@
 
 行情来源：[申万指数官方数据](https://www.swsresearch.com/institute_sw/allIndex/releasedIndex)。
 
-公开输入快照：[查看本期snapshot](./snapshots/2026-09-30.json)。
+公开输入快照：[查看本期snapshot](./snapshots/2026-10-16.json)。
