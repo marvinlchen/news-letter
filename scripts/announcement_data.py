@@ -182,17 +182,26 @@ def _download_pdf(url, path):
 
 
 def _extract_complete_pdf_text(payload):
-    """Reject partly scanned PDFs instead of trusting their aggregate text length.
+    """Remove exact layout boilerplate, then reject partly scanned PDFs.
 
     A genuine blank page has neither text nor images and is permitted. Page
-    numbers or short headers on an image page do not establish a readable body.
+    numbers are removed only if every first line forms the full 1..N sequence
+    over at least two pages. No arbitrary standalone numeric line is deleted.
     """
     from pypdf import PdfReader
 
     reader = PdfReader(io.BytesIO(payload))
+    page_lines = [(page.extract_text() or "").splitlines(keepends=True) for page in reader.pages]
+    numbered = len(page_lines) >= 2 and all(
+        lines and lines[0].strip() == str(number)
+        for number, lines in enumerate(page_lines, 1)
+    )
+    disclaimer = "本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。"
+    disclaimer_pattern = r"\s*".join(re.escape(character) for character in disclaimer)
     texts = []
-    for number, page in enumerate(reader.pages, 1):
-        text = page.extract_text() or ""
+    for number, (page, lines) in enumerate(zip(reader.pages, page_lines), 1):
+        text = "".join(lines[1:] if numbered else lines)
+        text = re.sub(disclaimer_pattern, "", text)
         meaningful = re.sub(r"\s+", "", text)
         if len(meaningful) < 20 and page.images:
             raise DataUnavailable(f"PDF第{number}页含图像但正文可提取字符不足20，全文不完整，需OCR核验")

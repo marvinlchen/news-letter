@@ -1,5 +1,7 @@
 import datetime as dt
 import io
+from pathlib import Path
+import re
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -48,7 +50,54 @@ def evidence_pdf(*, scanned_page=False, blank_page=False):
     return buffer.getvalue()
 
 
+def paginated_evidence_pdf(first_number="1", second_number="2"):
+    """Real two-page CJK PDF with the exact disclosure footer splitting a fact."""
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+    from reportlab.pdfgen import canvas
+
+    pdfmetrics.registerFont(UnicodeCIDFont("STSong-Light"))
+    buffer = io.BytesIO()
+    pdf = canvas.Canvas(buffer)
+    pdf.setFont("STSong-Light", 11)
+    for y, text in [(780, first_number), (750, "报告期内，汽车零部件业务收入同比下降，因产品价格持续"),
+                    (60, "本公司及董事会全体成员保证信息披露的内容真实、准确、"),
+                    (45, "完整，没有虚假记载、误导性陈述或重大遗漏。")]:
+        pdf.drawString(40, y, text)
+    pdf.showPage()
+    pdf.setFont("STSong-Light", 11)
+    for y, text in [(780, second_number), (750, "承压，毛利率同比降低，经营业绩出现下降。"),
+                    (720, "公司将按照相关规定披露后续经营及财务情况。")]:
+        pdf.drawString(40, y, text)
+    pdf.showPage()
+    pdf.save()
+    return buffer.getvalue()
+
+
 class AnnouncementDataTests(unittest.TestCase):
+    def test_fixed_footer_and_verified_page_numbers_do_not_split_quote(self):
+        text = data._extract_complete_pdf_text(paginated_evidence_pdf())
+        compact = re.sub(r"\s+", "", text)
+        self.assertIn("产品价格持续承压", compact)
+        self.assertNotIn("本公司及董事会全体成员保证", text)
+        self.assertNotIn("1", text.splitlines())
+        self.assertNotIn("2", text.splitlines())
+
+    def test_bare_numbers_are_retained_without_complete_page_number_sequence(self):
+        text = data._extract_complete_pdf_text(paginated_evidence_pdf("100", "2"))
+        self.assertIn("100", text.splitlines())
+        self.assertIn("2", text.splitlines())
+
+    def test_real_forecast_cross_page_quote_is_usable_after_pdf_cleaning(self):
+        path = Path(__file__).resolve().parent.parent / "source-dryrun-cache/announcements/2026-10-16/evidence/cninfo-1225609627.pdf"
+        if not path.exists():
+            self.skipTest("real source PDF is only available in the local diagnostic cache")
+        text = data._extract_complete_pdf_text(path.read_bytes())
+        self.assertIn("产品价格持续承压", re.sub(r"\s+", "", text))
+        self.assertIn("21,473.66", text)
+        self.assertIn("29,282.26", text)
+        self.assertNotIn("本公司及董事会全体成员保证", text)
+
     def test_official_mixed_scan_pdf_falls_back_to_complete_mirror_text(self):
         item = {"id": "AN1", "code": "600001", "url": "https://example.com/detail",
                 "official_id": "official1", "official_url": "https://example.com/official.pdf"}
