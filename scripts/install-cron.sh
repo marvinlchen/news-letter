@@ -2,6 +2,26 @@
 set -euo pipefail
 
 PROJECT_ROOT="${PROJECT_ROOT:-$HOME/finance-news-digest}"
+A_SHARE_ANNOUNCEMENTS_MARKER="# finance-a-share-announcements"
+# Targeted install preserves every unrelated existing crontab entry verbatim.
+if [[ "${1:-}" == "--a-share-announcements-only" ]]; then
+  mkdir -p "$PROJECT_ROOT/var/log"
+  python3 - "$PROJECT_ROOT" <<'PYCRON'
+import os, subprocess, sys
+root=sys.argv[1]
+old=subprocess.check_output(['crontab','-l'],text=True)
+marker='# finance-a-share-announcements'
+lines=[line for line in old.splitlines() if marker not in line]
+lines.append(f'0 5 * * * /usr/bin/flock -n {root}/var/a-share-announcements-run.lock {root}/scripts/run-a-share-announcements.sh >> {root}/var/log/a-share-announcements.log 2>&1 {marker}')
+new='\n'.join(lines)+'\n'
+if os.environ.get('ANNOUNCEMENTS_CRON_DRY_RUN')=='1':
+ print(new,end='')
+else:
+ subprocess.run(['crontab','-'],input=new,text=True,check=True)
+ print(lines[-1])
+PYCRON
+  exit 0
+fi
 MARKER="# finance-news-digest"
 DEEP_MARKER="# finance-deep-reads"
 REDDIT_MARKER="# finance-reddit-digest"
@@ -80,9 +100,12 @@ else
   A_SHARE_SECTOR_RADAR_COMMAND="$PROJECT_ROOT/scripts/run-a-share-sector-radar-weekly.sh"
 fi
 
+A_SHARE_ANNOUNCEMENTS_COMMAND="/usr/bin/flock -n $PROJECT_ROOT/var/a-share-announcements-run.lock $PROJECT_ROOT/scripts/run-a-share-announcements.sh"
+
 tmp="$(mktemp)"
 trap 'rm -f "$tmp"' EXIT
 crontab -l 2>/dev/null \
+  | grep -vF "$A_SHARE_ANNOUNCEMENTS_MARKER" \
   | grep -vF "$MARKER" \
   | grep -vF "$DEEP_MARKER" \
   | grep -vF "$REDDIT_MARKER" \
@@ -137,5 +160,7 @@ printf '0 10 * * 0 %s >> %s/var/log/a-share-sector-radar-weekly.log 2>&1 %s\n' \
   "$A_SHARE_SECTOR_RADAR_COMMAND" "$PROJECT_ROOT" "$A_SHARE_SECTOR_RADAR_MARKER" >> "$tmp"
 printf '30 3 * * * /usr/bin/flock -n %s/var/archive-legacy.lock %s/scripts/archive-legacy.sh >> %s/var/log/archive-legacy.log 2>&1 %s\n' \
   "$PROJECT_ROOT" "$PROJECT_ROOT" "$PROJECT_ROOT" "$ARCHIVE_MARKER" >> "$tmp"
+printf '0 5 * * * %s >> %s/var/log/a-share-announcements.log 2>&1 %s\n' \
+  "$A_SHARE_ANNOUNCEMENTS_COMMAND" "$PROJECT_ROOT" "$A_SHARE_ANNOUNCEMENTS_MARKER" >> "$tmp"
 crontab "$tmp"
 crontab -l | grep -E 'finance-news-digest|finance-deep-reads|finance-reddit-digest|finance-csi[0-9]+-analysis|finance-sector-hotspots|finance-us-sector-hotspots|finance-national-team-etf-weekly|finance-weekly-review|finance-a-share-sector-radar-weekly'

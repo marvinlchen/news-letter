@@ -14,3 +14,6 @@ chinese-reports/
 deep-reports/
 # csi300 old directory
 csi300-reports/
+
+# Local PDF copies; published announcement reports are tracked.
+/*-A股重大公告利好利空日报.pdf
