@@ -90,9 +90,10 @@ class ReportPolicyTests(unittest.TestCase):
         self.assertEqual(result[0],{'600001':groups['600001']})
         self.assertEqual({code:rows for batch in result for code,rows in batch.items()},groups)
     def test_diagnostic_default_output_cannot_touch_published_or_live_status(self):
-        with tempfile.TemporaryDirectory() as folder:
+        collection={'total_count':0,'announcements':[],'source_notes':['完整公告索引已核验。'],'gaps':[]}
+        with tempfile.TemporaryDirectory() as folder,patch('announcement_data.collect_announcements',return_value=collection):
             root=Path(folder)
-            result=m.main(['--project-root',folder,'--date','2026-10-17','--limit','1'])
+            result=m.main(['--project-root',folder,'--date','2026-10-17','--limit','1','--collect-only'])
             self.assertEqual(result,0)
             self.assertFalse((root/'published').exists())
             self.assertFalse((root/'var/a-share-announcements-status').exists())

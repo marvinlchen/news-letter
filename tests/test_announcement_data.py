@@ -181,7 +181,7 @@ class AnnouncementDataTests(unittest.TestCase):
     def test_flat_schema_and_zero_industry_limitup_are_real_values(self):
         history = bars(100, dt.date(2026, 6, 1))
         profiles = {"600001": {"level1": "医药生物"}, "600002": {"level1": "汽车"}}
-        with tempfile.TemporaryDirectory() as folder, patch.object(data, "_fetch_daily", return_value=history), patch.object(data, "_profile", side_effect=lambda code, folder: profiles[code]), patch.object(data, "_board_map", return_value={"医药生物": "BK0001"}), patch.object(data, "_board_daily", return_value=history), patch.object(data, "_limit_pool", return_value=[{"c": "600002"}]):
+        with tempfile.TemporaryDirectory() as folder, patch.object(data, "is_trading_day", return_value=True), patch.object(data, "_fetch_daily", return_value=history), patch.object(data, "_profile", side_effect=lambda code, folder: profiles[code]), patch.object(data, "_board_map", return_value={"医药生物": "BK0001"}), patch.object(data, "_board_daily", return_value=history), patch.object(data, "_limit_pool", return_value=[{"c": "600002"}]):
             items, gaps = data.enrich_technical([{"code":"600001"}], "2026-10-16", folder)
         technical = items[0]["technical"]
         self.assertTrue(all(key in technical for key in ["close", "ma5", "bullish", "status", "weekly_dif", "weekly_dea", "weekly_macd", "weekly_trend", "weekly_axis", "weekly_hist_change", "divergence", "industry", "industry_technical", "limit_up_count"]))
@@ -197,7 +197,7 @@ class AnnouncementDataTests(unittest.TestCase):
             if code == "600002":
                 raise data.DataUnavailable("no mapping")
             return {"level1": "医药生物"}
-        with tempfile.TemporaryDirectory() as folder, patch.object(data, "_fetch_daily", return_value=history), patch.object(data, "_profile", side_effect=profile), patch.object(data, "_board_map", return_value={"医药生物": "BK0001"}), patch.object(data, "_board_daily", return_value=history), patch.object(data, "_limit_pool", return_value=[{"c": "600002"}]):
+        with tempfile.TemporaryDirectory() as folder, patch.object(data, "is_trading_day", return_value=True), patch.object(data, "_fetch_daily", return_value=history), patch.object(data, "_profile", side_effect=profile), patch.object(data, "_board_map", return_value={"医药生物": "BK0001"}), patch.object(data, "_board_daily", return_value=history), patch.object(data, "_limit_pool", return_value=[{"c": "600002"}]):
             items, gaps = data.enrich_technical([{"code":"600001"}], "2026-10-16", folder)
         self.assertEqual(items[0]["technical"]["limit_up_count"], "数据待核")
         self.assertTrue(gaps)
@@ -283,6 +283,91 @@ class AnnouncementDataTests(unittest.TestCase):
         with patch.dict("sys.modules", {"akshare": None}), patch.object(data, "_fetch_daily", return_value=history):
             self.assertFalse(data.is_trading_day("2026-10-01", ".unused"))
             self.assertTrue(data.is_trading_day("2026-10-09", ".unused"))
+
+
+class WeekendTechnicalTests(unittest.TestCase):
+    def setUp(self):
+        self.history = bars(100, dt.date(2026, 6, 1))
+        self.assertEqual(self.history[-1]["date"], "2026-10-16")
+        self.profile = patch.object(data, "_profile", return_value={"level1": "医药生物"})
+        self.boards = patch.object(data, "_board_map", return_value={"医药生物": "BK0001"})
+        self.board_prices = patch.object(data, "_board_daily", return_value=self.history)
+        for context in (self.profile, self.boards, self.board_prices):
+            context.start()
+            self.addCleanup(context.stop)
+
+    def test_sunday_uses_verified_friday_market_and_pool_without_future_prices(self):
+        future = {**self.history[-1], "date": "2026-10-19", "close": 999999}
+        with patch.object(data, "is_trading_day", return_value=False), patch.object(data, "_fetch_daily", return_value=self.history+[future]) as fetch, patch.object(data, "_limit_pool", return_value=[]) as pool:
+            items, gaps = data.enrich_technical([{"code": "600001"}], "2026-10-18", ".unused")
+        technical = items[0]["technical"]
+        self.assertEqual(technical.get("market_date"), "2026-10-16")
+        self.assertEqual(technical.get("limit_up_date"), "2026-10-16")
+        self.assertEqual(technical["price_date"], "2026-10-16")
+        self.assertEqual(technical["status"], "正常")
+        self.assertTrue(technical["bullish"])
+        self.assertEqual(technical["close"], 19.9)
+        self.assertEqual(technical["ma5"], 19.7)
+        self.assertFalse(gaps)
+        self.assertIn(("000001", "2026-10-18", ".unused"), [call.args for call in fetch.call_args_list])
+        self.assertEqual(pool.call_args.args[0], "2026-10-16")
+
+    def test_sunday_keeps_friday_zero_volume_as_suspension(self):
+        stock_prices = [*self.history[:-1], {**self.history[-1], "volume": 0}]
+        def prices(code, *args, **kwargs):
+            return self.history if code == "000001" else stock_prices
+        with patch.object(data, "is_trading_day", return_value=False), patch.object(data, "_fetch_daily", side_effect=prices), patch.object(data, "_limit_pool", return_value=[]):
+            items, gaps = data.enrich_technical([{"code": "600001"}], "2026-10-18", ".unused")
+        self.assertEqual(items[0]["technical"]["status"], "停牌")
+        self.assertIsNone(items[0]["technical"]["bullish"])
+        self.assertFalse(gaps)
+
+    def test_sunday_stock_older_than_market_day_stays_unverified(self):
+        def prices(code, *args, **kwargs):
+            return self.history if code == "000001" else self.history[:-1]
+        with patch.object(data, "is_trading_day", return_value=False), patch.object(data, "_fetch_daily", side_effect=prices), patch.object(data, "_limit_pool", return_value=[]):
+            items, gaps = data.enrich_technical([{"code": "600001"}], "2026-10-18", ".unused")
+        technical = items[0]["technical"]
+        self.assertEqual(technical.get("market_date"), "2026-10-16")
+        self.assertEqual(technical["price_date"], "2026-10-15")
+        self.assertEqual(technical["status"], "数据待核")
+        self.assertIsNone(technical["bullish"])
+        self.assertTrue(any("600001" in gap and "2026-10-15" in gap for gap in gaps))
+
+    def test_unverified_calendar_does_not_claim_market_or_pool_date(self):
+        with patch.object(data, "is_trading_day", side_effect=data.DataUnavailable("calendar unavailable")), patch.object(data, "_fetch_daily", return_value=self.history), patch.object(data, "_limit_pool", side_effect=AssertionError("unverified market date")):
+            items, gaps = data.enrich_technical([{"code": "600001"}], "2026-10-18", ".unused")
+        technical = items[0]["technical"]
+        self.assertIsNone(technical.get("market_date"))
+        self.assertIsNone(technical.get("limit_up_date"))
+        self.assertEqual(technical["status"], "数据待核")
+        self.assertIsNone(technical["bullish"])
+        self.assertEqual(technical["limit_up_count"], "数据待核")
+        self.assertTrue(any("calendar unavailable" in gap for gap in gaps))
+
+    def test_missing_or_future_only_index_bars_cannot_verify_market_day(self):
+        future = {**self.history[-1], "date": "2026-10-19"}
+        for index_rows in ([], [future], data.DataUnavailable("index unavailable")):
+            def prices(code, *args, **kwargs):
+                if code != "000001":
+                    return self.history
+                if isinstance(index_rows, Exception):
+                    raise index_rows
+                return index_rows
+            with self.subTest(index_rows=index_rows), patch.object(data, "is_trading_day", return_value=False), patch.object(data, "_fetch_daily", side_effect=prices) as fetch, patch.object(data, "_limit_pool", side_effect=AssertionError("unverified market date")) as pool:
+                items, gaps = data.enrich_technical([{"code": "600001"}], "2026-10-18", ".unused")
+                technical = items[0]["technical"]
+                self.assertIsNone(technical.get("market_date"))
+                self.assertIsNone(technical.get("limit_up_date"))
+                self.assertEqual(technical["status"], "数据待核")
+                self.assertTrue(gaps)
+                self.assertIn("000001", [call.args[0] for call in fetch.call_args_list])
+                pool.assert_not_called()
+
+    def test_empty_report_skips_calendar_and_market_requests(self):
+        with patch.object(data, "is_trading_day", side_effect=AssertionError("empty report needs no calendar")), patch.object(data, "_request_json", side_effect=AssertionError("empty report needs no market")) as request:
+            self.assertEqual(data.enrich_technical([], "2026-10-18", ".unused"), ([], []))
+        request.assert_not_called()
 
 
 if __name__ == "__main__":

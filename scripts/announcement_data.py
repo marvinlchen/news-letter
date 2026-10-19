@@ -334,7 +334,7 @@ def collect_announcements(date, cache_dir, limit_companies=None):
                              "优先使用巨潮资讯官方披露PDF全文与链接；官方未匹配时使用东方财富披露PDF镜像并明确披露缺口。",
                              "行情来自腾讯截至日日K前复权序列，只有复权终值与该日原价一致才计算；历史查询如混入以后复权因子则标待核。",
                              "个股日线严格过滤截至日之后数据，周线由截至日日线聚合；MACD为12/26/9、柱=2×(DIF-DEA)。",
-                             "公开数据源不等同于付费插件交叉核验；付费插件未接入。"
+                             "公开数据用于公告原文及行情核验；iFinD MCP实际调用情况另见本日报核验说明。"
                              ] + official_notes + ([f"诊断限制：全量列表已核验，但只提取头{limit_companies}家公司候选正文，不能作为完整日报发布。"] if limit_companies is not None else []),
             "gaps": [gap for _, gaps in results for gap in gaps]}
 
@@ -544,8 +544,22 @@ def _limit_pool(as_of, cache_dir):
 
 
 def enrich_technical(items, date, cache_dir):
+    if not items:
+        return [], []
     day = _date(date).isoformat()
     gaps, results = [], []
+    market_day = None
+    try:
+        if is_trading_day(day, cache_dir):
+            market_day = day
+        else:
+            index_rows = _fetch_daily("000001", day, cache_dir, market="1")
+            sessions = [_date(row["date"]) for row in index_rows if _date(row["date"]) <= _date(day)]
+            if not sessions or max(sessions) >= _date(day):
+                raise DataUnavailable("截至报告日无可核验的最近上证交易日")
+            market_day = max(sessions).isoformat()
+    except Exception as exc:
+        gaps.append(f"最近市场交易日待核（{exc}）")
     unique = {item["code"]: item for item in items}
     profiles, indicators = {}, {}
     for code, item in unique.items():
@@ -553,8 +567,8 @@ def enrich_technical(items, date, cache_dir):
         try:
             rows = _fetch_daily(code, day, cache_dir, market)
             indicators[code] = calculate_indicators(rows, day)
-            if indicators[code]["price_date"] != day:
-                gaps.append(f"{code}: 截至日无成交行情，技术数据停留在{indicators[code]['price_date']}，不作为当日确认")
+            if market_day is not None and indicators[code]["price_date"] != market_day:
+                gaps.append(f"{code}: 最近市场交易日{market_day}无成交行情，技术数据停留在{indicators[code]['price_date']}，不作为最近交易日确认")
         except Exception as exc:
             indicators[code] = {"status": "待核", "reason": str(exc)}
             gaps.append(f"{code}: 个股MA/周MACD待核（{exc}）")
@@ -579,7 +593,9 @@ def enrich_technical(items, date, cache_dir):
             industry_metrics[name] = {"status": "待核", "reason": str(exc)}
             gaps.append(f"{name}: 行业指数MA/日MACD待核（{exc}）")
     try:
-        pool = _limit_pool(day, cache_dir)
+        if market_day is None:
+            raise DataUnavailable("最近市场交易日尚未核验")
+        pool = _limit_pool(market_day, cache_dir)
         codes = {str(value.get("c")) for value in pool}
         # Derive breadth only from stock-level Shenwan profiles; pool.hybk may
         # use a different industry taxonomy and must not be silently relabeled.
@@ -608,7 +624,7 @@ def enrich_technical(items, date, cache_dir):
                 industry_counts[name] = industry_counts.get(name, 0) + 1
         else:
             gaps.append("申万行业涨停数待核：涨停池行业未全部映射（" + ",".join(sorted(set(unmapped))) + "）")
-        limit_info = {"status": "available", "market_count": len(shsz_codes), "codes": shsz_codes,
+        limit_info = {"status": "available", "date": market_day, "market_count": len(shsz_codes), "codes": shsz_codes,
                       "industry_counts": industry_counts if not unmapped else None}
     except Exception as exc:
         limit_info = {"status": "待核", "reason": str(exc)}
@@ -625,7 +641,7 @@ def enrich_technical(items, date, cache_dir):
             if isinstance(technical.get(number), (int, float)):
                 technical[number] = round(technical[number], 3)
         weekly = technical.get("weekly") or {}
-        current = technical.get("price_date") == day
+        current = market_day is not None and technical.get("price_date") == market_day
         latest_volume = technical.get("volume") if current else None
         status = "停牌" if current and latest_volume == 0 else "正常" if current else "数据待核"
         bullish = technical.get("strict_bullish_alignment") if current and status != "停牌" else None
@@ -645,7 +661,7 @@ def enrich_technical(items, date, cache_dir):
                 value = index_technical.get(f"ma{period}")
                 relative.append(f"MA{period}" + ("上方" if index_close is not None and value is not None and index_close > value else "下方" if index_close is not None and value is not None and index_close < value else "重合" if value is not None else "待核"))
             index_description = f"指数点位{index_close}（{'、'.join(relative)}）；日线多头：{index_bull}；日MACD：{index_macd}（{index_daily.get('histogram_change', '待核')}）；MA5/10/20/60=" + "/".join(str(round(index_technical[f"ma{period}"], 3)) if index_technical.get(f"ma{period}") is not None else "待核" for period in (5,10,20,60))
-        technical.update(status=status, bullish=bullish, weekly_trend=weekly_trend,
+        technical.update(status=status, bullish=bullish, market_date=market_day, limit_up_date=limit_info.get("date"), weekly_trend=weekly_trend,
                          weekly_dif=round(dif, 4) if dif is not None else None, weekly_dea=round(dea, 4) if dea is not None else None,
                          weekly_macd=round(weekly["histogram"], 4) if weekly.get("histogram") is not None else None,
                          weekly_axis=axis, weekly_hist_change=weekly.get("histogram_change", "数据待核"),

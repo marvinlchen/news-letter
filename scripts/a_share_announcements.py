@@ -294,6 +294,7 @@ def technical_rows(item):
     count = str(count)+'家' if type(count) is int else count
     return [
         ('行情状态', technical.get('status')), ('行情截至日', technical.get('price_date', item.get('date'))),
+        ('最近交易日', technical.get('market_date')),
         ('收盘价', technical.get('close')), ('MA5', technical.get('ma5')),
         ('MA10', technical.get('ma10')), ('MA20', technical.get('ma20')), ('MA60', technical.get('ma60')),
         ('多头排列', alignment), ('周线DIF', technical.get('weekly_dif')), ('周线DEA', technical.get('weekly_dea')),
@@ -301,6 +302,7 @@ def technical_rows(item):
         ('周线零轴位置', technical.get('weekly_axis')), ('周线柱变化', technical.get('weekly_hist_change')),
         ('周线背离', technical.get('divergence')), ('所属行业', technical.get('industry')),
         ('行业技术指标', technical.get('industry_technical')), ('行业涨停数', count),
+        ('行业涨停统计日', technical.get('limit_up_date')),
     ]
 
 
@@ -416,12 +418,7 @@ def main(argv=None):
     status['state']='running'
     save()
     try:
-        from announcement_data import collect_announcements,is_trading_day,enrich_technical
-        if not is_trading_day(date,cache_dir):
-            status.update(state='skipped_non_trading_day',message='今日非A股交易日，跳过',mode='calendar',publish_status='not_required')
-            save()
-            print(str(date)+' 今日非A股交易日，跳过')
-            return 0
+        from announcement_data import collect_announcements,enrich_technical
         collection=collect_announcements(date,cache_dir,limit_companies=args.limit)
         records=collection['announcements']
         status.update(collection_count=collection['total_count'],candidate_announcement_count=len(records),source_notes=collection.get('source_notes',[]),data_gaps=collection.get('gaps',[]))
@@ -456,13 +453,18 @@ def main(argv=None):
         successful_ifind = [r for r in ifind_evidence if r.get('is_ifind') and r['success']]
         status['ifind_successful_responses'] = len(successful_ifind)
         status['ifind_evidence_sha256'] = [r['sha256'] for r in successful_ifind]
-        ifind_note = ('iFinD MCP已用于按公告日检索交叉核验，真实工具响应保留在私有缓存；公告事实与数字仍以官方原文为准。' if successful_ifind else '未启用iFinD MCP，使用公开披露原文及公开行情。')
+        if not groups:
+            ifind_note = '当日无候选公司，未调用CodeBuddy及iFinD MCP。'
+        elif successful_ifind:
+            ifind_note = 'iFinD MCP已用于按公告日检索交叉核验，真实工具响应保留在私有缓存；公告事实与数字仍以官方原文为准。'
+        else:
+            ifind_note = '未启用iFinD MCP，使用公开披露原文及公开行情。'
         atomic_json(cache_dir/str(date)/'decisions.json',decisions)
         items,gaps=enrich_technical(selections,date,cache_dir)
         gaps=collection.get('gaps',[])+gaps
         items=sort_items(items)
         status['fact_review']={'coverage_companies':len(decisions),'candidate_companies':len(groups),'source_quotes_verified':True,'unknown_fields_marked':True,'passed':True}
-        report={'date':str(date),'generated_at':dt.datetime.now(TZ).isoformat(),'items':items,'collection_count':collection['total_count'],'announcement_count':sum(len(i['announcements']) for i in items),'source_notes':collection.get('source_notes',[])+['CodeBuddy依据公告原文判定重大性；'+ifind_note,'MA及MACD由截至公告日收盘的历史行情计算；每周最后一个有效收盘构成周线，未使用公告日后数据。','周线金叉/死叉标签采用标准中的DIF与DEA大小关系；缺少可靠历史背离证据标数据待核。','公告原文解析仅清除已验证的连续页码及固定免责声明，原始官方文件完整保留供核查。'],'gaps':gaps}
+        report={'date':str(date),'generated_at':dt.datetime.now(TZ).isoformat(),'items':items,'collection_count':collection['total_count'],'announcement_count':sum(len(i['announcements']) for i in items),'source_notes':collection.get('source_notes',[])+[('CodeBuddy依据公告原文判定重大性；' if groups else '')+ifind_note,'MA及MACD由不晚于公告日的历史收盘行情计算；非交易日使用最近交易日行情，逐股列示实际行情截至日及行业涨停统计日；每周最后一个有效收盘构成周线，未使用公告日后数据。','周线金叉/死叉标签采用标准中的DIF与DEA大小关系；缺少可靠历史背离证据标数据待核。','公告原文解析仅清除已验证的连续页码及固定免责声明，原始官方文件完整保留供核查。'],'gaps':gaps}
         markdown=report_markdown(report)
         review=review_markdown(report,markdown)
         filename=str(date)+'.md'

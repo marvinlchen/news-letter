@@ -145,5 +145,87 @@ class MarkdownDeliveryTests(unittest.TestCase):
         self.assertNotIn("版式预算", daily.model_prompt(source, dt.date(2026, 10, 16)))
 
 
+class WeekendMarkdownDeliveryTests(unittest.TestCase):
+    """Calendar dates with no exchange session still have disclosure reports."""
+    sunday = dt.date(2026, 10, 18)
+
+    def run_sunday(self, root, selected, records, decisions):
+        collection = {"total_count": len(records), "announcements": records,
+                      "source_notes": ["当日完整公告索引已核验。"], "gaps": []}
+
+        def collect(date, cache_dir, limit_companies=None):
+            self.assertEqual(date, self.sunday)
+            return collection
+
+        with patch.object(data, "collect_announcements", side_effect=collect), \
+                patch.object(data, "enrich_technical", return_value=(selected, [])), \
+                patch.object(daily, "analyze_batch", return_value=(selected, decisions, [])):
+            result = daily.main(["--project-root", str(root), "--date", "2026-10-18"])
+        status = json.loads((root / "var/a-share-announcements-status/latest-run.json").read_text())
+        self.assertEqual(result, 0, status.get("error"))
+        self.assertEqual(status["state"], "generated", "周末应采集公告并生成日报，不能按休市日跳过")
+        self.assertTrue(status["publishable"])
+        self.assertTrue(status["publish_required"])
+        self.assertTrue(status["fact_review"]["passed"])
+        self.assertTrue(status["markdown_review"]["passed"])
+        out = root / "published/a-share-announcements"
+        self.assertEqual({p.name for p in out.iterdir()}, {"2026-10-18.md", "latest.md", "2026-10-18.json"})
+        text = (out / "2026-10-18.md").read_text()
+        self.assertEqual((out / "latest.md").read_text(), text)
+        self.assertEqual(status["output_path"], str(out / "2026-10-18.md"))
+        self.assertEqual(status["report_filename"], "2026-10-18.md")
+        self.assertEqual(status["report_sha256"], hashlib.sha256(text.encode()).hexdigest())
+        return text, json.loads((out / "2026-10-18.json").read_text()), status
+
+    def sunday_record(self, title="关于签订重大合同的公告"):
+        return {"id": "A1", "code": "600001", "name": "示例公司", "date": "2026-10-18",
+                "title": title, "text": "公司于当日披露公告，原文完整。", "url": "https://example.org/sunday.pdf",
+                "official_verified": True}
+
+    def test_sunday_announcements_generate_publishable_dated_markdown(self):
+        item = stock()
+        item["date"] = "2026-10-18"
+        item["announcements"] = [{"id": "A1", "title": "关于签订重大合同的公告",
+                                   "url": "https://example.org/sunday.pdf", "event": "已签署合同。"}]
+        item["technical"].update(price_date="2026-10-16", market_date="2026-10-16",
+                                 limit_up_date="2026-10-16", status="正常", bullish=True)
+        with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as folder:
+            text, structured, status = self.run_sunday(Path(folder), [item], [self.sunday_record()],
+                                                       [{"code": "600001", "important": True}])
+        self.assertIn("# A股重大公告利好利空日报 · 2026-10-18", text)
+        self.assertIn("重大股票 1 只；重大公告 1 份", text)
+        self.assertIn("示例公司（600001）", text)
+        self.assertIn("https://example.org/sunday.pdf", text)
+        self.assertIn("| 行情状态 | 正常 |", text)
+        self.assertIn("| 行情截至日 | 2026-10-16 |", text)
+        self.assertIn("| 最近交易日 | 2026-10-16 |", text)
+        self.assertIn("| 行业涨停统计日 | 2026-10-16 |", text)
+        self.assertIn("| 行业涨停数 | 0家 |", text)
+        self.assertEqual(structured["date"], "2026-10-18")
+        self.assertEqual(structured["items"][0]["date"], "2026-10-18")
+        self.assertEqual(status["candidate_company_count"], 1)
+
+    def test_sunday_without_major_announcements_generates_complete_zero_item_markdown(self):
+        for label, records, decisions, collected in [
+            ("只有例行公告", [self.sunday_record("关于例行会议安排的公告")],
+             [{"code": "600001", "important": False, "reason": "例行事项，不构成重大公告。"}], 1),
+            ("没有公告", [], [], 0),
+        ]:
+            with self.subTest(case=label), tempfile.TemporaryDirectory(dir=Path(__file__).parent) as folder:
+                text, structured, status = self.run_sunday(Path(folder), [], records, decisions)
+                self.assertIn(f"采集公告 {collected} 份；重大股票 0 只；重大公告 0 份。", text)
+                self.assertIn("利好 0、中性 0、利空 0", text)
+                self.assertIn("## 数据来源与口径", text)
+                self.assertIn("当日完整公告索引已核验。", text)
+                self.assertIn("## 数据缺口", text)
+                self.assertIn("当日未筛选出符合重大性标准的公告。", text)
+                self.assertEqual(structured["items"], [])
+                self.assertEqual(structured["announcement_count"], 0)
+                self.assertEqual(status["stock_count"], 0)
+                self.assertTrue(status["markdown_review"]["content_complete"])
+                if collected == 0:
+                    self.assertIn("未调用CodeBuddy及iFinD MCP", text)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
