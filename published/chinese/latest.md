@@ -1,24 +1,16 @@
-# 每日专业 Topic 新闻：2026-10-20
+# 每日专业 Topic 新闻：2026-10-21
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 中国三季度GDP报告出炉，增长动力引关注
+### 1. 中国广告业规划提出年均增长10%目标
 
-- **原标题：** China's Q3 GDP report: What's driving growth beyond the numbers? - China Daily
+- **原标题：** Advertising industry plan eyes 10% annual growth - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-10-20T12:02:41+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMic0FVX3lxTFA2OTNUZllXVVdTeDR5Mk5QMlFZTm5scXFFVThEODdJcXZsUmNoMXVMZG43Y1otcFRBRWo2Q3ZEMjlkQ3otMWJta3R4dERobVl0MGtYaWRPSGMxTTRUMExLb09kQnEtVTlBdmt3TjA1aVI5ek0?oc=5)
-- **摘要：** 中国日报报道中国第三季度GDP报告，并探讨数字之外的增长驱动因素。报道认为，除整体增速外，结构性的增长来源更值得关注。候选数据未给出具体GDP增速、分项数据和官方发布时间，因此无法判断各产业对增长的贡献大小。
-
-### 2. 中等强国被呼吁共同维护多边贸易体系
-
-- **原标题：** Middle powers urged to defend multilateral trade - China Daily
-- **来源：** China Daily
-- **发布时间：** 2026-10-20T02:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE0xTTd3T1dRN3FaVXRjMVpCV0pjcGd3MnlSejEyeGtpWFRaV3VLOHhfOVp3MTROZHZnd0gwcDZQWEtfWDdMZ3paa3RwQmNQMks5Nzg0dy12YV9TX2dnU1NXQVphRXEyeGdXZFRMT3RVOUo2bFBRYkprSGFwVFRXdw?oc=5)
-- **摘要：** 中国日报报道呼吁中等强国站出来维护多边贸易体系。报道指出当前多边贸易体制面临压力，中等规模经济体需共同行动加以维护。候选数据未提供具体倡议方、参与国家名单及拟采取的政策工具，因此相关承诺的实际约束力仍不明确。
+- **发布时间：** 2026-10-21T11:08:46+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFBHcHMxaW10S2tVTnN0R1JYY2xxS2dsR1R0Q21fTkdzdU8xRjJoOGpQcjFWUFZqMm5jM2d6dW0wcU9ySzk4QWVTeW1vcUJoeFp6YmtZVjZCN0dnODhQbkZNazhXTV8tdHZ4bS1Mb19td0ZYRnBFdV9zSEV3NHozZw?oc=5)
+- **摘要：** 据《中国日报》报道，中国广告业规划提出行业年均增长10%的目标。候选信息未披露规划发布机构、覆盖年限与配套措施，因此其对广告主预算与营销服务行业的实际拉动效果尚不明朗。
 
 ## 航运 Top 3
 
@@ -30,31 +22,11 @@
 
 ## 股票市场 Top 3
 
-### 1. CoreWeave股价获评级上调后反弹
-
-- **原标题：** CoreWeave Stock Rebounds Following Rating Upgrade After Massive Weekly Selloff - TIKR.com
-- **来源：** TIKR.com
-- **发布时间：** 2026-10-20T15:33:45+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUHRuUFROb2hpSlh2ZmFZY1J6cHUyY01ndEQ5bER1RnV6ZWZ0MWNsbllNdWR4c1BHM3JlLTRJTmYwWFY5NUg2enFPT2ZmTjM5aDRaOWJ6UWRUcG1mdlR1RlZzS05PSVRtczJkcHF1VXZlQzdPenFXMDFpS3pSVnFLQ1UtT0s0Q25L?oc=5)
-- **摘要：** 据TIKR报道，CoreWeave股价在获得评级上调后反弹，此前该股经历了周内的大规模抛售。报道提及评级上调是反弹的直接催化因素，但未给出具体涨幅、评级机构名称、目标价及抛售幅度的详细数据，因此反弹力度尚难判断。
-
-### 2. 小米港股上涨1.5%
-
-- **原标题：** Xiaomi Stock Climbs 1.5% in Hong Kong - Moomoo
-- **来源：** Moomoo
-- **发布时间：** 2026-10-20T08:35:32+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxNVE1YbGtOWkhwTkp6dDRNc3BJOHpDbTZfSHA4RTNRVkh4UXVuY29SbHMwdUJZWFhKNkxFd1ZuVFZYOFBxYmwyYUpBNjZudjR2RFM5YWQ1TGtMWlBDMHRpczd2Q2dZeTRHcGUxWDNwMnV1enM0dmZvbkNDaUw5amFUTHkzNnNzc3JVelRnaG9n?oc=5)
-- **摘要：** Moomoo报道，小米股价在香港市场上涨1.5%。候选数据仅收录标题与来源信息，未说明上涨的具体交易日、驱动因素、成交量以及是否有公司公告或行业消息配合，因此该涨幅的成因与持续性目前无法确认。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 科技产业 Top 3
 
-### 1. 光通信概念股普跌，Credo科技跌超5%
-
-- **原标题：** 光通信概念股普跌 Credo Technology(CRDO.US)跌逾5% - 亿欧
-- **来源：** 亿欧
-- **发布时间：** 2026-10-20T15:16:18+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9EUzJqRG1XOUljWkxJNTNVV1d3MzJFdHdURUljQkRhWExfQlZqMS1TX2xwSGJKOU9qYURZZ0lUeHNmM0JkNV9RaVIyZmp6SVBYVHdEVElBVVJPUQ?oc=5)
-- **摘要：** 亿欧报道，光通信概念股整体走弱，美股上市公司Credo Technology（CRDO）股价下跌超过5%。候选数据未给出下跌的具体交易日、板块内其他个股表现以及触发抛售的消息面因素，因此难以判断此次回调是个股事件还是行业性调整。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 消费 Top 3
 
@@ -62,17 +34,23 @@
 
 ## Cloud Infra Engineering Top 3
 
-### 1. Lyft将流式计算集群迁移至Apache Flink Kubernetes Operator
+### 1. Cloudflare开源AI智能体决策模型Clef
 
-- **原标题：** Lyft将流式计算集群迁移到Apache Flink Kubernetes Operator
+- **原标题：** Cloudflare 开源面向 AI 智能体的决策模型 Clef
 - **来源：** InfoQ 中文 RSS
-- **发布时间：** 2026-10-20T09:06:00+00:00
-- **原文：** [查看原文](https://www.infoq.cn/article/pvgeXQQbbt4TsPKeMMEL)
-- **摘要：** InfoQ中文报道，Lyft已将流式计算集群迁移到Apache Flink Kubernetes Operator，涉及其流式计算基础设施的改造。候选数据仅含标题与来源，未提供迁移规模、时间线、性能与成本收益等关键细节，故实际成效无法判断。
+- **发布时间：** 2026-10-21T13:47:00+00:00
+- **原文：** [查看原文](https://www.infoq.cn/article/iqCrZLLizNkRTpfo2Jrb)
+- **摘要：** 据InfoQ中文站报道，Cloudflare开源了名为Clef的AI智能体决策模型。候选信息仅提供标题，未披露技术细节、适用场景与开源协议，原文需跳转查看，因此具体能力与实际影响尚不明确。
 
 ## AI 前沿 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. DeepSeek开源推理代码，一套代码适配华为与英伟达
+
+- **原标题：** Open Inference Code Narrows the Gap Between Rival AI Chips
+- **来源：** 钛媒体
+- **发布时间：** 2026-10-21T18:29:05+08:00
+- **原文：** [查看原文](https://www.tmtpost.com/8176740.html)
+- **摘要：** DeepSeek发布开源推理服务软件，同一套代码可构建华为加速器与英伟达GPU版本。在中国算力板卡紧缺、token流量上升的背景下，此举或改变团队硬件选型，但演示效果能否经受真实流量检验仍待观察。
 
 ## 国家新闻
 
@@ -82,29 +60,29 @@
 
 ### 中国 Top 3
 
-#### 1. 中国电动车市场转向电池、成本与海外工厂竞争
+#### 1. 中国组建新数据机构，助推数字经济与AI
 
-- **原标题：** China’s EV Market Is No Longer About Winning Converts
+- **原标题：** New data group to boost digital economy, AI - China Daily Global Edition
+- **来源：** China Daily Global Edition
+- **发布时间：** 2026-10-20T16:07:40+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifEFVX3lxTE5ZQ2F0eldpcFhiMUMzazI2a3pEMzhiOExjM2dKbUJ0X1VQcTM4YVdGa1dfY1FEM0ZGOWI3NENhUndpYW5BVWRCYWdCbHl5VWJzblVDNHBZdEtrUUtLdXc1WlFkZTJrWjBCLXZOa19YVHZwRkE4UlJCT1pwbjE?oc=5)
+- **摘要：** 据《中国日报》报道，中国将组建新的数据相关机构，以推动数字经济和人工智能发展。候选信息未披露机构名称、隶属关系、职能范围与启动时间，对数据要素市场与AI产业的实际影响暂无法评估。
+
+#### 2. DeepSeek开源推理服务软件，降低芯片切换门槛
+
+- **原标题：** Open Inference Code Narrows the Gap Between Rival AI Chips
 - **来源：** 钛媒体
-- **发布时间：** 2026-10-20T16:21:05+08:00
-- **原文：** [查看原文](https://www.tmtpost.com/8174619.html)
-- **摘要：** 钛媒体文章称，纯电与插电混动车型已在中国新车销售中占据主导，消费者不再将其视为试验品。竞争重心转向电池技术、成本纪律与海外建厂，而在海外市场容错空间更小、本土对手仍占优势。文章未给出具体销量占比与企业名单。
+- **发布时间：** 2026-10-21T18:29:05+08:00
+- **原文：** [查看原文](https://www.tmtpost.com/8176740.html)
+- **摘要：** DeepSeek发布开源推理服务软件，同一套代码可构建华为加速器与英伟达GPU版本。在中国算力板卡紧缺、token流量上升的背景下，这可能改变企业硬件选型逻辑，影响国产芯片生态与资本开支方向；真实流量表现仍待验证。
 
-#### 2. 小米港股上涨1.5%
+#### 3. 中国自动驾驶企业签约马来西亚项目
 
-- **原标题：** Xiaomi Stock Climbs 1.5% in Hong Kong - Moomoo
-- **来源：** Moomoo
-- **发布时间：** 2026-10-20T08:35:32+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxNVE1YbGtOWkhwTkp6dDRNc3BJOHpDbTZfSHA4RTNRVkh4UXVuY29SbHMwdUJZWFhKNkxFd1ZuVFZYOFBxYmwyYUpBNjZudjR2RFM5YWQ1TGtMWlBDMHRpczd2Q2dZeTRHcGUxWDNwMnV1enM0dmZvbkNDaUw5amFUTHkzNnNzc3JVelRnaG9n?oc=5)
-- **摘要：** Moomoo报道，小米股价在香港市场上涨1.5%。候选数据仅收录标题与来源信息，未说明上涨的具体交易日、驱动因素、成交量以及是否有公司公告或行业消息配合，因此该涨幅的成因与持续性目前无法确认。
-
-#### 3. 中等强国被呼吁共同维护多边贸易体系
-
-- **原标题：** Middle powers urged to defend multilateral trade - China Daily
+- **原标题：** Chinese autonomous vehicle maker inks Malaysia deal - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-10-20T02:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE0xTTd3T1dRN3FaVXRjMVpCV0pjcGd3MnlSejEyeGtpWFRaV3VLOHhfOVp3MTROZHZnd0gwcDZQWEtfWDdMZ3paa3RwQmNQMks5Nzg0dy12YV9TX2dnU1NXQVphRXEyeGdXZFRMT3RVOUo2bFBRYkprSGFwVFRXdw?oc=5)
-- **摘要：** 中国日报报道呼吁中等强国站出来维护多边贸易体系，指当前多边贸易体制面临压力，中等规模经济体需共同行动加以维护。候选数据未提供具体倡议方、参与国家名单及拟采取的政策工具，因此相关承诺的实际约束力仍不明确。
+- **发布时间：** 2026-10-21T11:32:05+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE1yRm9YMl85YTRPSllMMFJUZG1mcVJfY0EwZUl3V1k0MmQ0TmJtSzRjcmE0T05tVV9MdkFZZWQxbGtTVzFad0hhVVRtNkx5WFpwUE1LbmFScTRSN1N2R2JlQXdNUXdQbndPZUJKY09ETUxFcDhsSjgwRDFpU2J4QQ?oc=5)
+- **摘要：** 据《中国日报》报道，一家中国自动驾驶汽车企业与马来西亚签署合作协议。候选信息未披露企业名称、协议金额、合作范围与落地时间表，对相关公司海外收入与盈利的实际贡献尚不清楚。
 
 ### 美国 Top 3
 
