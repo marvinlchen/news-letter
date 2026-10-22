@@ -1,267 +1,267 @@
-# 每日专业 Topic 新闻：2026-10-21
+# 每日专业 Topic 新闻：2026-10-22
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 美国9月PPI同比上涨6.3%，创2022年12月以来最大涨幅
+### 1. 印度股市续跌，油价高企加剧通胀担忧
 
-- **原标题：** Producer Price Index up 6.3 percent in September; largest 12-month increase since December 2022 - Bureau of Labor Statistics (.gov)
-- **来源：** Bureau of Labor Statistics (.gov)
-- **发布时间：** 2026-10-21T15:06:24+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMizAFBVV95cUxQZ0NDejhnTzZVT29aRjBQLVl6cE14ZmxXdXZzdW53RXhZUGpUNWlDMFJvWTVMTm5kdEM4NW5QbkhzSzl5eU1BRlUybGdRUGlKYUpaeWJOSV96V3RWOWw4enVyNGlGa2JkNTMzVGlJRE9RRndvMFFQNVNtMnY5NmhYUkZtOHJCbW9iajFWTUpYNXhLXzVHMExSMzd3Nm5DcVRrUWVGQkQ2M3QtOXoyY1A4YXpfOHNvSEtQS1NTRG93TWhxbHNFXzhxSWFsTTc?oc=5)
-- **摘要：** 美国劳工统计局公布，9月生产者价格指数同比上涨6.3%，为2022年12月以来最大12个月涨幅。上游价格压力再度抬头可能向消费端传导并影响货币政策预期，候选数据未披露具体分项驱动因素。
+- **原标题：** Indian shares extend losses as high oil prices heighten inflation worries - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-10-22T02:33:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZDhVMWdGc0J2bURPNnV2YnBaRXlMSkVqcXRGX1FBZ2lUOXQ4eVJyd3RsTE1CckJ4cjRuVEdPQVJLaGVXaVA5clJIZ0lQSTBsMm1iQ0xfeTZkNXhqWUtoX2ExQkNlRFVfSVhKckRtenZfWW41bDlxWWc0WVFuRTVTTHlIdEtPcEI2Z2hWR2pyd2NGOGRiNXNMUkM3OE5qcFV5VUxQUkVDem1HdXN4X0pKY3RrejhKeHcxRjdV?oc=5)
+- **摘要：** 路透报道，印度股市延续跌势，高油价加剧了市场对通胀的担忧。候选数据未给出具体指数点位与跌幅，也未说明央行可能如何应对；该走势显示能源价格正通过通胀预期渠道传导至新兴市场资产定价。
 
-### 2. 中国国家统计局发布2026年三季度GDP初步核算结果
+### 2. 中央考核地方官员不再只看经济增长
 
-- **原标题：** Preliminary Accounting Results of GDP for the Third Quarter of 2026 - 国家统计局
-- **来源：** 国家统计局
-- **发布时间：** 2026-10-21T01:30:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMigAFBVV95cUxOa3JZc01SUjFmOTRRbkRLSDI3cFJqZTV4eGZmUDdLdk42QWpRTGJ5TUNMeWN5NFBXUGpKaG0wYVM3LWNCTi1jcDNXUU4xQklMMU1NQnRfVGtFd253QlM0SDliMU9NZWFSc3F3OUpRNm8xMHlYUzM1QTg1ME9lSFB4Sw?oc=5)
-- **摘要：** 中国国家统计局发布2026年第三季度GDP初步核算结果。该数据是判断当季经济增长与全年走势的关键依据，候选数据未披露具体增速、分项贡献及与全年目标的对比情况，需以官方后续发布为准。
+- **原标题：** Beijing wants more than GDP growth from local officials. Can they adapt? - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-10-21T22:00:07+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivgFBVV95cUxOMUhGMm41dnZiZjFfLVRzby1kbXpMLWRKd0ZBOGNGNzNGQ2pHSjZIZkVXdk9mc3hyZTdWc1VBdW5mMkc0b2tBa3RHSklSdXZQYnJka2V2QUY5Zkhuc1RMU0M5NWRlTkRDY0hFTmdYT2kzZ0pvV1YyS1M2amNtR2ZCVFNyWDVLNG0ybVJlc2VQYllweWxVZFJnY0hMZmdCLUppNXpsRWpra3Vub25OQ1JVemZpRmI2NkxJZFFQY2dR0gG-AUFVX3lxTE5wTDQ1RUctc3FuSkZnY25ZRnAyNVFfSU81b3JfdVNxMjdMUFBlUVJrejcxUUs0YjhXa1l3VnB6SHVPVGp0N1ktakUxTi0zT3pjT3o1Njl1a1BNWGhNSHpNankxYkp0eEpsZjUyUzkydmNScjVrWklmTVg3b0xfQnllS0UyZlhjcjBoVHZ5bWNwbkJ4X0ZfM2lRdnR1YkVTM0dxaUFrbno3d0RWcDc0Z0hZX2ltam9HWmhLdkhTMHc?oc=5)
+- **摘要：** 《南华早报》报道，中央希望地方官员的考核不再只看经济增长，而纳入更多元目标。报道提出地方官员能否适应的问题，但未给出具体政策文件、考核指标与实施时间表，实际执行效果仍待观察。
 
-### 3. 英国通胀升至3.5%，强化加息预期
+### 3. 欧盟委员会公布哪些地区经济总量已超疫情前水平
 
-- **原标题：** UK inflation jumps to 3.5% — cementing rate hike expectations - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-10-21T06:02:59+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMid0FVX3lxTE9BMFE1c0o5clpFOWdSQzVWX1VBSDVFcmpXSmptNDRoVGdNUEVkYWdRZW54T1VLOWJ3aU1IeHlGMURjdHE4VzZ3YWdHdzUwekFiWlV2ODk1NVJqX1RfYzVjV3VQQXBWVFhRaUVJNnhfUGxMSFUxUWZn?oc=5)
-- **摘要：** 英国通胀率升至3.5%，报道称这巩固了市场对加息的预期。通胀反弹关系到货币政策路径、借贷成本与居民消费支出，候选数据未披露推升通胀的具体分项构成。
+- **原标题：** Which EU regions’ GDP exceeded their pre-pandemic levels? - European Commission
+- **来源：** European Commission
+- **发布时间：** 2026-10-22T09:05:18+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE5JaDd2d1NfX0ZHdk93c3VDQjdUZ0dDYzBkMGloTF82TU16cFVjbzZYNkVKaG1Kd1FaZkFNUUpCVDM0WjFKeDIzeU5naTFuVDJhbGR0ZjNSWlFHeHpacHE4WGJoTVNDXzhqcXI2TnlfbXJFTUYzTWNzMEpwMl9fZw?oc=5)
+- **摘要：** 欧盟委员会发布数据，说明欧盟哪些地区的经济总量已回升并超过疫情前水平。候选信息仅包含该主题，未列出具体地区名单、回升幅度与统计口径，因此无法判断复苏在区域间的分布差异有多大。
 
 ## 航运 Top 3
 
-### 1. 黑海航运遇袭后，北约拟派出飞机与无人机
+### 1. 美国财政部制裁涉嫌服务影子船队的航运律所
 
-- **原标题：** NATO to send planes and drones to Black Sea after attacks on shipping - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-10-20T16:36:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSTdZakRjOTJLeFp1bjdZQ0p1cGJwSjZEYWwtTG5jZXJ4bnloM0J0bVJROTRKM0xCSENRY1dzbGlfeW1renV1SmpfOS1CYVVMWEU1UWdUQS01SkZCZndJcHpFM240c3VReU95Rkw2Z0Q0R1E0Vlo3cHpGMVcxVVVMQW1yUU5YRUYzQTE5TkhhcDUzZ2FpVnlYMExxOW1XbHJUUjJmMVRLV1p6QVdGb2VKRFY2cmRMMEw5NHQw?oc=5)
-- **摘要：** 在黑海接连发生针对航运的袭击后，北约宣布向黑海部署飞机与无人机。此举意在加强航道监视与威慑，可能影响黑海航线的安全评估与战争险定价，部署规模与时间表尚未披露。
+- **原标题：** U.S. Treasury Sanctions Shipping Law Firm for Alleged Shadow Fleet Services - The Maritime Executive
+- **来源：** The Maritime Executive
+- **发布时间：** 2026-10-22T02:52:06+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZU5HM3Q3LVpMLXlWcTNxNnpZQ3ZsNW1OX0xZd0prWTJEUXhCOGdGR09JdmI1TDRPSC15OFFTQms3d3drZW9pRWZJMF9vTEd4TG4wZkx1TzFmUFR2bHVNdHJrdzktZFhqT28xWkJGTVV3bXJGZmhvRWJSZWgxbEZOQUw5dzRIa3NNZV9heTdYODYzckh6dDhmWEJhYVF0LVFHcWk1SkZQT0gtUGM?oc=5)
+- **摘要：** 《海事执行官》报道，美国财政部制裁一家航运律师事务所，理由是其被指为影子船队提供服务。该制裁显示美国对规避制裁网络的打击正从船东、船舶扩展到提供法律与代理服务的中介机构，候选数据未列出被制裁方名称与具体措施。
 
-### 2. 高盛称战争推动油轮运费跃升约七倍
+### 2. 马士基油轮为四艘超大型液氨运输船改装寻求欧盟支持
 
-- **原标题：** Goldman Sachs Says War Spurs Sevenfold Jump in Oil Freight Rates - Bloomberg.com
+- **原标题：** Maersk Tankers lines up EU backing for four VLAC ammonia conversions - Splash247
+- **来源：** Splash247
+- **发布时间：** 2026-10-22T09:39:32+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilgFBVV95cUxPMGhMRFJ0c1RjU1RyTHFPTmVBMnZtakF1dFlKUXZmbkdoVmEzTV9DNVAzd1ZEdEt5TDZpbF83SGhubnprdzdocWthYm81djhzUm9kd2k5NXh4RUd6ZzZ4Q0FHVWJ0SWNJWjBVM0RWcmNxS1oxYUo3c2tPVFkxOVozLXowVVJJN0NYd1AxRzF2a2Zrd000SEE?oc=5)
+- **摘要：** 航运专业媒体报道，马士基油轮为四艘超大型液氨运输船的氨燃料改装项目争取欧盟支持。该项目若落地将扩大低碳燃料船舶运力，但候选数据未披露欧盟支持的形式、金额与改装时间表。
+
+### 3. 石油企业申请豁免加拿大不列颠哥伦比亚省油轮禁令
+
+- **原标题：** Oil Firm Pitches Exemption to Canada’s Thorny BC Tanker Ban - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-10-21T03:38:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxQU2U4a0h6MGo2bjVwQjlTMkQwUndDbkdZb1lLRkpYckxmV0lWWDJvdFNZbXpzSk82M2FwVlF5N2ItbEg3UHpYY0dSSVBMU1ZWem1FaGZwVnAyUWltMVZNNTAwQmJEdTd4Q3ItZm9hbGZMV0hZUC1zWjVJc0Qzd00xZE91dVFqZFRlNWZmLVg5bEY1dzB1QnZBQTlIYWxBZ3BqQjNCTWphaU9CQVV5eldIdnlZQXZvZw?oc=5)
-- **摘要：** 高盛指出，战争因素推动原油油轮运费出现约七倍的跳涨。运价飙升将抬高能源运输成本并向终端油价传导，同时改善油轮船东盈利预期，候选数据未给出具体航线与基准运价水平。
-
-### 3. 安全风险上升，Sinokor成为霍尔木兹油运主角
-
-- **原标题：** Sinokor takes centre stage in high-risk Hormuz tanker trade as security risks mount - Lloyd's List
-- **来源：** Lloyd's List
-- **发布时间：** 2026-10-21T11:39:05+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxOak5IZU12MWdVUGdGM0k4TlZUbkEyMENsVXpiYWpRYXVUYVRzbjRDYzhoYkNaLVdUMjBaRWdtQ214NE1oUU5xNjNQZm5MNEN1MHdJZ0ZLNEN5aHl6YW1MZUJ2RmRidHFHUzh2UjVScjJqdWdFMHktMTJVWnc0R1pvYnlUUHZ6UUxuRllsblEzOVQ1dXEwbmkydFRzOFhTVU15WDVqdENUVG1yRDJ5U3F6OFAtRHNIOWNNY2I0bg?oc=5)
-- **摘要：** 劳氏日报报道，随着霍尔木兹海峡安全风险上升，韩国船东Sinokor在高风险油轮运输中占据核心位置。这反映主要船东在风险溢价与运力调度间的取舍，也关系到海湾原油出口的稳定性。
+- **发布时间：** 2026-10-22T15:56:35+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxQZ01Tb0xHWGpRdEU3TFpfbGVibjdWS2MzZzNDWmJQTV85N0VaampxT0ROMVB0ZERGVE53SW5qLWM5aHpuUkRoT1FTUTMzUmtVLW9nc1UxUUNuYTUwZU5uVzBtbE5wSXM0dDdRaXB1OHdoN0ppbzhvNHA0azZDTGtsd0ZOVVYtN09kOWRJTVlLMjV6a2U3QVhSQ1VkNEhkNl9DbHc3R1hXekZtNjQ3WlJNNUlaUEdZZw?oc=5)
+- **摘要：** 彭博报道，一家石油企业正寻求获得加拿大不列颠哥伦比亚省油轮禁令的豁免。该禁令长期影响西部原油出海通道与企业运输安排，候选数据未说明申请企业身份、豁免理由及监管机构的裁决时间与口径。
 
 ## 大宗商品 Top 3
 
-### 1. 美国拟出借约三分之一取暖油储备以平抑价格
+### 1. 胡塞袭击引发供应担忧，油价升至五个月高位
 
-- **原标题：** EXCLUSIVE: US aims to loan about a third of heating oil reserve in bid to tame prices - Reuters
+- **原标题：** Oil prices hit five-month high as Houthi attacks stoke Middle East supply fears - Reuters
 - **来源：** Reuters
-- **发布时间：** 2026-10-21T15:08:25+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisgFBVV95cUxNUzkxVzJaMlBtRGhfVVdxVERodk94eEllV09nNDlZVFV5MnZxMUttc2d5djloZTFuVEN6UUlfbFo4aGFNZk83RGQ4MzNZV0ZzMXU1RjM0bnhNelR3Tmd6cUNacEJjdko4dnd5Q081U3dheFNZVm9aVmM1aHc1a2xJaVZadUFEX1YyWm9XSTNOT29RYk1wckVnZllWLUU2aUFkclNYS3NQQmpkUnMxakhDcUNR?oc=5)
-- **摘要：** 路透独家报道称，美国政府计划出借约三分之一的取暖油储备，以压低价格。此举属于政策性供给干预，可能影响冬季取暖油供需与价格走势，储备投放的具体条件与执行时间尚未披露。
+- **发布时间：** 2026-10-22T00:46:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYzBEdGVKYmZ3VVpJajg0TW5DN2VHVEM2aDVTcFJKQVduMnVMTU5NbVcyMGxBanBHY3VvMzJQR1VrQWM4b0hLeG1YaTFWcldTeU9yTlBXc3FiR1FtcUp0SmxhRkJkWmpmZ2x6X3VGZHZEUDNLTE9LTFZNSlBWWjNJVGtaV3YwWkc4QVhxbHozYkx5THpZMVlYVDAtd0dqbUMyOUcyVk91NEYxaFFCZklRWWhjQm5qN2NvVHdWdnZIQVJSMk0?oc=5)
+- **摘要：** 路透报道，因胡塞武装袭击引发中东供应担忧，国际油价升至五个月高位。候选数据未给出具体价格水平与涨幅，也未说明受影响的航运路线与产量规模；油价上行将推高进口成本并加大通胀压力。
 
-### 2. 中东石油出口回升至战前水平
+### 2. 油价上涨强化利率长期高企预期，黄金跌逾百分之一
 
-- **原标题：** Middle East oil exports climb back to prewar levels - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-10-21T12:01:37+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNRUpxSXBnV3lLb2hmSHBCc2sxQlgyVnhTSklvZEpnM21ZSGRMTHlOa1FEQnkwMDA3ME83Yjc1b1ZQQnJNSFlvN0J4ZWgyZHRnRXdpZWZ5VUVEMDd1eHh3WkJNZE5vckZjX1dXZ2lnUXpDa1dPV3dIVmdZWHlJbF9IaTRGSFc?oc=5)
-- **摘要：** 金融时报报道，中东石油出口已回升至战前水平，显示此前冲突造成的供应中断基本得到修复。出口恢复有助于缓解全球原油供应紧张并影响油价，报道未披露具体国别出口量与恢复路径。
+- **原标题：** Gold drops over 1% as oil rally reinforces higher-for-longer rate outlook - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-10-22T05:27:46+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitwFBVV95cUxQX1A1elpCSHVjbUFKOUZ3VEtNYnBTZmUyV0hTbE5zdnJNNk5qd3c2UWE0cUx1blcxa2xpTzZOTDJ5WGV0ZnpXV1owY3VIRE9GRE51VlVrTXViMEpaRDlLTWZ0QmNveFNxWUI3UG9mWHY1VUR4OVdMSEZnV2MycmNGSGk4ckdfaTNVbG5BNFVwcGR1VmFoa3gtN0pBeHVMOUg2M001ZDBnYkJnaEtpbDk3R3lUUnRzS0XSAbwBQVVfeXFMTlVudUd5eHd1UEUzNi1yYVEyVC05d3lRYVR0NWdLdmxPODJteWpiSzFFR1VxZ0JfZWlCem9fOVpOVmVMQWdpUWZfUUU3emswblNBc2ZIWEd2WFowUWVPR2lQc1lEQkJOT2R0cEtDdnNaYWtWSGFPUF9qOVpQNXhreW5PcElDbERKYVdfSC0zUnk0VzNIOEU3SkFFTEZMdEc5S0UxLWRST2Z2QlA0Zjc5eDFJMzhBRjlWOGpkME8?oc=5)
+- **摘要：** 美国消费者新闻与商业频道报道，黄金价格下跌超过百分之一，原因是油价上涨强化了利率将在更长时间内维持高位的预期。候选数据未给出具体金价水平与交易时段，也未说明后续利率路径的判断依据。
 
-### 3. 英国政府批准苏格兰近海天然气项目
+### 3. 阿布扎比国家石油公司旗下平台洽谈收购埃尼利比亚油气权益
 
-- **原标题：** UK government approves a natural gas project off Scotland despite environmental concerns - AP News
-- **来源：** AP News
-- **发布时间：** 2026-10-21T15:18:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipgFBVV95cUxORG04b2lmR3h1bzYwZTJ0bm5BdjBObWE3OW9XOHBSSzQxTWZGc3V4bmVUclZYekVFdE03VDlRQTYtbWY4YlZuTUlzTzF4VDVGRENhUTBCdUVXczVQREdnTEsyM3hnS3NNSEt1MEVPbjRrUEFDLUFjdGRWRGFDSHBIT0l3T0tQa0h6dmtwSjlDRFF3RmhjSDhuUjh0NFdpU3VMYmsxWGlB?oc=5)
-- **摘要：** 英国政府在环保担忧之下批准苏格兰近海一处天然气项目。该决定涉及本国能源供应安全与化石燃料投资取向，可能影响未来天然气产量与气候目标间的平衡，项目产能与投产时间未披露。
+- **原标题：** ADNOC's XRG in talks to buy stake in Eni's Libya oil and gas business, sources say - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-10-22T11:51:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiugFBVV95cUxQR1g2NkVwaGlBeGlfNkxLTFhLYzdVOW42cThDUFRoVDJJa3RsSF9xdGxleFhFTXdHbHdTZFJFNk9UaTMwOXhtZHYteGJKWWgtNVctU0lwcWppNUZQWGl4SlpQUHhUbWZmbXFxWVNxbUlBNkx0U0NSTFQybWExWU9aLWVGa0lHaWNDOGNoYm4weENEVU9GbmtoZzlSVVZEdHNJbU9QU2JxQjNsM1B5NFNYcEtuSWw1TGVEMHc?oc=5)
+- **摘要：** 路透援引消息人士称，阿布扎比国家石油公司旗下投资平台正与埃尼公司洽谈收购其利比亚油气业务的部分权益。该交易若达成将改变北非油气资产格局，但候选数据未披露交易规模、估值与谈判进度。
 
 ## 股票市场 Top 3
 
-### 1. SpaceX财报超预期股价涨10%，马斯克暗示特斯拉整合
+### 1. 香港股市创七个月最大跌幅，强刺激预期降温
 
-- **原标题：** SpaceX stock jumps 10% after earnings beat and Musk hints at Tesla tie-up - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-10-21T08:05:56+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifEFVX3lxTE5PUXotbEFpamZqOGNVR1V3QjBZa1JlMk9BYlEtSXlRVVdZaUx5enhFczJmYzd6RzluMld3T1IxWFpKdUdFd3RLU0hxWTRuV28xVXRhUGt3QUlRWXVnZjcwNld0Y0Uzc3ZySXc1Ykx0dlA5SGtVbVFTZkN1QknSAYIBQVVfeXFMTjR2c3F2OV81OXNqTUxINlRMODJwbzhSNjgxNFlDOURjY0dxSDczVEZKWUdZaWRCc0RGMERLaEY3Y0NJMkIzdHFLMktLTEpkbHY3NTRyUllEYmJ3TWFFSXk5LUZRYUg0NVdpODRzaWJ0Slg3U293UkpETms3aUlDeWlmdw?oc=5)
-- **摘要：** SpaceX财报超出预期后股价上涨约10%，马斯克同时暗示可能与特斯拉进行业务整合。业绩与整合预期构成股价催化因素，并被视为AI交易情绪回升的信号，具体财务数据与整合方案未披露。
+- **原标题：** Hong Kong stocks fall most in 7 months as chance of strong stimulus shrinks - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-10-22T03:16:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMizgFBVV95cUxNSjd4bzZJdTNZb3FyaENKbERoTjl4X1pkbWJha2dyZWpnYmdYNDIwTUZTYTcycWlMeTBTcXVIbHZud3paZnF2LTdoS0tHRHVRblN6N0tLTGtFZWV4UGEtamVTNXlHN1V1cTByZlExdHRRNnZkOV9UTmlZUlV2TUhYcndhdU1KeWVOVlp5Q01CMlRDcFhMb29fLXFPQTBKZThHcUwtT3luTWMySjhsZGFVX1VfcnJkbGFNaDQzVGQtNWFvUm5xVVBXM25GWDRld9IBzgFBVV95cUxQdlZRVWNGLVZZdGFZUURFdktjTlZNY1ZieVNIS0VDSU5FSDYyOFE1d1B4dVZjbUh1OC1QT2ZjbUMteFhid1gxeTc5QXpiajFsYkU5ZlFFNjdnQmRON3N5Q3JEOERrODJNNHo4b1dmOFc3bmRXTWo2NDlZdUMzd0tfemlwWldBSW5EUnpoYnY2U2FySm1GZE9NNjZqUXR1ZTlfWUZNMldPMlJxQW8xNHE3d1JuNE8yRE9NVXhTT2plVzRSX005eFN4SzlEU0tsUQ?oc=5)
+- **摘要：** 《南华早报》报道，香港股市出现七个月来最大跌幅，原因是中国推出强力度刺激政策的可能性下降。候选数据未列出具体指数收盘点位与跌幅，也未说明资金流向与板块表现，但反映出市场对政策预期的重新定价。
 
-### 2. Super Micro初步业绩超预期，股价大涨12%
+### 2. 油价上涨拖累全球股市
 
-- **原标题：** Super Micro preliminary results top estimates, shares jump 12% - The Business Times
-- **来源：** The Business Times
-- **发布时间：** 2026-10-20T23:08:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisAFBVV95cUxNUjRJWjN1MllEVHduTkVsdlB3M2prMFN5OXlTcDNfZHpRZ1ZqaG9vMDBhWmhqNDZ0dWFOWk5tQ2lBTFFDUGdtWndrbURvVGtWc3ZjbGltRGtONDBLbHlyejBZNFZsMFdPYkl5a0ZkSkNOQVQzTVUxZFNpZi1TSG12NTRXb1ZsR3pBVzJ6REotRUE4cV9WdlNZVzVFUHFYeUxJYjhiS1lfbTdaenI5Z1NwaA?oc=5)
-- **摘要：** Super Micro公布初步业绩高于市场预期，股价随之大涨约12%。作为AI服务器供应商，其业绩被视为AI基础设施需求的验证指标，对板块情绪具有带动作用，具体营收与利润数字未披露。
+- **原标题：** FirstFT: Global equities hit by rise in oil prices - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-10-21T21:42:48+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNajNfRmRaR3VETUgxVE9mSnYxQVV2MzdNS0E0bDNwMG5BRGE0R3lKbF95OFVYNDJOcEJ0cl9Pbkc5TjRLN0t3Q0JWdXVpMU4xRkpweUUySmhxQ0VDQld6U1ZGd1UtX1NXX2xEdkRDVkFlaTdsZDRaaldaRUpDcnNyUjVFUVk?oc=5)
+- **摘要：** 《金融时报》市场简报称，全球股市受到油价上涨的拖累。报道未给出具体指数、跌幅与区域差异，也未说明油价上涨的传导路径；能源成本上升通常压制企业盈利预期与风险偏好，并可能加剧通胀担忧。
 
 ## 科技产业 Top 3
 
-### 1. 三星与SK海力士升级中国工厂生产更先进芯片
+### 1. 中国推进脑机接口技术标准化
 
-- **原标题：** Samsung, SK Hynix upgrading China plants to make more advanced chips, people say: Reuters - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-10-21T05:44:34+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOYzZkWkN5d2dEWU5TaHJpUEtWWnBDdTJXTWVjNHB0V3JxSHpEekU1Q3hKQktnMXNYaDNIUVQwTWtFVDE0YU9sVzNrY1FzM1Y0MldSM25YTlMteW9URkpORUx3LW1fZy1PTmp0TEhQODlJQnVvdlFEMEZIMENhSGp6NWZBUV94RHlPWUVxZU51Yy16T1JiSlN2d0EzenY0dXZUVUFJb05WRUI2aVVTWEVMTGY1bW1FZ0NJUUdiUkp3OXHSAcYBQVVfeXFMT1BfeTZLa1pkY2dtaG14OWVsWWxKQmVYY0FoYjhET1AteHUtbmRZd3BfcXA4N2VsSzV3M2RUeTd1eFBjVEZ1Z2o1YnBMMHJqVFhGdVhTVGxYTE1vdlVIOUNoRHdFbXAwYnhhRmxPc0x4eWtRSkpYU1lZYlg1SmY2bVBtUWVDaFhWeUQzYTByQmEzam9sN0xRTk1qcTh3M1cwVjlWZFVUUFA5VkxUZXNVVDkwdGhIQmM3Mm1GWU9WU0JxNmxObjln?oc=5)
-- **摘要：** 据知情人士透露，三星电子与SK海力士正升级其中国工厂以生产更先进制程芯片。此举涉及出口管制环境下的产能与技术布局，对全球存储供应格局具有影响，具体投资额与制程节点未披露。
+- **原标题：** China takes step to standardise technology linking human minds to computers - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-10-22T06:00:26+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiyAFBVV95cUxOM0RWcVpJemZ1ZnlVZkt5WG9WZGdZUzlfS0hVd01qR2VwSWoxQXVsQmNkOW13SFJveE0tS0ZCVHM2SjA5NXVabWo3QVRkVFZiR1JiUlZObVlsUnFHcno4cGVIbDRHWFNkVlRpU0lNSFQ3aEM3QlgzU0VVUTRWSjJiOGpYZGdOWUhZWS1laVczSTdwOTFLQ0FSV00tdUNEa1BHZzJqRkhZLW1PTnNETVU0LUFtTG1qU29yNzVHdUo4bWNqVWpxeHJiWNIByAFBVV95cUxPZXZhNS1JazE3dXZla2lqdkptNG5WNGVhWHBjWm43d2p4OXZjLW94Ulp2ZVJCZmlvWnVleG9OQkMwbjBuTzVLaENpOFhST0hMZTV4TmRTbm15bHlSQmFMRnREdUJUOGxRbE4wZkpCTEhaM2Zsc056aEVxbTFYRkkzS05OT0J2aExTN2lWMk82N1JHU1B2WmFVellCWmVvdFRsT2JTZHBYSC1DWC1IblNWc1J4Q3pqZ2xPTXRYNXRUYlRfQXhQUF9ISA?oc=5)
+- **摘要：** 《南华早报》报道，中国采取措施推进连接人脑与计算机的技术标准化。标准化将影响该领域的研发路径、产品准入与产业竞争格局，但候选数据未披露具体标准内容、发布机构与实施时间。
 
-### 2. 谷歌报告预计东南亚数字经济规模达3680亿美元
+### 2. 美国民主党高层称芯片管制是维持对华人工智能优势的关键杠杆
 
-- **原标题：** Southeast Asia’s digital economy to hit $368 billion - blog.google
+- **原标题：** Top Democrat says chip restrictions are ‘key lever’ for US AI edge over China - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-10-21T20:36:57+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiyAFBVV95cUxOU2E2dEgtUDcwcnk2YkFFaUlsMXNmN2YxQkFjM1RiNUNvTTRMTl96UDU0WlF6aU1mMUc3LXNESmhMWVM1YXZKRU8xZFVzOFZBMkRuVG5uZnJpRkxwRmtreVhicWtCd1VYSHRCalFXSlFDM3laQlNJLWlWeWV0TFdvdTFpWWZibzJ3ZklHUmp4Y2dVdDRJMUpRTzZWdk5acUZxX2lyS0tWWEEzVkU5ckR0aVNBSUt0MTBVVXRkTjUwekV1SDNOYmhHYdIByAFBVV95cUxNT0N4c3IyelNwQTJneFVIMGNZNjBNY1hIaGt4RmNXM3g0QjkzMkVkdHgteVhTbGlacnBmQ1dlLTltRUs3WHZmYjkybEkwd05LZ1M1c0lveXI2WWZGT2Q5Zlk3TlBNSGtaSVFkS0V4eG4tNkJWbVJSX0ZYUlVzODByQ3NPV3diLVowR1RUcWdoQ3hqTHBRYnB6STBWTi1JeGxvVzVKYTEzSHFueHkwSTJrVXpmNllUOW5NS2oxUGRjQ1JpUzh4dzJCUg?oc=5)
+- **摘要：** 《南华早报》报道，美国一位民主党高层人士表示，芯片出口限制是美国保持对中国人工智能领先优势的关键杠杆。该表态凸显出口管制在美国技术政策中的持续地位，但候选数据未说明其是否指向新的立法或具体管制措施。
+
+### 3. 谷歌合作建设一吉瓦虚拟电厂
+
+- **原标题：** We are working with Voltus to build a 1-gigawatt virtual power plant. - blog.google
 - **来源：** blog.google
-- **发布时间：** 2026-10-21T04:09:26+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiowFBVV95cUxQU002QmNaRFNDMzNVb0xEQ3BJWU50RllXME1nRlMxblNYZWZzV1hTVUxtS2FOZ01ERG5JVElTX2JiOXBOc1RaQlRoM3hjOXFqbER1Q1dzb2JQT0szZF9CSFA0dmlKTXk5V3lZd19ZYVc4UG13cXpzLUEtTXJpQmZEQ2xaQVVXUWhzYkpTVFN1LU1jUlpJUk4wWjRpdlBNc19wUThV?oc=5)
-- **摘要：** 谷歌发布报告预计东南亚数字经济规模将达到3680亿美元。该预测指向区域内电商、数字支付与在线服务的持续增长，对科技公司投资与区域数字基础设施布局具有参考意义，报告未披露统计口径与达标年份。
+- **发布时间：** 2026-10-22T12:23:14+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirgFBVV95cUxNb2FLSTFEZEQyU3N2MDUwRDhmMldYRVdQVWNfVzFoaFFUY3VOQjJia2pJMjZuS1ZYYXYta2plU3RUdGFrOTZSVkF6V21FbWJjV3VGRTF2UjBlZzRFRlA0cVhhTlFob0duNkpnZEhJb3JiMmMtT1BkalpIRkJCZ0p1cHFhMTJRbXRPSmtoMThrY1RFVklKd2x2Tl93MWI2Q2lmZHYzN1NjVFRHUU1RRmc?oc=5)
+- **摘要：** 谷歌官方博客宣布，公司与一家分布式能源企业合作建设总规模达一吉瓦的虚拟电厂，通过聚合分布式能源资源参与电网调节。该项目有助于提升电力供应弹性，但候选数据未披露投资金额、覆盖区域与投运时间表。
 
 ## 消费 Top 3
 
-### 1. 前Albertsons CEO作证称剥离方案拖垮克罗格并购
+### 1. 宝洁季度盈利超预期，销售额增长百分之四
 
-- **原标题：** Kroger doomed merger with weak store divestiture plan, former Albertsons CEO testifies - Grocery Dive
-- **来源：** Grocery Dive
-- **发布时间：** 2026-10-20T16:45:57+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSVFkM3JjZVIzc2hfbUFYUV9sX0kzeDhIa2lHZTlfT1pFSGdqZW43eWl0Nm5Qd2J0UG5ydlN3MVBJYXBuc1AwTkZLeTN3XzYyX3JFTVhSOXVpc004TkNQSDFCVloweThqQjZDSzdzMm1MeXk2LVdzMmNBUkNfU2lVZkZnTVdHOWlKeXZwMkpIeFo3RDZ1ZWFKYWpnUmI4WktXMERUcHg3UXA?oc=5)
-- **摘要：** 前Albertsons首席执行官作证称，克罗格提出的门店剥离方案过于薄弱，注定导致合并失败。该证词属于美国大型超市合并反垄断审查的一环，关系到行业集中度与消费者价格，案件后续裁决尚不明确。
+- **原标题：** Procter & Gamble earnings beat as sales rise 4%, boosted by laundry and home products - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-10-22T11:21:27+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMie0FVX3lxTFBYSGZoSC1RZ3ljdEVaOWQxSDhsd0lBdC01WXNLMVJodllaS2h1OThxbVRLWUc0ckRDOHdQNlVlWFZCTDBNbVh1SlhNeHJhVnlsMGpfV0hsWkhEcG1kSzNRY1lWU2Z0Qm5pdERlX000aWliWmM3blNJT1ZyMNIBgAFBVV95cUxOQmplR3pxdTdldmFUazNDMVZjU192bFd1WVFUQjlWSWJfOGRkUFRCWTZSdHJBeWhsUlF0dEtFM0ZzUUNhVjFiQzBuNFFJR0pZVFZaTDVfWm1mRUxxblQ0QWtVTk0tT3RYQUJhT1l4ZkdmamdBMVJNYkM2T0E1UXZlaw?oc=5)
+- **摘要：** 美国消费者新闻与商业频道报道，宝洁公司季度盈利超出市场预期，销售额增长百分之四，主要受洗衣与家居用品业务带动。这表明日用消费品需求保持韧性，但候选数据未给出具体利润额、各品类收入与全年指引变化。
 
-### 2. NRF假日调查显示可负担性主导冬季消费
+### 2. 马斯克下调特斯拉销量目标，公司探索与太空探索技术公司合并
 
-- **原标题：** Affordability Shapes Winter Holiday Shopping, According to NRF Holiday Survey - National Retail Federation | NRF
-- **来源：** National Retail Federation | NRF
-- **发布时间：** 2026-10-20T19:42:21+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxNNEg2OU1VZzNGT2QwcUxLZTZqQlRSV240Vkd0NWtVSjFYQlhHdE9ndHlhdjI1azNsM0pPTmlfUnZpY2hxU2E0UGt5WDRBSVNFTjBxc2hPNmh1UWJLWUhzQTZFSVJXNmJVSjQwOFNabzljbVBkTy1LQVFTRWpLUjMwcFVFQmpzSE1rLTEyUFBtSTVZZzVuaGlEM1R3ME9lSUdETWhSNDdyUl9HSk1Eb0gxSmhhQjcyWUJiWE8zMA?oc=5)
-- **摘要：** 美国零售联合会假日调查显示，可负担性成为影响冬季假日购物决策的核心因素。这对零售商定价、促销策略与假日季销售预期具有直接意义，调查的样本量与支出金额变化未披露。
+- **原标题：** Elon Musk sets lower sales target for Tesla as it explores SpaceX merger - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-10-21T20:09:34+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxObVhkTjVoRmk2NkRTbVExSW1sRHFHdThfWXdmQ1VWZ3ZQeW9NdkM2VmpFUmNFX0ZVb3puUWhpVk44blNNN1BndHVZWGNWUHlkdkZXaWhjaTdaMDQzbW9HX2RlTlc1dk9GWk9vNFdFcnUtc3FHbmtOdzNvOHpFb1hRTTltWHU?oc=5)
+- **摘要：** 《金融时报》报道，马斯克为特斯拉设定了更低的销量目标，同时公司在探索与太空探索技术公司的合并。该举动关系特斯拉的增长预期与资本运作安排，候选数据未披露具体目标数字、合并方案结构与时间表。
 
-### 3. 塔吉特加码假日折扣应对消费者财务压力
+### 3. 第三季度标志快餐低价竞争结束
 
-- **原标题：** Target touts holiday bargains as consumers stress out about their finances - Retail Dive
-- **来源：** Retail Dive
-- **发布时间：** 2026-10-21T15:57:59+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikAFBVV95cUxOZmJrSjJNa25VQ2FLUVRTZ28wVUNTYktPWlBxTlVjRGEwVTdRcTNqMk9fVzYwSDEwRVczRlRMa3hTdTNLbHdFaWxGYkJyMzM3bkpVdVdCTjBLMF9pa0RzZEpjMElrclVNM2ltZ2Q0RUNIaWJuZjl2U2RIbUdLMnJzN01HcHVYZlNXWEJ5ZHpnMzE?oc=5)
-- **摘要：** 在消费者对自身财务状况担忧加剧的背景下，塔吉特加大假日季低价促销力度。这反映需求承压环境下零售商以价格换销量的取向，可能影响假日季毛利率与同店销售，具体折扣幅度未披露。
+- **原标题：** Why Q3 marked the end of fast food value wars - Restaurant Dive
+- **来源：** Restaurant Dive
+- **发布时间：** 2026-10-22T15:09:57+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiowFBVV95cUxOSDlMenRrem15dTV3WENzVDB1dHFWRm1FRjYwbjVSb1p6ak9uZGRNcExpdjd6aC1JbGhkMDNCSEVIakZwcmJHa0JsSWZ6Vmd2ZWloVm82dWRRZDZzajN2d1dtUjhjWWo0M0tJd2hUd2x6bndwVkFmVWR2NnNrd3dGOWRic043Ym5UNTBJUlJxR0pVMjYzS0VvV1otb2t4LXUyVmtR?oc=5)
+- **摘要：** 餐饮行业媒体报道，第三季度标志着快餐行业折扣与低价促销竞争的结束。价格战退潮将影响连锁餐饮的客流量、定价策略与利润率，但候选数据未给出具体企业销售数据与折扣力度的量化变化。
 
 ## Cloud Infra Engineering Top 3
 
-### 1. 谷歌云回应PHP核心漏洞CVE-2026-109618与CVE-2026-109619
+### 1. 谷歌云推出智能体计算引擎并扩展智能体治理
 
-- **原标题：** Responding to core PHP vulnerabilities CVE-2026-109618 and CVE-2026-109619 - Google Cloud
+- **原标题：** Introducing Agent Compute Engine and expanding agent governance - Google Cloud
 - **来源：** Google Cloud
-- **发布时间：** 2026-10-21T14:29:14+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxOMXE1MTlaZ3ZHc0RqN0E3MnBqM2xDeGJLOEU5MDVodnE4RGsxeWNBZGtwdzluS3UwQ0JEU1BWa1d1dXk4SkJvOGR0alZSODV2bjNTTGQzTnllZkNGWUZXQUdYa1dtNE1IUnF1aXVfZE5pTnJXbVRyZlVQRzJ4T1hGUXYteWd4YXZrMXZTZmRxX2ZWWktLd1BEalpmNGM2YWdXYXQ1d2hxVUV0TFJET0wtTTlSTFZTUWJJM0tyUXdycmZJOEVQOVE?oc=5)
-- **摘要：** 谷歌云发布公告，回应PHP核心漏洞CVE-2026-109618与CVE-2026-109619。相关漏洞可能影响大量依赖PHP的应用，云服务与托管平台需尽快修补，公告未披露受影响范围及是否已被在野利用。
+- **发布时间：** 2026-10-22T13:19:15+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNXE5X05yTGVVbDd6U2g3S0xzMU1uOHlXNS1ISlBjbVlzeE9Mdkd4UEVUeEt0Ty03X1NYaDAzWllZd1lUSm8zWDByVHJ3bHpMOFZNVFZlVHVncjFUWGxWSy1nbzA2Y1dJUDYyUmVJc005M1U0cDNfcmVrV2Y0cGZKRmpfcEtVOVd6WHlPRGRCdWpxVVl3SVdvNURHMzNuYXNndHpfOEQ1UFNVVVBjQ09HUGFMUU51NVJH?oc=5)
+- **摘要：** 谷歌云官方博客宣布推出面向人工智能智能体的计算引擎产品，并扩展智能体治理能力。该产品意在支持企业在云端规模化部署与管理智能体，但候选数据未披露定价、可用区域与具体治理功能细节。
 
-### 2. 亚马逊云科技推出ECS Gateway托管入口服务
+### 2. 乌克兰打击俄罗斯数据中心，关键服务中断并影响人工智能研究
 
-- **原标题：** Introducing Amazon ECS Gateway: A fully-managed ingress solution for ECS services - Amazon Web Services (AWS)
-- **来源：** Amazon Web Services (AWS)
-- **发布时间：** 2026-10-20T17:03:38+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxON21iWlM2RVc1TmZXZzVZdnpSdFNKZnVCRDMzd0N5cXoxWTBMWHduR2d2SzBlQ3RJRFVMb2EzWWNwSWtrN1U5RWREUnFrTTBkNnZOcTFuaEtBSkIzUDZuYnFOR01mSGczdjlXTU42OGRQNjJaMl83VjRIOENLcUZDNzBWeDNUSVdBdVhkY1UzMW4zdUpnZ0RUb28wcXE2X2FZR2xBcGo3MDNDaHBmOGJIR3dBWWw?oc=5)
-- **摘要：** 亚马逊云科技宣布推出Amazon ECS Gateway，为ECS服务提供全托管的入口解决方案。该产品简化容器服务的流量接入与运维管理，反映云厂商在容器网络层的产品竞争，定价与可用区域未披露。
+- **原标题：** Ukraine’s strikes on Russian data centers disrupt key services and derail AI research - AP News
+- **来源：** AP News
+- **发布时间：** 2026-10-22T14:44:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiowFBVV95cUxQYWpTNEFPQ2s1OU5QRS1HMzBDVExXeFRlOWUxRzNWamxYTjREcENTMmw1VWlrNkRpdnFNRUFXLVZTUjI3SkZqRlhIZVVXc2hhampybC1pbHVkT2Nhd290ZVlOWEt1TDA4YzgwUUxOM2k1OEE2UFZGWi1DRkU2ckwxVHNZR3pQb2tVN3I2MjFfQlhMZjhqSDdXTTFyRUJCUlFueGlF?oc=5)
+- **摘要：** 美联社报道，乌克兰对俄罗斯数据中心的打击导致多项关键服务中断，并阻碍了人工智能研究工作。这显示冲突正延伸至算力基础设施，但候选数据未披露受影响的数据中心数量、具体服务与中断持续时长。
 
-### 3. 特朗普称数据中心应向社区支付红利换取支持
+### 3. 亚马逊威胁情报称在公开披露前发现远程代码执行漏洞利用活动
 
-- **原标题：** 'MAKE DEALS': Trump says data centers should pay communities a 'dividend' to win support - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-10-21T06:52:28+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMif0FVX3lxTE4wZXVRbVZHVzhXZUZQN1lxOS1aYVZWWDlCSkd2SUZBemVaYl8wUmdtMlZXUVZtNlF0ZFR0UGJ0ZGdTRXVkeHNPaXJkV1BvQ19wTFFzanYzYlA5a2E5RUkyel9QMW4zaVkyQXBwcUhNbjZZOFFJaVYxZ3FqbzZ2NW_SAYQBQVVfeXFMTlB6MHYtaHdDc1FQR0dzQ1dPX2txalc1SDBuck9JMkNOaTQyZG0tLVFkNGJNUm1Dc3BSSmU1bDBfbzFpamRkaF92X1NXc3gzblZFQkVsdF9LcjJUakt3SUdQMXRZYkYycV9FbjJHckVTcV9BT3hHQ1puNVFtdUZ6eXQzVjdu?oc=5)
-- **摘要：** 特朗普表示数据中心项目应向所在社区支付红利，以争取当地支持。该表态涉及数据中心对电力与水资源占用的成本分摊，若形成政策将改变项目成本结构，目前尚无具体方案与执行机制披露。
+- **原标题：** Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot - Amazon Web Services
+- **来源：** Amazon Web Services
+- **发布时间：** 2026-10-21T22:36:26+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQVVWR2dJMXQ5N3plYkRnb1ZMdmVTWlNXS2JseFRMaTV5WmdZVkp3MVhyVk1FQ09XcFQzN3N3Rko3Vl9mTnF3dndiVVVaVU1Rem5Qdk1FU2VzcDJXZjhBeXhURUtRSFNIR3dOc0VadE14ZHQteGltSkd3VzhMbzNEcmhva2xteWVJM1N6T3J4eXc2VUU0VTE1LVhSNzFnRVRnMS12UDJoSFV3QXE5Mnl4VVVHcThUMmdvZEtvMmZ6RjBtVHo0RjdfNkg0UWlEaGN3Smc?oc=5)
+- **摘要：** 亚马逊云科技威胁情报团队表示，其在漏洞公开披露前已发现相关远程代码执行漏洞的利用活动。提前发现有助于缩短客户防护窗口，但候选数据未披露受影响范围、攻击来源与具体漏洞细节。
 
 ## AI 前沿 Top 3
 
-### 1. OpenAI模型将上线谷歌云平台
+### 1. 开放人工智能研究中心用数千个智能体发掘生物数据新线索
 
-- **原标题：** OpenAI models are coming to Google Cloud - OpenAI
+- **原标题：** Using thousands of AI agents to uncover new leads in biological data - OpenAI
 - **来源：** OpenAI
-- **发布时间：** 2026-10-21T12:40:10+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5VQ0dJX2hsMnZhUnJFNnM1YkwyUHZwWmNGR3BHbGpCSEZ3YkJaaHYydV94RlF2dGJQbVZ4SnV6TFN4YWhvbkc5dGNfOTc5bXlkcDlUWmxiRnFRQ1RmSjZ1ZzlB?oc=5)
-- **摘要：** OpenAI宣布其模型将登陆谷歌云平台，使谷歌云客户可直接调用OpenAI模型。这将改变云厂商与模型供应商的竞合格局并扩大企业侧模型选择范围，具体上线时间与可用模型清单未披露。
+- **发布时间：** 2026-10-21T16:11:18+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9mT3FxTUpGSndLdWh6emNISWRnSmNEdEZFZHdMWGlZZWQyaWp3cElhVGdCX3BTTDVySVhIOExMU0xacGk4MGdKNUhJUVBFVTNpOUN2aWpyUlBuTVh1STlGdkdLSmRnbW1GNEF6NkpPRHBBNC0wMTR1UEJZVGNGUQ?oc=5)
+- **摘要：** 该公司官方博客称，其使用数千个人工智能智能体在生物数据中发掘新的研究线索。这展示了智能体在科研场景中的规模化应用，但候选数据未披露具体发现、模型能力与验证结果，也未提供论文或数据来源。
 
-### 2. ChatGPT广告扩展至26个新市场，广告主逾10万
+### 2. 英伟达开放世界模型训练、评估与部署新工具
 
-- **原标题：** ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform - OpenAI
-- **来源：** OpenAI
-- **发布时间：** 2026-10-21T13:08:10+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMib0FVX3lxTE83VjdWNHJPeklSZjF5NURic2NYOUVlVDlDeFVLb3ZuODJqQV9lWk5EVjJNSi1sWDlIUGRNNlYtQTRTcHJ5S1ZpLUJETVB3ZENseXhFY2hvY2ZsWFhsb2RYMXFYREFULUVHNndOQmRubw?oc=5)
-- **摘要：** OpenAI宣布ChatGPT广告业务扩展至26个新市场，平台累计广告主已超过10万。这显示其广告商业化提速，对数字广告竞争格局与AI产品变现路径具有意义，具体收入规模与广告形式未披露。
-
-### 3. 英伟达云合作伙伴在欧洲扩展主权AI算力
-
-- **原标题：** NVIDIA Cloud Partners Scale Across Europe — Sovereign, Open and Built for Safe AI Agents - NVIDIA Blog
+- **原标题：** NVIDIA Cosmos Opens New Tools to Train, Evaluate and Deploy World Models - NVIDIA Blog
 - **来源：** NVIDIA Blog
-- **发布时间：** 2026-10-21T10:43:51+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMzc3ZkVrM1VNUndSTEE5NGl6UmRQVGdzUS1yck5nT094Y2ktNW5IZ2J1TjI3S3J6dFNqOXRacUxwR29TY19CeHpmaUFaX1RPaTNVQ0RRY3FoVjFKYVhVbWJ2Smd0TnozRWcyV2hqelBmdFRqeVFYbDBUWGNIcTMyTTQ0TEtvMnJZ?oc=5)
-- **摘要：** 英伟达宣布其云合作伙伴在欧洲扩大布局，强调主权、开放并面向安全AI智能体的算力建设。这反映欧洲推进AI基础设施自主可控的取向，对区域算力供给与云厂商合作格局具有影响，投资规模未披露。
+- **发布时间：** 2026-10-22T05:03:59+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMigwFBVV95cUxOMWg0TFo2MFdIOWsyZnVmOTM0RVZfZXdETG14QXpVNnNlLXQzOFBtV2FzMUtSSWZidlgtVzRBdnlwbXRmMC1KcE11RFd2TEUyRTA1RUVkczAwcmJBNUV1dVhRS0I2TldvN2Zib1ZNTFJDU2VuNmtlUlQyc1hLeXpNNnhyRQ?oc=5)
+- **摘要：** 英伟达官方博客宣布，其世界模型平台开放用于训练、评估和部署世界模型的新工具。世界模型被视为物理人工智能与机器人仿真的关键能力，但候选数据未披露工具的具体功能、开源范围与发布时间。
+
+### 3. 安思雅发布二零二六年公益报告
+
+- **原标题：** 2026 Public Benefit Report - Anthropic
+- **来源：** Anthropic
+- **发布时间：** 2026-10-21T19:18:30+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1kcHFUX1BSYlFQRkNKQnU2c3FJeFh5X2N4Zk54Xzd3eTZONVM1RlljckdKeGZvLV9OSDFCelhTX0kxeEdOdko0bHNvVzhDalplVzZqUjQ3b1lsUTQ?oc=5)
+- **摘要：** 该公司发布其年度公益报告，说明公司作为公益企业在使命治理与社会责任方面的执行情况。报告为外界评估其治理结构提供依据，但候选数据未披露报告中的具体指标、承诺兑现进度与第三方评估结论。
 
 ## 国家新闻
 
 ### 新加坡 Top 3
 
-#### 1. 新加坡金管局副董事长徐芳达在SIAS投资者选择奖致辞
+#### 1. 新加坡冬海集团成立云计算子公司，切入新型算力服务
 
-- **原标题：** Speech by Mr Chee Hong Tat, Minister for National Development and Deputy Chairman of the Monetary Authority of Singapore, at SIAS Investors’ Choice Awards 2026 on 21 Oct 2026 - Monetary Authority of Singapore
-- **来源：** Monetary Authority of Singapore
-- **发布时间：** 2026-10-21T15:05:12+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiigFBVV95cUxOZzFUNkRGSXp6RWNGbEtMRVNMMmtMcTdfZ0wyanZMaWdrUThhU1RGS0d1TEFPTHhBMUhkZzRycENVT01EUUh2YzlwWUxOZDBpdXdrZDZoSmNHbUI3ZFFnWm1zS1VXR3lTY2o3YXpkRXYwbTRtWGVHWmprN2tKMGdCcERWcHppT0NnV0E?oc=5)
-- **摘要：** 新加坡金管局副董事长、国家发展部长徐芳达在2026年SIAS投资者选择奖活动上发表讲话。讲话面向投资者与资本市场参与者，可能涉及市场发展与公司治理议题，候选数据未披露讲话的具体政策内容。
-
-#### 2. 新加坡将更新企业重组与破产框架
-
-- **原标题：** Singapore to update restructuring and insolvency framework to better serve economy, businesses - The Business Times
-- **来源：** The Business Times
-- **发布时间：** 2026-10-21T10:58:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiygFBVV95cUxOdjJBZ01XcFg5ekZYSHNsQXduSVIyWTVzaTB4OGFheUhPdHhSWko3bklhZ3BCWnNLMG9WVG9aNEhPeTdyMHc5RVMwbmRjbTBYUE93VHlPcnZid21GOFlXa3JTbUFIU0RyemYtYTFZYU11OExWUXlSaklzd2xHMUlZTTRETy1OUldEN09UMDJVTFF1c0lKZE9YT0dhajA2MFo1YTJPdThBSkdEc2xnXzliMXBqbzVDUy1JYzRaZVgyc21sWGVfTTlwazdn?oc=5)
-- **摘要：** 新加坡计划更新企业重组与破产法律框架，以更好服务经济与企业需求。改革将影响债权人权利、困境企业救助效率与资本配置，对本地信贷与重组市场具有长期意义，具体修订内容与时间表尚未披露。
+- **原标题：** Singaporean tech company Sea Ltd. launches neocloud subsidiary - Data Center Dynamics
+- **来源：** Data Center Dynamics
+- **发布时间：** 2026-10-21T16:54:37+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSThscEdNdEk5Z3B5RGFyRVlUaU1SX29lTDV6TnFmV1BYaHB5UjJEMENjM2RIRzRpeHJxd3FHSEJfWGFfNnhaM1ZWYkpiMzdqMWgzVDBkenV5ZThzbEVrcWVJY0lIOGVLeS1yZzQwSWN1UFI5dzhXQW1rOTRQNVZUYVhRcGJkb3ZZT1RiQXI5TVlSRjFGaEE1VWZFT3g1Nm9UNFF0Nll5dnE?oc=5)
+- **摘要：** 数据中心行业媒体报道，新加坡科技公司冬海集团成立云计算子公司，切入新型云算力服务业务。该布局关系东南亚算力供给与企业第二增长曲线，但候选数据未披露投资规模、技术路线与目标客户。
 
 ### 中国 Top 3
 
-#### 1. 中国公布2026年三季度GDP初步核算结果
+#### 1. 香港股市录得七个月最大跌幅，刺激预期减弱
 
-- **原标题：** Preliminary Accounting Results of GDP for the Third Quarter of 2026 - 国家统计局
-- **来源：** 国家统计局
-- **发布时间：** 2026-10-21T01:30:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMigAFBVV95cUxOa3JZc01SUjFmOTRRbkRLSDI3cFJqZTV4eGZmUDdLdk42QWpRTGJ5TUNMeWN5NFBXUGpKaG0wYVM3LWNCTi1jcDNXUU4xQklMMU1NQnRfVGtFd253QlM0SDliMU9NZWFSc3F3OUpRNm8xMHlYUzM1QTg1ME9lSFB4Sw?oc=5)
-- **摘要：** 中国国家统计局公布2026年第三季度国内生产总值初步核算结果。该数据是衡量中国经济当季增长与全年走势的核心指标，也关系市场对企业盈利的预期，候选数据未披露具体增速与分项贡献。
-
-#### 2. 前人民银行行长警示AI投资潜在危机
-
-- **原标题：** Former PBOC governor warns of potential AI investment crisis, urges preparation - South China Morning Post
+- **原标题：** Hong Kong stocks fall most in 7 months as chance of strong stimulus shrinks - South China Morning Post
 - **来源：** South China Morning Post
-- **发布时间：** 2026-10-21T09:00:08+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcTFfR0RVbm9LM1Fzd0Y1NTUxaEo1UzQtV0NLdU4tdGFhMEFOcy1obXZndXE4RFItMDNraFdNM0dSWjhEZTdXMElBSmY2d095d0JMeUpWNk5YYUdUdzZoZG8yQ3N2LUxuNkxxTnVkZEd2bTNZT0E0cml6QlRhLUlrNlhIaWZPb3VIRXlaYzhJOE1DWnA4Mi00aFBlSnItUGZLQWRPTkFFMm1uWTZJcTcxVGp4d1N0bjl5c2RlN3NxMFpiZkdPVU5QTXBzTHRmNEdl0gHQAUFVX3lxTE9oYUZOc3VzRnVzS1BudmU0eVZ4Q3p6WTlSQ0kxTGZGUjJNcGN6QlNhVTlZQVVUSkcyUm5CZzRSU0RGM0VjSUk5eDdTQ3dnbVlZMUpXQi14TFEyOTBoUnJxV3YtTllMNG1PUjNEUEZFQjdrdktuX1FzZklhWHE1cVJzbncyeWtOUUdPQ1ZXY1Q5X2JtcWlfb2JwZmFLSERLQzhjc0ZvNlZULWRwMkRFdlFuZGJic2szdFRzcXNzOVRhY3dNdkhTaUVGRVgtRWJLZm8?oc=5)
-- **摘要：** 中国人民银行前行长警示可能出现AI投资危机，并呼吁提前做好准备。该表态涉及AI资本开支过热与潜在资产减值风险，对科技投资与金融稳定具有提示意义，其未披露具体触发条件与政策建议。
+- **发布时间：** 2026-10-22T03:16:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMizgFBVV95cUxNSjd4bzZJdTNZb3FyaENKbERoTjl4X1pkbWJha2dyZWpnYmdYNDIwTUZTYTcycWlMeTBTcXVIbHZud3paZnF2LTdoS0tHRHVRblN6N0tLTGtFZWV4UGEtamVTNXlHN1V1cTByZlExdHRRNnZkOV9UTmlZUlV2TUhYcndhdU1KeWVOVlp5Q01CMlRDcFhMb29fLXFPQTBKZThHcUwtT3luTWMySjhsZGFVX1VfcnJkbGFNaDQzVGQtNWFvUm5xVVBXM25GWDRld9IBzgFBVV95cUxQdlZRVWNGLVZZdGFZUURFdktjTlZNY1ZieVNIS0VDSU5FSDYyOFE1d1B4dVZjbUh1OC1QT2ZjbUMteFhid1gxeTc5QXpiajFsYkU5ZlFFNjdnQmRON3N5Q3JEOERrODJNNHo4b1dmOFc3bmRXTWo2NDlZdUMzd0tfemlwWldBSW5EUnpoYnY2U2FySm1GZE9NNjZqUXR1ZTlfWUZNMldPMlJxQW8xNHE3d1JuNE8yRE9NVXhTT2plVzRSX005eFN4SzlEU0tsUQ?oc=5)
+- **摘要：** 《南华早报》报道，香港股市录得七个月来最大单日跌幅，因市场对中国推出大规模刺激措施的预期减弱。候选数据未给出指数收盘点位与成交额，也未说明外资流向，但该走势显示政策预期仍是港股定价的关键变量。
 
-#### 3. 美国就谷歌AI机密案制裁中国相关实体
+#### 2. 地方官员考核转向综合目标，适应能力受质疑
 
-- **原标题：** US Sanctions China’s Y Combinator in Google AI Secrets Case - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-10-20T19:35:17+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxNSWpoclBQZGh5ZzFZX25ESkYzTy1JV1dTQXhFUkhsODdZZ1VUOUlFaDFjaDBkYlRIeUZEQzJoOXZyTmFkeFNxNkxKQ1l3QmFRRlhkQWM0WnlLOXdySUlwX0t5UHNXZjFzUHhfOWZoam1CWmNjdXNnQ1pMUnZFYUxCenVfd3l4SjNsM1lfTG1jdXkzRkFfdnpSdjVpSk51UnFsQmZMM0xCZmJIcWlPMjMw?oc=5)
-- **摘要：** 美国以涉谷歌AI技术机密案为由，对相关中国实体实施制裁。该举措叠加中美科技管制摩擦，可能影响相关企业的供应链与国际合作，制裁清单细节与中方反制措施候选数据未披露。
+- **原标题：** Beijing wants more than GDP growth from local officials. Can they adapt? - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-10-21T22:00:07+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivgFBVV95cUxOMUhGMm41dnZiZjFfLVRzby1kbXpMLWRKd0ZBOGNGNzNGQ2pHSjZIZkVXdk9mc3hyZTdWc1VBdW5mMkc0b2tBa3RHSklSdXZQYnJka2V2QUY5Zkhuc1RMU0M5NWRlTkRDY0hFTmdYT2kzZ0pvV1YyS1M2amNtR2ZCVFNyWDVLNG0ybVJlc2VQYllweWxVZFJnY0hMZmdCLUppNXpsRWpra3Vub25OQ1JVemZpRmI2NkxJZFFQY2dR0gG-AUFVX3lxTE5wTDQ1RUctc3FuSkZnY25ZRnAyNVFfSU81b3JfdVNxMjdMUFBlUVJrejcxUUs0YjhXa1l3VnB6SHVPVGp0N1ktakUxTi0zT3pjT3o1Njl1a1BNWGhNSHpNankxYkp0eEpsZjUyUzkydmNScjVrWklmTVg3b0xfQnllS0UyZlhjcjBoVHZ5bWNwbkJ4X0ZfM2lRdnR1YkVTM0dxaUFrbno3d0RWcDc0Z0hZX2ltam9HWmhLdkhTMHc?oc=5)
+- **摘要：** 《南华早报》报道，中央对地方官员的考核正在从单一增长目标转向更为综合的要求，报道质疑官员能否适应。考核导向变化可能影响地方投资与产业政策取向，候选数据未给出文件依据、指标构成与执行节奏。
+
+#### 3. 星巴克中国推行不点单不提供座位的新门店政策
+
+- **原标题：** No order, no seat: Starbucks China rolls out new store policy
+- **来源：** BBC Business
+- **发布时间：** 2026-10-22T04:02:29+00:00
+- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/ckzd6rjmlzvmo?at_medium=RSS&at_campaign=rss)
+- **摘要：** 英国广播公司报道，星巴克在中国门店推行不点单不提供座位的新政策，称旨在改善门店体验以应对本土竞争对手。该调整关系其在华门店运营成本与客群结构，候选数据未说明适用范围、实施门店数量与对销售的影响。
 
 ### 美国 Top 3
 
-#### 1. 美国劳工统计局发布工薪者常规周薪数据
+#### 1. 美国财政部发起行动打击伊朗影子船队网络
 
-- **原标题：** Usual Weekly Earnings of Wage and Salary Workers News Release - Bureau of Labor Statistics (.gov)
-- **来源：** Bureau of Labor Statistics (.gov)
-- **发布时间：** 2026-10-21T14:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMibkFVX3lxTFByR3hiaFpmZGZKd2VlSEltajBTVWxPQ2ZaR1gyRkxZS2VtYXBXTi1pWmV5VDhTczgyUDhBR0VmYko3UExianJrN3dFSHhoZDlNNklUdUs3MlFGaHFBUWt1RnJxb1JZNUlyRVBiUkRR?oc=5)
-- **摘要：** 美国劳工统计局发布工薪劳动者常规周薪数据。该指标用于观察居民收入与劳动力成本趋势，对消费能力与工资通胀判断具有参考价值，候选数据未披露具体数值与同比变化幅度。
+- **原标题：** Operation Economic Outcast Targets Iran’s Shadow Fleet Networks - U.S. Department of the Treasury (.gov)
+- **来源：** U.S. Department of the Treasury (.gov)
+- **发布时间：** 2026-10-21T17:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBZcHV1MXlncE9lSVBDYWtxV21RRU1HSnhwRkpSYVNOVzNvTk1oVXFOQlVweTNOSHBRc09rcnF1MXlWS2MwYUplQkFOYlBpakM5c0pWYlc3ekMtQnBpRkJ3YWt3?oc=5)
+- **摘要：** 美国财政部官网宣布开展针对伊朗影子船队相关网络的执法行动并实施制裁。此举属于美国对伊朗石油出口与航运网络的持续施压，候选数据未披露被制裁实体名单、资产冻结规模与后续执法安排。
 
-#### 2. 美国海军向机器人检测企业Gecko授予3亿美元合同
+#### 2. 圣路易斯联储探讨信息业人工智能生产率增长的早期迹象
 
-- **原标题：** U.S. Navy Awards $300M Contract to Robotic-Inspection Startup Gecko - The Maritime Executive
-- **来源：** The Maritime Executive
-- **发布时间：** 2026-10-21T02:14:35+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipwFBVV95cUxNZ2VTcS14NkhYaEVCQ25HcVVBSC11eHNHbVk1bldIdklHSFdxWXJtVEhVc2R1UkhqZmtmOENKdmNMWldEUnV0QThVQnpqdmN0NUExWG1XUTBjUkpNNEJpckwxSlJFS1JQeDRVVmhpaU1JdWJsZWVTMzVDTlY0RTRXZ0l3b0s2cVY2MFZSQmMyZmN3R093REdqV2RRQS1wMXAycXZXZFJxcw?oc=5)
-- **摘要：** 美国海军向机器人检测初创企业Gecko授予价值约3亿美元的合同。该订单反映军方对自动化检测与维护能力的采购倾斜，对企业收入与国防科技供应链具有实质意义，合同执行期限未披露。
+- **原标题：** Early signs of AI-driven productivity growth in the information sector? - Federal Reserve Economic Data | FRED | St. Louis Fed
+- **来源：** Federal Reserve Economic Data | FRED | St. Louis Fed
+- **发布时间：** 2026-10-22T14:13:34+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbFk4bDVpX2NFOVc3UDd5OGVkUEVWVFZHUGtOTXV5am9zb1FZS2dXTkE1YWZZVHJrYTM4aDg3cVRSS3ByQ0VOSzZQaGFKMlpSMDVGdm42X3pvQjBXWnZVdTR2NXdJd01HMDZMZjJfMVNPMDdYd0QwbzFhbm9YdjhIbFVHdTFzMFVzU2xBVWJoVHJKRGMtdFVOMk85aFBQbE1rNFZXUFNPanJjLXc?oc=5)
+- **摘要：** 圣路易斯联储经济数据库栏目发文，探讨信息行业是否出现由人工智能推动的生产率增长早期迹象。若成立将影响增长与通胀判断，但候选数据未给出测算方法、增速数据与结论的确定性程度。
 
-#### 3. 美国农业部公布对华及对西班牙出口销售数据
+#### 3. 美国农业部公布新财年灾害食品援助收入资格标准
 
-- **原标题：** Export Sales to China and Spain - USDA Foreign Agricultural Service (.gov)
-- **来源：** USDA Foreign Agricultural Service (.gov)
-- **发布时间：** 2026-10-21T12:49:16+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMickFVX3lxTE5WRjNiWmlJUW5LVHRSUFpHbG5SbTBJNGRWTmMxNVRLUjE1aVo3R0NDb0tiTVBjZktQYWlWRC00TnNjZ2VxVkI5WXVvcUVDNG5lQWxtZlpDc2ZBLWNaN1ZlSW9kS3NKMjBjeExLY3B2dHpfdw?oc=5)
-- **摘要：** 美国农业部海外农业局公布对中国和西班牙的农产品出口销售情况。该数据是观察美国农产品外需与贸易流向的周度指标，在中美贸易关系背景下尤受关注，候选数据未披露具体品种与销售量。
+- **原标题：** Fiscal Year 2027 D-SNAP Income Eligibility Standards - USDA Food and Nutrition (.gov)
+- **来源：** USDA Food and Nutrition (.gov)
+- **发布时间：** 2026-10-21T20:03:44+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimAFBVV95cUxOaGRLMmhJalJZWGQ1X2NBNjktdmxJQ3cxQ0xlMDhtMmthMks5UFJXUFgzX21YX2pOaXg5Y2Q1WUlLVC0xdXowNG9TQ09aYmdoa2x5UER1bzJFMzczVjh5OWxlYkhsSmVvOGgwNEJONUdYWFFiVy0tSEY3bmp2Y2JjNTJsQjYwdGJtdmJFM2F5YVY5eFVJdWlBYw?oc=5)
+- **摘要：** 美国农业部食品与营养服务局公布新财年灾害补充营养援助计划的收入资格标准。该标准决定灾害后家庭能否获得食品援助及额度，关系低收入家庭现金流，但候选数据未列出具体收入门槛与覆盖人数。
