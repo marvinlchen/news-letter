@@ -1,12 +1,12 @@
 {
   "active_cycles": {
-    "801170": {
-      "name": "交通运输",
-      "signal_date": "2026-10-16"
-    },
     "801720": {
       "name": "建筑装饰",
       "signal_date": "2026-10-16"
+    },
+    "801750": {
+      "name": "计算机",
+      "signal_date": "2026-10-23"
     }
   },
   "cycle_closures": [
@@ -51,6 +51,13 @@
       "name": "建筑装饰",
       "reason": "证据门失效",
       "signal_date": "2026-09-11"
+    },
+    {
+      "close_date": "2026-10-23",
+      "code": "801170",
+      "name": "交通运输",
+      "reason": "证据门失效",
+      "signal_date": "2026-10-16"
     }
   ],
   "events": [
@@ -118,40 +125,60 @@
       "code": "801720",
       "entry_date": "2026-09-14",
       "entry_price": 1932.74,
-      "future_20d": null,
+      "future_20d": {
+        "end_date": "2026-10-20",
+        "rank": 17,
+        "return": -0.04705754524664474,
+        "top8": false
+      },
       "future_60d": null,
       "name": "建筑装饰",
       "signal_date": "2026-09-11",
-      "status": "观察中"
+      "status": "20日已完成"
     },
     {
       "code": "801210",
       "entry_date": "2026-09-14",
       "entry_price": 7426.78,
-      "future_20d": null,
+      "future_20d": {
+        "end_date": "2026-10-20",
+        "rank": 21,
+        "return": -0.06660086874796345,
+        "top8": false
+      },
       "future_60d": null,
       "name": "社会服务",
       "signal_date": "2026-09-11",
-      "status": "观察中"
+      "status": "20日已完成"
     },
     {
       "code": "801720",
-      "entry_date": "",
-      "entry_price": null,
+      "entry_date": "2026-10-19",
+      "entry_price": 1844.35,
       "future_20d": null,
       "future_60d": null,
       "name": "建筑装饰",
       "signal_date": "2026-10-16",
-      "status": "等待下一交易日"
+      "status": "观察中"
     },
     {
       "code": "801170",
-      "entry_date": "",
-      "entry_price": null,
+      "entry_date": "2026-10-19",
+      "entry_price": 2057.87,
       "future_20d": null,
       "future_60d": null,
       "name": "交通运输",
       "signal_date": "2026-10-16",
+      "status": "观察中"
+    },
+    {
+      "code": "801750",
+      "entry_date": "",
+      "entry_price": null,
+      "future_20d": null,
+      "future_60d": null,
+      "name": "计算机",
+      "signal_date": "2026-10-23",
       "status": "等待下一交易日"
     }
   ],
@@ -189,7 +216,7 @@
       "type": "hold"
     }
   ],
-  "last_report_date": "2026-10-16",
+  "last_report_date": "2026-10-23",
   "migrations": [
     {
       "from": "v0.2-F.1-pilot",
@@ -200,7 +227,7 @@
   ],
   "schema_version": 1,
   "strategy_version": "v0.2-F.2-pilot",
-  "updated_at": "2026-10-18T10:12:37+08:00",
+  "updated_at": "2026-10-25T10:14:26+08:00",
   "weekly_snapshots": [
     {
       "date": "2026-07-16",
@@ -705,6 +732,59 @@
         "801750": "证据观察",
         "801760": "证据观察",
         "801770": "周期成熟",
+        "801780": "证据观察",
+        "801790": "证据观察",
+        "801880": "证据观察",
+        "801890": "证据观察",
+        "801950": "证据观察",
+        "801960": "证据观察",
+        "801970": "证据观察",
+        "801980": "证据观察"
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "decision_sha256": "d2941514095340bdb95553f2d4e4a8f985ac51da4a59f3769f78fa387252a5ba",
+      "engine_sha256": "3b7088cc92884ac9df61d008f339cdfc92fd91d9afe91a8246693649f709e7ab",
+      "evidence_engine_version": "rules-recovery-v1",
+      "hold_confirmations": [],
+      "input_sha256": "eaf70822380f4dbbda48a46eb86c8dc7307c085d5b20e6fa583a81b5928355e8",
+      "new_activations": [
+        "801750"
+      ],
+      "radar": [
+        "801720",
+        "801030",
+        "801750",
+        "801080",
+        "801050"
+      ],
+      "sample_eligibility": "formal_forward",
+      "simulated_activations": [],
+      "states": {
+        "801010": "证据观察",
+        "801030": "早期雷达",
+        "801040": "证据观察",
+        "801050": "周期成熟",
+        "801080": "周期成熟",
+        "801110": "证据观察",
+        "801120": "证据观察",
+        "801130": "证据观察",
+        "801140": "证据观察",
+        "801150": "证据观察",
+        "801160": "证据观察",
+        "801170": "证据观察",
+        "801180": "证据观察",
+        "801200": "证据观察",
+        "801210": "证据观察",
+        "801230": "证据观察",
+        "801710": "证据观察",
+        "801720": "早期雷达（周期仍开）",
+        "801730": "证据观察",
+        "801740": "证据观察",
+        "801750": "新激活",
+        "801760": "证据观察",
+        "801770": "证据观察",
         "801780": "证据观察",
         "801790": "证据观察",
         "801880": "证据观察",
