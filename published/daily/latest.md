@@ -1,183 +1,229 @@
-# 每日专业 Topic 新闻：2026-10-25
+# 每日专业 Topic 新闻：2026-10-26
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 英国企业预算案前放缓招聘
+### 1. 通胀与债市波动挤压亚洲银行资本缓冲
 
-- **原标题：** Firms 'holding back' on new jobs ahead of Budget
-- **来源：** BBC Business
-- **发布时间：** 2026-10-25T07:06:12+00:00
-- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/c62kep355q02o?at_medium=RSS&at_campaign=rss)
-- **摘要：** 英国广播公司商业报道称，在十月预算案公布前，不少企业暂缓新增招聘岗位。一些企业表示，希望看到预算案中的用工成本下降，再决定是否扩招。报道未给出具体企业数量或行业分布，显示财政政策不确定性正抑制企业招聘意愿，可能拖累就业与经济增长。
+- **原标题：** Asia-focused banks face capital squeeze due to inflation, bond turbulence - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-10-26T10:26:27+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ3c0Nl9IZUxGNGlIRFlNSW0xRUIzUTkxZlZJYVhtWjI5NXlGNFVJcm1IMnNMNVFWZVV4c0toYkxQYjB5Z3VXanB2ZE5ycUxERkRObDhkYUw3RGlrbFlzMVM3OXpyRVZhLTNnMkZhMkhHRU9oeGpuOHBDUWtkNkprSkZuQWVlSWtxYllmX1NlWkdqOHVWZzlubGs0WExDR29iVl95S1paMEhzOEFob1JkQWxpeTlGcnZO?oc=5)
+- **摘要：** 路透报道，受通胀压力与债券市场动荡影响，以亚洲业务为主的银行面临资本紧张局面。报道未给出具体机构名单与缺口规模，但若资本缓冲持续受压，可能影响区域信贷投放与风险承担能力。
 
-### 2. 比亚迪拟在欧洲建厂以规避电动车贸易壁垒
+### 2. 中国“国家队”ETF迎贸易战以来最大资金流入
 
-- **原标题：** BYD to build new factories in Europe to beat trade barriers aimed at Chinese EVs - South China Morning Post
+- **原标题：** China National Team ETFs Draw Most Inflows Since Trade War Rout - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-10-26T04:14:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxPc1VzZUdFMU1JMGduUUlIVHEtUkFzZnZkVDhlMGxsRERySHVxTFZCTW1QOG5sRkhjd3RpRVFRODljZTVSdFc3d0JwSGlXVVl3dV9ZbUgwcVRGd0tub3NQTjBJMlY2Qk04Nk1EcEJtdGllSHlGZDUyNHZjSVUxMXg2M3B3bThkcDFzS2dLd0JfNFFmQnVvdkJEV2l0bkRyQ2hEc01GMWxnVDRlVzJaQkdRdjJhMWo?oc=5)
+- **摘要：** 彭博报道，被称为“国家队”的中国相关ETF录得自贸易战抛售以来最大规模资金流入。报道未提供具体金额与流向明细，但资金加速流入通常被视为稳定市场预期的信号，需关注后续成交与持仓变化。
+
+### 3. 中国拟立规防范外国实体获取商业秘密
+
+- **原标题：** China drafts rules to protect trade secrets from ‘foreign entities’ - South China Morning Post
 - **来源：** South China Morning Post
-- **发布时间：** 2026-10-25T08:00:09+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0wFBVV95cUxQVE1selR1WmhFUGRFVDNDMEFCaEZ4eTBDR3hpVTRVTWR4OXpCUzFNVWdxUHlLZ0VzOGU4R2pjcEJHZDBfNUE4OWFRRF8wLU9Bak5XTWhEUlpsbXZmWldkYjNfTEl4M0l0bTRUYmtwZmtDYmxUMm1kZnZDSjVkaG5KbVVEbnU1SzdJb1BQMWstY3RfbU5WcHJVMVJYSjdKOGlmWjZlVGRMTThsWHduZklnU3R5c2JKZ1RtUkh5SnUteHN1ZGE0ZUF4Qms0T0dpMU04a01j0gHTAUFVX3lxTFBwc3F1X1BTUkpYS0hFNU14b25ZdEFjTkI1SE0zaGMxNU5rajB0cUN6SHlZQ2Y4TUViajBIajIwUUFQQTAzanR0czQyVlZGaDZHblNrYkp6SncyUi1UVjFxNFJpYTJhR1Fpc0pyU0dzZUpkR2lwRm15T3lkbXRldDVUTlBGc05VV3F1UWdNNnhoNm55aTRNdVB5ZWFfMDJjR1NuX3JCLWVSLWpfM0ktLUJVeHRVZ3FldWRuT3NmcUxnMXZNR3FHTTduRVpPbERRdjViZkk?oc=5)
-- **摘要：** 《南华早报》报道，比亚迪计划在欧洲新建工厂，以规避针对中国电动车的贸易壁垒。候选数据未披露具体选址、投资金额与产能规划。此举反映中国电动车企业正以本地化生产应对关税与贸易限制，可能重塑欧洲汽车产业竞争格局并影响相关企业资本开支。
-
-### 3. 联合国世界投资论坛在卡塔尔开幕
-
-- **原标题：** World Investment Forum 2026 opens in Qatar - UN Trade and Development (UNCTAD)
-- **来源：** UN Trade and Development (UNCTAD)
-- **发布时间：** 2026-10-24T22:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMicEFVX3lxTE1RUHdvWUFPRlpfTktRZzNBcHNKV3ZuVmRKbURzZWRybXdmVC1kSUQzOFRsVUJZRXgtZl9hVF8ydXFOTXF0UlNJVllJR2pzNTRkZlRZeVE0OHhQWHV3dzZkcnpiT1IxZUl6M3BKckhlRS0?oc=5)
-- **摘要：** 联合国贸易和发展会议的世界投资论坛二零二六年会议在卡塔尔开幕。候选数据未披露会议议程、参会规模与具体成果。作为贸发会议主导的全球投资平台，该论坛汇聚投资政策讨论，其后续声明与项目对接情况尚待观察，对判断跨境投资政策动向具有参考意义。
+- **发布时间：** 2026-10-26T08:28:14+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirgFBVV95cUxQdUhJdTc5bDkzaFRyOU9kSGJUVjJnaV9tZDltSUU5ZkJzbkJHZkw1WTdZRU5veHJZLUQzZWhzX0xEQ0dsM0NhTTRVTW1HeG1kZUJkMzNMWWNYUUdtMjJCX1hxNjZJc2ZyRnQzQUVfSUlSWlRoWXpGV2Mzb21EUWZuMVl0a1o3eW9XUWdRTExSZnFNVzBwQlFzaFVXb3JSUEFVWlVoWGxGbEVNcnlyRUHSAa4BQVVfeXFMTThPUl8xNkZxbjExTUs3ZkF4VmZGdDBKS3lEWkhYTVpEWDdzZ0FldHpjRkV2QmptcWNxVFllUDlWelpzVzdwTnRjUzNYbVI4QmxsSExmb1FPc3JzeE1SUkhDaFRncnRVMzhnUEhiamdUMlQ0U1lGQU9IbGJOX1NzN19EY1FmV3ZsdS0xZF96TXB4T0dvMEVCeEVNdDFqY1FXZm9tSENtT184YXk0RGFB?oc=5)
+- **摘要：** 《南华早报》报道，中国正起草相关规定，以保护商业秘密免受“外国实体”获取。报道未披露条文细节、适用范围与生效时间，但此类规则可能提高外资企业在华合规与信息管理成本。
 
 ## 航运 Top 3
 
-### 1. 俄称袭击两艘货船及乌克兰物流枢纽
+### 1. 受制裁油轮经英国水域驶往美国
 
-- **原标题：** Russia says it hit two cargo vessels and Ukrainian logistics hubs - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-10-25T15:35:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPY0tvWFptSmJsT1Z6OERuX3EyU25sZDlDb1JreXFGV0dlUlNMMXJiLWZaVHJxR2w5MnA0MVRqMnZ2NS1GWmxxWVRYN1BWc2NZSWtCdWlJQlFYQkE2Vy1mM2FIRlJud0YtTmR5UGg2YkNjYUl2OGw1ODF1eDRZWF9INjhQLXpldUVCSDZCSmtodTg4M1pyTmNCSWtZdnYzUDNDLXpGUU5tcl83Wkk?oc=5)
-- **摘要：** 路透社报道，俄罗斯方面称其袭击了两艘货船以及乌克兰的物流枢纽。候选数据未披露船只名称、受损情况、人员伤亡与具体地点。若属实，这将显示相关海域航运与物流基础设施安全风险上升，可能推高战争险保费并扰动相关航线与大宗商品运输。
-
-### 2. 摩科瑞因霍尔木兹损失起诉航运基准指数
-
-- **原标题：** Mercuria challenging the ‘Dow Jones of shipping’ in court after Hormuz losses - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-10-25T05:01:30+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxPNjhsRDZrVDlFU2tJMW05dldNenRENFdnLVJoUmQyN0hJek1vYlBaMFpna1FzUXozbFZsVjdmLUxETlVzOHhQbzVJSWl2MDZtQTZmenh2aWlNbHJSRlFsSzRkUUNxYUhSdGpCT0pPQVZTTFFqT0hIM2h4bE41aVhIME9mOHo?oc=5)
-- **摘要：** 《金融时报》报道，大宗商品贸易商摩科瑞因霍尔木兹相关损失，正就被称为“航运业道琼斯指数”的基准指数向法院提起诉讼。候选数据未披露被诉机构、具体指数名称、索赔金额与审理法院。该案若推进，可能影响航运衍生品基准的公信力与相关合约结算。
-
-### 3. 加尔维斯顿港获118万美元联邦安全拨款
-
-- **原标题：** Port of Galveston Strengthening Security with $1.18M in Federal Grants - The Maritime Executive
+- **原标题：** Sanctioned Tanker Bound for US Passes Through UK Waters - The Maritime Executive
 - **来源：** The Maritime Executive
-- **发布时间：** 2026-10-24T19:15:05+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxOdElFdDljYS1MMjVmeGtpZUxGVGJrUVd2eVJBZzNZWVJoeGRXTUxpcjFMaThSV0tXZ1BxU0pqSFNrMTJzUkJCcHFyUmtJTkpjemN4eGtwOUlJbUtBRE1UV2dzSm02NURKQTQ5VzZzZTVkd0c1Qmg1dTUwb1lBUTE3UGgzcHUtSXhrZThMZ203MDdlOG1RTmxlQ1NFckdNbXNwTU5aRU9GWGpneHAwNHl3?oc=5)
-- **摘要：** 海事专业媒体《海事执行》报道，美国加尔维斯顿港获得一百一十八万美元联邦拨款，用于加强港口安保。候选数据未说明资金具体用途明细与项目时间表。该笔拨款规模有限，但反映联邦资金继续投向港口安全与基础设施韧性，对区域港口运营与货运保障具有意义。
+- **发布时间：** 2026-10-26T15:34:20+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimgFBVV95cUxPZ0RYM0NRRUJULU1uam1qRWRhcG0tUU41alVkV2F5X2lvM0VVdFFVbjdhSU52R0dMOEdnYkVDeVhTWFJoZWg4N1ZMaTg2dUNCRFpiSGJJUjN3d0ZHRXdkYlB4WFRaVDU3YUZvNzBXSFdwWk1ueld4TDhpMWwtY3NXRkRsTWxncVNCVTBqVHIxSVJXVGtVdU9Cb1VR?oc=5)
+- **摘要：** 《海事执行》报道，一艘受制裁的油轮在驶往美国途中经过英国水域。报道未说明船名、所载货物与制裁执行细节，但事件凸显制裁船舶追踪与过境管辖的争议，可能影响相关航线合规安排。
+
+### 2. 邮轮在不来梅哈芬撞击集装箱船受损
+
+- **原标题：** Cruise Ship Damaged as It Hits Containership Departing Bremerhaven - The Maritime Executive
+- **来源：** The Maritime Executive
+- **发布时间：** 2026-10-26T14:59:18+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmNQZUQ3b1NmODM5SERGY0FVZDJwSGNaR1JHNkJWcF9FQ01RU2k2SnoxZHZJdUhpY20zMFJoSFBQeGwtbHE5WFhTUlVtUW1Ec1RpZ29iN0JORW00OEV0WlU5ZHk1eTJmakw5MFdiZjQyYVdfa0lNek9wOGNzR0ktelJsLWNPbEdCQmhmNk5KWmNsdnRwUHpXQW00Yk12QVFQdGpXLWdGUWw?oc=5)
+- **摘要：** 《海事执行》报道，一艘邮轮在德国不来梅哈芬离港时撞上一艘集装箱船并受损。报道未披露人员伤亡、损坏程度与事故原因，需关注后续对船期与港口作业的影响。
+
+### 3. 海湾原油优惠吸引印度转向，运费大涨
+
+- **原标题：** Gulf Oil Bargains Lure India Away From Russia as Freight Soars - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-10-26T11:37:41+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiswFBVV95cUxNYXdYako1SmpEUXdxZExsSHVJWUZFb285cUY3UHVNQzhmZTJsTzlwYW50bjQtVGJ3d0F1c2lUV211TktQUGJObHp0Vk5BandnUlptNW1Ubzl6bG81c0w3azNoaWdxQjN0NjBMdmx3b2NBS0RtZUpwSmttTFJ1aG1SNlRJQnZUOW5FbnJXeUFNTDFNekE5UEtMem9INDlxRmljNm9jZGhPdUw1eV9rbmdCLU9Ydw?oc=5)
+- **摘要：** 彭博报道，海湾原油价格更具吸引力，令印度买家减少对俄罗斯原油的依赖，同时运费大幅上涨。报道未给出成交量与运价水平，但采购结构变化叠加运费上行，可能重塑区域原油贸易流向。
 
 ## 大宗商品 Top 3
 
-### 1. 罗斯班克油田陷政治风暴
+### 1. 沙特与伊朗会晤缓和局势，油价小幅走低
 
-- **原标题：** Rosebank: Life on the oil field at the centre of a political storm
-- **来源：** BBC Business
-- **发布时间：** 2026-10-25T07:15:38+00:00
-- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/cqy8ljkle97ro?at_medium=RSS&at_campaign=rss)
-- **摘要：** 英国广播公司苏格兰新闻团队探访尚未投产的罗斯班克油田，记录船上作业生活。该油田正处政治争议中心，最终命运待定。候选数据未披露审批时间表、储量规模与投资方决定。作为英国重要未开发油气项目，其走向关系国内能源供应、化石燃料投资与气候政策之间的权衡。
+- **原标题：** Oil ticks lower as Saudi defense minister meets with Iran's president in Tehran to de-escalate - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-10-26T05:18:01+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMicEFVX3lxTFBlb3RFQnktc2pYOXZaNjR1cFFxcDVpV2poRDN6X0tJNGhGX2NCX05kSlVtaGNialZPc1E3R3g2LXZuWmpidDRobThNdzROYUFWQkFFUVBnUW9SajI4WEs0UmtiZjhPdWVvUzRlQWtWRmvSAXZBVV95cUxOY0FTdGxTWkFDWFllVFg2SDZiQVVTRWxYY1NXTW5uSmJWVEh5OGEtSjRBajhfLWtlUzRUclBnSUFPTWFPcmI0Yl9NZ3dUY1gzWk90RTY0SDQydDlfbXVGU21UVVU1dmxFb3FyQzR0d2xJUkd1NUhR?oc=5)
+- **摘要：** 据CNBC报道，沙特国防部长在德黑兰与伊朗总统会晤以缓和局势，油价随之小幅下跌。报道未给出具体跌幅与会谈成果细节，但中东地缘紧张若继续缓和，可能压制原油风险溢价。
 
-### 2. 英国冬季前取暖油价格翻倍以上
+### 2. 油价回落缓解通胀担忧，黄金上涨
 
-- **原标题：** Heating oil costs 'more than double' ahead of winter
-- **来源：** BBC Business
-- **发布时间：** 2026-10-25T07:12:21+00:00
-- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/c6n8de1jgrdvo?at_medium=RSS&at_campaign=rss)
-- **摘要：** 英国广播公司报道，冬季来临前取暖油成本已上涨一倍以上。以蒂斯河畔米德尔顿为例，当地没有管道天然气供应，许多居民只能依赖价格高昂的取暖油。候选数据未给出具体单价与涨幅统计。能源支出上升将加重无管网供气地区家庭负担，也可能推高冬季民生与通胀压力。
+- **原标题：** Gold rises as lower oil prices ease inflation fears ahead of Fed meeting - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-10-26T06:08:32+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilAFBVV95cUxOdVBTZ0xnSmRSR0FwRWJPaWlXMTROZGJsOEJqeTdaVTJ5MnlndFpIcDFEMGRhYk5TeW1jazVsS1c5QUFlS2N6QU5tMTdsZ2RJTUlHajV4QXlMNktBdjc5Z0tCajF0angtblZib09ucmpOUjVoLUIzdF9TdFlwbUpva2tFa2xMRS1rUmZZZE84T09sZUZa0gGaAUFVX3lxTE1tUkczd19CaVZvdl9NWVFkMXpSWDNkTF92ai00a00wS0IwXzRHSnE3eVczV2pNcW1kRWlVR2xjM0ctbThTMGRSUUEtelJydE5MWk1vN3dKdHlCNF9CY1YzVDAwcjRfQ1hGN1NLUlpnM2lOcFVLcWdNSWxqcmRrMVhlSXBhY2g4LW5xX01QcGVIVXhpb3llZk1WYWc?oc=5)
+- **摘要：** 据CNBC报道，在美联储会议前，油价走低缓解了通胀担忧，黄金价格上涨。报道未披露具体涨幅与价位，但油价与通胀预期变化，可能影响市场对美联储政策路径的判断。
+
+### 3. 新加坡将以地下岩洞储存沙特原油
+
+- **原标题：** Singapore to store Saudi Arabian oil in caverns - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-10-26T06:57:54+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxPeTVqaWtHQWRVeEtfZ0JNbVd6dmJLMmk4Y1haa2RWMkNHSE9wNm1aTXkzc1Zra19YWDh3bEFzNnZDRUUwc2ZIT0lVUWpkck40STd0Y2FmUGF0N3JLUk5PRTFNdUp1OWVfMFZRQW5DUWZiTnRILURFX05EX1ZIOXV6d0F4Y0I?oc=5)
+- **摘要：** 《金融时报》报道，新加坡计划利用地下岩洞储存沙特阿拉伯原油。报道未披露储量规模、投资金额与启用时间，但该安排若落地，将提升新加坡作为区域原油储运枢纽的地位。
 
 ## 股票市场 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. 新兴市场股市走低，巴西大选结果受关注
+
+- **原标题：** EM Stocks Fall Before Key Earnings, Brazil in Focus as Lula Wins - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-10-26T15:18:41+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxNSVE2akJ2V1E1aU91WFdEVWpINTdOSFVKNTFkLXUxR2dna001RU9sek10OTd3QU9nb0E3R1o2Z2tjUVNRaU94UTZqNlNUVXV1MElEU0pPTnhmMk95Ny0wbG11YXdJbjZoRmNFc3ladThialB4SGdJZUhJRWNiaDYxdW9TbXlIc1NuRW5tRWh3SmdmbnN1b2diem5IX29BUjZubXdCRTJudW1NdUgzM2dYRnowRmU?oc=5)
+- **摘要：** 彭博报道，在关键企业财报公布前，新兴市场股市下跌，卢拉胜选后巴西成为市场关注焦点。报道未给出具体指数点位与跌幅，但新兴市场情绪正受财报与巴西政治格局变化共同影响。
 
 ## 科技产业 Top 3
 
-### 1. AI支出担忧或盖过大型科技股强劲业绩
+### 1. SpaceX与阿波罗达成400亿美元芯片融资协议
 
-- **原标题：** AI Spending Fears Threaten to Swamp Big Tech’s Strong Earnings - Bloomberg.com
+- **原标题：** SpaceX Agrees to $40 Billion Chip-Financing Deal With Apollo - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-10-25T13:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiswFBVV95cUxQX0l3bHQyejdhX0oxSnVaMDl0TTRTQlF2M25FUE1fZV96VVFXSUdjXzFGblEwOWdOYkM4OWFjV0VVck4yWlVfSVVxemJVUG5PRTVnZHZXMHVSeVJMSUUzNjZTM041MTlyVjd6QUF3ckVDUlVJSFVCcF8xSi1aNWdndVdhd1lSaWNQUUJZNE5VWUQtRjJJampiRlkzRWczOFZyU1dtamtXVWpFdDdxVnFNTWRGSQ?oc=5)
-- **摘要：** 彭博社报道，尽管大型科技企业业绩强劲，市场对人工智能相关支出的担忧可能盖过这一利好。候选数据未列出具体公司、资本开支指引与业绩数字。若担忧持续，人工智能投入的回报与现金流压力将成为科技板块估值的关键变量，影响后续财报与资本配置预期。
+- **发布时间：** 2026-10-26T12:44:41+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxPamdPTzVpR21fZ2xIMVMzZXdYWlRoLUVxeERUQWxJem80cV8yODZNT0hlcEJFLUJCNFR3TzdqcTk5UjgxZWppWUhHNzJFWlVldWEycXRWUk1JSW9IWVp5QWh0dHhoSWhiWlVORjV3UnhRM1ZYX1NOSmgtYktOZ2pzU25oYXdLWTJGdjRPTFBkRElKS3VJeWVSSVotbEY2MG5zcmJ2dFRjNERzMm9FYy1R?oc=5)
+- **摘要：** 彭博报道，SpaceX与阿波罗达成规模约400亿美元的芯片融资协议。报道未披露资金用途、期限与标的资产细节，但该交易显示在AI算力需求推动下，芯片相关融资正加速向大型另类资本延伸。
 
-### 2. 中国科技巨头百万年薪争抢新型AI工程师
+### 2. 微软推出自愿离职方案
 
-- **原标题：** China’s tech giants are paying 1 million yuan for a new kind of AI engineer - South China Morning Post
+- **原标题：** Introducing a Voluntary Exit Offer - The Official Microsoft Blog
+- **来源：** The Official Microsoft Blog
+- **发布时间：** 2026-10-26T15:44:49+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihgFBVV95cUxORGZCSEVkeFJFazFGbF9FQ0tORldfYzByU3V0YmpOWmU2SU91ZlRPTHdORklSY3VIWTZWOUxVNko3N0RfRXNFeGpmM3c5QkhYR2gtLWtWaTNwajlwTk1ZVGtsUVJCSTJEZHNjTTVMa3cyQTZNSm9PSll5aFZUd0tMbldaUzZLUQ?oc=5)
+- **摘要：** 微软官方博客宣布推出自愿离职方案。公告未披露涉及岗位范围、补偿条件与人数目标，但这类举措通常意味着公司在成本与组织结构上进行调整，后续需关注官方披露的规模与影响。
+
+### 3. AI芯片出口激增，韩国贸易顺差创纪录
+
+- **原标题：** AI chip surge lifts South Korea to record surplus, behind only China - South China Morning Post
 - **来源：** South China Morning Post
-- **发布时间：** 2026-10-25T06:00:20+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuwFBVV95cUxQenFjdkc1ODFiS2NKVWdqbERCdzllX2R1R3ZVU1FLTHRZbUtsanJCZFR2YzFaOUVHamZjRnhOVHZQRU44T29kZDJwUkZVX09lSG5KMGR1Tnl5aGtmdG9YUFRzbTN2QXE0aWM1UUlQb0RLWW1abzM4TGRjb29WT04wYjRqb2h6bGVsTHVKaHZ3SWxOUXlZMEZSNVNKdmhKYU5IYlI1WFB1bWtMZl9OMGNSNndma0lNZG9IQW1N0gG7AUFVX3lxTFAxazkyRjhZS2tTNFFvUVRlRGxfUC1JeTY2bEVZanRydDFybjd4ZVd1RUFiU0YtcXU3N0dpWGJCa1hYb3dnYWgzdTR2cFVJbWhTYkVvZkVBSTIycWZJZ2hEc1hWS1VoaHg2aGxHb0dCSEFxVTVQQWZUbFVxZjRzbGNxNk1BM1RJU256eVp3VDV1TTVwWXNHWWxtVG5STGo0cDJEMmtqLVdCLTc4N196R2VyVkYxalVHLXRUTUk?oc=5)
-- **摘要：** 《南华早报》报道，中国多家科技巨头正以约一百万元人民币年薪招聘一类新型人工智能工程师。候选数据未披露具体企业名单、招聘岗位定义与人数。高薪争夺反映人工智能人才供给紧张与企业算力投入竞争，可能推升行业人力成本，并影响科技企业利润率与研发资源配置。
+- **发布时间：** 2026-10-26T08:39:38+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivgFBVV95cUxQeHcwaG1RQ0RTNzdYc0d6LVpQamYwRzh3ZDRVWC1EcG52cXBhRnZwRGhDSGVXeWVzVDkxbEhLRWRBV3plMUt3R0xFWGtCdkdSelI2MDRhSkU1WXhyamVGSTU2cEJlNTRJajNadmlsZ3htSTFhbjNJcVpPelBaUmpvLTZNY205aWR4SXBCaS12cTNhUTh2ckRLZHdRYjJJZm1OOGhPVTRySk1hRHplUjZwcGFkMGlUSnFkbElieW9B0gG-AUFVX3lxTFA4T2FCM0JIeVFnZlZBd3lKV0JUY1A3SERUajdTeTZvZGJ4cEVVSzJIVzBHNEptWEtRcF9LU21oOWJieTJqSG91TkctTXo1MG5mUHg5UTFycG40dWVkS1ZPcER3WURxQlZTQk4wY3ZzcDhsOW9EMVE4Zy0wZ1F5bEZ2dmZaU1dNQVlaaTY1YnhCTGsxanJnV0oyMUlsVVhiaFJxRkFvQUVhTHpTbzZwVUpmSlFRbWJFV3hlei1RblE?oc=5)
+- **摘要：** 《南华早报》报道，AI芯片出口激增推动韩国录得创纪录贸易顺差，规模仅次于中国。报道未给出具体顺差金额与统计区间，但显示AI芯片需求正在重塑东亚贸易格局与相关经济体出口结构。
 
 ## 消费 Top 3
 
-### 1. 中国需求疲软致奢侈品集团市值蒸发2500亿欧元
+### 1. 艾伯森推出新的订阅制会员计划
 
-- **原标题：** Luxury groups’ value drops by €250bn as Chinese consumer demand fades - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-10-25T09:11:33+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNUnJtREJDUGc4d2g3QmVpRUgtb0RnYlhUZndUbnk2M0ZJNzg3VFp1TlFyOWpnbUE2c3U1OXJtanlWaEZ2cWZ4YkFmOUluR1FJbkJKUlNHLUdrSGFJVlFNSVNHcGp4RUk2b2tXRFo0T1dvTlA3MnBPTy1SbkNwbVpCcU5zSWI?oc=5)
-- **摘要：** 《金融时报》报道，受中国消费者需求走弱影响，奢侈品集团总市值已蒸发约二千五百亿欧元。候选数据未列出具体企业、统计区间与跌幅分布。中国曾是奢侈品行业核心增长引擎，需求持续疲软将压缩品牌收入与利润预期，并迫使企业重新评估定价、渠道与库存策略。
+- **原标题：** Albertsons launches new subscription program - Grocery Dive
+- **来源：** Grocery Dive
+- **发布时间：** 2026-10-26T15:51:20+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiugFBVV95cUxPZ2M2X2dJa0Y4N2NKU2hvbENSaWZWckpld2JDQmE3MVlPbVhMNWRpbGtUZ3V6N2FaWVh3N2g3YjhXMGx4LURtRmZKUkhzTDdfdGZrc3luaVpYZ0ctZ3V2T1JNTnZzQUdTck1KNU9SN0lmX0lpQVJOaGlaU28waEdGU0NmVFllTEZYb3ZpdDNyOWpTUGxoNzJmeEd6dzVlYnhER2tGcHVBek1aY3JGSFZ1Rk1uUFdMU0lLN0E?oc=5)
+- **摘要：** Grocery Dive报道，美国连锁超市艾伯森推出新的订阅制会员计划。报道未披露价格、权益细节与覆盖门店范围，但在食品零售竞争加剧背景下，订阅制可能成为提升用户黏性与稳定收入的工具。
 
-### 2. 特朗普称奥迪将在佐治亚州新建汽车工厂
+### 2. 温迪汉堡一加盟运营商申请破产
 
-- **原标题：** Trump announces at a Georgia campaign rally that Audi will build a new auto factory in the state - AP News
-- **来源：** AP News
-- **发布时间：** 2026-10-25T02:22:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipgFBVV95cUxPRTFJejhGVHpHM3RQVWQ4UzVmaWJfSUVsUkJJaENrN1h0bjA0aHhvaDVvREd0QllZQnU1Q3J4RnBKNmg3aVRWRWxBeDNuMmdQRVpKamNEWmQ4bnlxYzJGVTRMdGpjaU5kNGZ1Skt5VE5WNi1Sa1d5UENGVUo1dko1YVM4OGFMcENiTHVBU2RTV0psdks0ZkVzU0N4Nm5IM3BhY2R4ZEN3?oc=5)
-- **摘要：** 美联社报道，特朗普在佐治亚州一场竞选集会上宣布，奥迪将在该州新建一座汽车工厂。候选数据未披露投资额、选址、开工时间与就业岗位数量。若落地，这将扩大奥迪在北美的产能布局，并反映美国以产业政策与关税环境吸引汽车制造投资的持续趋势。
+- **原标题：** What this Wendy’s operator bankruptcy can teach franchisees - Restaurant Dive
+- **来源：** Restaurant Dive
+- **发布时间：** 2026-10-26T15:28:45+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxQc1BNc3ZhdTYxajJ4NEZuUFJ5Wll2al92WjRmcTJXeUJQUVp0QTZ6ak9HWHI4elVYYnkxY0pBYjFVLV9NdEZGaldYdE9NX1FzeHlOSGt2NVVBVHhoeE05X1lUaWlzdXgwXzdFTTE0eGlmMFF1dDljZDl4U1lIYk9pdXZuRGQ5OC1uNk9YWnVFQXJnVnQ4MFZreWVoQldOVlYwLUhWRmlpU181QURld1BQUEpPbFhvQQ?oc=5)
+- **摘要：** Restaurant Dive报道，一家温迪汉堡加盟运营商申请破产，文章分析其给其他加盟商的启示。报道未披露涉及门店数量与债务规模，但反映出餐饮加盟商在成本与客流压力下的经营风险。
+
+### 3. 渣打牵头的Anchorpoint拟推零售稳定币
+
+- **原标题：** Standard Chartered-led Anchorpoint plans retail stablecoin on public blockchain - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-10-25T23:00:15+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi2AFBVV95cUxNeTJ4ZDQxZDFSemN2N0xnVzVvaDA5T3JVQmRfc2NZckJnSWlmUEZyUnZpMkRfY05KTnJpNzB3UkgwRUtaWVh5R1hma1VWTzhCWUFCYnRoQzh6WjZWR25CVzVyMzRVVDg0VVVzUEVobm8xVzN5OVl1ZnpkXzl4WUVIenNySzlxZlVPaWVNWC0xcVBjcnhhR1J4S3hPR29fUmVSQXIxamhMc3A0TDZPMTZ0QmM3UGN0Y3BnRzF4VmpQS1VLODJsVHF6RjJWUVE4b1QycmNWeG9kbknSAdgBQVVfeXFMTW5rbDVaVHE0YjEtSGdObDd2VFhBZWhwVVBEZ3NaSVhhcWJZRm9wRkdLeE1pUFZnZ0JoVEswRWUyNlFORUdZQzVFVlhKWndTd2NkSjBIWk9LRGsyS0RZbDBQaTJlRE5rT3NCZGU0SV81cldtOTRYZmdzUGdQSUktaUJvN1FMbm9SRHk0d1VHSGM1UGRTTl9mMk5rOWJxdG42d2JrMURlTWFGNzZGY3JSSXdvNUplajlqOGowUzJBYzduQWlLM0FJem1MTEptR0R0RmpYMHpRTjNr?oc=5)
+- **摘要：** 《南华早报》报道，由渣打银行牵头的Anchorpoint计划在公共区块链上推出面向零售的稳定币。报道未披露发行时间、规模与监管审批进度，但项目若推进，将影响零售支付与本地稳定币监管路径。
 
 ## Cloud Infra Engineering Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. Verizon上调全年指引，与AWS签逾20亿美元AI基建协议
+
+- **原标题：** Verizon lifts annual forecasts, signs more than $2 billion AI infrastructure deal with AWS - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-10-26T14:01:23+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1AFBVV95cUxNUXJNWmV4Ny1ON2FmYXdrclBkWWdrZXdfX2JHLUdoZ3ZLamJNdHl1NHc3RDk4TWUxZVRZMUN2QTVvMk01Ujk4Wmk2ejZOT3h3UmlWUmp6S0lLVHBSZmVvQ0c0Sm1xYVVMNXN4M2JkNWtKVUpoWEd4YloyWVJBME8tb0htQnhzNzA5V1ZWWlE5cE10a25nNWtxQmc5dDlGdF9MZzRYMllaMHI5eXlINXpCeVJKZmVFRmttRmFQZUtFOTNDNEx2OUlGemNBV1FuLUNDdWdFZQ?oc=5)
+- **摘要：** 路透报道，Verizon上调全年业绩指引，并与亚马逊AWS签署规模超过20亿美元的AI基础设施协议。报道未披露协议期限与具体服务内容，但这显示电信运营商正加大与云厂商在AI基础设施上的合作投入。
 
 ## AI 前沿 Top 3
 
-### 1. OpenAI推前向部署工程助力企业AI落地
+### 1. Kao Data将托管CommonAI推理扩展实验室
+
+- **原标题：** Kao Data to host CommonAI's AI Scaling Inference Lab at Harlow data center - Data Center Dynamics
+- **来源：** Data Center Dynamics
+- **发布时间：** 2026-10-26T10:48:18+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMnhyN3BXNVlveXdIQ0VlYWFsWFlCNzQtMzh0Q2htcVZCNlFwaUJsNHRUWG4zTHZCZ1RpbnlBNEFvLXBkVkR2TUxXWjBLeUJKWEFGbXpOSGVkLWYzdW5QSlRmbkR6X251c2NZWjIxc3QyS0ttWTZJUjlSYkpxczVwUE44UTJGZkRzRmRTYlJxVFpKQ0owVDV6SWJjVWI0YTVhVVBzR2R2dnpZcDhvckRITTV5WmJMd2NT?oc=5)
+- **摘要：** Data Center Dynamics报道，Kao Data将在其英国哈洛数据中心托管CommonAI的AI推理扩展实验室。报道未披露投资规模与算力配置，但反映AI推理需求正推动数据中心承载更专业化的实验与部署能力。
+
+### 2. OpenAI以前向部署工程推动企业AI落地
 
 - **原标题：** Forward deployed engineering for enterprise AI - OpenAI
 - **来源：** OpenAI
-- **发布时间：** 2026-10-25T06:49:30+00:00
+- **发布时间：** 2026-10-26T14:49:26+00:00
 - **原文：** [查看原文](https://news.google.com/rss/articles/CBMiaEFVX3lxTE83U3U4d1VwQlZOZUdXZldtZEV3b05MSnhySllDMC0yUktXaFFLZEhELWJMMDN0M3k1c01SeGJncDNfc29iMU9aV3VqdFY2UEp3clVPaXlNSzhuSi1jREdwWnpNNlJEcmZl?oc=5)
-- **摘要：** OpenAI发布题为《面向企业人工智能的前向部署工程》的文章，介绍其将工程团队前置到企业场景、推动人工智能落地的做法。候选数据未披露具体客户、技术方案与成效指标。作为第一方发布，它显示前沿人工智能实验室正把工程化交付能力视为企业市场竞争的关键环节。
+- **摘要：** OpenAI官方博客介绍其为推动企业AI落地而采用的前向部署工程模式。文章未披露客户数量、收费与团队规模，但显示模型厂商正把工程服务前置，以缩短企业从试点到生产部署的路径。
 
 ## 国家新闻
 
 ### 新加坡 Top 3
 
-#### 1. 新加坡金管局招标发行六个月国库券
+#### 1. 新加坡发布五年能源基建计划并设新太阳能目标
 
-- **原标题：** Auction: BS26121N 6-Month T-bill (New) - Monetary Authority of Singapore
-- **来源：** Monetary Authority of Singapore
-- **发布时间：** 2026-10-25T15:56:47+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixAFBVV95cUxNUnpZaU95dmhmZW0wUktkSFl3YlhPdlZJNFQ3Qm90UEFVa1BoUlVLbWpyYnRSSHBpcFdqYkV4SzZ6VnJDeEd1a0RYam9mWXZISWp4V080Zm13S3RrTHdQeXJvVHNuZFZxTGdaQkRrZHFVRy1TU0hnR3VqdEw4UDVKOTN2c1BFeDVRd2M4RnppckhKVHp3b0gyVmI1LTZrMEl3UTNCUTdPM1Fjem54OEwzbjFpaVM0ZG5mWlc0aWJrMm9OTk1w?oc=5)
-- **摘要：** 新加坡金融管理局发布公告，将招标发行代号为 BS26121N 的新六个月期国库券。候选数据未披露发行规模、投标截止与结果收益率。作为第一方发行公告，它为观察新加坡短期利率与资金面提供参考，相关配置需求与定价尚待拍卖结果确认。
+- **原标题：** Singapore launches five-year energy infrastructure plan to meet growing demand, sets new solar target - CNA
+- **来源：** CNA
+- **发布时间：** 2026-10-26T01:53:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiswFBVV95cUxOaTFNWmFUanR1eFhlcWZoLS1nTU1vdG1seTA2SEg2b181VzJQQ0QyQ3NrOUJuYlFDVjBzSXl3MG5lWVVjYk5EMXMwVkdhWFd2VEUxSE5uN1dxc2N5RUIxVlhWalppU0tZdUdGSXdGeGZQREhib3I3dVZlVncwYzhVMjR6M2lVRlFSZEhVeTlIdkFaZlBjd2RDR21ERFFGTG14WlIxRTNUYi13NWh1andjcXEyWQ?oc=5)
+- **摘要：** 据CNA报道，新加坡推出五年能源基础设施计划，以满足日益增长的用电需求，并设定新的太阳能目标。报道未披露投资金额与装机数值，但电力与新能源建设将影响当地能源成本与长期供电能力。
+
+#### 2. 新加坡转向近海巡逻舰应对海上威胁
+
+- **原标题：** Not every maritime threat needs a warship: Why Singapore is turning to offshore patrol vessels - CNA
+- **来源：** CNA
+- **发布时间：** 2026-10-25T22:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiswFBVV95cUxNT2U1cmpYaGVZRHFxRGZyVVMtVG9Mc0ZzNUdMR2lWT241ajRxWHlaeVV5ZWNNY21HM3pvUGRVMkRHSTg5dHA2YXhuVWtQYVZHUEtHb0lFT21uSWJoR2VkV1EtQ0cxRUhlZlByUUYxZ09nd2w1c19QWDBPbHQwTUdhSkpfVGV5a3htWWNsR3RSRHlETGN1bVpzdld1ZXlXeHJtRXZaWEhibzdRY3R1Qm9BS21ENA?oc=5)
+- **摘要：** 据CNA报道，新加坡正转向使用近海巡逻舰应对并非都需要军舰处理的海上威胁。报道未披露采购数量与预算，但这一调整反映其在成本与任务分工上重新配置海上安全力量。
+
+#### 3. 中国市场趋难，新加坡企业寻找新增长空间
+
+- **原标题：** China’s market is tougher than ever. Where can Singapore firms still find room to grow? - The Business Times
+- **来源：** The Business Times
+- **发布时间：** 2026-10-26T00:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxQY0pYZXZOV29hTWxCdUpoa01BN0tSSHc5QVdMMWtNRTVUbzNzXzFzTUhWZVVibVZBckM5bEVkWVpZejAydEpBMzlDV1ZqM0QwMkZHMnhrZlVGQTNsbjgtWlM0alBqUElrcV9XQks2RlhBcEM2aDJydjVFa0FJWThvdVRPVHphMEpBaWMxYmFqbjRITkw2YjVHTElDSFhTNnVQNGh1R1kwSk5pOTlnci1hYUNjQUF4NzhaRHEyQzc4eWd5T01qZUE?oc=5)
+- **摘要：** 《商业时报》报道，中国市场环境比以往更严峻，文章探讨新加坡企业仍可寻找的增长空间。报道未给出具体行业与企业数据，但在华经营压力上升可能影响新加坡企业的区域布局与营收结构。
 
 ### 中国 Top 3
 
-#### 1. 比亚迪欧洲建厂应对电动车贸易壁垒
+#### 1. 中国出口激增，外溢影响波及全球
 
-- **原标题：** BYD to build new factories in Europe to beat trade barriers aimed at Chinese EVs - South China Morning Post
+- **原标题：** Business Daily
+- **来源：** BBC Business
+- **发布时间：** 2026-10-25T19:00:00+00:00
+- **原文：** [查看原文](https://www.bbc.co.uk/sounds/play/w3ct8ggp?at_medium=RSS&at_campaign=rss)
+- **摘要：** BBC商业节目报道，中国出口出现大幅增长，其影响远超本国范围。报道未给出具体增速、品类与贸易伙伴数据，但出口结构变化可能加剧其他经济体在制造业与贸易上的竞争压力。
+
+#### 2. 巴西吸引创纪录中国投资，产业政策受关注
+
+- **原标题：** Brazil draws record Chinese investment. Is Lula’s industrial strategy a problem? - South China Morning Post
 - **来源：** South China Morning Post
-- **发布时间：** 2026-10-25T08:00:09+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0wFBVV95cUxQVE1selR1WmhFUGRFVDNDMEFCaEZ4eTBDR3hpVTRVTWR4OXpCUzFNVWdxUHlLZ0VzOGU4R2pjcEJHZDBfNUE4OWFRRF8wLU9Bak5XTWhEUlpsbXZmWldkYjNfTEl4M0l0bTRUYmtwZmtDYmxUMm1kZnZDSjVkaG5KbVVEbnU1SzdJb1BQMWstY3RfbU5WcHJVMVJYSjdKOGlmWjZlVGRMTThsWHduZklnU3R5c2JKZ1RtUkh5SnUteHN1ZGE0ZUF4Qms0T0dpMU04a01j0gHTAUFVX3lxTFBwc3F1X1BTUkpYS0hFNU14b25ZdEFjTkI1SE0zaGMxNU5rajB0cUN6SHlZQ2Y4TUViajBIajIwUUFQQTAzanR0czQyVlZGaDZHblNrYkp6SncyUi1UVjFxNFJpYTJhR1Fpc0pyU0dzZUpkR2lwRm15T3lkbXRldDVUTlBGc05VV3F1UWdNNnhoNm55aTRNdVB5ZWFfMDJjR1NuX3JCLWVSLWpfM0ktLUJVeHRVZ3FldWRuT3NmcUxnMXZNR3FHTTduRVpPbERRdjViZkk?oc=5)
-- **摘要：** 《南华早报》报道，比亚迪计划在欧洲新建工厂，以规避针对中国电动车的贸易壁垒。候选数据未披露选址、投资额与产能。对中国而言，这标志电动车企业从整车出口转向本地化生产，以关税与贸易限制下的新路径维持海外份额，将影响企业海外资本开支与全球产业布局。
+- **发布时间：** 2026-10-26T13:00:08+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi3wFBVV95cUxQSGZTR3FDVTZva21lWFlyWnpBZXkxdkdjbW5TTFpqOVJZXzJNcTlseC1UbnhMQ0k4MUw5NUVYZjN6M2RiRlZUVmxkRE1IdGJKM2Z2NzRTcDhyazl0YWh5VzJqN28wTERpVkJnMTNveFlrU0h4LUNmVUdjYjV4YzM0U2o2czFXOVFWR0tZVEZjb09JOVdSckVsSkFEVEM3bTJmaFJPM09tQXFuVTlzNXZZUThnYVlmaWVwTzVGYzEyckdhS2JEdmtxTjFWNlk3TnBsbkliVkpHVHRJZTdSSFRn0gHfAUFVX3lxTE84MEZBX18yQVhSMFd2Ry1OWHpOR040S3l3cVVaLTZFMm5KRDFZaDNlQjhmdmRwOUZOaE5tY0pFWHJIS2lkYXk0NnByYkJjQ211Y3lKNDZxLXgyWGJTVjdSZzRBVVhHSmh6ZFBWZncxcjI3ZnJIc28xYmdUMVBpa29HYVNDVnVYVVk3aXZfT042STgyZzhvbG9yTTJ4R3lQSWRFaUJVRFhodVlFTWJvLW5vdWRFQjF0SHJpcUw3REdDbnA2TFBCd2ZVckh4VWN0Tmdhdnl3cUItQnpoYmp2Tms?oc=5)
+- **摘要：** 《南华早报》报道，巴西吸引到创纪录的中国投资，文章讨论卢拉政府产业政策是否会带来问题。报道未披露投资金额与行业分布，但中国对外投资流向变化将影响全球产业链布局。
 
-#### 2. 中国科技企业高薪招聘AI工程人才
+#### 3. 中国“国家队”ETF资金流入创贸易战以来新高
 
-- **原标题：** China’s tech giants are paying 1 million yuan for a new kind of AI engineer - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-10-25T06:00:20+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuwFBVV95cUxQenFjdkc1ODFiS2NKVWdqbERCdzllX2R1R3ZVU1FLTHRZbUtsanJCZFR2YzFaOUVHamZjRnhOVHZQRU44T29kZDJwUkZVX09lSG5KMGR1Tnl5aGtmdG9YUFRzbTN2QXE0aWM1UUlQb0RLWW1abzM4TGRjb29WT04wYjRqb2h6bGVsTHVKaHZ3SWxOUXlZMEZSNVNKdmhKYU5IYlI1WFB1bWtMZl9OMGNSNndma0lNZG9IQW1N0gG7AUFVX3lxTFAxazkyRjhZS2tTNFFvUVRlRGxfUC1JeTY2bEVZanRydDFybjd4ZVd1RUFiU0YtcXU3N0dpWGJCa1hYb3dnYWgzdTR2cFVJbWhTYkVvZkVBSTIycWZJZ2hEc1hWS1VoaHg2aGxHb0dCSEFxVTVQQWZUbFVxZjRzbGNxNk1BM1RJU256eVp3VDV1TTVwWXNHWWxtVG5STGo0cDJEMmtqLVdCLTc4N196R2VyVkYxalVHLXRUTUk?oc=5)
-- **摘要：** 《南华早报》报道，中国科技巨头正以约一百万元人民币年薪招聘新型人工智能工程师。候选数据未披露企业名单与岗位细节。对中国科技行业而言，人工智能人才争夺推高薪酬成本，可能影响企业利润率与研发投入结构，也反映国内人工智能应用层竞争正向高端人才与工程能力集中。
-
-#### 3. 中国需求走弱拖累全球奢侈品板块
-
-- **原标题：** Luxury groups’ value drops by €250bn as Chinese consumer demand fades - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-10-25T09:11:33+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNUnJtREJDUGc4d2g3QmVpRUgtb0RnYlhUZndUbnk2M0ZJNzg3VFp1TlFyOWpnbUE2c3U1OXJtanlWaEZ2cWZ4YkFmOUluR1FJbkJKUlNHLUdrSGFJVlFNSVNHcGp4RUk2b2tXRFo0T1dvTlA3MnBPTy1SbkNwbVpCcU5zSWI?oc=5)
-- **摘要：** 《金融时报》报道，因中国消费者需求减弱，奢侈品集团市值合计蒸发约二千五百亿欧元。候选数据未列出企业明细与统计区间。中国需求变化直接关系奢侈品行业收入与估值，持续走弱将促使品牌调整在华定价、渠道与库存，并对欧洲奢侈品企业盈利预期与资本开支形成压力。
+- **原标题：** China National Team ETFs Draw Most Inflows Since Trade War Rout - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-10-26T04:14:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxPc1VzZUdFMU1JMGduUUlIVHEtUkFzZnZkVDhlMGxsRERySHVxTFZCTW1QOG5sRkhjd3RpRVFRODljZTVSdFc3d0JwSGlXVVl3dV9ZbUgwcVRGd0tub3NQTjBJMlY2Qk04Nk1EcEJtdGllSHlGZDUyNHZjSVUxMXg2M3B3bThkcDFzS2dLd0JfNFFmQnVvdkJEV2l0bkRyQ2hEc01GMWxnVDRlVzJaQkdRdjJhMWo?oc=5)
+- **摘要：** 彭博报道，被称为“国家队”的中国相关ETF录得自贸易战抛售以来最大规模资金流入。报道未提供具体金额与流向明细，但资金加速流入通常被视为稳定市场预期的信号，需关注后续成交与持仓变化。
 
 ### 美国 Top 3
 
-#### 1. 零日期权交易者押注标普500波动收窄
-
-- **原标题：** Zero-Day Option Traders Are Betting Against Big S&P 500 Swings - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-10-25T14:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiswFBVV95cUxNaW9NZFpvd292NzhoTHBaRFZOZEZvR3lsSWhCMmtUS3F1OTJUelZsbzkyX1llbFNLdk5SVlNzM09RRXMxMzd6dVlTTUhLcFZ0Z0UxZ3NlNlpreW41d1c2ckh1SWdSQlcyR1hueVhtejBTaHNlMFdjdFNMQ2NNaENMOU1iOVpya0JQZUpqVHJQVUlycjVIaFRjQ0ZoeThiUHpKem0tZThCSUpXV0NJYjdGMGVIbw?oc=5)
-- **摘要：** 彭博社报道，零日期权交易者正押注标普五百指数不会出现大幅波动。候选数据未披露具体持仓规模、合约结构与触发因素。若市场共识趋向低波动，短期期权定价与对冲需求将随之变化，并可能影响标普五百指数的日内波动特征与相关衍生品风险敞口。
-
-#### 2. 美国食品安全检验局更新召回与公共卫生警报
-
-- **原标题：** Recalls & Public Health Alerts - USDA Food Safety and Inspection Service (.gov)
-- **来源：** USDA Food Safety and Inspection Service (.gov)
-- **发布时间：** 2026-10-25T05:44:13+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMigAFBVV95cUxOem04VlVpX196R0IxRUI5cldpQmNKbjVlNXlKRWxpSUR0TU5JVS1YZGR3cVhGY0ZuRnFMT0ZDRERseGZ4WTE4UWRodTV2cmQwdGhoRm51b1NZVjBvVGExaHROUVBFNTItNG9SSFpNbjEyd3F5TmtuaFZRYldhMDdCSA?oc=5)
-- **摘要：** 美国农业部食品安全检验局更新其召回与公共卫生警报清单。候选数据未披露具体涉及企业、产品名称、召回级别与影响范围。作为第一方监管信息，该类清单是食品企业产品质量与合规风险的重要信号，若涉及大范围召回，可能影响相关公司营收、赔付成本与品牌信誉。
+当日候选新闻不足，未选出符合条件的报道。
