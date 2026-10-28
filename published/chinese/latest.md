@@ -1,32 +1,32 @@
-# 每日专业 Topic 新闻：2026-10-27
+# 每日专业 Topic 新闻：2026-10-28
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 中国敦促欧盟勿滥用贸易救济措施
+### 1. 前三季度经济增长得益于扩大开放
 
-- **原标题：** China urges EU not to abuse trade remedies - China Daily Global Edition
+- **原标题：** Jan-Sept growth driven by opening-up - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-27T08:33:25+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPQ0xsSUVHcUsyX1diTEkteWFzb1FIeVBrWm9MVy1wSHFuLW0xQzdiNnZ6QTVMN0RranAxUjFoMTdvSWNBQzhtX040X0NIa3k1NHVJQ2RfY3l0T19VT2FYQ3lJa3ZwaDNvWVBCZjMzcHVSM0VDTGRja2xzTzV6M0FrNG1R?oc=5)
-- **摘要：** 据《中国日报》全球版报道，中国方面敦促欧盟不要滥用贸易救济措施。候选信息未提供涉及的具体产品、案件、中方进一步表态及欧方回应等细节，事件后续进展仍不明确。
+- **发布时间：** 2026-10-27T23:00:17+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxOVXA0cC10OWoySGVZWFRoYVdDV01LU29kYXZVNUFKWWUwTXgwOHpWRGFjVnQtN2RBUkdMS2ZHUzFkSzZheFdzRUR6aldFaVk2dXFBU1JRMGxnOWliLU9zM1NxeTNScmFTYmVtLVdwZWwwU2xxZ3dGX1cyZ1pIZUd5OUln?oc=5)
+- **摘要：** 《中国日报》报道，中国今年一至九月经济增长主要由高水平对外开放驱动，凸显开放政策对经济表现的支撑作用。候选资料未提供具体增速、GDP数据或行业细分，因此实际增长幅度及各因素贡献仍不明确。
 
-### 2. 浙江前三季度GDP增长5.6%
+### 2. 中国就欧盟贸易限制措施表达关切
 
-- **原标题：** Zhejiang's GDP grows 5.6 percent in first three quarters - China Daily
+- **原标题：** China voices concerns over EU trade curbs - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-10-27T12:11:20+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMic0FVX3lxTE94ZGdhdnRFT1ExLU1KbUlCeU5GSDhPSnNqT3FialJCV21EdER2U3RmTEYzYlptbjdYUFlRYU1sNG1CM0JncUotb1hpT0tQazNISW5zT3lNRTI4dkFJQjVYWEY3UmlyZzRIdjhXZFB4V2hSNE0?oc=5)
-- **摘要：** 据《中国日报》报道，浙江省前三季度地区生产总值（GDP）同比增长5.6%。候选信息未提供具体经济总量、各产业贡献、与全国增速对比及增长主要驱动因素，相关细节仍不明确。
+- **发布时间：** 2026-10-28T15:36:53+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE5xSlFLaUxSb1pVSzFWa3Jja2ZzaVZxSlN5SkRnTE9WNzJuck94RUREVnhtMUJNVTFzVld0blRfWXNYNEExdmkwSUJGMmdCTmo3aDExdmlpNFEzMG9qMXY4UDVhNjV2QnowdTBOMm5qalZhbFptaGJFYWlmVHhYdw?oc=5)
+- **摘要：** 据《中国日报》报道，中国方面就欧盟出台的贸易限制措施表达关切，认为相关举措可能影响双边经贸往来。候选信息未披露受限具体产品、措施细节或中方后续应对方案，实际影响范围仍有待观察。
 
-### 3. 前9个月国内旅游保持稳步增长
+### 3. 临沂商城国际采购大会开幕，吸引数千国际买家
 
-- **原标题：** Domestic tourism sees steady growth during first 9 months - China Daily
+- **原标题：** Linyi Trade City International Sourcing Conference opens with thousands of international buyers - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-10-27T09:35:11+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9RbGVQR0JnYmtReVI3TmFDb3hxRGtnNEtmeVRkSHJUSU9rOFRucVJCSWNsc3BMMVJwYS02ZFNuU09WSnpLRGpzOEltTE1CcEtiZVBuaG9yM2NSMWFLVHBfZEpIRnI2b1FXQ0FWN0xDb2pyb3RQQzlwRTFqbE5tdw?oc=5)
-- **摘要：** 据《中国日报》报道，今年前9个月中国国内旅游保持稳步增长。候选信息未提供具体人次、旅游收入、同比增速及主要影响因素等数据，实际增长幅度与后续趋势仍不明确。
+- **发布时间：** 2026-10-28T08:49:40+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9IRTFVb0xWY0xvd204dDI2dEV3QVd2ekhscTJjQ1JGQ1RaMk5RQkttRkFWc0RvMC1JLXB6OTR2QUlhLWdldHpFbWRtS2V0clloUkZXTy13em00cXVsQ1Q3SFFaaG8wTHp6Rl94TXVUaG1pV3ZZNXUwdktWVXBGdw?oc=5)
+- **摘要：** 据《中国日报》报道，临沂商城国际采购大会开幕，吸引数千名国际买家参会，显示海外采购商对中国商品的需求。候选信息未提供成交额、签约订单量或参会国家和地区分布，因此会议的实际贸易成果尚不明确。
 
 ## 航运 Top 3
 
@@ -38,7 +38,13 @@
 
 ## 股票市场 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. 特斯拉股价有望连涨三日，利好不止SpaceX
+
+- **原标题：** Tesla Stock Heads for Third Day of Gains. It's About More Than SpaceX. -- Barrons.com - 富途牛牛
+- **来源：** 富途牛牛
+- **发布时间：** 2026-10-28T11:50:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxPbm42MGRGVmRaTGRMWENJY0ctQkRFSUZQNl90RG1ZZDRWcTdsWXZ3aFlrczVSNjNOaXZ1SlU2WXpDTmRUYS1DUTZHTm94dE50T3FWdThrWTFVTHU1ak93TEQtR0xXdEVhVGhFS2ZQOUNXMER4bG5UWDlMbmNRcWtZQXNWVFB0ckx4WDI0UDRB?oc=5)
+- **摘要：** 据富途牛牛转载的Barrons.com报道，特斯拉股价有望连续第三个交易日上涨，推动因素不仅限于与SpaceX相关的消息。候选信息未提供具体涨幅、成交量及完整的催化剂细节，因此本轮上涨的实际力度与可持续性尚不明确。
 
 ## 科技产业 Top 3
 
@@ -50,21 +56,7 @@
 
 ## Cloud Infra Engineering Top 3
 
-### 1. Docker Cloud Sandboxes提供一致沙箱抽象
-
-- **原标题：** Docker Cloud Sandboxes在笔记本和云端之间提供一致的沙箱抽象
-- **来源：** InfoQ 中文 RSS
-- **发布时间：** 2026-10-27T13:00:00+00:00
-- **原文：** [查看原文](https://www.infoq.cn/article/gXKvW3g4KXhTTiIaJFkl)
-- **摘要：** 据InfoQ中文RSS报道，Docker Cloud Sandboxes在笔记本和云端之间提供一致的沙箱抽象。候选信息未提供发布时间、定价、支持平台、技术架构及正式可用状态等细节，相关情况仍不明确。
-
-### 2. Kubernetes 1.37发布：稳定版Metrics API与Beta版Rootless Kubelet
-
-- **原标题：** Kubernetes 1.37发布：稳定版Metrics API和Beta版Rootless Kubelet
-- **来源：** InfoQ 中文 RSS
-- **发布时间：** 2026-10-27T09:14:00+00:00
-- **原文：** [查看原文](https://www.infoq.cn/article/TrI8l3CYeAJER9tgR5Jt)
-- **摘要：** 据InfoQ中文RSS报道，Kubernetes 1.37版本发布，主要变化包括稳定版Metrics API以及处于Beta阶段的Rootless Kubelet。候选信息未提供发布时间、完整更新日志、升级兼容性影响及各功能的详细文档，相关情况仍不明确。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## AI 前沿 Top 3
 
@@ -78,36 +70,22 @@
 
 ### 中国 Top 3
 
-#### 1. 中国敦促欧盟勿滥用贸易救济措施
+#### 1. 创新驱动北京银发经济提质升级
 
-- **原标题：** China urges EU not to abuse trade remedies - China Daily Global Edition
+- **原标题：** Innovation drives quality upgrade of Beijing's silver economy - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-27T08:33:25+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPQ0xsSUVHcUsyX1diTEkteWFzb1FIeVBrWm9MVy1wSHFuLW0xQzdiNnZ6QTVMN0RranAxUjFoMTdvSWNBQzhtX040X0NIa3k1NHVJQ2RfY3l0T19VT2FYQ3lJa3ZwaDNvWVBCZjMzcHVSM0VDTGRja2xzTzV6M0FrNG1R?oc=5)
-- **摘要：** 据《中国日报》全球版报道，中国方面敦促欧盟不要滥用贸易救济措施。候选信息未提供涉及的具体产品、案件、中方进一步表态及欧方回应等细节，该事件对中欧贸易的实际影响仍不明确。
+- **发布时间：** 2026-10-28T01:12:45+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQcUh6T1hUUXpLcWZqOVBrOFZJdGFZRERUUGRWS2VMbldwRXFtSGNmb2N6bXpfdGNNSkg3VzdNek9DUHBEemk0cWNoYnphVnVfdFliX2ZDSm9jRXl2N2NiZ1pra3d5UGpUd1d5cTkxcGFsd1B6Mkgzak90TGVyd3lTNkpB?oc=5)
+- **摘要：** 据《中国日报》报道，创新正推动北京银发经济实现质量升级，显示该领域产品与服务质量有所提升。候选信息未提供产业规模、企业案例或政策细节，因此实际升级范围与经济影响仍不明确。
 
-#### 2. 中国企业将AI健康服务从医院延伸至家庭
+#### 2. 临沂商城国际采购大会开幕，数千国际买家到场
 
-- **原标题：** Chinese company extends AI health services from hospitals to homes - China Daily
+- **原标题：** Linyi Trade City International Sourcing Conference opens with thousands of international buyers - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-10-27T09:57:37+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9va2ZiTHpuZ3hSRURZQ0hPVkNzNHBLemdRUGhHT1JhQ0NEX053TnJWTW5xUWREYXZEVTBmNXlxVzM4WG9QSFg2SGNNTWlwWldlRDdEV0JSV1AwTlZudENQeEpxaGF5V1BNS3E0TDJfaWpjVnhpS1BnZzBRMFpqUQ?oc=5)
-- **摘要：** 据《中国日报》报道，一家中国企业将AI健康服务从医院场景延伸至家庭。候选信息未提供该公司名称、具体服务内容、覆盖地区、监管审批及商业化模式等细节，相关业务与财务影响仍不明确。
-
-#### 3. 浙江前三季度GDP增长5.6%
-
-- **原标题：** Zhejiang's GDP grows 5.6 percent in first three quarters - China Daily
-- **来源：** China Daily
-- **发布时间：** 2026-10-27T12:11:20+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMic0FVX3lxTE94ZGdhdnRFT1ExLU1KbUlCeU5GSDhPSnNqT3FialJCV21EdER2U3RmTEYzYlptbjdYUFlRYU1sNG1CM0JncUotb1hpT0tQazNISW5zT3lNRTI4dkFJQjVYWEY3UmlyZzRIdjhXZFB4V2hSNE0?oc=5)
-- **摘要：** 据《中国日报》报道，浙江省前三季度地区生产总值（GDP）同比增长5.6%。候选信息未提供具体经济总量、各产业贡献、与全国增速对比及增长主要驱动因素，相关细节仍不明确。
+- **发布时间：** 2026-10-28T08:49:40+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9IRTFVb0xWY0xvd204dDI2dEV3QVd2ekhscTJjQ1JGQ1RaMk5RQkttRkFWc0RvMC1JLXB6OTR2QUlhLWdldHpFbWRtS2V0clloUkZXTy13em00cXVsQ1Q3SFFaaG8wTHp6Rl94TXVUaG1pV3ZZNXUwdktWVXBGdw?oc=5)
+- **摘要：** 据《中国日报》报道，临沂商城国际采购大会开幕，数千名国际买家到场采购，显示中国商品与外贸供应链对海外采购商的吸引力。候选信息未提供成交额、订单量或买家来源地，会议的实际贸易成果仍不明确。
 
 ### 美国 Top 3
 
-#### 1. 通用汽车将股票上市地从纽交所迁至纳斯达克
-
-- **原标题：** General Motors Moving Stock Listing to Nasdaq From NYSE -- Update - 富途牛牛
-- **来源：** 富途牛牛
-- **发布时间：** 2026-10-27T14:50:13+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipAFBVV95cUxNdEVNY3pVaHdQaXFoYzFscmRJZURxUGZ0QlZEQVdSNjBFMUMtR0lQYnhjaUx6UlVCNnZDak1xMVRUM1BDOVAyRnlBTFBIV1dxWmQ5dVBlVWlvWHVDaElyaXQ0b1pDZ2lrelBzYmF2ZVpVTGc3ZVktQzdGRDN1d05sLXBCNFA5Z2htal9vMVFUNFZrTGJfbmFhLW9JZDU2Q0RBd252RQ?oc=5)
-- **摘要：** 据富途牛牛报道，通用汽车将其股票上市地点从纽约证券交易所迁至纳斯达克。候选信息未提供迁移生效时间、迁移原因、对成交量或估值的影响及公司进一步公告等细节，相关市场影响仍不明确。
+当日候选新闻不足，未选出符合条件的报道。
