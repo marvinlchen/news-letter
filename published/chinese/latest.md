@@ -1,32 +1,32 @@
-# 每日专业 Topic 新闻：2026-10-28
+# 每日专业 Topic 新闻：2026-10-29
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 前三季度经济增长得益于扩大开放
+### 1. 美联储中期选举前维持利率不变
 
-- **原标题：** Jan-Sept growth driven by opening-up - China Daily Global Edition
+- **原标题：** US Fed holds interest rate steady ahead of midterm elections - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-27T23:00:17+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxOVXA0cC10OWoySGVZWFRoYVdDV01LU29kYXZVNUFKWWUwTXgwOHpWRGFjVnQtN2RBUkdMS2ZHUzFkSzZheFdzRUR6aldFaVk2dXFBU1JRMGxnOWliLU9zM1NxeTNScmFTYmVtLVdwZWwwU2xxZ3dGX1cyZ1pIZUd5OUln?oc=5)
-- **摘要：** 《中国日报》报道，中国今年一至九月经济增长主要由高水平对外开放驱动，凸显开放政策对经济表现的支撑作用。候选资料未提供具体增速、GDP数据或行业细分，因此实际增长幅度及各因素贡献仍不明确。
+- **发布时间：** 2026-10-28T18:45:31+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPQW9ncGU1T0doWmh0ZUtIcHRncUhzMjZ6NE5HcnRLTDltSXNLcGZaS3JrUkRpSEtSTmU5c2ZKcTUzejFXY2ZrWFBHNTNEeVpScW0td08tUnZ5QnR5Y1FKb3VFZ3U5OXJQU2JLOUU5aXJGdjlyVE9fX2ZMZUE2dmZ1T0FB?oc=5)
+- **摘要：** 美联储在中期选举前宣布维持基准利率不变。报道未给出具体利率区间与投票细节。这一决定使政策路径短期内保持稳定，市场对未来降息节奏的判断仍需等待更多通胀与就业数据确认。
 
-### 2. 中国就欧盟贸易限制措施表达关切
+### 2. 中国强调对话，反对欧盟歧视性贸易限制
 
-- **原标题：** China voices concerns over EU trade curbs - China Daily
+- **原标题：** China stresses dialogue, opposes discriminatory EU trade curbs - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-10-28T15:36:53+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE5xSlFLaUxSb1pVSzFWa3Jja2ZzaVZxSlN5SkRnTE9WNzJuck94RUREVnhtMUJNVTFzVld0blRfWXNYNEExdmkwSUJGMmdCTmo3aDExdmlpNFEzMG9qMXY4UDVhNjV2QnowdTBOMm5qalZhbFptaGJFYWlmVHhYdw?oc=5)
-- **摘要：** 据《中国日报》报道，中国方面就欧盟出台的贸易限制措施表达关切，认为相关举措可能影响双边经贸往来。候选信息未披露受限具体产品、措施细节或中方后续应对方案，实际影响范围仍有待观察。
+- **发布时间：** 2026-10-29T09:03:13+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9EZVQzejVlYmZKYXF2R1VNVmxMa0V6bEUyQy1KdndRT1o1WExoSUY0ZjlVTjhWdUZUNGtzVWdSQlh3Y0o1dm14Rks5TlFzcS1yQlRkZnRkTktheElTVEpwaXVyOVVzWkVaTzJ6MEk0QzlEUXJKV1p1VFVFRFVTUQ?oc=5)
+- **摘要：** 中国方面表示坚持以对话解决经贸分歧，反对欧盟采取的歧视性贸易限制措施。报道未列出涉案产品与具体措施细节。该表态显示中欧贸易摩擦仍在持续，后续谈判进展将影响相关行业的出口与准入环境。
 
-### 3. 临沂商城国际采购大会开幕，吸引数千国际买家
+### 3. 中国在全球最大自贸港扩大外资准入
 
-- **原标题：** Linyi Trade City International Sourcing Conference opens with thousands of international buyers - China Daily
-- **来源：** China Daily
-- **发布时间：** 2026-10-28T08:49:40+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9IRTFVb0xWY0xvd204dDI2dEV3QVd2ekhscTJjQ1JGQ1RaMk5RQkttRkFWc0RvMC1JLXB6OTR2QUlhLWdldHpFbWRtS2V0clloUkZXTy13em00cXVsQ1Q3SFFaaG8wTHp6Rl94TXVUaG1pV3ZZNXUwdktWVXBGdw?oc=5)
-- **摘要：** 据《中国日报》报道，临沂商城国际采购大会开幕，吸引数千名国际买家参会，显示海外采购商对中国商品的需求。候选信息未提供成交额、签约订单量或参会国家和地区分布，因此会议的实际贸易成果尚不明确。
+- **原标题：** China expands foreign business access at world's largest free trade port - China Daily Global Edition
+- **来源：** China Daily Global Edition
+- **发布时间：** 2026-10-29T06:56:41+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPRkF3emdfVlhPVVRCWTBXN0k1X1RqYWt3SHJ0Q2pSSVlTcWtYSElPM2hKVl8xTzBCQ2ZrYUVhY0xRRGV6bU1hbkhKd1hJRi1ybEx3QUR0c21VcW53VGtDbHhQdDFNUWR3N2tkcTkzaDY1azd0MUxlTU9meDZCdDlVbTNB?oc=5)
+- **摘要：** 中国在全球最大自由贸易港进一步扩大外资企业准入范围。报道未披露新增开放的具体行业清单与生效时间。此举延续扩大对外开放的基调，若落地将改善外资在当地的经营与投资空间，对区域贸易与产业链布局具有参考意义。
 
 ## 航运 Top 3
 
@@ -38,13 +38,21 @@
 
 ## 股票市场 Top 3
 
-### 1. 特斯拉股价有望连涨三日，利好不止SpaceX
+### 1. 阿里巴巴港股下跌2.8%
 
-- **原标题：** Tesla Stock Heads for Third Day of Gains. It's About More Than SpaceX. -- Barrons.com - 富途牛牛
-- **来源：** 富途牛牛
-- **发布时间：** 2026-10-28T11:50:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxPbm42MGRGVmRaTGRMWENJY0ctQkRFSUZQNl90RG1ZZDRWcTdsWXZ3aFlrczVSNjNOaXZ1SlU2WXpDTmRUYS1DUTZHTm94dE50T3FWdThrWTFVTHU1ak93TEQtR0xXdEVhVGhFS2ZQOUNXMER4bG5UWDlMbmNRcWtZQXNWVFB0ckx4WDI0UDRB?oc=5)
-- **摘要：** 据富途牛牛转载的Barrons.com报道，特斯拉股价有望连续第三个交易日上涨，推动因素不仅限于与SpaceX相关的消息。候选信息未提供具体涨幅、成交量及完整的催化剂细节，因此本轮上涨的实际力度与可持续性尚不明确。
+- **原标题：** Alibaba Group Holding Stock Slides 2.8% in Hong Kong - Moomoo
+- **来源：** Moomoo
+- **发布时间：** 2026-10-29T08:37:02+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiogFBVV95cUxQclVGN3ltYU1jaUZSSWxUYmJjXzRZVC1RQXhwaF92T1AwQXB2c3cwajFTOUxfMzdQX0JTaTQ1VTAtZ0gtSTJZb0xBODVXTzdzSC1LdnZVYmdHdWhpU3VCM05YMmpIRzhZb1hYUGlqekRlZ2lGcVNKT01WX3l1Qmw5N3c1blNuVG1Qa0RxVkJzcmJ5bU1NQWRIeTBqOTduMFR4RHc?oc=5)
+- **摘要：** 阿里巴巴集团港股股价下跌2.8%。候选数据未提供下跌的具体催化因素、成交量与前收盘价。该跌幅出现在当日港股交易时段，可作为观察大型科技股表现的一个点，但不足以判断趋势性走向。
+
+### 2. 宇树股价下挫，三季度利润降超17%
+
+- **原标题：** Unitree’s Stock Drops After Profit Falls Over 17%, R&D Outlay More Than Triples in Third Quarter - Yicai Global
+- **来源：** Yicai Global
+- **发布时间：** 2026-10-29T07:24:29+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNXVfM3VDWVRWNG9JNjZablY4Rkw4LVNHM3hsT0RFamJldktVZHNSendvM2NPUlg0RzBzNm9wSGY2MDh2T1hGT3ZtY3RtMHVpR2hMaUZUQXk1VGVmaVRSTXdVamMxaGx1dUxGZUtjaVNQeUQtS1RncTRramhaN3lCaTFSS0p1UmxLazZnSE5hOTBybWJpZ0NvVFc2Z0tTZFFsSE1HRUVndy1EZw?oc=5)
+- **摘要：** 宇树科技股价下跌，此前公布三季度利润同比下降超过17%，同期研发投入增至三倍以上。候选数据未给出股价跌幅与营收明细。利润下滑叠加研发大幅扩张，显示公司正以短期盈利换取长期投入，市场对其估值与现金流预期或调整。
 
 ## 科技产业 Top 3
 
@@ -60,7 +68,13 @@
 
 ## AI 前沿 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. 阿里云押注智能体云，延伸训练推理与企业数据能力
+
+- **原标题：** Agentic Cloud，阿里云如何接住模型之后的生意
+- **来源：** 钛媒体
+- **发布时间：** 2026-10-29T18:45:28+08:00
+- **原文：** [查看原文](https://www.tmtpost.com/8182516.html)
+- **摘要：** 报道称阿里云将能力建设从模型本身延伸到模型训练与推理、智能体构建与运行，以及企业数据的组织和使用，向企业提供协同工作的基础设施而非单一产品。报道未披露具体发布时间、定价与客户案例，商业化效果仍待观察。
 
 ## 国家新闻
 
@@ -70,21 +84,29 @@
 
 ### 中国 Top 3
 
-#### 1. 创新驱动北京银发经济提质升级
+#### 1. 阿里巴巴港股收跌2.8%
 
-- **原标题：** Innovation drives quality upgrade of Beijing's silver economy - China Daily Global Edition
+- **原标题：** Alibaba Group Holding Stock Slides 2.8% in Hong Kong - Moomoo
+- **来源：** Moomoo
+- **发布时间：** 2026-10-29T08:37:02+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiogFBVV95cUxQclVGN3ltYU1jaUZSSWxUYmJjXzRZVC1RQXhwaF92T1AwQXB2c3cwajFTOUxfMzdQX0JTaTQ1VTAtZ0gtSTJZb0xBODVXTzdzSC1LdnZVYmdHdWhpU3VCM05YMmpIRzhZb1hYUGlqekRlZ2lGcVNKT01WX3l1Qmw5N3c1blNuVG1Qa0RxVkJzcmJ5bU1NQWRIeTBqOTduMFR4RHc?oc=5)
+- **摘要：** 阿里巴巴集团在香港市场股价下滑2.8%。候选信息未说明下跌原因与成交额。作为中国大型科技与电商平台，其股价波动会影响相关板块情绪与指数表现，也反映投资者对其盈利与估值的最新定价。
+
+#### 2. 中芯国际港股下挫5.9%
+
+- **原标题：** Semiconductor Manufacturing International Stock Slides 5.9% in Hong Kong - Moomoo
+- **来源：** Moomoo
+- **发布时间：** 2026-10-29T08:31:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxNZmRpYUNNOFRka0ZyaHF3S1hacTJ0MEwyVThTQUEtUmgxWGQwY1RsTUJjdS0xVHV3Sy1PZzJaSTlJLWNLNnExQkpnVTZwaHRHcS1keUZKbWpmalRHVGxXM3dKdG5LRmZ2SWJqOU42bTNKZTM5NEdGS1RxajVEWGg2R0gxcnF6N1lnSEc1U0x2Zno5cnZFNGc3Wl9ON1h6aHNzTzBxWURQaDlYUHdURVRtajFuMnAtMFFiOERCMg?oc=5)
+- **摘要：** 中芯国际在香港市场股价下跌5.9%。候选数据未提供下跌催化因素与成交情况。作为中国大陆主要晶圆代工企业，其股价大幅波动牵动半导体板块情绪，也常被视作观察国产替代与产业链景气预期变化的窗口。
+
+#### 3. 优衣库将在上海开设全新全球旗舰店
+
+- **原标题：** Uniqlo to open brand-new global flagship store in Shanghai - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-28T01:12:45+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQcUh6T1hUUXpLcWZqOVBrOFZJdGFZRERUUGRWS2VMbldwRXFtSGNmb2N6bXpfdGNNSkg3VzdNek9DUHBEemk0cWNoYnphVnVfdFliX2ZDSm9jRXl2N2NiZ1pra3d5UGpUd1d5cTkxcGFsd1B6Mkgzak90TGVyd3lTNkpB?oc=5)
-- **摘要：** 据《中国日报》报道，创新正推动北京银发经济实现质量升级，显示该领域产品与服务质量有所提升。候选信息未提供产业规模、企业案例或政策细节，因此实际升级范围与经济影响仍不明确。
-
-#### 2. 临沂商城国际采购大会开幕，数千国际买家到场
-
-- **原标题：** Linyi Trade City International Sourcing Conference opens with thousands of international buyers - China Daily
-- **来源：** China Daily
-- **发布时间：** 2026-10-28T08:49:40+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9IRTFVb0xWY0xvd204dDI2dEV3QVd2ekhscTJjQ1JGQ1RaMk5RQkttRkFWc0RvMC1JLXB6OTR2QUlhLWdldHpFbWRtS2V0clloUkZXTy13em00cXVsQ1Q3SFFaaG8wTHp6Rl94TXVUaG1pV3ZZNXUwdktWVXBGdw?oc=5)
-- **摘要：** 据《中国日报》报道，临沂商城国际采购大会开幕，数千名国际买家到场采购，显示中国商品与外贸供应链对海外采购商的吸引力。候选信息未提供成交额、订单量或买家来源地，会议的实际贸易成果仍不明确。
+- **发布时间：** 2026-10-29T09:55:23+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxOWnVUWmE3LU44RVd6X1BuVGRyRkNVOFdFQ0dSRlZ5YnN5SU80MFEwOWx6MUVnSVBHU1Axa3NVbUxqZVhaMFdNcTg3Y042WlN1ZU1MNVZrVmI2Uy1XZmhlTEhTOWRvVkZsS1E4dThQQkF3M2pTYkVfR3FxMHJ6bEY1eUR3?oc=5)
+- **摘要：** 优衣库宣布将在上海开设全新全球旗舰店。报道未披露开店时间、门店面积与投资金额。这一布局显示国际服装品牌继续加码中国一线城市线下渠道，对本地零售地产、消费复苏与品牌竞争格局具有指示意义。
 
 ### 美国 Top 3
 
