@@ -1,24 +1,16 @@
-# 每日专业 Topic 新闻：2026-10-30
+# 每日专业 Topic 新闻：2026-10-31
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 欧元区第三季度GDP环比增长放缓至0.4%
+### 1. 美联储维持利率不变，中期选举前按兵不动
 
-- **原标题：** Eurozone GDP growth slows to 0.4% in Q3: Eurostat - China Daily
-- **来源：** China Daily
-- **发布时间：** 2026-10-30T10:31:46+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE9WYlVORVhoMURoOUVCOVpKQXNHTU9GM0xiV2hfcHhXa3dpY1J4NjhFaTJqOExuX2NPU29GR0xRbmVfLUVLVXN3d3hmekFsbnRpdHVxYmlLNDEtUXQ3RlN3Y1pqMGJhaU1xNmlxOFcyLTh3NnAtVEtiSTA1RjdWQQ?oc=5)
-- **摘要：** 欧盟统计局数据显示，欧元区第三季度国内生产总值环比增长0.4%，增速较此前放缓。该数据反映欧元区经济动能减弱，为欧洲央行后续货币政策取向及全球需求前景提供参考。原文未说明各成员国表现及放缓的具体原因。
-
-### 2. 习近平会见瑞士联邦主席，呼吁增强中欧经贸合作确定性
-
-- **原标题：** Xi meets president of Swiss Confederation, calling for more certainty for China-Europe economic, trade cooperation - China Daily
-- **来源：** China Daily
-- **发布时间：** 2026-10-30T07:47:57+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFBSS211LWFMSFU2YU5hWHdMMzdrUGZEdTNLT3E3U0xGMTZUcVV3MW55b1plN0k1QWxNdllDNVFhRW1TenZXd3VESGhPVm44WHZKZGxhQ1hOdFN0U1EyNk1xVWpLQTl0RmZNU1FfYnhRbWpuX2dvM1F5ZG9LdlVOdw?oc=5)
-- **摘要：** 习近平会见瑞士联邦主席，呼吁为中欧经贸合作提供更多确定性。报道未披露具体政策措施、协议内容或时间表，其对双边贸易与投资的实际影响仍待观察。
+- **原标题：** US Fed holds interest rate steady ahead of midterm elections - China Daily Global Edition
+- **来源：** China Daily Global Edition
+- **发布时间：** 2026-10-31T05:15:04+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPQW9ncGU1T0doWmh0ZUtIcHRncUhzMjZ6NE5HcnRLTDltSXNLcGZaS3JrUkRpSEtSTmU5c2ZKcTUzejFXY2ZrWFBHNTNEeVpScW0td08tUnZ5QnR5Y1FKb3VFZ3U5OXJQU2JLOUU5aXJGdjlyVE9fX2ZMZUE2dmZ1T0FB?oc=5)
+- **摘要：** 据《中国日报》国际版报道，美联储在中期选举前宣布维持利率不变。候选数据未给出具体利率区间、投票结果与政策声明细节，也未说明会后的沟通安排；该决定对美元、美债收益率及跨境资本流动的后续影响仍待观察。
 
 ## 航运 Top 3
 
@@ -56,21 +48,21 @@
 
 ### 中国 Top 3
 
-#### 1. 中国电池技术外溢，进军全球户用储能市场
+#### 1. 中国海洋经济一至九月增长4.9%
 
-- **原标题：** Chinese battery expertise expands into global residential energy market - China Daily Global Edition
+- **原标题：** China's marine economy grows 4.9% in Jan-Sept - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-30T09:53:52+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPekx0TWc2Y2RLcE81TWFrQVF1Nk5BcTBjT053d19CYUs3b3pERlFvZGJpWDMyMWdwQTZuS2JvZWRvMW8zZ3BTT3cwQzh0clRiN0FORG5hVXk4NDE1VGhJdjA0QnVaTnd3Umd1dWlTNEpybnJ1T0dXWHRPN1lVRnlwRHZ3?oc=5)
-- **摘要：** 报道称中国电池领域的技术与产能优势正延伸至全球住宅储能市场。若海外家庭储能需求持续增长，或利好相关企业营收与出海产能布局。原文未列出具体企业名称、订单规模或市场份额数据。
+- **发布时间：** 2026-10-31T07:30:09+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQWjFDZ0ZnWV9wYU1NSUctTkFCbU5DQnFLZXBvNVhzMG5kbk1zWTJyeVBaODlmSlBlaXBlSTFoNTZvbDVCV0ZGUVpiZENTaDRqZ0hwMnRqR240aHRibUxmX1pYX0s4cWJVbnI5NU1ydm8yNkxybWFCTU5Takd1Z0MxTk5R?oc=5)
+- **摘要：** 据《中国日报》国际版，中国海洋经济在1至9月同比增长4.9%。候选数据仅给出整体增速，未披露分行业构成、增加值规模与对比基数，也未说明增长主要来自海洋渔业、港口航运、海上风电还是滨海旅游，对经济增速的具体贡献尚不清楚。
 
-#### 2. 中国提升对全球商务旅客的吸引力
+#### 2. 中国推动能源领域增强发展动能
 
-- **原标题：** China expands its appeal to global business travelers - China Daily Global Edition
-- **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-30T04:11:39+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPQ0liUnNQU0xRd1RoWmxvVGJXQXZNRHJyYVRLTmhraFNzMDBiQ1ZDTFZfQkM0N2pLcmY1NFVpTkVhV1I5QVczeGdJN1FHQ0FHZjVYWVJBZVNMWmRRSVV0emtVRTVaRHRrcmRkQWwwZnRVV3NfOGtjS2lNV1VmalFrQWtR?oc=5)
-- **摘要：** 报道称中国正通过改善入境与商务出行环境，提升对全球商务旅客的吸引力。商务旅行回暖通常与贸易洽谈、外资往来及市场信心相关，但原文未给出客流量、消费金额或具体政策细节。
+- **原标题：** Nation pushes for energy dynamism - China Daily
+- **来源：** China Daily
+- **发布时间：** 2026-10-30T22:31:34+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE02ejI2R1FHMGlwd0hOZ0N6VXJLaDlGcEhvdC0zRDJLcDFMSE82TWZEV3dQUTJwczkyazhEQmgtQVJYU0dBMXJheldpeWEwYUdjQmhwanpaYy1hRnpLZnlsclRiQjVDRjZvRVMtanBLRWsycW9wME9TV1FDSWdvUQ?oc=5)
+- **摘要：** 据《中国日报》报道，中国正推动能源领域的改革与建设以提升能源发展动能。候选数据未给出具体政策文件名称、发布部门、投资规模或时间表，也未说明重点覆盖化石能源还是新能源，相关措施对能源企业资本开支与盈利的实际影响仍不明确。
 
 ### 美国 Top 3
 
