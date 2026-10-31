@@ -1,118 +1,118 @@
-# 每周 Cloud Infra 与 AI 技术深度阅读：2026-10-24
+# 每周 Cloud Infra 与 AI 技术深度阅读：2026-10-31
 
 > 候选窗口：最近 7 天。生成模式：`codebuddy`。本报告与每日新闻报告独立。
 
 ## Cloud Infra Engineering 专业文章 Top 5
 
-### 1. llm-d 1.0：面向智能体负载的开源 Kubernetes 原生分布式推理栈
+### 1. Meta Andromeda：通过模型—系统协同设计驱动下一代广告召回
 
-- **原标题：** Announcing llm-d 1.0: Open distributed inference for agents on Google Cloud TPUs and GPUs
-- **来源：** Google Cloud Blog
-- **发布时间：** 2026-10-20T11:30:00+00:00
-- **原文：** https://cloud.google.com/blog/topics/ai-infrastructure/llm-d-1-0-an-open-source-stack-for-distributed-inference
-- **推荐理由：** 由 Google 与 Red Hat、IBM 等共同发起的 CNCF Sandbox 项目，500 余名贡献者、25 家组织参与，针对智能体与强化学习 rollout 负载重新设计分布式推理调度，社区与工程规模具备可信度。
-- **核心问题：** 推理流量从单轮对话转向多步智能体与强化学习 rollout：请求跨工具扇出、共享长前缀、突发式到达，单机部署或通用轮询负载均衡难以高效承载。
-- **关键思路：** 把 PyTorch 侧的 vLLM/SGLang 服务能力与 Kubernetes 侧的生产级调度、伸缩能力结合为 Kubernetes 原生的分布式推理栈，面向前缀共享与突发流量做分布式调度而非简单轮询，并同时支持 TPU 与 GPU。
-- **工程启示：** 智能体时代的推理服务应按前缀亲和与负载特性调度并纳入 Kubernetes 原生编排，而非依赖通用负载均衡；栈本身跨 TPU/GPU 可用。
-- **局限与待验证项：** 候选信息仅为 1.0 发布公告，缺少具体调度算法、基准数据与性能对比，实际收益需自行压测验证。
-
-### 2. TorchTPU 开源：在 TPU 上原生运行 PyTorch
-
-- **原标题：** TorchTPU is now open source: Run native PyTorch on TPUs
-- **来源：** Google Cloud Blog
-- **发布时间：** 2026-10-20T11:30:00+00:00
-- **原文：** https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus
-- **推荐理由：** TPU 由此成为 PyTorch 的原生后端选项，与 Meta 的 PyTorch 团队共同开发，并接入 vLLM、SGLang、llm-d、TorchTitan、Ray、TorchRec、Hugging Face、LiteRT 等既有工具链，迁移成本与生态兼容性是核心看点。
-- **核心问题：** 在 TPU 上运行 PyTorch 以往需要专用栈或大量改写代码，导致硬件选型被软件生态绑定。
-- **关键思路：** 提供原生 PyTorch TPU 栈，使既有训练与服务负载以最小代码改动迁移到 TPU，并通过开源与主流训练、服务、部署组件对齐，在 TPU、GPU、CPU 间形成一致的软件与运维模型。
-- **工程启示：** 硬件选型可更多依据工作负载特性而非框架锁定；已有 PyTorch 代码与 vLLM、SGLang、Ray、TorchRec 等工具链可复用到 TPU。
-- **局限与待验证项：** 候选信息未给出性能基准、算子覆盖率与迁移限制，开源实现的成熟度与兼容性需实测确认。
-
-### 3. Origin Range Requests：无需调优的大文件回源范围请求缓存架构
-
-- **原标题：** Origin Range Requests: Serving large files without range-request tuning
-- **来源：** Cloudflare Blog
-- **发布时间：** 2026-10-23T18:22:59+00:00
-- **原文：** https://blog.cloudflare.com/origin-range-requests
-- **推荐理由：** 少见地同时给出架构改动与量化结果：在 Pingora 中重建缓存架构以自动协调分片回源，将 R2 的 p99 延迟降低一半，属于有生产证据的基础设施改造。
-- **核心问题：** 朴素的字节范围缓存会为小请求浪费数 GB 的回源带宽。
-- **关键思路：** 在 Pingora 代理层重建缓存架构，自动协调部分（分片）回源取数，避免重复拉取与带宽浪费，从而无需逐个业务做范围请求调优。
-- **工程启示：** 大文件分发与对象存储场景应把范围请求协调下沉到代理/缓存层统一处理，而不是依赖应用层调参，可显著改善尾延迟。
-- **局限与待验证项：** 候选信息缺少实现细节、流量构成与实验方法（对比基线、测量周期），仅给出 p99 延迟减半这一结果，可复现性与适用边界未知。
-
-### 4. 瘦编排器：让路由层少做一点以提升 AI 智能体可靠性
-
-- **原标题：** The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do
+- **原标题：** Meta Andromeda: Powering the Next Generation of Ads Retrieval Through Model-System Co-Design
 - **来源：** Meta Engineering
-- **发布时间：** 2026-10-19T15:30:37+00:00
-- **原文：** https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture
-- **推荐理由：** Meta 在生产数据管道智能体上的工程总结，给出可复用的编排层职责划分原则（薄路由加可靠性校验，领域推理下沉到专门智能体），并报告了效率与准确率的改善。
-- **核心问题：** 把全部领域知识都塞进智能体的编排/路由层，反而拖累系统效率与准确性。
-- **关键思路：** 刻意保持编排层"薄"：编排器只负责路由与可靠性检查，领域推理交由专职智能体完成。
-- **工程启示：** 多智能体系统应明确编排器职责边界，用可靠性护栏加路由承担控制面，把领域知识与推理下沉到专门智能体，以提升稳定性与准确率。
-- **局限与待验证项：** 候选信息为摘要（含"Read More..."截断），缺少量化指标、故障模式分类与实验设置，效率与准确率提升幅度及适用条件均无法确认。
+- **发布时间：** 2026-10-28T16:00:01+00:00
+- **原文：** https://engineering.fb.com/2026/10/28/ml-applications/meta-andromeda-next-gen-ads-retrieval-gpu-co-design
+- **推荐理由：** 候选信息显示这是 Meta 生产环境中已落地的广告召回引擎，涉及模型、系统与 GPU 硬件的协同设计，并给出在召回规模上接近精排精度的生产结论，是少见的模型—系统联合优化工业案例。
+- **核心问题：** 在召回阶段需要对全部合格候选广告做接近精排水平的打分，同时把算力成本控制在可服务超大规模流量的范围内。
+- **关键思路：** 协同设计模型、召回系统与底层 GPU 硬件以打开新的效率前沿；在生产中对每条合格广告进行近精排水平的打分，并在召回规模上输出 top 候选集。
+- **工程启示：** 大规模检索/推荐系统的性能上限由模型、系统与硬件共同决定，单侧优化收益有限；做这类系统时应把硬件特性与线上约束前置到模型设计阶段。
+- **局限与待验证项：** 候选摘要未给出模型结构、GPU 型号、吞吐/延迟与成本对比的具体数字，无法独立验证其效率提升幅度，工程细节需读原文确认。
 
-### 5. 用 Kamaji 与 HAMi 在模拟硬件上构建多租户 GPU Kubernetes
+### 2. Meta 在 2026 OCP 全球峰会：面向 scale-up/scale-out/scale-across 的 AI 网络开放创新
 
-- **原标题：** Multi-tenant GPU Kubernetes on simulated hardware with Kamaji and HAMi
-- **来源：** CNCF Blog
-- **发布时间：** 2026-10-23T11:30:00+00:00
-- **原文：** https://www.cncf.io/blog/2026/10/23/multi-tenant-gpu-kubernetes-on-simulated-hardware-with-kamaji-and-hami
-- **推荐理由：** 直面多租户 GPU 平台的核心权衡：每团队独立集群的控制平面成本与共享集群的弱隔离，给出基于 Kamaji（托管控制平面）与 HAMi（GPU 切分共享）的组合方案。
-- **核心问题：** GPU 团队面临两难：每团队一套集群要为每个团队支付控制平面成本，所有人共用一个集群则隔离性弱。
-- **关键思路：** 结合 Kamaji 的托管控制平面能力与 HAMi 的 GPU 切分共享能力，在控制平面与设备两个层面同时处理多租户问题。
-- **工程启示：** 需要在成本与隔离之间折中时，可用控制平面托管加设备层切分软化取舍，而不必在"一团队一集群"与"全员共享"之间二选一。
-- **局限与待验证项：** 候选信息明确说明验证在模拟硬件上完成，缺少真实 GPU 生产环境的性能、隔离与稳定性实测数据。
+- **原标题：** Meta Networking at the 2026 OCP Global Summit: Open Innovation for Scale-Up, Scale-Out, and Scale-Across AI Networks
+- **来源：** Meta Engineering
+- **发布时间：** 2026-10-26T16:00:07+00:00
+- **原文：** https://engineering.fb.com/2026/10/26/open-source/ocp-summit-2026-meta-networking-talks
+- **推荐理由：** 候选条目给出具体硬件规格（液冷网络机柜 IcePack 与 IceCube、102.4T 交换刀片、128×800G、Broadcom Tomahawk 6C 与 NVIDIA Spectrum-6 变体）与吉瓦级集群背景，是 AI 集群网络基础设施的一手材料。
+- **核心问题：** 吉瓦级 AI 集群（如 Prometheus）与新模型训练要求网络在机柜内、机柜间和跨集群三种尺度上同时提供高带宽与开放互操作能力。
+- **关键思路：** 以液冷网络机柜配合高密交换芯片构建覆盖 scale-up、scale-out、scale-across 的网络方案，并通过 OCP 生态推动开放标准化。
+- **工程启示：** 超大规模训练的网络选型需在散热、交换容量与开放生态之间做权衡；自建 AI 集群时应关注液冷网络机柜与开放标准带来的运维与供应链收益。
+- **局限与待验证项：** 候选文本为会议要点摘录，缺少链路拓扑、拥塞控制、实测带宽/时延与故障率数据，具体工程取舍无法核实。
+
+### 3. BMW 集团如何在 AWS Graviton 上加速车联网工作负载
+
+- **原标题：** How BMW Group accelerated connected vehicle workloads on AWS Graviton
+- **来源：** AWS Architecture Blog
+- **发布时间：** 2026-10-29T20:11:14+00:00
+- **原文：** https://aws.amazon.com/blogs/architecture/how-bmw-group-accelerated-connected-vehicle-workloads-on-aws-graviton
+- **推荐理由：** 候选信息包含清晰的迁移路径与量化收益（NGINX Ingress CPU 下降约 57%、性价比提升约 40%），是一篇带真实数字的生产迁移复盘。
+- **核心问题：** 车联网平台长期运行在 x86 上，如何在不中断业务的前提下迁移到 ARM 架构，并保持多架构镜像、CI/CD 与弹性伸缩能力。
+- **关键思路：** 使用 Karpenter 做弹性调度、构建多架构容器镜像，并采用 Graviton 架构的 CI/CD runner，实现无中断的架构迁移。
+- **工程启示：** ARM 迁移的关键不在能否运行，而在镜像、CI/CD 与自动伸缩链路的多架构支持；入口层/网关等 CPU 密集组件通常最先获益，适合作为试点。
+- **局限与待验证项：** 候选摘要未说明测试基准、绝对时延吞吐、架构差异问题的处理方式与回退方案，57% 与 40% 的统计口径（均值还是峰值、度量窗口）不明。
+
+### 4. 如何用 AWS Nitro Enclaves 实现可验证代码：Anchorage Digital 与 Turnkey 的实践
+
+- **原标题：** How Anchorage Digital and Turnkey verify code with AWS Nitro Enclaves
+- **来源：** AWS Architecture Blog
+- **发布时间：** 2026-10-27T17:10:35+00:00
+- **原文：** https://aws.amazon.com/blogs/architecture/how-anchorage-digital-and-turnkey-verify-code-with-aws-nitro-enclaves
+- **推荐理由：** 候选描述涵盖具体架构与 attestation 门控访问模式，解决“用户如何密码学地确信执行的是某段代码”这一高信任场景的工程问题，且适用范围超出区块链。
+- **核心问题：** 在钱包等高敏感场景中，用户需要密码学级别地验证究竟是哪份代码解析并处理了自己的交易。
+- **关键思路：** 在 Nitro Enclaves 隔离环境中运行敏感逻辑，通过远程证明把代码度量与密钥/数据访问绑定，形成 attestation-gated access 的访问范式。
+- **工程启示：** 对需要向用户证明“代码未被篡改”的服务，可把证明度量作为密钥释放和数据访问的门禁；该模式可推广到任意高信任工作流。
+- **局限与待验证项：** 候选摘要未提供证明粒度、密钥管理细节、性能开销与失败恢复路径，安全性与可用性的权衡需读原文判断。
+
+### 5. 2026 年第三季度是什么让互联网中断：Cloudflare Radar 观测分析
+
+- **原标题：** What took the Internet offline in Q3 2026
+- **来源：** Cloudflare Blog
+- **发布时间：** 2026-10-27T13:00:00+00:00
+- **原文：** https://blog.cloudflare.com/q3-2026-internet-disruption-summary
+- **推荐理由：** 候选基于 Cloudflare Radar 的全球观测数据，归纳断电、自然灾害与政府关停等对连通性和流量的影响，为基础设施韧性规划提供外部实证。
+- **核心问题：** 互联网中断成因复杂且跨地域，工程团队缺少系统化的外部观测依据来支撑韧性设计与冗余决策。
+- **关键思路：** 按季度汇总并归类全球范围的连通性中断事件，分析电力故障、自然灾害、政策性关停等不同成因对网络连通性与流量的影响。
+- **工程启示：** 多区域/多云部署时不能只假设“各区域独立失效”，供电等物理设施与非技术因素都应纳入故障域建模。
+- **局限与待验证项：** 候选仅有摘要，未见事件样本量、统计口径与定量占比，结论偏描述性，缺少可复用的韧性设计方法论。
 
 ## AI 前沿 专业文章 Top 5
 
-### 1. HumanoidNDM：用人形神经动力学模型弥合运动跟踪的训练-部署差距
+### 1. EpiCoach：面向个体生理的智能体化贝叶斯实验设计
 
-- **原标题：** HumanoidNDM: Closing the Training-Deployment Gap of Motion Tracking via Humanoid Neural Dynamics Model - OpenReview
-- **来源：** OpenReview
-- **发布时间：** 2026-10-17T23:49:03+00:00
-- **原文：** https://news.google.com/rss/articles/CBMie0FVX3lxTE05Q3lHRGZ0bmg4RWhfTU1zV2VoM1E3VlM0VWhGR0tWZzBKeFFrakJPblBMUm9MUmY3UHZUaUV4MnlRWThnSFJzQTBYTndzRWxkekwyWko2Yl9NNHdvRGJxc3ZmWWVqbk9KMDByZ1RVc1ZJLUhsckh1anZKVQ?oc=5
-- **推荐理由：** 针对具身智能落地的关键痛点（训练环境与真实部署之间的动力学不一致）提出神经动力学建模思路，来自同行评审平台 OpenReview。
-- **核心问题：** 人形机器人运动跟踪策略在训练环境与真实部署之间存在动力学不一致，即训练-部署（sim-to-real）差距。
-- **关键思路：** 引入人形神经动力学模型（Humanoid Neural Dynamics Model），用学习到的动力学模型缩小训练与部署之间的行为差距。
-- **工程启示：** 为部署具身策略前引入显式动力学建模提供了可借鉴方向，可作为缩小 sim-to-real 差距的独立组件思路。
-- **局限与待验证项：** 候选信息仅有标题，缺少方法细节、实验平台与量化结果，实际效果与适用范围无法从现有数据确认。
-
-### 2. MedSpaceAgent：免训练、工具支撑的医学视觉问答空间推理
-
-- **原标题：** MEDSPACEAGENT: TRAINING-FREE TOOL- GROUNDED SPATIAL REASONING FOR MEDICAL VISUAL QUESTION ANSWERING - OpenReview
-- **来源：** OpenReview
-- **发布时间：** 2026-10-23T15:56:18+00:00
-- **原文：** https://news.google.com/rss/articles/CBMiUkFVX3lxTFB6WWhJZXA3WHlNQ0R1bnhQM2J6YzBScXhsWDRYWWtneVU4amVCSHQ3MEl4M0dVOUYzZmthU1M4dXdZNTRDSWNrOUxqRVRBcFVCWUE?oc=5
-- **推荐理由：** 免训练（training-free）加外部工具支撑的空间推理路线，对标注与算力受限的医学视觉问答场景具有直接的工程参考价值。
-- **核心问题：** 医学视觉问答（VQA）需要空间推理能力，而为此进行专门训练成本高昂。
-- **关键思路：** 以工具调用为支撑（tool-grounded）的空间推理流程，在不进行额外训练的前提下增强医学 VQA 表现。
-- **工程启示：** 垂直领域落地可优先尝试免训练加外部工具的推理增强，以降低微调与数据标注成本。
-- **局限与待验证项：** 候选信息仅有标题，缺少数据集、基线对比与评价指标，无法验证提升幅度与泛化能力。
-
-### 3. DuoCook：面向视觉规划与协作的 Overcooked 风格基准
-
-- **原标题：** DuoCook: An Overcooked-Inspired Benchmark for Visual Planning and Coordination
+- **原标题：** The Athlete as a Scientist of One: Agentic Bayesian Experimental Design for Individualized Physiology from Consumer Wearables
 - **来源：** arXiv AI
-- **发布时间：** 2026-10-22T16:26:38+00:00
-- **原文：** https://arxiv.org/abs/2610.31511v1
-- **推荐理由：** 评测设计完整且可复现：用编码智能体在 Unreal Engine 中构建环境，覆盖 20 张地图、5 类场景，并对 4 个 VLM 做全量对比。
-- **核心问题：** 缺乏评估视觉语言模型在双人协作烹饪任务中跟踪场景状态变化、排序配方步骤与在时限内分配共享资源能力的基准。
-- **关键思路：** 由单个 VLM 从俯视视觉观测中同时控制两名玩家，只输出高层动作、由引擎执行导航；地图类别覆盖设备争用、地形变化与交接依赖；通过道具图例、锅内配料计数等显式视觉提示与网格目标支持空间定位；评测任务得分、订单完成率与交付等指标。
-- **工程启示：** 评估 VLM 的协作规划能力时，应把高层决策与底层执行解耦，并以显式视觉提示和网格化目标降低感知噪声对结论的干扰。
-- **局限与待验证项：** 仅比较 4 个 VLM，且导航由引擎代劳，与真实具身执行仍有距离；候选信息未给出完整结果数值与统计显著性。
+- **发布时间：** 2026-10-29T16:20:24+00:00
+- **原文：** https://arxiv.org/abs/2610.40370v1
+- **推荐理由：** 候选摘要给出完整技术要素（证据门控假设注册表、机制化数字孪生、带约束的实验性训练处方），把 LLM 智能体从“给建议”升级为可审计、可证伪的科学推断，对可信 agent 架构设计很有参考价值。
+- **核心问题：** 面向个人健康的 LLM 智能体能读取可穿戴数据并给出建议，但并不以可审计、可证伪的方式学习个体。
+- **关键思路：** 构建含滞后心率响应模型、带学习时间常数的 fitness-fatigue 模型与潜在下坡技术状态的机制化数字孪生；每条断言必须先对下一次训练给出概率预测，信念只能通过已拟合统计模型产生的计算证据更新；智能体把下一周训练作为带约束的实验来处方。
+- **工程启示：** 给 agent 加上“先注册可证伪预测、再用实测证据更新”的闭环，是抑制 LLM 主观臆断的有效工程手段；证据门控与受控信念更新可作为通用可信 agent 组件。
+- **局限与待验证项：** 候选仅描述单一受试者（一名越野山地车手）的 N-of-1 研究，样本外泛化未经验证，且缺少具体性能指标与对照实验数据。
 
-### 4. Sensorimotor Alignment（S²）：作为具身策略成功率的柏拉图式代理指标
+### 2. 厘清语言模型数据归因的设计空间：受控事实溯源基准 CATT
 
-- **原标题：** Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success
+- **原标题：** Elucidating the Design Space of LM Data Attribution
 - **来源：** arXiv AI
-- **发布时间：** 2026-10-22T17:59:51+00:00
-- **原文：** https://arxiv.org/abs/2610.31670v1
-- **推荐理由：** 提出训练免费的离线指标以替代昂贵的闭环 rollout 评测，并报告其跨具身模型族与下游机器人任务成功率的正相关，对评测成本控制很有价值。
-- **核心问题：** 机器人基础模型的评测依赖昂贵的闭环 rollout，缺少廉价的离线能力代理指标用于事前筛选。
-- **关键思路：** 受柏拉图表征假设启发，提出 S² 指标：衡量模型感官表征与物理运动轨迹几何结构的对齐程度，作为训练免费、无需闭环交互的离线代理指标。
-- **工程启示：** 在投入闭环评测前，可用这类离线对齐指标对模型做排序筛选，显著降低评测算力与时间成本。
-- **局限与待验证项：** 报告的是相关性而非因果；候选信息未给出相关系数数值、模型族覆盖范围与失败案例，指标对分布外模型的可靠性未知。
+- **发布时间：** 2026-10-29T17:59:53+00:00
+- **原文：** https://arxiv.org/abs/2610.40655v1
+- **推荐理由：** 候选明确了失败诊断方法与受控评测设计，并给出“文档冗余与词汇干扰项会稳定劣化归因性能”的可操作结论，对训练数据溯源、版权与合规审计有直接价值。
+- **核心问题：** 数据归因方法通常用下游任务评测，但这类评测同时改变多个数据集属性，导致无法定位算法究竟为何失败。
+- **关键思路：** 在完全虚构的知识上微调 LLM 以获得无歧义的归因真值，构建可一次只改动一个数据集配置（如文档冗余、词汇干扰项）的受控基准 CATT，重点在评测而非提出新估计器。
+- **工程启示：** 做数据归因/溯源系统时不应只看端到端分数，应构造可单变量受控的探针来定位失败；当训练语料存在大量重复表述或干扰文本时，归因结果需谨慎对待。
+- **局限与待验证项：** 候选摘要未给出模型规模、数据集规模与量化结果，且结论限定于事实溯源类任务，向通用归因任务的推广性未证明。
+
+### 3. 等价感知的 LLM 路由：用评测近并列建立成本有效的帕累托前沿
+
+- **原标题：** Equivalence-Aware LLM Routing: Establishing Cost-Effective Pareto Frontiers via Evaluation Near-Ties - OpenReview
+- **来源：** OpenReview
+- **发布时间：** 2026-10-30T02:12:03+00:00
+- **原文：** https://news.google.com/rss/articles/CBMie0FVX3lxTE0yUFp0X0JDRW1teVBPbWxaRlp2djJOY00wckZIRlBJR1hsUkUxaWlzME5NNW90UTFlWU5hTmd2T09hc2lTalN1SXRZdGtEMUgtdWFwb2hWbXl1VnVzam4zZG81T21qMzVham11eEd3Nl9GM0NMTzB2cFliNA?oc=5
+- **推荐理由：** 候选主题直指 LLM 服务成本控制：把评测中的近似并列结果显式建模，以在不明显牺牲质量的前提下降低调用成本，落地性强。
+- **核心问题：** 多模型路由常以评测排名为唯一信号，忽略候选输出在统计上近乎等价的情形，导致过度使用昂贵模型。
+- **关键思路：** 以评测中的“近并列（near-ties）”定义候选模型的可等价性，并据此刻画成本—质量之间的帕累托前沿来指导路由决策。
+- **工程启示：** 路由策略应先区分“统计学上无差别”的请求，再谈质量损失；把等价性判断引入路由可在不显著降级体验的前提下压低成本。
+- **局限与待验证项：** 候选数据仅有标题，缺少摘要、方法细节、评测集与对比基线的量化证据，收益幅度与适用范围无法验证。
+
+### 4. COGCANVAS：多主体参考式图像生成评测基准
+
+- **原标题：** COGCANVAS: A BENCHMARK FOR EVALUATING MULTI-SUBJECT REFERENCE-BASED IMAGE GENERA- TION - OpenReview
+- **来源：** OpenReview
+- **发布时间：** 2026-10-27T01:56:05+00:00
+- **原文：** https://news.google.com/rss/articles/CBMie0FVX3lxTE5HTGs3a3Y5cHl6YmVyeExCNmEzSlVTZVlCbERLbzduSHFVblR2MkRycVdjNi15TzNWNFNEN2xxeFRyYzFhMTB4WHlheXVPdnVhWGdKbUdqcUpEc3lDSWZSYkRCMVEwYWZRVm5Rb1Q3Y0pzRDVfbUNNcHp2bw?oc=5
+- **推荐理由：** 多参考主体的一致性是当前图像生成落地的主要瓶颈之一，候选提出专门基准来量化该能力，便于团队做模型选型与回归评测。
+- **核心问题：** 现有评测难以系统衡量模型在多个参考主体条件下保持身份与特征一致性的能力。
+- **关键思路：** 构建面向多主体参考式图像生成的标准化基准，用统一任务与指标评测该类生成能力。
+- **工程启示：** 若产品依赖多主体一致性（如角色或商品组合图），应以专门基准做回归测试，而不是依赖通用生成质量指标或人工抽样。
+- **局限与待验证项：** 候选数据仅有标题，缺少数据规模、指标定义、覆盖模型与评测结果等关键信息，实际区分度无法判断。
 
 ## 数据源状态
 
