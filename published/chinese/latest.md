@@ -1,16 +1,16 @@
-# 每日专业 Topic 新闻：2026-10-31
+# 每日专业 Topic 新闻：2026-11-01
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 美联储维持利率不变，中期选举前按兵不动
+### 1. 升级版中国—秘鲁自贸协定正式生效
 
-- **原标题：** US Fed holds interest rate steady ahead of midterm elections - China Daily Global Edition
-- **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-31T05:15:04+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPQW9ncGU1T0doWmh0ZUtIcHRncUhzMjZ6NE5HcnRLTDltSXNLcGZaS3JrUkRpSEtSTmU5c2ZKcTUzejFXY2ZrWFBHNTNEeVpScW0td08tUnZ5QnR5Y1FKb3VFZ3U5OXJQU2JLOUU5aXJGdjlyVE9fX2ZMZUE2dmZ1T0FB?oc=5)
-- **摘要：** 据《中国日报》国际版报道，美联储在中期选举前宣布维持利率不变。候选数据未给出具体利率区间、投票结果与政策声明细节，也未说明会后的沟通安排；该决定对美元、美债收益率及跨境资本流动的后续影响仍待观察。
+- **原标题：** Upgraded China-Peru free trade agreement takes effect - China Daily
+- **来源：** China Daily
+- **发布时间：** 2026-11-01T05:21:38+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE0zcndGTGFEMDhPbHFBQXpfWXdVU1lJcGNUTFNpXzdJYVBFeWVvUnFfZHdDVm44Vjk1YTAyeWJDNUtsXzR1eS1Db1FBTTJteU1ham1fZm1NVVJTN3pjNWw5SWdkNW5KNlI5c3VBWlo2ZVZUQzctMFZmM05zUGlBQQ?oc=5)
+- **摘要：** 据《中国日报》报道，升级后的中国—秘鲁自由贸易协定已于11月1日生效。报道未披露具体降税清单、覆盖商品范围与实施时间表，该协定对双边贸易额、关税成本及产业链布局的实际影响尚待后续数据验证。
 
 ## 航运 Top 3
 
@@ -48,21 +48,29 @@
 
 ### 中国 Top 3
 
-#### 1. 中国海洋经济一至九月增长4.9%
+#### 1. 美联储按兵不动，中国政策空间受关注
 
-- **原标题：** China's marine economy grows 4.9% in Jan-Sept - China Daily Global Edition
+- **原标题：** US Fed's rate pause gives room for policy maneuver - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-10-31T07:30:09+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQWjFDZ0ZnWV9wYU1NSUctTkFCbU5DQnFLZXBvNVhzMG5kbk1zWTJyeVBaODlmSlBlaXBlSTFoNTZvbDVCV0ZGUVpiZENTaDRqZ0hwMnRqR240aHRibUxmX1pYX0s4cWJVbnI5NU1ydm8yNkxybWFCTU5Takd1Z0MxTk5R?oc=5)
-- **摘要：** 据《中国日报》国际版，中国海洋经济在1至9月同比增长4.9%。候选数据仅给出整体增速，未披露分行业构成、增加值规模与对比基数，也未说明增长主要来自海洋渔业、港口航运、海上风电还是滨海旅游，对经济增速的具体贡献尚不清楚。
+- **发布时间：** 2026-11-01T12:12:10+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxNQjFmM3J2S0ZuTEZjNjNnNjBIWEJ3RlFfR2REc0kwR0M4NmlDMlI4RmZXMmpBZGFSZ0lEZWJSQm14TzNUOUVOdGpoR1R4dkJVTExlYXpFYTZOT0R1ckNnMFdodW9aT1RIVnBzRmRKTm1YdHJKNENqQ0pWVFpNUzRVSE5B?oc=5)
+- **摘要：** 《中国日报》报道称，美联储暂停加息为中国宏观政策提供了更大的操作空间。报道未给出具体政策工具、出台时点与力度，中国货币与财政政策是否会据此调整、调整幅度如何仍不明朗。
 
-#### 2. 中国推动能源领域增强发展动能
+#### 2. 升级版中秘自贸协定生效，市场准入扩大
 
-- **原标题：** Nation pushes for energy dynamism - China Daily
+- **原标题：** Upgraded China-Peru free trade agreement takes effect - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-10-30T22:31:34+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE02ejI2R1FHMGlwd0hOZ0N6VXJLaDlGcEhvdC0zRDJLcDFMSE82TWZEV3dQUTJwczkyazhEQmgtQVJYU0dBMXJheldpeWEwYUdjQmhwanpaYy1hRnpLZnlsclRiQjVDRjZvRVMtanBLRWsycW9wME9TV1FDSWdvUQ?oc=5)
-- **摘要：** 据《中国日报》报道，中国正推动能源领域的改革与建设以提升能源发展动能。候选数据未给出具体政策文件名称、发布部门、投资规模或时间表，也未说明重点覆盖化石能源还是新能源，相关措施对能源企业资本开支与盈利的实际影响仍不明确。
+- **发布时间：** 2026-11-01T05:21:38+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE0zcndGTGFEMDhPbHFBQXpfWXdVU1lJcGNUTFNpXzdJYVBFeWVvUnFfZHdDVm44Vjk1YTAyeWJDNUtsXzR1eS1Db1FBTTJteU1ham1fZm1NVVJTN3pjNWw5SWdkNW5KNlI5c3VBWlo2ZVZUQzctMFZmM05zUGlBQQ?oc=5)
+- **摘要：** 据《中国日报》报道，升级版中国—秘鲁自由贸易协定正式生效，将进一步扩大双边市场准入。报道未披露关税减让时间表与涉及行业清单，其对两国贸易增量和企业成本的影响仍需观察。
+
+#### 3. 《影之刃零》登顶全球销量榜
+
+- **原标题：** Following in the footsteps of Black Myth: Wukong, Phantom Blade Zero tops global sales charts - China Daily Global Edition
+- **来源：** China Daily Global Edition
+- **发布时间：** 2026-11-01T04:33:39+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxPdk9za0hXVU1hUW1JOUhtM291aWhOTUhZMTZUcjkySXctWmJOeTRxck4waUtYTklBMTNrdWlidUFpelZZZmt3WEF4eGVqdVpyMk5QbWVNNE9NLVI2TFJMeWdzd0F4WGNYU1dZR0plUDE5NlVxVmhxMjJ1cmF3WHVTbVVR?oc=5)
+- **摘要：** 《中国日报》报道称，继《黑神话：悟空》之后，国产游戏《影之刃零》登上全球销量榜首。报道未公布具体销量、收入与平台分布，该作对中国游戏厂商海外商业回报的影响仍待验证。
 
 ### 美国 Top 3
 
