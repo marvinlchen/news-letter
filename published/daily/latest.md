@@ -1,259 +1,275 @@
-# 每日专业 Topic 新闻：2026-11-02
+# 每日专业 Topic 新闻：2026-11-03
 
-> 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
+> 生成模式：`rules-fallback`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 印度十月制造业增长放缓，出口订单跃升
+### 1. 宏观经济：Reforms can strengthen Belgium’s competitiveness, ...（可信来源）
 
-- **原标题：** India factory growth slows in October, export orders jump, PMI shows - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-02T05:04:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirAFBVV95cUxNZ3FhVmYydXJCM2pLZUpaQTVTY0dtUl8xNFNYdzdQakZibTJXbks0R29TVHlmQlN3U3ZjUl8yTTBLdHJKb0U5WF8ybXdTVHRxeGN6ajV3dnhxazVqQTBXS0tqUFV1ei1jWjMyZXFwOUZOcHdGWHNNRVNBdG1adVA1dTAtM2FUVzlOdUdNVEZoM3RycGdHaF83cl94ZklURkpFemVLbXlpaFU4dFFs?oc=5)
-- **摘要：** 路透社报道，印度十月制造业采购经理人指数数据显示，当月工厂增长放缓，而出口订单出现跃升。该组数据为观察印度制造业景气与外需变化提供了最新依据。候选数据未给出采购经理人指数的具体读数、前值与分项细节，增长放缓及订单跃升的确切幅度、调查样本范围与发布机构说明均未提供，放缓是否持续及其对整体经济的影响仍不得而知。
+- **原标题：** Reforms can strengthen Belgium’s competitiveness, unlock its growth potential and support sustainable public finances - OECD
+- **来源：** OECD
+- **发布时间：** 2026-11-03T13:33:02+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiiwJBVV95cUxNVGJ2OTBUa3c0N3k2UzF1a1NIUjB3ZzVJMl95d2Y3ektjdHRWc1B5Vk1aaWJVT0F6MXZwdVFFYkc4eHd3cWZZUWtkZkM2cmp2alFXUU1VZXZpUHZWbWQ4NzFJbDN4M01VaWs4ajhhV1h3d0JHa2gxZDZGQUI3QzZfVC1panlEcnFvRkR6Zk12d0h0TVlCd1NVSjhCMlRIMGJ5UXU4R3JOSk5UYko2bDF3T0owM2RCR1psVkh6WUxrX1hqVFUxb1ExZjNjTTVxVnlNOEp2QmFZN0VMUHZuei1rb25lRGFMTlFLLUZZc0g1bGxWbWpERWh2a0NzWmw0SkZCY0FnNFZ3d3l5NEE?oc=5)
+- **摘要：** 可信来源发布一则宏观经济消息：Reforms can strengthen Belgium’s competitiveness, unlock its growth potential and support sustainable public finances - OECD。该条目规则评分为 9.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响…
 
-### 2. 新加坡十月制造业采购经理人指数降至51.4
+### 2. 宏观经济：The evolving role of mutual recognition instrument...（可信来源）
 
-- **原标题：** Singapore factory growth slows in October as manufacturing PMI dips to 51.4 - The Business Times
-- **来源：** The Business Times
-- **发布时间：** 2026-11-02T13:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxQbF82NWRGZTVSaG9pQVllR0ViWVFXcnVHVWVjS2I1TnB5bmtfVmZKNGdZSFFNZVFSdjJsZWo5Q3pBaWVCR3pxZHQ5dWI1VjBsc0xheDNWVFVUUzh2N1hYOFB1RDRMQ3FMV2ZEeW8zN3Jvd3BQYXR0ajY1NUoydFBTVzNkX0k5VHgxU0ZfQV9aOW9rNEY4YjdPOG9SbzN0bEN1MzJsQkw1dmk0OVdvUzcyWXhIM2pKYXJQRXhoTDg5RXJRQQ?oc=5)
-- **摘要：** 《商业时报》报道，新加坡十月工厂增长放缓，制造业采购经理人指数降至51.4。该数据为观察新加坡制造业当月景气提供了直接依据。候选数据未给出该指数前值、分项构成及调查样本细节，放缓的具体幅度、涉及行业与后续走势均未说明，因此难以判断放缓的持续性及其对整体经济的影响。
+- **原标题：** The evolving role of mutual recognition instruments in a trade facilitation context - OECD
+- **来源：** OECD
+- **发布时间：** 2026-11-03T12:15:31+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUmRzQWNfYjJMcWRlZEdhTFFiSmYwQ29WbV93akVUOXZpVW9ZazZYWjlVVVY5RThnLWRGc3pUTDdYS2NFQ25XVnFVd1ZfM2w1bDVUNzduZGdCNnBwdnMzS1NPbHpPcHdvTjY0OEFjLTJVSjdCRFJwZ2RuZG1Xc1VhajFxVndhVDIzeDVDMTlUQTJpc3ZOLU1jdmlVNXVmTEVHMDV4Znp0VUZUS2JZbFNnMkVyY1hTeWpTNWozMXBtVm5JQXlmMFhUdEMyV0lZUlA4eFNF?oc=5)
+- **摘要：** 可信来源发布一则宏观经济消息：The evolving role of mutual recognition instruments in a trade facilitation context - OECD。该条目规则评分为 9.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+### 3. 宏观经济：Regulators explore credit union reforms to support...（可信来源）
+
+- **原标题：** Regulators explore credit union reforms to support growth, innovation and better outcomes for members
+- **来源：** Bank of England
+- **发布时间：** 2026-11-03T10:00:00+00:00
+- **原文：** [查看原文](https://www.bankofengland.co.uk/news/2026/november/regulators-explore-credit-union-reforms-to-support-growth-innovation-and-better-outcomes-for-members)
+- **摘要：** 可信来源发布一则宏观经济消息：Regulators explore credit union reforms to support growth, innovation and better outcomes for members。该条目规则评分为 11.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
 ## 航运 Top 3
 
-### 1. 红海复航提速，航运联盟增开苏伊士航线服务
+### 1. 航运：Royal Navy Tracks Russian Intelligence Vessel, Car...（可信来源）
 
-- **原标题：** The Week in Charts: Premier Alliance adds more Suez services as Red Sea return accelerates | Oil from ‘significant spill’ washes up on UAE beaches - Lloyd's List
-- **来源：** Lloyd's List
-- **发布时间：** 2026-11-02T10:40:35+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiiwJBVV95cUxPandOcF80YW4xZVU3VFFKR0ktYnFLeHFMb3BBSnQyYmVETFJ0bXlZMFR3MEVWTEdsN28wQk5EVkFvOTBNOVJ6LVVDa2VEMEVkN3dWZldfZWNDVHJOQ1NDSzhBaEp1d0NVeEIxS3pXejNNQ1B2NnRjVld4Q1NDY0Q1SlUzNlgxZ2NuVmFDcnFBWU01UW4wcmg3UHoxc1JPLU1pRXlMLWNSRFZjMlBoNEQxT2lqWU5zbER5eDMxeVFLTGxZUHNZREU4OVZOMlAyVmlKOU9TMlZ3SFVjMXFFZWVYdFowU2tzY1Z3d3owcGdpTUZ6ZXpvbnFUdXNyWVJFZl9IVHRZTXRSOWJ4ZzQ?oc=5)
-- **摘要：** 据航运专业媒体周度图表栏目报道，Premier Alliance增加苏伊士航线服务，红海复航步伐加快，同时一次被形容为重大的溢油已冲上阿联酋海滩。相关内容同时涉及航线网络调整与沿海污染两方面动向。候选数据未给出新增航线的数量、具体船期、复航比例以及溢油规模与来源，各项影响程度仍不清楚。
-
-### 2. 海盗在索马里海域劫持伊朗渔船
-
-- **原标题：** Pirates Hijack Iranian Fishing Vessel off Somalia - The Maritime Executive
+- **原标题：** Royal Navy Tracks Russian Intelligence Vessel, Cargo Ships, and Warships - The Maritime Executive
 - **来源：** The Maritime Executive
-- **发布时间：** 2026-11-02T03:39:54+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikgFBVV95cUxNcU1NekFDazdlOWZLb250OFppb0ZzVzBKM2hYTWFkcFFycjhrU0J3NnJaRjNHV0VONXc0ZThDM3ZwQkJIX0RDOWdqRmVEaC1lWFJNbmppVENWSzg1MlFWekQwWWVuTG1zQjU3RWNfbmI3OC1sQkg3Wnd1dEQtbi0tWi1YRWhKeVJnb2MxOHVrbHU1dw?oc=5)
-- **摘要：** 据海事专业媒体报道，海盗在索马里附近海域劫持一艘伊朗渔船。该事件涉及海上航行安全与船员安危，属于航运安全领域的具体事态。候选数据未提供劫持发生的具体时间、船只名称与吨位、船员人数及目前下落，也未说明袭击者身份、是否提出赎金要求以及后续处置或营救进展，事件影响范围仍不清楚。
+- **发布时间：** 2026-11-03T01:05:14+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirgFBVV95cUxNRUZlQ3pIZjd5NEJEaUp5T1VPc1RVUGxVdmdfRko2TUtMcThjT3J4a2FVaGk1emZkbmVYSDJ6THZpWlN1dTdOUGFiVndyZl9vNWN4ckZQM3ZjNkk4U3FPbUJ3MVcxRmNIQUVRRjFNUHYxQUplaUpaS3hQYTliN3R0aExoaVRjUnMtRUt3OU0tS3hFUWJqWHNBSl96eWcxMWhIMHd0cWJRNlBmeWZGdmc?oc=5)
+- **摘要：** 可信来源发布一则航运消息：Royal Navy Tracks Russian Intelligence Vessel, Cargo Ships, and Warships - The Maritime Executive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-### 3. 干散货船东预期出现世代级运价上涨
+### 2. 航运：Ports falling further behind shipping’s alternativ...（可信来源）
 
-- **原标题：** Maritime CEO Forum: Dry bulk owners eye generational rate rally - Splash247
+- **原标题：** Ports falling further behind shipping’s alternative fuel revolution - Splash247
 - **来源：** Splash247
-- **发布时间：** 2026-11-02T07:19:08+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxPbFFVRVVQTWZaWmJYNDc4dVZzOTMxRlFaZVI0SjB0dExzQk5rblNBNmlCbUYtR3EybVV5a3M3QWZEOW9CaS00dHBhbXo4czJKeFdWVHBRXzJNVUM4WmhTSzh4SEF3YWxwUG1FcExPNnByNGhTYl9yQ1g5a0JsYmNfMDFkTXY4Z3FYT0sxTFFB?oc=5)
-- **摘要：** 据航运专业媒体报道，在海事首席执行官论坛上，干散货船东预期可能出现被形容为世代级的运价上涨。这一观点为观察干散货市场景气预期提供了参考。候选数据未给出具体的运价指数、涨幅预估、时间区间及所依据的供需数据，也未说明参与论坛的企业名单与讨论细节，运价上涨能否兑现、幅度多大以及对船东盈利的实际影响仍不得而知。
+- **发布时间：** 2026-11-03T08:29:24+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikwFBVV95cUxQZzBGMFlKZURqcXdVcFBuVjdtTXF6N1ZtZEFGX2dDYk9GY0F5ODlQMkFCT09xVUx5RG81WlVVbUJlblJNaUhjWGFQNFFab19nbkJCMU5oNGt4MVNrdGxVWldraW5vcjk3eUJfbEVTZzRUY0NHZlc1cVlXd2N6OUpSQ01DTFpxUldMTTh6UHczV0NsVkk?oc=5)
+- **摘要：** 可信来源发布一则航运消息：Ports falling further behind shipping’s alternative fuel revolution - Splash247。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+### 3. 航运：HKC and Basel: Two Conventions, One Ship, And a Sh...（可信来源）
+
+- **原标题：** HKC and Basel: Two Conventions, One Ship, And a Shared Way Forward - The Maritime Executive
+- **来源：** The Maritime Executive
+- **发布时间：** 2026-11-02T22:15:02+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTTFZQkJja0UwOHY1cFI4am9TWktTX0VyRjl5aTY5UkZMVDNSMkk2SUNwY1lYck5CS1pyanhGanY4VlVFRVhVQkMzeVhCNU1Ea1gzaks4cmVqWGhjN2ZSMmFoTGxpVzJZLTBlc2Z1ajR3UEhfZVZla1JHeEs4TUZ3UUxWaWRLMzdOTFhIaEdmZU0xU1ctM21zMFhhNzJhX0F2dDF2U2x1T3A?oc=5)
+- **摘要：** 可信来源发布一则航运消息：HKC and Basel: Two Conventions, One Ship, And a Shared Way Forward - The Maritime Executive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
 ## 大宗商品 Top 3
 
-### 1. 黑石牵头31亿美元交易收购LNG Canada股权
+### 1. 大宗商品：Freed from OPEC quotas, UAE says oil exports have ...（路透社）
 
-- **原标题：** Blackstone Leads $3.1 Billion Deal to Acquire LNG Canada Stake - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-02T05:31:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisgFBVV95cUxOYkw5Y014RC1ydVVvWHpIMnZhVU80Tjd2d2tWSjM1YWg2TWxDWlE3alBOTkVpQlk5bVhNTEVob2NOMm9iLTRTRlRGNE93N0JVQTY3Z2xWc05wWE1rLWlCa0dkYmJGTjRNdnVib1NrLUFCV1RHdC1TNmhkdDRGM3RrbDlrVFYxUTlVZElBRnRRX24xTWpmT2xkSHNkTkNzckNMaUlZMU1raWtWd0lhMHdGY0FB?oc=5)
-- **摘要：** 彭博社报道，黑石牵头一项规模为31亿美元的交易，拟收购LNG Canada的股权。该交易涉及液化天然气资产的所有权变动，为观察相关项目资本结构提供了依据。候选数据未给出交易对手方、收购股权比例、交割时间表、估值依据及融资安排，也未说明牵头方与其余投资方构成，交易的完成条件与对相关方现金流的影响仍不清楚。
+- **原标题：** Freed from OPEC quotas, UAE says oil exports have risen as it hosts industry event - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-02T16:05:19+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcnd0cjROV01YdUV5VG9tVnV6NVpybjJpa1E1TnFOV3g2V2xhMmpmcGJQdXctakdyMVVmZk9hbTZvYnZ6aDJ2RDhoSU12Z2NoYlBRekRWNmlrSWdlblpJa0tKelN5VjFVVUhDWV85enFsam91QXFRWVdUUzNEYmZSTDhaWVBRUFE2MTBVRFY5XzhvR2NDZXVXeXZROVoxdkJQcm91cnZqQUJEWmJLNkJ6R0UwLWJvYU5MQ21sNXZpeEN3S3c?oc=5)
+- **摘要：** 路透社发布一则大宗商品消息：Freed from OPEC quotas, UAE says oil exports have risen as it hosts industry event - Reuters。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-### 2. 中国发现新关键矿产矿床，强化供应链安全
+### 2. 大宗商品：Oil rises after report of US strike on Iran's Qesh...（CNBC）
 
-- **原标题：** China unearths new critical mineral deposit, bolstering supply chain security - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-02T11:00:10+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0AFBVV95cUxOa1ljYTBWVHd4bW9uU25pVkJhZUVBNDZpNVljRmZtMXozUENsYjhXRVhTZVN4Q0VyY1c4V1l1MFo4R3ZreEVlUXdqbXhzMDVJZHJzbkZRdzNPSGNaNlpjRDMxVkVsaEVGVWQtZHRtVUJPSllvRmRmeEh6TjJhazk1TkpwbFZTM1BnYVVMQ1Zia2R5bWExNjVVeGtxWDRQa3lXZ25UNzlxQ2NKS3BNNW1SbVVvU2NGLTZvU09LbGJNcHpJUktobDh0WERlYzVIX1R20gHQAUFVX3lxTE51djFNeG5WeDM0elFoMFA1aG5Wbjd0Zl9aX2lpcktzSTVVMmE0RVhQNFFUcDRaa001SnliVjFkbnNhdWhVNnB5Um9UOVVIWjF3UGhZaFZoLVIxY2RlS1FlOHhyVGprUzhtRkNBMEY2MVhSZGNXdGI1NXVZRXRJUTZZYjRFNi1MWTdadm9qd28yejJad2FBZncyUHhYaVNKZ3FFTGw0bFVYMHM2X09hd3NSODBCbFlsOFRINUttclRPTlQ2eW9mTFJrdkt4aG1uUEk?oc=5)
-- **摘要：** 《南华早报》报道，中国新发现一处关键矿产矿床，报道称此举有助于强化供应链安全。该发现涉及关键矿产资源的供应保障，为观察相关原材料供给格局提供了依据。候选数据未给出矿床的具体地点、矿种、储量与品位，也未说明开采主体、投产时间表及成本数据，新增供应规模、对进口依赖的影响以及相关产业受益程度仍不得而知。
+- **原标题：** Oil rises after report of US strike on Iran's Qeshm Island - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-11-03T01:47:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimgFBVV95cUxNMXFvdGNDcnl6amhxTGFkZHVydFotVURTN0NfR0NnSVVMOWpPYkNEdGJ5dTJHWGhyRENCdDJpTWtieHhFOEl2alMtc2RCeU91Z0ZFd2x0S0lUcDlQVlpZTGtzcjZfaThkZi1YamNsM3BnRnowdFVHOUVFQVBsM3RqSHJFYXBHTVl4RFdXYUpXYXdUQ0QxLS15QnZB0gGfAUFVX3lxTE9XQzl1bndPWE1Vcl80ZHZybk91Mjl2RjVQR1JRNXEyUFhsWkxmRFNrNmt2ZGRlTmY0Qi1FaU5SQlRBdHhVY0FjTTBELXFrRGdyWHhsT1paR1FsVVR4Y0p3UkJiRDRVYVlGcFNZT1ZHemlhLXI4d1Y2bEVtMTc2SzNQZVlTdE5meUlOSFdsWVlWcndjLXBvM3FsQ1hVQi1SWQ?oc=5)
+- **摘要：** CNBC发布一则大宗商品消息：Oil rises after report of US strike on Iran's Qeshm Island - CNBC。该条目规则评分为 19.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-### 3. 阿联酋石油业高管呼吁增加储备并靠近用户炼油
+### 3. 大宗商品：Vitesse Energy Announces Third Quarter 2026 Result...（英国《金融时报》）
 
-- **原标题：** UAE Oil Boss Calls for More Stockpiles, Refining Closer to Users - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-02T06:35:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEZlTmdTQ2ZUVjRFZW1jTUJOM0hIb04ySXBkQ3BMSGJfR0RXUWNOaDFQcUwtNW1zakc5R2w4dy1LUElNRTF3aFloVEVOeTM0SzNabzA3YWc2bFlXUm1EbmlidGlaYl9lOFJjdUZMa1g1VUIybFhNdkt1a1c1LTlsMTdwQl9oVW0weTZUNmtmZVk3RTEyenpGV0lIV2x6V2lBUTE2UlM3MGxMZG1qdElJQXhfcjk?oc=5)
-- **摘要：** 彭博社报道，阿联酋一位石油业高管呼吁增加石油储备，并将炼油环节布局得更靠近终端用户。这一表态涉及石油库存与炼化产能布局，为观察相关供应策略讨论提供了参考。候选数据未给出该高管姓名与所属机构、建议的具体储备规模、炼油项目地点与投资金额，也未说明相关呼吁是否对应已公布的政策或企业计划，实际落地情况与影响仍不清楚。
+- **原标题：** Vitesse Energy Announces Third Quarter 2026 Results - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-02T21:06:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipgFBVV95cUxQOG96TWs4QmJ6WlE0UkpCbnZPYlRfRGFtTXIwN2c4OWJfcERyc0MtQWlVR0tQWnN2VHh0dUtyWDJjRFpBRzYxOVhnWnZjRWYzdHVXcXktUklURTBXNmpsVmlFcDhJRnZmWmZiVEZTQUJhY1d6R0FoZzdtc2tiOXp4RVlMMXFRUGt4ZEtSeUs2N29WMUEzS0pXZkpsejZRaG43aFZlM0Z3?oc=5)
+- **摘要：** 英国《金融时报》发布一则大宗商品消息：Vitesse Energy Announces Third Quarter 2026 Results - Financial Times。该条目规则评分为 15.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
 ## 股票市场 Top 3
 
-### 1. 股市与债市上涨，油价下挫
+### 1. 股票市场：Stocks wobble, oil prices fall as Trump says Israe...（路透社）
 
-- **原标题：** Stocks, Bonds Rise as Oil Tumbles on US-Iran Hopes: Markets Wrap - Bloomberg.com
+- **原标题：** Stocks wobble, oil prices fall as Trump says Israel aid will stop - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-03T02:24:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMie0FVX3lxTFAxcWNjUUxuZ2lvM29QWUdBcWpkZGdCaUpLSkJRT3pXbzNUcTh6ajFTN0d1NmpHTlN6d2p0TlNfRElGZV9ZTnR2SHdabGNxQ3FqUkMtN2N1LXppRmlxNGRlTHozQ0YxY3BqNnNNRGtaYUppX1ZyMjJVdkhiYw?oc=5)
+- **摘要：** 路透社发布一则股票市场消息：Stocks wobble, oil prices fall as Trump says Israel aid will stop - Reuters。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+### 2. 股票市场：Nasdaq Slide Clouds Asian Open, Oil Falls on Iran:...（彭博社）
+
+- **原标题：** Nasdaq Slide Clouds Asian Open, Oil Falls on Iran: Markets Wrap - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-11-01T21:28:04+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilAFBVV95cUxNUXhSWUZpNlU1UFZVSEtvY3QwQVB4T3FuYlpCT3lpaE05MThfMFFTZVZWWllFZDZDYkJFdTBIWEx1X1ZMVXlESFdaX3Noc2VSSW1QRHFzYzhPZkowLVNZeWR1N2dBN2hlLXY1VlJ3SHJNR3Ayc29JOXN4cXN3bklZQzN5bEctRER1aGp1eFdUVjhITWM0?oc=5)
-- **摘要：** 彭博社市场综述报道，股市与债市上涨，油价下挫，报道将油市变动与美伊局势相关乐观预期相联系。该组走势为观察当日跨资产表现提供了依据。候选数据未给出各股指、债券收益率与油价的具体涨跌幅及收盘点位，也未说明成交额、板块表现与消息来源细节，涨跌的持续性、幅度以及对其他资产的外溢影响仍不得而知。
-
-### 2. 北京推出一系列措施稳定股市
-
-- **原标题：** Beijing launches barrage of measures to stabilise stock market after sell-off - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-02T09:15:28+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivgFBVV95cUxNQ1RrbE5DT25fLTlSNEdyTTQ2ZkYyWlVqS2JVWnF3X1JPLU9xOXpNekQ2WHhaSDFxRlkzQ21BUE0xSXFQeU5zRXZBdjJtdUFmMVhXdlM4eEIwbml0U2dCbnlZVE9NSno5VjBhazZXY1F4U1lYR3o0dTlHMThLY0VRTDl3YjRCRU5qZExyajlTSDU5M3o4ZVJMdXppajM2bWhObzdhbW1ldUQwWWdadTBzQk9vcklDQ1kxVTJJd0lB?oc=5)
-- **摘要：** 《南华早报》报道，在股市出现抛售后，北京推出一系列措施以稳定股票市场。该动向涉及市场波动后的政策应对，为观察相关市场支持举措提供了依据。候选数据未给出抛售的具体幅度、涉及指数与板块、措施的具体内容与规模，也未说明发布部门、实施时间表及资金来源，措施能否见效以及对市场流动性与估值的影响仍不清楚。
-
-### 3. 昇菘集团股价续跌逾9%，触及一年新低
-
-- **原标题：** Sheng Siong shares continue last week’s slide, fall over 9% to hit one-year low - The Business Times
-- **来源：** The Business Times
-- **发布时间：** 2026-11-02T02:28:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRUc5aTVNVFdXSTQ0ZHg3czhyLVFBeHE0MGNud0FzRURzVGJKTVBqRm1RNmRDejlKSFJIcjdqTVB1X2FVSlpMVW5uMFNyZVNDSUxZSDVSc3lfLWJ4d0lseHFzT2luTWRXLTZnUEpjMXpaQzl6TFBmSzFDSEFoODVvRk5QUzZHcHNCb1lmSnJ0bXlaS2Nnc1ZaTjNiR1BpT1ByVlFaeDBhVTk1aWdHNTcwUUg5NTBEeDh6YVVHMEtmODc2UQ?oc=5)
-- **摘要：** 《商业时报》报道，昇菘集团股价延续上周跌势，下跌超过百分之九，触及一年新低。该走势为观察个股表现与市场情绪提供了直接依据。候选数据未给出具体收盘价、成交额、下跌对应的公司消息或行业因素，也未说明上周累计跌幅及后续交易日表现，下跌的确切催化剂、是否涉及基本面变化以及跌势会否延续仍不得而知。
+- **发布时间：** 2026-11-02T22:25:14+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisAFBVV95cUxNa05KRG1UeEkyMlo1RGZ0TkNTR253cFo0eXc3Qjh4RGpId3gwZG8tN3hDdTQ5b2djV09Jd0xHQkRoTUlnTUNCaTVRZEJEWUNkTjVGSzlEN1lCdmdoY0YyVF9TRFIwM0hvZXhVOTJBeF9DeWtlZFkyWllmVE42dmI0Vm9mQ180bFkyU1lyclQ1QUgwNUkwYkhYd2JnY09XUTR0ZjJ0d2x3LWNrclA1eFRQUA?oc=5)
+- **摘要：** 彭博社发布一则股票市场消息：Nasdaq Slide Clouds Asian Open, Oil Falls on Iran: Markets Wrap - Bloomberg.com。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
 ## 科技产业 Top 3
 
-### 1. Marvell拟以全股票交易收购Lumentum
+### 1. 科技产业：Marvell to Acquire Lumentum in Historic $115 Billi...（彭博社）
 
-- **原标题：** Marvell Technology to buy Lumentum in all-stock deal - CNBC
+- **原标题：** Marvell to Acquire Lumentum in Historic $115 Billion Tech Deal - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-11-02T21:09:22+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPV2FXN0VKVjBIUDlmNF8xMXBEcE9BQkRrQk5GR2k1dmNLMjlBMVlCSmRLc19PNXVCTUNZVUZRY3pQNzEtZGJuQlNwcnMxQWdqME8xa1FtOVkyendLS0RFSTV3cjNwQXJaYmVxTy1fREcyNk81S29pYWRGOTdLN3ljXzVVX1pIaDlTMXRGTHB1ck1qNEZnSUlsUkJIMWFJSmpHT1U5UjkyMEs?oc=5)
+- **摘要：** 彭博社发布一则科技产业消息：Marvell to Acquire Lumentum in Historic $115 Billion Tech Deal - Bloomberg.com。该条目规则评分为 16.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+### 2. 科技产业：Marvell Technology could plunge on latest multibil...（CNBC）
+
+- **原标题：** Marvell Technology could plunge on latest multibillion-dollar acquisition - CNBC
 - **来源：** CNBC
-- **发布时间：** 2026-11-02T12:29:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimwFBVV95cUxNcGgySUFLbFNZMVpWMU9yUklqX1E4am42a2t3SkZpclpydm1nQS1OWXR4dHNIR0FNTUJZVC1ubkh1NHZxNU1mZHJ5aVNLcERoZkNaUnhaNExJQlNaZ0NUVFFsY2F2ZFNzNnZQV1lSVmt2R2NwOUMtdU5ZMzZFb1FrMXoxZWFLODk2ZUt5S1BhN1BGanA3LUpNS00wcw?oc=5)
-- **摘要：** CNBC报道，Marvell Technology计划以全股票交易方式收购Lumentum。该交易涉及两家相关企业的所有权整合，为观察相关领域并购动向提供了依据。候选数据未给出交易金额、换股比例、估值、董事会批准情况与预计交割时间，也未说明监管审批要求、双方业务互补细节及对股东结构的影响，交易能否完成及协同效应仍不清楚。
+- **发布时间：** 2026-11-03T15:19:49+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilwFBVV95cUxOV09Yb0RfcEdqV2VTTm91cW1uV0dmTkxZNkY2WVpmb3I3UWZ2WGg2TWRfNDRHUmRpS2JONVd0QWdEekg3TmhMSjJJWDhXb1BTbEhPZVhkQkRWa3NZUHZoeGt5aEY3dy04bHF0M3hSTVRCd3doVFFDMENRVWxHV1QzRjcwUlRHVlJUbS1ISmIwajFQMjItaVJv?oc=5)
+- **摘要：** CNBC发布一则科技产业消息：Marvell Technology could plunge on latest multibillion-dollar acquisition - CNBC。该条目规则评分为 12.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-### 2. 长鑫存储为推进新DRAM架构辩护，美芯片限制施压
+### 3. 科技产业：Global Semiconductor Sales Increase 24.1% from Q2 ...（可信来源）
 
-- **原标题：** China’s CXMT defends push into new DRAM architecture as US chip curbs bite - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-02T11:30:09+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxNb1lXREp3Z1lqNVNmcFdmVXJuQll5c25RZnVvZm83aU4zODRqZzIxMUl6eEhQcGlFQk4xVHd4SVlmSVdLSW1kRlBSYzRURnczMWkyS2k2bjdLQmRkLWxmMHN6Uml1NjhzdF8xb3hEZGRBTXpZdG5MOE9jcVNXX2ZKX2lya2V5OWFoSzlpWkh1STVUcVUtZlpYc2xfS3ZGOVVDT3ZmVExzMjg1ck5zUE1YVE43dkxtNl90QXNrdHF1N1MzR1R1dlHSAcYBQVVfeXFMTi1FMUJ6MG1iNlBneVhoQ0dPZVlDdXpiT3pTOXRzVUxCRlBPbDVLM1lwdnJIaHRmV25CT2VEUGZSWXE5MllZUFhzV0hUOXRMR3Nwbm9MekFhTUVLNjNnLW91NlpRazFlMkVoQktQV2FtV29CaWhDaURiMW5IYjQ1d3FoQVAtREFmdG81a21mdGlxS2UzcUxjVUtwbWRpNXhOY1dhZFE2aTNfdWdJLWJDTGJ3MkY0TGFCR0hPR0h5NThpczN6UEtR?oc=5)
-- **摘要：** 《南华早报》报道，在美国芯片限制措施产生影响的背景下，中国长鑫存储为其推进新动态随机存取存储器架构作出辩护。该动向涉及存储芯片技术路线与外部限制环境，为观察相关产业应对提供了依据。候选数据未给出新架构的技术细节、量产时间表、限制措施的具体内容，也未说明企业产能、客户与财务影响，技术进展与业务前景仍不得而知。
-
-### 3. 谷歌在印度为Google Pay推出时尚生活体验
-
-- **原标题：** Introducing a new fashion and lifestyle experience in Google Pay in India - blog.google
-- **来源：** blog.google
-- **发布时间：** 2026-11-02T11:26:16+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxPR1ZYYk9qSlJMR1YweFFhbmgtZXpDYkYzTTBwOVY4NzU0SUF2enFZMlkyRk5JR3lQMThaTXdQZG41TlRVQzlRN3FvQlpFdVRSbjhMOVBjM1hlM3FDdS0zNzIzYVQ5ZFRCaUdNdVAtRHdxRlFjdWFnOUdLMVVYVVZ0ZFJOMDJuWXlpTzd2dXZfSlRJRUFQMFVxaTFmLTdzTEdJTV9FSWRDcXZBZl9FV2pXMkUyQ3I?oc=5)
-- **摘要：** 谷歌官方博客发布消息，公司在印度为Google Pay引入一项新的时尚与生活方式体验。该发布属于第一方产品公告，为观察其支付产品在当地的功能扩展提供了依据。候选数据未给出新体验的具体功能、上线范围、合作商户与时间表，也未说明用户规模、商业化方式及与现有服务的差异，实际使用效果与对业务指标的影响仍不清楚。
+- **原标题：** Global Semiconductor Sales Increase 24.1% from Q2 2026 to Q3 2026 - Semiconductor Industry Association | SIA
+- **来源：** Semiconductor Industry Association | SIA
+- **发布时间：** 2026-11-03T13:06:05+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMinAFBVV95cUxNRnY1X0xxUjBSTmswemR0eHByLVBsUlczdkJILXVVQk1UOWx2R3hpbzNjR2lRU0VObmdZOUJTdmttVC1uZ2Y3ZHlEY3VZR0RDeWhYdGNGYnNadC1qalNPajFTU3ZUdlhHU3JubWJvTDdEem04MmJBdUNUOXRKN1RQdWZodDAyekpuYXBKd0N3aGNDYkZaRXJwQkhUeTE?oc=5)
+- **摘要：** 可信来源发布一则科技产业消息：Global Semiconductor Sales Increase 24.1% from Q2 2026 to Q3 2026 - Semiconductor Industry Association | SIA。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步…
 
 ## 消费 Top 3
 
-### 1. 7 Brew首次推出食品菜单
+### 1. 消费：How restaurant and hotel brands are unlocking 10%+...（可信来源）
 
-- **原标题：** 7 Brew debuts first food menu - Restaurant Dive
+- **原标题：** How restaurant and hotel brands are unlocking 10%+ revenue growth with handheld POS technology - Restaurant Dive
 - **来源：** Restaurant Dive
-- **发布时间：** 2026-11-02T15:28:58+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimAFBVV95cUxNaDhoeENWSnlLQ1pIdm10R19naTFTZFAzMUdxTUIydUpucU0ta2NGbzZJWEhnSFJrZUJwLVhoMjNFOGp3aUc4SHZKaDhXOG1HVFU2NDNOMXZxMTZjaWFMVG5mS2ZnVHNULTFMdjl5NVhmby1HT2ltM0FTY3pIU3laRFMyQjhCYmw2cDJyaUk0OVBLNU5QMHhRVA?oc=5)
-- **摘要：** 据餐饮行业媒体报道，7 Brew推出其首个食品菜单。这一动作意味着该品牌新增食品品类，为观察其产品结构与门店经营提供了依据。候选数据未给出菜单的具体品项、定价、上市门店范围与时间表，也未说明原料供应、门店改造投入及预期销售贡献，新品类对客单价、客流与整体营收的实际影响仍不得而知。
+- **发布时间：** 2026-11-02T19:49:05+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiugFBVV95cUxQM2JLQWpLaDdaYmZEQnlPdlMzN1ZYUVVIVlVkV3VDM0dTdllwbkUyTFBKOFFCV1FFS0wwVDRqZGFoRnROZG1JTHV3Mk1DeUV5aUdfbVRMVjBrNWpRSFRGSlJvUUVMRGF5MHRfMWpPc1FOaE9rRmZzRjQtdmhZc1lyeEVOWEwwY0hHZDlDemVkT3B2VWluZzJ3REdEb2wyOG5HMjczZTZud0FwaVpYbVV5Z2hPR0dMZG9qaUE?oc=5)
+- **摘要：** 可信来源发布一则消费消息：How restaurant and hotel brands are unlocking 10%+ revenue growth with handheld POS technology - Restaurant Dive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一…
 
-### 2. 沃尔玛推出节日餐食套餐
+### 2. 消费：Boot Barn ramps up store openings despite lowering...（可信来源）
 
-- **原标题：** Walmart dishes up holiday meal deal - Retail Dive
+- **原标题：** Boot Barn ramps up store openings despite lowering outlook - Retail Dive
 - **来源：** Retail Dive
-- **发布时间：** 2026-11-02T15:14:26+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxORlI2N1hITG82Q1pfb1pYSXVYRnBDbVo1SFJmZW5Hc3dxYzgtNTVfZ2VIeEhyNWQ4U0dpOEJQWVczazI5R2FHQWNMTEhlVzUzTWpGWjc0LTdTSURLc19CT2ROaHNMSjBVcFdVcEszLXB5dWowSjJzTTBXakNjU1VWOXgzUGU?oc=5)
-- **摘要：** 据零售行业媒体报道，沃尔玛推出节日餐食套餐。该举措属于节令性商品与促销安排，为观察其假日季消费品类策略提供了依据。候选数据未给出套餐的具体内容、定价、供应门店数量与销售期限，也未说明预估销量、毛利率、宣传投入及与往年方案的差异，套餐对假日客流、客单价与整体销售的实际拉动仍不清楚。
+- **发布时间：** 2026-11-02T17:34:26+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0VOY1E3OF9GUmxmSjAzTS1EaVFRaG1hN3BrQkdqdkFyRGs0d0cwNkFIMXV4RWFZU2hDdXY2OGlDdlk3ejIxanZBeU8yNGdyY3RlLVRub0JiSkJaNDdQQXAyTmtVVFhVNDNaYkpUdktDdUl4bDBZaWY3YlUzNzRzMy1oMVhteDRvVkxVYXItcjI?oc=5)
+- **摘要：** 可信来源发布一则消费消息：Boot Barn ramps up store openings despite lowering outlook - Retail Dive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-### 3. 30亿美元洗钱案查封豪宅拍卖遇冷
+### 3. 消费：Emily Hooker - NRF: Retail's Big Show（可信来源）
 
-- **原标题：** Auction sales of luxury homes seized in $3b laundering case falter amid mismatched expectations - The Straits Times
-- **来源：** The Straits Times
-- **发布时间：** 2026-11-02T04:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi2AFBVV95cUxNU2RENk1pbE5UalBMZFdZdDk0ekFna0hPQWVSWEU1OGdGN3liR19fbDBlRnNIa3Y4aGttaWlTM1J5S3Y0QjNFbHBld0tpVFBzWjM2Tk9WM2NjMUtHSjdiQnJjQW9CbHVTOFlldFQwYkk1Z0hZVldCRGdLRzFHOU9PcnU5NEZCSFlzYzRPeGJfTDZTbHM3T3RBZmZoeE5sOUpBekNmSUk0aGJRZk9qWm1yRW1mX1p0c18tMUFUYTNWRmIyUmJpRkFta1U3anVoNlFjVURkcTUxWlM?oc=5)
-- **摘要：** 《海峡时报》报道，在一起涉及三十亿美元洗钱案中被查封的豪宅，其拍卖销售因预期不匹配而遇冷。该情况为观察涉案资产处置进度提供了依据。候选数据未给出豪宅的具体数量、地理位置、起拍价与成交结果，也未说明预期不匹配的具体表现、竞买人数及后续处置安排，资产回收金额与处置周期仍不得而知。
+- **原标题：** Emily Hooker - NRF: Retail's Big Show
+- **来源：** NRF: Retail's Big Show
+- **发布时间：** 2026-11-03T08:55:39+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJRW5KVlI4TEF0OXl0Tm9meXNIV2EzeEVmSVhjNXBCeWktQ3FEYWxEYUxsVzZqU093cWpTTjNBdHFPRjRfZTMwT0dfU09nVDlBVzBmTy1IQU9QVkE?oc=5)
+- **摘要：** 可信来源发布一则消费消息：Emily Hooker - NRF: Retail's Big Show。该条目规则评分为 11.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
 ## Cloud Infra Engineering Top 3
 
-### 1. 亚马逊云科技演示欧洲主权云独立运行
+### 1. Cloud Infra Engineering：AWS appoints British Embassy advisor as manager of...（可信来源）
 
-- **原标题：** Inside a successful AWS European Sovereign Cloud exercise to demonstrate independent operation - Amazon Web Services (AWS)
-- **来源：** Amazon Web Services (AWS)
-- **发布时间：** 2026-11-02T03:37:30+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMizgFBVV95cUxOdHZlSC1IQ0xVR254eTcxS05SZDBLaEJUaFVweDZlNS1mdHJfX2QxWU4zenpydDVnWVI1WDRaNGpuMEhfSGNJSDhvRnVVNEVnc3FXZHQ5NkEzaVBKaGdqWTFES3VhSmVlaGxZdHJtcXF5X1hYZUsxRFh5bVVlcWtRYzgyMktkUG1OZjdUa0k4cktQdnhHcks1WlYzTmpwT0VmdHJ3QTBiWTJvMDI4alAzVkNRZ2Jpb1BHUEVjbDZsZUlHSzlOcmgtZUZlZldGdw?oc=5)
-- **摘要：** 亚马逊云科技发布第一方文章，介绍其欧洲主权云一次成功的独立运行演练，目的是验证该云在隔离条件下的独立运作能力。该演练为主权云基础设施能力提供了直接说明。候选数据未给出演练的具体时间、地点、参与系统、验证项目与测试结果，也未说明独立运行所覆盖的服务范围、持续时间及第三方审计情况，实际可用性与客户影响仍不清楚。
-
-### 2. 谷歌云宣布封堵XCPE僵尸网络
-
-- **原标题：** Shutting the Door on the XCPE Botnet - Google Cloud
-- **来源：** Google Cloud
-- **发布时间：** 2026-11-02T14:03:06+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimAFBVV95cUxORmJ2VVhPbGtGcWJHSGJKcV9UUHU1NzJrdWxPYndXeFNhSDdtaWtZWFl0NFJuQjFYM3pJbVlDR2J6eDdIejBQazh3RDhHYTgweGdvUHllajQyenl2UDB4dVIyZEdzd3Q0RXRHT2xDWEFzcVJlUERFRmkzZkQ4aTd2bEpEQnl2M1NfbHRxQXlONTdTaDg0S3o1aw?oc=5)
-- **摘要：** 谷歌云发布第一方文章，宣布封堵名为XCPE的僵尸网络。该动作属于云与网络安全领域的基础设施处置，为观察相关威胁应对提供了依据。候选数据未给出该僵尸网络的规模、感染设备数量、攻击手法与发现时间，也未说明封堵采用的技术手段、受影响客户范围及是否联合其他机构，处置成效、溯源结果与后续风险仍不得而知。
-
-### 3. 华为云在巴西公布四项加速AI落地策略
-
-- **原标题：** Huawei Cloud unveils four strategies to accelerate AI adoption in Brazil - Data Center Dynamics
+- **原标题：** AWS appoints British Embassy advisor as manager of energy policy - Data Center Dynamics
 - **来源：** Data Center Dynamics
-- **发布时间：** 2026-11-02T14:31:56+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPN2k3TkxfNUZHSWs3bndqd0hoTzZObFVCZF9BOGNwWTNSVWtkLXJmV3BVb3pSV3U1cGlFMFIyMXV3WVg1X2ZBNk52Mi03ZUhxWjNwb0o5U1FXWDlXYkkzbjFHeDdFV1l4YmVjcmhXellXNXNOV2pwamdRUmttS1RTLS1NSzkyakwtY0xJbGlXZDZneENHTkY4RjI4Y0xyRVRYeWJXZ0s2NlAwbFNTVURfYmdhR0x2NU9Xa0lEZ1dySl9SUQ?oc=5)
-- **摘要：** 据数据中心专业媒体报道，华为云公布四项策略，以加速人工智能在巴西的应用落地。该发布涉及云服务商的海外市场布局，为观察相关区域业务推进提供了依据。候选数据未给出四项策略的具体内容、投入规模、合作伙伴与时间表，也未说明目标客户行业、基础设施建设计划及预期收入贡献，策略的实施进度与业务成效仍不清楚。
+- **发布时间：** 2026-11-03T13:43:21+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxNOVN6eFVMYmh5OEsxclhWRklxbnJkTmxyaHpVQlRfNjYxdHFDT3RpTmhkTHpsQXc4andJLVAwRFk4akhpcy04Tng2YUczZXRrNlVVVDdJNjlNUFlsLUtqN1VIdnMwZjRFQnl4WGJ4MFJHc0JoT2t0Vy1WRWFXS09rTV9vT3IwcWFCdDdFdjNn?oc=5)
+- **摘要：** 可信来源发布一则Cloud Infra Engineering消息：AWS appoints British Embassy advisor as manager of energy policy - Data Center Dynamics。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+### 2. Cloud Infra Engineering：Water usage at AI scale - Data Center Dynamics（可信来源）
+
+- **原标题：** Water usage at AI scale - Data Center Dynamics
+- **来源：** Data Center Dynamics
+- **发布时间：** 2026-11-03T13:19:23+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMif0FVX3lxTE5uOEQxcnJkMWZhcm1TQ2JmLW5fZW03Ri0wUGpXU0hvLWZiNFp3bFpTdE5TY2MzN3VMT2IzYlpJM2hYR0wyX2pGTzRmUTM0Z0UyMUJIaGdabzc5eGEtU1ptbW9yWWs1dWEtdVFCVzdMLUpyZ0RJRjh1dmhYN2NNdUk?oc=5)
+- **摘要：** 可信来源发布一则Cloud Infra Engineering消息：Water usage at AI scale - Data Center Dynamics。该条目规则评分为 11.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+### 3. Cloud Infra Engineering：Introducing Zero Wire, a hub for investigating cri...（可信来源）
+
+- **原标题：** Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities - Cloudflare Blog
+- **来源：** Cloudflare Blog
+- **发布时间：** 2026-11-03T14:31:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5FSUliNFBicFhMUmJGdUZsR3VQN0UzSm4zMkJNWERlQlVzNlJjNEc0LVpRN2RyMnhXMWZkbWRma0x1TTBvMzlMaS1MXzBiRUU?oc=5)
+- **摘要：** 可信来源发布一则Cloud Infra Engineering消息：Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities - Cloudflare Blog。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及…
 
 ## AI 前沿 Top 3
 
-### 1. OpenAI宣布推出Grid Protectors计划
+### 1. AI 前沿：Progress on provable inference for large language ...（可信来源）
 
-- **原标题：** Introducing the Grid Protectors Program - OpenAI
-- **来源：** OpenAI
-- **发布时间：** 2026-11-02T15:12:44+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1VR3oxdk1UcmphMkNDb1JRZFBCV0xJY1lmc3NGWkp6WlFTbXNKTzFRcGVWYXpLZk9MQkVEdXp0RWdiOEtYY0ZEdkIxc01DVFpyUXJ1bWl4WG01Z2hSY3c?oc=5)
-- **摘要：** OpenAI发布第一方公告，宣布推出名为Grid Protectors的计划。该发布属于来自人工智能机构的第一方项目公告，为观察其相关倡议动向提供了依据。候选数据未给出计划的具体目标、参与方、覆盖范围、资金规模与时间表，也未说明计划所涉领域、实施步骤及预期成果，计划的性质、落地方式与影响仍不得而知。
+- **原标题：** Progress on provable inference for large language models - Anthropic
+- **来源：** Anthropic
+- **发布时间：** 2026-11-03T04:43:45+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiY0FVX3lxTE1qTzctMkJVc25sdVRiNlRUcGhHNjF1d2dJU2s0alBCZmFBVlZHS1VJNXlad0VHQnpDYnZLaEpJTklaUUdCVE1GRnNuN1REYWxBZkVwdFFyeWhDd3F1Mi0zWGlZVQ?oc=5)
+- **摘要：** 可信来源发布一则AI 前沿消息：Progress on provable inference for large language models - Anthropic。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-### 2. 中国AI里程碑：模型生成词元超过训练用量
+### 2. AI 前沿：Training activation classifiers for safety and ali...（可信来源）
 
-- **原标题：** China’s AI milestone: models generate more tokens than used in training - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-02T07:00:23+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZmlZMmVuUEtoVVZMenUyZnpyTWdaLWs5Z0kwZjlwZG56T3N4SzNRYWdDU0JWWkVMUFpEY2JmV2hpb1Z4TUxydmdyS3NuekhPbm9oSWYtcFdDNTc3a1FzZkRmRVJQUW1sTU9GY0tybjFEWkl4QXp2RXlub0kyRXA1X0RCMFRXd1E2V09zZ3Q4Q0xudUVMajlZTWZQeVhFOU5vSWtjUkNlUUtLa1RrV3pkMmdXTFZXdkplRDRRdnZkVDXSAcABQVVfeXFMTzNwWm5uQXdBc0hCejQzZHdaQnlBWmk4bVhvU3hLd2lFbzRRTXFXSHhMeDB2d3o5Q01VNURkWEtuVmhTbnFNWW1fRlNtZWIwNGp4ajJoaF8xNTFvZGN4dFVMZ1drX2tyX3NJc0F4cnAwdThuOWpZcWN2ZzQxbEhOQnI5Tm1mM1ZQUnlpdS1CUEJKT2lfZ3JTR0Y0RU5MS041dWNEdEdBZTFtM3Ffa2o3TzVYVnVwRWd0RWV0YW5ha18w?oc=5)
-- **摘要：** 《南华早报》报道，中国人工智能领域出现一项被称作里程碑的进展，即模型生成的词元数量超过其训练阶段所使用的词元数量。该说法为观察模型推理规模与训练投入的关系提供了参考。候选数据未给出相关模型名称、机构、统计口径、时间范围与具体数值，也未说明测算方法与对比基准，该里程碑的判定依据、适用范围及行业含义仍不清楚。
+- **原标题：** Training activation classifiers for safety and alignment - OpenAI Alignment Research Blog
+- **来源：** OpenAI Alignment Research Blog
+- **发布时间：** 2026-11-02T20:19:27+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMibkFVX3lxTE1NdGhpQkJHQk5vU29KREpJUk9lQmc5cGFOb0NSYWMwZnZ1X0RUVUVoZEM5U2QweDF6MW0tRlItaEhkSFdjVExaSWY1ZTJkdW9IcGJXa0Q1c29vRGlvanVjNVBENzRqN2FXblFTVWxB?oc=5)
+- **摘要：** 可信来源发布一则AI 前沿消息：Training activation classifiers for safety and alignment - OpenAI Alignment Research Blog。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+### 3. AI 前沿：FlashProve: an open-source library for provable in...（可信来源）
+
+- **原标题：** FlashProve: an open-source library for provable inference - anthropic.com
+- **来源：** anthropic.com
+- **发布时间：** 2026-11-03T05:25:35+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMib0FVX3lxTE5GMkRLdnh0RU5YakZxeWdIVms3QU9tQVpJdHN1MFJ6RFRGcWNpenFvdThnYmFhRmRrMVBZUWJCVmtkZHZ1dlQyX19kVVBYdGJZVHRLaTN1NzJLZXV1SVJkcUtpSDZMMm1lLWNYbWgtNA?oc=5)
+- **摘要：** 可信来源发布一则AI 前沿消息：FlashProve: an open-source library for provable inference - anthropic.com。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
 ## 国家新闻
 
 ### 新加坡 Top 3
 
-#### 1. 新加坡金管局出台措施支持险资投基建与证券化资产
+#### 1. 新加坡：Written reply to Parliamentary Questions on access...（可信来源）
 
-- **原标题：** MAS Announces Measures to Support Insurers’ Investments in Infrastructure and Securitised Assets - Monetary Authority of Singapore
+- **原标题：** Written reply to Parliamentary Questions on access to basic banking services - Monetary Authority of Singapore
 - **来源：** Monetary Authority of Singapore
-- **发布时间：** 2026-11-02T07:31:53+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi2wFBVV95cUxNdnJJbHB5UGNUSmlfaGFtdHJHZFdwY3lmM3c5cW1INGtvQ3QzZkF3LUJxVXRPdUcwSjV1eXlBUmtpcEtlU3ZRSHA0cHJyV0dVa3U4NVQyNFBRTzNZS1V4OXVNTnpwV0RlU2gySnV3T2h0OHhGUm9aRUF2UUJjVElnaDV1UnZQcEZQQjZ4QUVUYlYtaFlwaGE4S1ZBUzAweWRfRno4WmZpb25TUkx3eHdWdXlNN3NHem03azlZWU5nai1HbHhWNGs5bzFGUHduUmFHQm5GZ3FZWU51M0k?oc=5)
-- **摘要：** 新加坡金融管理局发布第一方公告，宣布出台措施，支持保险公司投资基础设施与证券化资产。该举措涉及保险资金的投资范围与资本配置，属于监管层面的政策安排。候选数据未给出措施的具体条款、适用机构范围、投资比例上限与生效时间，也未说明风险资本要求、信息披露规定及配套安排，对险资配置结构、收益与相关资产估值的实际影响仍不清楚。
+- **发布时间：** 2026-11-03T15:50:40+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwwFBVV95cUxPb0RrQ1NOX0xKM2VhQmdYR280M3BFd0hIOUlhcXdUd1MzR2pkVldZLXhqNXdudGlPTVlINjEzZ25oRjJnSGdwbU1SRlBHSW4zQjNfMUdpZ29GLVJuallndUZOeE03MWJkU21lbl9pZjRLN2kyVUd4azR6M2YtZ0RMU3J3S1pnN2JJdnp4b2JxNVJMMkYxRC1PZmR4bjhwakduMWRWdlZNUVpSWlBEN0FjQkVpMk95Z0JtQnNkUl9xVUFpcWs?oc=5)
+- **摘要：** 可信来源发布一则新加坡消息：Written reply to Parliamentary Questions on access to basic banking services - Monetary Authority of Singapore。该条目规则评分为 11.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一…
 
-#### 2. 新加坡制造商对AI需求保持乐观
+#### 2. 新加坡：Future of Finance Institute Commences Operations, ...（可信来源）
 
-- **原标题：** Singapore manufacturers stay upbeat on AI demand despite geopolitical clouds - The Business Times
-- **来源：** The Business Times
-- **发布时间：** 2026-11-02T10:01:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitwFBVV95cUxQb0RGZmJhTXVlUms0WktaZ2tnTmNSbVFNeXR1YVlsX1h6c3JTS05KNjdfQWg3NWYxdlA4OTVXMEdJbXdjNE40UVdRUGY1OWFyTXMzRENFZWVUR3NlaF9rdXlXclY3U1ZsWGpuZlRmMHFHTEpaMEFJUFJNVHh5WVhmektORlRyajctNVVJUTFKRFdvclRYWDVNQU45RUdNRF9TS1hncmd6bmwzUHhzUTFsRHJ5OWhtY0E?oc=5)
-- **摘要：** 《商业时报》报道，尽管存在地缘政治方面的不确定因素，新加坡制造商对人工智能相关需求仍保持乐观。该情绪为观察当地制造业景气与产业方向提供了参考。候选数据未给出调查样本、企业数量、行业分布与统计时间，也未说明乐观情绪所依据的订单、产能或投资数据，需求前景能否兑现、对产出与就业的带动以及相关风险程度仍不得而知。
+- **原标题：** Future of Finance Institute Commences Operations, Starting with AI in Finance - Monetary Authority of Singapore
+- **来源：** Monetary Authority of Singapore
+- **发布时间：** 2026-11-03T09:45:33+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxOeFJ4SXl0QldubkQ3bHZrdTRtUkY3UFoyRkhIY0VuSFdWU2piaHJ3M210UVFnNlkwczdPX28yZUtwSnUwQ3B5ZnlQTlc3elZyMkZzbmowampxY2p2QmRCZHY4THpDS0dmMmdQUlR2RzduS01ZcktOckRrUlVwa2hid0VDVXJCcGY3RFBjS0Z3b29La0FNS053TEhpNkpLWXlWbGduZFA1U3NpVDJOY0JDYzg4Q21ORlJfdDFaRkx2cnNSdw?oc=5)
+- **摘要：** 可信来源发布一则新加坡消息：Future of Finance Institute Commences Operations, Starting with AI in Finance - Monetary Authority of Singapore。该条目规则评分为 11.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进…
 
 ### 中国 Top 3
 
-#### 1. 中国股市反弹，市场预期央行扩大450亿美元再贷款工具
+#### 1. 中国：Vice-Premier He Lifeng vows support for Hong Kong ...（可信来源）
 
-- **原标题：** Chinese stocks rebound on optimism PBOC set to expand US$45b relending facility - South China Morning Post
+- **原标题：** Vice-Premier He Lifeng vows support for Hong Kong as global financial centre - South China Morning Post
 - **来源：** South China Morning Post
-- **发布时间：** 2026-11-02T02:22:38+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZzZYVjdfVTBqdHM0SEtrMFJ4cDAtdG4zMkkteTR4eEZwZXVsUXpMQTVIOTZYVUdycE54Q09ZUFNSZllNVVF4c0JpRzY3RFpfZkIwekZtdldNN0NDV3NHNG5wVk9lWklxNVBqcERsVF9qOEhxbDRKUTdtU21raC1jbE92bmNpRF9zY29naWpHTHZMU21CSWZYMi1SWTFSX2J4QnNDRUx2Y1FEUWpJY2xYWFc0SXpIcXRKUUFNNTFJOWxMdG1yWklvaEk1dllOV0xONlE?oc=5)
-- **摘要：** 《南华早报》报道，中国股市出现反弹，市场乐观预期源于中国人民银行拟扩大规模为四百五十亿美元的再贷款工具。该动向涉及政策工具预期与股票市场表现，为观察相关资金支持措施提供了依据。候选数据未给出股指具体涨幅、成交金额、板块表现与再贷款工具的现有规模、适用对象及扩容幅度，也未说明政策是否已正式公布，反弹的持续性与估值影响仍不清楚。
+- **发布时间：** 2026-11-03T07:59:18+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivwFBVV95cUxOSkxNbWcwTTM0SHBRWV9vb0pVWnZoSXhIUnZ2bU9USDU4ZXRGTUo0Q09XZlBUQy1LSkVybUlQaDVpS0pNZG9PZDA1U0NOLWVhWDlsWFNfU1BobzFSQTVGcUM4Z3ZlUlFCTEpFVldxc0d2NWhicHQxNFkxbUJJU1R2MVJoaUtOVk1aNlpjOHhXSC1oN2d1VHdHOUQ2czNTejV5UEQtQlBwMjU1SHJndnUwbVJteHpmVmpYd0N1Ymdpbw?oc=5)
+- **摘要：** 可信来源发布一则中国消息：Vice-Premier He Lifeng vows support for Hong Kong as global financial centre - South China Morning Post。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-#### 2. 中国十月工厂增长放缓，出口订单回落
+#### 2. 中国：How Beijing plans to cut trade costs and speed cro...（可信来源）
 
-- **原标题：** China factory growth slows in October as export orders ease, private PMI shows - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-02T01:49:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixAFBVV95cUxQT3hYd093Mlc3ZWdMZkdpTE13RXFjUTNHbU1VaV9DU25MamJmd2dTYVZEakladUp6OFZWZUtNdlNlb29KTmRBZS1VZm1GV1JBT1Z2UGhMT1pLVi13SmNOZkQ4M3k3cl84S2daZGtrcEE3UXJZOXZ3ZEoxRGRXQmFyV0hhUzF0ZE9DODduOWZKY0VpemEwYWsxeTRlTm1VR19kWGhvc2NLUUVfbHUxTFNKdFZrVWVfa3hlTG5vT3JhZkRyMnJx?oc=5)
-- **摘要：** 路透社报道，私人机构发布的采购经理人指数数据显示，中国十月工厂增长放缓，出口订单有所回落。该数据为观察中国制造业景气与外需变化提供了依据。候选数据未给出采购经理人指数的具体读数、前值与分项细节，增长放缓及订单回落的确切幅度、调查样本与发布机构说明均未提供，放缓的持续性及其对整体经济与就业的影响仍不得而知。
+- **原标题：** How Beijing plans to cut trade costs and speed cross-border payments - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-11-03T07:00:08+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixwFBVV95cUxNUlhieDBOLVFxMW1HU1JnbWVDMndKTTJ3d0ZXS1ROamstakxreFFYejdkRzFTQ1Z3c2NvMC10Nnk1VDVsV1JUX1lSSHV2dExldFZRUW9GWVN1azZsc0s4bGppZHlEVkY1RG9nU3ozZ0lQUWhDbzRTZTNMSVdCbkRlVDVzTTdqRkVoVllyVHlQallwcTJsazYxeFYwSG4zTHJydGw1cXplTERQNXFYc1U2WnNZLWZ1RER6MXpYOElMVUJqZVN1TE5F?oc=5)
+- **摘要：** 可信来源发布一则中国消息：How Beijing plans to cut trade costs and speed cross-border payments - South China Morning Post。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
-#### 3. 中国化工出口激增，或引发新贸易摩擦
+#### 3. 中国：China’s He Says Will Support Free, Open Economy in...（可信来源）
 
-- **原标题：** China’s soaring chemical exports threaten new trade war front - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-11-02T06:43:12+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxOUVVIM21ybXBWenJzZkRET2ZJRmh3dWNrQXFGN1ItTDczR2RFNklpV1hwNHlvN2VPeWo0LVVxbk45RFQ2Y1IzaHZwa2dBUm9fMXUtdExYa29ucnh1dTlPcWdzc1BnMjhxRHFFZF9LemR6bDhueFpsTVAwZFctM18zTFppbFA?oc=5)
-- **摘要：** 《金融时报》报道，中国化工产品出口大幅增长，报道认为这可能引发新的贸易摩擦。该动向涉及出口结构与对外贸易关系，为观察相关行业外部压力提供了依据。候选数据未给出化工出口的具体规模、增速、目的市场与涉及品类，也未说明相关贸易伙伴的反应、可能采取的措施及时间范围，贸易摩擦是否发生、波及范围与对出口企业的影响仍不得而知。
+- **原标题：** China’s He Says Will Support Free, Open Economy in Hong Kong - Bloomberg
+- **来源：** Bloomberg
+- **发布时间：** 2026-11-03T02:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxNMFBqYTdVYlVZX2lKSFU3LWVLMzM5TmV2ckFsVFlob0Qzai1zVmN5SzJ2dkJuT0dLZGVwRVgxOXNoaTBENGhYQTJqcm5Pb2hKcjFPSFg2a1prZGMzRXNTYlNxV0FMaHVuM29MeDBpWFdaTzB5ZUhrNGFBRllzYXlwOW1CLV9DVHdmNmRwVG9QVV9xbWhsZk5ORzV4N0lZVFpBREE3NXJNOHNnUHpWR2dr?oc=5)
+- **摘要：** 可信来源发布一则中国消息：China’s He Says Will Support Free, Open Economy in Hong Kong - Bloomberg。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
 
 ### 美国 Top 3
 
-#### 1. 美国农业部公布2026作物年度保险收获价格
+#### 1. 美国：Apple margin outlook pressures tech as reported U....（CNBC）
 
-- **原标题：** PM-26-068: 2026 Crop Year (CY) Common Crop Insurance Policy and Area Risk Protection Insurance Harvest Prices Announcement | Risk Management Agency - USDA Risk Management Agency (.gov)
-- **来源：** USDA Risk Management Agency (.gov)
-- **发布时间：** 2026-11-02T12:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxOZmUtS2ltYTBESjNyYXZoU1J4TTZoRjZxc0lOQW94QldTS2ctWmxMVnhSTDFMb1hhTzVBbElxUnJjdDZTUThjc0VZR2RRRHFQREczUVZyWWNxVU5jU0VIczgtMEVNX3VWUW5pOGJfTktNNTBPWnduSGhxdmFGcDNEbkNkUG1wNEJGTTRxcnhCb2h5MWg3ODA1T2lHd0JlUjlaRU1Lb0VZQVhkT2ZkLWVoMnMyOHZ3WEkzR1JtNA?oc=5)
-- **摘要：** 美国农业部风险管理署发布第一方公告，公布二零二六作物年度常见作物保险政策与区域风险保护保险的收获价格。该公告属于农业保险领域的第一方政策信息，为观察农业保险相关价格信息提供了依据。候选数据未给出具体作物的收获价格数值、适用地区、计算方法与生效日期，也未说明与前期的差异、对赔付金额及农户现金流的影响，相关价格对保险支出的实际作用仍不清楚。
-
-#### 2. 金价自一年低位回升，油价走软
-
-- **原标题：** Gold rises from one-year low on softer oil prices; U.S. midterms in focus - CNBC
+- **原标题：** Apple margin outlook pressures tech as reported U.S. strike lifts oil - CNBC
 - **来源：** CNBC
-- **发布时间：** 2026-11-02T05:23:20+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikAFBVV95cUxOZEFyaHlIS09zM3U3UEJjanBfMjhFd1hueWtlZjAwdFdBb1dQV3dGb1JjaGRzTjlZUmtFV3p1QmxCY0VSaS1LT0xwZ1ZyTk9idXZLQlVTQzY0LU1IZU51REhEQ3FCSXpVVGllbFFWckc2d0FTZ0duR1JycW9idXV2eVpSblJzQlB1dmpNUGM2SjXSAZYBQVVfeXFMTjQ0SmZSckhreXRTdTJYUEc4SHgxS3hLWGtaMDlvZmF1Y1hOd25TaDJ0bldXXzlRZVRDcWFxTXpnMHBvUkNiaHRrYVgxMzMzSDhJRUwyV3ducDd0d05BZXA1N3ZmT1p3UDRCZ0RlVXcyV2lYdnY1MDV4eFZuNUNyeUdHSUNGNHJUQjBYLVRaTU1ranBtX25B?oc=5)
-- **摘要：** CNBC报道，黄金价格自一年低位回升，报道将其与油价走软相联系。该走势为观察贵金属与相关资产表现提供了依据。候选数据未给出金价的具体涨幅、收盘价与计价单位，也未说明油价下跌幅度、交易时段及两者关联的依据，回升的持续性、幅度以及对相关资产估值的影响仍不得而知。
+- **发布时间：** 2026-11-03T11:30:03+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiakFVX3lxTE5BaUExRVJtdGlQV0paOGwwYzJWbUJLNWhjMVVoU1FZWnVoclNwZUZsWFZJTXNDdk5nYk4tVUpnQ1g0emFGa0RGenVRel9YMlY5MTIzUjJvMk85eU9CQmhSQ3JadDNkNDNmOXfSAW9BVV95cUxOalc3a1BfVzREOS05TUd6Z2x3ZUNjRURqVFg0dkt5UEVvWFltbWhiekNIWlk2YUNxc3hzdmZIaG5DZG0wRzdOVUl4NDJFWHU4Zko4czM4SkhBZUNUSVZ0cmdZcGV6NGJsdHRpSzJFZ3c?oc=5)
+- **摘要：** CNBC发布一则美国消息：Apple margin outlook pressures tech as reported U.S. strike lifts oil - CNBC。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+#### 2. 美国：S&P 500 Edges Up as Oil Falls on US Election Day: ...（彭博社）
+
+- **原标题：** S&P 500 Edges Up as Oil Falls on US Election Day: Markets Wrap - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-11-02T22:25:14+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilAFBVV95cUxOTGEyREpLdzRYM3VsY3NTclQ1Y2xud2pYNVl6Y0JhZ3RNczRVVjJ0aG43NmgyWkQ5SU85SmtVWGVCU0wySnBTdkhzZXR3R3RpMWloMWdlckxKM3BBUFB4VU9FbzhDQ2l2dm5xZlIwbFZJTHdJQVVyaU1Qc3djSmowcHdGMDNOVUIyMDdURnFwWWpUbmZN?oc=5)
+- **摘要：** 彭博社发布一则美国消息：S&P 500 Edges Up as Oil Falls on US Election Day: Markets Wrap - Bloomberg.com。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+
+#### 3. 美国：Economy Statement for the Treasury Borrowing Advis...（可信来源）
+
+- **原标题：** Economy Statement for the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)
+- **来源：** U.S. Department of the Treasury (.gov)
+- **发布时间：** 2026-11-02T20:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9QT0E3RXlzSkUzOHNxMEFDS0lScEpmUUtzQlVRTlRfRThxV1lIMnB4azljMUhKRVJSM09WY2tKZXhnMmpWRkdtOFY3eFI3LXpvbmFRcGRkSVZTQVBTeW10MnVR?oc=5)
+- **摘要：** 可信来源发布一则美国消息：Economy Statement for the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)。该条目规则评分为 12.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
