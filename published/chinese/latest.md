@@ -1,24 +1,16 @@
-# 每日专业 Topic 新闻：2026-11-04
+# 每日专业 Topic 新闻：2026-11-05
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 中国发布消费基础设施蓝图，推动消费与投资协同增长
+### 1. 商务部：若对等削减关税落实，中方愿增加美国农产品进口
 
-- **原标题：** China unveils consumption infrastructure blueprint to sync spending and investment growth - China Daily
+- **原标题：** China open to more US farm imports if reciprocal tariff cuts implemented: commerce spokesperson - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-11-04T09:08:55+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFBvNXFqQXU3SXZSeWlBRjJiMFllOU1hTmV6eVNXVjRMSlFZS0V0UnNhMkMxd2FySnh5V0VlMHJ0alZhX25vek5rcHYwTUo5TVVzT3g0ejg1azZkcDlnTnVZcGdGOXBuZHJuekh6T1pUM0c3c2JOTjRHYXd6a0RPQQ?oc=5)
-- **摘要：** 据中国日报十一月四日报道，中国发布一项消费基础设施蓝图，旨在使消费支出与投资增长相互协同、同步推进。报道将其描述为统筹消费与投资的政策规划。所提供信息未说明蓝图的具体措施、涉及金额、发布部门、实施时间表、覆盖地区及量化目标等细节，这些内容仍不明确，其落地方式与实际经济影响有待后续信息确认。
-
-### 2. 阿迪达斯看好中国增长机会
-
-- **原标题：** Adidas bullish on growth opportunities in China - China Daily Global Edition
-- **来源：** China Daily Global Edition
-- **发布时间：** 2026-11-04T01:26:24+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQdlZDaWRnQm9MRVItRmhRMGtFdVEySkZqa2hqaHJ0bTdxNGxfakR5Z0VnSGJmemJXMTdEMnJJaE9jZVJ4eUJacXM2TFBFbXo2cFRtNkhJS0k4eVdzeEJaUkZRMjVNWUdPbUlaTk1icXlzdHYtODUyQXEwWE1USmdEbWRR?oc=5)
-- **摘要：** 据中国日报全球版十一月四日报道，阿迪达斯表示看好在中国的增长机会。该报道仅提供标题与来源信息，未说明表态的具体场合、相关负责人、所涉及的业务或市场、任何财务数据、投资计划及时间表等细节，这些内容仍不明确，其对公司业绩、产能布局与资本配置的实际含义有待更多信息确认。
+- **发布时间：** 2026-11-05T10:52:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFB2aGsxM3R6QVZRbGM3ODdTa0I0QXJJWVFSZ1JCamF6SkpndFJtSTVVZ29jN0cwaFBmX2J2NktlR0VHcnB3a1V1UzREb3RSdzdQQkFhdkRmSng2bTRaSVJlUHM0c0stYnltS0tlQVlmUzFxT0UtX2pUZ2lCa1BLZw?oc=5)
+- **摘要：** 据《中国日报》报道，中国商务部发言人表示，若对等削减关税的措施得以落实，中方愿意增加自美国进口农产品。该表态把扩大美国农产品进口与关税对等下调相挂钩，涉及中美贸易政策走向，对农产品贸易及相关市场预期具有影响。目前尚不清楚拟削减关税的具体幅度、涉及品类、进口规模、落实时间表以及美方回应，相关细节仍待确认。
 
 ## 航运 Top 3
 
@@ -30,7 +22,13 @@
 
 ## 股票市场 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. 丰田汽车股价创39年来最大单日涨幅
+
+- **原标题：** Oh, What a Feeling: Toyota Stock Posts Biggest Single-Day Gain in 39 Years -- WSJ - 富途牛牛
+- **来源：** 富途牛牛
+- **发布时间：** 2026-11-05T10:58:57+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimwFBVV95cUxPdFFpN0xRYWZSYUl0cW1NeEowQnkxWjRMeU1aOFdOYUR6ak44Zlo1bHc1dGl2MU5yamdKOGx0RWJHN1NScmJJaDF3aEZZb3NwM0JJRHVfS0prUVNNRVZsTEtISVEzczd0Q21OeVl2Tjl3dEFENmg1U3VFaURMRl9hMlFXUzRlMUxlR242aEl0cTBvSkhhaC0zc1Qyaw?oc=5)
+- **摘要：** 富途牛牛转载的《华尔街日报》标题显示，丰田汽车股价创下三十九年来最大单日涨幅，上涨方向明确且幅度为该股近三十九年之最。所给信息未说明此次上涨的具体催化因素、当日实际涨跌幅、成交量以及是否有公司公告或业绩等消息支撑，相关细节仍属未知。
 
 ## 科技产业 Top 3
 
@@ -56,29 +54,29 @@
 
 ### 中国 Top 3
 
-#### 1. 广州前三季度投资大幅增长
+#### 1. 中方称对等削减关税落实后愿扩大美国农产品进口
 
-- **原标题：** Investment in Guangzhou booms in first three quarters - China Daily
+- **原标题：** China open to more US farm imports if reciprocal tariff cuts implemented: commerce spokesperson - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-11-04T11:19:15+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFBKaEVDZEJodVhmaktOZnNlMHAyanFVVHlSY0tFYVIyOC16aEhBUGZIWmhDVkx0emp3cXY4a041c281RlpncHNxS1MtLWwxWGJ0aHIwd0tfUl9IVGl2YWpfRVU5c1hkY0JLOXB0ZFZ5d0ZTSU5VNF9jNU5EOHA0UQ?oc=5)
-- **摘要：** 据中国日报十一月四日报道，广州前三个季度投资呈现蓬勃增长。该报道仅提供标题与来源信息，未给出投资的具体规模、同比或环比增速、统计口径、涉及行业、资金来源、重大项目及与往年对比等数据，这些内容仍不明确，投资增长对当地经济与产业结构的实际拉动程度有待更多信息确认。
+- **发布时间：** 2026-11-05T10:52:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFB2aGsxM3R6QVZRbGM3ODdTa0I0QXJJWVFSZ1JCamF6SkpndFJtSTVVZ29jN0cwaFBmX2J2NktlR0VHcnB3a1V1UzREb3RSdzdQQkFhdkRmSng2bTRaSVJlUHM0c0stYnltS0tlQVlmUzFxT0UtX2pUZ2lCa1BLZw?oc=5)
+- **摘要：** 《中国日报》报道，中国商务部发言人表示，若对等削减关税的措施得以落实，中方愿意增加自美国进口农产品。该立场把扩大美国农产品进口与关税对等下调挂钩，涉及中国进口结构与中美农产品贸易的后续走向。所给信息未说明进口品类与规模、关税下调幅度、落实时间及美方回应，具体安排仍不清楚。
 
-#### 2. 报道称限制性政策扰动产业与供应链
+#### 2. 进博会开幕日上海企业签署1亿美元协议
 
-- **原标题：** Restrictive policy destabilizes industry and supply chains - China Daily Global Edition
+- **原标题：** Shanghai company signs $100 million deal on CIIE opening day - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-11-04T12:33:32+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQT3FDV3JZYkpxdFZIdXJOcUhScEdkNERsY0ZxSzY1Vi10bkcweHpnbXBZcEc2NGpRLUZWZzV6RHQxM2haRnpXUmRqNUpqTmNLR0dpc0xSdElRQzhiZ1ZpRjRYR3ZIQ1Q2aTFYZHZvTzA5RHRZUzBOc0ZQd2lhZ1hkME53?oc=5)
-- **摘要：** 据中国日报全球版十一月四日报道，一篇报道指出限制性政策正在扰动产业与供应链。所提供信息仅为标题与来源，未说明所指政策的具体内容、出台机构与地区、涉及的行业、实施时间、量化影响及数据来源，这些细节仍不明确，相关判断的依据与实际经济影响有待更多信息确认。
+- **发布时间：** 2026-11-05T15:49:28+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxOTzUySmQ5bXpma2NmTUpWZEZsTzN6STJYNkJrVWxtUmRjdGI4bWFqV3loZy1KbVVPRGxsXzNaU0xYRGNmRS1DQUNVWTFvanhkRmNfZVVoSTJWTGZmalJsYmJaaW5Wd0hUOEJSdHNQNFFyLVd2bG5ISnpLRGFWNHRyNU9B?oc=5)
+- **摘要：** 据《中国日报》全球版报道，一家上海企业在进博会开幕当天签署了一项金额达一亿美元的协议。这是进博会开幕日达成的企业间大额签约，涉及中国进口贸易与企业经营活动的后续走向，具有一定的经济意义。所给信息未说明签约企业名称、交易对手、所属行业、协议具体内容、付款与交付安排以及协议是否具有约束力，相关细节仍属未知。
 
-#### 3. 阿迪达斯称看好在华增长机会
+#### 3. 深圳AI机器人公司Astribot拟扩大业务规模
 
-- **原标题：** Adidas bullish on growth opportunities in China - China Daily Global Edition
-- **来源：** China Daily Global Edition
-- **发布时间：** 2026-11-04T01:26:24+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQdlZDaWRnQm9MRVItRmhRMGtFdVEySkZqa2hqaHJ0bTdxNGxfakR5Z0VnSGJmemJXMTdEMnJJaE9jZVJ4eUJacXM2TFBFbXo2cFRtNkhJS0k4eVdzeEJaUkZRMjVNWUdPbUlaTk1icXlzdHYtODUyQXEwWE1USmdEbWRR?oc=5)
-- **摘要：** 据中国日报全球版十一月四日报道，阿迪达斯表示看好在中国的增长机会。该报道仅含标题与来源信息，未说明表态出自何种场合、由谁作出、涉及哪些业务与市场、是否伴随具体投资、招聘或产能计划，以及任何财务数据与时间表，这些内容仍不明确，其在华经营与资本配置的后续动向有待更多信息确认。
+- **原标题：** Shenzhen's AI robotics company Astribot to scale up business - China Daily
+- **来源：** China Daily
+- **发布时间：** 2026-11-05T12:44:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFAxa0dEMDdUSjNfWU9qaEY2NExfc3gyamN6M3BwcmtqcGg3czhOeWNFQTlEaU1iLVhhYWxzbGFaZ1NCd1I1ekVydDgwWE11aHpSeHUtdTN4WXp4VU5tTktLdU1wZU13OVdVNGRwV1JUUGdReVJkTHdQX2hGYVVrZw?oc=5)
+- **摘要：** 据《中国日报》报道，深圳一家人工智能机器人企业Astribot计划扩大业务规模。该动向属于中国AI机器人企业的经营扩张，关系到企业后续投入与行业格局，具有一定产业意义。所给信息未说明扩张的具体方式、时间进度、融资安排、产品线、目标市场及产能规模，也未提及订单或客户情况，相关细节仍属未知。
 
 ### 美国 Top 3
 
