@@ -1,297 +1,289 @@
-# A股板块热点分析 — 2026-11-05
+# A股板块热点分析 — 2026-11-06
 
-**生成时间：** 2026-11-05 16:07<br>
+**生成时间：** 2026-11-06 16:04<br>
 **A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序，覆盖行业 Top 12 / 概念 Top 12<br>
-**数据质量：** 覆盖板块 29 个；候选新闻证据 95 条；入选证据 28 条；弱证据待复核 12 个
+**数据质量：** 覆盖板块 29 个；候选新闻证据 90 条；入选证据 22 条；弱证据待复核 13 个
 
 ---
 
 ## 总体主线
 
-2026-11-05 A股放量普涨超4800股上涨，光伏产业链在海外政策利好与逆变器涨价预期下集体爆发领涨，贵金属联动走强，AI视频及消费电子题材活跃；高股息煤炭油气等红利板块逆市走弱资金轮动流出。
+2026-11-06 A股三大股指缩量下跌，创业板指收跌近4%，科技成长板块（元件、PCB、通信、半导体）全面重挫遭资金抛售；农业链（种子、种植业、粮食、转基因）受厄尔尼诺扰动全球粮价催化逆势走强，红利与电力等防御板块获主力资金流入相对抗跌，连板题材延续活跃。
 
 ## A股行业热点
 
 | 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |
 |---:|---|---|---:|---:|---:|---|---|---|
-| 1 | 行业板块 | 光伏辅材 | +9.94% | 56.47亿 | 5.12亿 | 18涨/0跌 | 永臻股份 +9.98% | 政策催化 |
-| 2 | 行业板块 | 光伏加工设备 | +9.58% | 106.55亿 | 6.93亿 | 11涨/0跌 | 迈为股份 +16.16% | 政策催化 |
-| 3 | 行业板块 | 视频媒体 | +9.27% | 47.56亿 | -2.09亿 | 1涨/0跌 | 芒果超媒 +9.27% | 弱证据待复核 |
-| 4 | 行业板块 | 光伏电池组件 | +8.83% | 124.37亿 | 8.14亿 | 22涨/0跌 | 协鑫集成 +9.96% | 政策催化 |
-| 5 | 行业板块 | 光伏设备 | +8.45% | 561.12亿 | 32.36亿 | 67涨/0跌 | 永臻股份 +9.98% | 政策催化 |
-| 6 | 行业板块 | 涂料 | +8.01% | 3.02亿 | 4598.76万 | 2涨/0跌 | 三棵树 +10.01% | 弱证据待复核 |
-| 7 | 行业板块 | 白银 | +7.27% | 62.16亿 | 3.87亿 | 3涨/0跌 | 盛达资源 +10.01% | 宏观变量 |
-| 8 | 行业板块 | 氨纶 | +5.99% | 5.69亿 | 3128.43万 | 1涨/0跌 | 华峰化学 +5.99% | 弱证据待复核 |
-| 9 | 行业板块 | 品牌消费电子 | +5.93% | 54.63亿 | 1.38亿 | 11涨/0跌 | 国光电器 +10.00% | 供需景气 |
-| 10 | 行业板块 | 硅料硅片 | +5.93% | 9.42亿 | 1.15亿 | 4涨/0跌 | 双良节能 +9.89% | 政策催化 |
-| 11 | 行业板块 | 营销代理 | +5.93% | 222.91亿 | 20.52亿 | 26涨/0跌 | 引力传媒 +10.01% | 弱证据待复核 |
-| 12 | 行业板块 | 诊断服务 | +5.84% | 32.69亿 | 1.49亿 | 5涨/0跌 | 贝瑞基因 +10.02% | 供需景气 |
+| 1 | 行业板块 | 视频媒体 | +6.25% | 47.12亿 | -8239.38万 | 1涨/0跌 | 芒果超媒 +6.25% | 行情结构 |
+| 2 | 行业板块 | 种子 | +4.64% | 51.13亿 | 2.84亿 | 10涨/0跌 | 万向德农 +10.04% | 供需景气 |
+| 3 | 行业板块 | 卫浴电器 | +3.46% | 5.93亿 | 1.57亿 | 2涨/1跌 | 日出东方 +10.04% | 弱证据待复核 |
+| 4 | 行业板块 | 其他养殖 | +3.18% | 5.04亿 | 3005.88万 | 1涨/2跌 | 天山生物 +12.73% | 弱证据待复核 |
+| 5 | 行业板块 | 电信运营商 | +2.87% | 36.39亿 | 4.05亿 | 3涨/0跌 | 中国电信 +4.22% | 资金交易 |
+| 6 | 行业板块 | 种植业 | +2.72% | 79.40亿 | 3.23亿 | 16涨/5跌 | 万向德农 +10.04% | 供需景气 |
+| 7 | 行业板块 | 纺织鞋类制造 | +2.69% | 2.13亿 | -187.07万 | 1涨/0跌 | 华利集团 +2.69% | 弱证据待复核 |
+| 8 | 行业板块 | 医美服务 | +2.64% | 2.84亿 | 2093.35万 | 2涨/0跌 | 朗姿股份 +3.23% | 弱证据待复核 |
+| 9 | 行业板块 | 教育运营及其他 | +2.15% | 7.46亿 | -474.95万 | 2涨/0跌 | ST豆神 +4.06% | 弱证据待复核 |
+| 10 | 行业板块 | 其他能源发电 | +1.96% | 1.75亿 | 1878.36万 | 1涨/0跌 | 顺发恒能 +3.93% | 弱证据待复核 |
+| 11 | 行业板块 | 其他种植业 | +1.65% | 18.87亿 | 660.69万 | 3涨/2跌 | 新赛股份 +10.10% | 弱证据待复核 |
+| 12 | 行业板块 | 光伏电池组件 | +1.46% | 155.44亿 | -2.08亿 | 10涨/12跌 | 时创能源 +15.62% | 弱证据待复核 |
 
-
-### 光伏辅材
-
-**归因类型：** 政策催化
-
-**原因：** 民主党横扫美国会两院带来光伏政策暖风，叠加阳光电源指引与逆变器集体涨价预期，催化光伏辅材需求修复
-
-**证据：**
-- [民主党横扫美国会两院！光伏板块迎政策暖风产业链修复可期(名单)_证券要闻 - 中金在线](https://news.google.com/rss/articles/CBMibkFVX3lxTE1NdXlKaGtZdnphVXpZcXVIV1RUY0JkOWVjOVE2eVFYRUMweEJ0a3dhekp2c0w5TUZiV0pHNFFyMG40V05CeTVkNTRYVWo4OF8xWFp6SURmcFlhNEwyeDF3SWNvcVo5V0FlRHRlVGd3?oc=5) （2026-11-05 06:03）
-- [指数午后大涨3.40%！光伏ETF招商（516230）冲击三连升，阳光电源指引+逆变器集体涨价，反转来了？ - 21财经](https://news.google.com/rss/articles/CBMilAFBVV95cUxPMGM0dGUyZVNiSjgxZTJfT0kzZHJIWUhSWWRORkhTRmxneTk5cXd6b25lajdNdWtWTkRrS29Ub1R5NUZLY29kZDlMblJKVlgyXzQ3M3BhSnpjYTdtM3gya0s3Y0VwUUlsQ1luQm54Z1UwN0hvNmJsak5lTFQ0T05ESnNmUTU4YzFpNWpkdEFwLXZma19N?oc=5) （2026-11-05 03:10）
-
-### 光伏加工设备
-
-**归因类型：** 政策催化
-
-**原因：** 海外政策利好点燃光伏设备行情，板块盘中暴涨多股涨停
-
-**证据：**
-- [【板块异动】光伏设备盘中暴涨7.38%！多股涨停，海外政策利好点燃行情 - 同花顺](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mVTR5Tl91VHdpclJmVjdBaTZzbDl2MXg2c0NqMnVVTkVITXFFcG96NkltNjhybHZVZDFCLTFENHNRT3JQQnEyYWwtQmVGODUzRmwwamxCQ29UNXJqeWw5cg?oc=5) （2026-11-05 01:50）
 
 ### 视频媒体
 
+**归因类型：** 行情结构
+
+**原因：** 视频媒体板块仅芒果超媒一只标的上涨，受AI漫剧概念催化单一领涨股拉动，板块无广度
+
+**证据：**
+- [AI漫剧概念大火，芒果超媒股价大涨，市值超560亿元！知名编剧：大多数制作方是赔钱的 - 证券之星](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1jZldONzI1QnZudU5ubHZESk9iXzVOOFlwMlJjVHUzVkRPMGNNN2pWTFl0QnVxcHVjRmdfZldyTjdDaTQxdm5vWTNCV1RFZmdBMF9HOGtURXFjTTF6eXZnNg?oc=5) （2026-11-04 15:25）
+
+### 种子
+
+**归因类型：** 供需景气
+
+**原因：** 厄尔尼诺扰动推升全球粮价、亚洲大米创阶段新高，种子板块10只个股全线上涨批量涨停
+
+**证据：**
+- [厄尔尼诺扰动全球粮价，亚洲大米价格创阶段新高！万向德农涨停 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5FXzF2QWVObmo1Wk9BbGtKOEZ1UTJ6aWxvdndjbXp3dTZQb0xTNnpyMzNOMjltREtVQ0FIeVZ4RUZUa0ZsbW1QTVk0UzE5T3MyeXg5VHpqa3Q1M1FlYkE1eEh3?oc=5) （2026-11-06 03:46）
+- [逆势起飞，板块批量涨停 - 凤凰网财经](https://news.google.com/rss/articles/CBMiUEFVX3lxTFB5YUF6SU92Mlpkb054NDFqQlBmalpHaFcyVnBvUWFUc0VpS3diY0RTXy1FS2o3cTdCQk10R1diaGNvZHd6ekZvd05uYXdnTUZZ?oc=5) （2026-11-06 03:38）
+
+### 卫浴电器
+
 **归因类型：** 弱证据待复核
 
-**原因：** 代表股暂无，领涨 芒果超媒 +9.27%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 代表股暂无，领涨 日出东方 +10.04%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 其他养殖
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 天山生物 +12.73%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 电信运营商
+
+**归因类型：** 资金交易
+
+**原因：** 电信运营商3只全涨、主力净流入4.05亿，中国电信获主力资金净买入推动板块走强
+
+**证据：**
+- [中国电信（601728）11月5日主力资金净买入1905.09万元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1CTkcxZE8tMGZ2WW9ZcktuekV3U3NzMVNoOWYySzhBS0ZtM2Ntb2tIVkpCVnZ0a0ZfTGNiM3pZSEQ4N1BBZUNzdlgteDkySDV1MWlVMkxWNGFSWkl1UVVwOFZR?oc=5) （2026-11-06 00:25）
+
+### 种植业
+
+**归因类型：** 供需景气
+
+**原因：** 厄尔尼诺推升粮价、万向德农涨停，种植业16只上涨、午评农业板块逆势活跃
+
+**证据：**
+- [厄尔尼诺扰动全球粮价，亚洲大米价格创阶段新高！万向德农涨停 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5FXzF2QWVObmo1Wk9BbGtKOEZ1UTJ6aWxvdndjbXp3dTZQb0xTNnpyMzNOMjltREtVQ0FIeVZ4RUZUa0ZsbW1QTVk0UzE5T3MyeXg5VHpqa3Q1M1FlYkE1eEh3?oc=5) （2026-11-06 03:46）
+- [午评：创业板指半日跌3.5% 农业板块逆势活跃 - 新浪财经](https://news.google.com/rss/articles/CBMigAFBVV95cUxPYmx0ekRXZy1hUF9nUlJWWXc2aEFSLVBPMmZkVmJQellsc1VnSlQyUksyemx4Y1BieWlrVmxmM25DclN6N045S1NmSS1vNmo1QlhmZWVNc1VyaWRlNVpCdTR3WTVuY255aXQ0QnFLN2UwekdYNkUtTG1FU1FHWEZfOQ?oc=5) （2026-11-06 03:53）
+
+### 纺织鞋类制造
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 华利集团 +2.69%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 医美服务
+
+**归因类型：** 弱证据待复核
+
+**原因：** 医美服务2涨0跌但新闻仅见耗材价格暴跌利空与研报看多，缺乏可靠上涨因果证据
+
+### 教育运营及其他
+
+**归因类型：** 弱证据待复核
+
+**原因：** 教育运营2涨0跌由ST豆神领涨，候选新闻为具身智能无关主题，无可靠因果证据
+
+### 其他能源发电
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 顺发恒能 +3.93%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 其他种植业
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 新赛股份 +10.10%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
 
 ### 光伏电池组件
 
-**归因类型：** 政策催化
-
-**原因：** 海外政策利好与BIPV概念异动共振，光伏电池组件板块集体爆发22股全涨
-
-**证据：**
-- [【板块异动】光伏设备盘中暴涨7.38%！多股涨停，海外政策利好点燃行情 - 同花顺](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mVTR5Tl91VHdpclJmVjdBaTZzbDl2MXg2c0NqMnVVTkVITXFFcG96NkltNjhybHZVZDFCLTFENHNRT3JQQnEyYWwtQmVGODUzRmwwamxCQ29UNXJqeWw5cg?oc=5) （2026-11-05 01:50）
-- [A股光伏电池组件板块异动拉升 - 新浪网](https://news.google.com/rss/articles/CBMiS0FVX3lxTE5ZUlhzZkluaVBEWks0MFliMTVpdDRCcjN4YWtZQ2hZb215dlRUeVhMa05hOWExNldkZk1vUklRZjNMNnFNLWRzRTdXVQ?oc=5) （2026-11-05 01:33）
-
-### 光伏设备
-
-**归因类型：** 政策催化
-
-**原因：** 光伏设备掀涨停潮永臻股份三连板，主力净流入32亿居前，政策与资金共振
-
-**证据：**
-- [A股收评：超4800股上涨！科创50涨1.68%，光伏设备板块现涨停潮 - 金融界](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5VdVY3SUR5bk9XSWpnMEVBMVJhQXBIMTMzc25OTmJDV3JWaGNIQnZZV0Mwa1c0M0NZU3ptM0w1WURQWVZWbm5Ed1FDQmhicGxUSXlweTd5VGFmVnJSQUtkVEJRcnRRZw?oc=5) （2026-11-05 07:18）
-- [光伏设备板块高开，永臻股份3连板 - 金融界](https://news.google.com/rss/articles/CBMib0FVX3lxTE5BblYzSHItOGR4WmNLUkpqM3l6WEcyenFXUm1Gdi1OQ2s4SkhZVjA0TkpkU1NseV9fRm9Zd1FrcU45UHhuTEp0N2hhYkl5cm9pYzNISkE0am1nMWRNdlpWRFhpZHgxeTA5c2xIMEVjWQ?oc=5) （2026-11-05 01:30）
-
-### 涂料
-
 **归因类型：** 弱证据待复核
 
-**原因：** 代表股暂无，领涨 三棵树 +10.01%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 白银
-
-**归因类型：** 宏观变量
-
-**原因：** 黄金白银联袂大涨推动贵金属避险与商品涨价预期，湖南白银等涨停
-
-**证据：**
-- [道指涨超400点！芯片股高开低走，苹果砍单跌超1%，阿里巴巴闪耀中概股，黄金白银联袂大涨 - 手机新浪网](https://news.google.com/rss/articles/CBMigwFBVV95cUxQWjdPZTRiVGR6dGZOTVJKNnJVa1V1cVF5QzNHZjJocXJvQTBXZmRvNS1BU3BwYU5OS3pKZHFYM0J3RVEybk1KVGJ0M2FYR0dqY3dfcndOV1JyZV9LV0ZNendZTF9IUmZvVVN1NVJQNExsTzhnZktBSmZBWTdnUGlfWE1paw?oc=5) （2026-11-05 02:43）
-- [A股成交额重回两万亿元，湖南黄金、湖南白银涨停｜湘股观察 - 华声在线](https://news.google.com/rss/articles/CBMiX0FVX3lxTE9mUGRld0FGbGFJTU9DVzhHSjBhR2prV3psZXRCT1hHY1ZMd1pKcmlheWN2a2lWTWFtcjk0aDUwQ0p6VUtoaERqQW1Fd09wcS1VamxfWU1GZW1jbUJ3aksw?oc=5) （2026-11-04 08:55）
-
-### 氨纶
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股暂无，领涨 华峰化学 +5.99%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 品牌消费电子
-
-**归因类型：** 供需景气
-
-**原因：** 龙头预计存储价格维持高位，消费电子景气预期提振品牌消费电子板块
-
-**证据：**
-- [消费电子ETF平安(561600)标的指数上涨1.16%，龙头公司预计存储价格仍将在高位维持 - 新浪财经](https://news.google.com/rss/articles/CBMieEFVX3lxTFBzS3JRaHNHYUNWZE8xY29QNGFHMURybE5wVkVnV2RaWm5NeV9DOVFaWFRiUGdnejZxLWRBN1ZPVDlXT3U3VG9DMFEzbndrZXJ1OHp2THpnOXhhQklZNE83MkxVd3lna0VYaTBQZnBYR3NUUVZSUWZrSQ?oc=5) （2026-11-04 03:50）
-
-### 硅料硅片
-
-**归因类型：** 政策催化
-
-**原因：** 民主党横扫与IRA补贴预期升温，光伏硅料硅片迎政策暖风与逆变器涨价催化
-
-**证据：**
-- [美股光伏拉升！IRA补贴预期升温 A股光伏迎多重催化(名单) - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kam5LMjdaQzNFaVVXRWxwc29kRnFpZEh1cEgzcmo4c2xVcGhaLW9mZFRhMERiRUw4RnFDU0ozYkNFamx1LUxld25TSkVmajIwVFJ4bzFSVFZFSDlrb2dVcQ?oc=5) （2026-11-05 02:51）
-- [民主党横扫美国会两院！光伏板块迎政策暖风 产业链修复可期(名单) - 中金在线](https://news.google.com/rss/articles/CBMiakFVX3lxTE1mOXVSRzVrc01NdTRVbU5TamlXck5ZM1hDTDRneFRLWVN2cUJxUExZYlJFLXVFNV9QSTZjTVVvNk1JTzZ6b0t6ckFQU1BoTktYYXkyN29nSmlUQ01jV253ZnA2bW9VUy1IMlE?oc=5) （2026-11-05 03:40）
-
-### 营销代理
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股暂无，领涨 引力传媒 +10.01%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 诊断服务
-
-**归因类型：** 供需景气
-
-**原因：** 医药外包景气度持续、化学制剂利润强修复，带动诊断服务板块业绩预期
-
-**证据：**
-- [化学制剂&医疗服务2026Q1-Q3业绩分析：医药外包景气度持续，化学制剂利润强修复_行业研究_研报 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fX1R4cFdNRkVvYXA1UUZhc1VScElLTS03b2lBX2lVZjktN3VFS0NVSVBfSWIyUVgxdnhJeHJNNzlUUXQtN09PaWtnUW1tWl9WTXRLcjd1TmhvQUkxWnkyaHNn?oc=5) （2026-11-04 08:34）
+**原因：** 代表股暂无，领涨 时创能源 +15.62%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
 
 ## A股概念主题热点
 
 | 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |
 |---:|---|---|---:|---:|---:|---|---|---|
-| 1 | 概念主题 | Kimi概念 | +6.55% | 195.38亿 | 12.00亿 | 16涨/1跌 | 浙文互联 +10.07% | 弱证据待复核 |
-| 2 | 概念主题 | HJT电池 | +6.17% | 303.40亿 | 14.96亿 | 49涨/1跌 | 贝特利 +19.98% | 政策催化 |
-| 3 | 概念主题 | TOPCon电池 | +6.06% | 282.61亿 | 11.88亿 | 37涨/1跌 | 协鑫集成 +9.96% | 政策催化 |
-| 4 | 概念主题 | BC电池 | +5.11% | 200.52亿 | 8.82亿 | 25涨/2跌 | 协鑫集成 +9.96% | 政策催化 |
-| 5 | 概念主题 | AI视频 | +5.02% | 364.36亿 | 15.08亿 | 23涨/2跌 | 福石控股 +20.05% | 资金交易 |
-| 6 | 概念主题 | 历史新高 | +5.00% | 17.70亿 | 9156.04万 | 1涨/0跌 | 华是科技 +5.00% | 弱证据待复核 |
-| 7 | 概念主题 | 昨日首板 | +4.94% | 1994.57亿 | 48.45亿 | 85涨/11跌 | 深中华A +10.03% | 资金交易 |
-| 8 | 概念主题 | 智能音箱 | +4.92% | 167.59亿 | 14.79亿 | 19涨/0跌 | 国光电器 +10.00% | 公司事件 |
-| 9 | 概念主题 | AI语料 | +4.87% | 388.98亿 | 22.14亿 | 37涨/1跌 | 利欧股份 +10.03% | 弱证据待复核 |
-| 10 | 概念主题 | 拼多多概念 | +4.76% | 73.53亿 | 3.95亿 | 29涨/0跌 | 引力传媒 +10.01% | 弱证据待复核 |
-| 11 | 概念主题 | 昨日涨停 | +4.69% | 2167.51亿 | 45.06亿 | 96涨/18跌 | 深中华A +10.03% | 资金交易 |
-| 12 | 概念主题 | VPN | +4.68% | 99.88亿 | -6627.64万 | 18涨/1跌 | 优刻得-W +14.30% | 弱证据待复核 |
+| 1 | 概念主题 | 昨日打二板以上表现 | +10.03% | 26.10亿 | 5981.01万 | 4涨/0跌 | 永臻股份 +10.03% | 资金交易 |
+| 2 | 概念主题 | 昨日连板_含一字 | +2.11% | 316.73亿 | -5.47亿 | 10涨/12跌 | 永臻股份 +10.03% | 资金交易 |
+| 3 | 概念主题 | 转基因 | +1.54% | 50.64亿 | 2.76亿 | 12涨/7跌 | 万向德农 +10.04% | 供需景气 |
+| 4 | 概念主题 | 昨日连板 | +1.39% | 272.88亿 | -5.89亿 | 6涨/10跌 | 贝特利 +20.00% | 资金交易 |
+| 5 | 概念主题 | 粮食概念 | +1.32% | 117.43亿 | 3.17亿 | 19涨/17跌 | 万向德农 +10.04% | 供需景气 |
+| 6 | 概念主题 | 可燃冰 | +0.78% | 17.49亿 | -8025.05万 | 4涨/5跌 | 鲁阳节能 +10.02% | 弱证据待复核 |
+| 7 | 概念主题 | 农业种植 | +0.31% | 162.80亿 | 2.51亿 | 31涨/51跌 | 万向德农 +10.04% | 供需景气 |
+| 8 | 概念主题 | 红利破净股 | +0.29% | 310.05亿 | 9.86亿 | 27涨/17跌 | 雅戈尔 +2.55% | 资金交易 |
+| 9 | 概念主题 | 证金持股 | +0.27% | 400.18亿 | 2.42亿 | 22涨/13跌 | 国电电力 +2.68% | 资金交易 |
+| 10 | 概念主题 | 红利股 | +0.19% | 498.78亿 | 7.91亿 | 53涨/45跌 | 鲁阳节能 +10.02% | 资金交易 |
+| 11 | 概念主题 | 草甘膦 | +0.18% | 21.90亿 | 1.04亿 | 5涨/8跌 | 红太阳 +10.09% | 弱证据待复核 |
+| 12 | 概念主题 | 水产概念 | +0.15% | 75.31亿 | 2514.03万 | 6涨/11跌 | 东方海洋 +9.97% | 弱证据待复核 |
 
 
-### Kimi概念
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股暂无，领涨 浙文互联 +10.07%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### HJT电池
-
-**归因类型：** 政策催化
-
-**原因：** 光伏板块涨势扩大，HJT电池贝特利领涨主力净流入，政策与景气共振
-
-**证据：**
-- [A股主要指数全全线飘红，光伏板块涨势扩大，锂电池、电工电网、互联网等板块涨幅居前；港股主要指数暴涨中国基金报 - 中国基金报](https://news.google.com/rss/articles/CBMiekFVX3lxTE8yaFlaZVdFNnFZYjlWNWF5Y2gzNzVGQWhVQUdOd1V3Z3Z2MWM2QmVTVWVjMHZkV2Z1eUR3QWNNS3ZISk1hb0ZLcmlVRnk3clBNYmN4R0hQSDlFQjlaYnRacld6b3NrbXVZV2gtc1NGcEVzYkhNLVg4Q3N3?oc=5) （2026-11-05 04:32）
-- [异质结电池HJT板块11月4日涨6.61%，贝特利领涨，主力资金净流入19.56亿元 - 搜狐网](https://news.google.com/rss/articles/CBMijAFBVV95cUxPajBHU0xaeFNJaE5kRmxobDN6OElVajF0ZGtBSHBJTHg2VEVMdWJOTWVtWTh3TVpXajY4MWliWkdvSU4tMFJUbHNndHRnWVRwUzRNSXJ6WE40ZmVpRl9NTzlCRGJkb3p6cmVKLWp6djNKNjFqZjA1c1JZcGNRV2REOTg0QVA5al9zZ3IxZg?oc=5) （2026-11-04 11:08）
-
-### TOPCon电池
-
-**归因类型：** 政策催化
-
-**原因：** 光伏电池集体爆发叠加钧达股份大涨，TOPCon电池随产业链政策催化上行
-
-**证据：**
-- [A股主要指数全全线飘红，光伏板块涨势扩大，锂电池、电工电网、互联网等板块涨幅居前；港股主要指数暴涨中国基金报 - 中国基金报](https://news.google.com/rss/articles/CBMiekFVX3lxTE8yaFlaZVdFNnFZYjlWNWF5Y2gzNzVGQWhVQUdOd1V3Z3Z2MWM2QmVTVWVjMHZkV2Z1eUR3QWNNS3ZISk1hb0ZLcmlVRnk3clBNYmN4R0hQSDlFQjlaYnRacld6b3NrbXVZV2gtc1NGcEVzYkhNLVg4Q3N3?oc=5) （2026-11-05 04:32）
-- [A股午后回落，沪指转跌，存储、光模块回吐涨幅，光伏电池集体爆发，恒科指暴涨4%，科网股全线攀升 - 华尔街见闻](https://news.google.com/rss/articles/CBMiU0FVX3lxTE0ydHpJM3pua2dSUTJiS192aS0wLXVQMlNqZnNOY21sRG5UQlk3djN1cUkyTzhGRk0zRWotTHlsdndvR0xjM096OGdkTE1HaVQ0aGYw?oc=5) （2026-11-05 05:43）
-
-### BC电池
-
-**归因类型：** 政策催化
-
-**原因：** 光伏板块涨势扩大且光伏电池集体爆发，BC电池随政策催化普涨
-
-**证据：**
-- [A股主要指数全全线飘红，光伏板块涨势扩大，锂电池、电工电网、互联网等板块涨幅居前；港股主要指数暴涨中国基金报 - 中国基金报](https://news.google.com/rss/articles/CBMiekFVX3lxTE8yaFlaZVdFNnFZYjlWNWF5Y2gzNzVGQWhVQUdOd1V3Z3Z2MWM2QmVTVWVjMHZkV2Z1eUR3QWNNS3ZISk1hb0ZLcmlVRnk3clBNYmN4R0hQSDlFQjlaYnRacld6b3NrbXVZV2gtc1NGcEVzYkhNLVg4Q3N3?oc=5) （2026-11-05 04:32）
-- [A股三大股指全线翻红，深证成指涨超1%，创业板指盘初一度跌2%，BC电池、贵金属等板块涨幅 - 富途牛牛](https://news.google.com/rss/articles/CBMimwFBVV95cUxQMWhDejNnX3NmX0ZTV1NudFpUb253LUZ1WUlUdVVHZjB3bW9LbEtoTlJuSkZjUUVnbUxXdVlRdE9mVkc1a0lfVkxLemhsTklTSWN4elFTV1ZRYUxRZWFCZV9pc0UtWjM3WFotOTBaWWhwbEdyYXVsRzJFTGlZNWx2UGE1SW9Vekh2V2FWOVlLei1qcUVFN0R2SUtpaw?oc=5) （2026-11-05 01:50）
-
-### AI视频
+### 昨日打二板以上表现
 
 **归因类型：** 资金交易
 
-**原因：** AI视频概念股持续强势吉视传媒博纳影业涨停，板块资金净流入活跃
+**原因：** 昨日打二板题材4只全涨，市场放量普涨带动连板情绪、游资接力推升
 
 **证据：**
-- [A股港股AI视频概念股持续强势，吉视传媒、博纳影业双双直线涨停 - 中国基金报](https://news.google.com/rss/articles/CBMiekFVX3lxTE9UZzNPaGVDTXktc3FhS1JLRXF4blVCSnNtZ2xmZkVSNzF2RlYxTUJXSUg5RjNGTUJrQldlMU1lcVJ0S0tyclF5eUI1TUs0QWNMT2hRZFh4Q3F6QWpCWlIzNG9zM0haR2Nya2lCbWpLalNqT1BGTGN4R293?oc=5) （2026-11-05 07:03）
-- [A股收评：深证成指上涨1.19%，AI视频概念走强 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE1DbHA5UVFrRzV4NTEzMExLVHhJTUZERWZsYkZIaXowanJjN2VFZnQxRG1SaFU3TWhTRUNvOHJGbFBGbVM4aF96TTlTbTQ0SXBJY1ZCMmhkcjZyTmRST0ZVNzl0aW01QQ?oc=5) （2026-11-05 07:30）
+- [【焦点复盘】市场连续2日现放量普涨，算力租赁概念现久违大涨，煤炭石油板块逆势领跌 - 财联社](https://news.google.com/rss/articles/CBMiSEFVX3lxTFA0V3FTa0dza3BQX3h2aVdrS2FtVENmdGR5UU8zdktCVWZOVDlYZFdfNmZIRlFNaTFDTDFXUGpoeGdUeVZBYlZXSQ?oc=5) （2026-11-05 09:28）
 
-### 历史新高
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股暂无，领涨 华是科技 +5.00%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 昨日首板
+### 昨日连板_含一字
 
 **归因类型：** 资金交易
 
-**原因：** A股超级大反攻双创大涨，昨日首板题材获短线资金追捧85股普涨
+**原因：** 昨日连板题材发酵，永臻股份4连板、多只20cm涨停，游资资金交易驱动但板块已现分化净流出
 
 **证据：**
-- [午后！A股，超级大反攻！ - 证券之星](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1qMG04bWNHMnloSGk2ZVJCd21iRU0tbmsxWmVGR3dMNnBLOXU0RDJPMkw5RnIyUGY5TThkTnlGR2VuS0F4dHM1dkRVeHVWOUF6NUR2SFNDbG02TnQ4U3lwdg?oc=5) （2026-11-04 07:05）
-- [【焦点复盘】双创指数创2个多月单日最大涨幅，全市场超350股涨超10%，20余只芯片半导体ETF涨停 - 财联社](https://news.google.com/rss/articles/CBMiSEFVX3lxTE1wSklZOUR3cEpqbDluaDg4WjJiUFNkODh5SUptQTdWZGZuUXh0SGdjak5LT3J0ZURqY3JrWDAxZnBoS2RyN3hwSg?oc=5) （2026-11-04 09:34）
+- [突发异动！301697，3个“20cm”涨停，603381，4连板 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5Mb3RvQ0FCQnhCdFdLd29YYU9GTmVEbjU2QkUzTnYtT0JDUy1WaFpUYVY4d0FCRVBEajFPUjZSbnhHU2hNY180bEt0UFhOX25HeUVwaFlwWDNqQXVuNmRuWkhfMkdxUQ?oc=5) （2026-11-06 02:39）
 
-### 智能音箱
+### 转基因
 
-**归因类型：** 公司事件
+**归因类型：** 供需景气
 
-**原因：** 苹果国行AI接入通义千问端侧AI商业化，提振智能音箱板块
+**原因：** 厄尔尼诺扰动粮价、万向德农涨停，转基因12只上涨批量涨停逆势起飞
 
 **证据：**
-- [苹果国行AI正式接入通义千问，端侧AI从概念迈入商业化验证阶段 - www.caiwennews.com](https://news.google.com/rss/articles/CBMiXEFVX3lxTE1BS2NVWHdGQy1NaDdjM2RKT013YUdNLWJXYnBBUnJzYTc3enU4d1dhZHhUTGwyUE1McnJZTEhlMTUwellUSjZQZnZsVUt1cGptXzhLbWNHdGpoNV9R?oc=5) （2026-11-04 02:41）
+- [厄尔尼诺扰动全球粮价，亚洲大米价格创阶段新高！万向德农涨停 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5FXzF2QWVObmo1Wk9BbGtKOEZ1UTJ6aWxvdndjbXp3dTZQb0xTNnpyMzNOMjltREtVQ0FIeVZ4RUZUa0ZsbW1QTVk0UzE5T3MyeXg5VHpqa3Q1M1FlYkE1eEh3?oc=5) （2026-11-06 03:46）
+- [逆势起飞，板块批量涨停 - 凤凰网财经](https://news.google.com/rss/articles/CBMiUEFVX3lxTFB5YUF6SU92Mlpkb054NDFqQlBmalpHaFcyVnBvUWFUc0VpS3diY0RTXy1FS2o3cTdCQk10R1diaGNvZHd6ekZvd05uYXdnTUZZ?oc=5) （2026-11-06 03:38）
 
-### AI语料
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股暂无，领涨 利欧股份 +10.03%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 拼多多概念
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股暂无，领涨 引力传媒 +10.01%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 昨日涨停
+### 昨日连板
 
 **归因类型：** 资金交易
 
-**原因：** 融资融券大幅净流入，昨日涨停题材获短线资金追捧96股普涨
+**原因：** 昨日连板题材贝特利20cm涨停领涨，游资接力连板情绪驱动
 
 **证据：**
-- [主力资金：融资融券板块净流入超319亿 - 金融界](https://news.google.com/rss/articles/CBMib0FVX3lxTE5VcFROZHFpeW1oT1g3UTZUOVZncGlSUmd5Y05wTF9BM044VG9hYUFEdjZ1SUhsT25TQnRvTExnOHB4czlXU1U2dy15YjhJX08ybEhWMlMwa0l1TFpzR2Y5YmdHTTRPdG1LZkJZTTczbw?oc=5) （2026-11-04 06:11）
-- [新版“站在光里”出现了？光伏板块大爆发，“易中天”却集体大跌 - www.mrjjxw.com](https://news.google.com/rss/articles/CBMiZkFVX3lxTFBNTEVtY2xKcnhIZUMxUmRVTHJLaFUzSDZKY1h3LUFGNFN6T1pYSjQwQ1lhSXdGd1hjN3pkMms0WnFNMU1iTjJuQU9VYmw5d0NmMTEycnZYXzV4bmJVQjZnVlUxZXhBdw?oc=5) （2026-11-05 07:32）
+- [突发异动！301697，3个“20cm”涨停，603381，4连板 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5Mb3RvQ0FCQnhCdFdLd29YYU9GTmVEbjU2QkUzTnYtT0JDUy1WaFpUYVY4d0FCRVBEajFPUjZSbnhHU2hNY180bEt0UFhOX25HeUVwaFlwWDNqQXVuNmRuWkhfMkdxUQ?oc=5) （2026-11-06 02:39）
 
-### VPN
+### 粮食概念
+
+**归因类型：** 供需景气
+
+**原因：** 粮食概念震荡走强、万向德农涨停，午评粮食概念持续活跃，粮价逻辑驱动19只上涨
+
+**证据：**
+- [粮食概念震荡走强 万向德农涨停 - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTFBST2VVVzhhOGwzajJlQkV4ZEMwZ3BpZVZ2Q1hldUNkVm1CZzhRQWZBUHRXcEpRc3A1aTRCeEstZFdvUzg5eUhTUGdpMVgyRVF2ZGJwSnphbzkwQTAzUHJ1NnpuUWNTUQ?oc=5) （2026-11-06 02:01）
+- [A股午评：创业板指下跌3.5%，粮食概念持续活跃 - 21财经](https://news.google.com/rss/articles/CBMijwFBVV95cUxONWJ1dHRrR2dhd2ZQVlBVakl2NzBxREFFTFlLcmEyT2FBbzFWTmRQWWVwMDNUal8tWlozcFU4M0FqTW11YVViZlJMVlJpclFnQWJnVk9FRUpWX1dfMjVpQWp5a084RndwUXR4cUw2RXVxc19kMWxOUUY4QkdyVUtGcU5NVC1WanFCUlZONTkxaw?oc=5) （2026-11-06 03:46）
+
+### 可燃冰
 
 **归因类型：** 弱证据待复核
 
-**原因：** 代表股暂无，领涨 优刻得-W +14.30%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 代表股暂无，领涨 鲁阳节能 +10.02%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 农业种植
+
+**归因类型：** 供需景气
+
+**原因：** 厄尔尼诺推升粮价，A股低开回升农林牧渔板块领涨，农业种植逆势活跃
+
+**证据：**
+- [厄尔尼诺扰动全球粮价，亚洲大米价格创阶段新高！万向德农涨停 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5FXzF2QWVObmo1Wk9BbGtKOEZ1UTJ6aWxvdndjbXp3dTZQb0xTNnpyMzNOMjltREtVQ0FIeVZ4RUZUa0ZsbW1QTVk0UzE5T3MyeXg5VHpqa3Q1M1FlYkE1eEh3?oc=5) （2026-11-06 03:46）
+- [A股低开回升 农林牧渔板块领涨两市 - 搜狐网](https://news.google.com/rss/articles/CBMijAFBVV95cUxQcFd1UDk5ME5hSTQxRGwyVG5qQ2ZhaXdreXFOZ21Ocm90OGhpU3hIU3ZQN01mMllfSzhqVzFlRldnTlNzbHllMkpRempJbi1NcTJzUTBjaUJRN0IxTFBSbkdYaWV6ZFVWdU9vMWg5al9YSXZXNFZiUEVET2Y4RnFidER0LUJ0UW1KNGdyZA?oc=5) （2026-11-06 05:46）
+
+### 红利破净股
+
+**归因类型：** 资金交易
+
+**原因：** 红利破净股主力净流入9.86亿、27只上涨，红利资产崛起基金经理看多配置
+
+**证据：**
+- [红利资产，突然崛起！基金经理，最新研判 - 手机新浪网](https://news.google.com/rss/articles/CBMi3wFBVV95cUxPR2JxMUZFcG9yV21tTUExNExjcnluaGEyVURHNEwxYm9VZHFQbUhITWh3alRsR3V6NjEtdEZjZzlidjFKTDBUbVpxNXNUTXZESVlYT1otOEJZRjBpNlVIdS1qd1pyOG1hNWE0bjhQTEI4blpyWkZVeVNGdXVOeXdJNjd4UE1VdDc4VmhDQWw0Q1czRVVpYlNiWHZ3dzBLdUVVUlZWM2RyeW5iZ2pQRlZhV0RUNEo3R2p3Q0lqNVZfOFBnTzA0bEpFZ2E3VmtxSVJNbl9QRHNJTVVrZXBRTEtV?oc=5) （2026-11-05 08:57）
+
+### 证金持股
+
+**归因类型：** 资金交易
+
+**原因：** 证金持股主力净流入2.42亿，数据中心售电增25.6%电力板块逆市走强带动权重抗跌
+
+**证据：**
+- [数据中心售电增25.6%，电力板块逆市走强 - 21财经](https://news.google.com/rss/articles/CBMijwFBVV95cUxOSGFudjR2WHprQU5aOWFhUjJEbEFCNWl1QkROMGxEVTlrSW84U2hVekxGd1NYQmc2WkxjbGFCVFVvYjJGaXFZOGVpMzhYVGdUdzYtR2pDR1dDQnNVWWVXaUdIM1pYakt0OHFsUUt5Y3dpOElYSTBrOFR1WWxBYmFVR0twNi11Xy01MTdnbXZ0MA?oc=5) （2026-11-06 06:08）
+
+### 红利股
+
+**归因类型：** 资金交易
+
+**原因：** 红利股主力净流入7.91亿、53只上涨，红利股业绩稳健配置价值凸显获资金流入
+
+**证据：**
+- [市场人士：沪市红利股业绩稳健回报优配置价值凸显- 21世纪经济报道 - ZAKER新闻](https://news.google.com/rss/articles/CBMid0FVX3lxTFBvUWJNN0NJbzY2Q0dxYTNGUDRxalNmU09feGNYNzVidEFfenZrcGN1X19UdkVjZk1ZaW9kVG1SUC1NTGg4dEJ5ejVqcmxENjhxRHU0TWlLZ2gxNUNnbEd3VTZ3ZFkzZzhSWlVGWHRROUViT0dTTDFN?oc=5) （2026-11-04 11:47）
+
+### 草甘膦
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 红太阳 +10.09%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 水产概念
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 东方海洋 +9.97%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
 
 ## A股回落/弱势板块
 
 | 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |
 |---:|---|---|---:|---:|---:|---|---|---|
-| 1 | 行业板块 | 动力煤 | -2.20% | 121.26亿 | -9.90亿 | 4涨/13跌 | 大有能源 +2.52% | 弱证据待复核 |
-| 2 | 行业板块 | 冶钢辅料 | -1.99% | 5.88亿 | 232.12万 | 1涨/3跌 | 方大炭素 +1.77% | 弱证据待复核 |
-| 3 | 行业板块 | 煤炭开采 | -1.97% | 145.55亿 | -11.66亿 | 5涨/22跌 | 大有能源 +2.52% | 行情结构 |
-| 4 | 行业板块 | 油气开采Ⅲ | -1.92% | 37.59亿 | -2.54亿 | 1涨/4跌 | 海南矿业 +1.93% | 行情结构 |
-| 5 | 概念主题 | 资源开采概念 | -0.97% | 283.56亿 | -7.95亿 | 12涨/18跌 | 海默科技 +4.96% | 弱证据待复核 |
+| 1 | 行业板块 | 印制电路板 | -5.86% | 675.42亿 | -49.56亿 | 1涨/47跌 | 金安国纪 +0.11% | 资金交易 |
+| 2 | 行业板块 | 元件 | -5.13% | 805.88亿 | -54.37亿 | 2涨/65跌 | 奥迪威 +13.57% | 资金交易 |
+| 3 | 行业板块 | 通信线缆及配套 | -4.78% | 162.13亿 | -13.90亿 | 0涨/14跌 | 富士达 -1.40% | 弱证据待复核 |
+| 4 | 行业板块 | 医疗研发外包 | -4.67% | 211.61亿 | -15.30亿 | 0涨/29跌 | 药康生物 -1.95% | 弱证据待复核 |
+| 5 | 行业板块 | 玻纤制造 | -4.65% | 99.11亿 | -6.75亿 | 0涨/8跌 | 振石股份 -0.07% | 资金交易 |
 
 
-### 动力煤
+### 印制电路板
 
-**归因类型：** 弱证据待复核
+**归因类型：** 资金交易
 
-**原因：** 代表股暂无，领涨 大有能源 +2.52%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 冶钢辅料
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股暂无，领涨 方大炭素 +1.77%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 煤炭开采
-
-**归因类型：** 行情结构
-
-**原因：** 高股息板块整体走弱，煤炭开采主力净流出11.66亿资金轮动至热点
+**原因：** 印制电路板1涨47跌、主力净流出49.56亿，鹏鼎控股威尔高等个股遭主力大幅净卖出
 
 **证据：**
-- [A股午评| 沪指涨0.10%，光伏掀涨停潮，高股息板块走弱_短线策略 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5iRFZ2RXJIbUtRb3pOb0JQdEUyanNUOXRqd3pRWkhIdnBOc1VBN0czSFVLUE1yNmZxQ0JfSHU5UUZrUzQ0NXFyM3N1V2VEWHhYdnZoNmJBX3JJLXZhMWhjVTlB?oc=5) （2026-11-05 03:52）
+- [鹏鼎控股（002938）11月5日主力资金净卖出2.87亿元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LRHdTNktPdGFTS2V3UzBIODRyWThzSkl5NmFtcG0wVVdLaUcwY0phekZNekcyX1pGMm1HTVRFRU1vUU03dFE5OG1UcDhvd3c0V245Qm16TEQ3eWw0T2xhMw?oc=5) （2026-11-06 01:14）
+- [威尔高（301251）11月5日主力资金净卖出1244.85万元_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBQOE1qbjdSVFJNNTJVclI2bHpEalJPOV9qb25jMzRPMHRWMW1mdUdqN0RXLXJTOVFrcVEyVTRKT01pZWZaaDdXVGhkYUJpUnN0ckJ3Nmc4eDdLdFVnZ0VicVVB?oc=5) （2026-11-06 01:16）
 
-### 油气开采Ⅲ
+### 元件
 
-**归因类型：** 行情结构
+**归因类型：** 资金交易
 
-**原因：** 高股息及能源板块走弱，油气开采主力净流出且多数个股下跌
+**原因：** 元件板块2涨65跌、主力净流出54.37亿，收评元件CPO半导体板块重挫遭资金抛售
 
 **证据：**
-- [A股午评| 沪指涨0.10%，光伏掀涨停潮，高股息板块走弱_短线策略 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5iRFZ2RXJIbUtRb3pOb0JQdEUyanNUOXRqd3pRWkhIdnBOc1VBN0czSFVLUE1yNmZxQ0JfSHU5UUZrUzQ0NXFyM3N1V2VEWHhYdnZoNmJBX3JJLXZhMWhjVTlB?oc=5) （2026-11-05 03:52）
+- [A股收评：创业板指震荡收跌3.96%，元件、CPO、半导体板块重挫 - 同花顺财经](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1WNFJzUDQ4RVdObjlZMU81ZFMxMFFJSG9nOVd0U0xtNU5fZnVmNndGaHVJM1duTkQ1YUk0RHpuMnBvM3M1Y2lHc1hVTUNBdXZhSXJCZ1V6cWdrVFVGR3c?oc=5) （2026-11-06 07:09）
 
-### 资源开采概念
+### 通信线缆及配套
 
 **归因类型：** 弱证据待复核
 
-**原因：** 代表股暂无，领涨 海默科技 +4.96%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 代表股暂无，领涨 富士达 -1.40%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 医疗研发外包
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 药康生物 -1.95%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 玻纤制造
+
+**归因类型：** 资金交易
+
+**原因：** 玻纤制造0涨8跌、主力净流出6.75亿，11月4日板块大涨7.83%后今日获利回吐
+
+**证据：**
+- [玻璃玻纤板块11月4日涨7.83%，国际复材领涨，主力资金净流入13.71亿元 - 搜狐网](https://news.google.com/rss/articles/CBMijAFBVV95cUxPeWpYa2RMVEJxazl2MzVNUUcyNHM3S0VueTJZSGJIeGNSN3piclZZMVB2MkJ1VXNWdmVrdTRXNWpPN0Q3ZWZFcm1mdGN5X0ZYSURzTFN4Y1lPXzRiZmZpZWpveXVRNDFRX2xETlUwZ2gwYzFOVzZ3WWUyYkhtdW80djI4NFc4bmd1dWlSUQ?oc=5) （2026-11-04 10:32）
 
 ---
 
