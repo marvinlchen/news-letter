@@ -1,275 +1,137 @@
-# 每日专业 Topic 新闻：2026-11-07
+# 每日专业 Topic 新闻：2026-11-08
 
-> 生成模式：`rules-fallback`。新闻链接可能受订阅或付费墙限制。
+> 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 宏观经济：Speech by Governor UEDA at the 2026 Michel Camdess...（日本央行）
+### 1. 本周通胀住房就业与财报数据将主导商业日程
 
-- **原标题：** Speech by Governor UEDA at the 2026 Michel Camdessus Central Banking Lecture, International Monetary Fund
-- **来源：** Bank of Japan
-- **发布时间：** 2026-11-07T01:00:00+09:00
-- **原文：** [查看原文](http://www.boj.or.jp/en/about/press/koen_2026/ko261107a.htm)
-- **摘要：** 日本央行发布一则宏观经济消息：Speech by Governor UEDA at the 2026 Michel Camdessus Central Banking Lecture, International Monetary Fund。该条目规则评分为 16.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 宏观经济：Monetary Policy Under Network-Level Bottlenecks - ...（可信来源）
-
-- **原标题：** Monetary Policy Under Network-Level Bottlenecks - International Monetary Fund | IMF
-- **来源：** International Monetary Fund | IMF
-- **发布时间：** 2026-11-07T02:41:27+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisAFBVV95cUxNaGIzdnA3WnNSWWtCOXR1UWN3dFhpTlB4bnRWSlZma0lCZWhWcEtQaVJhcWstUENqLV8ybG4ta0ZrclZkQk0yLVRaSE5BcVhTYTZqMEdWTUcxVlpFVWFtR045MlJiVHlFdjBvV2x0U2F2dTBqM0xVQkxzekpXVjFOQnI3MnZ0Y18tWWF5Rm1qcXJWWGdsX1poQVA3S0pNRld6SHJYUnc2QW5TNjBLSG1jVg?oc=5)
-- **摘要：** 可信来源发布一则宏观经济消息：Monetary Policy Under Network-Level Bottlenecks - International Monetary Fund | IMF。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 宏观经济：Producer Price Index Program Updates Available Ind...（可信来源）
-
-- **原标题：** Producer Price Index Program Updates Available Indexes for October 2026 - Bureau of Labor Statistics (.gov)
-- **来源：** Bureau of Labor Statistics (.gov)
-- **发布时间：** 2026-11-06T16:13:02+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiekFVX3lxTE1kLVRHdHFsR3pwcjRDZmFueG0wSGhMZDZPdkVUakVWcjV3UUtTMm1ETHNVajlvWW5ibXBWZEZzWEUzYWs4ZER0SWhjWGZGaEN4VUhjQ0dnOTBfWkdPSGNzcW5YX3NxTEJudElEUVJYNGJvdHE4aDZTakp3?oc=5)
-- **摘要：** 可信来源发布一则宏观经济消息：Producer Price Index Program Updates Available Indexes for October 2026 - Bureau of Labor Statistics (.gov)。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核…
+- **原标题：** Inflation, housing, jobs and corporate earnings will dominate the business calendar this week - AP News
+- **来源：** AP News
+- **发布时间：** 2026-11-07T16:06:31+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxNSXlkbFpKOEMwVnUzUllPOUxLUkxYc2JEb3QySXkyLWVwVU5lVjhpTWdwdE9hTlo2YzNVemlsdUZ0UU96U0I0OUpnU3B1S2JSYktQQU9jRDBGdlB2U3FEVU5FTzV6QzdlMkZNQ1hOdklKZEJGOWhqQXNrMUJUWkhCZUlveXdhRVpqRm45S0Fn?oc=5)
+- **摘要：** 美联社报道，本周商业日程将由通胀、住房、就业以及企业财报等数据与事件主导。候选信息仅列出上述受关注的类别，并未提供各项指标的具体数值、市场预期或发布时点，也未说明涉及哪些企业及其财报结果，相关数据的实际表现与对市场的影响尚需等待后续公布，目前仍不明确。
 
 ## 航运 Top 3
 
-### 1. 航运：IMO Council urges stronger protection of seafarers...（可信来源）
+### 1. 美军瘫痪一个月来首艘伊朗港口驶出货船
 
-- **原标题：** IMO Council urges stronger protection of seafarers amid threats to global shipping - International Maritime Organization
-- **来源：** International Maritime Organization
-- **发布时间：** 2026-11-06T21:54:40+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi4wFBVV95cUxQc255c2dWOFZFcHFiMTc1a0JoZ0NNT1djOVVnazVweHBJdVQ0cUp4dmxqZnptOEtoWlJXS1l4X2NzSlROUUs2MmNQYkprSUxuaGQwNm5yUmN1aGZEc0ltSUxwNGltNWs5R09CWGx2SE1VbUJacXZudC1abDJ1UTUyYWdIQlA1MWo2RmdnRmxNdUk0TjdjYmVjOU5od3NVMXpCREQ4RW1ueUtTamRsRGlIeC0yX1NPUEtvdlVCOXJoLWxHWnZ2amVDRjdzdFAtVUo4clJsVWx3YU40VGtXaVVxWE11RQ?oc=5)
-- **摘要：** 可信来源发布一则航运消息：IMO Council urges stronger protection of seafarers amid threats to global shipping - International Maritime Organization。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文…
-
-### 2. 航运：Norway Awards $44M in Grants to Advance Battery-Po...（可信来源）
-
-- **原标题：** Norway Awards $44M in Grants to Advance Battery-Powered Ships - The Maritime Executive
+- **原标题：** US Forces Disable First Cargo Ship in a Month Sailing from Iranian Port - The Maritime Executive
 - **来源：** The Maritime Executive
-- **发布时间：** 2026-11-06T22:34:42+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMioAFBVV95cUxObHlZMktBb2VVbFYyOFVKbm0tM2V3b09ERUdkd0lTeG9qRmZ2VGJoaTdTTmRxUHZpOE05cFVqallfTGtPMFRRNTB1cjd1dzNVVzBrUEMzdlBxdHNoamxkOTFpSWgtS18yeFp1TEtJY2pEaG9wN3hrcGk0VkNRZkpkTnl5bmlLeE1WaEswWWFUOFlYZzg1ZUNrODJVMkZzM19O?oc=5)
-- **摘要：** 可信来源发布一则航运消息：Norway Awards $44M in Grants to Advance Battery-Powered Ships - The Maritime Executive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-11-07T23:18:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxOeGtjZjhfOEdOQmtnSEJfemFfelh2NTkyRHpJZkdUazFNY2hKSXZJZC1NTkZoMXRnUHlsYkZZOWZCRE5uY0VCZjhUVmdKMnQ1OFRLZ1FtQ19ZT3dxYnVwT2F6a1hvRm1jLVlmNWNONU5uR3FRbGtvZTRpeWE3S3U4VERWUnltLVhJU2hQM1RsVU5nRlFZRjh6RUdKb1FzazlsUEJLYzVOVmJ5cU9sRWxr?oc=5)
+- **摘要：** 专业航运媒体报道称，美军使一艘自伊朗港口驶出的货船失去航行能力，这是近一个月来首起同类事件。候选信息未提供该船名称、船东、所载货物、事发海域及具体执行方式，也未说明伊方回应、后续航运安排或对相关航线与运价的影响，这些情况目前尚不明确。
 
-### 3. 航运：China Delivers Its Second Large Domestically Built...（可信来源）
+### 2. 双方均报船只受损，伊朗称爆炸非美国袭击
 
-- **原标题：** China Delivers Its Second Large Domestically Built Cruise Ship - The Maritime Executive
-- **来源：** The Maritime Executive
-- **发布时间：** 2026-11-06T21:32:40+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiowFBVV95cUxQVldNUjZJbG5HTVZldHBzQVhXUEFxN1J2eFZkbk44OG1LVlZMd2VDV2Y1RW12RzNEX2lqNk1hSTFkTnFKdkI4VjJwbzMwSGRVZnItdHM3QUxZTk1hQV9pYXByUnp1QXVraGNJenJKYUc1OWljUXRsOUlkYWh3RV9vQWZDbVdTUTI0OC1ET0FkdjZZVUMtaUhiVWZ5RXpUN0xRbjh3?oc=5)
-- **摘要：** 可信来源发布一则航运消息：China Delivers Its Second Large Domestically Built Cruise Ship - The Maritime Executive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Iran suggests blasts are not US attacks as both sides report ships hit - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-08T14:21:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivgFBVV95cUxONWFPcDhpSjcwTEozRGRNdHFnWWpzb1pCYXIzdnVOUWhJQ3JvaGVTcjItLWNwNktieTVDcTk0WlpKbDRiMHB3Tkl0R19Mb1NUckllcVYwenlvNUV2QTBLcjlNdGtZdFI2NEJxbnhVbmZieXg2SnNTUXNPTFZVZjFnX2o3Q3lBbC1kRzlWcnNNU3VXdFNYNW5YTTJ4SFdBaDVfai1CRU50cm1VMHBkeWd4Zkc0Q2UxTlBJcmZ6TnJR?oc=5)
+- **摘要：** 路透社报道，伊朗方面表示相关爆炸并非美国袭击，同时双方均报告有船只受损。候选信息未提供受损船只数量、船型与船东、事发海域及对航线与运价的影响，也未说明爆炸成因与后续航运安排，事件对航运市场的具体影响目前尚不明确。
+
+### 3. 航运纪录市场面临延后但持续的供给紧缩
+
+- **原标题：** Shipping’s record markets face delayed but prolonged supply crunch - Lloyd's List
+- **来源：** Lloyd's List
+- **发布时间：** 2026-11-08T09:13:08+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisAFBVV95cUxPZTZYNTVlUVBVNXBtVVJtcVl2UVFlVEhEVkdzektWTXVpYkQ3dUp0d05ZcTJpZDhWX2hQSzJ3b3pfUTJuX014RHltNVctcE1vbHdXd0ZCZXFPTnJkRXZvY1lCT21jUkozT2w0d0Nybk84R2hWTloyRkRTOWRUS1VKN1EzSHpQeFpoRG9nVE1BX2ZYZHFtSDlBQ1h3TEQ2M21kZno5c2d5Skl5cWV0RmpIbg?oc=5)
+- **摘要：** 劳氏日报报道，创纪录的航运市场面临被延后但持续更久的供给紧缩。候选信息未提供具体细分船型、运价或运力数据、紧缩的起止时间，也未说明成因、受影响的航线与货种，以及对船东收入和货主成本影响的量化估计，这些细节尚不明确。
 
 ## 大宗商品 Top 3
 
-### 1. 大宗商品：India's oil ministry rejects Karnataka findings of...（路透社）
-
-- **原标题：** India's oil ministry rejects Karnataka findings of excess ethanol in petrol - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-07T13:13:26+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxQajczSFdwSkFRbkFremNHWUhOQjc3YU42dXNMazNlLU1kOVY4U1ZlUXhpYkpBbzFHODg2Y2NkNFV3akRoaWdkSjZBZVphbUxvZFVFejRfRUU1QnlRTFlVRmdyTjVNS3FnZnl4R3o2MFBBRlBkSkh6b0dacDkzeml1WTFDZkNFYmdmbTl5ZEVqQVVIVmVtVklDYkZ1dnJZdUp0YlpxQmt4UXBpSm5kUWpKczlBY3lXZlF2YUs5Tw?oc=5)
-- **摘要：** 路透社发布一则大宗商品消息：India's oil ministry rejects Karnataka findings of excess ethanol in petrol - Reuters。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 大宗商品：Kyiv Faces Russian Missile Barrage, Hits Saratov O...（彭博社）
-
-- **原标题：** Kyiv Faces Russian Missile Barrage, Hits Saratov Oil Refinery - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-07T10:42:45+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisAFBVV95cUxQSW1FUEwxUUsxaUhrekxFZ1hJZjRhMlVJOUNlSm43ZXdPV0dFMnJINWJ6TmdkNGNvNmhLbUMzTV96QVVvR0VNdXd3ckY1eHg3cUp2eFY0UGx1M0lQMU04VWxvS0tMX3RWS2t4TDJHZ2pndDhpMWNPMnFQRUZPT3k1TkJNSEx6VktlOEJxUC1LUnNsRXdGeVoyOHEyQUZyLTJkXy05NnktYWJCamZhenhEMw?oc=5)
-- **摘要：** 彭博社发布一则大宗商品消息：Kyiv Faces Russian Missile Barrage, Hits Saratov Oil Refinery - Bloomberg.com。该条目规则评分为 12.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 大宗商品：Copper Moves Lower as US Election Undermines AI an...（彭博社）
-
-- **原标题：** Copper Moves Lower as US Election Undermines AI and Tariff Trade - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-06T20:37:40+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxPWnlsdF9sNDNwY0VTbjBVa1QwUmFYZXJQUWhfcEdtSF9NUWFlNS1KOTh5RW1EcXQ3NUpsVnFVazZsSmRBZ01pUkRkVFRRTXlvWkcxUjFzYVlMa2d3YmZqaWs0dXBzLTBWNE5MZ19wWW1LQldvbFJSNUM4MzBnUUZsYVlDczRmLWI3UnZ2WTFxT1VwWkFWZHBUdXYyUWlZeE9XSWVxTDhSSmxyUktGb0dIaXMyUnJqdw?oc=5)
-- **摘要：** 彭博社发布一则大宗商品消息：Copper Moves Lower as US Election Undermines AI and Tariff Trade - Bloomberg.com。该条目规则评分为 14.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 股票市场 Top 3
 
-### 1. 股票市场：Why the US midterms sparked an AI stock selloff（英国广播公司商业频道）
+### 1. 新加坡三家银行绩后股价下跌，SATS受工作准证忧虑拖累
 
-- **原标题：** Why the US midterms sparked an AI stock selloff
-- **来源：** BBC Business
-- **发布时间：** 2026-11-06T18:32:16+00:00
-- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/crlykkzwwpydo?at_medium=RSS&at_campaign=rss)
-- **摘要：** 英国广播公司商业频道发布一则股票市场消息：Why the US midterms sparked an AI stock selloff。该条目规则评分为 7.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 股票市场：AI stocks climb after trillions wiped from market ...（英国广播公司商业频道）
-
-- **原标题：** AI stocks climb after trillions wiped from market values
-- **来源：** BBC Business
-- **发布时间：** 2026-11-06T21:06:25+00:00
-- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss)
-- **摘要：** 英国广播公司商业频道发布一则股票市场消息：AI stocks climb after trillions wiped from market values。该条目规则评分为 7.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** DBS, OCBC, UOB shares drop after Q3 results; SATS hit by work pass concerns: Markets this week - The Straits Times
+- **来源：** The Straits Times
+- **发布时间：** 2026-11-08T04:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxPM3lfcjhxaFlsai10SWVMRzVjOFZlNWZORVhfckZDWFVyQW00d3RkeUplS2c2Q0RLWVR6bzhKdmpBZllrbzRBWU5xZ25IRFJHV3FIVktGVHFXNVpBLUxCRXBDU0lMZ2puNnVoeGpiNU1oaWhtajJhVHhtMWQ4Tm51OVp5STlMSHJ3X053TEtLMTJwbGl6eERXMVVmWDhlTkZOTzI2X0VHU0paam42LVpzU3pQZV96T1k3LUpIMGpFTXNjT3h3Q1E?oc=5)
+- **摘要：** 《海峡时报》报道，DBS、OCBC、UOB三家银行股价在第三季度业绩公布后下跌，SATS则受工作准证相关忧虑拖累。候选信息未给出各股具体跌幅、成交额或大盘指数表现，也未提供第三季度业绩数据及工作准证相关事项细节，下跌幅度与后续影响仍不明确。
 
 ## 科技产业 Top 3
 
-### 1. 科技产业：2027 TSMC DNA Internship - TSMC（可信来源）
-
-- **原标题：** 2027 TSMC DNA Internship - TSMC
-- **来源：** TSMC
-- **发布时间：** 2026-11-07T04:06:20+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihgFBVV95cUxPZWFjTnB5bHI5ZkJjaTZwdUs1MG5fTjhYeGFBQzRBWDg1N2JLTktxa0ZybDBVSHg1a1E1bFdFbmVfQU84ZGoyM0dEcFdraDFQcW5zc2lNd3V5b2ZFektEd0dIa3pwN05ZWUc1SWNkMnkwV1ZzZ2gxdzVRREdMcGNxc08zRm5IZw?oc=5)
-- **摘要：** 可信来源发布一则科技产业消息：2027 TSMC DNA Internship - TSMC。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 科技产业：How IgniteData is bringing trusted automation to c...（可信来源）
-
-- **原标题：** How IgniteData is bringing trusted automation to clinical trial data - The Official Microsoft Blog
-- **来源：** The Official Microsoft Blog
-- **发布时间：** 2026-11-07T02:22:02+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitwFBVV95cUxQbUdBM2k3Rjd6dEhFZkQwb2NqZDkwZFZFejJtYU9mQVBWQ25NdlotdlhxeWw4clpaRHZUb3dELVlXNjZCZmVJWE5oeE14bXNXZG1icHpIZXQ3X1hwTU14ci12c2tmbm9hZHNrSzhQbXhDcnZFVzlEdkJVTDFfTVRvS2J1TDF0WG9La19XMXlSTzg4M2pkVGJnVWZ0ek5pdWVpeFVYOTNJQm83T3RnaU84b3Nib29FckE?oc=5)
-- **摘要：** 可信来源发布一则科技产业消息：How IgniteData is bringing trusted automation to clinical trial data - The Official Microsoft Blog。该条目规则评分为 9.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 消费 Top 3
 
-### 1. 消费：The Children’s Place shakes up leadership amid ban...（可信来源）
+### 1. 酒店业需求强劲，集团合计增加五百亿美元
 
-- **原标题：** The Children’s Place shakes up leadership amid bankruptcy rumors - Retail Dive
-- **来源：** Retail Dive
-- **发布时间：** 2026-11-06T17:44:31+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMinAFBVV95cUxNZUpFYXJXNXlaQkNIN2N0MzVQUC1pc0NmYVdYZDRodlNKdnlNeUtINmF5Wi1CX1RvZzRjSnlYMGhNMWtFR2hZQldPV2FPdlZEWHdpd252NC1FZ2FPNVRDWlF0V2daWjRkTXBhaHM5TTB3VEktbk9ReWw1ODdtQk13WVF3eFZDYUY3d2dZM0paY3c3MGVabDBONG4xQXQ?oc=5)
-- **摘要：** 可信来源发布一则消费消息：The Children’s Place shakes up leadership amid bankruptcy rumors - Retail Dive。该条目规则评分为 12.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Hotel groups gain $50bn amid ‘unbelievably resilient’ demand - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-08T05:02:15+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxQRXVoTGpxMlA3SWZaN2hRdzhlXzhnZzJHV2tncEYtWFB3V3JwQWpacERwallFUUtIeG5JTE85QVA2dDQ2ZThMak0tOGpjSWdmTmp4Sjlod0t6T2Vzc2xlT1ZZLUNsc1pFd0JtZ1MtcFRoM1VIUVNYX3BhYTNvYkhGTXhwSFQ?oc=5)
+- **摘要：** 金融时报报道，在被称为“难以置信地坚韧”的需求带动下，酒店集团合计增加五百亿美元。候选信息未说明这一金额是市值、营收还是利润口径，也未提供所涉企业名单、统计区间、区域分布及具体需求指标，增长的构成与可持续性目前尚不明确。
 
-### 2. 消费：World’s No. 1 restaurant crowned as contest comes ...（CNBC）
+### 2. Poppi创始人再创业推出新饮料公司
 
-- **原标题：** World’s No. 1 restaurant crowned as contest comes under increasing scrutiny - CNBC
+- **原标题：** Poppi founder still thinks water's boring—her new beverage company is betting consumers feel the same - CNBC
 - **来源：** CNBC
-- **发布时间：** 2026-11-07T13:38:44+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxQbV9JT2JwQllFN3c4SEJjS21sZy11QTNZenRmQ1Vfb1NPVEJISmdYQjZtUWtkSVM3NDFUOENVeXhEcjBZUndLQlNTVFZmdHlmNXJvdS1xMVVWT2loZVJVNk5jQ0dyc2pycERZMHFMMm1rUGJpTHNYcWwzRFFkX3hxLW9IOFpYbXpWdy05d0Vn?oc=5)
-- **摘要：** CNBC发布一则消费消息：World’s No. 1 restaurant crowned as contest comes under increasing scrutiny - CNBC。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 消费：Bed Bath & Beyond’s new concept takes a page from ...（可信来源）
-
-- **原标题：** Bed Bath & Beyond’s new concept takes a page from original format - Retail Dive
-- **来源：** Retail Dive
-- **发布时间：** 2026-11-06T17:49:30+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMioAFBVV95cUxQZVR0SVBRRlBrbHJMU0s0RDZDQVlKVUZEaWE5T2xLdmZRc1dNZkVucktIM0g1NGUzaTFYc2Z4LTEzMUJhcXRjdUVhZnZzazhxUlNhYWw2dEd0dUJRWlpmaVlNUGlCazJySjBtOHM4b0VqT0pxblVqaFhkR2pDRDI2clZYUXFndnFnS21EMDdvOENVR3RwcmhKenF2dWFmQUdM?oc=5)
-- **摘要：** 可信来源发布一则消费消息：Bed Bath & Beyond’s new concept takes a page from original format - Retail Dive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-11-08T14:00:01+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMif0FVX3lxTFBQN05lYlh5ZmdCTlVCSlBINXU5M1BVVlJCLVVrdUlTcWNHM2ZQMzBZVzNHVlctR0tNQnItc1Y4bTBsME9RdHYydkhwenc4TWd6NnBObjYzc2tua3hGS25SX0hiUXZ2SV9nbTlMU1JUWlVBeVVrZWxLS1dJeVdTYkU?oc=5)
+- **摘要：** CNBC报道，Poppi创始人认为水依然乏味，其新成立的饮料公司正押注消费者也有同感。候选信息未提供新公司名称、产品品类、上市时间、融资规模与销售渠道，也未说明对现有业务的影响，产品细节与市场前景目前尚不明确。
 
 ## Cloud Infra Engineering Top 3
 
-### 1. Cloud Infra Engineering：Microsoft is winding down Oracle deal to rent AI c...（路透社）
+### 1. Anthropic签署三十四亿美元AI数据中心发电机协议
 
-- **原标题：** Microsoft is winding down Oracle deal to rent AI cloud capacity, Bloomberg News reports - Reuters
+- **原标题：** Anthropic secures $3.4 billion generator deal for AI data centers, FT reports - Reuters
 - **来源：** Reuters
-- **发布时间：** 2026-11-06T19:16:09+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxNN0g4UzRRaV9OckNuUjZYeVcybWl4SnhZUHVRR3pXVTFUdVMtWENOSWRKdjhUQThNTWlRWXd3YVJFTUVaM1hOaFI2UWJ6cDlWZjM4Q3NXTWZDVlJFSTdnS3RqNExHcG93anIxTDhpNXJTRGduSEgxcWNaYnNRYTdOdWF4SzBoZzBLV3o1Wi1ZaEVPWkFXZVJSSWhYZWFSdE9BRFlINGtWWjhhM2FLUEdaYjJQOTBLQ0VCLVIyXw?oc=5)
-- **摘要：** 路透社发布一则Cloud Infra Engineering消息：Microsoft is winding down Oracle deal to rent AI cloud capacity, Bloomberg News reports - Reuters。该条目规则评分为 16.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他…
-
-### 2. Cloud Infra Engineering：Protesters slam AI and enter Microsoft data center...（路透社）
-
-- **原标题：** Protesters slam AI and enter Microsoft data center site in Amsterdam - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-06T17:24:53+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiekFVX3lxTE5DXzRGZk9SWTRucFR5TU1zMDNnaUpqX3ZURkFtcGxrUGdZZE00VUdhX0FfU2RiRGZETzhMc3dYZGItUDdJUEsxSTg3T29BeFF1UnFBMTlkeU5DMWRWZ3VvZUExX3E3OS1CcDZZckVBTVdiZTFyLWpjTUlB?oc=5)
-- **摘要：** 路透社发布一则Cloud Infra Engineering消息：Protesters slam AI and enter Microsoft data center site in Amsterdam - Reuters。该条目规则评分为 15.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. Cloud Infra Engineering：BigQuery AI Functions in Pandas - Google Cloud（可信来源）
-
-- **原标题：** BigQuery AI Functions in Pandas - Google Cloud
-- **来源：** Google Cloud
-- **发布时间：** 2026-11-06T17:30:55+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxOT3dGVW9UOGFnblhBTmh0dkFGRVZ6TXdabk8xdEg1RmNfSXAxMzFQbEl3U2ZnYTYwdkRFbWEwbDVMSl96X0dDc0thVHI5cXlkVEl3ZGxmZjQxbUxXaVJsUHdySXZQMGZINHVzNHY4N0FIeTQyVlZobDlQa0hDX1hFTDI3bjVKY1hBd1NwaFV3?oc=5)
-- **摘要：** 可信来源发布一则Cloud Infra Engineering消息：BigQuery AI Functions in Pandas - Google Cloud。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-11-08T12:54:10+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5)
+- **摘要：** 路透社援引金融时报报道，Anthropic签下一笔三十四亿美元的发电机协议，用于AI数据中心。候选信息未提供交易对手方、发电机数量与交付时间、涉及的数据中心地点及电力容量，也未说明付款安排与自建或租赁性质，项目规模与投产节奏尚不明确。
 
 ## AI 前沿 Top 3
 
-### 1. AI 前沿：Measuring how AI agents handle everyday wet-lab sc...（可信来源）
-
-- **原标题：** Measuring how AI agents handle everyday wet-lab science - OpenAI
-- **来源：** OpenAI
-- **发布时间：** 2026-11-06T19:09:23+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifEFVX3lxTE0xR2JJZ0FQU2ptTi1UcE9reDg3aGdRZ2lHM0d3NHYxcS1KbDhacDJ4RWlKM2R6ZHpEdFh4TTdmVm82VkZ2enhZOWFjanZfQzR2aUcyS3FkbjRoOHFTcXlfaVI0YTd4aFVyMFQ5SFVtelhjVmtTVE11R2k2LUI?oc=5)
-- **摘要：** 可信来源发布一则AI 前沿消息：Measuring how AI agents handle everyday wet-lab science - OpenAI。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. AI 前沿：Mechanical Engineer, Power Generation - OpenAI（可信来源）
-
-- **原标题：** Mechanical Engineer, Power Generation - OpenAI
-- **来源：** OpenAI
-- **发布时间：** 2026-11-06T21:47:40+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxQaTlzMkJ4RmM1ekEyVllzR05Pc2pENEtoenc3azlCU0hGTGFfWmhyN010SnpvcDlaSTJDUjBkQ3ZDcWFKam0xaHVaWXBPV1FtQXVZVXFZS2h0UnRfRUVoRkVRRjhvMXhWbHp0bUJnUnZ3V2l5bG1UeGRRcmNXRGN2UHNaNVc?oc=5)
-- **摘要：** 可信来源发布一则AI 前沿消息：Mechanical Engineer, Power Generation - OpenAI。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. AI 前沿：The components of agent memory - Anthropic（可信来源）
-
-- **原标题：** The components of agent memory - Anthropic
-- **来源：** Anthropic
-- **发布时间：** 2026-11-06T21:21:18+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMibkFVX3lxTE5uaktEZlp1anNnLVpGTHNDMXE2d0p2cmxiRzZ3REI2QWQzYndMV01KVk1UYWExM0RlSF9YR3FrRzd6Wllhcm80NDZWanpDTV9zZkNoZWlzcWp4YWxDNkFqa1p2Z290X3BobFg1TnBn?oc=5)
-- **摘要：** 可信来源发布一则AI 前沿消息：The components of agent memory - Anthropic。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 国家新闻
 
 ### 新加坡 Top 3
 
-#### 1. 新加坡：Schroders seeks sale of Wisteria Mall in bid to of...（可信来源）
+#### 1. 新加坡三家银行绩后走低，准证忧虑拖累SATS
 
-- **原标题：** Schroders seeks sale of Wisteria Mall in bid to offload Singapore properties - The Business Times
+- **原标题：** DBS, OCBC, UOB shares drop after Q3 results; SATS hit by work pass concerns: Markets this week - The Straits Times
+- **来源：** The Straits Times
+- **发布时间：** 2026-11-08T04:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxPM3lfcjhxaFlsai10SWVMRzVjOFZlNWZORVhfckZDWFVyQW00d3RkeUplS2c2Q0RLWVR6bzhKdmpBZllrbzRBWU5xZ25IRFJHV3FIVktGVHFXNVpBLUxCRXBDU0lMZ2puNnVoeGpiNU1oaWhtajJhVHhtMWQ4Tm51OVp5STlMSHJ3X053TEtLMTJwbGl6eERXMVVmWDhlTkZOTzI2X0VHU0paam42LVpzU3pQZV96T1k3LUpIMGpFTXNjT3h3Q1E?oc=5)
+- **摘要：** 海峡时报报道，DBS、OCBC、UOB三家银行股价在第三季度业绩公布后下跌，SATS则因工作准证相关忧虑承压。报道涉及银行三季度业绩与工作准证两项因素，但候选信息未提供各股具体跌幅、三季度业绩数值及工作准证相关事项细节，也未说明对相关企业盈利或现金流的影响，后续情况尚不明确。
+
+#### 2. 专家估算2026年烟霾将令新加坡损失23.2亿新元
+
+- **原标题：** Haze in 2026 estimated to cost Singapore S$2.32 billion, up 4% from 2015: experts - The Business Times
 - **来源：** The Business Times
-- **发布时间：** 2026-11-07T05:25:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirgFBVV95cUxQMm15eWJ4NEJQejBlTGNMZ2RDUHctemFQbHNraFA1U2VjTHJqZUF2ZzI0eGZuUWRMS0J3bnAwMkpBb0Z4NXp3T2ZLVUk5S0ZsU2Y4RXRFSjY0ZUxuSkhNZGgzRVZaY0hMYUplTW9iZ1dlbjhIMXdwYTY1b3ZmWGNVbW9tdlJoaTNDTFBRcFlTUU9fdTJHVmNXVXRUcTdLb1lYTXdyYW5sVjgzUmU4V1E?oc=5)
-- **摘要：** 可信来源发布一则新加坡消息：Schroders seeks sale of Wisteria Mall in bid to offload Singapore properties - The Business Times。该条目规则评分为 13.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 2. 新加坡：After years of robust growth, a tough 2027 ahead f...（可信来源）
-
-- **原标题：** After years of robust growth, a tough 2027 ahead for Singapore banks: Analysts - CNA
-- **来源：** CNA
-- **发布时间：** 2026-11-07T01:03:51+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTlvZnFnSWtLV0U3VHNzZlg4bG5RNFFoaHV2UXNfMEVwOE9kTmZ6Mk9FSWV2OGVMbVV5ZkxnUnZ2MHM2clZzMHMya3FtaVAybldlLWdMRkVHWmlQZnRGTEs0ZGRpNUg4OXkxUVRfemZBZXFLUm9sM0p1bjZPUHV1YjVxRDZyMUs4THduUWRn?oc=5)
-- **摘要：** 可信来源发布一则新加坡消息：After years of robust growth, a tough 2027 ahead for Singapore banks: Analysts - CNA。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 3. 新加坡：From AI financing to Indonesia outlook: 4 takeaway...（可信来源）
-
-- **原标题：** From AI financing to Indonesia outlook: 4 takeaways from Singapore banks’ Q3 results - The Business Times
-- **来源：** The Business Times
-- **发布时间：** 2026-11-06T23:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxQeHBDdGJERDhBM3h1Y1pzNDNXejBXU2NpbW9CdmwzTjlYUnZvRzBwWGxjVnpKb3AxNHlYaHIxR1VtQ3FUNUx2eTN4UmMzektmMnIwRTZkNGcwbjFnZ3h3QnJnUVlGY2JiaWNKb2FIaEI2S01FdGN0S3V6TlhqR3YxRmlOSkZURHEzdTM3SGhra01NRGdoU2RPc1RPZFZWV1lYZlRmbVViNDVkNDZtRGlXREhYcHRFN0xoczBKaw?oc=5)
-- **摘要：** 可信来源发布一则新加坡消息：From AI financing to Indonesia outlook: 4 takeaways from Singapore banks’ Q3 results - The Business Times。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-11-08T07:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqgFBVV95cUxObzFrajJUYjNBSUVWYm1HTmVTMzcyMzdiMkoxSFUtWkFjckhoZFFtRnZESjBLZ2hyMl91Q05kcGZUcGZpbXhtNlFFMGdMVWFOby1FUE05OWtJVHIyanhMSlZLeUpIUXNhV1cxeHlpSG1pU21EdGQtVVR4cVdURnVZUF9ocklkLTRBSE9YYTRSNkNNbFlPQ2lpSkZ2TlUwRjQ4VXp4V2UwLTcyZw?oc=5)
+- **摘要：** 商业时报报道，专家估算2026年烟霾给新加坡造成的损失约达23.2亿新元，较2015年上升4%。候选信息未提供估算方法、涵盖行业与成本口径、烟霾持续时长及数据来源，也未说明损失是否包含健康与旅游等方面，估算的具体构成与可能的政策应对目前尚不明确。
 
 ### 中国 Top 3
 
-#### 1. 中国：US, China trade chiefs hold call ahead of Trump-Xi...（可信来源）
+#### 1. 央视称中国2026年将居全球能源投资首位
 
-- **原标题：** US, China trade chiefs hold call ahead of Trump-Xi summit in Shenzhen - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-06T18:34:11+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiygFBVV95cUxQODVTbG5PRGFYaVRPT1FGZ2pTTlpVeTNiVExObUFqcFFxUU5uZW9XbzlrVDZ5NEIya2d0REkzTlJPTk5hdF9mQmtHOU1aejBZcnJFY01MN2pUZmxLNUh2YWdPWlFYYjJDbDdHeVZUSlNON2g4M1VwUFZmSVFnem1mMU1jX1FkbFc2eVZhY0FMaHU1bHdGaGxneHpOM21qcmZmYXZ4d2FIdGNLUnJZaWs4N21VTDRUN01OcHNNOXlGU0Q4LU9lNjZvWlFn0gHKAUFVX3lxTE43UmQ4YTNqQ1RQajlMZ3FuY1d2bjd6czBST0cyZExtN1BLT3hIdnl2U0g0SWpXck16RUhPYld4YmV5YmF3dWdDLTlfeXpLVHhmTHN4SE5VSHBraUVaMGpuWm8yeTA0UXVzMi1IYkZ2ZzNQY1E4OVRBeGRVTEMyN19nSVlobUc4cXI5VW5oTU43OC05UHNwb2w2anRWNTBNZi11VUNDdWFJSy00VWtmMkpBUExjMTY4SUItbERkVlpOQnY5NUczRWRQcnc?oc=5)
-- **摘要：** 可信来源发布一则中国消息：US, China trade chiefs hold call ahead of Trump-Xi summit in Shenzhen - South China Morning Post。该条目规则评分为 16.0，检测到 3 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 2. 中国：Beijing Vows to Hit Back Against US Sanctions on C...（彭博社）
-
-- **原标题：** Beijing Vows to Hit Back Against US Sanctions on China Companies - Bloomberg.com
+- **原标题：** China Set to Lead World in Energy Investment in 2026, CCTV Says - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-11-07T01:54:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxQR3FDNDVJS3VUN0RSZ0N4MjN3U3BGbHF1c0U3OGRnWlpVc21LMHM3dWd2TDhNR2lIUHBSOHAxNmZXSks0a01DM25XcjVIMnBMY2FJOHk2a2xXSXdZY3B1dnhaNmpPbW5wT2VoM0dlM1JqQkpXeHk3bURRcWJXTG5iZFRSb2hreDVHaTNwWUxnT08xbEpjVWdqODVFSFFOenZxdDRZSFFRRVBYOGVJRzFBbVpSVFFRQQ?oc=5)
-- **摘要：** 彭博社发布一则中国消息：Beijing Vows to Hit Back Against US Sanctions on China Companies - Bloomberg.com。该条目规则评分为 14.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-11-08T04:02:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiswFBVV95cUxNQVNBelR6QURBUWMxQVp4SHlEUW9Nc1lhQVluWjgwSFh4cUlqdWxPeE96dXFvcUVmV3BrTFYtVXF6XzNEZU5Mc1k4dUxsa2hWamNRUkhsdGtfQjFCd1JfSkpJRnc1VDFGdU1GT29XSFllQ0hOTExvaEFtc1I5cHM2ZGl1aTFNQ1NMYnhoa084a2doRlQ2aVl2VnpzbzJqVWJkZ2pNdGNVeVJ6Zk5oU1NmTmk5Yw?oc=5)
+- **摘要：** 彭博社援引央视报道称，中国在2026年有望领跑全球能源投资。候选信息未提供投资总额、统计口径、涵盖的能源门类与数据来源，也未说明是官方计划、预测还是已完成数据，以及与往年或其他经济体的对比，投资规模与结构细节目前尚不明确。
 
-#### 3. 中国：China’s NDRC Flags Weak Demand as Challenge for Na...（彭博社）
+#### 2. 中国薯都借AI热潮新建一批数据中心
 
-- **原标题：** China’s NDRC Flags Weak Demand as Challenge for Nation’s Economy - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-07T08:45:02+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxQazZrSXp5OW54TDNYaF9CWXNHMXVLb2FYTmRUejBKNTBGcEdBeEFXZVNKMWhna2FFeWJla3BZVTlKcktQQ2FhVmtNUW5fUzgxVURaVkcyNVNkamxRbEpuMnFwZXBnLXdhMU5PWkJPT0YwTWl5TFlWQ0VFZG9Hb2VqRU9rdEpBY2d3bUVCVTBaZmRlRk1wdzd0WGRnbTZianVWbTd5a1E5cmtnOVZ1NDJoUmtOOUdGZw?oc=5)
-- **摘要：** 彭博社发布一则中国消息：China’s NDRC Flags Weak Demand as Challenge for Nation’s Economy - Bloomberg.com。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** China's 'potato capital' cultivates new crop of data centres as AI boom takes root - CNA
+- **来源：** CNA
+- **发布时间：** 2026-11-07T22:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilAFBVV95cUxNc3dRNnFCM0tESFNfSmx4T05Wemg4ZkN3NEU5SzZYdS1MelhGdEc3aUNjak1XdDctR1lmbnN0RlBVaHpYMjhsRVNpemRiR1dUU2VaU2NPZzgtMWFWUWl5d0stbFpUQzdGVXVoZW9TeWJVN2NxY2hJTThvTjZFVUpfOGVTY1I1dVg1TUtlZ01jZ2t0T3k4?oc=5)
+- **摘要：** CNA报道，被称为中国“薯都”的地区正借AI热潮新建一批数据中心。候选信息未提供该地区具体名称、数据中心数量与投资规模、算力或机柜容量、运营主体及电力来源，也未说明对当地产业与就业的影响，项目细节与经济效应目前尚不明确。
 
 ### 美国 Top 3
 
-#### 1. 美国：Operation Economic Outcast Sanctions Eight Canadia...（可信来源）
+#### 1. 伊朗称爆炸非美国袭击，双方均报有船只受损
 
-- **原标题：** Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime - U.S. Department of the Treasury (.gov)
-- **来源：** U.S. Department of the Treasury (.gov)
-- **发布时间：** 2026-11-06T20:05:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiYkFVX3lxTE82bDBURU01cWY2NWdBaU9IMzZtdE9PQ1JiMzVNUERSUEgtN1BMU2lOTlVYa0VkTWJxU1U2V2VSYTlHUkU1Y19mSUtMdGUtVXUzMGJaM2VfN2VFVF9JT01DaEpR?oc=5)
-- **摘要：** 可信来源发布一则美国消息：Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime - U.S. Department of the Treasury (.gov)。该条目规则评分为 16.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生…
-
-#### 2. 美国：Wall Street Strategists Call Stock Rout a Fresh Re...（彭博社）
-
-- **原标题：** Wall Street Strategists Call Stock Rout a Fresh Reason to Buy - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-07T13:30:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisgFBVV95cUxNRjJsWU9HVVVVTlJNRjYxYkJ6UFBBdnQzNklIM0w5X1R0YUtlT2RSeG5XR2JqMkF6Q3J5NVVBMm5sSVd4TVRfRFpYNHBLVDdSRFlmRXZxTHpJbllDVHM2Vm9lMmVBNGVWSUFrc1c2NEMzc0tBV0p3Yk16R1IwUTdsa2ZzNkNvYXpnM250dGYzZVFsV0FZbXE5YTZwYnllR1hXZkl5a2w3YVFtMXdKSGZkZzdR?oc=5)
-- **摘要：** 彭博社发布一则美国消息：Wall Street Strategists Call Stock Rout a Fresh Reason to Buy - Bloomberg.com。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 3. 美国：The mother of all American course corrections - Fi...（英国《金融时报》）
-
-- **原标题：** The mother of all American course corrections - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-11-07T08:22:23+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNVDVxQ19ENUNnbWNiLTB0RkRmczN0RHZpdHh2d0ZlS25PSnhPZ2EwdVdCMkdsY2wzV0RNYkx4ZVZONXFrMXdVUUNSYk43XzVqNHduSElLWEl4UVdHUjJTUDJ5c0xVRXdJeERzaGlwYlhDNHlRT2loSkktdXNGZkJHNVZ3cFk?oc=5)
-- **摘要：** 英国《金融时报》发布一则美国消息：The mother of all American course corrections - Financial Times。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Iran suggests blasts are not U.S. attacks as both sides report ships hit - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-11-08T09:56:23+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifEFVX3lxTE0yb2tXOU8xYVdDamJadUpxZ3ViUVhucWRqVWpKcXRvN0pHSWdNVFZHSTZqNGJUM1RkZTExVFlMbG1uQVY3M0RCTlBUOU56ZWdTMVJTZi0xemtfcXN0aFozZlVZNHNwMVFjUU1iT19OSkppZUhfalBycmRwZmI?oc=5)
+- **摘要：** CNBC报道，伊朗方面表示相关爆炸并非美国发动的袭击，同时双方均报告有船只受损。候选信息未提供受损船只数量与船型、事发海域、爆炸成因及人员情况，也未说明美方回应、后续行动或对航运与能源市场的影响，事件经过与经济后果目前尚不明确。
