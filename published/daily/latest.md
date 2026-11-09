@@ -1,137 +1,197 @@
-# 每日专业 Topic 新闻：2026-11-08
+# 每日专业 Topic 新闻：2026-11-09
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 本周通胀住房就业与财报数据将主导商业日程
-
-- **原标题：** Inflation, housing, jobs and corporate earnings will dominate the business calendar this week - AP News
-- **来源：** AP News
-- **发布时间：** 2026-11-07T16:06:31+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxNSXlkbFpKOEMwVnUzUllPOUxLUkxYc2JEb3QySXkyLWVwVU5lVjhpTWdwdE9hTlo2YzNVemlsdUZ0UU96U0I0OUpnU3B1S2JSYktQQU9jRDBGdlB2U3FEVU5FTzV6QzdlMkZNQ1hOdklKZEJGOWhqQXNrMUJUWkhCZUlveXdhRVpqRm45S0Fn?oc=5)
-- **摘要：** 美联社报道，本周商业日程将由通胀、住房、就业以及企业财报等数据与事件主导。候选信息仅列出上述受关注的类别，并未提供各项指标的具体数值、市场预期或发布时点，也未说明涉及哪些企业及其财报结果，相关数据的实际表现与对市场的影响尚需等待后续公布，目前仍不明确。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 航运 Top 3
 
-### 1. 美军瘫痪一个月来首艘伊朗港口驶出货船
+### 1. 三季度东西向集装箱运量超预期，未现放缓
 
-- **原标题：** US Forces Disable First Cargo Ship in a Month Sailing from Iranian Port - The Maritime Executive
-- **来源：** The Maritime Executive
-- **发布时间：** 2026-11-07T23:18:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxOeGtjZjhfOEdOQmtnSEJfemFfelh2NTkyRHpJZkdUazFNY2hKSXZJZC1NTkZoMXRnUHlsYkZZOWZCRE5uY0VCZjhUVmdKMnQ1OFRLZ1FtQ19ZT3dxYnVwT2F6a1hvRm1jLVlmNWNONU5uR3FRbGtvZTRpeWE3S3U4VERWUnltLVhJU2hQM1RsVU5nRlFZRjh6RUdKb1FzazlsUEJLYzVOVmJ5cU9sRWxr?oc=5)
-- **摘要：** 专业航运媒体报道称，美军使一艘自伊朗港口驶出的货船失去航行能力，这是近一个月来首起同类事件。候选信息未提供该船名称、船东、所载货物、事发海域及具体执行方式，也未说明伊方回应、后续航运安排或对相关航线与运价的影响，这些情况目前尚不明确。
-
-### 2. 双方均报船只受损，伊朗称爆炸非美国袭击
-
-- **原标题：** Iran suggests blasts are not US attacks as both sides report ships hit - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-08T14:21:43+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivgFBVV95cUxONWFPcDhpSjcwTEozRGRNdHFnWWpzb1pCYXIzdnVOUWhJQ3JvaGVTcjItLWNwNktieTVDcTk0WlpKbDRiMHB3Tkl0R19Mb1NUckllcVYwenlvNUV2QTBLcjlNdGtZdFI2NEJxbnhVbmZieXg2SnNTUXNPTFZVZjFnX2o3Q3lBbC1kRzlWcnNNU3VXdFNYNW5YTTJ4SFdBaDVfai1CRU50cm1VMHBkeWd4Zkc0Q2UxTlBJcmZ6TnJR?oc=5)
-- **摘要：** 路透社报道，伊朗方面表示相关爆炸并非美国袭击，同时双方均报告有船只受损。候选信息未提供受损船只数量、船型与船东、事发海域及对航线与运价的影响，也未说明爆炸成因与后续航运安排，事件对航运市场的具体影响目前尚不明确。
-
-### 3. 航运纪录市场面临延后但持续的供给紧缩
-
-- **原标题：** Shipping’s record markets face delayed but prolonged supply crunch - Lloyd's List
+- **原标题：** East-west container volumes defy slowdown expectations in strong third quarter - Lloyd's List
 - **来源：** Lloyd's List
-- **发布时间：** 2026-11-08T09:13:08+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisAFBVV95cUxPZTZYNTVlUVBVNXBtVVJtcVl2UVFlVEhEVkdzektWTXVpYkQ3dUp0d05ZcTJpZDhWX2hQSzJ3b3pfUTJuX014RHltNVctcE1vbHdXd0ZCZXFPTnJkRXZvY1lCT21jUkozT2w0d0Nybk84R2hWTloyRkRTOWRUS1VKN1EzSHpQeFpoRG9nVE1BX2ZYZHFtSDlBQ1h3TEQ2M21kZno5c2d5Skl5cWV0RmpIbg?oc=5)
-- **摘要：** 劳氏日报报道，创纪录的航运市场面临被延后但持续更久的供给紧缩。候选信息未提供具体细分船型、运价或运力数据、紧缩的起止时间，也未说明成因、受影响的航线与货种，以及对船东收入和货主成本影响的量化估计，这些细节尚不明确。
+- **发布时间：** 2026-11-09T15:10:05+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxOdzdpdUoxd1puSTZ1NjZhRnhrYTBjSFJadllfWm1FS1dzaUlkMXFfaDRmazNIOGV2U00yNUN1VVhJNVpsaVVQbWJUZ19ZM0kyZEp6Z3lyS2VGTVNQUVhaSUJPMVdaS2dzYmxQUWJSaVZqcFpfQXRWTGNGTWJWd3pCcWh6LW5qNG5FVGNLdDAxSUlQYVNiYndic1ZBbFVDLXhlYkNBY3Fpb3ZfdVVPNTlaTHJrMDRxUQ?oc=5)
+- **摘要：** 据《劳氏日报》报道，第三季度东西向主干航线集装箱运量表现强劲，未如市场预期出现放缓，显示货量需求仍有韧性。所给资料未给出具体运量数值、同比增幅、分航线数据以及运价与舱位变化，也未说明第四季度展望，这些细节仍不明确。
+
+### 2. 智利最繁忙集装箱港达成运输协议后重开
+
+- **原标题：** Chile’s busiest container port reopens after haulage deal - Splash247
+- **来源：** Splash247
+- **发布时间：** 2026-11-08T20:06:52+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihgFBVV95cUxObmZ6RG93dEVEWFUwRkxUalhsRk92cWgwc2dOc0lKNWxZT2xyamJBd0F3ZGpja3Y0WW5kNXlvNkE5S0tlZ0dISFlncFc4cTJHRXU0cm9xdEhFRTVJQWpvcEJfdWNlNjc0MU96WWF6dlEzOUY3N05KUnlHd3FCc1pwNVJ5ZW5Hdw?oc=5)
+- **摘要：** 据Splash247报道，智利最繁忙的集装箱港口在达成卡车运输协议后重新开放，此前影响港口作业的集疏运问题得到阶段性解决。所给资料未说明港口名称、停摆时长、协议具体条款、积压货量以及何时全面恢复正常运营，这些细节仍不明确。
 
 ## 大宗商品 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. 金价上涨逾百分之一，通胀担忧随油价回落缓解
+
+- **原标题：** Gold climbs more than 1% as inflation fears ease on lower crude prices - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-11-09T03:06:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxNeUI1TW05YjFMZ2ttT3hUYnJfdE5fNFVOcHZsVTJldlU1Zy1kbUpTT18wdW9UVDRvYXNXRU9rLWdQZDUyeTQ2emxzb3hCd0VJMkpMalRuOGVKaGFKUXgtdFlTZGdiY2RmVWFxdXdzUlhkTGVwazh3d1hGbWd3dU50QVNOc0NDNUlTMmVMbXBaZ2xZbmRHTG16dFNxYjlvWWhnRVVtdzBwa3J0cVBqd2E0?oc=5)
+- **摘要：** 据CNBC报道，黄金价格上涨超过百分之一，报道将其与原油价格走低带来的通胀担忧缓解相联系，构成当日金价上行的主要背景。所给资料未给出金价具体报价、收盘水平、美元与美债收益率变化以及交易量，也未说明后续走势，这些细节仍不明确。
+
+### 2. NRG能源公布三季度业绩并重申年度指引
+
+- **原标题：** NRG Energy Reports Third Quarter 2026 Results, Reaffirms 2026 Financial Guidance, and Initiates 2027 Guidance - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-09T11:51:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipgFBVV95cUxOUWZPZnlIQ2lidW1ZaTFvVW04ZEhXd1BmZFlKLVJvUVlxOXQzci04Z29MVENrUHkzRTVWYU5uSjZnSVhFZXVEMzNLUk5iY0puYmZHYzI4anFxbFRaaE5rek9HczFsSlhObnAwU0pUNnZ4R0lWWnpTelU1OXc3T0xxaF9UVmRKQXluenM0QTB4cVczVlIzNElmcHVyUkQ3MDB4WGtHT2V3?oc=5)
+- **摘要：** 据《金融时报》报道，NRG能源公布二零二六年第三季度业绩，重申二零二六年财务指引，并首次给出二零二七年指引，向市场更新盈利与现金流预期。所给资料未给出营收、利润、每股收益的具体数值及指引区间，也未说明业绩变动原因，这些细节仍不明确。
+
+### 3. 墨菲石油获以色列近海G区许可，进入东地中海
+
+- **原标题：** Murphy Oil Corporation Announces Entry Into the Eastern Mediterranean With Zone G License Awards, Offshore Israel - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-09T11:30:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipgFBVV95cUxQaFc2VTFjbWtPQWhScGc0MzlNMFZld2VKam9aVWFVY2tQM1o4ZGZqWGV6enNfeFBNRVE0T1hEVnJ2RFB0bjhjS1pObHdhX0ttdzFvLXdxMzN3NDhOUmxhd21oVGVFNHJjTGp2Tmdrc0tvUGZjYXdUUGdsbFRUQ1VrUUVCeWFhUjgzcU9SUi1faTNjbnhzUFh3SlpyZ2FHbUh0dXFxT05B?oc=5)
+- **摘要：** 据《金融时报》报道，墨菲石油宣布凭借以色列近海G区块的许可授予进入东地中海地区，拓展其上游勘探布局。所给资料未说明许可区块面积、权益比例、勘探投入、合作方以及预计投产时间，也未给出储量评估，这些细节仍不明确。
 
 ## 股票市场 Top 3
 
-### 1. 新加坡三家银行绩后股价下跌，SATS受工作准证忧虑拖累
+### 1. 英伟达股价下跌百分之四，市场聚焦相关审查
 
-- **原标题：** DBS, OCBC, UOB shares drop after Q3 results; SATS hit by work pass concerns: Markets this week - The Straits Times
-- **来源：** The Straits Times
-- **发布时间：** 2026-11-08T04:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxPM3lfcjhxaFlsai10SWVMRzVjOFZlNWZORVhfckZDWFVyQW00d3RkeUplS2c2Q0RLWVR6bzhKdmpBZllrbzRBWU5xZ25IRFJHV3FIVktGVHFXNVpBLUxCRXBDU0lMZ2puNnVoeGpiNU1oaWhtajJhVHhtMWQ4Tm51OVp5STlMSHJ3X053TEtLMTJwbGl6eERXMVVmWDhlTkZOTzI2X0VHU0paam42LVpzU3pQZV96T1k3LUpIMGpFTXNjT3h3Q1E?oc=5)
-- **摘要：** 《海峡时报》报道，DBS、OCBC、UOB三家银行股价在第三季度业绩公布后下跌，SATS则受工作准证相关忧虑拖累。候选信息未给出各股具体跌幅、成交额或大盘指数表现，也未提供第三季度业绩数据及工作准证相关事项细节，下跌幅度与后续影响仍不明确。
+- **原标题：** Nvidia stock falls 4% as scrutiny turns to Jensen Huang’s affair with alleged Chinese spy - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-11-09T09:05:48+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiigFBVV95cUxPcndzRG1jRHQ5c25nX1RuQVVNeXJUXzNnemotNFRpWGhwUGNCN3hmV2VkMndSVkl4V1hIMmhUMDhjWTJFa1BYckVYM1BkX0ZMMEQ2WmFxRGRhYXFtNzVJQUEtNW9PaUhfekFYM1RWeG0xbldSZlcwVldGZXVXVjNvcDdNN2dReWFqM3c?oc=5)
+- **摘要：** 据CNBC报道，英伟达股价当日下跌百分之四，报道把这一走势与外界审视转向首席执行官黄仁勋同据称涉间谍指控人物的关系相联系，构成该股当日下跌的报道催化剂。所给资料未给出成交量、盘中波动、其他芯片股表现及公司正式回应，也未说明后续安排，这些细节仍不明确。
 
 ## 科技产业 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. 谷歌发布新款TPU 8tx与8i Max面向智能体时代
+
+- **原标题：** Our newest TPUs: 8tx and 8i Max, built for the agentic era - blog.google
+- **来源：** blog.google
+- **发布时间：** 2026-11-09T13:13:40+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMigwFBVV95cUxNakpDeUFvTTVXVUIwWUgwbDFNZVhCSUxHN1VZXzZQeTgxU2FQSmpqYjFxN25VaWtYSHBZcHktOFpNeGRpWnpiVk4wcC1KZExDQzhYdWR3UXRQM3k5ZFptVlZubTM3a00zUEMzTkFVRTlaWEwyOHZJYUF6ZnphSW5JNm5vOA?oc=5)
+- **摘要：** 据谷歌官方博客，谷歌发布面向智能体时代的新款张量处理器8tx与8i Max，作为其人工智能算力硬件的最新一次产品更新。所给资料未给出制程、算力、内存、功耗、上市时间及定价，也未说明部署的数据中心范围与供货安排，这些细节仍不明确。
 
 ## 消费 Top 3
 
-### 1. 酒店业需求强劲，集团合计增加五百亿美元
+### 1. Portillo's将关闭部分门店
 
-- **原标题：** Hotel groups gain $50bn amid ‘unbelievably resilient’ demand - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-11-08T05:02:15+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxQRXVoTGpxMlA3SWZaN2hRdzhlXzhnZzJHV2tncEYtWFB3V3JwQWpacERwallFUUtIeG5JTE85QVA2dDQ2ZThMak0tOGpjSWdmTmp4Sjlod0t6T2Vzc2xlT1ZZLUNsc1pFd0JtZ1MtcFRoM1VIUVNYX3BhYTNvYkhGTXhwSFQ?oc=5)
-- **摘要：** 金融时报报道，在被称为“难以置信地坚韧”的需求带动下，酒店集团合计增加五百亿美元。候选信息未说明这一金额是市值、营收还是利润口径，也未提供所涉企业名单、统计区间、区域分布及具体需求指标，增长的构成与可持续性目前尚不明确。
+- **原标题：** Portillo’s to close some restaurants - Restaurant Dive
+- **来源：** Restaurant Dive
+- **发布时间：** 2026-11-09T15:38:13+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimwFBVV95cUxOVTBOdERjY1NHMERobW0yVWVPTkk5N29nMXdyeWoxcUdORXhzQjFScG9MX2c3Q0xESmdnQVU1VjFtcEpUNDZmbXdmRjVXVnYtZTlTdzhJS3ZOeDB6VDdxNjVualZ1eWliN1JnTHExcXdSb2M0VDgwQ1VhM1BuYVEwdG9mbVhDd0hGZW10WklfWnhvck14UXUwbkE5Zw?oc=5)
+- **摘要：** 据Restaurant Dive报道，餐饮连锁Portillo's计划关闭部分门店，涉及门店网络的收缩调整，属于公司经营层面的具体动作。所给资料未说明关闭门店的数量、所在地区、关闭时间表、涉及员工人数以及关闭原因，也未给出对营收与成本的影响，这些细节仍不明确。
 
-### 2. Poppi创始人再创业推出新饮料公司
+### 2. 美国零食支出增十亿美元，种子油担忧推动品类转移
 
-- **原标题：** Poppi founder still thinks water's boring—her new beverage company is betting consumers feel the same - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-11-08T14:00:01+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMif0FVX3lxTFBQN05lYlh5ZmdCTlVCSlBINXU5M1BVVlJCLVVrdUlTcWNHM2ZQMzBZVzNHVlctR0tNQnItc1Y4bTBsME9RdHYydkhwenc4TWd6NnBObjYzc2tua3hGS25SX0hiUXZ2SV9nbTlMU1JUWlVBeVVrZWxLS1dJeVdTYkU?oc=5)
-- **摘要：** CNBC报道，Poppi创始人认为水依然乏味，其新成立的饮料公司正押注消费者也有同感。候选信息未提供新公司名称、产品品类、上市时间、融资规模与销售渠道，也未说明对现有业务的影响，产品细节与市场前景目前尚不明确。
+- **原标题：** Seed Oil ‘Fearmongering’ Drives $1 Billion Surge in US Snack-Food Spending - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-11-09T13:30:17+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcTIxVFpRUFF2QU5lMDZETjBXZkV6cy1YM1ZCS21rbFczVjB0SFhRN3VOOHR2eGYyM0NrZUhyMURrMmswNWMzb0ZKYWNpeEZBUkdsVGkzc0xMRE1PVG1qV21HU0dBcU80RjhMdDhjSTBCdVRGbjV3TzBMbTQya3lBUkFiX2lLQVJVWFB5TnlxdUpIVE9hcG1XLTBOU1cycE5yaDdKdWZCNHd4MTJZT3RCdHR0VWF1amJpTk1J?oc=5)
+- **摘要：** 据彭博报道，对种子油的担忧带动美国零食消费支出增加约十亿美元，反映消费者在零食品类上的选择与支出结构出现变化。所给资料未给出统计区间、具体受益品类与品牌、价格因素以及调查方法，也未说明这一增长是否可持续，这些细节仍不明确。
 
 ## Cloud Infra Engineering Top 3
 
-### 1. Anthropic签署三十四亿美元AI数据中心发电机协议
+### 1. AWS推出Nitro Sandboxes为EKS提供硬件级隔离
 
-- **原标题：** Anthropic secures $3.4 billion generator deal for AI data centers, FT reports - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-08T12:54:10+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5)
-- **摘要：** 路透社援引金融时报报道，Anthropic签下一笔三十四亿美元的发电机协议，用于AI数据中心。候选信息未提供交易对手方、发电机数量与交付时间、涉及的数据中心地点及电力容量，也未说明付款安排与自建或租赁性质，项目规模与投产节奏尚不明确。
+- **原标题：** AWS Nitro Sandboxes: Hardware-enforced workload isolation on Amazon EKS - Amazon Web Services (AWS)
+- **来源：** Amazon Web Services (AWS)
+- **发布时间：** 2026-11-09T15:51:50+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisAFBVV95cUxOWURqdEJOX3NfQ1dqeVdzV0RGYllRVHZxQVQ5SkduS0lEV0J1M3BqS1cydkdpUGJWamVQaHY1bWpncF9zYWhGeWRZd291TWlnOFJiTlhRMi1FQnlXVlNNdG84VU5HWEdSeGxPckRfNmswVmdsRDcway1SMllPbWZqVHhTX3JZSkFFdUJPbGtsUkNFeVZfZ25acmFMWGU0SnNUTnRVNnpxYzJ3dWhvZHBHUQ?oc=5)
+- **摘要：** 据亚马逊云科技官方博客，AWS推出Nitro Sandboxes，在Amazon EKS上提供硬件强制的工作负载隔离能力，属于其容器与虚拟化安全方面的一次工程发布。所给资料未说明支持的实例类型、可用区域、性能指标、定价以及正式可用时间，也未给出适用合规场景，这些细节仍不明确。
+
+### 2. CoreWeave与Wayve签署多年期云计算协议
+
+- **原标题：** CoreWeave signs multi-year cloud agreement with Wayve - Data Center Dynamics
+- **来源：** Data Center Dynamics
+- **发布时间：** 2026-11-09T13:31:40+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMingFBVV95cUxQaXMwUFo4UVVsN3BwY0ZQVkllM2duMTB0RzEtdXFJSDQ4OXRaUEZ2Z0hZSEZYTFpPNzVDVmhyXy1kc0dHcHFGMWJmN0dVTnEtNGxmekJOaXNKNU80MDVFdmxUUHdZMUtnN1cwSE1TeUZCajhJRFlOMWFzMGVIZkRmWkswcWdibXFVdXdyZlFLXzJIa3Jja05LZHpfYXAwQQ?oc=5)
+- **摘要：** 据Data Center Dynamics报道，CoreWeave与Wayve签署一项多年期云计算协议，为后者提供算力资源，反映人工智能算力供应的长期合约安排。所给资料未给出合约金额、算力规模、期限、交付时间表以及具体使用场景，也未说明是否涉及专属集群，这些细节仍不明确。
+
+### 3. Cloudflare启动Vite生态系统基金
+
+- **原标题：** Launching the Vite Ecosystem Fund - Cloudflare Blog
+- **来源：** Cloudflare Blog
+- **发布时间：** 2026-11-09T13:08:03+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiakFVX3lxTFBTQnRwV1RaYXp0TVhSUlROenNFYTlwNTdhQzN6WWJqaHFSdlp2YjdhU2FxblZZWUNjNDkxamFMYnB1RGtTcDNjMkliTDhNODZXejJpRzNyLXFOVnduNWRac2R2MjlnZ042aEE?oc=5)
+- **摘要：** 据Cloudflare官方博客，Cloudflare宣布启动Vite生态系统基金，面向相关开源工具生态提供资金支持，属于其开发者生态方面的一项新举措。所给资料未给出基金规模、资助对象、申请方式、评选标准以及时间安排，也未说明资金用途限制，这些细节仍不明确。
 
 ## AI 前沿 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+### 1. DeepSeek智能体Harness日活用户突破一百五十万
+
+- **原标题：** DeepSeek’s AI agent push gains speed as Harness tops 1.5 million daily users - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-11-09T07:00:04+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOYUlFWGhzSVJHVWJFNG5qVno4Y2pKR3RHWGU4dmU2YjNDUHFoaDFESWtDai1CTW5BQWI3Y3VZZ0ZReURjU2thNktuRXRZWFJhUWhqSVM2ZGNSTUMzRVNxbWdGbTJHWlIzZzhDUHhBaDdHVzhIWVVjQko5UXN4WDJ2SmFNVk5EaE5aLThZY1dIRlB6VDFxc3N5a19uZ0JEQnBaZlhzRGFlVzNPTG14Qi1mYTJCOWtlVHVNakI0UlljUWU?oc=5)
+- **摘要：** 据《南华早报》报道，DeepSeek推进智能体产品，旗下Harness的日活跃用户突破一百五十万，显示其智能体产品的使用规模快速扩大。所给资料未给出用户统计口径、增长时间区间、留存与付费转化数据以及产品功能细节，也未说明商业化安排，这些细节仍不明确。
+
+### 2. 英伟达首尔AI日聚焦主权、智能体与物理AI进展
+
+- **原标题：** NVIDIA AI Day Seoul Highlights Korea’s Advances in Sovereign, Agentic and Physical AI — Live Updates - NVIDIA Blog
+- **来源：** NVIDIA Blog
+- **发布时间：** 2026-11-09T08:00:53+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1JLTQ2SGNUWVJmamVBcTF4RU5fM3lndGFYTTd5Q3paVEttV0hha1dLZi1NR3pZaWpidzFieTlXMFlPQXZnbm1LcXI1U3BiQ2xiblc0a19n?oc=5)
+- **摘要：** 据英伟达官方博客，英伟达在首尔举办AI日并以实时更新方式呈现韩国在主权人工智能、智能体与物理人工智能方面的进展。所给资料未给出活动议程、发布的产品或模型、合作机构名单以及具体技术成果，也未说明后续落地安排，这些细节仍不明确。
+
+### 3. 报道称英伟达拟借Brightspeed端局构建推理网络
+
+- **原标题：** Nvidia looks to tap Brightspeed central offices for inference network - report - Data Center Dynamics
+- **来源：** Data Center Dynamics
+- **发布时间：** 2026-11-09T13:48:44+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxPVFotWS1hN3VkS2s3YzZyaUFEQmZ4ek9JYk5HaDBCd0lVeE0tRk03UnVNbFdVNHFtNVB0TGRMSTN4MTRvcTZNOGpzSlAxWkxFdkFhd25hYkpEMjVEWk8wMkp5cFVra0F0SVRtLVRTRUQ1cUhfUGxEcGIzdEpvWFJ0UXBGWGkyemYwMnE3MGw4eXdUd1RFV0wyaWJCb01VX1hNWURPeFA3aWtuOE84Um5UTXVweWtOemZKSkgtSg?oc=5)
+- **摘要：** 据Data Center Dynamics援引报道，英伟达考虑利用Brightspeed的电话端局设施部署人工智能推理网络，以靠近用户侧扩展推理算力。所给资料未给出端局数量、地理范围、部署时间表、投资规模以及合作是否最终敲定，也未说明网络架构细节，这些细节仍不明确。
 
 ## 国家新闻
 
 ### 新加坡 Top 3
 
-#### 1. 新加坡三家银行绩后走低，准证忧虑拖累SATS
+#### 1. 新加坡深科技初创借中国扩规模，瞄准美国更高利润
 
-- **原标题：** DBS, OCBC, UOB shares drop after Q3 results; SATS hit by work pass concerns: Markets this week - The Straits Times
-- **来源：** The Straits Times
-- **发布时间：** 2026-11-08T04:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxPM3lfcjhxaFlsai10SWVMRzVjOFZlNWZORVhfckZDWFVyQW00d3RkeUplS2c2Q0RLWVR6bzhKdmpBZllrbzRBWU5xZ25IRFJHV3FIVktGVHFXNVpBLUxCRXBDU0lMZ2puNnVoeGpiNU1oaWhtajJhVHhtMWQ4Tm51OVp5STlMSHJ3X053TEtLMTJwbGl6eERXMVVmWDhlTkZOTzI2X0VHU0paam42LVpzU3pQZV96T1k3LUpIMGpFTXNjT3h3Q1E?oc=5)
-- **摘要：** 海峡时报报道，DBS、OCBC、UOB三家银行股价在第三季度业绩公布后下跌，SATS则因工作准证相关忧虑承压。报道涉及银行三季度业绩与工作准证两项因素，但候选信息未提供各股具体跌幅、三季度业绩数值及工作准证相关事项细节，也未说明对相关企业盈利或现金流的影响，后续情况尚不明确。
-
-#### 2. 专家估算2026年烟霾将令新加坡损失23.2亿新元
-
-- **原标题：** Haze in 2026 estimated to cost Singapore S$2.32 billion, up 4% from 2015: experts - The Business Times
+- **原标题：** Singapore’s deep-tech startups tap China for scale, set sights on the US for higher margins - The Business Times
 - **来源：** The Business Times
-- **发布时间：** 2026-11-08T07:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqgFBVV95cUxObzFrajJUYjNBSUVWYm1HTmVTMzcyMzdiMkoxSFUtWkFjckhoZFFtRnZESjBLZ2hyMl91Q05kcGZUcGZpbXhtNlFFMGdMVWFOby1FUE05OWtJVHIyanhMSlZLeUpIUXNhV1cxeHlpSG1pU21EdGQtVVR4cVdURnVZUF9ocklkLTRBSE9YYTRSNkNNbFlPQ2lpSkZ2TlUwRjQ4VXp4V2UwLTcyZw?oc=5)
-- **摘要：** 商业时报报道，专家估算2026年烟霾给新加坡造成的损失约达23.2亿新元，较2015年上升4%。候选信息未提供估算方法、涵盖行业与成本口径、烟霾持续时长及数据来源，也未说明损失是否包含健康与旅游等方面，估算的具体构成与可能的政策应对目前尚不明确。
+- **发布时间：** 2026-11-08T23:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR0lodUxpMURxRm95NUUtYVVmZS1UakFYMk96eERKNHJTNjgzYUFvVlAwbDNFam91LUtYMU43TlA5SERQSTJ6WWdaSTNUbGtUU01TMVVLbjh3dkRndEV0NHBsbW5ZZ3JSdVdrVTFZTUw2ZlJiT3NSSTBhVEt1LVZNRmFLSGJUd2pldS1oN2Rfa0Fqb3FHSDk3M0pUQjQxTXlSMi1lR3F5MjJoUERYVHM1cEQtTHl0SkFqbkRZRTJ5NVNJTEE?oc=5)
+- **摘要：** 据《商业时报》报道，新加坡深科技初创企业借助中国市场实现规模扩张，并把目光投向美国市场以获取更高利润率，反映其市场与资本配置取向。所给资料未给出具体企业名称、融资规模、营收数据、目标行业以及进入美国市场的时间表，也未说明利润率差异幅度，这些细节仍不明确。
+
+#### 2. “永久巡航”邮轮在新加坡被扣押，乘客仍滞留柬埔寨
+
+- **原标题：** ‘Forever cruise’ ship seized in Singapore as passengers remain in Cambodia - The Straits Times
+- **来源：** The Straits Times
+- **发布时间：** 2026-11-09T12:40:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxNeDVkS1NVXzVvOGdxNVo1aHN2X3VOZVVPM0NMbVpKa0VzUnVnclRXVG5qQzNpZ0pBNUxPNTVUajRtQU8tY3hPNHdRWHFGWWR5cHQzbnhrQmdDQzJVTlJtSzBVYkgtM0xWd2otZG9DT1JXZXlFbnFwOHFOMXVQbEZBRno2SmExUW9ISGU3NVZBbDlwdmd5NmxaX1NwTThUbEx3LUVmYlh4XzlpVllCRzZ4VFprZms?oc=5)
+- **摘要：** 据《海峡时报》报道，一艘被称为“永久巡航”的邮轮在新加坡被扣押，相关乘客仍滞留在柬埔寨，事件涉及船舶扣押与旅客安置。所给资料未说明扣押的具体法律依据、船东与运营方、涉及乘客人数、船舶后续处置以及争议起因，这些细节仍不明确。
 
 ### 中国 Top 3
 
-#### 1. 央视称中国2026年将居全球能源投资首位
+#### 1. 中国将对美关税及贸易限制暂停期延长两个月
 
-- **原标题：** China Set to Lead World in Energy Investment in 2026, CCTV Says - Bloomberg.com
+- **原标题：** China Extends Pause on US Tariffs and Trade Curbs for Two Months - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-11-08T04:02:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiswFBVV95cUxNQVNBelR6QURBUWMxQVp4SHlEUW9Nc1lhQVluWjgwSFh4cUlqdWxPeE96dXFvcUVmV3BrTFYtVXF6XzNEZU5Mc1k4dUxsa2hWamNRUkhsdGtfQjFCd1JfSkpJRnc1VDFGdU1GT29XSFllQ0hOTExvaEFtc1I5cHM2ZGl1aTFNQ1NMYnhoa084a2doRlQ2aVl2VnpzbzJqVWJkZ2pNdGNVeVJ6Zk5oU1NmTmk5Yw?oc=5)
-- **摘要：** 彭博社援引央视报道称，中国在2026年有望领跑全球能源投资。候选信息未提供投资总额、统计口径、涵盖的能源门类与数据来源，也未说明是官方计划、预测还是已完成数据，以及与往年或其他经济体的对比，投资规模与结构细节目前尚不明确。
+- **发布时间：** 2026-11-09T08:52:55+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisgFBVV95cUxOTkVXSkNKNzRBdXBNUlFmNVlEZ3gtUVhRbVVZcENiS3B6RXBlMDNvQ2lrU19fMXoyYkdSQWc5amg5OXlhcmtKX0JHZHR2amtKY2hzZllpQUhWS3lTNndnT2NDZFdYUHNCeG1MVHZmMWV5RjEwTXJqVmlLQTJDU0d3SHN2aHVOZ291bTNqNnprR3U2TndhUEs0ZHdDTVM2NlRsZW5VQUxKd25JLXV0MlJ6aXRR?oc=5)
+- **摘要：** 据彭博报道，中国把对美国关税及贸易限制措施的暂停期再延长两个月，涉及双边贸易措施的阶段性安排，对相关进出口企业经营预期具有直接影响。所给资料未给出涉及的商品清单、税率水平、延长决定的公布时间以及双方后续磋商安排，也未说明暂停期起止日期，这些细节仍不明确。
 
-#### 2. 中国薯都借AI热潮新建一批数据中心
+#### 2. 中国生产者物价同比升百分之五点七，创疫情后新高
 
-- **原标题：** China's 'potato capital' cultivates new crop of data centres as AI boom takes root - CNA
-- **来源：** CNA
-- **发布时间：** 2026-11-07T22:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilAFBVV95cUxNc3dRNnFCM0tESFNfSmx4T05Wemg4ZkN3NEU5SzZYdS1MelhGdEc3aUNjak1XdDctR1lmbnN0RlBVaHpYMjhsRVNpemRiR1dUU2VaU2NPZzgtMWFWUWl5d0stbFpUQzdGVXVoZW9TeWJVN2NxY2hJTThvTjZFVUpfOGVTY1I1dVg1TUtlZ01jZ2t0T3k4?oc=5)
-- **摘要：** CNA报道，被称为中国“薯都”的地区正借AI热潮新建一批数据中心。候选信息未提供该地区具体名称、数据中心数量与投资规模、算力或机柜容量、运营主体及电力来源，也未说明对当地产业与就业的影响，项目细节与经济效应目前尚不明确。
+- **原标题：** Chinese Producer Inflation Hits 5.7% for Post-Covid Era High - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-11-09T09:14:37+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxQMmtVSmRjR3dJWkJYWi1ROURuRTNuVXFmUFBDelZtUkFHQ0pwaWRmVzFJNXhiMEFoS0g0Mmx3UTJoTFpEcWFDVm4tNTZMSmV5NkhrRGs1SWhYMC1iNmpaMG92UlRweV9wTldzNHFLdE1qbUh1U0ltcWdNcDUwVHpaVkhidDlobUM3RTNGV0pIbkR2OUF3akRtamtaRi1iN3VuZXl5VkJlS1IzclV3ZFZNVWhyS2U?oc=5)
+- **摘要：** 据彭博报道，中国生产者物价同比涨幅达到百分之五点七，为新冠疫情后时期最高水平，显示工业品价格端压力上升。所给资料未给出数据所属月份、环比变化、分项行业贡献、消费者物价读数以及对企业利润的影响，也未说明政策应对，这些细节仍不明确。
+
+#### 3. 行业组织称中国汽车出口增速将从超高水平放缓
+
+- **原标题：** China car exports to slow from ‘supercharged’ growth, group says - The Business Times
+- **来源：** The Business Times
+- **发布时间：** 2026-11-09T11:08:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWklkcm0wcmYzazRvMHk5WGhWRmRmbmFqTFZTY1NncDhjYWZpU2FPaUtzejVYamFxQzdrM2JOT0hfVlhyelBaUThJNnU2R0kzY0lFdnJwdmNWT29hZUtmZ2pNQ3JHMHVrSEJzN2tBTjlENERzcHREcmxaclFEVU5mQVg3WFZNY2YyZFo2bGtDWGlfZVVDUi1WTWY4ZXptUm5HcVo4aHNjWXFMNmxJb0UtVHFGbXF2UHlaa2xyMms3U1Z2dw?oc=5)
+- **摘要：** 据《商业时报》报道，一个行业组织表示中国汽车出口增速将从此前的超高速增长放缓，涉及这一重要出口行业的增长前景。所给资料未指明该组织名称、当前出口规模、预期增速、主要目的地市场以及放缓原因，也未给出预测的时间区间，这些细节仍不明确。
 
 ### 美国 Top 3
 
-#### 1. 伊朗称爆炸非美国袭击，双方均报有船只受损
+#### 1. 美国农业部公布对墨西哥出口销售数据
 
-- **原标题：** Iran suggests blasts are not U.S. attacks as both sides report ships hit - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-11-08T09:56:23+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifEFVX3lxTE0yb2tXOU8xYVdDamJadUpxZ3ViUVhucWRqVWpKcXRvN0pHSWdNVFZHSTZqNGJUM1RkZTExVFlMbG1uQVY3M0RCTlBUOU56ZWdTMVJTZi0xemtfcXN0aFozZlVZNHNwMVFjUU1iT19OSkppZUhfalBycmRwZmI?oc=5)
-- **摘要：** CNBC报道，伊朗方面表示相关爆炸并非美国发动的袭击，同时双方均报告有船只受损。候选信息未提供受损船只数量与船型、事发海域、爆炸成因及人员情况，也未说明美方回应、后续行动或对航运与能源市场的影响，事件经过与经济后果目前尚不明确。
+- **原标题：** Export Sales to Mexico - USDA Foreign Agricultural Service (.gov)
+- **来源：** USDA Foreign Agricultural Service (.gov)
+- **发布时间：** 2026-11-09T14:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE45Y2Y2SlFjMTlCY3hXaHdWLTU0a3QzczM4ZUVDOGtVQ1NQSC1pX2F1dW9ZaXhRVGpkbGh1dl8wUnYyWDhSWnYzX0ZzNVBHYVVrQV8xbktNRDRlMWlQeVZTOFVHQzdPWDg?oc=5)
+- **摘要：** 据美国农业部海外农业局发布，一份关于对墨西哥出口销售的信息由其官方渠道公布，属于农产品贸易方面的第一手数据。所给资料未给出出口品类、数量、金额、统计周期、买家与装运安排，也未说明较前期变化及对市场的影响，这些细节仍不明确。
