@@ -1,259 +1,159 @@
-# 每日专业 Topic 新闻：2026-11-14
+# 每日专业 Topic 新闻：2026-11-15
 
-> 生成模式：`rules-fallback`。新闻链接可能受订阅或付费墙限制。
+> 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 宏观经济：TrainForTrade Modern Port Management Course, Cycle...（可信来源）
-
-- **原标题：** TrainForTrade Modern Port Management Course, Cycle 2 in Namibia: Module 2 on organization of a port system - UN Trade and Development (UNCTAD)
-- **来源：** UN Trade and Development (UNCTAD)
-- **发布时间：** 2026-11-14T02:40:22+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1AFBVV95cUxPSmtRd3hwYWhFbEsyVWR4M1JJWUd6bDQzMzI4UEIzSlk4SlhqSzFBaHR3bzk4VXJHSEhTVkw1QnVrN0Y0UkY0V0Y3X1FjSkpzOXVZTkZDU2xDRVpvZ2NUbFMxMkJfU2Q4Ql95TWpYN0N6OXA0aDdXSXBvWTIyc0RSZ3ZQaWtKamlFcUkwRkZwMkNRc2VTLXlaOWtQWkFQazFkb1pKeDdyNGl1ZGxsLUZCYjR2WWxhYzVRa0RUQThTbFpFLTd3SGVLX1AyQzBFRVdXNlZYLQ?oc=5)
-- **摘要：** 可信来源发布一则宏观经济消息：TrainForTrade Modern Port Management Course, Cycle 2 in Namibia: Module 2 on organization of a port system - UN Trade and Development (UNCTAD)。该条目规则评分为 12.0，检测到 2 条同事件候选报道。当前未能调用 Codex…
-
-### 2. 宏观经济：BLS to Post PPI Recalculated Relative Importance F...（可信来源）
-
-- **原标题：** BLS to Post PPI Recalculated Relative Importance Figures and Seasonal Adjustment Factors on February 12, 2027 - Bureau of Labor Statistics (.gov)
-- **来源：** Bureau of Labor Statistics (.gov)
-- **发布时间：** 2026-11-13T17:35:49+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMinAFBVV95cUxNdEJvSnZfQU5YR1E2ZGtlUFEyQTNHTjdwV0VYcTNRRndZbjFvbElHcmxUM3ZaWWQyVFdJM09jTTY1elk2OFAxZjNaZTF6VnVUa3hKWXZnS2g1em9zTEk4aWw2RnlZazY1alJ5dkFJdzUwbXpyM3NKcG5odmNiclExWlcxWmszeWhLakN3d2dCZGxNcFRyOElBeHdRaHo?oc=5)
-- **摘要：** 可信来源发布一则宏观经济消息：BLS to Post PPI Recalculated Relative Importance Figures and Seasonal Adjustment Factors on February 12, 2027 - Bureau of Labor Statistics (.gov)。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Co…
-
-### 3. 宏观经济：[sdg_08_10] Real GDP per capita - European Commiss...（可信来源）
-
-- **原标题：** [sdg_08_10] Real GDP per capita - European Commission
-- **来源：** European Commission
-- **发布时间：** 2026-11-14T07:28:55+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixAFBVV95cUxNTGJfTEdaNUJMbFZia01Gb0JmS2NTU3hmS09YNVgtT0RhMkNsekQ0RXIzZGhJdWkzbXdiOE1qU2piQ2QxdHRlMC1VWDVRc3JCM2ZtQUxmOXQ0Y1pONG5EMHh2VVJhdjNwdWs0Nkh0cXI5WFZ0aE9uN2paYVRSbW1PZ0JVaUFtaTN0ajNrYVBtZVhucnRmaWRkTGs1Z0NEcElOUUJZNlMxTDl4eGx0cmREejVCWUU5a3FDcVBMTzh1Wnl4XzRB?oc=5)
-- **摘要：** 可信来源发布一则宏观经济消息：[sdg_08_10] Real GDP per capita - European Commission。该条目规则评分为 9.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 航运 Top 3
 
-### 1. 航运：Tanker Hits Cruise Ship in New Orleans, Triggering...（彭博社）
+### 1. 黑海罗马尼亚运河附近三艘船只遭无人机袭击
 
-- **原标题：** Tanker Hits Cruise Ship in New Orleans, Triggering Rescue - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-13T23:18:53+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxNSEt4X2ZoSTlEZm5mRVBDaE5IVGdIbmJzRGlRZ2tiSXpuSDE5WFJxZFFnc2VaUjk0OHhnX24zZVJPV0FUd2E4Q2tTN3VoU2kwY2IzSVJyS0xOU3JRSGpoVDE1VTJPX3ZTUllQVEdBcTZPVnh0MkZBallQcVp2RjZYMlJtMGVWMUtXbVNqZ2t3UWsyRmRpbnJKdEtHVkc1Q3pPdWtfQ0V5ckNmS25EalhZdE5sQTM?oc=5)
-- **摘要：** 彭博社发布一则航运消息：Tanker Hits Cruise Ship in New Orleans, Triggering Rescue - Bloomberg.com。该条目规则评分为 19.0，检测到 7 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Three ships struck by drones in Black Sea near Romanian shipping canal, PM says - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-15T12:49:16+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1AFBVV95cUxOWEpyZzYwM3Y0YzMtU0h3LXZXb1RBQ00yS3lLZklVczJEOUVtcFU0MWYzRlNIMWxKN1RlMkZrSXZ3eFJkdjV4cTJuQVJBbVZob3JfYjdEbFotQ21iQzFQSHJYUE5VNUJDRDA0aV9OYy1qQTRVQ0EtOXJlSWQzWDV2VnpCRXdkQUpWSEhzUHVFWGstd2t4anhiMnZ4RHdVOHl4UjkxYjdWVmI0LTF3b2x1UTZJdGotUGU5bXkwVUF6N2IwY3g4S2lxbVNvM0kyZVBoTmR5YQ?oc=5)
+- **摘要：** 据路透社报道，一位总理表示，黑海靠近罗马尼亚航运运河的海域有三艘船只遭到无人机袭击。事件发生在商业航运通道附近，对区域航行安全具有直接影响。候选信息仅提及袭击方为无人机、地点及三艘船受影响，未说明表态总理的身份与所属国家、船只名称、所属公司、受损程度与人员伤亡，也未交代袭击的具体时间、幕后责任方以及运河通行是否受影响，这些细节仍不清楚。
 
-### 2. 航运：Rescues underway in New Orleans after a tanker hit...（CNBC）
+### 2. 新奥尔良游轮相撞事故油轮数据记录仪被寻获
 
-- **原标题：** Rescues underway in New Orleans after a tanker hits a river cruise boat on the Mississippi River - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-11-13T21:06:07+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilwFBVV95cUxPUE9tOG43TmtSS1VHQTJKekw5TThsYXhSdXl3eGZqR1ZWMTE3MF9fcWZONXlXUkdydk1Bb1ZkZ3RvVTFXWlNVeWIxaGF5Nm13eWw0bVZtaFhLU0haWlVwM2F5dWpYVnl3SHU4UEVTYkVuX2lGMEtCelUtbjcyQ3hjVDF1T2ltNHZTSEV5cmdmTlpPSEFVbkln0gGcAUFVX3lxTE5jX1FGX3ZQaGM4UjlJSGdXTV8tVmh4MW5qZlRlLVNVcW8wM0x5cTVfR0hIYkdKajI0Nm9MV0owdDNDdFhENl9NeVFDeWJRUHF2NXRBaWNlZWljYzZmMml1LTlBaVd4dWtzanJHaFp3dkItdU5qdlh1YXBicWt6UUlyZlFUdlRwVUhlLWpXV1V6ZDBMQlpMZWlQZDlyeA?oc=5)
-- **摘要：** CNBC发布一则航运消息：Rescues underway in New Orleans after a tanker hits a river cruise boat on the Mississippi River - CNBC。该条目规则评分为 19.0，检测到 7 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Data recorder recovered from tanker in New Orleans cruise ship collision, NTSB says - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-14T23:43:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNDVOVl84WGtvTHZ4WDdMVXE2VWQ3dGE4LXV6LWhGQ1pTZzlUWUt1QXBWOWVsUHpxMHN2LURab2RYdlhmS2xGYm9jZkRTNFhHOGlDd2phUDQyMThBQlV1V3FlUWxIZzU1enBRS1BOUm1QQUVLcnB2ZkJqdTdEdTNTclhQTmM0Z2ZfMUQ2Q0VTSTFhTzJ6QXRHNzZybVRJb292c2RtSC0wWkd5NlFJdl83TmxTVTJpMTFGa1lZ?oc=5)
+- **摘要：** 据路透社报道，NTSB表示，已从新奥尔良游轮与油轮相撞事故中的油轮上寻获数据记录仪。记录仪可作为还原事故经过的关键物证，寻获有助于后续调查推进。候选信息仅说明记录仪被寻获以及事故涉及游轮与油轮相撞，未交代碰撞发生时间、船只名称、伤亡与损失情况、记录仪所载数据内容，也未说明调查结论与责任认定，这些细节仍不清楚。
 
-### 3. 航运：GHD Announces Port Engineering Contracts in Los An...（可信来源）
+### 3. 中国北极航运活动增长伴随多重挑战
 
-- **原标题：** GHD Announces Port Engineering Contracts in Los Angeles and Savannah - The Maritime Executive
-- **来源：** The Maritime Executive
-- **发布时间：** 2026-11-14T04:34:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirgFBVV95cUxNbnFqUzYzeFVWcjJNVzUxUktqOS1TQlBNUDltRWl2azZzbDdXUTNPQzRxaTNqQkJiSzZQdWlsNVV1bDkxVThQMHV5aE13ejhSR2NhTGtYVG1jUDZsckp2N0tDaXVEdVZWdEdfU2wteHhJX2Z2dkRqZHNENHJNVjBEcUtJXzNsWVVIZGd2NGZ0cFFEOVpHRFRkdmFHUzhia1h6bEdmZGpGQ05MdXNXYUE?oc=5)
-- **摘要：** 可信来源发布一则航运消息：GHD Announces Port Engineering Contracts in Los Angeles and Savannah - The Maritime Executive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** China’s Arctic shipping is on the rise – but so are the challenges - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-11-15T08:00:09+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi2gFBVV95cUxNWWt1SzZNSFdsWkZlUGRyOEZTTzA3RVEtM056T203Y3liVl95dGVzZWNUdG9tTFI1TmNlWEMwZE1VY2phQlZrRks1bm5OR1VpOTV2YlZ2YlZOZlRnVnU5NUNxV3hPM2VhYl9udUc1N2xNd3JsSkRpZmptSzNSVFk3UkRuN19MS1lSMlRtOGpSZjBJTkJ6eFFkMkdCQXoxdUFTaF80TTBSQ0hLZi1NZUg0M0lNQy10alhjSXJhcjZyRldXa0trQjdTZ3lkQU94MzkwM3BtX2ZveGNSZ9IB2gFBVV95cUxPeW5kLU5MeDBSbEpnc2pRTEc5OXV0UUszWlVGS3p3UnFZcVlEbC05c3lMUUtrdEY0dWRjd1B5UEl0SWJLSnNqMlJNUzdmeHREUHFqMEVmeEdoUUJSbWNjcVhtN016LVJwTWJWZl9HOTNpdFRjVXM2eFd4eTUwV19xeDVjT0s3bnJyWkY5NzdVZWtGOHFyUXBsWDhPOU8xcUFWTnJzNVZBTXBkSkRTTGo1N1g1akRZaHhvWUMxRWstT1EwTzUzS29LNEJQNE0wMnNPcEFCb3l1QzFVQQ?oc=5)
+- **摘要：** 据《南华早报》报道，中国经由北极航道的航运活动正在增加，但相关挑战也在上升。该趋势关系到远洋航线格局与贸易通道的多元化，对航运行业具有结构性意义。候选信息仅提供标题所示的增长与挑战并存这一判断，未说明具体航线、货运量、时间跨度、所涉企业，也未列出挑战的具体内容与成因，相关细节仍不清楚。
 
 ## 大宗商品 Top 3
 
-### 1. 大宗商品：Oil Crops Outlook: November 2026 - USDA (.gov)（可信来源）
+### 1. 美方关键矿产举措尚未削弱中国供应链主导地位
 
-- **原标题：** Oil Crops Outlook: November 2026 - USDA (.gov)
-- **来源：** USDA (.gov)
-- **发布时间：** 2026-11-13T21:21:28+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiV0FVX3lxTE9xdGhaTVhheG1mVGlVdC1lRmlIaENRMzVZaE1nZDhQbnBoYmxDSkdhM1p6MWxPT2ZHNjR1QTBRdUN5OTAxUGxEWUdaOXlhNWFrYjY1Zk15OA?oc=5)
-- **摘要：** 可信来源发布一则大宗商品消息：Oil Crops Outlook: November 2026 - USDA (.gov)。该条目规则评分为 21.0，检测到 4 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. 大宗商品：Pledges to Progress Company Assessment - IEA - Int...（可信来源）
-
-- **原标题：** Pledges to Progress Company Assessment - IEA - International Energy Agency
-- **来源：** IEA - International Energy Agency
-- **发布时间：** 2026-11-14T09:02:47+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilgFBVV95cUxQUHdacTBobEN5SVAxMDdVQkZWckFFc1FMenkwUlliVmwtOEJFTVpibTFzcGEwMi1sS2hxTVZaZ2xxdTFfaGFlTmpURFV4UlByN09OaHlpYXZYNkFTSHRzVk5meFJKOUIyYmwtdzlKUTl4ZU03VW9PZjAxUndpSUltZU16UUZmWkdJQWRTU1lUVmtFUnlBUWc?oc=5)
-- **摘要：** 可信来源发布一则大宗商品消息：Pledges to Progress Company Assessment - IEA - International Energy Agency。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 大宗商品：A 10-Point Plan to Reduce the European Union’s Rel...（可信来源）
-
-- **原标题：** A 10-Point Plan to Reduce the European Union’s Reliance on Russian Natural Gas - IEA - International Energy Agency
-- **来源：** IEA - International Energy Agency
-- **发布时间：** 2026-11-14T15:08:48+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1wFBVV95cUxQYmhCc2JWSGkzSnB4ZnZselczbHZmN181VkhoR1JkOXJoeThaXzdVVHFUeTd4alBXdlhkWXEweGF6SWRORFBib0tEMjN4eVNYTGFiNGRJa2gwdE1pblhZMk1yX0pyREJqdzB6WWdzSmw5VHlaWF9TWjZwSGZaT0hmWU5UY084TW9QSHdoS0J4azI2NTBLakVxVlBTenVqNW9GSzFXVnpjaHlkQkR6aEtVSjJDSHZCRXhzdUNzbDVJQWNBTlFDTTUxV21fRmZkSmw0QWRvLXhFcw?oc=5)
-- **摘要：** 可信来源发布一则大宗商品消息：A 10-Point Plan to Reduce the European Union’s Reliance on Russian Natural Gas - IEA - International Energy Agency。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可…
+- **原标题：** Trump's minerals push has yet to loosen China's grip ahead of Xi talks - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-15T11:55:31+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixwFBVV95cUxPQmgzajlTc2t4SmdLb1g1X3o1VWhhMlFTWnJ3Sk5sOW9JcDBUU0ZYU0tkX0s4M28za1ZVRGw0S1FlZEJVNXhVRGhwTjI5Um9HRzJxb0lRWk8yeE9pb3ZuQXk3a3F4WU1wNDRHcTQ5SV9jRnpHOHlOOGZBWUliVU16bThPM0R5OElKQk5hXzNGR2pZc3BFYTcxa2IxcVVoLWhNaTJobDR1RHhZa3B1dHotX0hId1NPajBKSjBRa3BZSHUtN2RrV084?oc=5)
+- **摘要：** 据路透社报道，美方推动关键矿产供应的相关举措至今尚未削弱中国在相关领域的主导地位，这一情况出现在双方高层会晤之前。报道涉及关键矿产供应链格局与对外依存，对大宗商品与相关产业具有参考意义。候选信息未提供具体政策内容、涉及矿种、时间区间、市场份额数据，也未说明会晤议题与后续安排，这些细节仍不清楚。
 
 ## 股票市场 Top 3
 
-### 1. 股票市场：EM Stocks Eye First Weekly Gain Since September as...（可信来源）
-
-- **原标题：** EM Stocks Eye First Weekly Gain Since September as Tech Rebounds - Bloomberg
-- **来源：** Bloomberg
-- **发布时间：** 2026-11-13T21:42:28+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxOQ3JJeC1SRFpYQi1TT05xcUFFV21BU0paaGU4Sk9jZlg2VFc3VUhWRkY3aTVrVUkzQXhabXhFNS1aajhTb1JoMS0yOHNHYlBDUWl5QVRYT3RCcDkyS2dqZmQ0cnFQZU1ocXdpRXdtSE9UQW1qMHVCMVdia0xvMWZDYXhFRDBRckR0eHBBS21nRWhtbE4xZ0EyOURrRWRyQVMzMWlzN3N1VG9vMnpPVzBNOGdqSGZnQQ?oc=5)
-- **摘要：** 可信来源发布一则股票市场消息：EM Stocks Eye First Weekly Gain Since September as Tech Rebounds - Bloomberg。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 科技产业 Top 3
 
-### 1. 科技产业：Claim your Google Cloud Credits in Google AI Studi...（可信来源）
+### 1. 三星拟在AI芯片业务之外建设数据中心
 
-- **原标题：** Claim your Google Cloud Credits in Google AI Studio - blog.google
-- **来源：** blog.google
-- **发布时间：** 2026-11-13T20:35:39+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiowFBVV95cUxOVjJuQXllUkRfTG1mbVdOMVhfVk1wLWhySkdIVndNWGJtamhqaFBJVEhTUUg3NThaWEVPeDJNZktNUDAwd0FmN1NKV3Q4NDl5SEpYWHZKTFNPLUdWdXNNeGdvVHo2Rzl6aG04SkZYOWd5anBlaWFRX1R6TzkybWtIbTZKbnJGMWVIREZXZklkcHBraE16a1dMekRqV2ZWejl4NWd3?oc=5)
-- **摘要：** 可信来源发布一则科技产业消息：Claim your Google Cloud Credits in Google AI Studio - blog.google。该条目规则评分为 9.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Samsung conquered AI chips. Now it wants to build data centres - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-15T05:08:13+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNcGlFcXVUUzVSNTBhc2s3R1RFQWpYZGxGc2JCTll4WE1hQ0dRWlBlbzhiRW80ZHVmdktJMlBmZF82dmRyZkpIUW93RDRPbnVPLVloRTlDcmlJOUxGWFJrNnhYWENUZFVZNXBwN19kRjljVkVnaE5lYTUwODdvai1CU0xyTC0?oc=5)
+- **摘要：** 据《金融时报》报道，三星在AI芯片领域取得进展后，计划进一步建设数据中心。此举意味着公司业务可能由芯片供应向算力基础设施延伸，对产业布局具有参考意义。候选信息仅提供标题所述方向，未说明数据中心的选址、规模、投资金额、建设时间表、技术路线，也未交代是否已正式立项及合作伙伴，这些细节仍不清楚。
 
-### 2. 科技产业：Connect Google Wallet to Gemini for personal finan...（可信来源）
+### 2. 英伟达相关间谍疑云引发AI芯片流向质疑
 
-- **原标题：** Connect Google Wallet to Gemini for personal finance insights - blog.google
-- **来源：** blog.google
-- **发布时间：** 2026-11-13T17:06:05+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaVBtU2pIREI2VkItNWF5TEhZNHVPR2dOb0hXNXBBUmowWUZQdEduYnpfbHBrQzB2OHlkejFmN0pDa3RZYjUzUUNYTzlsWW1OLUR3c2M4b0lTWkU2bF82OWJuZ0swUWJlYm9pbndYRXdXU1d2aVBBQWx3VWhLbnNfOWVVMVdyWmVQYThR?oc=5)
-- **摘要：** 可信来源发布一则科技产业消息：Connect Google Wallet to Gemini for personal finance insights - blog.google。该条目规则评分为 9.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. 科技产业：Microsoft says services fully restored after day-l...（英国广播公司商业频道）
-
-- **原标题：** Microsoft says services fully restored after day-long global outage
+- **原标题：** Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says
 - **来源：** BBC Business
-- **发布时间：** 2026-11-14T06:42:27+00:00
-- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss)
-- **摘要：** 英国广播公司商业频道发布一则科技产业消息：Microsoft says services fully restored after day-long global outage。该条目规则评分为 10.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-11-15T14:56:21+00:00
+- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss)
+- **摘要：** 据英国广播公司商业报道，Megaspeed表示，一名与英伟达前高管有关联、被怀疑从事涉华间谍活动的人员已于2025年离职。报道称该事件引发外界对先进AI芯片是否在美国限制下流入中国的疑问。候选信息未说明涉事人员身份、所谓间谍活动的具体证据、涉事芯片型号与数量，也未交代调查进展与监管结论，这些细节仍不清楚。
 
 ## 消费 Top 3
 
-### 1. 消费：The beverage boom is here to stay - Restaurant Div...（可信来源）
+### 1. Brookfield与KKR竞逐海湾零售商Eyewa约七亿美元交易
 
-- **原标题：** The beverage boom is here to stay - Restaurant Dive
-- **来源：** Restaurant Dive
-- **发布时间：** 2026-11-13T16:14:44+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimgFBVV95cUxQaTUwcDE5WEpzb1dmRl9CZmp1d2ozRjZBbTJyUTBxSGdVS1lpYVh2ZFlLTFgxOXZUOFRQQzFjdmRPYzhOUVAxaVExckNaUmZ3dWxaV1dGcVNCZlQtMnBWUWRNeG1DR011clJTVVBMV2NpMjF2cVlRVndNclh3WHZGaWhQZ3dabHRyUDdoOXhRRVZFUzlkRFFxU1V3?oc=5)
-- **摘要：** 可信来源发布一则消费消息：The beverage boom is here to stay - Restaurant Dive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Brookfield and KKR vie over $700mn deal for Gulf retailer Eyewa - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-15T05:05:37+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNZm45cDJUeFgxT1F6ZFN5aF9xQVViT3BBZk5vXzRxMnVPRkNYU3MwZ0t0T3pTMHItRFY5Q0tyMVI1VV9GbXVaZlRnQVRTcXJLQ2ZwZzBCbUhRdkhpdjJBWlNSYlF2VVc3cFMwUFdPVUZYMFNjdFZMcVY5eHhMRjZoS3JvMkY?oc=5)
+- **摘要：** 据《金融时报》报道，Brookfield与KKR正就海湾地区零售商Eyewa约七亿美元的交易展开竞争。该交易涉及零售资产的并购与资本配置，对相关消费与企业估值具有参考意义。候选信息仅说明两家机构竞逐及交易规模，未交代交易结构、最终买方、估值依据、Eyewa经营与财务数据，也未说明是否已达成排他性安排或完成交割，这些细节仍不清楚。
 
-### 2. 消费：Expo tours - NRF: Retail's Big Show（可信来源）
+### 2. 美联邦航空局局长称航空紊乱将持续至周日深夜
 
-- **原标题：** Expo tours - NRF: Retail's Big Show
-- **来源：** NRF: Retail's Big Show
-- **发布时间：** 2026-11-14T03:42:20+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiUEFVX3lxTFB2RVhKYTRTY2tsVVVRYjZCTkJOYWxHdVdrREhwVEh1eC1VOER3MEtScDZOZm14WVoycTdiQW42Q0JwSXFZbXBmMk1IclRiRmow?oc=5)
-- **摘要：** 可信来源发布一则消费消息：Expo tours - NRF: Retail's Big Show。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** US air travel disruptions to persist until late on Sunday, FAA head says - CNA
+- **来源：** CNA
+- **发布时间：** 2026-11-14T18:02:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiogFBVV95cUxPcVJrVkZSRXFaWEhiYnVQcnJ0VUZpSWhUVjBVLWl3a1NIU0kzZWFuR0t6TDhuTUpTV184NWhXUllUOTFCZnZyanVzY0RrdERoRDcyeGpQekFXaUJwcWY4OVlsVEs3LVRKWEc5ck1SeTFNVS1CU1QzMzNPeWY1V0p5bnJBWXBlMTlqZ25yYWg5VzRTdzZFY04wcUN4d2hJaU9sUnc?oc=5)
+- **摘要：** 据CNA报道，美国联邦航空局局长表示，美国航空出行紊乱状况预计将持续至周日深夜。该情况直接影响旅客出行安排与航空运行秩序，对消费与交通服务具有现实影响。候选信息仅说明紊乱持续时段与表态来源，未交代紊乱的成因、波及机场与航班数量、延误或取消规模，也未说明政府应对措施及恢复正常的确切时点，这些细节仍不清楚。
 
-### 3. 消费：Starbucks brings extra personalization, delivery t...（可信来源）
+### 3. 中国首部AI电影遇冷，无演员无剧组无票房
 
-- **原标题：** Starbucks brings extra personalization, delivery to app - Restaurant Dive
-- **来源：** Restaurant Dive
-- **发布时间：** 2026-11-13T19:25:33+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikgFBVV95cUxNSWx1ejJJTy1ZZ3B4RXgxOVdpMlFQdGdxUmc1amF2UlgwSGlTNGs3dHdVTFU2SVFQQXNQX2phY0h0eWRISHlNLTRLUTFZVVFrdGgxbnREQmUyQ2UyTDh6bldsdWJfMTkwWW44c0FYanNXd3BKSENObzVNWjhIeHFfYUdtUmVJZ2N5aWFaQW5Vb1NFdw?oc=5)
-- **摘要：** 可信来源发布一则消费消息：Starbucks brings extra personalization, delivery to app - Restaurant Dive。该条目规则评分为 8.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** No actors, no crew, no ticket sales: why China’s first AI feature film bombed - South China Morning Post
+- **来源：** South China Morning Post
+- **发布时间：** 2026-11-15T05:00:06+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0wFBVV95cUxNX3hPd1dvOWRWX3J2NklEeUhNdVBvclJRdEh3VTAzYkJrN1RuZHpHT3IteVViNDZfSDdWTWh0V01kcEl1QjhjRHZIdk5VNG50STdTZUVIY0xBU3ZZYkJLTFNqTVdrdmwzVE5ydkdyOU5ISXEydHFmY0VVbmhva3djV2dsbEhFandoY25neVZuaHQ3Q09mSmkxVmtfTG9sRjJhaEVHQnBfVXpFOG9KbVdXZUVfekwwRDlyY0F2N3d5Xy1IcXBuZW5WNExxUDRMbVlsR1RB?oc=5)
+- **摘要：** 据《南华早报》报道，中国首部AI长片上映后表现不佳，片中无演员、无剧组，也未产生票房销售。该案例涉及AI生成内容在电影消费市场的接受度，对相关商业模式具有参考意义。候选信息仅提供标题所示的这些情况，未说明影片名称、上映日期、制作成本、发行方、观影人次及具体亏损金额，也未交代失败原因的进一步分析，这些细节仍不清楚。
 
 ## Cloud Infra Engineering Top 3
 
-### 1. Cloud Infra Engineering：ASIC ambition - Data Center Dynamics（可信来源）
+### 1. Airsys投资数字锅炉初创企业ThermAI
 
-- **原标题：** ASIC ambition - Data Center Dynamics
+- **原标题：** Airsys invests in digital boiler startup ThermAI - Data Center Dynamics
 - **来源：** Data Center Dynamics
-- **发布时间：** 2026-11-13T17:06:11+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNVNBa1NFblVkUG8wLXY5MmRBckc2YV9uRU55emVNeE03c0dlMWlMOVAtTmVnbjZIV3VpQWxsM3pHekxUakl4UEo1b1RMcHpNQ2tFMjVpUVE5ck5qZFlGRXU0ZHlPenhUcVp4XzUzZy1jWG1mSXpQMUFnb0lrTFk3Y3FZOGhGUFdFMFZF?oc=5)
-- **摘要：** 可信来源发布一则Cloud Infra Engineering消息：ASIC ambition - Data Center Dynamics。该条目规则评分为 11.0，检测到 2 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. Cloud Infra Engineering：Amazon Threat Intelligence observes threat actors ...（可信来源）
-
-- **原标题：** Amazon Threat Intelligence observes threat actors running cybercrime campaigns with ARTEX AI agents - Amazon Web Services (AWS)
-- **来源：** Amazon Web Services (AWS)
-- **发布时间：** 2026-11-13T20:26:42+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1AFBVV95cUxQME01UzVZbGlaOHczRl94ZE1sVmdtM1FfRjI5ZHdYWHNHaWFyMkMtT1EtN0tZYzhvUXp4aFpmSFpnZDhETUFfcjVUMHNmYlItdWpnQU1xeERfbDIxMW5PV3RFTXRnRXZxYTRFTDNnN21mai1zNkJQaTNSQXRPencxY1FLOHUwQmlXZWtQME5ONVQ3RTYxYzZmSDQxdFhBa1d3U2JhTmZMTDVHY1hlcHNBeUVZSERkTUFjOUxBZkNLQksyLWxsN3NmdEhfRFZpODhCaVU4OQ?oc=5)
-- **摘要：** 可信来源发布一则Cloud Infra Engineering消息：Amazon Threat Intelligence observes threat actors running cybercrime campaigns with ARTEX AI agents - Amazon Web Services (AWS)。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 C…
-
-### 3. Cloud Infra Engineering：Kitesurf is now open source - Cloudflare Blog（可信来源）
-
-- **原标题：** Kitesurf is now open source - Cloudflare Blog
-- **来源：** Cloudflare Blog
-- **发布时间：** 2026-11-13T20:20:43+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1zQ1VPdXUyT0gwTHNlb1RBM0pCVmNad3hLMWdTUnFzdFpGNFAzZm1VOTIyZUU2SHJvT09MRlY3WE5PMnFaLTNiNVJnVXgySzdUNnUxcF9Jd0JwUTR4RGc?oc=5)
-- **摘要：** 可信来源发布一则Cloud Infra Engineering消息：Kitesurf is now open source - Cloudflare Blog。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **发布时间：** 2026-11-15T11:07:14+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMilwFBVV95cUxQVmlKQVQ0SUdfeUxuMVBFbGdIVFpZdFZRY0puQkEya0tWLXNvV05UaThLdE91eHotS19ELVdzUjVUWGJqOWJHanRTRXhVTnplN0VpSS1maThpcXdQQnRydjNSandjeXBlV091dE1QTkthdkRPeG0weUJxREJwclFfeEZONVlzU0lxRFVpTUstQXJzUkc5U3BF?oc=5)
+- **摘要：** 据Data Center Dynamics报道，Airsys对数字锅炉初创企业ThermAI进行了投资。该消息由数据中心行业专业媒体披露，属于基础设施相关领域的初创投资动态，对云基础设施产业具有参考意义。候选信息仅说明投资方、被投方及后者数字锅炉定位，未披露投资金额、股权比例、交易时间与资金用途，也未说明双方技术合作内容与后续产品计划，这些细节仍不清楚。
 
 ## AI 前沿 Top 3
 
-### 1. AI 前沿：Shield helps technicians hand off legacy portal wo...（可信来源）
+### 1. OpenAI称合规API成本数据出现延迟
 
-- **原标题：** Shield helps technicians hand off legacy portal work with OpenAI - OpenAI
+- **原标题：** Delayed Costs Data in the Compliance API - OpenAI
 - **来源：** OpenAI
-- **发布时间：** 2026-11-14T00:20:12+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5MT19HREQ2ak94bEpPT0hvWi1MdWlYUlRVRzE5bXRYR0FrZktvM2dTNjBPcHFKbVR4VnlITUNEUXhBUFdKZFN2Vkc5cUJzUC10ZWo4X3hISWh0YWpaeWt6SXR3?oc=5)
-- **摘要：** 可信来源发布一则AI 前沿消息：Shield helps technicians hand off legacy portal work with OpenAI - OpenAI。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 2. AI 前沿：Building strong safety evaluations - Anthropic（可信来源）
-
-- **原标题：** Building strong safety evaluations - Anthropic
-- **来源：** Anthropic
-- **发布时间：** 2026-11-13T18:06:18+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMieEFVX3lxTE5WQ1RoMWFsN1VyVjdlam5YZkZ4M1I1SUNjeWExWm1OcHR5MlRpRmtwU2NIT0dSQUhXSjlfb2hrZGhHYlVRUjUtUzBtRzRZUUZhcE9PNERJekdzNW1PUWhOd0s5MjBRXzVFdnFWZlJ5c0VSak5RZ3lUaA?oc=5)
-- **摘要：** 可信来源发布一则AI 前沿消息：Building strong safety evaluations - Anthropic。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-### 3. AI 前沿：When One GPU Isn’t Enough: Serving GLM-5.3 Across ...（可信来源）
-
-- **原标题：** When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM | NVIDIA Technical Blog - NVIDIA Developer
-- **来源：** NVIDIA Developer
-- **发布时间：** 2026-11-13T17:12:14+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitwFBVV95cUxPdUR2MEJKSkpVY3dOMlNYdjREYWdMdXRqXzkyakN2QmQxcVJ2YWxMcEhYdjV2ZmswcXBsbEdwX0F5c0dGOVIxZlNfOHE4Z1hRODI4akNUSTVrWUpLUXlTWFFQeUxneW8tY05sZHpuWHJFNHFQME9haWxobFFkczVVTFAxRnJZbEREZE9idTlSTE9vVGpudVhaXzdDdlZvMG9McU5Ka0pLMHpXVnl6cjRBUzRoY1VPY00?oc=5)
-- **摘要：** 可信来源发布一则AI 前沿消息：When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM | NVIDIA Technical Blog - NVIDIA Developer。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与…
+- **发布时间：** 2026-11-15T00:00:05+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMib0FVX3lxTE1WSWlkVnVzS1FfZmt0Skg1VkxpRWljejREUXZOdnFTMzlfdkxvQmlpVFJBX2ZxMXZKbHNaX2RYQ1JKT01RY3FzN2JFOFFTQnRISEtUYS1pRlQtc0JVZzEzT0c0OXlzWnNSbVJqb2gwRQ?oc=5)
+- **摘要：** 据OpenAI官方公告，其合规API中的成本数据出现延迟。该消息属于第一方来源发布的产品与数据状态通告，对依赖该接口进行成本核对与合规报送的使用方具有参考意义。候选信息仅提供标题所示的数据延迟这一情况，未说明延迟的时间范围、涉及账户或地区、成因、预计恢复时间，也未提及是否影响计费准确性与补救措施，这些细节仍不清楚。
 
 ## 国家新闻
 
 ### 新加坡 Top 3
 
-#### 1. 新加坡：Slow-travel blueprint: Singapore retirees stayed i...（可信来源）
+#### 1. 新加坡金融科技节探讨全球金融体系重塑
 
-- **原标题：** Slow-travel blueprint: Singapore retirees stayed in eight cities so far in 2026 on $4,000 a month - The Straits Times
-- **来源：** The Straits Times
-- **发布时间：** 2026-11-13T23:55:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixwFBVV95cUxPd25jLXRaVXFCXy1sZ05GVEY2YUZRN3h0Q0RuTkhiWlJTYVFhUU8zYlh4RGE1Q0xfUGoxWDQxMGItQ043TWtHdmQ0NlRmYk5RR0oxR0Q5NzBZTzV5MzJVenUxcWFoeGo4enJ2eU5VazQ0dGVsYzU5bkdVUjlVbks5bmZYYXpXX3JuY3JqRjVlaEtiTmlNdk9xS2U1RHgzSlllWmZYbktYQUFKblNPZHNXSE44eVFqVjk5NTJ2ZWRydFowSjBDMHN3?oc=5)
-- **摘要：** 可信来源发布一则新加坡消息：Slow-travel blueprint: Singapore retirees stayed in eight cities so far in 2026 on $4,000 a month - The Straits Times。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其…
+- **原标题：** Singapore FinTech Festival 2026 Explores Rewiring of Global Finance - Monetary Authority of Singapore
+- **来源：** Monetary Authority of Singapore
+- **发布时间：** 2026-11-15T08:11:21+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxNdUZPVGlJdEd1UWZmRHdGcWROMFlRdmRQaTZ4NUk0YnIwMURjOUk2WHNHM05TT05JRy1ldlBFaEhkMjF3STA3U0NuRlR4ektxTDY4SGtwTTVNNThwNEV4SjlHakZGNFFmRGl2d3NndDR1aWJPN2ZBX082SXNHTDk2Vm1iM2ZIZVpnUVZKM256dUx1b1hzcm5nSXNWQlZLYllOTEltX3o5eF84bFJMT1I5Z2xUaWlNZw?oc=5)
+- **摘要：** 据新加坡金融管理局发布的公告，2026年新加坡金融科技节以全球金融体系重塑为探讨主题。该消息由监管机构发布，涉及金融业基础设施与业务模式的讨论方向，对新加坡金融产业与行业结构具有参考意义。候选信息仅提供活动名称与主题，未说明举办日期、参会机构、具体议题、政策发布内容及相关成果，这些细节仍不清楚。
 
 ### 中国 Top 3
 
-#### 1. 中国：China, US discuss tariffs, farm trade ahead of Xi-...（CNBC）
+#### 1. 香港新世界发展公布三十二亿美元供股计划
 
-- **原标题：** China, US discuss tariffs, farm trade ahead of Xi-Trump meeting - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-11-14T08:16:44+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiekFVX3lxTE1SX0FBdkdnb0NoRXdMaWlrZlpyQk1oaEo0bnZSTXJxTDlacFpWTTZldUtrSkg5TGdFcHBxUzFwUlhoOGYtMHh5QUhwbEpFZEtndVhPSEZBNHRRWU1fYndac2VKbXZOWHoyOE1UV3JOcHprWWZFYS1kdS1B0gF_QVVfeXFMT3dWUTRlMEN4SDVQQ3lKWnJlM1AtVHdxakxDNnJ4Wl9QWHdjcURIMndkSzIwdUFyQlVTZXpYdEMxYWoxR0JWaFZBNmYwYm4zYmZfY3NvTDVzb2h3UE4tT18xZmFGd3ZubnVpc1NpLW9IZXBpSTNUVTVoSEIzOTlvMA?oc=5)
-- **摘要：** CNBC发布一则中国消息：China, US discuss tariffs, farm trade ahead of Xi-Trump meeting - CNBC。该条目规则评分为 23.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Hong Kong developer New World unveils $3.2bn rights issue - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-15T15:24:52+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxQZFlCaUpqLU1SN3ZmYjQtbjF1NTRaaWRQYXVOaFNid1NYaUtOaml2RnIzOF9HUUFES3RGQ3dSTVRELWpSbnZ6aE1Odm1pbC1abHNTbW9JeXhXalBJM0J1ZXptdHBfOUw0cFJZMmtqNzhMYTk0a0ljR2tfaVppVHVPV0FFdUo?oc=5)
+- **摘要：** 据《金融时报》报道，香港发展商新世界发展公布规模约三十二亿美元的供股计划。供股直接关系公司资本结构、现金流与股权摊薄，对房企融资与资产估值具有参考意义。候选信息仅说明供股规模与发布方，未交代供股价格、折让幅度、发行比例、募资用途、包销安排及股东反应，也未说明公司负债与资金状况，这些细节仍不清楚。
 
-#### 2. 中国：US-China Board of Trade holds first meeting days b...（可信来源）
+#### 2. 美方矿产举措未动摇中国关键矿产主导地位
 
-- **原标题：** US-China Board of Trade holds first meeting days before Trump-Xi summit - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-13T18:39:05+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcHJnaVVXcVl5Q1FlSmJtNVZnb0s4UlJjRDdmb1BGMENqb1BmQ2dCZkNESm5YRUJiVGFFd2lQY0pxVm5uUUY1RWExZFlzbXRhTktval8xV21mT2liR3dZeHF5ZUJSWXN1RzNneTltMm5iVDZOaXlvNzhVekpLLXp6aGE1NUhDQ2VScmJER2lNTU15UHEwNGR4SGFvMEVoN0doN1hqamVySGJLeTU5aklBTHFvSDJQQWNCMUQw0gG7AUFVX3lxTE9DN1BoT1k0T05IOGMzOWdDQ0F0bG1MSjBLVlRYcGprQlVoUXJ5aVl6ejR5T01MUGpCSkxoRlBWcEpyTGRDSG50RjVqVEFfdEZzVGtFYlNQWkZPaDJ0TC1qQmY2Y2gyU0VkM1lBMEtBZllsSG9mV3VpVVVQazdtLUd0b0JOT08za2QwZlRCOGtfX3VNYlVUM0hRSHUxNzZLWUR3OFNRZGRPcXNWR2t5ZGt5b3c3QldFblRpYjg?oc=5)
-- **摘要：** 可信来源发布一则中国消息：US-China Board of Trade holds first meeting days before Trump-Xi summit - South China Morning Post。该条目规则评分为 19.0，检测到 5 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Trump's minerals push has yet to loosen China's grip ahead of Xi talks - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-15T11:55:31+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixwFBVV95cUxPQmgzajlTc2t4SmdLb1g1X3o1VWhhMlFTWnJ3Sk5sOW9JcDBUU0ZYU0tkX0s4M28za1ZVRGw0S1FlZEJVNXhVRGhwTjI5Um9HRzJxb0lRWk8yeE9pb3ZuQXk3a3F4WU1wNDRHcTQ5SV9jRnpHOHlOOGZBWUliVU16bThPM0R5OElKQk5hXzNGR2pZc3BFYTcxa2IxcVVoLWhNaTJobDR1RHhZa3B1dHotX0hId1NPajBKSjBRa3BZSHUtN2RrV084?oc=5)
+- **摘要：** 据路透社报道，美方推动关键矿产供应的举措至今尚未削弱中国在相关领域的主导地位，相关进展出现在双方高层会晤之前。该报道关系到关键矿产供应链格局与产业分工，对中国相关行业结构及对外经贸具有参考意义。候选信息仅提供标题所示判断，未交代具体政策内容、涉及矿种、时间区间、市场份额与会晤议题，也未说明后续安排，这些细节仍不清楚。
 
-#### 3. 中国：Chinese entities sign deals with Oman in Middle Ea...（可信来源）
+#### 3. 英伟达关联间谍疑云再引AI芯片出口管制关注
 
-- **原标题：** Chinese entities sign deals with Oman in Middle East investment pivot - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-14T07:48:12+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdnNGTzNGY0VCazBXcE03NjRsZXpCMXYzM0YyMnpmSXBiQ2hEN2x3Q2VLVnZsNGRJeTdKa1pNa0FrY3p5ZEw0aDc5WWhCRGd5MUs0OTBJaEJOVldyaEM0UWE5Nm5QcE92NTlETnNhT0NxalhLRUh5UDQ3TzhNb2NxaTNfa0JrNkwyS3ZhTEJQUWUydXF0TDhLNXZzOWczc1JmczcxVmlNWkhaM3l5d0pZZUxsU190MUM0TXIwLTAtWnFHZVpraFRvT2dPTFhocnNzcjVzOUQ1Y9IB1wFBVV95cUxQWS1XVG11TGxLX1Zkb0NWNVBSRmt0RFJDVjhZRnA2aFlDQndSU3JuRWFHc0xkcVVBOHY1LU1yWjlGT1Iwd1FDdjN5VVFrNmQ5WURGLVU3WlY0bUVyb2V2Q1RydG12N2hWbEZHb3o0UlZQLTcyamgxdF9SREhMY1V5SE4tUnlEcURERWszN0NmSlBZZTlXMEhhVTZuOUNnSkpsVEpQUGdrb0JOdWVtdGpsS21MRmZLUkJibEdvb3RTdjAxQ2p2aUgwZV9naGEtLXEwRjRuYXFRaw?oc=5)
-- **摘要：** 可信来源发布一则中国消息：Chinese entities sign deals with Oman in Middle East investment pivot - South China Morning Post。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says
+- **来源：** BBC Business
+- **发布时间：** 2026-11-15T14:56:21+00:00
+- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss)
+- **摘要：** 据英国广播公司商业报道，Megaspeed表示，一名与英伟达前高管有关联、被怀疑从事涉华间谍活动的人员已于2025年离职；相关事件引发外界对先进AI芯片是否在美国限制下流入中国的疑问。该报道涉及出口管制与半导体产业监管，对行业结构具有参考意义。候选信息未说明涉事人员身份、具体证据、芯片型号与数量，也未交代调查进展与监管结论，这些细节仍不清楚。
 
 ### 美国 Top 3
 
-#### 1. 美国：Treasury Sanctions Guatemalan Drug Trafficking Org...（可信来源）
+#### 1. 美国FSIS就含饼干即食肉制品发布李斯特菌污染公共卫生警报
 
-- **原标题：** Treasury Sanctions Guatemalan Drug Trafficking Organizations Supporting Mexican Narco-Terrorist Cartels - U.S. Department of the Treasury (.gov)
-- **来源：** U.S. Department of the Treasury (.gov)
-- **发布时间：** 2026-11-13T17:00:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5NUHY1UVVtcU5BQW54U1B6LThDZC01czluRHcwLUtzdWtzZ1FCQlQ1eWZhZU9KUGNRbUp1UDU3dGszZWxTVnBWdm5fYWZPRzI1YUlKUU9LV3hWMlQyMF9xaEN3?oc=5)
-- **摘要：** 可信来源发布一则美国消息：Treasury Sanctions Guatemalan Drug Trafficking Organizations Supporting Mexican Narco-Terrorist Cartels - U.S. Department of the Treasury (.gov)。该条目规则评分为 13.0，检测到 1 条同事件候选报道。当前未能调用 Codex…
-
-#### 2. 美国：Oil Crops Outlook: November 2026 - USDA (.gov)（可信来源）
-
-- **原标题：** Oil Crops Outlook: November 2026 - USDA (.gov)
-- **来源：** USDA (.gov)
-- **发布时间：** 2026-11-13T21:21:28+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiV0FVX3lxTE9xdGhaTVhheG1mVGlVdC1lRmlIaENRMzVZaE1nZDhQbnBoYmxDSkdhM1p6MWxPT2ZHNjR1QTBRdUN5OTAxUGxEWUdaOXlhNWFrYjY1Zk15OA?oc=5)
-- **摘要：** 可信来源发布一则美国消息：Oil Crops Outlook: November 2026 - USDA (.gov)。该条目规则评分为 21.0，检测到 4 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
-
-#### 3. 美国：How Canadian stocks could be big winners of U.S. m...（CNBC）
-
-- **原标题：** How Canadian stocks could be big winners of U.S. midterms - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-11-14T14:11:48+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiekFVX3lxTE1PNW5TV3hXaF9mVF9CeTktVGZDOU04OGx3c1U4TFAwVW5Nd1dmbHBJRFJaWEpWQTJjOE9vZWJhSGd1djEyWFdxNWpPcGVKTG1ocXdFSW44TGo5QWk0OXQ2UXY3a0hYSXd5NTk0dHZ5UEhlOWhlZmtiNGpR?oc=5)
-- **摘要：** CNBC发布一则美国消息：How Canadian stocks could be big winners of U.S. midterms - CNBC。该条目规则评分为 10.0，检测到 1 条同事件候选报道。当前未能调用 Codex 生成具体中文摘要，事件内容与市场影响请通过原文及其他可信来源进一步核实。
+- **原标题：** FSIS Issues Public Health Alert for Ready-to-Eat Meat Products Containing Biscuits Recalled Due to Possible Listeria Contamination - USDA Food Safety and Inspection Service (.gov)
+- **来源：** USDA Food Safety and Inspection Service (.gov)
+- **发布时间：** 2026-11-14T19:18:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWWRvRU1Wc2JmTzNNWG03SUg3VFUwdGZFbEg2TFlET0cxb0I3MWZSWnN1UFVLNnItd1p5MkVmNkxCY0R2M2ZZbnRsQm9vSUNsUW81eVdzNHc2NWduaWJfbnpyNkc0T0xFdmQzMXVQUGl2VmFTbXBpUUV3TjVQNTRDelVQMFNGVjZuX2JZMXF0TVE0TXRYaklXRjJEVHlDbUwwMWVnTDNBV1JuanlNZ09EbkNlUzByYVNiSDVVSkFDZFhhcHM?oc=5)
+- **摘要：** 据美国农业部食品安全检验局发布的公告，该机构针对含饼干的即食肉制品发布公共卫生警报，相关产品因可能存在李斯特菌污染而被召回。该消息属于监管机构第一方发布的食品安全通告，对食品生产企业与消费安全具有参考意义。候选信息仅说明警报与召回缘由，未交代涉事企业、产品名称与批次、销售范围、召回数量、是否出现病例及检测细节，这些细节仍不清楚。
