@@ -1,16 +1,24 @@
-# 每日专业 Topic 新闻：2026-11-14
+# 每日专业 Topic 新闻：2026-11-15
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 中美举行首次贸易理事会会议，讨论关税及农产品贸易
+### 1. 中国日报探讨中国创新如何带动亚太共享增长
 
-- **原标题：** China, US discuss tariffs, farm trade at first trade council meeting - China Daily
+- **原标题：** How Chinese innovation drives shared growth from Shenzhen to Asia-Pacific - China Daily
 - **来源：** China Daily
-- **发布时间：** 2026-11-14T08:07:19+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTFBKN251S1BpVWwwZTFqdXJOS1h0d3ctdzgtTlZLZURzOE9zX1BCNElSLU5VSTJEcGhSRDlwSENhYWRBajhkRHVsdWltRTdROHRFZW0zbHhubHRJVlJCblV4b0JsSFJaZDN1Nmk4bzlZbHN6RjJwLVBwbFJwOW81UQ?oc=5)
-- **摘要：** 据中国日报11月14日报道，中国与美国举行首次贸易理事会会议，会上讨论了关税与农产品贸易议题。可获信息仅涉及会议举行及议题范围，未说明双方参与层级、具体关税水平、所涉农产品品类、是否取得成果或达成共识，也未提及后续磋商时间表，这些细节目前均不明确，有待后续官方信息确认。
+- **发布时间：** 2026-11-15T08:22:36+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE81UjZVLW5YOFZBUm9laVNWWERLaGRrRVctN0tJSDZZTGpWX3VTZnNoMDhtdGQ0TnZLMkR4T1B1endjM0RFUVpIUHc5WkVJMHk2azlrS0VmbFpBRGktM3E4WGp2a0ZycWwxUWdWT0tCblp5dWJ3LXhxbVdXTV9DZw?oc=5)
+- **摘要：** 据《中国日报》2026年11月15日报道，文章以中国创新如何从深圳延伸至亚太并带动共享增长为主题。候选信息仅提供标题、来源与时间，未包含具体政策、经济数据、企业案例、合作机制或可量化结果，因此创新对区域增长的实际贡献规模、传导路径及宏观影响均无法确认，仍需更多公开事实支撑。
+
+### 2. 韩国学者称中韩合作助推亚太增长
+
+- **原标题：** China-S. Korea cooperation offers impetus for Asia-Pacific growth, says S. Korean scholar - China Daily Global Edition
+- **来源：** China Daily Global Edition
+- **发布时间：** 2026-11-15T07:50:21+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxNWGQwTXJvUl9UbUlFUzdnOWw1VEFqbGxsWWtOY3Zlb1RfVGxKN05UdGpWb3IwOVJfSDFKbjROaGNSZ0lBdGVFNTg0SnpUZXRPdnRFZDJxOVZHb2k3c01fanZ3YmtCbTVybm0xeE8xa3ljWFVENHFOeExHTzV5eEdPa0NR?oc=5)
+- **摘要：** 据《中国日报》全球版2026年11月15日报道，一名韩国学者表示中韩合作可为亚太增长提供动力。候选信息仅给出该表述、来源与时间，未提供学者姓名、所属机构、合作具体内容、涉及的政策或经济数据，因此合作对区域增长的实际规模、作用机制及可验证影响尚不明确，需以更多公开资料确认。
 
 ## 航运 Top 3
 
@@ -48,22 +56,36 @@
 
 ### 中国 Top 3
 
-#### 1. JD拟通过收购Ceconomy拓展欧洲市场
+#### 1. 中国日报聚焦深圳至亚太共享增长
 
-- **原标题：** JD eyes Europe with Ceconomy acquisition - China Daily Global Edition
+- **原标题：** How Chinese innovation drives shared growth from Shenzhen to Asia-Pacific - China Daily
+- **来源：** China Daily
+- **发布时间：** 2026-11-15T08:22:36+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifkFVX3lxTE81UjZVLW5YOFZBUm9laVNWWERLaGRrRVctN0tJSDZZTGpWX3VTZnNoMDhtdGQ0TnZLMkR4T1B1endjM0RFUVpIUHc5WkVJMHk2azlrS0VmbFpBRGktM3E4WGp2a0ZycWwxUWdWT0tCblp5dWJ3LXhxbVdXTV9DZw?oc=5)
+- **摘要：** 据《中国日报》2026年11月15日报道，相关文章以中国创新从深圳延伸至亚太并带动共享增长为主题。候选信息仅有标题、来源与时间，未提供具体政策、产业数据、企业案例、投资规模或可量化结果，因此创新对区域经济增长、行业结构及资本流动的实际影响尚无法确认，相关判断仍需更多公开事实支撑。
+
+#### 2. 中国美妆企业在香港表现亮眼
+
+- **原标题：** Chinese beauty firms shine in HK - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-11-14T00:38:59+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxNR25YekI3SDdIdFIxUFFpbTJZQ2VyZW1sV0RjVlpkWXJfZ2MtUmlRR08zMDdOLUxiWTNpSE9hb2c5ZU1feDluZXp4VnB0WkZLUGtkc0JGaTFLUWxfcnBTUy0xOFdMUDZVT2tIN3Voa20xOGttbkQwczJScDhEVHo3cmhR?oc=5)
-- **摘要：** 据中国日报全球版11月14日报道，JD有意通过收购Ceconomy拓展欧洲市场。可获信息仅涉及这一意向及所涉收购标的，未说明交易金额、收购比例、是否签署协议或完成交割、监管审批进展、Ceconomy业务范围，以及此举对JD现金流出、资本开支与欧洲业务布局的具体影响，相关细节目前均不明确，需以后续公司公告或官方披露为准。
+- **发布时间：** 2026-11-15T00:37:52+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxQQnp6cVozNnF6T3BYSUR6eUxBSFhYbzBoMlRNYk9NZ01ZNVNUaF9Xb2M1Y3lyRGVEZVE4alBoWk1SQjBkY196SlF3TkRxRnMtam5wTGtZQl9rYkxUZjdjRUFxN2lNVU1TUWRCNmw0MDJ4Rkk2N2RYc19sSzJBN3lHZTdB?oc=5)
+- **摘要：** 据《中国日报》全球版2026年11月15日报道，中国美妆企业在香港表现亮眼。候选信息仅提供该标题、来源与时间，未列出具体企业名称、活动背景、销售或盈利数据、市场份额及资金流向，也未说明其在港的业务性质，因此对行业结构、企业盈利、现金流、资本配置或资产估值的实际影响均无法确认，需补充公开资料核实。
 
-#### 2. 周小川称养老金具备支持科技创新的潜力
+#### 3. 资深监管人士称中国创新吸引全球投资
 
-- **原标题：** Zhou Xiaochuan highlights pension funds' potential to support tech innovation - China Daily Global Edition
+- **原标题：** China's innovation gains to draw more global investment, veteran regulator says - China Daily Global Edition
 - **来源：** China Daily Global Edition
-- **发布时间：** 2026-11-14T13:47:32+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxNOEtCdkJsWjRlUGZ0eVNSb2xMbVNVZHZZdktCd0Z4SV8tUVFQMnBrb2xfd3JEelV4ZWxldlVMSWgxX3ZpdmtIWWgzeU1FemxTUFJMaUVEdlVTalFXMGxiWDZKbTdRcFppZ1hHcExnWFNaTkFiNnFXNk80R0taWGZ3X2xn?oc=5)
-- **摘要：** 据中国日报全球版11月14日报道，周小川指出养老金具备支持科技创新的潜力。可获信息仅包含这一表述，未说明其发言的具体场合、所指养老金的类别与规模、拟通过何种机制或工具投向科技创新，也未提及是否有配套政策、监管安排或时间表，亦未说明对资本市场、资产估值与长期资金配置的具体影响，上述细节目前均不明确，有待后续公开信息确认。
+- **发布时间：** 2026-11-15T13:47:14+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiggFBVV95cUxOcGt6bl8xVUoweXlfWV9ab2wtQlU1Tkh1cV93NG11bnlSekMxTHZNQTA2T2VGTVh6SWQ0VHk3M2hVd0RvYWJsR2J1QlQ1Vmx4QTZPQzk2dmtpSEdPc0Vjc3E5MXZudXQyNlUzcEIyZGctZTJ4RUJrODRlNFlHdDlBWVFn?oc=5)
+- **摘要：** 据《中国日报》全球版2026年11月15日报道，一名资深监管人士表示，中国创新成果将吸引更多全球投资。候选信息未给出该人士姓名、任职机构、表述场合、具体创新领域、投资规模、时间表或政策细节，因此新增全球投资的主体、金额、流向及对经济增长、资本配置和资产估值的实际影响尚无法确认，相关细节仍需更多公开信息确认。
 
 ### 美国 Top 3
 
-当日候选新闻不足，未选出符合条件的报道。
+#### 1. UMAY前十大重仓股占比100.0001%，第一大重仓股为Vanguard S&P 500 ETF
+
+- **原标题：** UMAY前十大重仓股占比100.0001%，第一大重仓股为Vanguard S&P 500 ETF - 新浪财经
+- **来源：** 新浪财经
+- **发布时间：** 2026-11-14T23:25:34+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxPa2xtQkFjWlJ5NGZ4R0FVQl9FeTV3RmhPaHo2UjRSMWR3MFpQQnlBRzd3bjVERXVZZS0wV3dzQXNxTTZybkpzdFZjSW9aUWRBRmRHUXdzdFg2OThjN2I3M2dPR01KeW1ROWZjVENsMHlGLXYxRFpCeU8xQXFfbUhXRnROX0FoNldwZ3R3MjZn?oc=5)
+- **摘要：** 据新浪财经2026年11月14日报道，UMAY前十大重仓股占比为100.0001%，第一大重仓股为Vanguard S&P 500 ETF。候选信息未说明该占比超过100%的原因、披露口径、持仓规模、其余持仓明细及资金流向，也未给出对美股市场、资本配置或资产估值的具体影响；相关背景与后续变化仍需更多公开信息确认。
