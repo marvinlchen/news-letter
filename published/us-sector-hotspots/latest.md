@@ -1,328 +1,367 @@
-# 美股板块热点分析 — 2026-11-13
+# 美股板块热点分析 — 2026-11-16
 
-**生成时间：** 2026-11-14 07:05<br>
-**美股口径：** 最近一个美股交易日（2026-11-13）的公开ETF日线代理，覆盖 30 个ETF代理；代表成分股为每个代理ETF的固定代表持仓池；计划在美股收盘后约3小时生成<br>
-**数据质量：** 覆盖板块 35 个；候选新闻证据 131 条；入选证据 20 条；弱证据待复核 20 个；代表股行情 210 条；市场背景 8 项
+**生成时间：** 2026-11-17 07:16<br>
+**美股口径：** 最近一个美股交易日（2026-11-16）的公开ETF日线代理，覆盖 30 个ETF代理；代表成分股为每个代理ETF的固定代表持仓池；计划在美股收盘后约3小时生成<br>
+**数据质量：** 覆盖板块 35 个；候选新闻证据 102 条；入选证据 31 条；弱证据待复核 5 个；代表股行情 210 条；市场背景 8 项
 
 ---
 
 ## 总体主线
 
-当日美股整体避险回落，标普跌0.36%、纳指跌1.20%领跌、波动率升3.21%、美元走强、中期美债价格微跌，资金由科技成长转向油服、食品、保险、银行等防御与价值板块；多数热点为成分股全涨或单一领涨股拉动的行情结构，候选新闻以泛泛荐股、行情页与个股业绩为主，强因果证据有限，弱势端半导体、电信、铜矿、大麻、区块链呈普跌，以下区分行情事实、候选证据与推断
+当日美股全线避险回落：标普、纳指与小盘股齐跌且纳指领跌，波动率指数飙升近两成，显示风险偏好明显收缩；除医疗提供商、航空、保险、运输等少数防御或低位板块小幅收涨外，成长科技、半导体、周期资源与高贝塔主题普遍下挫，铜矿、半导体、白银铀矿与区块链跌幅居前；背景上原油大跌、黄金小幅回落、美元微升、中期美债价格基本平稳；多数板块缺少对应板块级可靠新闻，涨跌以大盘普跌与板块轮动的行情结构为主，须区分行情事实、候选新闻与推断，不宜包装成强因果。
 
 ## 美股市场背景
 
 | 指标 | 代码 | 数据日 | 数值 | 日变动 | 观察含义 |
 |---|---|---|---:|---:|---|
-| 标普500 | SPY | 2026-11-13 | 754.37 | -0.36% | 大盘风险偏好 |
-| 纳指100 | QQQ | 2026-11-13 | 679.89 | -1.20% | 成长/科技风险偏好 |
-| 小盘股 | IWM | 2026-11-13 | 277.54 | -0.32% | 风险广度 |
-| VIX | ^VIX | 2026-11-13 | 19.30 | +3.21% | 波动率 |
-| 中期美债ETF | IEF | 2026-11-13 | 90.04 | -0.19% | 利率变量，价格与收益率反向 |
-| 美元指数代理 | UUP | 2026-11-13 | 29.50 | +0.27% | 美元变量 |
-| 原油代理 | USO | 2026-11-13 | 145.58 | -0.34% | 能源变量 |
-| 黄金代理 | GLD | 2026-11-13 | 355.45 | +0.16% | 避险/实际利率变量 |
+| 标普500 | SPY | 2026-11-16 | 739.95 | -1.91% | 大盘风险偏好 |
+| 纳指100 | QQQ | 2026-11-16 | 661.75 | -2.67% | 成长/科技风险偏好 |
+| 小盘股 | IWM | 2026-11-16 | 272.94 | -1.66% | 风险广度 |
+| VIX | ^VIX | 2026-11-16 | 22.91 | +18.70% | 波动率 |
+| 中期美债ETF | IEF | 2026-11-16 | 90.24 | +0.22% | 利率变量，价格与收益率反向 |
+| 美元指数代理 | UUP | 2026-11-16 | 29.56 | +0.20% | 美元变量 |
+| 原油代理 | USO | 2026-11-16 | 140.03 | -3.81% | 能源变量 |
+| 黄金代理 | GLD | 2026-11-16 | 352.93 | -0.71% | 避险/实际利率变量 |
 
 ## 美股板块热点
 
 | 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨股 | 归因类型 |
 |---:|---|---|---|---:|---:|---:|---|---|---|
-| 1 | 油田服务 | OIH | 2026-11-13 | +1.74% | 17.07万 | 6411.24万美元 | 6涨/0跌 | 领涨 HAL +3.11% | 公司事件 |
-| 2 | 食品饮料 | PBJ | 2026-11-13 | +1.43% | 6412 | 30.91万美元 | 6涨/0跌 | 领涨 KHC +2.57% | 行情结构 |
-| 3 | 电子游戏与电竞 | ESPO | 2026-11-13 | +1.42% | 2.24万 | 233.87万美元 | 3涨/3跌 | 领涨 NTDOY +4.02% | 弱证据待复核 |
-| 4 | 油气开采 | XOP | 2026-11-13 | +0.92% | 207.99万 | 3.84亿美元 | 6涨/0跌 | 领涨 HAL +3.11% | 行情结构 |
-| 5 | 金融科技 | FINX | 2026-11-13 | +0.67% | 5.21万 | 125.58万美元 | 6涨/0跌 | 领涨 FIS +4.16% | 公司事件 |
-| 6 | 保险 | KIE | 2026-11-13 | +0.58% | 61.24万 | 4020.89万美元 | 6涨/0跌 | 领涨 PRU +0.93% | 公司事件 |
-| 7 | 农业 | MOO | 2026-11-13 | +0.55% | 5.66万 | 473.08万美元 | 4涨/2跌 | 领涨 FMC +2.96% | 弱证据待复核 |
-| 8 | 水资源 | PHO | 2026-11-13 | +0.52% | 3.31万 | 253.74万美元 | 6涨/0跌 | 领涨 ECL +1.60% | 公司事件 |
-| 9 | 美国零售 | XRT | 2026-11-13 | +0.42% | 326.78万 | 2.98亿美元 | 5涨/1跌 | 领涨 WMT +1.51% | 供需景气 |
-| 10 | 银行 | KBE | 2026-11-13 | +0.35% | 89.48万 | 5945.74万美元 | 5涨/1跌 | 领涨 BAC +1.01% | 宏观变量 |
-| 11 | 地区银行 | KRE | 2026-11-13 | +0.30% | 755.13万 | 5.49亿美元 | 6涨/0跌 | 领涨 RF +1.23% | 公司事件 |
-| 12 | 房屋建筑 | ITB | 2026-11-13 | +0.26% | 104.18万 | 9794.31万美元 | 4涨/2跌 | 领涨 DHI +0.76% | 弱证据待复核 |
-| 13 | 运输物流 | IYT | 2026-11-13 | +0.23% | 31.47万 | 2634.60万美元 | 3涨/3跌 | 领涨 JBHT +2.28% | 弱证据待复核 |
-| 14 | 医疗器械 | XHE | 2026-11-13 | +0.10% | 7.14万 | 677.42万美元 | 5涨/1跌 | 领涨 MDT +1.85% | 弱证据待复核 |
-| 15 | 房地产信托 | VNQ | 2026-11-13 | +0.03% | 233.36万 | 2.25亿美元 | 2涨/4跌 | 领涨 AMT +0.97% | 弱证据待复核 |
-| 16 | 医疗提供商与服务 | IHF | 2026-11-13 | +0.02% | 47.22万 | 2852.67万美元 | 3涨/3跌 | 领涨 HUM +1.42% | 弱证据待复核 |
-| 17 | 黄金矿商 | GDX | 2026-11-13 | -0.24% | 1123.64万 | 9.17亿美元 | 3涨/3跌 | 领涨 NEM +0.44% | 弱证据待复核 |
-| 18 | 软件 | IGV | 2026-11-13 | -0.26% | 906.14万 | 9.17亿美元 | 5涨/1跌 | 领涨 ADBE +1.90% | 弱证据待复核 |
-| 19 | 制药 | XPH | 2026-11-13 | -0.28% | 5.29万 | 353.76万美元 | 6涨/0跌 | 领涨 BMY +1.78% | 弱证据待复核 |
-| 20 | 航空航天与军工 | ITA | 2026-11-13 | -0.31% | 173.68万 | 1.24亿美元 | 4涨/2跌 | 领涨 TDG +1.19% | 弱证据待复核 |
-| 21 | 云计算 | CLOU | 2026-11-13 | -0.34% | 23.72万 | 625.84万美元 | 0涨/6跌 | 领涨 DDOG -0.16% | 弱证据待复核 |
-| 22 | 生物科技 | IBB | 2026-11-13 | -0.44% | 150.18万 | 3.19亿美元 | 3涨/3跌 | 领涨 BIIB +1.17% | 弱证据待复核 |
-| 23 | 清洁能源 | ICLN | 2026-11-13 | -0.57% | 327.27万 | 5174.09万美元 | 1涨/5跌 | 领涨 RUN +1.29% | 弱证据待复核 |
-| 24 | 人工智能与机器人 | BOTZ | 2026-11-13 | -0.60% | 54.03万 | 1687.34万美元 | 0涨/6跌 | 领涨 ASML -0.13% | 行情结构 |
-| 25 | 航空 | JETS | 2026-11-13 | -0.69% | 281.84万 | 8128.28万美元 | 0涨/6跌 | 领涨 DAL -0.35% | 政策催化 |
-| 26 | 基建 | PAVE | 2026-11-13 | -0.84% | 95.97万 | 5099.02万美元 | 1涨/5跌 | 领涨 ACM +0.56% | 弱证据待复核 |
-| 27 | 互联网与数字媒体 | FDN | 2026-11-13 | -0.99% | 11.34万 | 3055.77万美元 | 2涨/4跌 | 领涨 META +2.90% | 弱证据待复核 |
-| 28 | 锂与电池 | LIT | 2026-11-13 | -1.13% | 15.94万 | 936.59万美元 | 1涨/5跌 | 领涨 FMC +2.96% | 供需景气 |
-| 29 | 白银矿商 | SIL | 2026-11-13 | -1.17% | 80.50万 | 5937.51万美元 | 1涨/5跌 | 领涨 SSRM +0.63% | 弱证据待复核 |
-| 30 | 网络安全 | CIBR | 2026-11-13 | -1.47% | 156.58万 | 1.49亿美元 | 2涨/4跌 | 领涨 OKTA +0.18% | 弱证据待复核 |
+| 1 | 医疗提供商与服务 | IHF | 2026-11-16 | +1.16% | 68.36万 | 4177.69万美元 | 5涨/1跌 | 领涨 ELV +3.86% | 行情结构 |
+| 2 | 航空 | JETS | 2026-11-16 | +0.62% | 251.60万 | 7301.40万美元 | 5涨/1跌 | 领涨 LUV +3.34% | 供需景气 |
+| 3 | 保险 | KIE | 2026-11-16 | +0.61% | 73.39万 | 4848.16万美元 | 2涨/4跌 | 领涨 ALL +1.04% | 弱证据待复核 |
+| 4 | 运输物流 | IYT | 2026-11-16 | +0.32% | 85.94万 | 7216.92万美元 | 3涨/3跌 | 领涨 FDX +1.08% | 供需景气 |
+| 5 | 房地产信托 | VNQ | 2026-11-16 | -0.25% | 264.55万 | 2.55亿美元 | 2涨/4跌 | 领涨 PSA +0.34% | 行情结构 |
+| 6 | 水资源 | PHO | 2026-11-16 | -0.38% | 4.31万 | 328.69万美元 | 3涨/3跌 | 领涨 XYL +1.86% | 行情结构 |
+| 7 | 食品饮料 | PBJ | 2026-11-16 | -0.49% | 8574 | 41.13万美元 | 4涨/1跌 | 领涨 CAG +2.92% | 资金交易 |
+| 8 | 房屋建筑 | ITB | 2026-11-16 | -0.63% | 126.93万 | 1.19亿美元 | 1涨/5跌 | 领涨 LEN +0.22% | 行情结构 |
+| 9 | 银行 | KBE | 2026-11-16 | -0.74% | 166.85万 | 1.10亿美元 | 0涨/6跌 | 领涨 USB -0.92% | 宏观变量 |
+| 10 | 地区银行 | KRE | 2026-11-16 | -0.76% | 1614.30万 | 11.65亿美元 | 0涨/6跌 | 领涨 MTB -0.61% | 行情结构 |
+| 11 | 大麻 | MSOS | 2026-11-16 | -0.81% | 564.01万 | 2081.19万美元 | 1涨/5跌 | 领涨 CURLF +3.18% | 弱证据待复核 |
+| 12 | 农业 | MOO | 2026-11-16 | -1.14% | 7.63万 | 630.28万美元 | 2涨/4跌 | 领涨 TSN +8.72% | 弱证据待复核 |
+| 13 | 电子游戏与电竞 | ESPO | 2026-11-16 | -1.23% | 1.45万 | 149.90万美元 | 1涨/5跌 | 领涨 NTDOY +0.73% | 行情结构 |
+| 14 | 医疗器械 | XHE | 2026-11-16 | -1.37% | 4.40万 | 411.46万美元 | 2涨/4跌 | 领涨 SYK +0.35% | 弱证据待复核 |
+| 15 | 云计算 | CLOU | 2026-11-16 | -1.44% | 48.24万 | 1254.18万美元 | 0涨/6跌 | 领涨 ZS -0.85% | 行情结构 |
+| 16 | 美国零售 | XRT | 2026-11-16 | -1.60% | 523.97万 | 4.69亿美元 | 2涨/4跌 | 领涨 COST +0.68% | 行情结构 |
+| 17 | 电信与无线 | IYZ | 2026-11-16 | -1.72% | 73.05万 | 2800.06万美元 | 3涨/3跌 | 领涨 T +0.81% | 行情结构 |
+| 18 | 基建 | PAVE | 2026-11-16 | -1.90% | 238.21万 | 1.24亿美元 | 1涨/5跌 | 领涨 ACM +2.84% | 行情结构 |
+| 19 | 网络安全 | CIBR | 2026-11-16 | -1.90% | 125.05万 | 1.17亿美元 | 0涨/6跌 | 领涨 ZS -0.85% | 行情结构 |
+| 20 | 生物科技 | IBB | 2026-11-16 | -2.13% | 228.93万 | 4.76亿美元 | 0涨/6跌 | 领涨 VRTX -0.15% | 政策催化 |
+| 21 | 软件 | IGV | 2026-11-16 | -2.16% | 673.25万 | 6.67亿美元 | 2涨/4跌 | 领涨 ADBE +1.20% | 行情结构 |
+| 22 | 制药 | XPH | 2026-11-16 | -2.20% | 7.86万 | 513.68万美元 | 0涨/6跌 | 领涨 PFE -0.10% | 行情结构 |
+| 23 | 金融科技 | FINX | 2026-11-16 | -2.23% | 6.07万 | 143.08万美元 | 2涨/4跌 | 领涨 V +0.16% | 公司事件 |
+| 24 | 航空航天与军工 | ITA | 2026-11-16 | -2.46% | 201.33万 | 1.40亿美元 | 0涨/6跌 | 领涨 NOC -0.87% | 行情结构 |
+| 25 | 油气开采 | XOP | 2026-11-16 | -2.61% | 201.68万 | 3.63亿美元 | 0涨/6跌 | 领涨 EOG -1.80% | 行情结构 |
+| 26 | 互联网与数字媒体 | FDN | 2026-11-16 | -2.75% | 14.00万 | 3667.62万美元 | 1涨/5跌 | 领涨 TCOM +1.58% | 公司事件 |
+| 27 | 锂与电池 | LIT | 2026-11-16 | -3.27% | 20.56万 | 1168.55万美元 | 1涨/5跌 | 领涨 FMC +0.38% | 行情结构 |
+| 28 | 清洁能源 | ICLN | 2026-11-16 | -3.29% | 454.18万 | 6944.44万美元 | 1涨/5跌 | 领涨 NEE +0.26% | 弱证据待复核 |
+| 29 | 黄金矿商 | GDX | 2026-11-16 | -3.29% | 2586.89万 | 20.42亿美元 | 0涨/6跌 | 领涨 AU -2.23% | 行情结构 |
+| 30 | 太阳能 | TAN | 2026-11-16 | -3.48% | 203.48万 | 8179.93万美元 | 0涨/6跌 | 领涨 SEDG -2.39% | 行情结构 |
 
 
-### 油田服务（OIH）
-
-**归因类型：** 公司事件
-
-**原因：** 行情事实为六只成分股全涨、广度一致且板块领涨约1.7%；候选新闻中斯伦贝谢季度盈利超预期与威德福收购油服技术公司为可核实的正向公司事件，但原油当日微跌显示非油价驱动，另有油服就业下滑与卖出评级等偏空材料，归因含推断
-
-**证据：**
-- [Top US Oilfield Services Firm SLB Beats Quarterly Profit Estimates - EnergyNow.com](https://news.google.com/rss/articles/CBMingFBVV95cUxOOGRtYzlIS2xuT1N3NUlBZlUtTEx1TW5hTWh1SjViY2ZoZ0xsRTY3ZExIZkEtZG9TRS1ZV3J0QkE0Uk9ZaEJrR2wzUmxVZk5sY0NhTE9xWmE4Wmk4UXIxaVBIZWNjN2FiaGdtZTRpNDRSUFJENDhBRnhZaGtwWGRoTEZuWUlvMm9lV3lTc3pMY1R2SEVGNE9BS1NzNzNQUQ?oc=5) （2026-11-12 23:15）
-- [Weatherford to Acquire Oilfield Tech Firm NCS Multistage - EnergyNow.com](https://news.google.com/rss/articles/CBMikAFBVV95cUxPQVVEMTd3cHpic3lQRjZ5eXBPY0xpZGQ5VjFTM0tRSWRSMjJRbHBONVk4eTVXX29QSXJjX0YyOEJJUzFVQmZFanZBUDhUWmRzN185T09WY3BGMUdSWkZuVzR6eXdtb2xfbXdSQlI5U0hpMlZ0YU5qdmltTE9hVkI5YjdsbkFOWklmZlNVOWwxYnE?oc=5) （2026-11-13 17:18）
-
-### 食品饮料（PBJ）
+### 医疗提供商与服务（IHF）
 
 **归因类型：** 行情结构
 
-**原因：** 代表股6涨/0跌，领涨 KHC +2.57%，ETF上涨具备较好广度；未识别到更强板块级新闻催化。
-
-### 电子游戏与电竞（ESPO）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股3涨/3跌，领涨 NTDOY +4.02%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 油气开采（XOP）
-
-**归因类型：** 行情结构
-
-**原因：** 代表股6涨/0跌，领涨 HAL +3.11%，ETF上涨具备较好广度；未识别到更强板块级新闻催化。
-
-### 金融科技（FINX）
-
-**归因类型：** 公司事件
-
-**原因：** 行情事实为六只成分股全涨、FIS领涨超4%；纽交所选用某公链开展代币化证券清算是较具体的机构事件候选催化，其余多为泛泛荐股与个股对比，主题情绪与普涨结构亦参与，事件与结果之间含推断
+**原因：** 板块逆势收涨逾1%、成分股5涨1跌且领涨股涨近4%，是避险日防御性资金相对抗跌的普涨广度结构；候选新闻仅为成分股行情页、英国医疗数字化泛资讯与无关加密广告，无板块级可靠催化，推断为防御性轮动。
 
 **证据：**
-- [NYSE selects Avalanche for tokenised securities clearing and settlement - FinTech Futures](https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdG96ZjBBbk50ZWdOUi0wamh6VnV0aHRjaE9XWjJZa2cxZ00wbzNMczJFd3lkYnBJMzlDR29ENU01X0dDSWxnWkpLdEdRNjdCZklRZ3VEVVRzcGZpUlFOREpSZnlsUU5VMEk1TVFCSERnN0hud1hrMXFzenNaYmpxMWN6c1czX3U4MWZOVXlVVml5UUd3T3VOcUpYbEMwdjVRelJvYlB0U3NreEg1eGpFU2RuTFA0NW4w?oc=5) （2026-11-12 14:44）
+- [Centene Corporation (CNC) Stock Price, News, Quote & History - Yahoo! Finance Canada](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5malVwLUxCcllldV81bUtSbE5oNDBNZ1VjT1BMaWFNRmJpWVREZ3RLYmtUa1UzVmZQMHV4OTlrcnVsbFg3eVNmQUxPRXBaaV9u?oc=5) （2026-11-16 14:48）
 
-### 保险（KIE）
-
-**归因类型：** 公司事件
-
-**原因：** 行情事实为六只成分股全涨、保险防御属性明显；候选新闻集中为慕尼黑再保险三季度盈利超预期并上调全年利润目标，构成保险板块业绩层面的公司事件，避险日防御轮动亦提供支撑，属候选证据加推断
-
-**证据：**
-- [Munich Re profit beats consensus as P&C reinsurance drives Q3 result - Investing.com](https://news.google.com/rss/articles/CBMitgFBVV95cUxNWmRPQmdHdVVsOVgxZkNPVjVEX3h2XzdlelhkWHJ6M183VFd6NTd5elJ6RzR5ZE5pakNvVW1vRGFOUl9zakJzbkRTMEFrTzlJbEVwcnNhTEV3MTdwTGgzTmlLZXJpc3FmcVFwdzFZSXp6NVF1SzZ0eE9rMUR4Ujc0aTJoTjZ0UVZwWXpZLUNmeFNZN0xDcWp5azdCWWJ4TEMwWms2TVpzUWVPcHRzTlYzNUZGczg3dw?oc=5) （2026-11-12 08:04）
-- [Munich Re raises profit target as L&H growth offsets P&C softening - Insurance Business](https://news.google.com/rss/articles/CBMi5AFBVV95cUxPNDJzTVd0VjgyMVVrcllRTEh1X1djeEpWRDNqRTBLRXpiVkdsYlJCRU9IQ2E0LVQ0T1Q4UmdRVUpuU0xiemY5N1Z3OHFWRnNGcmRQMS15bkVRN3VWQ1RMWS1kaEdIaE16WGVuckhLNzJHSGRGVkt6dWlRZzN0dnMzMUF0eF9iamhVOEprQXVmTHVVMnZ6aEJDNkYzRHl6RU1GZUE1TTR3NVhhZzk2VEJnOGlMemw3TWlqdEhQTmV6U2dla3Y4ZDNaakU2ZWtsbDBYS1BIQnQwWDhIWVExc0ozQksyVlg?oc=5) （2026-11-12 15:54）
-
-### 农业（MOO）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股4涨/2跌，领涨 FMC +2.96%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 水资源（PHO）
-
-**归因类型：** 公司事件
-
-**原因：** 行情事实为六只成分股全涨、水务防御属性突出；候选业绩新闻称某水务设备商三季度表现为同业最佳，偏正面但属解读类内容，其余多为收息与泛泛荐股，上涨亦含避险轮动结构，证据强度有限
-
-**证据：**
-- [Water infrastructure Q3 earnings: Watts Water Technologies is the best in the biz - TradingView](https://news.google.com/rss/articles/CBMi2AFBVV95cUxONEJESXloVk9tSWNpeHpXWkI5c2NiaHAwRmlvQkZWRTU2WG1MWXpDYi1zVUhpXzdXbmZVbnduY0JjcUFGdHE2Rjg4U3RoTHZEMHFZaHZyaU9sMjNlYXJOU21kZElyVHcwUjRCRjlPc3dQdGs1WGhxVHJsTUswLTI4UllFU3lZS2FWdFVhZDZUODhzU01XTnVtcXpheEViaGRPdkJvN0NFcUJsSGsyRGlFQzlIVExGbklBWkp3Tk9iRXV2dU1TdFlUZEdCV3JHM1QzVS11TXhDbTE?oc=5) （2026-11-13 03:32）
-
-### 美国零售（XRT）
+### 航空（JETS）
 
 **归因类型：** 供需景气
 
-**原因：** 行情事实为五涨一跌、沃尔玛领涨；候选新闻含10月零售销售环比增长0.2%的需求数据与零售股财报超预期预期，属需求侧偏正面的候选证据且为解读类文章而非强因果，其余为泛泛荐股，防御消费轮动亦参与
+**原因：** 板块逆势小幅收涨、成分股5涨1跌，候选新闻指向航班运营恢复正常、廉航服务升级与感恩节出行需求，属出行供需边际改善的推断；但客流略降与大盘普跌限制涨幅，不构成强因果。
 
 **证据：**
-- [How Should Investors Read a 0.2% October Retail Sales Gain for Retail Stocks (NYSEARCA:XRT)? - kalkine.ca](https://news.google.com/rss/articles/CBMiwgFBVV95cUxQc3hyOTNHdUNISGdWT0hoZkNSS2R0enhWUHd5N3l1cW1lTjJFOGh2Zl96M3JiWnZpTDlvT3FiWGF1bTRHczIwdXlfb20xM2p0Y3dvcUtONVhCT1RoNVlFYm1nc0VZbjRrVXVvaW9IVVY5Zy1UVk1zcFExQVdNc0RINzl2TGNvdWNXWnluTHpTZmVnU1ZKQzBITzdITFRldkpyQ3ZfbWVZWTYyZjgyUnU2YTJkTnpxYUFsSlpxbDFJOGRjUQ?oc=5) （2026-11-12 18:16）
-- [Walmart & 3 Retail Stocks With High Probability of an Earnings Beat - Yahoo Finance](https://news.google.com/rss/articles/CBMimAFBVV95cUxPM0FGN3ZJSDdpSE10V01VNFRSa3B1UE5OVUlpdFJxbUxpbXpxOExSSGh6NTNJRU9MNGNfRmNLT0NYcEFRX0NzSG1DcWtPX3VaTk5GbTJEbEVZcV9pR29KSGtjSkNFWFV3d19jQ1gxRm9CZVVaNC1IbXJCMURLMEpvUkN0T2F4Mk5nTkhRYVZtQThqOHdaMVBvZg?oc=5) （2026-11-12 11:27）
+- [Allegiant Travel tops other airline companies in getting flights back to normal (ALGT:NASDAQ) - Seeking Alpha](https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUlpzZ3laU0U3ZDluVXQ2UHpPUG5udTBsbHpYalhVOHBsZFhvUVNReHlINmxHcjFoZzhVbjVDWVZjSDZCd1NwS1FSZVQ0UTVTZWl5SGdOR2NoVjNoSGxoMXVjZ29qNXdMYXFXOFFtcHJjX2lNRDFibWlyZUFRa1RPbFlhaUlVTkZua3hCV2RsQzhQOXZaN2ZGLVlLQWRxd2lwTF9MZXdYRFFTM0d3dU9wSUtzdXFFQU14?oc=5) （2026-11-16 13:33）
+- [AAA: Thanksgiving Travel will be a Little Less Stuffed this Year - AAA](https://news.google.com/rss/articles/CBMilwFBVV95cUxQZ2RMSk15Q3FmcVowQjVfWVB4b08xS0JVQ0pJeVBZRUN2SHoxRk5kUVZtMkstWjFSbjBzd3VVRzdqT1ZCcEFPb2ZwN0l3NWpSTFk5X21IWUQweDZMWTE4eHdlQjVMcmszbVRnNEIyS19uZ2NJSDJWZnBzcnNfNUh4amE0YlJtbFNEXzVVRkF4WHBTb0pvVDh3?oc=5) （2026-11-16 17:35）
+
+### 保险（KIE）
+
+**归因类型：** 弱证据待复核
+
+**原因：** 板块小幅收涨但成分股仅2涨4跌，涨幅主要由单一领涨股拉动、市场广度偏弱；对应板块无可靠新闻证据，推断为避险日资金防御性轮动的结构性表现，待复核。
+
+### 运输物流（IYT）
+
+**归因类型：** 供需景气
+
+**原因：** 板块微涨、成分股涨跌各半，候选新闻提及运输需求回升但基建滞后、联邦快递相对行业领先，推断为需求边际改善与领涨股带动；普跌日相对抗跌，不构成板块级强催化。
+
+**证据：**
+- [Transportation sector sees rising demand, but lagging infrastructure: what’s the way forward? - Techzine Global](https://news.google.com/rss/articles/CBMi2gFBVV95cUxPbVFZVGZYam5EbmxPNF9fSnl1LU9uTzM5VmZfcjVpSWJCdW5rV1BvY0hsaUN4eXZ3blo4ak5GaFBzRzRKcUJWZ3FpUHpIRml2dDh6NFJjeTBxUWp1MkM2V0o0b1hrQUswU1lsbTFLQmFqYVNBeVdvZDEyRUZkY3pEb3VjQkloNk94dzg1MjdETjlxZjJGbWZiOUxWNk5QeHB1aEV1V3c4Y1lOb1lQeTlwc1hfS1RQeV9hdmxOYU9fT3VCdWdkaFFfUDR6T2ZYRkdRVzdUdG5zSThsQQ?oc=5) （2026-11-16 05:30）
+- [What Is Behind FedEx’s Lead Over Its Industry? - Trefis](https://news.google.com/rss/articles/CBMipwFBVV95cUxNTEhmbDdXZGQ2ZEF5RnJQcUNWZXRUYU4xOEh5VEUyb0FuanRiczJZRUJjdHpXXzFvWTB2V25ZQmpjb3FZRlNLanJ5Yk1TTmRJOV9FcDhzYTdlbUpjSlBVMzZ3YWh3ZGkzam43Z19uMHU2N2wxRnBqcUl1ZlNIbWoxbXJaeEEtdmRQeE1pQ0UwdjJKWVRyV2hzd0VBYkxnejhFemJiTThINA?oc=5) （2026-11-16 22:04）
+
+### 房地产信托（VNQ）
+
+**归因类型：** 行情结构
+
+**原因：** 板块基本持平微跌、成分股2涨4跌，候选新闻多为房地产信托月度分红公告、选股清单与个股行情页，均属常规资讯而非板块催化；利率扰动有限下推断为避险日窄幅整理的结构性表现。
+
+**证据：**
+- [Automotive Properties Real Estate Investment Trust (APR-UN.TO) Stock Price, News, Quote & History - Yahoo! Finance Canada](https://news.google.com/rss/articles/CBMiWEFVX3lxTE0tN0dKNWVMcnY0N1oweTg4WVprXzVaZExub3FXV1dySS00VS1YYXI2ak1CbVc3RHFLdDNFTFpJV2h5M2F5c1ZoaEh4ZEJwYm94NzgtOHQ0dHk?oc=5) （2026-11-16 18:32）
+
+### 水资源（PHO）
+
+**归因类型：** 行情结构
+
+**原因：** 板块微跌、成分股3涨3跌，候选新闻为水质监测与检测设备市场长期预测、全氟化合物规则主题研究及选股清单，属行业展望而非当日催化；推断为大盘避险下的窄幅波动结构。
+
+**证据：**
+- [Promising Water Stocks To Follow Now - November 16th - MarketBeat](https://news.google.com/rss/articles/CBMirgFBVV95cUxPaHBzdHJaV25xLVkzcEhXdTl5ODdNb2NJZVZMOHlSQVBGNU95a2dCcWhzRm5sWVh3V1BPY0JIT2k1Wm1lM1c1VFh3ZFp5c3N3bGpPNDNyNWZFbktzZ2stSVR0UTFCc0hYb3lRUkxEalFpQUNycmVMRFo4ZDlCZjB4VlN5YVExMnMxQlVqZEI5cHZsTUFvWUpoalI1LWZDZWlWLXRnRTVNSE42WmljQ3c?oc=5) （2026-11-16 20:21）
+
+### 食品饮料（PBJ）
+
+**归因类型：** 资金交易
+
+**原因：** 板块小跌但明显抗跌、成分股4涨1跌且领涨股涨近3%，候选新闻显示通胀高企下资金转向防御性食品股、投资者重估必需消费品；推断为避险资金流入防御板块，属资金交易而非板块景气反转。
+
+**证据：**
+- [Campbell’s rises as investors seek defensive food stocks - Quiver Quantitative](https://news.google.com/rss/articles/CBMingFBVV95cUxNLVZxVUtVOGNBdzBkdnNWaFZyYnBvUWhXcDA1NFpGUE1QdEcwUDhYdFlHc2d4ek0xNXlfenMzNUlkSUpIdGM5Q0pOa1FEVWhWcUtiZVJJTzRTQmhOaEw5Y1QzMlRVNVFaXzJBY0hQbzNJVDQ4U1p5d1dDcEUta0dhMzdPUDBqQzhadWg0VVNjcXEzaUs5TXpQLVUzRHp5UQ?oc=5) （2026-11-16 21:22）
+- [3 US Consumer Staples Stocks Investors May Revisit As Inflation Stays Above 3% - Simply Wall St](https://news.google.com/rss/articles/CBMi5AFBVV95cUxOQlN4OXFtRkxQSm8xeUdwTERuWUp4RElkeWZOR3k2VGdlSzJySWNBdGZYLWtYdmdndzlXa3UtekRoNml4OEl5OGU2eWwzS1lRREhCVmFRc1hEeWpXN1FsWF9Oc19CbjUtTVp5VFVCSmd3UVFBbm4tV2ppa3lCRTlyWG9HbWtaUHNZdkhUcXpBQWFnQ3NVUjNiaGtJV0xsNmVVeEwteWUyWG5idlBvdTJHVGFfQ1NZRGVrTGVRc2FQSFFwTGNhRVR0c29mZ1VkeTc1cjJuWHhOcXV1WmlHVUxkTlk1NknSAeQBQVVfeXFMTkJTeDlxbUZMUEpvMXlHcExEbllKeERJZHlmTkd5NlRnZUsyckljQXRmWC1rWHZnZ3c5V2t1LXpEaDZpeDhJeThlNnlsM0tZUURIQlZhUXNYRHlqVzdRbFhfTnNfQm41LU1aeVRVQkpnd1FRQW5uLVdqaWt5QkU5clhvR21rWlBzWXZIVHF6QUFhZ0NzVVIzYmhrSVdMbDZlVXhMLXllMlhuYnZQb3UyR1RhX0NTWURla0xlUXNhUEhRcExjYUVUdHNvZmdVZHk3NXIyblh4TnF1dVppR1VMZE5ZNTZJ?oc=5) （2026-11-15 02:33）
+
+### 房屋建筑（ITB）
+
+**归因类型：** 行情结构
+
+**原因：** 板块小跌、成分股仅1涨5跌呈普跌结构，候选新闻为住宅建筑商首席执行官任命、技能培训与建商评奖，均属公司与行业软性资讯、无板块级利空催化；推断受按揭利率预期与大盘避险拖累，属结构性回落。
+
+**证据：**
+- [Villa Names Homebuilding and Real Estate Veteran David Messenger CEO - Quantisnow](https://news.google.com/rss/articles/CBMiqwFBVV95cUxNbzVxU291aUpveVV0NkdmMFFVN29pdkxURElUTmtJeEdHSU1udUlsbWp0clMxVmJxaHZvZFhoMWtjV3oxRlp2OER5N2FQVW5YQ1NFZkljc2pmXzlsU0l3ckxUYmRiOXl4WkdLV3A4WVEweGg3NURTVi01M2tUYnJtOVduUk5yMWpLZUs1QmpfdG9DbnQyUmxFLUh1cXZFdi0xM0VfVGd4cUZ1c28?oc=5) （2026-11-16 13:02）
 
 ### 银行（KBE）
 
 **归因类型：** 宏观变量
 
-**原因：** 行情事实为五涨一跌、美国银行领涨；候选新闻聚焦抵押贷款利率预测与当前利率水平，结合中期美债价格微跌、收益率小幅上行与美元走强的宏观背景，利率变量对银行净息差偏支撑，但缺乏板块级事件，属宏观推断
+**原因：** 板块小跌且成分股全线下跌，候选新闻集中在按揭与利率路径展望，中期美债价格当日微升、收益率小幅回落；推断为利率预期扰动与大盘避险共同压制银行股，属宏观变量而非板块级利空。
 
 **证据：**
-- [Mortgage Rates Forecast For 2026: Experts Predict Whether Interest Rates Will Drop - Forbes](https://news.google.com/rss/articles/CBMif0FVX3lxTE9kMlJHRWhRY2owbnpsZWhWOHVVZFR1ZmM3NzhqTUVEVnpHR2xlMHp0QnR2eXFwV2wzQ2FMbXZTN3lTLUJ5OHgxdnk0S3Z2Q3hEQ2pEYW9xcWhrRktVS3B0RXB0NkdnM0hPMzBReG5neWZ1TTdvVWs4bWgxdWFNUkk?oc=5) （2026-11-13 12:38）
-- [Today's Current Mortgage Rates: November 13, 2026 - MONEY](https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rdmpsVUwtTnZNcjlIbUQ5a0oyZDlUSV9IV1ZYQy0yOHViOEttMVlsTXlfUVEwcXBibVcycFRJZTY2WEhfM2Voby0xbVpIVUtMZ05j?oc=5) （2026-11-13 12:37）
+- [Mortgage Rates Forecast For 2026: Experts Predict Whether Interest Rates Will Drop - Forbes](https://news.google.com/rss/articles/CBMif0FVX3lxTE9kMlJHRWhRY2owbnpsZWhWOHVVZFR1ZmM3NzhqTUVEVnpHR2xlMHp0QnR2eXFwV2wzQ2FMbXZTN3lTLUJ5OHgxdnk0S3Z2Q3hEQ2pEYW9xcWhrRktVS3B0RXB0NkdnM0hPMzBReG5neWZ1TTdvVWs4bWgxdWFNUkk?oc=5) （2026-11-16 12:34）
 
 ### 地区银行（KRE）
 
-**归因类型：** 公司事件
+**归因类型：** 行情结构
 
-**原因：** 行情事实为六只成分股全涨、地区银行普涨；候选新闻含季度现金分红派发与股票回购计划等股东回报类公司事件，另有短端利率上行利好地区银行的解读，均属个股层面，板块普涨亦含广度结构
+**原因：** 板块跌近1%、成分股0涨6跌且成交显著放大，候选新闻为区域银行二季度回顾、基金比较、个股并购与股息讨论，均非当日板块级催化；推断为大盘避险下的资金撤离与普跌行情结构。
 
 **证据：**
-- [United Community Banks, Inc. Announces Quarterly Cash Dividend on Common Stock - Yahoo Finance](https://news.google.com/rss/articles/CBMiowFBVV95cUxPLTd1dEl2aHZKUGZ5eXJLX2JzZTBCakppYUhMUi0tOVpPdE5lWk5BdjNJczZDeVBtZ0xVSVZoc1lqUDF0cFczdjM4OUNIU1NsNTllUmFJaDZOYjkzTkNRRmlrSEFwVTMwSnhaT01xM1RaMXZDX05VeTRndW9YUWZBcklUQ3NZM19HSVpKSzVHMzl3R01iLXVyY3BMMFBFdlpXelJv?oc=5) （2026-11-12 21:15）
-- [West Coast Community Bancorp Announces Share Repurchase Program - Yahoo Finance](https://news.google.com/rss/articles/CBMipgFBVV95cUxPN2FJNnlJRm1YUHRjeWRtZ3ZqRDVsVjFhcXl2a3gtWTNPbnB6LUF6VFNIVF9ybk9KR094ajVrZzVRTHRMa21nQUJrX2NPeGVHNmJuTTZtc3VhbExKYUt4VGloMVhNSmRZU290NjFreFVRQi1QZ21MTm03OFlJa3J2SjBTU2JHOHRfaHZtdi1wMjBGemNWeGItUTZOVnNHeEVWaXN0Y3RB?oc=5) （2026-11-13 21:05）
+- [Regional banks stocks Q2 in review: First Bancorp vs peers - TradingView](https://news.google.com/rss/articles/CBMiugFBVV95cUxPZFNfUHVtRjItTVd3c0N2Z2tjQ3JxUnNELUZ2SGphYnNQTGRpNHkwVDEzTDJuN1VIWEVyZUg0aXRFUVp5U1FRbDkyenlrLVVISFgtMF9CeVRaemdjS3R2clVNZVVfTHNuYmlRMkxHelZRNkJDc3lQWWxxMEk1bmpoRWxGRlZDR3NtQ0hEQURCckhiOE9yb0xTR3Nwb0tNNWxhREpycEl5b2NaTUVpdzUxTlNlRUxuNGRSLXc?oc=5) （2026-11-16 03:32）
 
-### 房屋建筑（ITB）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股4涨/2跌，领涨 DHI +0.76%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 运输物流（IYT）
+### 大麻（MSOS）
 
 **归因类型：** 弱证据待复核
 
-**原因：** 代表股3涨/3跌，领涨 JBHT +2.28%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 板块小跌、成分股1涨5跌，成交偏低，属高贝塔主题随大盘避险回落；对应板块无可靠新闻证据，推断为资金谨慎与普跌拖累，待复核。
+
+### 农业（MOO）
+
+**归因类型：** 弱证据待复核
+
+**原因：** 板块跌逾1%、成分股2涨4跌，但领涨股泰森食品大涨近9%显示个别公司事件主导、板块广度偏弱；对应板块无可靠新闻证据，推断为单一领涨股拉动掩盖普跌，待复核。
+
+### 电子游戏与电竞（ESPO）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌逾1%、成分股仅1涨5跌呈普跌结构，领涨股任天堂微涨；候选新闻为电子游戏电竞基金产品介绍、集换式卡牌与游艺设备市场预测，均属主题资讯而非板块级利空；推断为高贝塔成长主题随大盘避险回落。
+
+**证据：**
+- [VanEck Video Gaming and Esports ETF (ASX:ESPO) Connects Games Graphics and Streaming - Kalkine](https://news.google.com/rss/articles/CBMivAFBVV95cUxNNHBwaDlNcXBaSHhJa1NRMkJNTDNUanRtQzhjUmRKNHJvOGdLTTE0Y0p5R1hjbGNVOVNraVhZdjI4bXoxRkdKcU0xMV9BT1ZiUEpmY3FSRWZtby1yN0QyS1k2clI0X21JRmhXZTRhUXdSWTZMTWR0M3gxTEV6cmVZczhsdWMweFF5cVFxTHdQWmhEbmxPbkk2WW9BNUMtcy1ucHFSVm1yZmZDdmd4dWg2ZmRUQzZPQW5rVy1NMQ?oc=5) （2026-11-16 06:22）
 
 ### 医疗器械（XHE）
 
 **归因类型：** 弱证据待复核
 
-**原因：** 代表股5涨/1跌，领涨 MDT +1.85%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 房地产信托（VNQ）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 行情事实为基本收平且两涨四跌、广度偏弱；候选新闻含中期选举利好房地产信托的解读与多只加拿大房地产信托个股聚焦，均无法构成可靠因果，涨跌幅度接近噪声、行情结构亦难定方向，暂列弱证据待复核
-
-### 医疗提供商与服务（IHF）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 行情事实为几乎收平、三涨三跌广度分化；候选新闻含三季度业绩基准对比、并购追踪及2028年医保支付上限的政策隐忧，正反信息混杂且无法解释近乎零的涨幅，暂列弱证据待复核
-
-### 黄金矿商（GDX）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股3涨/3跌，领涨 NEM +0.44%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 软件（IGV）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股5涨/1跌，领涨 ADBE +1.90%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 制药（XPH）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股6涨/0跌，领涨 BMY +1.78%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 航空航天与军工（ITA）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股4涨/2跌，领涨 TDG +1.19%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 板块跌近1.4%、成分股2涨4跌，属大盘避险普跌下的跟随回落，医疗器械相对医疗提供商更偏成长属性；对应板块无可靠新闻证据，推断为板块轮动拖累，待复核。
 
 ### 云计算（CLOU）
 
-**归因类型：** 弱证据待复核
+**归因类型：** 行情结构
 
-**原因：** 代表股0涨/6跌，领涨 DDOG -0.16%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 板块跌近1.5%、成分股0涨6跌全线普跌，与云计算成长股在避险日承压一致；候选新闻为云计算选股页、个股行情页与人工智能数据中心主题，无板块级利空；推断为风险偏好收缩与板块轮动的结构性回落。
+
+**证据：**
+- [Cloud Computing Stocks: Find Top Cloud Stocks And Track Industry Trends - Investor's Business Daily](https://news.google.com/rss/articles/CBMie0FVX3lxTE12Yjh0N3dEWUZIMmV3X3I0Wm4tb3hUVk4wQ1RFQi0ySm9HbXJBQjRaNDdPN2hqNEFXZzNRWkplUFNOQWh6WmVfLUVzS2FFWVh0eXJ6dXRkVzFtUWcxMFBkSHhWb1VaUGkwcjBTclJaU1JDcHB1eUJrLTFJMA?oc=5) （2026-11-16 18:57）
+
+### 美国零售（XRT）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌1.6%、成分股2涨4跌，候选新闻为零售选股清单、好市多相对领先、塔吉特与沃尔玛财报前比较及加拿大电商配送合作，均属个股与资讯层面；推断为消费板块随大盘避险与资金轮动回落，无板块级利空。
+
+**证据：**
+- [Retail Stocks To Keep An Eye On - November 16th - MarketBeat](https://news.google.com/rss/articles/CBMipwFBVV95cUxObGw3NnhyeVY4d3RhVWg0elgtbGdLWW5RczVJOU94VDh2NXlLRkprWTFCMHdGOVhwV2ZFMjRTT011STBjd1ItZHBRMU1Gb1Z4TVlVb3pFekt3ZFNDZUZ3YlVuUGFQOVozY1dDZEpPbFVfVjJsMnhLVGNRdVJxdG5UQ2xnREE4eE8wRlFDLVBXNTRQcXIyU0hLUlk3RG44cHY3WlJFYUxTdw?oc=5) （2026-11-16 19:18）
+
+### 电信与无线（IYZ）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌近1.7%、成分股3涨3跌但基金明显回落，领涨股美国电话电报微涨；候选新闻为电信选股清单、个股行情页与光纤宽带业务展望，无板块级催化；推断为普跌行情结构，防御属性有限。
+
+**证据：**
+- [Promising Telecom Stocks To Research - November 16th - MarketBeat](https://news.google.com/rss/articles/CBMirgFBVV95cUxNUzlsak8tZWNqLWtTelhtQ2hjNXVrS1NIWWIyaG53VHA3YWJyanQ1SWd1dkVQQWh6NU5vWnlINDhVVDc2LWtjMHkxMUhCLXM3TWU4RE5YU3lQWENUY1RYZVpiTjZFdVk0STZpU3VOS1RoRjdnek0wU3V1UFExcFctYmFXT19SZVFjRlAwRkZBMkJGdTU0WE55RVN2RmxjcGctNlBNWndMWjVNa2U1NGc?oc=5) （2026-11-16 19:16）
+
+### 基建（PAVE）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌1.9%、成分股1涨5跌呈普跌结构，领涨股艾康姆涨近3%但难掩广度偏弱；候选新闻为建材市场预测、工程并购、水泥码头项目与个股评级，均属公司与行业资讯；推断为高贝塔周期板块随大盘避险与资金流出回落。
+
+**证据：**
+- [Construction Adhesives and Sealants Market To 2035: Green Retrofits and Infrastructure Drive Growth - News and Statistics - IndexBox](https://news.google.com/rss/articles/CBMi5wFBVV95cUxOel9CUnVfYVBobDc0N0tPQzNTLXZKdHFCM3g4d1gtLXl5Z3pJUjlIMkYxekJsQVdZU0JROW9McDdfTXhfVUppcGNONjBGaWpMVlNHazdmZGVhcnNDQ053cVRqY0k3dHQwUjU4b1k0dHQtYXRwT29sMkFZQjdGMHNiU3lDdGlveDBlSWpBTFJVTnZ5Qm1NS0tHRzVtUWI5VEdxX0ZDbEU3a1B2eHk0U0NWVjVjZGFWNGhWamZ6dkplV3RjLVdvZ0x0SGhDRERwYzVFV1ZkWUFvXzI2UFphejlyZkJzMzloYTg?oc=5) （2026-11-16 18:26）
+
+### 网络安全（CIBR）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌1.9%、成分股0涨6跌全线普跌；候选新闻为网络安全基金行情页、选股清单、基金资料与零售商网络事件，无板块级利空；推断为成长科技主题随大盘避险普跌、资金撤离的行情结构。
+
+**证据：**
+- [First Trust NASDAQ Cybersecurity ETF (CIBR) Stock Price Today: $93.8 - Pluang](https://news.google.com/rss/articles/CBMiWkFVX3lxTE52NWZJeVQtN0lNSlVyMXF1ODZfc1dtSXY2cEljNzJiaVJLSmZRbXVVZnFqa3puY1NSMzRtbFViQ3BMMkxpSjJ4NF9IcmRsTnlLYUtnbXZoYUlWZw?oc=5) （2026-11-16 13:00）
 
 ### 生物科技（IBB）
 
-**归因类型：** 弱证据待复核
+**归因类型：** 政策催化
 
-**原因：** 代表股3涨/3跌，领涨 BIIB +1.17%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 板块跌逾2%、成分股全线下跌，候选新闻为美国药监局拒绝一款中国抗癌药、并进入关键药物审评周，监管趋严构成板块级利空催化；叠加当日大盘避险普跌，推断为政策扰动与风险偏好收缩共同拖累。
+
+**证据：**
+- [FDA rejects cancer drug invented in China in blow to Beijing’s biotech sector - Financial Times](https://news.google.com/rss/articles/CBMihAFBVV95cUxQSF81czliZUJkMnRRbzNpUENZS2NDTm5QNzd5UkI3Qk10R1hmcnIyNnJfQVY1SkJlZkJnc2RMUzhobDh5VTI4cUs2NjIwN3FPdVhHSV9taHRhaDBJWjlNZUFHLThTd01vZGZzVklhLVV4NlFOTlZZWjEzN2s4RW1peDF5N0w?oc=5) （2026-11-16 08:56）
+- [Biotech ETFs Face Crucial FDA Week as Drug Catalysts Loom - State Street SPDR S&P Biotech ETF (ARCA:XBI) - Benzinga](https://news.google.com/rss/articles/CBMi2AFBVV95cUxOcjBmMVgtTXhTZGxlYnJ1bUxwM19CSlB4TEtvY2VYX3pWZi1TU2tQZmw0YmpOcnpORTY0QTFhczBsamNhQkx6aURkbzA3bjNUak5Kc3ZnTHowRmdkOTBHNFVfNVNHLXMxRDZJNEZyMzFTUFFxcnJZVDN2NmRSV21DYmVEdDJhamVjd2lrLWVQNGo1cE9rOEg0TC1mam55WHg5X1BfYllhQ3EtVm5UbjRZTUY2aTEwUGpRX3FTWVMtd3FkMWNMd0Y5dUV1TmhmcFdnNEpheVlWVm8?oc=5) （2026-11-16 14:23）
+
+### 软件（IGV）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌逾2%、成分股2涨4跌，候选新闻提到软件行业整体疲软、个别新股逆势突破及云计算与数据中心选股资讯，无板块级利空；推断为成长软件在避险日估值承压与板块轮动回落。
+
+**证据：**
+- [Stock Of The Day Navan Breaks Out, Defies Software Industry Slump - Investor's Business Daily](https://news.google.com/rss/articles/CBMivwFBVV95cUxPMFJkWmk2TEJkOTY1ZGZod1RlSGZuVVNTdGltVURib0RIVnVueFBHZGVfQ3FjZXFmeWtTanpqNHZyY2dPd1lkSmlEaWo4UEtJYzZSbVczNGo5bW1sZTlDeHd0bTk3YTV3RmFHclE0ak1NSVFjWF9rZ2RSNnRFeWNEY19fXzNfQmFuWjdKWERSc0d1aWFKQzV1bW95Z29EMHNLeDdiWlpYbW52QXAxSnFuczBELVk4MXFyVVM1ZHZMUQ?oc=5) （2026-11-16 18:24）
+
+### 制药（XPH）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌2.2%、成分股0涨6跌全线普跌，领涨股辉瑞仅微跌；候选新闻均为医疗与制药基金比较、选股研究，无板块级催化或利空；与同日生物科技监管扰动及大盘避险一致，推断为板块轮动与资金撤离的普跌结构。
+
+**证据：**
+- [Which Healthcare ETF Is the Better Buy: State Street’s Pharma Fund XPH or iShares’ Biotech Fund IBB? - The Motley Fool](https://news.google.com/rss/articles/CBMi3AFBVV95cUxNall2aW1CUi04YlU5bHIwbExiekpRbHI5MWw3TWJtMDVPQndoZndkS0lRaXNLZWZ0My15R1pwNHptdnZ3bUZGMjIyQ3VVNDJ5ZGlrdEVRMXUzdnR5d1lOMnZTN0tSSWpyZ0IzZkRFa1RmTUd0ODVENTJCZDJ0Q3VxYXg0eXVLMGl1Yi1OczF4LURNNjJ6dUZybnppcHNOandpS2J2NnBURkQ2NjBDRFBXN25jUmlLMVlmU1IyMWp6SHVBS2F4R3dwS0h0UTZXOG1FNXZsUmhmUmRzWXNs?oc=5) （2026-11-15 18:19）
+
+### 金融科技（FINX）
+
+**归因类型：** 公司事件
+
+**原因：** 板块跌逾2%、成分股2涨4跌，候选新闻讨论英伟达相关争议可能威胁金融业人工智能行情，另有数字支付与区块链周报；推断为人工智能主题情绪降温与事件扰动拖累金融科技估值，叠加成长股资金撤离。
+
+**证据：**
+- [How the Nvidia scandal threatens financial services’ AI boom - American Banker](https://news.google.com/rss/articles/CBMipwFBVV95cUxQcktDTmNJR3pwQVJVN1dTWjhrQjR5NTFoUVVNbFB4cjlCUWJkNXA5d1pEaTFUS0pVU3BGR0Z1b3BJempHRTlDOTlOMmtSTDNOeURxYkI2UXVZeTRDNHJjZ1FLSzdZazU4SlhuSHZYNU1TMlF3cHFKREhrc3d5M2l4MzNlMDFPUGVySTlHTDd1a05yNnBEVnJXZnNTZTRKQ1p5ZGZxWjFUVQ?oc=5) （2026-11-16 21:13）
+
+### 航空航天与军工（ITA）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌近2.5%、成分股0涨6跌全线普跌；候选新闻为欧洲防务股估值、基金价格动态与仓位、全球军费主题及航空租赁基金买盘，多为海外与主题资讯、无美国板块级利空；推断为前期涨幅后的获利回吐与大盘避险资金流出。
+
+**证据：**
+- [(ITA) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily](https://news.google.com/rss/articles/CBMiywFBVV95cUxNSG85V3JYakJqQjZFVzlMTEd0dWJESE12UEtMMkN4bGhHRnVvRkRSbDBDY2N1dHRBNlplXzhsX1hJa3pLN29nOXZUaGpaWHZtNFhOQk5wWmh1SF8yVGZTNTBkbkxwUXR5TDlwUHU1LTd4MW5yT3dFUjZ6TEJlblpfbWhENWRBa3BUQlNQdFNjR0QzSG92cFVDMkFkQlF4aU9CekR4Tmhxd3VRRXM5VzhYYlN2TkpmaThYc2VzN3JNNFNHZjNDS3NHTHczSQ?oc=5) （2026-11-16 09:44）
+
+### 油气开采（XOP）
+
+**归因类型：** 行情结构
+
+**原因：** 代表股0涨/6跌，板块下跌具备较好广度，领涨 EOG -1.80%仅为相对抗跌/逆势个股；未识别到更强板块级新闻催化。
+
+### 互联网与数字媒体（FDN）
+
+**归因类型：** 公司事件
+
+**原因：** 板块跌近2.8%、成分股1涨5跌，候选新闻明确提到斯奈普因科技板块抛售及青少年社交媒体成瘾诉讼风险下挫；推断为法律诉讼利空与成长股资金撤离叠加，板块其余个股随大盘普跌。
+
+**证据：**
+- [Stock Market Today, Nov. 16: Snap Falls Amid Tech Sector Sell-Off and Ongoing Youth Social Media Addiction Lawsuit Exposure - The Motley Fool](https://news.google.com/rss/articles/CBMijgJBVV95cUxPT21zLXFFczdsTEJzZXFrQnFPZkc3YV9mY2x5Z1pwTnBPeXhlbXV5S1BQYXFRYkdpMDhhRWttY3hTOVl1YWxWWFZVVFhrakVnT1d5NnJjaW5pTE5jME40U2c5RzN4RTY2SXo3aWNnczlDZjBWVWlsNjdjRnlBWW5YQVh6Ynl2VTkyeWdwbzFJWUdORl92OHB3VVd1c2lKZ2RvbEFBYTEybS1oV0ZLcDM2M2daRGpQTEpyNEVzeGhYb0NxYTdUNGhNdzJCQjJidHRWbDJTdFU4T1Z0NmdzbC0wLUpBekVwYXhiS0xjc2ppeDg4bkVyQ3A3d1lQQk5ZZDJxZmN6OUdLNVZ1QkFERlE?oc=5) （2026-11-16 22:14）
+
+### 锂与电池（LIT）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌逾3%、成分股1涨5跌呈普跌结构，仅领涨股小幅收涨；候选新闻为固态电池科普、电极设备与回收市场预测及龙头个股行情页，无板块级利空；推断为高贝塔锂电主题随大盘避险与资金撤离回落。
+
+**证据：**
+- [What Is A Solid-State Battery, And Why Is Everyone Talking About It? - Motor1.com](https://news.google.com/rss/articles/CBMikAFBVV95cUxQQW45VlFsZmxrcU9vRVZ4UzZfVldTY3B5Y0p4bEI3Wm5ub2lSX0pPM1pweFcxV21FYUtfdzdiUUh2OVhiZnNZTnZTUlpnNERWZG1rSjJKUjJtZEpDTzdXNC1Ib1FRMnFDRkZFdEw2Z3RRVFVrYk51Y2xsbkRMVnNqNkkwbmxHVlpsSnlTQ0Z1cFI?oc=5) （2026-11-16 22:10）
 
 ### 清洁能源（ICLN）
 
 **归因类型：** 弱证据待复核
 
-**原因：** 代表股1涨/5跌，领涨 RUN +1.29%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 板块跌近3.3%、成分股1涨5跌，对应板块无候选新闻；与清洁能源高贝塔属性、当日大盘避险普跌及商品回落一致，推断受风险偏好收缩与主题资金流出拖累，待复核。
 
-### 人工智能与机器人（BOTZ）
+### 黄金矿商（GDX）
 
 **归因类型：** 行情结构
 
-**原因：** 代表股0涨/6跌，板块下跌具备较好广度，领涨 ASML -0.13%仅为相对抗跌/逆势个股；未识别到更强板块级新闻催化。
+**原因：** 代表股0涨/6跌，板块下跌具备较好广度，领涨 AU -2.23%仅为相对抗跌/逆势个股；未识别到更强板块级新闻催化。
 
-### 航空（JETS）
+### 太阳能（TAN）
 
-**归因类型：** 政策催化
+**归因类型：** 行情结构
 
-**原因：** 行情事实为收跌0.69%且零涨六跌、全面普跌；美国联邦航空管理局因临时通信故障发布全国地面停飞指令是贴合板块的监管运营层面利空，相关报道晚间发布、对盘中时点的覆盖需复核，叠加避险日资金撤离，属候选事件加推断
-
-**证据：**
-- [United Airlines Stock And Other U.S. Airline Picks After The FAA Ground Stop - Simply Wall St](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPbzhoNlNZTEFOaDZfLWFwbzFXcWxGZ3k0UmhhakhLZ2JiTFprZ0l4MnNoX2FKLVk5ajQtM2dERzVCVzYyWVdNdWZXVFAtaGNwQXFCenRXVU85RzhaVWg5VGFUMG9WRm9qaFZnNTM1Q1VHSXVxOU1iQmNSRTFDV0VTOWR4NzlVZFZ3X2Rtc1EtdnBUTDZ3cllaNk1BWkR1bGhzeVByRHFoc2MxcldqZXoxaUZJSDcxUmc5LVRGMUI3aDVvLWQ4Ul9vZjRPMVV3RUsyMlQ4UThPUHJHYVdtakJQdld30gHnAUFVX3lxTFBVSUpvY3gwSnVoV05nbjRXV1JsOHhPX0JYemhEenBRWmwzdS1fNDBzN3hvTWFvWkxhVUt3NE9zMjYyMFhSQm5YQXdtVlBuTk9zdHpnM2lYZjBYOGhLSWc1bzhCU3Y0TGR2Mi15SnVWZjBfRmg5NTVDRGo3RE9oM0l0T3pxM3JDTTQ3OXM0MWV6RkFjeGQyNXlEWC0wWDhNVDAxNlB1QVlPTTVhLXg5LXpYcjNpVHg1eDk1c052NXRhODgxMzdRdndHSGNrY0VsYWVHTjlYOXJNX0VxbUFkT1phZzFhU19WMA?oc=5) （2026-11-13 22:31）
-- [FAA national ground stop due to 'temporary telecommunications outage' (JETS:NYSEARCA) - Seeking Alpha](https://news.google.com/rss/articles/CBMiowFBVV95cUxPX2lTeEh4MGtBSkgxeXNiUmFxUWtIWjNBZ0FYZmxCLWlZdUhxRVJ2UnRzLVhCaDdiR3ZzMmhEWUh2VmJ6LTYtVURuZ2lvSEFTY0t1ekwtWWtzenVrMUQwOW95bWR3Z0JjU1ZMbGxJcXh5S2RSRExrT0RRV25PRHFPSE53QWRyMnQ5TjZJTmhPVzNfQ3h5aVlHcG5EcHM1QWlqa1NF?oc=5) （2026-11-13 21:13）
-
-### 基建（PAVE）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股1涨/5跌，领涨 ACM +0.56%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 互联网与数字媒体（FDN）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股2涨/4跌，领涨 META +2.90%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 锂与电池（LIT）
-
-**归因类型：** 供需景气
-
-**原因：** 行情事实为收跌1.13%且一涨五跌；候选新闻中锂价下跌23%、供给风险持续为贴合板块的供需利空证据，与普跌方向一致，另有电池模组远期需求预测偏多但不改当日主导，领涨FMC实为农化股亦提示结构噪声
-
-**证据：**
-- [Lithium Prices Fall 23% as Supply Risks Keep Market Volatile - CarbonCredits.com](https://news.google.com/rss/articles/CBMihgFBVV95cUxNOXBta2xkZmZoQmlLc0xJM0ZMa1p4bi1sNHZsekJYbERVcUd3RkxKb1U5SjNaVGYwQklpd2pmR0xyQXpTS3NROERhbjZ0VUNMVFcxYTRpZk9BQW5DNjN2TmtfMGM1dnNheDlhelZqc0FZMDBERUk5VThtQ05JTTNfOGFsSERMdw?oc=5) （2026-11-13 17:15）
-
-### 白银矿商（SIL）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股1涨/5跌，领涨 SSRM +0.63%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
-
-### 网络安全（CIBR）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股2涨/4跌，领涨 OKTA +0.18%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 代表股0涨/6跌，板块下跌具备较好广度，领涨 SEDG -2.39%仅为相对抗跌/逆势个股；未识别到更强板块级新闻催化。
 
 ## 美股回落/弱势板块
 
 | 排名 | 板块 | 代理ETF | 数据日 | 涨跌幅 | 成交量 | 成交额(估) | 代表股涨跌 | 领涨股 | 归因类型 |
 |---:|---|---|---|---:|---:|---:|---|---|---|
-| 1 | 大麻 | MSOS | 2026-11-13 | -3.63% | 687.70万 | 2558.23万美元 | 1涨/5跌 | 领涨 CRLBF +2.73% | 政策催化 |
-| 2 | 半导体 | SMH | 2026-11-13 | -2.99% | 1216.32万 | 59.20亿美元 | 0涨/6跌 | 领涨 ASML -0.13% | 公司事件 |
-| 3 | 电信与无线 | IYZ | 2026-11-13 | -2.52% | 190.65万 | 7435.47万美元 | 1涨/4跌 | 领涨 CHTR +4.32% | 弱证据待复核 |
-| 4 | 铜与矿业 | COPX | 2026-11-13 | -2.51% | 335.73万 | 2.32亿美元 | 0涨/6跌 | 领涨 RIO -0.40% | 供需景气 |
-| 5 | 区块链与加密 | BLOK | 2026-11-13 | -1.71% | 19.10万 | 954.05万美元 | 1涨/5跌 | 领涨 XYZ +2.82% | 弱证据待复核 |
+| 1 | 铜与矿业 | COPX | 2026-11-16 | -5.37% | 743.27万 | 4.87亿美元 | 0涨/6跌 | 领涨 RIO -3.50% | 资金交易 |
+| 2 | 半导体 | SMH | 2026-11-16 | -5.11% | 981.91万 | 45.35亿美元 | 0涨/6跌 | 领涨 QCOM -2.29% | 行情结构 |
+| 3 | 白银矿商 | SIL | 2026-11-16 | -4.45% | 124.96万 | 8807.37万美元 | 0涨/6跌 | 领涨 SSRM -3.61% | 行情结构 |
+| 4 | 铀与核电 | URA | 2026-11-16 | -4.40% | 394.12万 | 1.20亿美元 | 0涨/6跌 | 领涨 NXE -4.51% | 行情结构 |
+| 5 | 区块链与加密 | BLOK | 2026-11-16 | -4.10% | 28.39万 | 1359.95万美元 | 0涨/6跌 | 领涨 XYZ -1.92% | 公司事件 |
 
-
-### 大麻（MSOS）
-
-**归因类型：** 政策催化
-
-**原因：** 行情事实为大跌3.63%且一涨五跌、板块领跌；候选新闻含工业大麻禁令第一阶段推进的政策利空，为当日最直接的下跌解释，叠加高波动小盘题材在避险日的资金净流出与获利回吐，另有大麻个股行情与并购臆测但非主因
-
-**证据：**
-- [Cannabis News Today — 13 Nov 2026: Hemp Ban Phase One - Business of Cannabis](https://news.google.com/rss/articles/CBMi3AFBVV95cUxPUUNWYWQ2X3loc3Rta1Fhd1JTb1h3NUxvSnJYcFVjdjhNR1MwOV9KUHNpYURIb1ROMjZtVHZIWmV5eTU3M3lLeXVqUWRxUWd2MGItd2Vya3pqeE5KVXRvdTFmX2cwX1AzanZrampmZTFxRi0zZ24wbS05MUZaVkxPcjJGMzVTRmE4eGNmNk84elloNmdXODJQQzc4VHdLb280OW1LNUZncmQ2d0tPUC1DMXp5SktnZjV5U0hTNV8tVk5COXZNdEZFNVU5UkFVUERWSG04NHVGc0xQZ0Mt?oc=5) （2026-11-13 15:31）
-
-### 半导体（SMH）
-
-**归因类型：** 公司事件
-
-**原因：** 行情事实为大跌2.99%且零涨六跌、成交额近60亿美元居首；候选新闻显示高通财报超预期仍大跌、英伟达管理层震荡等权重个股利空打压人工智能芯片链，叠加纳指跌1.20%的成长避险与资金集中撤离，事件与宏观共同解释
-
-**证据：**
-- [Semiconductor ETFs to Buy as Qualcomm Plunges Despite Q4 Earnings Beat - The Globe and Mail](https://news.google.com/rss/articles/CBMi7AFBVV95cUxOLVNEMkgyN2RDS1hUR2JnMk5RTGhoNkR3SHZpTV9hS1hLRXhkTGlPQ19zY1RvOHJ3SGg4ckpHWTYzVW1sNURNUlBzX0puUEd1cU5rMklKYnVndVJmNXU1ZFNOelZ6MWtQeFJoNllNcjFpcTJVWTg3al9WRlEyM3hqMGZqeTRibTJJamtwYzhwLVpmd3ptWWZfSm15amxNNlhvd1EyVW54bENsQzh1Zkk4XzRDLVUzUE8tVm5oSUUtRVJIVDNvbF9GQW40T0R0M2xTVDJYcG5VbUFBcC14YU4zXzJmcHg3aTNLM0Ftaw?oc=5) （2026-11-13 03:25）
-- [3 AI Infrastructure Chip Stocks Investors May Eye After Nvidia Leadership Shock - Simply Wall St](https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbjk4RWpOMkQzS05XcmRnMGV1bmgzbnBZdlhpZ2NXbE5WNGU1Zkt2T2IxYzZVcXhGc0E0NlR5eWFPS2ZGY1JYTlpqMHRvN1I5czltMlhTblhzUnd0Wm1sVi03NHVBZ0cxOV9sV0xlRVpFR0tJOUVRczhoRE1xbGM5bjk0QzE5djZXQlJYQ0hoUUZ4UDVTM2hhODRNMFhGaFFDZFc4cFloa2xmbmxIb05RQmNLVXVqX1c4TVhVS1ZrenhaNVNTMUJNcUR1MHZEamdMQVlveVNtZnpMak50SVQzV2pFNWpTMlVLbXhv0gHwAUFVX3lxTE1RbXZldndIdDBMd2FwZkNqTXFPeDJuNVlBR0NXVjZzTTZWWVI2TklhRE9LMEtEZWprQkNtVmV3a2g2OEFOcFhUMm1PZ0Vyb3hjRHBRNXhQTExPeE55Wl9QUXAzTkpRQU5xeTROUk43OU42dWRhNTlCMURhQ0JLN05Nc1hXQUNhZFEyZ2ZsRklqb1ItQ29DMkZyRzZvdnhiTlFtZHJNaTNlRjVQa0RsYk9wUjZwNDhJWWFqTjRxTlVITWFNaGJ2SnZUeURWNjBMQW00U3ViTktkV1M3dFdYazF0WXk2TUpfMU45MFlhOEktOA?oc=5) （2026-11-13 22:26）
-
-### 电信与无线（IYZ）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 代表股1涨/4跌，领涨 CHTR +4.32%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
 
 ### 铜与矿业（COPX）
 
-**归因类型：** 供需景气
+**归因类型：** 资金交易
 
-**原因：** 行情事实为大跌2.51%且零涨六跌全面普跌；候选新闻直接解释铜价下跌约1.5%、工业金属集体走弱，属供需与商品价格层面的利空，叠加美元走强压制工业金属这一宏观背景而非板块新闻，板块随商品回落
+**原因：** 板块重挫逾5%、成分股0涨6跌且成交放大，候选新闻明确指向人工智能主题避险情绪下资源股投资者转向现金、矿业股遭抛售，龙头南方铜业当日跌逾5%并有个股归因报道；推断为资金净流出与商品情绪转弱主导，与原油大跌的宏观背景一致。
 
 **证据：**
-- [Why Is Copper Down 1.5% to USD 6.20 a Pound Alongside Other Industrial Metals? - Kalkine](https://news.google.com/rss/articles/CBMitAFBVV95cUxQemFHcmw0LW9Pd2xyRVpkRDdDa0dPc1NZMGpjYlRNZFlkOE5yRTAzQWpBbEJKOEpLenhKVnVNR0NpRjRickh5R0Fwa0U1UW00V1Uxb0paQm95LTUzbEtkQUFpbF9zN09reHZWcWxSVnJndjRUQkVYU0pNdXNkWjI3WUJoWEd4UXhZY0xLRW03UHZWU3hJb3lRZUdSd0VYMTd2NndSZU15LXpBT2J0RHBaM3lsWUc?oc=5) （2026-11-13 12:03）
-- [What Sent Copper Down 1.49% to USD 6.196 a Pound as Industrial Metals Slid? - kalkine.ca](https://news.google.com/rss/articles/CBMipAFBVV95cUxQR3YxUXRZZ1BVS240Y0hDSlQ5UnFDMmZuNFQ3cjhPN0dKRWl2X0lpNFV1VjlGOF9UcVF5ZEdwV193enN6Zlk3cGpOSG1jM2dJWTBxLThCSkxkSllsams2NURrcVo5LVlZZ3RZZW55SGRqRjJaUWc3Y3BRWWc0cEljb1l5NU5oOVk5VUM2cy1zUHZSMVIyVkptS3V0WG9ZT055NTEtdg?oc=5) （2026-11-13 12:09）
+- [Resources investors flee to cash as AI jitters slam mining stocks - AFR](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRzdwQ09uTjRUdUE1anF4b2JQbkhuWW94VllySklUR0s1U1V2Z0xERkRNWEduMTdJUDBlb1U2UlkzQW1kamxSX1RoSTNOSHh4UUQ1Nm0zUmVDYjdXeElmX1NDa0c1RjhLWXI0YnlVSGFRcm9YT0NGS1VUbEVFb2o3MUlTdUlqTVl0S21nUEVPNFIzOXFCaWFZMGl6RHIya2tMUk9XT3dpWVNzRndKTkhsM0VMX3djN2FOX3pjYU1RclhHQQ?oc=5) （2026-11-16 05:00）
+- [Southern Copper Corp Stock (SCCO) Moved Down by 5.19% on Nov 16: Drivers Behind the Movement - TradingKey](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUzRITTNSek5sSnNYRnNHaGd1MTdHcEpyeTJOMFc0LVN1amhCZTNDMU5hWDhQOXFoeUEweFEyRWNXV0hiVWR3STdiUnFqR2wtZGRESjBoY0ozUThNM1p5eUFCWkhuTDd2MkszVHJyclAxdmk0UDVkeTlHQUhhX2lNTkZuM0x3N25GeVFN?oc=5) （2026-11-16 20:15）
+
+### 半导体（SMH）
+
+**归因类型：** 行情结构
+
+**原因：** 板块重挫逾5%、成分股0涨6跌、成交额居前，属科技龙头与人工智能主题在波动率飙升日的集中补跌；候选新闻为半导体基金行情页、期权链、主题评论与美元关联分析，无板块级利空催化；推断为大盘避险普跌、获利回吐与资金撤离的行情结构。
+
+**证据：**
+- [VanEck Semiconductor ETF (SMH) Stock Price, News, Quote & History - Yahoo! Finance Canada](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5sdmFESnNQOTlpU1ZjU2ZLUjNFQmlNYTg5cWVRVWVpMWJfTlc3b3BZd3RNRng1eWtYVnV1SC1TbU5TR1ZFNXQ2N3RnQWlNVDNP?oc=5) （2026-11-16 21:54）
+
+### 白银矿商（SIL）
+
+**归因类型：** 行情结构
+
+**原因：** 代表股0涨/6跌，板块下跌具备较好广度，领涨 SSRM -3.61%仅为相对抗跌/逆势个股；未识别到更强板块级新闻催化。
+
+### 铀与核电（URA）
+
+**归因类型：** 行情结构
+
+**原因：** 板块跌4.4%、成分股0涨6跌全线普跌，而候选新闻反而偏多，涉及美国可靠电力需求增长、卡梅科业绩与核电增长、英国核电股推荐，说明下跌非板块基本面驱动；推断为高贝塔主题在避险日的获利回吐与资金撤离，新闻与行情背离，属结构性补跌。
+
+**证据：**
+- [Nuclear Energy Stocks Gain as Reliable Power Demand Grows in US - TradingView](https://news.google.com/rss/articles/CBMiuwFBVV95cUxOVTVGWHh6YnB5NkNveG9WbWVHYWlnbldQaXpGY2p2TTcwb1hCQjRSeWJlRGVjRVlHdW1NTHYyRDByQUtHc0IycHZTSjlFeUtqOXYxT1Eyb05ldGdCZWZBMXhXRkY0UWdqZXR6cmJrS1pfM0dHN2twUVQwOVlTak9HeFpvUTVfcjBDS1FNT1dmVjktaXAtNnNUS3pfSFd3UlhjM1M4WHJzWmtoSVZZRGV2c1VraVdubWVVTkcw?oc=5) （2026-11-16 14:59）
 
 ### 区块链与加密（BLOK）
 
-**归因类型：** 弱证据待复核
+**归因类型：** 公司事件
 
-**原因：** 代表股1涨/5跌，领涨 XYZ +2.82%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+**原因：** 板块跌4.1%、成分股0涨6跌，候选新闻为交易所遭黑客攻击引发机构资产托管担忧、韩国加密监管清晰度讨论及托管合作，构成加密安全与监管层面的利空扰动；叠加高贝塔科技资产随大盘避险普跌与资金撤离，推断为事件扰动与风险偏好收缩共同拖累。
+
+**证据：**
+- [Binance hack may push institutions to outside custody, FalconX exec says - TradingView](https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcDQzNEMxZENmNU9OQWFFQmRaSDNwb1ltbnJSbV80YlpvVWZJbEZ1NjJSQWwzRG80cmFPY1JYcWNCWlZwWVp5MHF6Tmw4ZFozMWhkNE5sOVptRnZPNGxWY2tnWW5jRW9zN1otcWRCMGZsd0E3YXVqTFEteVZ0NmM5OTF5OVJYNXRCWDlYMjFHOGtVWVJCZVJnWTdYbWFsc0NyaW96SXJINERhZVI4aU93RmZsQ0N1SzZRTWo5S3FKNU9mMHRqamJ6UEUydEN6RGJ6?oc=5) （2026-11-16 22:19）
 
 ---
 
