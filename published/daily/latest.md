@@ -1,267 +1,261 @@
-# 每日专业 Topic 新闻：2026-11-17
+# 每日专业 Topic 新闻：2026-11-18
 
 > 生成模式：`codebuddy`。新闻链接可能受订阅或付费墙限制。
 
 ## 宏观经济 Top 3
 
-### 1. 中美从关税战转向贸易休战
+### 1. 欧元区年通胀率升至4.0%
 
-- **原标题：** How Trump and Xi went from tariff war to trade truce - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-17T03:49:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipgFBVV95cUxOQ1B5ZTVMbHctSmxMMmV2SFRrM25UM2ZvZmJpZkpnMXVCSGRVNjlQbFZrQmVRX1poOXdoQjNiV056eGxRUlhpUnVyclQ3aVBXWHBhS1JXUHZLVmtPcHhVMlotQ2JfbUhZZVRndlg3NzJNci14MEJKdkw1c3BoVWYwOFlBbzlGS25WVGxFRy1tV3h2WGJHV3FOeGpBcnJHSUdvVTc4N2VB?oc=5)
-- **摘要：** 路透报道梳理了特朗普与习近平如何从关税战走向贸易休战。报道回顾了双方关系的变化过程，显示贸易紧张局势出现缓和。作为全球最大的两个经济体，中美贸易关系的走向对全球供应链和市场情绪具有重要影响，后续进展仍待观察。
+- **原标题：** Annual inflation up to 4.0% in the euro area - European Commission
+- **来源：** European Commission
+- **发布时间：** 2026-11-18T10:49:49+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMif0FVX3lxTE1aVWxKTTRTNVZoYlg0ZkhIWGF3Mm4zTUF1OURSbEZJd19nWTNpZ0JYNDNFSlNyTVhKNGdOa1hZNURnSGUwOU9SbkZwVkFhZ0NoblpJZzU1aFhTa2F1ZVN0Tnp0SFpGb2QtdXRUZFRQeWkyMmNtMEdIOUlLaXo4TGc?oc=5)
+- **摘要：** 欧盟委员会公布的数据显示，欧元区年通胀率升至4.0%。通胀是货币政策的关键参考指标，此次回升引发市场对利率路径的关注，但其对政策的具体影响目前尚不明确，仍需后续数据验证。
 
-### 2. 欧盟称欧元区将稳健增长，通胀压力缓解
+### 2. 美联储官员称或需加息50个基点
 
-- **原标题：** Euro Zone to Grow Robustly as It Shrugs Off Inflation, EU Says - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-17T10:03:22+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMisgFBVV95cUxPTndkVXgwNDhmZzRXa1U3bWZMd243eU5GTEhfS0x3TmdMejktRklDeTMwb3JHZ0VLbGlBdFR6SVJ1Rmh3bkVJZEcySFBwWkxHRlpZclNFS0VZMV9XT0VDLWJrdk1xSUl5LVNrM0Y3bVloMmNReDI0V3dMLUh6Ri1WLXlQWjhfa0IzQUtRRTlwdmxoUHBVN1k4XzBRNU9NdEUzdXFBRTBIQUxySHRPeUpYajBn?oc=5)
-- **摘要：** 彭博援引欧盟观点称，欧元区经济将实现稳健增长，并且正在摆脱通胀困扰。这一判断显示欧洲决策者对经济前景持乐观态度。作为全球重要经济体，欧元区增长走强对全球需求与货币政策预期具有参考意义，具体数据仍待进一步确认。
+- **原标题：** Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-11-18T12:20:11+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihwFBVV95cUxQQ0FXYWthQmJLZi05SXhQR1o2akNmbUo4WFAyUWVjbjdkNmdwWi05clFGakpLMEFkSi1oS2ljalM2N2NyclZWTE9temNQMTJjZk9EQTYwZUJiMVlPcE1zQzA4eE5OU0tNQTg5QU5fU3k4bGIxM2NIVVFGZUZzRlR6VXEwVjBLNmvSAYwBQVVfeXFMUDZSczNSbHAxcjNFa1FMNWU3STJRUVBRV0x6SjhFVFRBdGNqSFhqMGl5bGtMSkN0YzQyWUpWLVppMmxpQWNFbFF4VmY0eE5feTJ5UVotZnNPYVdEdXhzWWVmaTk3YmdXNGdtRHlRN1RqeElDMXBEbkw4Z1hyWWxnM3hBWm9MME5Xbm5MNU0?oc=5)
+- **摘要：** 据报道，美联储官员沃勒表示，央行可能需要通过加息50个基点来震动市场。该表态显示决策者对通胀压力保持警惕，利率路径存在不确定性。具体加息时点与幅度尚未确定，市场将关注后续政策信号。
 
-### 3. 美联储主席沃什审视人工智能经济影响
+### 3. 英国通胀升至一年高位，或连续第二次加息
 
-- **原标题：** Fed Chairman Warsh grapples with AI’s potential economic impact, steers clear of its inflation risk - AP News
+- **原标题：** UK inflation rises to year high and keeps possibility of second straight rate hike alive - AP News
 - **来源：** AP News
-- **发布时间：** 2026-11-16T18:10:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimgFBVV95cUxOX0ZxOUt4UkRfekRtc0Y4dlFwZzNGZnVoaUdsRlZ3NHBzZFY1QzBfMUJULWMtVUoyZUFsT3B6QlBQQkZJZ0R1ODlaQW1nQ05hS29BaE51eDdxd2MtYU11TnlGeVVtZU11SER1OHF0V0RnTXJkNmk3blpfMHlIR1RlZWFtZFE2RWRsb21tTW0xMFp4UVloN0Y5YzN3?oc=5)
-- **摘要：** 美联社报道，美联储主席沃什正思考人工智能对经济的潜在影响，但对人工智能相关的通胀风险避而不谈。作为货币政策制定者，美联储主席对新技术经济效应的判断备受关注，其谨慎表态暗示政策层面仍在评估人工智能带来的变化。
+- **发布时间：** 2026-11-18T12:52:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiogFBVV95cUxQU1UwU0lkaEZtd29qVTQ5dzNMX2RZdXF0UzhpejdCakx0Zy1rNThJRFl2bVo1VDBsZWpXc0pVQkYtZ1Itbk1MbVBlUlQ1Q21ROUN6Ml9lZkt2ZzJQSk1rSDRsS2ZZNGJFbXNwTWRhdFhOdENZU2o3aUlwMDZlVFNkSXpiUWtkQjFCZmtfRm01dWV3eF9wdjBGbmJtdUN2TlJCWmc?oc=5)
+- **摘要：** 英国通胀率升至一年来最高水平，使连续第二次加息的可能性继续存在。物价压力回升增加了货币政策收紧预期，对债券与汇率市场构成影响。加息是否落地仍取决于后续数据，目前尚无确定结论。
 
 ## 航运 Top 3
 
-### 1. 霍尔木兹海峡附近两艘油轮遇袭，一艘失去动力
+### 1. 俄罗斯北方海路石油运输量激增
 
-- **原标题：** Two Tankers Hit Near Strait of Hormuz, One Disabled - The Maritime Executive
+- **原标题：** Oil Shipping Soars on Russia's Northern Sea Route - The Maritime Executive
 - **来源：** The Maritime Executive
-- **发布时间：** 2026-11-16T23:39:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikwFBVV95cUxNX24teVVkSk5TNTJmZkhseUp6V0tmRXU5dmRLVzFCV0M2Ukk2dXNDTFZ3czZ5bGVPcHVUZ0ZXUTJYNkxXNi1wZ1dFRWNxMEJFRkJRMG0zYnFGd1cxcTRUOG1vanRld0R5aGltdkxlenU4QWdYWlNnZGhUd3pIZ2ZRaFB4QmpYOHNyS21QLWM3RkFmUjA?oc=5)
-- **摘要：** 海事媒体报道，霍尔木兹海峡附近有两艘油轮遭到撞击，其中一艘失去动力。该海峡是全球石油运输的关键通道，油轮遇袭事件加剧了市场对能源运输安全的担忧，后续对原油供应的影响程度目前尚不明确。
+- **发布时间：** 2026-11-17T21:56:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikgFBVV95cUxQdGx5Z2N5YTN0UDlKcFlOUFNJMkxsQWpOZkNONUt6OWdnU3Bsc3JaX1M4cVpvcVc3c2RTb2pVNmNIV0U1amJzd01qMWdjWmd3NXhYd3Z0U0NHRktiV0pPUEJ3YjhqWVRtWUJoaDE3dnRJNzlnNzFXSnh2VmlOYmhHYUw1em0tVEFVTU5pU29jVXB3QQ?oc=5)
+- **摘要：** 行业媒体称，经由俄罗斯北方海路的石油海运量大幅上升。这条北极航道的使用增加，改变了区域能源运输格局，并影响航线选择与物流成本。报道未披露具体增量数据，相关贸易的规模与持续性仍待观察。
 
-### 2. 非洲国家联手对航运征收碳费
+### 2. 阿布扎比国家石油公司油轮在霍尔木兹海峡二度遇袭
 
-- **原标题：** African nations join forces to impose carbon charges on shipping - Splash247
-- **来源：** Splash247
-- **发布时间：** 2026-11-17T07:33:34+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikAFBVV95cUxPMDB5V2dVSmprbERLNXBkS2FWQVBKZ051VE81dlhHclc3Z09LUUVDVHd1WWp5VzhUTmpDbHk5a0hQa205TkM3U0JDUVlNMDhfblVfbzdjTmFrdnZVZWN5T1pndjhHcnZOS0d5TlJnTVk4VzJfbXpNOTh0N0EzQkJuTy05VW9wRkVTRWhiSFJNQmw?oc=5)
-- **摘要：** 航运媒体Splash247报道，多个非洲国家正联合行动，拟对航运业征收碳排放费用。此举若落地，将把航运碳成本纳入政策框架，可能影响航线定价与运营成本。相关国家的实施细节与时间表目前尚未披露，仍待进一步观察。
+- **原标题：** Adnoc tanker hit for the second time in Strait of Hormuz - Lloyd's List
+- **来源：** Lloyd's List
+- **发布时间：** 2026-11-18T12:44:29+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimAFBVV95cUxOYlhVclpRaHVnMFh1M0QwMUF6ODlpclp3NmFJVkhvM3JmVEtMVFVJUGZpSXc0MzAxYkdLTUVJUkVQdzN1VjZYR3B5TkdnTzRqakc2NktmXzdHWXBVV3JYX0x3NHpTNmE3aUhuUVpvb3NyMUh3YzdheXgtSk9nekM2SnBwZktYZTVjM2xpRWtMb3JZNUw0eUYzTw?oc=5)
+- **摘要：** 据航运媒体报道，阿布扎比国家石油公司（Adnoc）一艘油轮在霍尔木兹海峡第二次遭袭。该海峡是全球石油运输要道，重复遇袭加剧航运安全风险，可能推高保险费与运输成本。目前事件细节及船舶损失情况尚未充分披露。
 
-### 3. 黑海无人机袭击中又一艘商船损失
+### 3. 小型油轮加入霍尔木兹海峡穿梭运输以维持石油流动
 
-- **原标题：** Another merchant ship lost in Black Sea drone onslaught - Splash247
-- **来源：** Splash247
-- **发布时间：** 2026-11-17T07:10:33+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxQVW1OU3Y4MHFMU1R0QnhmVENXUHhSZkNlbHk2TTV1eWh0Sl9TTE1XVVRuOTg3U1JFXzNDYmFPazdXMFIwdTVaMW9FaWg5Ym1HMkVrN0hVNTVGdDdjemV6eVhoVHVBQnh0Tjl0cnYtVDd2NHNrNnotU1BrYTV4cExURFNwSzI?oc=5)
-- **摘要：** 航运媒体报道，黑海地区在无人机袭击中又损失一艘商船。这是近期该地区连续发生的商船安全事件之一，显示黑海航运风险持续上升。事件对区域粮食与商品运输的潜在影响尚需评估，具体损失情况以官方信息为准。
+- **原标题：** Smaller Tankers Join Hormuz Shuttle Trade to Keep Oil Flowing - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-11-18T05:18:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxQQTd6VTZPeTNUYS0zWGczS2hLNHotUVh0YlFXUTRpX0dkelBvekdyRnJydEFRYU5GWlNVbDFJRkhLUGp3eVBpZ0RnOXk5cmdmbUhJSExkb2gzMjhwRkFIczZnNWprRGZ5bXktaGZfMVZqZWUzT0F6WkdIdHltRE5lY01hN1h6em9pYlNkR2tnR2w0U0hzUEJZUzd5ZVRsdG5pWWNxNndvQkhlY1dZRzBpWVQ5SFE?oc=5)
+- **摘要：** 彭博报道，为维持石油流动，更多小型油轮加入霍尔木兹海峡的穿梭贸易。小型船舶承担起接驳运输角色，反映出航运业在通行风险下的运力调整。这一安排对运输效率与成本的具体影响尚不明确，仍有待进一步观察。
 
 ## 大宗商品 Top 3
 
-### 1. 伊拉克恢复通过土耳其管道出口原油
+### 1. 无人机袭击使俄罗斯11月炼油量近乎减半
 
-- **原标题：** Iraq resumes crude oil pumping for export purposes via pipeline to Turkey, oil minister says - Reuters
+- **原标题：** EXCLUSIVE: Drone attacks nearly halve Russia's November oil refining, sources say - Reuters
 - **来源：** Reuters
-- **发布时间：** 2026-11-17T10:34:06+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiywFBVV95cUxNOEZmQVphZVUyV05SUmZOazhJeVRrUGZneGhyX2xTT0g5SkM0eEQwS2ZjVE1YUjQyR1l4WDAxMURzV19QeUk5dFRVU0R3eVF0TjZRZTlJUDk4TGVXMHJmOWVUVEJjX1k3UnF0b0hzemRLZGtQaFRCTXJoNFA3bVZVZjhPZndwYzRxQlpvcDVFRDZ5ZWhRX21FN2FWQzVSckZoYl8xWWJ6anVsd092eFRZVno5ZWJvVmJKRmJ4THJXREt0ZEF6WlFYQjFVTQ?oc=5)
-- **摘要：** 路透报道，伊拉克石油部长表示，该国已恢复通过通往土耳其的管道为出口目的输送原油。管道出口的重启有助于恢复伊拉克的原油外运能力，对区域石油供应构成增量。具体的出口规模与持续时间目前尚未公布。
+- **发布时间：** 2026-11-18T15:10:58+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMivAFBVV95cUxQOWZxREZPaThlNEtsN1Z2V2s3bVpMbkpiOEYyV19nS2paZndRczh0SG5pcURzTmFSMzYyNDlPbDJFRTIwZTBScFpSLUVrMDNtWm9xMndPT1JHdk00WTFNVlZOdGE1LS1TdHJJX0hsMXI4eEV2cEhEVTkzWVp6ZkNxWVdMbl9lS2FqRnl3TWlEbnRDb1NqLU1iYmtvSkxDa19GWEJpckk1bEI3U09TcDdvQ1ViS25jRXZTZ1U5RA?oc=5)
+- **摘要：** 路透援引消息人士称，无人机袭击使俄罗斯11月原油炼制量近乎减半。作为全球主要油品供应国，炼能大幅受损可能收紧成品油供应并影响出口。消息基于匿名信源，具体减产幅度及持续时间尚未得到官方确认。
 
-### 2. 埃克森美孚圭亚那油田繁荣推动前沿钻探回归
+### 2. 美国库存超预期增加，油价下跌
 
-- **原标题：** ExxonMobil’s Guyana oil boom sparks a return to frontier drilling - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-11-17T12:00:06+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxPUzUweXc1T3d0RE9Fa0s3ajdtZkZ2ZHFLcGV1aVR0OTVGS09Oakw2UHZTQVpRMzAwMVMycTJ4MlhzTnFyRVBIR0NKaHNRSW9zQlRnMnhEcWl3ZVBWQmdjd25wSmVvcGZOWVF4UUdDUk05VEowZkJOMlRiRXlaMjhvY0wtVHc?oc=5)
-- **摘要：** 金融时报报道，埃克森美孚在圭亚那的石油开发取得丰收，正推动石油行业重新关注前沿地区的钻探。这一进展显示大型油企重新加码高风险勘探区块，可能改变全球原油储量的长期格局，后续投资规模尚不明确。
+- **原标题：** Oil falls as U.S. inventories post larger-than-expected rise, EIA says - CNBC
+- **来源：** CNBC
+- **发布时间：** 2026-11-18T03:01:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMinwFBVV95cUxQbWhQY3FnMVNZQTc4WG5fSHVJamFScURWM3NQLUtoOVlRQkJUSE9pNm16djg1aEpiYnB0bWRSX044U1hPbkYwXzk3Z2tzTlpiM056Mjd1c3R6Rm1PaDJhdlFoY1FEbU5yckIwMTRLdDhyd09kdG0wWGE1anFJN1ZkT2IxeGdwYV9mZFRlLXBBOUtvMGVhRXFkMS1TaTZPdXfSAaQBQVVfeXFMTlc1Q3FjM2Vqc2lLRjZnTHR4b2ctZkpwVzM2VFVMZXpFcjVEcC1hNGI5aXlxUVJwRkxEbmJkaWw0OUg3YTRyRDhWc3FzdTdwdFVTd1RJMVlPMXdLQzF2N0lEWHJqZ2hrX25CVXZmUFE0U3RPa0tiSmVja0ZyaEZnZ0xCRnpTWUVhZUJYaGk0ZHVlUjBGXzN5QVNad25PbFc5QTNJMnI?oc=5)
+- **摘要：** 美国能源信息署（EIA）数据显示，美国原油库存出现超出市场预期的增长，油价随之下跌。库存上升通常意味着供应相对宽松，对短期价格形成压制。报道未给出具体跌幅与价格水平，市场后续走势仍取决于供需变化。
 
-### 3. 民主党计划调查特朗普千亿美元委内瑞拉石油协议
+### 3. 美国天然气库存结束注气季，高于正常水平
 
-- **原标题：** Democrats Plan Probes of Trump’s $100 Billion Venezuela Oil Deal - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-17T12:57:26+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitAFBVV95cUxNaE52VU1MRE1Ld0R2VHlDWWN1aWR0SXNDU2lyUlJuNklueGNRNjNrLVRjQkJlYThTRnlacTRzeDNIWUt4Y2ROcTc0cmI5NUp0Vk94bzNuTkdKRGwtME5GU25wX19CODFXUkxmNF9GazJOVm5WZFNTMWZCQVBZLV9PQU1WSDRHLVpmb2NyTk4wNXlFRHpGc2JYMlMybUt0NmJ3UFdObE9EZzVVakNOamtnR1BQVFQ?oc=5)
-- **摘要：** 彭博报道，美国民主党人计划对特朗普推动的一项规模达1000亿美元的委内瑞拉石油协议展开调查。该协议涉及美国与委内瑞拉的石油合作，调查可能给其推进带来不确定性。协议的具体条款与调查结果目前尚不清楚。
+- **原标题：** U.S. natural gas inventories end injection season above normal levels
+- **来源：** EIA
+- **发布时间：** 2026-11-18T09:00:00-05:00
+- **原文：** [查看原文](https://www.eia.gov/todayinenergy/detail.php?id=68484)
+- **摘要：** 美国能源信息署（EIA）估计，本土48州工作天然气库存在本轮注气季结束时约为3.81万亿立方英尺，较五年均值高出近2%。注气季通常为4月1日至10月31日，此时需求相对较低。库存高于常态或缓解冬季供应压力，具体影响仍待观察。
 
 ## 股票市场 Top 3
 
-### 1. 美国出台AI芯片出口新规，数据中心REITs及相关股票下挫
-
-- **原标题：** Data centre REITs, related stocks slide as US imposes new rules on AI chip exports - The Straits Times
-- **来源：** The Straits Times
-- **发布时间：** 2026-11-17T09:50:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMizgFBVV95cUxPOWxQelliVFNVNGdLMVo4dlRkeVJaQzFLZXpVQ0FmX0dtR2ZDV2Fsc2UxbTcxTTNoanNWNjR0R0pkeXVmd3BTYlBUTTJ1cWZuMzdyYWVCRC1zWUZZZHl6WG1GQVYycHA4QmFodWtidmU5QnVPcWtMTjQ1Wk5fNkw2YjlGdTR3RG85TW1tLTlzaDBsUzFiaHI2QVRlU19uelFzUU5vMnlYU01LYnNkTXZZa2UyV3M4blRkVk9mbE01NzdUd1Y1MV9JT0tzdnlodw?oc=5)
-- **摘要：** 海峡时报报道，随着美国对人工智能芯片出口实施新规，数据中心房地产投资信托基金及相关股票出现下跌。报道将股价下挫与出口限制直接关联，显示市场对数据中心扩张前景的担忧。个股跌幅与后续影响仍待进一步数据确认。
-
-### 2. 黄仁勋辞职之际英伟达股价财报前下跌
-
-- **原标题：** Nvidia stock falls ahead of earnings as company reels from Huang resignation - CNBC
-- **来源：** CNBC
-- **发布时间：** 2026-11-17T09:18:45+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUDhQMU5rWGhWemtOTG9CLWY2Q0tCWVVJejRxYU50bXo0U3N5cFE1R0JkQWpPN3RvakZtOERpVk5WSmJIbVlfaVlfTGdZY001TWRqV1ZaTk5yME5TdVQyek81TXVza2REZFNfRnJ5LW9rUmNRT21wNy1FVEZBdUlZaGdINXVqdlkzSzlz0gGQAUFVX3lxTE1hOFNxWkE1WDFjYTgzQVNPNE9MUEIwSmwxazl1QXlpaEo5SGlfSUVJdFJFWjZ4eGF6cXVVQkhoRU5pTmpJVF9jMFJEYjVabW9BMU5Fc0lpNGVXbURhVU4zLTlVQ1E4S0ZRX3hubnRDN0l3QThkS3NienJxZm9oT1BYMUk3M25wZ3lNbDZaY1RTSg?oc=5)
-- **摘要：** CNBC报道，英伟达股价在财报发布前出现下跌，公司正因黄仁勋辞职而承压。报道将股价走弱与公司高层变动和财报前的谨慎情绪相联系。具体跌幅以及财报实际表现尚未披露，市场仍在等待更多细节。
+当日候选新闻不足，未选出符合条件的报道。
 
 ## 科技产业 Top 3
 
-### 1. 美国半导体协会就远程访问先进芯片出口管制新规发表声明
+### 1. 英伟达停止向中国出售获准的AI芯片
 
-- **原标题：** SIA Statement on New Export Control Rule to Address Remote Access to Advanced Semiconductors - Semiconductor Industry Association | SIA
-- **来源：** Semiconductor Industry Association | SIA
-- **发布时间：** 2026-11-17T01:51:24+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxQc0o2bjRXc1pGTFYxZS1KcHl0ZWhPcDA1am9mM0dtWGRfM05WckhvRDFKQ1hjZTRRZEhpM0x0QXJHSk1rOF9WY25LS0gtVDBhU1pfdElJX18xZ1RkZmVYNThEWk1MUnRqVWlEbVpRZlpTcXIxd1NWT0lvbmI2SC1NbVBrTUZzV1FIVm5nMWFrNXhMVElnakFUemhRbW5FdVFnNTQtRENTNFhxRVhCa2k5THNIckZBUkU2V0UtNThBWEZWQQ?oc=5)
-- **摘要：** 美国半导体行业协会就一项新的出口管制规则发表声明，该规则旨在应对远程访问先进半导体的问题。作为行业代表机构，协会的表态反映了产业界对监管变化的关注。新规的具体适用范围与行业影响仍有待进一步明确。
-
-### 2. 美银调查：投资者科技股配置降至2006年来最低
-
-- **原标题：** Investors Cut Tech Exposure by Most Since 2006, BofA Survey Shows - Bloomberg.com
+- **原标题：** Nvidia Stops Selling AI Chips to China Despite US Approval - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-11-17T10:53:44+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxNOVNleGhac2xTbWItcUFYYjFzMXhJN05CTGV1OHlnTl8xaEY0RkhHbWRTUnVsMi1lTS1URlR4UV91WVBkN1F2RXFLaHNsUk9OdGhYVVV6bmRQZ0gyQjZOMEl5amQtTWpVdUNYaEk1RW9aMGg0TS0wNlZ6d0o3bHJoeWpnRE4waC1tNl9YR0tUYS1la1hrSFM5ZlJQSWxyLS0xRkNmTmdTenVPSG1JTElRN0R5NTRuQQ?oc=5)
-- **摘要：** 彭博援引美国银行调查称，投资者对科技板块的敞口已降至2006年以来的最低水平。这一仓位变化显示市场对科技股的风险偏好明显降温。调查反映的是当期情绪，后续资金流向是否持续仍有待观察。
+- **发布时间：** 2026-11-18T04:10:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxQVk5ZV2dpR3EyVEtJcVdSZTBCVGl6UE1qZ1gzNWdiaHJ3WGR1S3NUd2VRcWVzUWhjanFicXVzNi1zRWZNel9EdlVOaC1uMUFCckRXMkRGWkRZeHdZUnE4VTdtUkZ2N0dITkRYa040X29HanoxODdGVXV3NzEyOGhnR1VOb2VwcFNIcHFJQlFrNXM3T1hqQlN5WnB0MHJTU0R2cTZOUnBNbV9Ubm81clFKM0x5cHRxdw?oc=5)
+- **摘要：** 据报道，英伟达已停止向中国出售此前获得美国批准的人工智能芯片。该决定发生在美方对华芯片出口限制背景下，影响中国获取先进算力的渠道。相关报道未说明停售的具体原因，后续是否恢复销售也尚无明确时间表。
+
+### 2. 美国多起科技故障归因于赶修AI发现的漏洞
+
+- **原标题：** US tech outages blamed on rush to fix bugs found by AI - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-18T12:44:53+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxPamJobDVBWldEQkNIYUwxTThSRmxqVElmaHVRNHZZcDhLUEZmaE85UGtpeXJrRnk3bGxiX1AwcnJjUlByTkcyajNtX05jbjBqY2pzMVRoaUQ5QUxBT1pscDN3YUtqTDUzZ2NwcmcyUFB6ek9wMDV5bnFaV3NlOG4xcXAtUUY?oc=5)
+- **摘要：** 金融时报报道，美国近期多起科技服务故障被归因于企业急于修复由人工智能发现的软件漏洞。此事凸显AI辅助排错在加快修复的同时，也可能引入新的运行风险。报道未列出受影响公司与故障规模，细节有待进一步披露。
+
+### 3. 泰国称美国新一轮芯片管制或冲击数据中心建设计划
+
+- **原标题：** Thailand Sees New US Chip Curbs as Risk to Data Center Drive - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-11-18T00:25:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixgFBVV95cUxQWVpUQXhqdXVNUVdLYXBoc1Rpbm8wajh3bkViYkRtLVBxZTRRMVVtdllkWWl4TTVQV0lCbnQxdkIxLVN2Mzh5eFkyS21uRFVkRWUxNGVJaFB4bmV0Q3lUaFZMQXhRSWlpNjVqc25LcVlOb3JNdGRicTNqTF9rXzBjUlc5cE9VVFZyNHBDdExoNjVOUENMRXVxbjhZZWd1V0R6UUIxSXh3VFZldUZLTXIyRVpZRUM4dUc2ZXkzYkgwaFFEVGdwMnc?oc=5)
+- **摘要：** 彭博报道，泰国方面认为美国新一轮芯片出口管制可能危及本国数据中心建设计划。芯片供应是数据中心扩张的关键投入，限制措施或推迟相关投资进度。报道未量化受影响的项目规模，具体冲击程度仍不明朗。
 
 ## 消费 Top 3
 
-### 1. 捷蓝航空CEO安抚因破产担忧而不安的员工
+### 1. 塔吉特客流量上升，业务全面增长
 
-- **原标题：** JetBlue CEO Rushes to Calm Airline Employees Spooked by Bankruptcy Fears - Bloomberg.com
-- **来源：** Bloomberg.com
-- **发布时间：** 2026-11-16T22:02:02+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiygFBVV95cUxQUjBYZXVTYVJ5M2RQMHRETTVreFhOWUpDMHVCQS1EZExtVU1FQ1N1ZW5hU19NNGRwNTJlcm55cDRsX3NacG9yNU1HUmxmVjdNWDdEYWgydUY4Y3B2RlZ2bWRveS1HWDgtWEg4Wmp5RzljcDNpZUlOSkF1Tzc0Y1B2Ni1WOG42U3lQbi12Yk5lbENTQjNWVXQwcnoyaDB1cE1PMDA0N2hoMTNkdWV0bmtsZmtCWllNWEU2T19ZTXhrZlotbEp4MUM3Sm5B?oc=5)
-- **摘要：** 彭博报道，捷蓝航空首席执行官正紧急安抚对公司破产担忧感到不安的员工。管理层出面沟通反映公司内部对财务状况的忧虑有所上升。报道未披露公司具体财务数据或破产风险的实际程度，相关情况仍不明确。
-
-### 2. 香港超越迪拜成为全球顶级豪宅市场第一
-
-- **原标题：** Hong Kong leapfrogs Dubai as No 1 super-luxury housing market – but can it last? - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-16T23:00:11+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRUJQR2x4R3BRcFQwTEx5RVNPc050VjRNYmFMMWlNelg3bDFpY19ISEdvQndBUV9ZQU1qOGpoT3VZY0tqRmhySFFNZVktMXFpU3hNWlE0TkxSVlFVbVdEN192SXBCRjVGeEt6X0sxbkxxSmRoUHlLTWFNWU43a1RsQjZTbE51X2UxU09vRXNQcG1NVnJZb09nRjJoMl9tY3Q1akJTM1ExRWVWTE8wcjY4UWhUejZLYlg4aDFXWDFfb3VuQQ?oc=5)
-- **摘要：** 南华早报报道，香港已超越迪拜，跃升为全球第一的顶级超豪华住宅市场。这一排名变化显示香港高端房地产市场在全球范围内的相对位置上升。该趋势能否持续仍存疑问，报道对此提出了不确定性。
-
-### 3. 迪拉德百货销售增长疲弱但重获部分市场份额
-
-- **原标题：** Dillard’s grabs some market share again despite weak sales growth - Retail Dive
+- **原标题：** Target traffic rises as retailer reports broad-based gains - Retail Dive
 - **来源：** Retail Dive
-- **发布时间：** 2026-11-16T17:29:55+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMijgFBVV95cUxQLTdFN3RrNDk0QXA1SVJXbExPQ1dEbDlUODZfc2NsS2E3Z19pZU9qTEtpdGtHWmxaalNqOGc3SndyLUF6alo3ZTQyWnNwX0gwZ1doUUUxNHNkY0lfcjRJTkUwTUcwS2JKa0RWVnF6VlJWWk94QzN0UzhIalJVOWEtcjNqRFZNSWo5Rlg3RFl3?oc=5)
-- **摘要：** 零售媒体Retail Dive报道，尽管销售增长疲弱，美国百货零售商迪拉德仍重新赢得了部分市场份额。这显示在整体消费环境承压的背景下，个体零售商的竞争表现出现分化。具体的销售数据与份额变化幅度报道中未详细说明。
+- **发布时间：** 2026-11-18T12:09:18+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMifEFVX3lxTFBmNzJLek5CRHYyajdERjNMdXpCbno1WGtxYVBOSmc3THVtNWp1dk9EVk55NXZEcE5CbVdXbFBBeXVCYTJ2WlZ1RWFjMGtkbDJ0TUowQVJabzFnVEJoN1RMaDNGeDdJNkhMNl82WUM3MzlFT0gwcWNPWGR3aXA?oc=5)
+- **摘要：** 零售行业媒体称，美国零售商塔吉特（Target）报告客流上升，且各项业务出现广泛增长。客流量改善通常反映消费需求回暖，对公司销售前景构成积极信号。报道未披露具体增幅与财务数据，业绩改善的持续性仍需后续数据确认。
+
+### 2. 亚马逊将即食餐纳入当日达杂货配送服务
+
+- **原标题：** Amazon adds prepared meals to same-day grocery delivery service - Grocery Dive
+- **来源：** Grocery Dive
+- **发布时间：** 2026-11-18T13:49:11+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihgFBVV95cUxOYlpGcGpoTHZuZE4yYTJESUtEODRwbmpNS01sa3otalEzZVcxaUdJbllSelhUV3RtSGVpOXFORDc5aHl2azlFMGFGT1phajlrajRXNEY3b3dlOHNLWnlrTVpFbDNobE5Mal9JNXZva3gyOTJsTXZUNklzV3I3NVY2ZFRzWmZtUQ?oc=5)
+- **摘要：** 行业媒体称，亚马逊把即食餐品加入其当日送达的杂货配送服务。此举扩展了公司的即时零售品类，反映消费者对便捷餐食的需求增长，也加剧与实体超市及外卖平台的竞争。报道未提供覆盖城市与销售数据，实际影响尚待观察。
+
+### 3. 欧洲10月电动车销量跃升，油价与补贴提振需求
+
+- **原标题：** Europe EV sales jump in October as high oil prices, subsidies fuel demand - Reuters
+- **来源：** Reuters
+- **发布时间：** 2026-11-18T14:45:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUHp2TzJ2Y05ya3ZTTlItZFoxczJaalNkTGJtUXU3d2VEZG8yQlJIUEl1RDdiN0hxRlE3WXAxVzdFRGRpeXRMTHJkVEE5Z09uMW1wR2VXUVZDdHBPbXdIMWk0SXdjeFZiZ3htVUF3RkxibzQ0VU9BYTdZTkYxSU8tUHFvRkNyWTVxUlFrQ0JBR0hINU9mYXA4ZEpIZ2swLWpOS2hwOGRVbzBjamE5dHFfZ3pzd1NFOHc4?oc=5)
+- **摘要：** 路透报道，受高油价与补贴推动，欧洲10月电动汽车销量大幅增长。能源成本与政策支持是刺激电动车需求的主要因素，销量跃升反映消费结构向电动化转变。报道未给出具体增幅与各国数据，增长能否延续仍不确定。
 
 ## Cloud Infra Engineering Top 3
 
-### 1. AI云初创公司Luminal完成2500万美元A轮融资
+### 1. Elementl Power与谷歌云合推AI工具，加快核电站选址许可
 
-- **原标题：** AI cloud startup Luminal secures $25m in Series A funding - Data Center Dynamics
+- **原标题：** Elementl Power partners with Google Cloud on AI suite to speed up nuclear siting and licensing - Data Center Dynamics
 - **来源：** Data Center Dynamics
-- **发布时间：** 2026-11-16T17:51:26+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiogFBVV95cUxQT19ZcElZX3E4dTZzX1JPa3gtNHAzbDM4VmhnY0lNa0NZRmhKUUtlUkxUaE9iZjJaUUlXbm44clBFS0tjNUVHTG5DenpEZVJkZHlscjNIaGxDM3ZwWl9XNUxZWU9iYnU0c0Y1Y2lHZW5kR194dGVkT1VLQXhxVWIzaXgyb2xNakJtQVJtd0VxNUhIcHY4U25POHhlTGVGZk1GU0E?oc=5)
-- **摘要：** 数据中心动态网站报道，人工智能云计算初创企业Luminal已完成2500万美元的A轮融资。这笔融资将支持公司在其云基础设施领域的发展。报道未披露投资方构成、估值以及资金的具体用途，相关细节仍待确认。
+- **发布时间：** 2026-11-18T15:49:43+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVG9ZVDV1VVdwTXp0UFl0eEs5aUxWOU53bHhTUTNYanQtOXY5eVlJZlA1STl1a1V2YjR0bDY0WHNoSUF5YU8walN2RHF4M2NIV2pSMm1ub0hHUGNkNHgzbzlNRVhCSUlpMDlDVUhCWnBWRDhZcTlubDNPY2hJZ0hlTWVTN0c4SnZjWmhqVGVTeHRiQ0F1NU1uYnNmc0hzenRYdnNfU2tWZkNDZVpGNFdkSEJhMEJSN1NwTUhBUGtkOHpxUHhKeFdBLVFJaE1pVVJPVGtSaQ?oc=5)
+- **摘要：** 数据中心行业媒体称，Elementl Power与谷歌云合作推出人工智能工具套件，旨在加快核电站选址与许可流程。此类合作意在缩短核电项目前期周期，回应算力扩张带来的用电需求。合作成效与时间表尚未披露。
 
-### 2. 施耐德电气AI工厂战略超越模块化数据大厅
+### 2. 以色列海法计划建设150兆瓦数据中心项目
 
-- **原标题：** Schneider Electric's AI Factory Strategy Moves Beyond the Modular Data Hall - Data Center Frontier
-- **来源：** Data Center Frontier
-- **发布时间：** 2026-11-16T16:28:47+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMizgFBVV95cUxNNG11RVlFblp5RHlQUmowWkt2RnVvcTJDSXF0eVJzajZlRGNzRXJINzNWbVA3SU02MmtYWkZPNVl2bXIwaVV1TnZzSXBtcnBLX29SUjRIYkFxQ21tY2ZGY2E5bXFyWHc4eGU4SVBUMWIzNjBWWlhCZGhpWWgzcE5CQzFFZzRkUjJPVXdxLTlucjEwdThRTjBOSXh2MlJqS3o1cEVXOGM3X2g2QXNxYkZmYkMyZGZaZjdnUmQxNEpVck5HM2NmUHVIaUVXM3Nrdw?oc=5)
-- **摘要：** 数据中心前沿网站报道，施耐德电气的人工智能工厂战略正从模块化数据大厅模式向前推进。这反映设备厂商针对AI算力需求调整数据中心产品与解决方案布局。新战略的具体技术细节与商业落地情况尚需进一步信息。
+- **原标题：** 150MW data center project planned in Haifa, Israel - Data Center Dynamics
+- **来源：** Data Center Dynamics
+- **发布时间：** 2026-11-17T17:29:18+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimAFBVV95cUxOMUx4NnNfQU12b3cwbEVTXzA3S0NjeC1XRnU0bG85aHoyQTF2em9kci1QZ1l4RXZ5SFBFX0ZLN1JvRGc3Q3dKR0NKY2ZhSk9SMW1tNTBQNUE1YUx6MGhwRnJYXy1vLTFHUUVpbWF6SWxJckVLLURobDl2OGVnLTJqRTJ5T2tERE1FVGwxb0hmWEkwMmxwaUtscw?oc=5)
+- **摘要：** 数据中心行业媒体称，以色列海法计划建设一座150兆瓦的数据中心项目。该项目属于大规模算力基础设施投资，可为区域云计算与人工智能需求提供支撑。报道未透露投资方、建设周期及客户情况，项目能否落地仍待确认。
+
+### 3. 美国银行要求在贝恩数据中心贷款中加入芯片管制条款
+
+- **原标题：** US Banks Seek Chip-Curbs Clause on Loan to Bain Data Center Firm - Bloomberg.com
+- **来源：** Bloomberg.com
+- **发布时间：** 2026-11-18T08:02:29+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitgFBVV95cUxOalFXc2N1ME05cW9CeXQyUURPbEFpbVV2ZnV1ZllManBXYzdRM29wZ0gtZnVwWGg0TE5IVFBhaHpOYW5DNUJHOGtBNDRhbXFYdjV5ckxTdG9fb09xZWpEeE9Tdk1ITjczQV91dGxEOGVXZi1iZmxjSE96NnJUdUw0ZjFwcmdXWVptdWlBM1ktemVTSXRrR1dKSEpDVlNLckpSTG1kODdUQ1dDRzE4LTNXWS1WZ29TZw?oc=5)
+- **摘要：** 彭博报道，美国银行在向贝恩旗下数据中心企业提供贷款时，寻求加入与芯片出口管制相关的条款。这反映金融机构正把政策风险纳入融资条件，可能影响AI基础设施项目的融资安排。报道未披露贷款规模与条款细节，结果尚不明朗。
 
 ## AI 前沿 Top 3
 
-### 1. 加州就AI模型攻击Hugging Face等公司起诉OpenAI
+### 1. OpenAI发布GPT-6.2 Astra与Sol系统卡
 
-- **原标题：** California sues OpenAI over AI models’ cyberattacks on Hugging Face, other companies - Reuters
-- **来源：** Reuters
-- **发布时间：** 2026-11-16T20:47:43+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUnZpbWVjMld3R0NVUjRwT1ZIZW04eFJwYVYzNzUzUi1pckdSQmJiZkh5MnNWeHlnX2ZDVUtBVGU5emdtV3hweWlENDBqeXFoTThlSWhTY0pNRURXbFBmOWRySmkwOGxFZGlPQW9qekNhVzB2bW1SQW1rbU52M01vRTc2M0V3Zktfb00xNE04NElpSTU3c2RXTlVZT3JPYkdSRkFqRUpVSmhvZ0JtcHM5LURPN2hXWDZ5Mk1HVkVZQW5Cdw?oc=5)
-- **摘要：** 路透报道，加州因人工智能模型对Hugging Face等公司实施网络攻击而对OpenAI提起诉讼。这是监管机构针对AI模型安全与滥用问题采取的法律行动，可能对企业如何防范模型被滥用产生影响。诉讼的具体指控与进展尚不明确。
+- **原标题：** GPT-6.2 Astra and Sol system card - OpenAI
+- **来源：** OpenAI
+- **发布时间：** 2026-11-17T18:05:36+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMigAFBVV95cUxNQThxYjhaTGVjRTYyaFR3UGw4VVBnM3pOYjNsTzdhb2RkN2ZfWWg2aFV2Vk11cnpIb2ZCSElXblVnWUZYWE1uNU1zNE9ZVnlWVXJGUWhZWU5FLVZKZDJaUklYdXItM21yRmFXdnRvZDhyelVkRDNueVlEbnFtUnE2OQ?oc=5)
+- **摘要：** OpenAI发布GPT-6.2 Astra与Sol的系统卡，披露该模型的相关信息。系统卡是模型发布时说明能力与风险的重要文件，有助于外界评估其安全性与适用范围。候选信息未提供性能基准与具体改进细节，相关技术参数仍不明确。
 
-### 2. Intersect与Heron Power签署1.5吉瓦变压器供应协议
+### 2. 英伟达RTX Spark紧凑型台式机上市
 
-- **原标题：** Intersect signs 1.5GW transformer supply deal with Heron Power - Data Center Dynamics
-- **来源：** Data Center Dynamics
-- **发布时间：** 2026-11-17T15:34:18+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV0t2OV9yU3VJMExqTWtDMzFlcF85dHFxYUNuZV9wOExGYTF3Qm1Ddi10dmJ5b2x1TmNSanJ6VnE5UExwWV96OUNHMV84OWIxOTlia0V4aTMzVmxyT3dvTmhlRXg3Nk1NS1ZvOHpadEt6NDJ1Qk5tTGVsMmxDYy1BaDZRR2FSRk10TGpnM0pDUTM4a2w2aVRFU3lHY2ltUjJjLVYyeGhPWFM?oc=5)
-- **摘要：** 数据中心动态网站报道，Intersect与Heron Power签署了一份规模达1.5吉瓦的变压器供应协议。变压器是数据中心接入电网的关键设备，此类大额供应协议反映AI算力扩张对电力基础设施的强劲需求。交付安排与项目地点尚未披露。
+- **原标题：** NVIDIA RTX Spark Compact Desktops Out Now - NVIDIA Blog
+- **来源：** NVIDIA Blog
+- **发布时间：** 2026-11-18T14:06:51+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMie0FVX3lxTE9wLTQ0TXQ3UWpsQkx5MHNhRnhQdXJZbnFuUnNVcGZabU9fdDA5NXFfSHc0QmxOaTZaTmp1dG9QZTJpaVlrNEJyV0M5MFl3UUR6UHN2NmlGMmlqb1VFaWhIS2VORVVLNE5MLUVRRVlQaU1lUTFjdE5YWjJIbw?oc=5)
+- **摘要：** 英伟达宣布RTX Spark紧凑型台式机正式上市。该产品面向本地高性能计算需求，把图形与AI算力带入小型桌面设备，扩展了公司硬件产品线。发布信息未列出具体配置、售价与供货范围，市场表现有待观察。
 
-### 3. 英伟达Vera Rubin NVL72在MLPerf训练中性能达Blackwell Ultra两倍
+### 3. 费加罗报业集团与OpenAI合作，将新闻内容接入ChatGPT
 
-- **原标题：** NVIDIA Vera Rubin NVL72 Achieves up to 2x Blackwell Ultra Performance in MLPerf Training v6.1 - NVIDIA Developer
-- **来源：** NVIDIA Developer
-- **发布时间：** 2026-11-16T16:07:49+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMixwFBVV95cUxNbVk2dWVySVdZZmV0MzgtWXRVUTJCdXZxR0pjZnpubDFpd2RWUkIxNE5mVF81cjBQN3VBUDM0Y3Nkalg2LVQzTFlvSUU3d3QzMzVVdG45WGJQRFRield3QjdOWE85eTBGM0RnN1ZzeEdPXy1tWmFKeDFLZWRRZjlkSDFHRlRoSWZpbHV0MFY3UGRKRDFwTXdfcGd4b3dQRzhSVVktcXNJcGdiWndpc2ozamJILWxFM2dqdU9FNnRUbm01ZHN0SFJZ?oc=5)
-- **摘要：** 英伟达开发者博客称，其Vera Rubin NVL72平台在MLPerf Training v6.1基准测试中，性能最高达到Blackwell Ultra的两倍。作为公司发布的工程进展，该结果显示新一代AI训练硬件的性能提升。测试细节与上市时间尚未披露。
+- **原标题：** Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT - OpenAI
+- **来源：** OpenAI
+- **发布时间：** 2026-11-18T09:15:12+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMif0FVX3lxTE4wRXpkMG52Qmx5dlo1bEtUM2lwZm5VZlkzNmFOWWJRSHpaWTRkQjJUeElNeWRYU0RyMm5OZXM3UGNOUjNXTXF5YjFsbzNDU05xanp0b0RQb3p2UHlmNFNiaUZYSThmX1JuVDZQSmZqWkpNbzl3djRmYzZPcEdSWHc?oc=5)
+- **摘要：** OpenAI宣布与法国费加罗报业集团（Le Groupe Figaro）合作，将其新闻内容引入ChatGPT。此类合作反映媒体与人工智能平台围绕内容授权建立联系，有助于改善信息来源的可追溯性。双方未披露合作条款与内容范围，实际效果仍待观察。
 
 ## 国家新闻
 
 ### 新加坡 Top 3
 
-#### 1. 新加坡任2027年东盟轮值主席国将推动单一市场建设
+#### 1. 新加坡金管局与银行公会公布PayNow二代实施路线图
 
-- **原标题：** Singapore to push for single ASEAN market, closer energy and digital links as 2027 chair: PM Wong - CNA
+- **原标题：** MAS and ABS Set Out PayNow Generation 2 Implementation Roadmap - Monetary Authority of Singapore
+- **来源：** Monetary Authority of Singapore
+- **发布时间：** 2026-11-18T06:41:53+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ0dwU0E1Yk45dDV6ak92bnVYblF1WENLTmduRHh4TlFpWGxmZGRHM05zSmMwYjFqTDdCY0t2dDRjLWl6Umd1RWlaclRzM1VidThUWUJZQmZWZEpUekREMmFPMUh3WHdiQ0IyRGFOOWFXZW01TVB6b3VSRERjbHozVVNVTEVnZHpFLWRvc0pETm9fVzAyVlgxa3d4b2VvVVpzd3JwU1R5eEhaMm1VY2J3?oc=5)
+- **摘要：** 新加坡金融管理局与银行协会公布PayNow第二代实施路线图。作为重要支付基础设施，升级将影响零售支付与资金结算效率，对金融生态具有长期意义。公告未披露完整技术细节与分阶段时间表，具体落地安排仍待进一步说明。
+
+#### 2. 新加坡金管局推出支持金融业国家AI任务的举措
+
+- **原标题：** MAS and Future of Finance Institute Set Out Initiatives in Support of National AI Missions for Financial Services - Monetary Authority of Singapore
+- **来源：** Monetary Authority of Singapore
+- **发布时间：** 2026-11-18T04:55:34+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZFFHZjhXVWdYcTQxWjdsUVctQzdPTkhsd1E0YlRlV2xzOWlDMnVpUDZFM2txaEVUYnM5eHhoZ0wtOGlXM1k3Mlo3OUJmc3BMN0k0aDZkYWJDTXdJTUdCZFRFS0J2Sy14ckVsc3hQSjYtUy1tZ1Jma0Njd1hpUUtTd3ViLW9DcDl0US10WjhmeXRMQzlmTjRZckEtQkNJTkl4U3lEekVYOTlodFRMNDQ1VzNxdExITGV1NV9rQXhpdWk0RU5HZlk1TFlEVmt5cXFETjdJWg?oc=5)
+- **摘要：** 新加坡金融管理局与未来金融学院公布一系列举措，支持金融服务领域的国家人工智能任务。这体现监管与行业协作推动AI在金融业应用的政策方向，可能影响机构投入与合规安排。举措的具体内容与实施进度尚未详细披露。
+
+#### 3. 新加坡总理称愿配合美国核查先进芯片使用情况
+
+- **原标题：** Singapore prepared to facilitate US checks on how advanced chips are deployed: PM Wong - CNA
 - **来源：** CNA
-- **发布时间：** 2026-11-17T10:29:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMimgFBVV95cUxORWF5ME5ENVRpZGpwLTRXMjhXVUpiaWJYSllhelEycC1mSG5rVUFwR19rWDZKRF9IbEFWUW9jVEJDV2VEMnNIUzZMRXhwZ2FtQzgwazI1Z1VDc2tNNTBpdWlQOWdQRldKNFF3VmttR3k5SG1pZHlWNWpQcmVudl8zTnZxZUNYZEs5Wk1FRFNJaVZUQTFtckVzSTFn?oc=5)
-- **摘要：** 新加坡媒体CNA报道，总理黄循财表示，新加坡在担任2027年东盟轮值主席国期间，将推动建立单一东盟市场，并加强能源与数字领域的互联互通。这一政策方向若落实，将影响区域贸易与产业布局，具体推进路径仍待明确。
-
-#### 2. 新加坡研究美国AI芯片出口新规，或冲击数据中心
-
-- **原标题：** Singapore studying new US rule on AI chip exports that may hit data centres - The Straits Times
-- **来源：** The Straits Times
-- **发布时间：** 2026-11-16T21:45:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMjFDOTVtZXFKSmdscG90anVFaVVwYVd2M3ZWcTg3V1dHMnJlNlZUeU9xc01jZ2N1TGc3aHBRQ0RqeEpfcFc5SlhyYVp1cjUxM1FvaTZ0WnlIcFFuQzVvQzJrOVl1Vklka2N3dEx4OEZVX0dsbVQ5aENiTzd0ZjdSaDRsVXFheU53RzdiY1RVWlFXdUhyWGlsbW41UXNLMEFuNUR2MUdscFlPWXZpWDN5ZHVOMmZ1SVNCR2Jib0lDLW9SYVE?oc=5)
-- **摘要：** 海峡时报报道，新加坡正在研究美国针对人工智能芯片出口的新规，该规定可能对本地数据中心造成影响。作为区域重要的数据中心枢纽，新加坡的相关评估关系到其数字基础设施产业的走向。新规适用细节与本地影响尚不明确。
-
-#### 3. 美国政府证实调查新加坡科技公司Megaspeed
-
-- **原标题：** US government confirms investigation into tech firm Megaspeed
-- **来源：** BBC Business
-- **发布时间：** 2026-11-17T11:17:32+00:00
-- **原文：** [查看原文](https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss)
-- **摘要：** BBC报道，美国政府证实正在调查总部位于新加坡的科技公司Megaspeed。该公司被怀疑协助将英伟达高端人工智能芯片运往中国，涉嫌违反美国出口规定。此案凸显美国对芯片流向的监管趋严，调查结论与后续处理尚无定论。
+- **发布时间：** 2026-11-18T04:00:00+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikgFBVV95cUxONlhWdHdnVk1LR2R4R1E1UzdFVVNYU1FueEE2dlV5R1RrbXVWRjJCazRLbjJfbFhyTEtfQThPdGZRbkxSa3dkMmIwbjNMU09lajNKaFFUMHlaVlc3VTBfZF90c2VMVHpvdFoyNVlnaWhCQVJXMnVXUDlOYU8xOENvMUFxaGtzclpPcU9ldkhDMng2QQ?oc=5)
+- **摘要：** 新加坡总理表示，新加坡愿意配合美国对先进芯片部署情况的核查。作为全球芯片贸易重要节点，新加坡的态度关系到出口管制的执行与本地数据中心产业。报道未说明核查的具体方式与范围，相关政策影响仍不明朗。
 
 ### 中国 Top 3
 
-#### 1. 习近平与卡尼大幅削减关税，中国拉拢中等强国
+#### 1. 中国通胀结构引发关注
 
-- **原标题：** Xi Jinping and Canada’s Mark Carney slash tariffs as China courts middle powers - Financial Times
-- **来源：** Financial Times
-- **发布时间：** 2026-11-17T07:14:59+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNV20yaTdxeVd6WmktN2g1TXpaZi1QOTZCY1htajhhbjk1TXdwZmc2cWd4cXNDaFN1bTE2SkZKN3FiSHIyMzU5RmdUTndoc0Zmak9UcXAxeDJkTDNzVlNuYTdjMUQ4YmFTZzFRWHJjRlRUWnRNbUJXMWg5bGFCOG1lM05feVI?oc=5)
-- **摘要：** 金融时报报道，中国与加拿大领导人同意大幅削减关税，中国借此加强对中等强国的外交与经贸联系。此举显示北京在贸易关系上寻求缓和与拓展。关税下调的具体品类、幅度与生效时间报道中未详细说明，仍待进一步确认。
-
-#### 2. 特朗普出手切断中国对先进芯片的远程访问
-
-- **原标题：** Trump Moves to Cut Off China’s Remote Access to Advanced Chips - Bloomberg.com
+- **原标题：** China Is Getting Inflation in All the Wrong Places - Bloomberg.com
 - **来源：** Bloomberg.com
-- **发布时间：** 2026-11-17T07:48:33+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMitwFBVV95cUxQNFZSRXNMcEhMS1lTOEN1dGhqWkRWOEJMNjFPMlBkM3RJS0dDa1lpTGo1U0tTRE4tWFhYek1oNHUySVk1ZnA2U2xMdUpBNEFGQkxLYjVycGNRWk5DUi1Da2htYWY5NDhiLWd3UVg4MVMyQWN6WHR1MW52RzN6d2dXbWtSSkRQR2UxM1kyU3FKVll3VUZRbl9HSmVsU0FVRlNGeDR2V19DOG83OHowNlUyMmIwMU5zeXM?oc=5)
-- **摘要：** 彭博报道，特朗普政府正采取措施切断中国对先进芯片的远程访问。此举针对通过远程方式使用先进算力，可能进一步收紧中国获取高端芯片能力的渠道。新措施的具体范围与执行方式尚未披露，影响程度仍待评估。
+- **发布时间：** 2026-11-17T19:00:23+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMipwFBVV95cUxNS3hSa0xoNVY1b0pFMHlFODhjRFV5TUJMRVgwdXJ1dFJFSVlNc0R0TzZ2VFgzcE5NbjcyanJic3VuTWFSdU9RallLZEVRNVZ0YXlLUGt6VHB3cF9ORnhqenE2S2diR19jS1F4WjhVS25McVFhYURxbUpRcWRRWGtPZWloZVlmcnFUMnBHOG5sb0s4ejhSTkZLdEJxcS1ZakpNZU9HaGFNdw?oc=5)
+- **摘要：** 彭博分析指出，中国的通胀压力出现在不太理想的领域，经济中的价格结构值得关注。通胀位置与结构会影响政策空间与企业成本，对资产定价和消费具有含义。该文属观点性分析，未给出可核验的具体数据，结论仅供参考。
 
-#### 3. 印尼谋求更大矿产收益份额，中国投资者面临风险
+#### 2. 英国计划抵制欧盟要求对中国商品加征关税的请求
 
-- **原标题：** Indonesia eyes bigger slice of mineral wealth. Are Chinese investors at risk? - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-17T02:00:17+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMizgFBVV95cUxPanpYUDE2NWstVDZOV2dVci1QWVhNaWJtNmhOMGVhQTJNaU5NcTRxM0dvZDBfZ0J0dmc1emJ0dzk0VU5qVnpCb0UwRGtwM1VldFI0Ym1CRDhFb0NRVk9sUUMyRC13OGZCOXQzSUdUcmJJR0c3aXlud1FobnVDRlBSb0NmZXlOYTY3UE5SMUZlbmxEYVVMdG1QaUhrUmt4U1laLV9IeFh4SVc2MFlpcnVzNDJKRXdycnJiaHI5bzl1LXhDRUVRTHB5Qlo1bE1VQdIBzgFBVV95cUxNZDBfLWloQlJDbkVHTjZ6MW9sZ3lsR0phTHV1b21kLUtDVm9KRmZWXy02YUpvQXhad0FrU0VKM2dWM3E2b292RU0tNjVETDktX2ltc004VTB6TmUwVXAxTTBKTmNZamtzOFN0dnlONXJBSjNjSjVyREtiU0Jfd1FwVWFBOG1YaF9Uckw5ZjJ5SzNFdGVqSTlSVi1nX1laRmxGV2dkVGFtRm45cXRoYWVyeDRPNlZNNWdZbGFaU0dFMUxpZ0JMRFRVWTJMc1FGQQ?oc=5)
-- **摘要：** 南华早报报道，印度尼西亚正寻求在本国矿产资源中获取更大份额的收益，这引发了对中国投资者风险的关注。作为印尼矿业的重要投资方，中国资本的回报与权益可能受到影响。政策的具体形式与适用范围目前尚不清楚。
+- **原标题：** UK plans to resist EU request to match tariffs on Chinese goods - Financial Times
+- **来源：** Financial Times
+- **发布时间：** 2026-11-18T11:52:06+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxNUVpSOXBXUUZkU0V1REZTb3RnQzdtZnlXTFU0NHJ3LVJ5OUhEZHhPUXg1X2tCZzk3Y3kwWTRaOXRkTVRZQzVXNE94aG1UVVVRaTFfQVd2cFNxanRQblROYnNEOVNyN25VZmxQQ2JuajQwQ3E3QkM3OHNGbFZuRHZRMEVMdWs?oc=5)
+- **摘要：** 金融时报报道，英国计划抵制欧盟提出的对中国商品同步加征关税的请求。这一立场关系到英国与欧盟的贸易政策协调，也影响中国商品进入欧洲市场的条件。报道未说明欧盟请求涉及的具体品类与税率，谈判结果仍不明朗。
 
 ### 美国 Top 3
 
-#### 1. 美联储理事库克拒绝出席特朗普召集的听证会
+#### 1. 华尔街预计明年企业盈利增速将减半
 
-- **原标题：** Federal Reserve’s Lisa Cook refuses to attend hearing convened by Donald Trump - Financial Times
+- **原标题：** Wall Street expects corporate earnings growth to halve next year - Financial Times
 - **来源：** Financial Times
-- **发布时间：** 2026-11-17T14:36:14+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxQS2JjcnJpMUZKTGVmcFB3YTRBT1ByNkpqZFIyQ0d3TGhNeDlRcTNfQzVwc0tlWVhvTldmTllLWF9lYVhKelllVVVCa3FpR1c1NWd6TEVZVW1fNU5VTmp4YTBNWkdoMmxzMnVXY0k0SnBZSENCV3NBWXdoMHZkdmtLelRjSU4?oc=5)
-- **摘要：** 金融时报报道，美联储理事丽莎·库克拒绝出席由特朗普召集的听证会。这一表态发生在央行与政府关系受到关注的背景下，凸显双方在货币政策独立性上的张力。听证会的议题以及后续可能的举措尚未明确。
+- **发布时间：** 2026-11-18T10:58:28+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMihAFBVV95cUxOVWtSNUJDdFJoVEZSVHRYNmJ2SVZ2SmNYU2wyQkdfUzNSVXVuaURxWjdPWG1Eb0Jib1Q0a1hubUp6WHluOW5yTE12a1FZZVBLLUUtUGtDWktmaWlQajFUQ2NNdlZlRDA2WEVaY2NjN3ZyZTR2Uk5ETWI1OVp5T1FJQ0F1eUU?oc=5)
+- **摘要：** 金融时报报道，华尔街预期明年企业盈利增速将大致减半。盈利增长放缓关系到股票估值与资本配置，是市场关注的核心变量。该预期属机构预测而非既成事实，实际盈利仍取决于经济与企业经营表现，存在不确定性。
 
-#### 2. 英伟达危机与美国新芯片管制令华盛顿和硅谷分歧加剧
+#### 2. 美国FinCEN拟出台规则强化金融机构客户尽职调查
 
-- **原标题：** Nvidia crisis and new US chip curbs split Washington and Silicon Valley - South China Morning Post
-- **来源：** South China Morning Post
-- **发布时间：** 2026-11-17T15:00:09+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMi0wFBVV95cUxQczlMaEM4QTNGcmd2Z0gybUpmaTQwOHF0LUhQRGxPRTFtNGFOYjVMbzJ1dms1U19tcmxpeFRXNTMzd3B0X0ZJMVBCRjRybF9aSTN1OUMyeHlpWWsxWW1OSnk0M2ROczlNUzQwV1RQWUw5c1JCbXFXMjNCeUZLaFBYcDhFODdKOThNWXh5RkdpYjROZW95dUVHU1pTRHNvU2I4LUowWDQ4YU43bTFGMzBuUTNFRk9oMnBtNFdOdnZXV3NreDJZeDVYRkF1WEZzRnk5NmxZ0gHTAUFVX3lxTE0wanA3dUhPVHlOWXJ4YUNUcTR4YWF3elY4dGJvdVcyczctU2l0UURvSC0wUmxoNWlISXotelo2Um9EQmRHdTkxY2t0dXNJMy1QRmtUcWFwWFdtTjZCZlFHVDZXM3Zjbjd2dVM1ZGdRajlhVTJ0RTEwQU0xYlp1TGNyc0cyeTNFRF9qeEFTOWNhS0txdGxPYzI0cU5iUTRpQ2FhNTNXM1BhZEFLQWUzSjBFY0l4V2VwdUY2NU1xUUpvYmMyR2kzLXkwYjNvV2czckNDbDg?oc=5)
-- **摘要：** 南华早报报道，英伟达公司面临的危机与美国新一轮芯片出口管制，正加剧华盛顿与硅谷之间的分歧。这反映政策制定者与科技产业在监管取向上的矛盾。双方争论的焦点与可能的结果尚待进一步观察。
+- **原标题：** FinCEN Issues Proposed Rule to Strengthen Customer Due Diligence Requirements for Covered Financial Institutions - U.S. Department of the Treasury (.gov)
+- **来源：** U.S. Department of the Treasury (.gov)
+- **发布时间：** 2026-11-17T16:35:26+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBXUWstLW8wZmVyQlk5TUF0dTgzZk02SmcwbkpQNzEwSmpucTFWN1BQMi12NHdBTXdWZVR6eEdyUVEzazQweUcwRTVKU0M4LVljcV83UXFWbWxzMXRYV1kxMWVR?oc=5)
+- **摘要：** 美国财政部金融犯罪执法网络（FinCEN）发布拟议规则，强化受监管金融机构的客户尽职调查要求。此类合规要求影响金融机构的运营与风控成本，具有长期监管意义。规则尚处提议阶段，最终条款与生效时间尚未确定。
 
-#### 3. 亚马逊誓言反对加拿大仓库首个北美工会合同
+#### 3. 美国10月实际平均时薪持平
 
-- **原标题：** Amazon vows to fight the company's first North American union contract at a Canadian warehouse - AP News
-- **来源：** AP News
-- **发布时间：** 2026-11-16T19:42:00+00:00
-- **原文：** [查看原文](https://news.google.com/rss/articles/CBMikAFBVV95cUxNNXdITnU2RmZGXzFuMDh5UkpGVVM5Nm5QdjNYdlF3Vzk1dWtySF83ZlNTbnhTcllwZkVVT0x0dVp0XzU4U0daYkxiQnVUckFmTlB3a3J2SDVJcGhsd0EwM0xoZWZpZFZFX0JyR1VVYlM0eXp1QlE4ZWFleGZkY0dQMHl1bGQybXRJbWR4N1JZcXA?oc=5)
-- **摘要：** 美联社报道，亚马逊表示将反对该公司在加拿大一处仓库达成的首个北美工会合同。这是亚马逊在北美劳资关系中的重要节点，公司的反对立场可能影响工会化进程的推进。争议的后续发展与处理结果目前尚不明确。
+- **原标题：** Real average hourly earnings for all employees were unchanged in October - Bureau of Labor Statistics (.gov)
+- **来源：** Bureau of Labor Statistics (.gov)
+- **发布时间：** 2026-11-17T18:30:04+00:00
+- **原文：** [查看原文](https://news.google.com/rss/articles/CBMirwFBVV95cUxNOWltcXFrXzgweUlhcGpRZ19hS3lROFVQdTdTX0dYTC1NSW5URVE2MVprazEyX1BzVFJ4UHlDeVRMRklXX21iWXB0ck1HRUVBdnlBWkVTZnpFUVZLclVPSUd6dF9uVWlVMkwyblg3VUphM2I1NGtwWHI5WjhzWHd1SFVHQlBGZGM0Ylp0MWJPMXpiMGVzbzB1RGI0SV8yXzJJbzZFNVBid1ZCM21WTGQw?oc=5)
+- **摘要：** 美国劳工统计局数据显示，10月全体雇员的实际平均时薪保持不变。实际薪资变化关系到居民购买力与消费能力，也影响通胀压力的评估。数据未显示增长，但其对消费与政策的具体含义仍需结合其他指标判断。
