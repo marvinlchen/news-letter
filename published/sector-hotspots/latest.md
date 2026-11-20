@@ -1,310 +1,280 @@
-# A股板块热点分析 — 2026-11-18
+# A股板块热点分析 — 2026-11-20
 
-**生成时间：** 2026-11-18 16:01<br>
+**生成时间：** 2026-11-20 16:02<br>
 **A股口径：** 东方财富延迟行业/概念板块行情，按涨跌幅排序，覆盖行业 Top 12 / 概念 Top 12<br>
-**数据质量：** 覆盖板块 29 个；候选新闻证据 91 条；入选证据 25 条；弱证据待复核 29 个
+**数据质量：** 覆盖板块 29 个；候选新闻证据 88 条；入选证据 17 条；弱证据待复核 15 个
 
 ---
 
 ## 总体主线
 
-AI 输出未完整返回，以下内容基于板块行情和候选新闻证据自动整理，归因需人工复核。
+2026年11月20日A股大幅调整，沪指跌1.22%险守3500点，深证成指与创业板指跌超3%，逾5200只个股下跌；资金抱团银行保险等低估值防御板块，四大行创历史新高，上证50尾盘发力护盘；生猪养殖等农业题材受猪周期反转与腌腊旺季预期逆势活跃；集成电路封测、光学元件、激光设备等科技成长板块大幅回落，主力资金显著净流出。
 
 ## A股行业热点
 
 | 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |
 |---:|---|---|---:|---:|---:|---|---|---|
-| 1 | 行业板块 | 通信工程及服务 | +4.52% | 47.80亿 | 5.78亿 | 14涨/3跌 | 中嘉博创 +10.10% | 弱证据待复核 |
-| 2 | 行业板块 | 通信服务 | +3.50% | 153.14亿 | 11.10亿 | 30涨/7跌 | 中嘉博创 +10.10% | 弱证据待复核 |
-| 3 | 行业板块 | 印制电路板 | +3.13% | 625.40亿 | 45.17亿 | 43涨/5跌 | 深南电路 +10.00% | 弱证据待复核 |
-| 4 | 行业板块 | 冰洗 | +2.81% | 31.76亿 | -1.22亿 | 5涨/2跌 | 澳柯玛 +10.04% | 弱证据待复核 |
-| 5 | 行业板块 | 通信应用增值服务 | +2.69% | 69.09亿 | 3.77亿 | 13涨/4跌 | 北纬科技 +9.99% | 弱证据待复核 |
-| 6 | 行业板块 | 橡胶助剂 | +2.64% | 11.35亿 | 1194.43万 | 2涨/0跌 | 阳谷华泰 +4.52% | 弱证据待复核 |
-| 7 | 行业板块 | 彩电 | +2.48% | 14.80亿 | 2.53亿 | 3涨/1跌 | 四川长虹 +10.08% | 弱证据待复核 |
-| 8 | 行业板块 | 元件 | +2.46% | 714.94亿 | 46.38亿 | 56涨/11跌 | 深南电路 +10.00% | 弱证据待复核 |
-| 9 | 行业板块 | 白色家电 | +2.40% | 90.63亿 | -2.48亿 | 9涨/2跌 | 澳柯玛 +10.04% | 弱证据待复核 |
-| 10 | 行业板块 | 通信网络设备及器件 | +2.20% | 600.55亿 | 18.23亿 | 29涨/9跌 | 武汉凡谷 +10.05% | 弱证据待复核 |
-| 11 | 行业板块 | 电信运营商 | +2.00% | 36.25亿 | 1.55亿 | 3涨/0跌 | 中国联通 +2.49% | 弱证据待复核 |
-| 12 | 行业板块 | 疫苗 | +1.86% | 28.66亿 | 7309.18万 | 6涨/7跌 | 百克生物 +14.64% | 弱证据待复核 |
+| 1 | 行业板块 | 其他数字媒体 | +15.00% | 26.97亿 | 5.08亿 | 2涨/0跌 | 风语筑 +10.00% | 弱证据待复核 |
+| 2 | 行业板块 | 视频媒体 | +3.19% | 36.28亿 | -789.30万 | 1涨/0跌 | 芒果超媒 +3.19% | 弱证据待复核 |
+| 3 | 行业板块 | 国有大型银行Ⅲ | +2.39% | 160.00亿 | 2.73亿 | 6涨/0跌 | 工商银行 +3.30% | 行情结构 |
+| 4 | 行业板块 | 核力发电 | +1.49% | 27.30亿 | 2956.15万 | 2涨/1跌 | 中国广核 +3.45% | 弱证据待复核 |
+| 5 | 行业板块 | 电信运营商 | +1.46% | 38.86亿 | 484.62万 | 3涨/0跌 | 中国电信 +2.66% | 资金交易 |
+| 6 | 行业板块 | 广告媒体 | +1.27% | 12.73亿 | -5177.76万 | 1涨/2跌 | 华媒控股 +10.03% | 弱证据待复核 |
+| 7 | 行业板块 | 股份制银行Ⅲ | +1.05% | 172.88亿 | -6.14亿 | 8涨/1跌 | XD中信银 +3.09% | 行情结构 |
+| 8 | 行业板块 | 水产养殖 | +0.90% | 11.18亿 | 1.82亿 | 1涨/3跌 | 好当家 +10.00% | 弱证据待复核 |
+| 9 | 行业板块 | 生猪养殖 | +0.84% | 50.02亿 | -2.61亿 | 8涨/3跌 | 东瑞股份 +5.02% | 供需景气 |
+| 10 | 行业板块 | 种子 | +0.55% | 17.07亿 | 4148.19万 | 3涨/7跌 | 万向德农 +9.98% | 弱证据待复核 |
+| 11 | 行业板块 | 保险Ⅲ | +0.39% | 97.22亿 | 2.75亿 | 3涨/2跌 | 中国太保 +1.60% | 行情结构 |
+| 12 | 行业板块 | 银行Ⅱ | +0.22% | 451.18亿 | -6.24亿 | 23涨/19跌 | 工商银行 +3.30% | 弱证据待复核 |
 
 
-### 通信工程及服务
+### 其他数字媒体
 
 **归因类型：** 弱证据待复核
 
-**原因：** 通信工程及服务当日表现居前，领涨股为中嘉博创；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 代表股暂无，领涨 风语筑 +10.00%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 视频媒体
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 芒果超媒 +3.19%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 国有大型银行Ⅲ
+
+**归因类型：** 行情结构
+
+**原因：** 大盘调整中银行板块盘中翻红，6只国有大行全部上涨、主力净流入2.73亿元，四大行创历史新高，体现避险资金向低估值防御板块抱团。
 
 **证据：**
-- [A股午评| 沪指跌0.40%，算力租赁掀涨停潮，家电股续强_短线策略 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9DakUtSWRLczdQQW43Zkxoai13eHRvRXh3dVFZNlZZd3NYT09FV2k2N0VQR3pEcUQtQThGYVgtM3Y0X2tLd2xMSGdfLVQ2T1VjUGJrcXV1a1Znd3JnQnZmS0hn?oc=5) （2026-11-18 03:53）
+- [三大指数集体调整，银行板块盘中翻红_银行新闻 - 证券之星](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Lc2FQd2YtQXgtVEhTOWlwSVJBWVRUQkFLamhSS1JDdGwwR2ZGZ0g4YWtWRE9nQ1hwcWtnMXNMMklpQzBXbExqclJUVXVoeEZpOW00VFpicTR2QWNPb2gzeA?oc=5) （2026-11-19 08:27）
 
-### 通信服务
-
-**归因类型：** 弱证据待复核
-
-**原因：** 通信服务当日表现居前，领涨股为中嘉博创；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [11月18日午间涨停快报：33股涨停，IT服务Ⅱ、通信服务涨停家数居前，华东重机4连板-电报君 - 金融界](https://news.google.com/rss/articles/CBMidEFVX3lxTFBPOE9xMXl5eFdsZDdOQ1Zid214RmVBQ2M4dnNVS3YzWGZEY05IVUpZQnhhNzdsdjBNU0VEbkVVZkx4aTBMNkZsVUJWcEx4ellQWlhKdlZ5X0g3OHhyMHNUbXBrR3hvR1RSR1dqTVRTeFotZHRs?oc=5) （2026-11-18 04:30）
-
-### 印制电路板
+### 核力发电
 
 **归因类型：** 弱证据待复核
 
-**原因：** 印制电路板当日表现居前，领涨股为深南电路；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [A股PCB概念股强势拉升，千亿市值股沪电股份、深南电路实现10cm涨停 - 中国基金报](https://news.google.com/rss/articles/CBMiekFVX3lxTE5PaGV3cFE2VUFtTm9jQy1DY05rdG04a3lJbWFDOTRudllFZm44N0xPRi1ZVzNPWU1tczRheFMxSURZQ2E4ZzRpeGJyaW5oYTZSbC03M29abk9mbG9lOTFNWU1YMGMwU2gwVEpsYnZzbTlxWThuVDRoQTdB?oc=5) （2026-11-18 07:31）
-
-### 冰洗
-
-**归因类型：** 弱证据待复核
-
-**原因：** 冰洗当日表现居前，领涨股为澳柯玛；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [A股午评| 沪指跌0.40%，算力租赁掀涨停潮，家电股续强_短线策略 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9DakUtSWRLczdQQW43Zkxoai13eHRvRXh3dVFZNlZZd3NYT09FV2k2N0VQR3pEcUQtQThGYVgtM3Y0X2tLd2xMSGdfLVQ2T1VjUGJrcXV1a1Znd3JnQnZmS0hn?oc=5) （2026-11-18 03:53）
-
-### 通信应用增值服务
-
-**归因类型：** 弱证据待复核
-
-**原因：** 通信应用增值服务当日表现居前，领涨股为北纬科技；自动归因证据不足，需结合后续候选新闻证据复核。
-
-### 橡胶助剂
-
-**归因类型：** 弱证据待复核
-
-**原因：** 橡胶助剂当日表现居前，领涨股为阳谷华泰；自动归因证据不足，需结合后续候选新闻证据复核。
-
-### 彩电
-
-**归因类型：** 弱证据待复核
-
-**原因：** 彩电当日表现居前，领涨股为四川长虹；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [A股午评| 沪指跌0.40%，算力租赁掀涨停潮，家电股续强_短线策略 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9DakUtSWRLczdQQW43Zkxoai13eHRvRXh3dVFZNlZZd3NYT09FV2k2N0VQR3pEcUQtQThGYVgtM3Y0X2tLd2xMSGdfLVQ2T1VjUGJrcXV1a1Znd3JnQnZmS0hn?oc=5) （2026-11-18 03:53）
-
-### 元件
-
-**归因类型：** 弱证据待复核
-
-**原因：** 元件当日表现居前，领涨股为深南电路；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [元件板块午盘拉升 生益电子涨20%深南电路涨10% - 观点网](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1DZ3FrRnRhMlIyVnFxVFhqLVhGVEs0Z2l4Yy1BaDhfcWt1ZHpvN245eGNTLW5zU1g1N09SMXd3Q0NDMXNYeHZmUjFUZDQ4MnlETFhZTVE3X2UycHVuWmV5eUpR?oc=5) （2026-11-18 06:08）
-
-### 白色家电
-
-**归因类型：** 弱证据待复核
-
-**原因：** 白色家电当日表现居前，领涨股为澳柯玛；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [大牛股已3连板！白色家电板块延续强势，6股获主力扫货（附股） - 东方财富](https://news.google.com/rss/articles/CBMiZkFVX3lxTE0wZ0hEaGNqaU5FU3pvRjRfV1ZobVBNRTBsaFBzMzlCTUJDbG8yalZuTWE3bHVHenFGcVBiQ0xNWkJSUldLYU5qYmJvXzJSODh1QkQ0UzNuTWY5VWlIMkJGSFVrb0MzQQ?oc=5) （2026-11-18 03:17）
-
-### 通信网络设备及器件
-
-**归因类型：** 弱证据待复核
-
-**原因：** 通信网络设备及器件当日表现居前，领涨股为武汉凡谷；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [港股概念追踪 | 6G迎政策与技术双重催化!八省市协同试点提速 赛道成长空间广阔(附概念股) - Moomoo](https://news.google.com/rss/articles/CBMisgFBVV95cUxNOElmVE1BeG56QTNJd05nNVc2eTVvZjJmY3o1T24tOXFVOXFuMlhyY1RsWVkxV2o2WGRBME9tc1BZbkg5SWFLbEtqdmJVY2hQbTF4aWR0c2hpSkZ5SmhTUHAwUm1FMjBVUlhMZExzRzFtd1JjOElqcHVrUVI0Xy1LQUJfVndtdnQzX0tIcVhvR0tFckFtR2dRZXQwLWhrRng1TTU4ZkVCd2RjOUxsRmZ5OC1R?oc=5) （2026-11-17 23:15）
+**原因：** 板块3只成分股2涨1跌、主力小幅净流入，涨幅温和，唯一候选新闻指向四大行创新高而非核电，缺乏针对核力发电的催化证据，具体驱动待复核。
 
 ### 电信运营商
 
-**归因类型：** 弱证据待复核
+**归因类型：** 资金交易
 
-**原因：** 电信运营商当日表现居前，领涨股为中国联通；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [科技板块估值跌至低位 二十四家公司股息率高 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5SakxOSk45aFFDempiMzhMcHlrWFlVSWFLelFVRTJPejNzQ1AwUldCVlhfWkFjMXZQeGh4WjBhdWoxSHhENE9KQ1VaLTNqMlNaRzNyVktWZElfREpha2VXbjFn?oc=5) （2026-11-17 19:38）
-
-### 疫苗
-
-**归因类型：** 弱证据待复核
-
-**原因：** 疫苗当日表现居前，领涨股为百克生物；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 美股电信与电力方向表现亮眼形成景气传导预期，高油价高息环境下收息资产配置价值凸显，3只运营商全涨、主力资金净流入，吸引防御性配置资金。
 
 **证据：**
-- [环球下周看点：黄仁勋GTC演讲 “癌症疫苗”详细数据出炉 Meta、特斯拉发布财报 - 财联社](https://news.google.com/rss/articles/CBMiSEFVX3lxTE9zQVN5WGFjTnF5ZVMzbC1BVVR1ODl1c01kYzl5clRJOTA4R0F5cTdtMzROc3R0T1Y0dzl0OTg5MjItc2VHaGdjUQ?oc=5) （2026-11-16 13:21）
+- [美股创新药与电信电力方向表现亮眼，哪些A股有望共享景气传导？丨隔岸观涨 - Sohu](https://news.google.com/rss/articles/CBMijAFBVV95cUxQX3RQZ0p4aXhGWFhpZkhBbUVBSHVabDlrYi1hY2xqcFpvSmR5SVo5VVVMUGxuRWN6WjVSLTJFLW1JX1RqTXM5aWFKVzc3VnY1ZFNQRC1tbFRTY0lMcWdBN2VLWHdramlac1ZXbXVlMG1BN1Y5eWM5bWtGalZIOXI3UzRfRXVxUWRkU2w3WA?oc=5) （2026-11-20 00:50）
+- [惠理基金：高油价高息双压下全球经济动能承压科技板块维持中性、收息资产仍具配置价值提供者智通财经 - 英为财情 Investing.com](https://news.google.com/rss/articles/CBMicEFVX3lxTE9YcXN3dk56UU9EUUhfNEFubWlYM0d0SHQ1MFZqd0R5ZVNVU1VSeXR3MllralV4US1LVXpMbEdjbXo1dEdDNWUxQUVKZktyUE0ycU5rRDgwX0VKbWt2TFFwNjcwbFFSQVZocnZSV2ZwbXY?oc=5) （2026-11-20 05:46）
+
+### 广告媒体
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 华媒控股 +10.03%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 股份制银行Ⅲ
+
+**归因类型：** 行情结构
+
+**原因：** 大盘调整中银行板块逆势翻红，8只股份行普涨，但主力资金净流出6.14亿元显示分歧，政策持续加码非银金融与银行股定价逻辑变化提供背景，属避险切换与内部分化。
+
+**证据：**
+- [三大指数集体调整，银行板块盘中翻红_银行新闻 - 证券之星](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Lc2FQd2YtQXgtVEhTOWlwSVJBWVRUQkFLamhSS1JDdGwwR2ZGZ0g4YWtWRE9nQ1hwcWtnMXNMMklpQzBXbExqclJUVXVoeEZpOW00VFpicTR2QWNPb2gzeA?oc=5) （2026-11-19 08:27）
+- [最高涨51%！银行股分化加剧，定价逻辑变了 - Sohu](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQb2JzRGlQOHNkVEc4RVZFNGhfQmVySHNLb3BOZVpxOUZ6NW5uSVZIYUs0TnpUdXY0a242am9MTjVveVRTYnlwWjV4Ylg0aGRnRi1UeEtfZ0xrdTF2YVVXdkg5MkJuSWxEdUZSMjVNLUpsYUtONDcwdTBQS2RPMkxpckVfQzBzeWx3?oc=5) （2026-11-20 01:35）
+
+### 水产养殖
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 好当家 +10.00%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 生猪养殖
+
+**归因类型：** 供需景气
+
+**原因：** 猪周期反转信号显现、腌腊消费旺季推动猪价连涨，猪肉股集体爆发，8只成分股普涨形成板块效应，主力资金虽净流出但广度良好。
+
+**证据：**
+- [猪周期反转信号炸响！猪肉股集体爆发，金新农6天3板，腌腊旺季猪价连涨 - FX168财经](https://news.google.com/rss/articles/CBMiU0FVX3lxTE13RllCa1ZBVlIzMGRUWGFqY3VTMEh4VHF0amdySVBHUExtUjVUcG9TZ1VMdFMzRkdZaW5qdGUxbkdyaUxBWm1OUjd4MFVNZEtvYXlR?oc=5) （2026-11-20 03:43）
+
+### 种子
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 万向德农 +9.98%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 保险Ⅲ
+
+**归因类型：** 行情结构
+
+**原因：** 沪指大跌1.22%背景下银行保险板块逆势上涨，保险主力净流入2.75亿元，叠加政策持续加码非银金融与保险ETF吸金，体现低估值防御属性。
+
+**证据：**
+- [收评：沪指跌1.22% 银行保险板块逆势上涨 - 中金在线](https://news.google.com/rss/articles/CBMibkFVX3lxTE9kWTVOaUpmSHFfdUEtZkt4bmkxRlIzSDhnQ0dQa1QyVlZuWnlBTEJkT1pQQUR2VG0yWEdFZUpUVktqV1g2M1dwdGI1bzExODFjcm9VQ3Y2M3NOVE1WNFh5TkFPbnN5Q2VOenk2bW5n?oc=5) （2026-11-20 07:48）
+- [20:15:29【政策持续加码非银金融板块，证券保险ETF易方达（512070）周内合计“吸金”近6亿元】 - 财联社](https://news.google.com/rss/articles/CBMiSEFVX3lxTE1yUzR0QTVubVdvd3hqS1g0YmVfWmg3SDMyMGY0dHBZN3FqYzR2eXFVRTN3VngzWTZuTklLTlE5Q2pLeElJWXFkaA?oc=5) （2026-11-18 12:15）
+
+### 银行Ⅱ
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 工商银行 +3.30%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
 
 ## A股概念主题热点
 
 | 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |
 |---:|---|---|---:|---:|---:|---|---|---|
-| 1 | 概念主题 | 算力租赁 | +3.62% | 646.42亿 | 51.18亿 | 91涨/29跌 | 真视通 +10.02% | 弱证据待复核 |
-| 2 | 概念主题 | 东数西算 | +2.99% | 412.04亿 | 24.05亿 | 58涨/15跌 | 动力源 +10.00% | 弱证据待复核 |
-| 3 | 概念主题 | F5G概念 | +2.77% | 461.82亿 | 22.94亿 | 23涨/3跌 | 中贝通信 +10.00% | 弱证据待复核 |
-| 4 | 概念主题 | 昨日首板 | +2.08% | 265.32亿 | -16.51亿 | 15涨/13跌 | 盛剑科技 +9.99% | 弱证据待复核 |
-| 5 | 概念主题 | 科技风格 | +2.00% | 2797.45亿 | 114.30亿 | 72涨/28跌 | 深南电路 +10.00% | 弱证据待复核 |
-| 6 | 概念主题 | 算力概念 | +1.96% | 1725.66亿 | 87.01亿 | 162涨/90跌 | 全筑股份 +9.79% | 弱证据待复核 |
-| 7 | 概念主题 | 反转股 | +1.82% | 132.60亿 | -4937.84万 | 8涨/9跌 | 华东重机 +10.00% | 弱证据待复核 |
-| 8 | 概念主题 | 英伟达概念 | +1.78% | 572.03亿 | 23.62亿 | 42涨/26跌 | 利通电子 +10.00% | 弱证据待复核 |
-| 9 | 概念主题 | 智算中心（AIDC） | +1.76% | 1436.16亿 | 49.13亿 | 127涨/64跌 | 真视通 +10.02% | 弱证据待复核 |
-| 10 | 概念主题 | CPO概念 | +1.72% | 1522.20亿 | 52.75亿 | 70涨/30跌 | 华胜天成 +10.01% | 弱证据待复核 |
-| 11 | 概念主题 | 华为昇腾 | +1.66% | 278.72亿 | 11.46亿 | 41涨/25跌 | 常山北明 +10.00% | 弱证据待复核 |
-| 12 | 概念主题 | 国资云概念 | +1.61% | 91.30亿 | 7.97亿 | 11涨/8跌 | 常山北明 +10.00% | 弱证据待复核 |
+| 1 | 概念主题 | 历史新高 | +0.87% | 120.24亿 | 3.72亿 | 4涨/2跌 | XD中信银 +3.09% | 行情结构 |
+| 2 | 概念主题 | 证金持股 | +0.61% | 484.00亿 | -5464.96万 | 20涨/15跌 | 中国石油 +4.67% | 弱证据待复核 |
+| 3 | 概念主题 | 昨日连板_含一字 | +0.22% | 38.66亿 | -9042.11万 | 3涨/2跌 | 真视通 +10.01% | 行情结构 |
+| 4 | 概念主题 | 上证50_ | +0.07% | 1572.36亿 | -16.28亿 | 33涨/17跌 | 中国石油 +4.67% | 行情结构 |
+| 5 | 概念主题 | 大盘价值 | -0.08% | 658.34亿 | -15.77亿 | 32涨/25跌 | 中国石油 +4.67% | 行情结构 |
+| 6 | 概念主题 | 近期新高 | -0.16% | 347.31亿 | -2.36亿 | 21涨/24跌 | 北纬科技 +8.17% | 资金交易 |
+| 7 | 概念主题 | 昨日打二板以上表现 | -0.29% | 51.41亿 | -1.12亿 | 2涨/3跌 | 真视通 +10.01% | 弱证据待复核 |
+| 8 | 概念主题 | 红利破净股 | -0.48% | 396.38亿 | 8.91亿 | 21涨/24跌 | 工商银行 +3.30% | 资金交易 |
+| 9 | 概念主题 | 科创板做市商 | -0.50% | 98.28亿 | -3.03亿 | 4涨/10跌 | 申万宏源 +1.40% | 弱证据待复核 |
+| 10 | 概念主题 | 权重股 | -0.58% | 2121.31亿 | -22.55亿 | 26涨/24跌 | 中国石油 +4.67% | 行情结构 |
+| 11 | 概念主题 | 趋势股 | -0.64% | 880.93亿 | -6.88亿 | 40涨/56跌 | 冰山冷热 +10.03% | 弱证据待复核 |
+| 12 | 概念主题 | 中特估 | -0.69% | 698.34亿 | -13.26亿 | 33涨/47跌 | 中国石油 +4.67% | 弱证据待复核 |
 
 
-### 算力租赁
+### 历史新高
 
-**归因类型：** 弱证据待复核
+**归因类型：** 行情结构
 
-**原因：** 算力租赁当日表现居前，领涨股为真视通；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [A股算力租赁板块午前走强，红利指数逆市飘红 - 中国基金报](https://news.google.com/rss/articles/CBMiekFVX3lxTFBobkFzREpNQ1lLbk56Tm01X3oyZW1Ob3dpc2phc1BLSF94aTJVUXV5eFVscG1pdlQtZVdvVE5NeGRiR2MwYTllamtSZE5rRDQ0M1NobmZhWkpMb0NuanAtOVU2UktsckJudXEwV213TUhFb3g0N2RnVVp3?oc=5) （2026-11-18 05:12）
-
-### 东数西算
-
-**归因类型：** 弱证据待复核
-
-**原因：** 东数西算当日表现居前，领涨股为动力源；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 大盘普跌中多只银行股创历史新高，成分股4涨2跌、主力净流入3.72亿元，避险资金抱团低估值防御资产推动股价创新高。
 
 **证据：**
-- [A股午评：创业板指高开低走跌0.48%，影视院线、游戏、贵金属板块跌幅居前 - 同花顺财经](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ua0c4WmdCYndXYzhyazFaZXJPX3VzdDRxNU5RNWtlaXJJdExuLTVKRDUxNk1pQjBtMnpNaV9Tb1F4WXVZODFRV0RwUlMtMjZSb1pubGlidjhLTEFvRVE?oc=5) （2026-11-18 03:39）
+- [“日历效应”显现？多只银行股创历史新高 - 哈富证券](https://news.google.com/rss/articles/CBMibEFVX3lxTE5HcEhUSERBUVk0eTQ2NWlVSmVySExtX19HejVlVUhCektSTVZqNC1DT2NNNE96T3UxOWNZVVVwUEVrRWhCSy00NlU1UWFjMVF0R2g5bG5SV3hYeWNfaklieERWSlQwdHBmSFZpaA?oc=5) （2026-11-18 12:59）
 
-### F5G概念
+### 证金持股
 
 **归因类型：** 弱证据待复核
 
-**原因：** F5G概念当日表现居前，领涨股为中贝通信；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 代表股暂无，领涨 中国石油 +4.67%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 昨日连板_含一字
+
+**归因类型：** 行情结构
+
+**原因：** 昨日连板板块3涨2跌微涨、主力净流出9042万元，连板股晋级率不足二成显示接力情绪降温，领涨股涨停难掩资金退潮，属短线情绪退潮结构。
 
 **证据：**
-- [快讯：开盘半小时两市缩量超300亿 算力芯片概念震荡回升 摩尔线程涨超10% - 新浪财经](https://news.google.com/rss/articles/CBMigAFBVV95cUxPQXg4UWhRMTMzWTlCNTdFVGt2Z0FSejhxeGF4eEVzZWxURnNkZ2tqT1B2OEtSZFMzNW8ycVB0Tm9OOFV1TVVSaDBBZENheGkxMHdIeGZyTTZ1bk1qbVptc0ZuYVRWX0FZajhwak5sNUFOdEphcGZQRXJVeWNLdDFWNw?oc=5) （2026-11-18 02:18）
+- [15:35:33【11月18日连板股分析：连板股晋级率不足二成 国产算力板块持续发酵】 - 财联社](https://news.google.com/rss/articles/CBMiSEFVX3lxTFAyZTVyZktYSkpaWnY1bzVUWmlBaHFGaXBNNTVrNG5nandhOWJXMGNxQW9raktpQkJmRi1PY0NYcXVYTTlCYUxTRg?oc=5) （2026-11-18 09:47）
 
-### 昨日首板
+### 上证50_
 
-**归因类型：** 弱证据待复核
+**归因类型：** 行情结构
 
-**原因：** 昨日首板当日表现居前，领涨股为盛剑科技；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [半导体设备板块延续强势 盛剑科技、全筑股份2连板 - 星岛环球网](https://news.google.com/rss/articles/CBMiZEFVX3lxTFAycGEwOXpHRXptSXJVZjlfb3BOeTFPa0xka0JZQ0tVZi1xWnJ0b0JYZ3FEX2RKTVRJeXRqd05jQUJzYWxvOGlLR2hPMDZYRHE4TjhqVV9uWlJKOHh2ZEptZ3RQaXg?oc=5) （2026-11-18 01:39）
-
-### 科技风格
-
-**归因类型：** 弱证据待复核
-
-**原因：** 科技风格当日表现居前，领涨股为深南电路；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 沪指大跌1.23%背景下上证50发力护盘、工商银行等多股创历史新高，33涨17跌显示权重相对抗跌，但主力净流出16.28亿元显示托底资金分歧。
 
 **证据：**
-- [工行、建行、中行等新高！银行ETF汇添富(512820)近3日吸金超2200万元！红利与科技风格轮动延续，高股息策略继续演绎 - 腾讯新闻](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBZZVNSaWJmeXBkR2p2eUROVmt3SE16R1VmTVV2eWY5YkxHb3VsRWFEZmNCekM0TnJWUzl3bF9zaUowV2VQSjlOd2R0V2lmS0dETDhFRmdn?oc=5) （2026-11-17 09:27）
+- [A股收评：沪指大跌1.23%险守3500点，“双创”重挫逾3%，全市逾5200股下跌，上证50发力护盘，工商银行等多股创历史新高 - Sohu](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPb1REcFpzWG5qOF9VLUprS1g2al9RWUc0YlJhQXpybnQxV0xLQjJsT210WGluaDduVzlBcno1azdvaWZGOW1YbGl3TVVPbGV5ekp3alZpS292WHFVQm1zMmxaNi1NWmpoWTVKanlITjVnS3c4ZEdkaEkwalVYLXprRGprR3RIdGw3?oc=5) （2026-11-20 07:08）
 
-### 算力概念
+### 大盘价值
 
-**归因类型：** 弱证据待复核
+**归因类型：** 行情结构
 
-**原因：** 算力概念当日表现居前，领涨股为全筑股份；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [1分钟拉涨停！600410领衔强势封板，华为算力概念拉升 - 新浪财经](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRXhvSXZfYko2Z0ZiSlpSSVprSkdCUjVlUmJZNFBkeUZCa2RtMDdHNmQybjlvSEdKYUJGWkRZY3c0aXl1UlJmZDU3UERpY3NvMkxFVXNndEFVSXp2REpvN2NlR2VuZGhTLTdadWZxRFVnaHNucVpQdGdQOUYzZEVyM1lnX0ZQQWtV?oc=5) （2026-11-17 02:15）
-
-### 反转股
-
-**归因类型：** 弱证据待复核
-
-**原因：** 反转股当日表现居前，领涨股为华东重机；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 大盘价值板块微跌但32涨25跌涨跌互现，主力净流出15.77亿元，中国石油等权重领涨难抵整体调整，红利低波资产逆势走强，属权重价值股随大盘震荡的结构性表现。
 
 **证据：**
-- [今日十大热股：九阳股份、华胜天成领衔，华东重机3天3板阳光照明14天8板，多只人气个股持续上榜 - Sohu](https://news.google.com/rss/articles/CBMiiAFBVV95cUxORG9sbldxLWtrQmx3RkVzSWh2MjQxdHA5c2NReUZMQjZqcHdQeUpSbXZpeW9TS1BsWTRrVW9mcnJKajE5bGVSbUlBVGpUR2pMR3ZGRDFDeDFhcmQxRGhCc2hpa3o5X04tbmVpQ1hKVjk4Nlk4b3djUnZDbkhZNGV4NEEzNnhQUFlT?oc=5) （2026-11-18 00:32）
+- [大盘持续回调，红利低波100逆市四连涨，现在还能上车吗？ - 东方财富网](https://news.google.com/rss/articles/CBMiZkFVX3lxTE1xRW41VE1YOUhWRTAxRUtwQ0c1WktqMzJjQ3U1U2cwYS1ocVJLMVlGUnFvaGRaTVJaTmt4Qi1fQWVpWmVyMi1UZnUtRUJ5b2dDZ3A5YzhsTS01VWpjYTVUQnlEdXN3dw?oc=5) （2026-11-19 06:46）
 
-### 英伟达概念
+### 近期新高
 
-**归因类型：** 弱证据待复核
+**归因类型：** 资金交易
 
-**原因：** 英伟达概念当日表现居前，领涨股为利通电子；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [英伟达概念板块11月17日跌2.63%，阿尔特领跌，主力资金净流出42.94亿元 - Sohu](https://news.google.com/rss/articles/CBMijAFBVV95cUxNdXVpVENfMWpTemVmeFA4VmV3c1BaUjdYUHE1LXM1ZXNsUFljSWRRR3JPYXBJMXd2ajN1ZzBVeUY1ZXZTU3FHMm9VbExiV19ORXhHdmdwMHJFaC1HMURSd3JlWjd1Wjg3c05zcThVakNrVXlHNzhGalU5SzFGTkRManFoMTlMTk1TT3lCQg?oc=5) （2026-11-17 09:41）
-
-### 智算中心（AIDC）
-
-**归因类型：** 弱证据待复核
-
-**原因：** 智算中心（AIDC）当日表现居前，领涨股为真视通；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 板块微跌且涨跌互现，算力华为相关个股持续爆炒带动北纬科技领涨，题材资金聚焦但板块整体跟涨乏力、主力小幅净流出，属结构性题材炒作。
 
 **证据：**
-- [A股午评：创业板指高开低走跌0.48%，影视院线、游戏、贵金属板块跌幅居前 - 同花顺财经](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ua0c4WmdCYndXYzhyazFaZXJPX3VzdDRxNU5RNWtlaXJJdExuLTVKRDUxNk1pQjBtMnpNaV9Tb1F4WXVZODFRV0RwUlMtMjZSb1pubGlidjhLTEFvRVE?oc=5) （2026-11-18 03:39）
-
-### CPO概念
-
-**归因类型：** 弱证据待复核
-
-**原因：** CPO概念当日表现居前，领涨股为华胜天成；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [美股光通信逆势上涨 机构紧盯多只CPO概念股 - 东方财富](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9iQlg2dXNPUTFtWWJEX0NJTE1qWldUS0U1VHlxZlEwZjhuT1NPYkI1RWl3ZC1oNTNxZ1dtODZ3LS0yelI0ajg3UEFjUDdzZ2pwbmVYSXduRjJ3b1JMOG4xNg?oc=5) （2026-11-17 22:54）
-
-### 华为昇腾
-
-**归因类型：** 弱证据待复核
-
-**原因：** 华为昇腾当日表现居前，领涨股为常山北明；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [华为算力，概念股掀涨停！ - OFweek](https://news.google.com/rss/articles/CBMibkFVX3lxTFBNM0QyNlhTMmpZdW1oWFZ1Z3ZYbEI5QU81aTdPT2oteVU1Mlk2RFotaFZmNW1FMkhFV0d1a0t4V0U2bnN0S0J1UHJ4X1VRbWtmc1ZxaE9yRFRaZmtBZFVjOFV4eG1UaVVmcF9VRWdn?oc=5) （2026-11-17 04:00）
-
-### 国资云概念
-
-**归因类型：** 弱证据待复核
-
-**原因：** 国资云概念当日表现居前，领涨股为常山北明；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [国资云板块11月17日涨0.06%，紫光股份领涨，主力资金净流出4.84亿元 - Sohu](https://news.google.com/rss/articles/CBMijAFBVV95cUxQemdsbWljSGNpUEFGTXJXYnBpRkhKY19mVDNrUDcwMkF2T0U3dnN1UjQ3c1hYRlRMeGxBU01TOTFkSFJJUEp5OG56OTNZWVZuSzl2NnoyMHE1MFZBZUdWOHg1SzdtUGdYVW0ySWtSTGFPaEI4U2FEbGFYek9NV0IzZmtpMlM5ajlHZVBPXw?oc=5) （2026-11-17 09:32）
-
-## A股回落/弱势板块
-
-| 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |
-|---:|---|---|---:|---:|---:|---|---|---|
-| 1 | 行业板块 | 院线 | -5.84% | 18.15亿 | -9484.53万 | 1涨/3跌 | 儒意电影 +0.20% | 弱证据待复核 |
-| 2 | 行业板块 | 医美耗材 | -5.05% | 4.83亿 | -5458.41万 | 0涨/3跌 | 爱美客 -0.62% | 弱证据待复核 |
-| 3 | 概念主题 | 昨日打二板以上表现 | -4.96% | 16.68亿 | -3008.86万 | 1涨/3跌 | 华东重机 +10.00% | 弱证据待复核 |
-| 4 | 行业板块 | 粘胶 | -4.79% | 5.13亿 | -8052.27万 | 0涨/3跌 | 新乡化纤 -3.85% | 弱证据待复核 |
-| 5 | 行业板块 | 影视院线 | -4.63% | 89.53亿 | -6.83亿 | 2涨/16跌 | ST华谊 +1.39% | 弱证据待复核 |
-
-
-### 院线
-
-**归因类型：** 弱证据待复核
-
-**原因：** 院线当日表现居前，领涨股为儒意电影；自动归因证据不足，需结合后续候选新闻证据复核。
-
-**证据：**
-- [A股午评：创业板指高开低走跌0.48%，影视院线、游戏、贵金属板块跌幅居前 - 同花顺财经](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ua0c4WmdCYndXYzhyazFaZXJPX3VzdDRxNU5RNWtlaXJJdExuLTVKRDUxNk1pQjBtMnpNaV9Tb1F4WXVZODFRV0RwUlMtMjZSb1pubGlidjhLTEFvRVE?oc=5) （2026-11-18 03:39）
-
-### 医美耗材
-
-**归因类型：** 弱证据待复核
-
-**原因：** 医美耗材当日表现居前，领涨股为爱美客；自动归因证据不足，需结合后续候选新闻证据复核。
+- [今日十大热股：华胜天成热度登顶，华东重机、北纬科技领衔，算力华为相关个股持续爆炒 - 金融界](https://news.google.com/rss/articles/CBMiY0FVX3lxTE5CNVNheWZnUzFlaEl5QTRFRWhyWmFmUHRuWUZTUk15RWNYSllJeTNoUjV5RzJQNU5rQ0hNNVJoNzRqWUwxTUlSdTdsRDhlZXIwWHp1WXUwaE5KLVJNTFZsZ1VNMA?oc=5) （2026-11-19 00:32）
 
 ### 昨日打二板以上表现
 
 **归因类型：** 弱证据待复核
 
-**原因：** 昨日打二板以上表现当日表现居前，领涨股为华东重机；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 代表股暂无，领涨 真视通 +10.01%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 红利破净股
+
+**归因类型：** 资金交易
+
+**原因：** 全球市场深度调整下银行股防御属性凸显、四大行盘中创新高，红利破净股主力净流入8.91亿元、工商银行领涨，显示避险资金持续流入高股息低估值资产。
 
 **证据：**
-- [华东重机，4连涨停；龙江交通，15天8板_主力研究 - 证券之星](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1ta01kU0gwQlNleGNqY0VIRDV1LUc3SmRfS3MxYWRMZm9JdWpGMkdCSU1La1NfMXJ1bUZnS3Z1MVpGVGJhakZZeUs2dl9fNlVvVERVbXJUbzlpZk02c19xRmxB?oc=5) （2026-11-18 03:31）
+- [四大行盘中创新高！全球深度调整银行股防御属性凸显 - 东方财富网](https://news.google.com/rss/articles/CBMiYEFVX3lxTE4wQXEzT25wcEpEbm0yVEwyX0VmNUdjdHF3TWl5ZklZN0pKa1FfcWhhWVk3Vm9aUVZUMGNjQW10anVXTGhDV0t1RHFaTDJXMDVxQVBNOWRpTXA1NTFVUEx0Rw?oc=5) （2026-11-20 03:45）
 
-### 粘胶
+### 科创板做市商
 
 **归因类型：** 弱证据待复核
 
-**原因：** 粘胶当日表现居前，领涨股为新乡化纤；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 代表股暂无，领涨 申万宏源 +1.40%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
 
-### 影视院线
+### 权重股
+
+**归因类型：** 行情结构
+
+**原因：** 沪指跌1.22%背景下权重股分化调整、主力净流出22.55亿元，尾盘权重与上证50ETF放量托底，中国石油等石油股领涨难掩整体资金流出。
+
+**证据：**
+- [A股分化调整沪指跌1.22%守住3500点权重与上证50ETF尾盘放量托底: 金融 : 财经日报 - 재경일보](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9YSVpSTmVaMmd5YjY5d3RzbWMxZWtSWEFkaUV4MFN6TVcyV2JGTk5iZnpISGwzNEp3QnFla0xYcWdDdGxnX1huOGNYbzNucGU2ZVZ2VVpUUFA2bEMxOWduY0p3?oc=5) （2026-11-20 07:46）
+
+### 趋势股
 
 **归因类型：** 弱证据待复核
 
-**原因：** 影视院线当日表现居前，领涨股为ST华谊；自动归因证据不足，需结合后续候选新闻证据复核。
+**原因：** 代表股暂无，领涨 冰山冷热 +10.03%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 中特估
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 中国石油 +4.67%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+## A股回落/弱势板块
+
+| 排名 | 类型 | 板块 | 涨跌幅 | 成交额 | 主力净流入 | 涨跌家数 | 领涨股 | 归因类型 |
+|---:|---|---|---:|---:|---:|---|---|---|
+| 1 | 行业板块 | 涂料 | -8.84% | 2.68亿 | -796.82万 | 0涨/2跌 | 三棵树 -8.29% | 公司事件 |
+| 2 | 行业板块 | 其他黑色家电 | -8.31% | 12.13亿 | -4489.52万 | 0涨/5跌 | 创维数字 -4.09% | 弱证据待复核 |
+| 3 | 行业板块 | 集成电路封测 | -7.96% | 177.82亿 | -22.85亿 | 0涨/13跌 | 蓝箭电子 -3.32% | 资金交易 |
+| 4 | 行业板块 | 光学元件 | -7.60% | 109.87亿 | -6.64亿 | 0涨/27跌 | 奥比中光-W -0.33% | 弱证据待复核 |
+| 5 | 行业板块 | 激光设备 | -7.59% | 69.82亿 | -5.36亿 | 0涨/12跌 | 金运激光 -5.65% | 弱证据待复核 |
+
+
+### 涂料
+
+**归因类型：** 公司事件
+
+**原因：** 板块领跌股三棵树前三季度净利近乎腰斩，业绩利空冲击股价大跌8.29%，板块仅2只成分股全线下跌，跌幅居前。
 
 **证据：**
-- [A股午评：创业板指高开低走跌0.48%，影视院线、游戏、贵金属板块跌幅居前 - 同花顺财经](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ua0c4WmdCYndXYzhyazFaZXJPX3VzdDRxNU5RNWtlaXJJdExuLTVKRDUxNk1pQjBtMnpNaV9Tb1F4WXVZODFRV0RwUlMtMjZSb1pubGlidjhLTEFvRVE?oc=5) （2026-11-18 03:39）
+- [前三季度净利近乎腰斩！三棵树业绩说明会释放两大信号：C 端提速、工业漆静待放量 - Sohu](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSWRqS0EtOVZLNG5LR1hxZ2Y4ZDFpclpyQjhHa2pBSUFOVGZhOUNDeU5BbFl5aUxiWmVEXzRYdFNMQmZEMDVOVEZWdmYyRmJzSjFvbU5ZMmYxcEZIT0hjREhnQ1QwNXo5Rkd4XzNVQU5LZXdNZkRTc0tYRkhvWlQ2Qm9uNmEyQ3M1?oc=5) （2026-11-19 05:49）
+
+### 其他黑色家电
+
+**归因类型：** 弱证据待复核
+
+**原因：** 板块5只成分股全线大幅下跌、跌幅远超大盘指数，主力净流出4489万元，候选新闻仅指向大盘普跌背景，缺乏针对黑色家电板块的直接利空，具体原因待复核。
+
+### 集成电路封测
+
+**归因类型：** 资金交易
+
+**原因：** 前期电子封测板块获超百亿主力资金涌入并短线拉升，当日主力净流出22.85亿元、13只成分股全线下跌，呈现高位获利回吐与资金集中撤离，前后表现反差明显。
+
+**证据：**
+- [超百亿主力资金涌入电子板块！沪电股份登顶A股吸金榜首！电子ETF华宝（515260）跟踪指数最高上探3.65% - 新浪财经_金融信息服务商](https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ2lSZHRMY0ZnREVCR255VmNHamUxYmhobHE5YVo0UE0zQTM0czB0RWdJNjNheFd3U09mdHQxQmNoN2F1R1dVQkt2SHpPUE1Zbm5JOERkS2x0TzlvaFNLcWxiTnRST1dCZ2hqSVdENmhlQW5uTWZsbnUyem5HMWJRaEJ0cW1fTkJmT19fU01nMlAyWFJjSWtMQnZGZEVmVFRMS2tYeg?oc=5) （2026-11-18 11:37）
+
+### 光学元件
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 奥比中光-W -0.33%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
+
+### 激光设备
+
+**归因类型：** 弱证据待复核
+
+**原因：** 代表股暂无，领涨 金运激光 -5.65%；未识别到可靠新闻证据，且未满足结构归因规则，需复核。
 
 ---
 
