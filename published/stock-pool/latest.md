@@ -1,68 +1,59 @@
-# 股票池重要新闻日报 — 2026-11-20
+# 股票池重要新闻日报 — 2026-11-21
 
-> 生成模式：`hy4flash-free` · 新闻窗口：前一天（2026-11-20，自然日）· 生成时间：2026-11-21 · AI去重：开
+> 生成模式：`hy4flash-free` · 新闻窗口：前一天（2026-11-21，自然日）· 生成时间：2026-11-22 · AI去重：开
 > 新闻链接可能受订阅或付费墙限制。
 
 ## 1. 中国海洋石油 (0883.HK)
-- [China's first offshore carbon injection project advances, targeting 1.75 million cubic meters of CO2 daily](https://news.google.com/rss/articles/CBMiYkFVX3lxTE02RXNDa0cxUWJHV3ZZdGtsdnN5QzRnUDl1Q1o2eDl2bnRuaFFDeUp2dC1HYmNLUWtYSE9nVkdQUlltaHdLVm1KNElhLUZ6VWFYbXYyMC1wNmU4TTJNT01RRHdn?oc=5) — Global Times · 2026-11-20
-  国内首个海上二氧化碳注入项目取得进展，目标日注入175万立方米，标志公司海洋油气业务在CCUS/碳封存领域的重要布局落地。
+- [中海油集团旗下海油工程（COOEC）与卡塔尔能源签署8亿美元MM-EPIC2合同](https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqdUFfWG5nYTcxU1k4TEZMVWNpR0tzdW9fbFlMUWxJTkM3cUJBZ2ZIUmprUGNyaUw1WndvOE1XZnBZUW9zdFlvdkJWRG5VcE0?oc=5) — iMarine · 2026-11-21
+  大额海外工程订单落地，体现集团海外业务拓展与接单能力，对油服及工程板块构成实质性利好。
 
 ## 2. 中国移动 (0941.HK)
-- [美国出手！中国移动、中国电信、中国联通被禁直接获取美国号码](https://news.google.com/rss/articles/CBMiSEFVX3lxTE83TmhtcmlpOE5XZjN4TWFlVERCTDJXc3Via0FTakN5eksyUy13UXJqbExTOHJfaXEtYWpFNEdlc3d6WGM1WTFtRw?oc=5) — https://haiwaiwai.com/ · 2026-11-20
-  美方监管限制直接影响公司国际号码与跨境通信业务，属监管及地缘层面的重大事件。
-- [中国移动：关于会计估计变更](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1rdmxoRFRBbEh3QUdBZjY2SDl1VWJwTmFIeUF3OWZ1ZVUxZVlfaV9mOFdCUVNJQmh0elJyVlBOM01Ma2ItRHJfaHBrUnphTXdfX3RTcmxR?oc=5) — 中财网 · 2026-11-20
-  会计估计发生变更，将影响相关财务数据的确认与列报，属影响业绩口径的权威披露。
-- [中国移动：关于调整日常关联交易预计金额上限并预计2027年度日常关联交易上限](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nQ240SDVaVEpCUW5ESW81OGUyZGxESzlNeWxZYlRGbjh5WHFkWFB4d1BIbXRVNXpBQWFPclFaSDlkd2o2NHBSTDltcnBSeWxMRGI1TDZ3?oc=5) — 中财网 · 2026-11-20
-  调整关联交易上限并预估2027年额度，涉及公司治理与未来交易规模，属重要公告。
-- [中国移动：2026年第七次董事会决议](https://news.google.com/rss/articles/CBMiVkFVX3lxTE4wZlJLSEpHdTVZelR3SjZzSWI5eEU1OEo3Mmt4OUR0MWphaWluSV9oQTEzLVh3RmFPTzVKQ2dReTdkbjlwOW5tLTlSTGkxWVdpeC1pTkZ3?oc=5) — 中财网 · 2026-11-20
-  董事会作出决议，属重大治理事项的官方披露，需关注具体决议对经营的影响。
+- [中国移动启动5.2万卡AI超节点集采，规模近300亿元](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMzZHZXd1NWNkMF9GUlpSZlFEQVhPcllJZ2RUZ051ZHF0UnFUWUlpelY5bHI2TE5YUVVaV0I3VndicG9rWGc1am1LMnRCMEhSTmh2Q1VadldUaUhIYUd4RFdrS0hFNUx0WWpKcU4wT0pOTUd1eWgyZXJ5Nl84VFQ2ckVyYWx0a2Fl?oc=5) — Sohu · 2026-11-21
+  近300亿元AI算力集采属重大资本开支，反映公司加码AI基础设施，对云与算力业务中长期基本面影响显著。
+- [中国移动董事会通过折旧年限调整及2027年关连交易上限议案](https://news.google.com/rss/articles/CBMi1AJBVV95cUxPVzFhRmZaM0RTbE5XTG5mN05IMzdtV0tFdFRwWVhNZUw1QkhFU2hYM19KTnN5QTB3TE80MWFhVGdmWlA2UjVtdlhaNl9Cdm44TTJITXFXVXlYV1FTTlRpS1FmdkF6aVZ5V0tzY2h5cGh6MFFBazRTa3h4MmZ2WExsdF9fSWtpcnY0dDE2U3oybGdqYVdITHlFY3dETXpweFJyMHBtU0tTcHRWandLT1hKUjNneFc1N2VOMHBPbjNmNmFwM2N3RUVrVjd1Mnl1QUZneTJfdTFwenhqNDlHMTNYT01kS095YURDelMxTUxVQ2tSdzNzUzg4SE03U3dITWFNQzZ4Smp3NlQtQUhDdS04N2NXWV9MbjJJdmczRTQ3LWRTcTBWZlJOd0k4ek41M3lmeElOU2N1VzNJU2M0c2FwS1BFOUUtV25UaUJseG11ak5NVGc2?oc=5) — Minichart · 2026-11-21
+  折旧年限调整直接影响每年折旧费用与利润表现，属影响业绩的关键财务议案；关连交易上限亦涉及公司治理。
+- [美媒称被禁中国电信企业仍保留美国数据中心，或面临每日百万美元罚款法案](https://news.google.com/rss/articles/CBMi0wFBVV95cUxObkN2aktnVlZSeGpuN0g3cWU5VHFDZEI2V2FpamlWMXdva3gzNUd6TmRRT001Zmw5R3N6UzVwQnN1WkxKLU81TS1zRTlCUENLMy1hQVI5R1FtckRjaUh6cHkwZFl0aXFKYmNBZ1ZtWlJZcXcyWHNMZEJEWDcwb0RtNVptTlRydzFIZFB0WGZVMmx4WXNJakxySUpqNW9ZeGlwVkVDR0tUOFAwT3Rpd21lY3l4NWhZMkx6ODk4OElJM3h0VmxZR09kUFNrSXBPMTk2dnRr?oc=5) — Foreign Policy Journal · 2026-11-21
+  涉及包括中国移动在内的被禁中国电信企业在美业务，属潜在地缘监管风险，若落地将带来直接财务与合规压力。
 
 ## 3. 万洲国际 (0288.HK)
 暂无重要新闻
 
 ## 4. 丰益国际 (F34.SI)
-- [丰益国际主席兼总裁郭孔丰买入50万股公司股票 总购价142.5万元](https://news.google.com/rss/articles/CBMidEFVX3lxTE9WOVdzVDliemVfQ2J1ZlFDcEYzd1N5RkZDb05zQ2R6YzIxZTM4dlMybjgxZ3dzWWtrTW1qcWdPRjhsVDVlbTIwbnVJZmxZY1YtY0IyaXZfTDFNdVhTdGE0ZXZSRXdneU04VnlFTWRRMnFfcVd5?oc=5) — 联合早报 · 2026-11-20
-  董事长兼CEO增持公司股份，释放管理层对公司价值的信心，属重要内部人交易。
+暂无重要新闻
 
 ## 5. 中联重科 (000157.SZ / 1157.HK)
-- [Zoomlion strengthens equipment partnerships in Australia](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZWhQUFo1YXpOS3VWYzFzQ0c2dHNfOTAtdExuekNzdFpPaEdZSHhscXVyU1Vtb295c2R4UGJ6TDdwTU43b1NOMkhTSzhQMXZqUXZoWkNZM2JBZldLNlJDbzItU2FJbW9YYVJNY25zblFLOC1PZWZoNGJqVEJDMERnSHA0S2kzdXpKVWFvM21JQXhUclpJQS1lMUI2NFBXc080dU1CVHVYbnFtcG1pWGNtbDRrZEUxSUxpRElqMW0zYWdXNVU?oc=5) — Construction World · 2026-11-20
-  公司在澳大利亚深化设备合作伙伴关系，拓展海外市场渠道，属重要业务进展。
-- [Chinese agricultural machinery makers eye growing African market](https://news.google.com/rss/articles/CBMihgFBVV95cUxPSjNrQ0l6MHlJYzJjaWlIUGFkQkRjTE5DX2tfREJLM1dGTzBWcmNYZi1MX2N3ZG1FWVZnV3JRdGZpRHg5aUxjRzJDSkVHYnV0ME5ISUVMNWVLQ0l2emZBdHEyWXY2VjRZMEFtSy1CeFoyRUFnSFFpSXNsclgxODJMbDRQOGMxQQ?oc=5) — Xinhua · 2026-11-20
-  中国农机企业加快开拓非洲市场，公司农机板块有望受益，属相关行业动向。
+暂无重要新闻
 
 ## 6. 腾讯 (0700.HK)
-- [腾讯开放旗舰模型Hy4权重](https://news.google.com/rss/articles/CBMic0FVX3lxTFBSZmlmZzZFeDAyOGRmb2lnTjR3NmVaNWFxYVdCSHBxeWNYWkJqa1ZCUXE3aXZhUEZHNi1NandQTXdjTWhkS2E4Z0NyX0FnLUlhOTE2RUYxVXZZNWlCZk5qREVkQWZwQ2Rra0lDQllhOC1qVEE?oc=5) — 动点科技 · 2026-11-20
-  公司开源旗舰大模型权重，体现AI基础模型战略布局，属重要产品与技术进展。
-- [GPT周报｜腾讯WorkBuddy和"豆包工作"披露日活；微信智能体"小微"日活用户3000万；OpenAI发布两款新模型](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB6WXFYMzAyOWQ0UXYxYUlIdmRGVXY2VkJjTEtIaGtYZ3A3bWEteGh4NzZBMHo5Unkxb2xNc3Nfak5hd2Jydkk1cWlzcnFXODBWSy1tR3FSN1dlNWwyekVKdXlfeWhmYTQ?oc=5) — 财新 · 2026-11-20
-  披露WorkBuddy及微信智能体的用户规模，反映AI产品商业化进展与用户黏性，属重要运营数据。
-- [腾讯WorkBuddy上线电脑操控能力](https://news.google.com/rss/articles/CBMiVEFVX3lxTE14azdydHlXQWZfbjJaWFpsd0lVaFM1anZURE5kUnJucHU1T0l1OXFpamFFejlxRFcwZkJBRDVSUHpRcnRNUXlELXlCSVJ1aTlMQUt1Sw?oc=5) — 第一财经 · 2026-11-20
-  WorkBuddy新增电脑操控能力，产品功能升级，强化AI Agent应用竞争力。
-- [腾讯和联想集团卖空股数双双暴增逾300%！多重利空共振压制港股](https://news.google.com/rss/articles/CBMiZkFVX3lxTFBPRDl5QzczVDVlMG1Fbi1QVFBlQ2hKZlFjR2dXWjBsTmJ1QU5kYU9RclczMVRRdGhFZkJMcmFVVG1rU05iOFdGLWxIQjl1b2U5akV6bjM1QlJmWWZsdldaQWthbmQ3dw?oc=5) — 东方财富网 · 2026-11-20
-  卖空规模激增逾300%，显示市场对短期利空高度敏感，属股价与估值异动。
-- [腾讯把挣来的钱都买了算力，WorkBuddy能成"全厂的希望"？](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBOTDR3dkR2WWdITDlETlRURTJta19TczdXYXhmakNoMzRnUWVwUWFKZlQ5eWpsb2l4djJPZ0RNSlR5V3dDSHFKSjhsb2dBcHlWVVdBUWVBbGRZNTQ1U00tOA?oc=5) — ThePaper.cn · 2026-11-20
-  报道聚焦公司大规模算力资本开支与AI投入，涉及资金配置与盈利预期，基本面相关度高。
+- [姚顺雨与腾讯混元团队首次公开问答：下一代模型将显著扩容并推出小模型](https://news.google.com/rss/articles/CBMiVkFVX3lxTFA0TUZsczRNUkRRMHMzZzBZRGZINzlsVUpnSTg2eUtwNFN6azdmeFJtSlpDeEhqWG5NVWMyd25aUE1mUlVXdzJyTUhQZEIzYWJ1cVVBMWZn?oc=5) — Jiemian.com · 2026-11-21
+  腾讯旗舰大模型路线图披露，涉及下一代模型扩容及轻量模型布局，关乎公司AI核心竞争力与估值逻辑。
+- [腾讯发布首个面向境外用户的来华支付工具](https://news.google.com/rss/articles/CBMiSEFVX3lxTFBpWU5CcnJ0NVJVN19VSE84RG9USElxVHlQbmo4ZnhvUTUxSi14MTE0c1B4TTR2SS0zS085aVpTYjVXV1Nwcl9DMw?oc=5) — 财联社 · 2026-11-21
+  跨境支付互联互通新产品落地，拓展腾讯金融科技业务场景，有望带来增量空间。
+- [腾讯WorkBuddy开放平台上线，Agent向更多工作场景延伸](https://news.google.com/rss/articles/CBMiTkFVX3lxTFAyTEpIWk0wMks4WmFWLXk5a2pocmJRdTN0dEVGOWs2SDh0ME5LcHlTQklJbVdzdjQxTk9zRGExY0kwbEpfdWIwZkN0UlRNZw?oc=5) — 36Kr · 2026-11-21
+  腾讯云AI Agent产品开放平台上线，扩展企业办公场景应用，体现AI商业化持续推进。
 
 ## 7. 阿里巴巴 (9988.HK)
-- [业绩全面超预期！阿里巴巴，逆市上涨](https://news.google.com/rss/articles/CBMiZkFVX3lxTE4zVE9yd01OcnotMlduLXAzWV9mRWo5SWlwby1FRUVsUW12VEJBOFFlcklVYnlLZjNUeGtCclhOSUk1dnFvaHJ4bUF1N2R2Zm9RMjR0Tl9HRkF3UUh0cDdxbFcyTk5oQQ?oc=5) — 东方财富网 · 2026-11-20
-  季度业绩全面超预期并带动股价逆市上涨，直接影响基本面与估值判断，属核心财报新闻。
-- [Citigroup维持Alibaba Gr Hldgs"买入"评级，目标价从193美元下调至160美元](https://news.google.com/rss/articles/CBMibEFVX3lxTE1JZDJTTkRGTlhCVktMcXlPMHhuTVAzOFR2SzdyYkpxUGdGYVc2Z3BMbVowTUROOGxYYm1WSUFRQkxxYzdicjVEVklOVzRzTkJZQmx5NVY4MXJxeExuTGJpMWc1NmZkVUowemFYRQ?oc=5) — TradingView · 2026-11-20
-  花旗维持买入但显著下调目标价，反映投行对估值中枢的下修，属重要评级调整。
-- [StoneX下调阿里巴巴目标价，美国出口限制成主因](https://news.google.com/rss/articles/CBMidEFVX3lxTE5JejhFMmR0OWlWOFVrdUY3dHZUbmFqSlF0clVjM3NHeklEdDlXc2gzbS1iekNVR1A0TzZpRnFHbzlGY2lwZVhrRkdQS05mMnd5RHlhNmJ4dWtCMXBwWG5waGFRdElRcDVKMGF2b1k3MjFDQ2Z1?oc=5) — 英为财情 Investing.com · 2026-11-20
-  StoneX下调目标价并指出美国出口限制为主因，凸显地缘及监管因素对估值的压制。
+- [阿里巴巴集团公布2026财年9月期季度业绩](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBVWTBob1dUZmdIMEtLYlJPSUE1dmxpR3NzLVdKQzhvUkFpNVBZTWZIZWotTXpFcXBST0FHQTliOGlSTEhuRkhkVzRsNU1rdUJoR2JLd3d0cHJDelU2?oc=5) — Moomoo · 2026-11-21
+  季度财报直接反映营收、利润与业务状况，是影响公司估值的最核心基本面事件。
+- [阿里巴巴一个月内股价跌25%：芯片管制威胁20GW计划，吴泳铭警告或下修业绩](https://news.google.com/rss/articles/CBMiygFBVV95cUxQRkdES0VlUHBTZE1laXFFQXNCQjRpZWVLRnZ1UjJzZkxvc1FRVXh3SDVsTDdTZVhIajlKTzNNVmdOU2ZzOXJXaE9wX25VbHFNb2pRV20yN2tXMnlZNWU2bWt4M1B0YkdFaVRmM0luS3dQZjU0eGVmZDNaeUxCb0xlUXp0VXJjTjFQNUZ6T240WWE2WEo4LWMwaUY1WGRpbnU4bHVRRmpEMTJZNUN2Y2lSejZoTGJTaDlpbWdBWHRmTnBPNzR2SzRPNlFR?oc=5) — TIKR.com · 2026-11-21
+  股价大幅下挫叠加管理层业绩下修预警，属重大估值异动及盈利预警，反映芯片管制对业务的实质冲击。
+- [股东就与Alice Huang的关系起诉阿里巴巴](https://news.google.com/rss/articles/CBMiggJBVV95cUxPY0IxaHRndS1LUXNYdEVkc1N2UHVVZ1JPd0FoQVRpdzJ0RFhUTGZycGxlSU5RelZ4TU9ZUGtCYTVyV3kxTjNYTXBoaElwM21hRHZFclFDa1BHcWM4UjhUZkdGenctWndpY0dtZ3ZESF8tb3BRWXVUa19pNUY1S3c2Tm5IY1ZUVjRCZV92dUdEMFVoX3F3ZHR5R01JWkNyQUJ3VExnME43NUprX1RuM1dYRnE4RE56SWVSX1VaVzVkUGpFWUlOSGM3ZUlhSExaZEIybi1zbXhuVmxsdmdYdEZPdW5jMHRkVUpDYVBtZGZENjU5a1g0aFNYR1lnQlJuMzdEVXc?oc=5) — IDNFinancials · 2026-11-21
+  股东提起诉讼，属重大法律事件，可能带来公司治理与财务上的不确定性。
+- [路透：阿里巴巴豪赌国产芯片，美国封锁越严其转型越无退路](https://news.google.com/rss/articles/CBMijAFBVV95cUxQZDR0UjFIVmxsdExCRU40Ny1Wc0hpbnNqZ0Y0R0pOQ1I4MERxSk9fZEdYYjRhMnl1a0VOTFdPRWFBS3NnLW01bHZIYnI5ZU1wZUZMeGF5bEVzcXFBVU9sX3JaeTZuVks2X3dQbEpGVV9FMnZZLUZmQmVSRks5UzNYcGdWcVZaMWRpbm9RRQ?oc=5) — Sohu · 2026-11-21
+  美国芯片封锁下阿里的国产芯片战略选择，关乎其AI与云业务的供应链安全及长期投入方向。
 
 ## 8. 五粮液 (000858.SZ)
 暂无重要新闻
 
 ## 9. Sea (SE)
-- [4 — 4（SEC EDGAR官方披露）](https://www.sec.gov/Archives/edgar/data/1703399/000119312526469085/xslF345X06/ownership.xml) — SEC EDGAR · 2026-11-20
-  该条目为美国SEC权威一级信源的公司披露，标题仅显示表单编号、信息不全，属应关注的官方披露，需以原文确认具体事项。
+暂无重要新闻
 
 ## 10. 中国人民保险集团 (01339.HK)
 暂无重要新闻
 
 ## 11. 泡泡玛特 (09992.HK)
-- [泡泡玛特(09992.HK)11月20日回购6872.44万港元，年内累计回购26.77亿港元](https://news.google.com/rss/articles/CBMiYkFVX3lxTE96QUtiZjVqU05hUlhZejF3SEZ1N1lTN1JUS2k0cnJsdXU1enJubnJZNnBhbmxVWjJOTk0xQ2NPalNocklTLUJIeXBRR0tnaWVqRVYyWVRkbGh0N21EZ3pBTXd3?oc=5) — 证券之星 · 2026-11-20
-  公司持续大额回购，年内累计达26.77亿港元，直接提升股东回报并传递估值信心，属重要资本运作。
+- [泡泡玛特旗下IP Zsiga新品线下补货，现场大排长龙](https://news.google.com/rss/articles/CBMijwFBVV95cUxQRnlhaktjSEU3OU5kZ0ZZUG1JQk44OENGb0Y1MUNDVFpiOWd2OGhvdnhjNGRMMkVrUUd1ZTJtVk5iS1R3V1FZQU9oc05ocVBISHRYOVp5amR6eEg1NmxwTkFEZjZrSUg1aFB2MFdaREJxaEJnZ3NtYmQyYlE1eE1iVHJOTnlfZ2NGSmZGLVBXdw?oc=5) — 21财经 · 2026-11-21
+  热门IP新品补货引发抢购排队，反映公司核心IP的强劲市场需求，对销售与业绩预期构成正面信号。
 
 ## 12. 周黑鸭 (01458.HK)
 暂无重要新闻
@@ -104,73 +95,62 @@
 暂无重要新闻
 
 ## 25. 中远海运港口 (01199.HK)
-- [中远海运港口上半年纯利上升28.5%至2.34亿美元](https://news.google.com/rss/articles/CBMiakFVX3lxTE9hZmtVMzdGQ2o3MHFOcXg2LVhkQ3ppMDdjOHVQM1FLMjBlR2pZRGFoTTBDZHhYY0xfWTg1Q0NlZTBJaXVvVzhfNGZJaGFwWHBVLXFoeDR6X0daOGxtQzUyT2VrT3Q4M0YyblE?oc=5) — TradingView · 2026-11-20
-  中期纯利同比大增28.5%，直接反映港口业务盈利改善，属基本面利好。
+暂无重要新闻
 
 ## 26. 香港小轮 (00050.HK)
 暂无重要新闻
 
 ## 27. 华润啤酒 (00291.HK)
-- [Verlinvest拟收购华润所持燕麦奶品牌Oatly股权](https://news.google.com/rss/articles/CBMitwFBVV95cUxPWVQyR3ZKOEFMTGtvdW5TajVnZUd3eWFzbWhFbF9YODYzQnplUHBidUo1bVdxci10aVhnV3QxMnVyRFZLdktFalJRYnNIdTdqY0FGb0dOaW5tR2dZRkRzN1ZudjlhbTlpejRfQnFVZXhLV1MxLXJaT0Z5T2d6ZjFlTENnTHlYRXZ4ZUU4WWU0bHUyNmN0akxQVnNKdmgwUWtGRGd5elFxX2ExMFhjR194cUhFbmk1ZGs?oc=5) — marketscreener.com · 2026-11-20
-  华润出售Oatly股权属重大资产处置事件，可能影响集团投资收益与业务布局。
-- [大和下调华润啤酒目标价至27港元、维持买入评级](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9EOFQ5UHUyQ0wwU2VfSDlvUWtxdGtXbXlTYzRJVklzeG12RmVPTHBLUkVrMVEwN1k0UXZpbkZOSi1XS1ZRRFZWWnZpX19XVzBkRDlaWXlFVFRHeDk0Z053ZDV3?oc=5) — 观点网 · 2026-11-20
-  大和因需求前景转弱下调目标价，反映啤酒需求疲软预期，影响估值判断。
+暂无重要新闻
 
 ## 28. 李宁 (02331.HK)
 暂无重要新闻
 
 ## 29. 中国石油股份 (00857.HK)
-- [中石油力争2035年实现油气与绿色能源三足鼎立](https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdk50dXVXMHU0aG1VVGNwOHEwVEk1QW84a2ZUVmlrYmFfejZFQ1FTTEVjaTEtTjNJb2dyalRvOENwd1QybHJYLUFPZ3lGOUltY1RFRVV1UV82U2VwcWNJakdLSVJrZzBpaGZZQ3IxVy0yZmVhNDNjYzNzc2xtVHJLQV9JM3ZjWUt6YnVVWUxFSjZVWmpGazZsTmd2R29EdzI5djUxd3BObU9ZaDJYYzRoWWM0QmZzSTZfSk11U2dld2ZfMUZhelZUSDVncUFVUUFzZmxSZHdkLXVDZ9IB1AFBVV95cUxPNVpzNlBmUzl3c1QyNHNPZzdOanNFT3ZGdFJidTdpVU1QV0JNZzIyNm1fYUU0b2JrQTFDelF2dEk4SUh6dWgweWtrc3pIUWtVMTdKQy1PckpRQ2tycV9VU3RaTnk5eGR6cGVaS1JqU3Vkbm5VVGR1X2VQWWlsOE1NSDFiNmE3YUdWZ0pudHJMakJhZ0dCZlJFcGdVcW1OeHJhdWlDZnZUdkxfalBTbjBHSWZ3dlh6cjd0NW84TkZZRzF1U0RtR19DdE5TQzVGUzVlS0lSMw?oc=5) — ET Auto · 2026-11-20
-  公司公布长期能源结构目标，明确转型方向，影响长期基本面预期。
+暂无重要新闻
 
 ## 30. 中国石油化工股份 (00386.HK)
-- [中国独立炼厂失去伊朗原油供应、买油成本上升](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcmRTWXVxa2FRanpjbVNLRVBtNE9uNFRIaWpsWVZ5ekdZX3lHbWRod1U5VWVtclAySFlmb0dtX2wya0hUX0Fpekg0NGpBcWVmeTZaSGpGcVNIel9FOXFmM09FVFhBMXJNazY0cFR4TWY1LWRpY1hzRGx5WTJZYU01OGdvNkZrNnJEUE5YLTNNZDNnVDZfTHl1MDJXdU9EZWJzZ0RxY2RDY2p4aVk?oc=5) — energynews.pro · 2026-11-20
-  原油采购成本抬升压制炼化利润，中石化作为国内最大炼厂受行业成本冲击直接波及。
+- [中国石化新增对外投资，被投资公司为中石化（北海）油气作业有限公司](https://news.google.com/rss/articles/CBMiYEFVX3lxTE4wdXEwcEowZWNxNFk5bjdrT2JxUS1QSG9kczI5Ym5MRVRfSWQ1MEpLZmh3TFYwX1FZSUJ5bHF1aExxYmNzTDlnRHVGQkVDTU43bmlBNHJQLWZpaW1ubjVxTg?oc=5) — 证券之星 · 2026-11-21
+  证券之星报道中国石化（600028.SH/00386.HK）新增一项对外投资，标的是中石化（北海）油气作业有限公司，涉及油气作业业务布局，属公司层面的实质投资动作，对基本面有边际影响。
 
 ## 31. 中国神华 (601088.SS / 01088.HK)
-- [寒潮推升冬储需求，能源股尾盘劲升、中国神华涨超2%](https://news.google.com/rss/articles/CBMiWEFVX3lxTE9LeDBleWpGLUNNSm5QY1BKZzJfZ2VEaU9qTWFseUlCdFV5ak5FZVctTGlHUGJiZlptcE52aU1SZjdWUGJRSDYzeVloUTRKSDJ5aV9XUWR6MmE?oc=5) — Jiemian.com · 2026-11-20
-  寒潮带动冬储需求、油煤价格走强，推动神华等能源股大涨，属有明确原因的股价异动。
+暂无重要新闻
 
 ## 32. 埃氏金业 (EGO)
-- [埃氏金业周五收跌7.26%](https://news.google.com/rss/articles/CBMihAFBVV95cUxNWnMzWjRrVGE0LVo4OUNZTFFFVnVZMzJQWlotTXpRRUZrWVJaRF9wdmNyTzc5YXdRNUo3X3NBOTl0ay0xS1owSTEwOHNnbEhxWGF0VFlqSjl2THpPV0tONlQ0Y1VSZ2w2WkxaNVRIMnZiaUx1LWtnVGVZd1BIck56cFRGS2w?oc=5) — Global Banking & Finance Review · 2026-11-20
-  金价跌至14个月低点、市场押注美联储加息拖累金矿股，EGO单日大幅下挫。
+- [Fairfax 大举押注 Equinox 与埃氏金业（Eldorado Gold）](https://news.google.com/rss/articles/CBMigwFBVV95cUxNWC1FenQ0U1pSMFo2NkU4SFpuc0RHcnN3RUR2OEtpUmNoT08xUkRTdW0zb2cyS2V0b3JtVUluejlLNUtSOVJQQTFSdndqRFlmaVotYTlwclhURjRsdkQxcml2U1h2OW1xV3hyNmMxYmUzdGtnS2ZBVElMVHdrOEg0THZLVQ?oc=5) — Wisevoter · 2026-11-21
+  知名价值投资者 Prem Watsa 旗下 Fairfax 重仓金矿股，持仓涵盖 Eldorado Gold 与 Equinox；顶级投资人的大额持仓对股价情绪构成支撑，是值得关注的机构动向。
 
 ## 33. 巴里克黄金 (GOLD)
-- [巴里克Kibali矿健康限制叠加金价14个月低点](https://news.google.com/rss/articles/CBMigAJBVV95cUxOOFQwRThaNFgzS2VuYkVMMUxaYlRKckFseEJyTmFlVEFDUWpzY2ZadkFKeGtKSDgzNkNIZnYtZmltaDkta01jQUJDQ0ZNd01lVDduejM1U2Ezb3FUZEFDazBzR0hsel9PTXNQcC10dXhhc0c0WEROY2Z4cGhMQW5NRi1kZkR0Sy05Mm9EZnVMd2I3NXZzTklIZHRXQXdnRzdtQmxZN244VVdHZ2VDRGJLOEhwRTFaaENSRkE3dHkwZENBX2hXSXhGZ3NaSEpjTVJCVjI3STJqNWx4eUJsMGJjQkhObnFNSUtsaWo0bU5Xc3ZfUU9MQ01qdEZHWWxiZFBs?oc=5) — ad-hoc-news.de · 2026-11-20
-  关键矿山运营受限与金价低迷双重施压，威胁产量与盈利。
-- [巴里克增持Hercules并提交S-1文件](https://news.google.com/rss/articles/CBMi9AFBVV95cUxNU2owTlBNOVNzWnZUNlllYVFiUkItamdfNTYyeTlycGRwYXU0a0ZXT1k5NkdlMzVNWS1NM2s1blZjbDl2Uy1sb0xPWFllUDBIV3VQSld3Q2J1VUpYRzFSYzY0bUR4Wk14X05Dd2c3U1pVOGtDRWVlWkRDc29BX2thMUZ2OE4yVnB0LTlZTkhYMHdHYXhBSkRTajFxSmQzQnhLQUJoeEpoZDduTi1FMHdDZzR6RjMwT0M2UEVtZnZ6UU5sMVpCSXNIZDZpUmp6WGRGQXNNQjAwUHRMRjRCcENraWZFV2ExcGY2QXViUW1yZFlVUmpY?oc=5) — ad-hoc-news.de · 2026-11-20
-  公司加码Hercules投资并推进S-1申报，属重要资本运作动作。
-- [巴里克黄金股价回调4.8%](https://news.google.com/rss/articles/CBMijgFBVV95cUxNdTZrdjIyV2RuOE5oTFFLeW9XWUpmRDUzcjloMXo1T0ZJU0VmVnJ4VHNaSklaTVQxa1ZnTHFadGR4bkZEdXRZaHBDTmdBUGJUZERUMXVkaWNIeHZyU2lxRDRlanhUQk9ZRGVwSXJ6UDdZYXBnSkVrWmlkLWJJNEFlWW9oYWc0YTdmZEdObk13?oc=5) — Traders Union · 2026-11-20
-  受金价走弱等因素影响股价回调，属有背景的股价异动。
+- [巴里克敦促股东拒绝每股 26.40 美元收购要约，金价疲软考验营收](https://news.google.com/rss/articles/CBMi5gFBVV95cUxQMXVKMFdqcEtxdkVBY1ctZjV6Z1BuUHJid1Y5Z0NCRWNQSmZrcEczcTgyX2tCU1lGZU1hZWc0TTZTMG1Jb3pSWWdIZ3RuTlNWeHdzWWdkX1B1ZjdHZEFPODBCR1ZpMlN3ZGpPTXVTclZQUGlNNnhObXVPejZCaXF0RU9yWW8yT29wSmJsbThUUWdvX01aTmVDQzRTX0pWWE93cEZ5TEV5MXhsUlRRUnBBREV4R2V2QjktVC1UZkpUY2xNMUdkbzVRcEFlWlFubks5NWI3N0tZc3hLS3dkTFNyTjd6YXRYUQ?oc=5) — ad-hoc-news.de · 2026-11-21
+  有买方提出以每股 26.40 美元收购巴里克，公司认为报价低于市场价值、敦促股东否决，属潜在重大并购事件；叠加金价走弱，对公司营收形成压力。
+- [巴里克产量指引维持不变，但金价创 14 个月新低是关键变量](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQa0drZEhzQ3VxQkVlOFc5SGhvMlZOaTV6b01UYjJ5eG94eG4yNFprRWNqVUpFMkpPX2lNcHZMNUc1RjR4cUpkUEIwXzVHMU9tN2J3enpQcmRMbkM0NmVjaW52TVl6RzlaOWxrbjhycXp1WjUtSldXZ3RrcjdObDRRTzgwaTNDbzhjbDQtM3ViMy1KVThKcXN4UVA4dHdpUHhieHlNUHdSUGRCYk5fbkZPSlRVLUFZc0gyRFpGMGM0UGhVczZQNndQMGdoYTJCWUlYeHp1SVZsc0NkUUF4OThfUE5YVTZRV3c1enNkcA?oc=5) — ad-hoc-news.de · 2026-11-21
+  公司维持产量指引，但金价跌至 14 个月低位，成为影响营收的核心不确定因素，属对该公司有直接重大影响的行业/宏观事件。
+- [巴里克以每股 0.87 加元增持 Hercules 股份，同时驳回低于市价的 26.40 美元报价](https://news.google.com/rss/articles/CBMi-wFBVV95cUxPS1hBNmFsSGR0TFNsS2VDNFZ1eTZzTF9HcUxKbms0OUJQVHhGNUsxOGNBdElkakNGRm9iNGNFZXVuMnhNQmd3S1ZyV0ljbjRGSEROWk1fMWNxOEpfWUFZTGFmbnVXX3RQcEd4cXJWRWt6Z2c4VkJPZlFCblV1dTJieHcyeFkwU0pjSVVCZEwwMlJiYkVLWnF4WURia3FJLU1hZm5KS283ajE0STJRb2NPbjlhcllpRC03MWdjRUk1OHJIQ3FMNW51aDNxVWRPeEhUbm1GelpueDlLVXduWVlsNV9KckRrQ2xDUUJrRzRsWjlMZ0x3OWQwRmUtRQ?oc=5) — ad-hoc-news.de · 2026-11-21
+  公司加码对金矿商 Hercules 的持股，属对外投资动作；与拒绝低价收购要约一并反映管理层对自身价值的判断。
 
 ## 34. 美国美盛 (MOS)
 暂无重要新闻
 
 ## 35. 阿特斯太阳能 (CSIQ)
-- [阿特斯太阳能暴跌：据报道已聘顾问、或考虑破产](https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZC10cUktNUptUUpkcTl4V2d4cFVsOXNOQTJhZUVfZ1JJRlBCdFZZUkg0VUJvaGlreWNpU0hSY0QtSENlZnRpd2VLSk9vdTZ0dDdWaDdWS0UtVGpkQk9OMUc5d3NVb3lBaWRqX1JNMWIySmtsOGVLWW5mY1p0X3VKeFBma3pNM1E3Y2JSclB1Q0J6cHRNcjU3UW82RmxkTVhjZE42ZGQ2dGlJVHBnTGpjVmhIQ011MUZ2Q21LNXhCS3k1MjktWVBYdUN5bmVsRmpDUkhEU2VGTlo?oc=5) — TradingView · 2026-11-20
-  被曝聘请顾问并考虑破产，财务困境引发股价崩跌，属重大信用与基本面事件。
+- [ENPH、FSLR、CSIQ、SEDG 等在大幅抛售后转涨，太阳能板块是否酝酿反弹？](https://news.google.com/rss/articles/CBMi6AFBVV95cUxPQUNha1RDSWlOVFdBcnNha09YTVRDUXI1YlFVUmRlSHJzQUNEekZ2YWkyMDJsUTduY2lCTmlPVU03VEluZVFYOVhxYU5YRTRxM21VZE1US2RCaDBHTXBMR0p5QmxDWVVudkhmNVQ0UmpLam1Bd0JFNlUzWHY2cHdZb3hxd0NfMGd2T25BVk5kbk1hX0NYeDhscl9LZ045c0kzMHB4MFp4cjhwUUZBX0ZsbWV3emNZYUVMV2syRlBjVlUxMks3U0hIdFRiRkdqYzdCS2YyU1ozVWVVLTVzeHR2MTdReDh0NGJ3?oc=5) — Stocktwits · 2026-11-21
+  包括阿特斯太阳能在内的多只太阳能股在经历大幅抛售后集体回升，属行业层面的异动，板块反弹信号对 CSIQ 股价有直接影响。
 
 ## 36. 微博 (WB)
 暂无重要新闻
 
 ## 37. 携程网 (TCOM)
-- [携程董事长：未来五年中国有望迎接2亿外国游客](https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQ0NPQ3FkWnctd3lCcjJnU0ZZWDFydjFLdVJJczE5UzViS0xCWnl3LU5UbWp1UlJ4Z096NzFJZk9qMUtVUFdfeTVpNHEtVmFxZlFIUGUzQU1XRXI2MWN0M0pVY3Jqd2U3elE4Tl9yd3EyQmMtbHdtNTlFR2Y4azNpV2ktSFYzNUdlSTZTTkZPc2FCaHlMdTFzX0w3blo3RkNBZzBzbWNoTmx0aWNBRUl0SWVoQXgtNFNW?oc=5) — 一财全球Yicai Global · 2026-11-20
-  携程董事会主席对未来入境游作出2亿游客的重大展望，直指公司核心业务增长空间，属行业/宏观层面对公司的直接利好信号。
-- [携程集团与澳大利亚旅游局达成"One Voice"合作，将全球需求转化为赴澳旅游发现](https://news.google.com/rss/articles/CBMisgFBVV95cUxNbkl2QVNIRzkydU5Lbm9KNmRRTEtVRURUWEJLb0ZVZE1McmpBWUJLTy11WGpzeGhZbkJCQ1AzT0JHTzExM1lrVTN5R0FrbzV5OGFJdGpPb3FKaEN1YmtFenlCS0k3cjZOYm5HcHI5YVlXSzE1YlhnX3hrZnp6UElrU3ZpbEpETGNsRFdleFRtdzBrWjdVZ2dTaGRfRGtVTkpGTzgyRTVqUFJlOHN2UjdDRGhn?oc=5) — etnet 經濟通 · 2026-11-20
-  与澳大利亚旅游局建立战略伙伴关系，有助于拓展出境游及目的地营销业务，属实质性业务合作进展。
+暂无重要新闻
 
 ## 38. 霍顿房屋 (DHI)
-- [收益率下行推动房屋建筑股反弹，D.R. Horton走高](https://news.google.com/rss/articles/CBMilwFBVV95cUxQb242UUNFSTYtQ1pMcC1uWlpkZWhJVzc0NzdwT0FXWEZJNUdGb2dvNEdzZEZFNnNXVEM3a01xbGRPTjZhZ25uU051UGZ0QzdJaEZydGhDSWY4QjVYVVdGaWtQeUJNRVV4VmhGZVlvdWNJOU4tcS1GVGNkVFFuNHEzRld2eUpBWXQxdUNfSVMzQkhUWFNWMXV3?oc=5) — Quiver Quantitative · 2026-11-20
-  利率及收益率下行带动美国房屋建筑板块反弹，公司股价受此宏观因素直接驱动，属有明确原因的股价异动。
+- [美国房屋销量创25年来最低水平，楼市要崩了吗？](https://news.google.com/rss/articles/CBMiyAFBVV95cUxOeDNMOV9leHduaEVaSUlGWkNzdWh2ZTJ3eVFiWWNDNlNtaVJaT2w4SzlYRzJYTmtzVXR6b2dCTmJGUlhNd0Y2Um4wenE0cWFMV1JtSmNnZGlLZk5OSXNNLWZ5NDRkZkdFcDFsLWtiX1ZieVFZOW9kMXduOHNDZ1o0bDFVQ0stSnU0TDRUV0FlTHF6R1BUNjRUZU1sbHg5Ni1EVzVzRDBxMDN5cmowZWVnUjMxTXhIUWFrM1o5VnJQODRNa0p3ZnhOUA?oc=5) — 24/7 Wall St. · 2026-11-21
+  美国成屋销量跌至25年最低，直接冲击以住宅开发为主业的霍顿房屋，对其新订单、交付量与业绩前景构成重大压力。
 
 ## 39. 汽车之家 (ATHM)
 暂无重要新闻
 
 ## 40. 卡夫亨氏 (KHC)
-- [业绩、展望与业务组合调整支撑股价，卡夫亨氏走强](https://news.google.com/rss/articles/CBMitAFBVV95cUxOb203Zms1akZfUGZkRGgwSjJoMUJkNDNyRVNheUM2Z3lDdDVlTmJMVzRSUmVEbndJaS1xWDJIMmVnVU1nTmg4UTN3X0gzWUcwSUZxUl93MFRHaGE0Z0Q1ZTdqZ01nYWlCRHFaOFpzbEc1bDRIZDRDZC11LXBUaGJrVFdSZm5CbEgtb2ZpaDl4V29PN2hpN19pWHlSRmpQeTRYVlhCOFRDYk5YWnZpNVdDa0JuLWw?oc=5) — Quiver Quantitative · 2026-11-20
-  涉及业绩、未来展望与业务组合调整，直接影响公司基本面与估值，是当日与公司最相关的重要事件。
-- [食品行业高管简报：卡夫亨氏实现60%计划流程自动化](https://news.google.com/rss/articles/CBMi4AFBVV95cUxOTi1acEs0eUg2T0p5Ymo0VzM3cnRKczUwMXhFbGsxLURwOUItNEhFQ016bFJzaHlWdHhScG9CbnY0VGZTSFlMSkxnU2l0bDlRcDNXR3ZyX2lOMnJDWFVvVVdWTEV5QmEyVWdoZE1QZTZ3cHB6ekg0Rk5KRTU0eUJTSGRoTzk1bDVfOEVpQnNWb0taOEpYZThCRTBaTUF3bzJfdV9Ub293d0hYa1VBanFtZHAwaGZEb3dfS1FORENjc0h4OGpSWXpmSXUtQ3htTzVwTFhUX0xSdjFSQVVsUU1BMg?oc=5) — Food Industry Executive · 2026-11-20
-  公司推进计划流程自动化（达60%），有助于提升运营效率与利润率，属经营层面的实质进展。
+- [投资者如何应对卡夫亨氏的定价上限与成本通胀](https://news.google.com/rss/articles/CBMi1wFBVV95cUxPRHhUVHRvTDNEdV91cW1oNkJfS1lyb3dPMFM1dnJlQXoyWEtZZGlDSS1TRF9XYTNLWGppZTJIRnBlSlBSNjU2b0c0R2l2WWo4SXQtRUU0R0ptZnhwQkpqUlNfdWd3WE50X1ZIWTdNbm9NbzBkZGpEZ3JDa19Ja3NkektDdWZQaVdzblpxeWg0d0p3Yzc0LTh2aDNVTDN6ajhNaGhwNkd5NmlFc3d4ekNFTDQxNm9xZm9mUEUxeGN6Z3F3M1BkaWt4TzVSWi1yWWJXYjhLYl9PWdIB3AFBVV95cUxQbjFuYnB4a1lXbU01NFV4MGJqYkhZNDdvWHJtbzdKenFMbTU1UlZjTERmNG55akFBMDBCMW5PUERWX2tfMFVXYW95WDNiOFNnMk5wbVlXYnAwVWhBVTRjYnBtQVQ2NUNiQ1pjcVlYQWJEQUlvWUVXMnFQNl9wQWFxd2ZVRWVyNWgxcUt3VHBlRmczUVlFMnRZU1pUQ1hhVVBuOExRSHpTdmRkYzBZZUZiZThuaUxaWXA1bXhTQ1JGZEpqaTZCM1k4aXp2SEVwbWN1NWkyZlRXMy00c21v?oc=5) — Simply Wall St · 2026-11-21
+  聚焦定价空间受限与成本通胀对盈利能力的挤压，属于直接影响公司基本面的关键经营压力。
 
 ## 41. 达仁堂 (T14.SI)
 暂无重要新闻
@@ -182,35 +162,29 @@
 暂无重要新闻
 
 ## 44. 星展集团控股 (D05.SI)
-- [摩根大通上调星展集团评级，目标价升至82新元](https://news.google.com/rss/articles/CBMixgFBVV95cUxNenF2QW5iWjJsT0J1MGtGNVU2dVhYb0ZmRkFPV2cxRWdQWDRxSEZRX3F1YXJYN1hnTkJaMjRuUmduQ19SQ3oyLUg5bXdCamkwMFRZTVpWLUs1bXliNzJBYXJKNU5QX2Y5OVpCYXRQdFpGNW9OajhfRHVrQi1lQ2JfTkhPeFBGRHJJSFFrSEJQV28zcWRNMkxLbFY0MHMxcV94MDFDMUJ0Ul9ubEwybVVCRjNQR1h0UFpGWGdSR0h6UmJOQmIwemc?oc=5) — ad-hoc-news.de · 2026-11-20
-  大行上调评级并大幅提高目标价，构成股价与估值层面的直接催化剂。
-- [星展银行将区块链奖励平台扩展至企业客户](https://news.google.com/rss/articles/CBMinwFBVV95cUxOU0w1MFFwRUk5QnE3bzFIQ2YzckJXbWgxM2xDQnd6RkV1bVhlYjhvTDhWTlhQdzR1T1hrOXA4M1hmc2txMjRzUmo5ZzFRZ19iVnhaemR4VFFCa25HZUFCQmJoRk1aOS1sVGZyNXF0YWlkVEJUbDdGZVF0eU4zUENmOW9wSmhLOUJxc0MtcXdqRVpfOFlDZjdEY3NSY3lMSEHSAaQBQVVfeXFMTlFyZmR5OTQ4cHNxaGtKUGdIQ0xqWjRlWjhHMFFVa083ZW8xbS1ZSW1RMzQyOEIzTVFnM0RfYTdoY055YnhlWXotRmhpVEpWb1BnR2FVVkw3cnRWc0VpblNIU3phc2g2VHpXUGJLSWFYdGpWWVJOUkFsbFpPNHBZMjFwdFhoSTVFNjd0NWxUZkxDTkFmZVdjMm4waHM0VlBJYkZ5WU0?oc=5) — CoinTrust · 2026-11-20
-  公司将区块链奖励平台拓展至企业客户，属金融科技业务的扩张进展。
+- [亚洲各银行竞建数字支付体系，Circle转向星展集团控股](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWVc5X0tiLVJMREVhQXFpLTFFNUZ5ZG1kNHJuQWVjOHZ4UER4YlFFc0tXMUpXX1YxOE5VZmg0anozYk9aOXFOLTZ6ZWV4ZE1yaE8zVUE1OE9nNTBncGVpajRoUFppbC1kQ1J0WUFtMkJuNzZZVGh0dm9kTGlIdVYzYzgzUFF5d3B4aUFuSURrTHZaRVJMcWdLelRfUkFtNk03UDdxcEN2ckg?oc=5) — Moomoo · 2026-11-21
+  稳定币发行商Circle选择与星展合作推进数字支付，是星展在亚洲数字支付及加密金融布局上的重要业务进展。
 
 ## 45. 大华银行 (U11.SI)
-- [大华银行与广州市政府签署谅解备忘录，拟设立科技创新中心](https://news.google.com/rss/articles/CBMidEFVX3lxTE5BbG9zN1RxdWhnd3hFcUkyRXVrWlkwSk83NE5adUtremhxUEhzVUxfd2tGWUdjbjNkYlk1VEVJNlJJcHBoLXVsR2Y5S2xKamVKa0hQOTRWQnJBYkRBN1Z2bnVRUUdoRGFDT0VWYUNpNGUxUEhK?oc=5) — 联合早报 · 2026-11-20
-  大华银行与广州市政府签署谅解备忘录并计划设立科技创新中心，属重大业务布局，对其中国市场业务有直接影响；多家媒体报道同一事件，已去重。
+- [大华银行股价：星展下调目标价至18.80新元](https://news.google.com/rss/articles/CBMiowFBVV95cUxNb1pPVmUybE4xb2lFUjVlQTV4M2ZYYUxtRFB1NTB4dldNZTJ0dTc1OV9RbnBWQnFWTnNTMmc4bFZHSXJBWlVhRkV6RjMtdVl3bE9jaDh3RTEtT2FINllCUUdOX0JVdENsQlhMZHZ2b3pTcjlaZkFyQVlOREIzTHFPQXExeUZGYnF2cnlydHNxN0JBaEYyNHVMYm1XMUFfVmEtNUpF?oc=5) — ad-hoc-news.de · 2026-11-21
+  券商星展下调大华银行目标价，属于对估值的直接下调，反映市场对其盈利前景趋于谨慎。
 
 ## 46. 扬子江船业 (BS6.SI)
-- [扬子江船业重启33.8亿元太仓清洁能源船舶船厂项目](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcXhGYmpKTnBqRmo4cXM4dktGR3d0N05jeGR3cHR3UHhJZkhRUFVROE5QNl9xelZuVVBKZG5VQVRCbEQ2WTNfWkR3dFk0Z2EyZGs3Ull5a0NIUnBQbUlub0FaTF9zTGpCMGNBbF9nSWt1WC1VNWtQd1dQZTlqNVFBUVA5Y1lJb1Q0Mi1jcHRTTkhQaU82bU40aFdGdHhlUVJ0OEp6YkNyb0s0eTg?oc=5) — IndexBox · 2026-11-20
-  公司重启总投资约33.8亿元的太仓清洁能源船厂项目，规模庞大，属重大扩产与资本开支事件，对未来产能和订单交付影响直接；多家媒体报道同一事件，已去重。
+暂无重要新闻
 
 ## 47. 虎豹企业 (H02.SI)
 暂无重要新闻
 
 ## 48. 牧原股份 (002714.SZ)
-- ["十年没见过这么便宜的肉"：多地猪价低于菜价，牧原股份巨亏却股价飘红](https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kd21nblZ0bkI2NnlITXo2Z0R6ZTctcF9HVXpQOTA1U0I5R0lmSVU3c0g5NUdxUmhpVUNrNHdIV3FpdEdpN3RpVWpubUljUTVPX3IyXw?oc=5) — 虎嗅网 · 2026-11-20
-  猪价持续下跌致公司巨额亏损，但股价逆势上涨，凸显基本面恶化与市场预期/资金面的明显分歧，属重大基本面与股价异动事件。
-- [牧原股份H股公告（翌日披露报表）](https://data.eastmoney.com/notices/detail/002714/AN202611191831866972.html) — 公告-其他 · 2026-11-20
-  交易所官方披露文件，权威一级信源，涉及公司当日H股回购，对股东回报有直接影响；与多家媒体报道的回购为同一事件，按规则以官方披露为准。
+- [牧原股份H股公告（翌日披露报表）](https://data.eastmoney.com/notices/detail/002714/AN202611201831905237.html) — 公告-其他 · 2026-11-21
+  属交易所一级权威披露，翌日披露报表通常涉及股份回购或已发行股份变动，是反映公司资本运作的重要官方信息。
 
 ## 49. 海尔智家 (600690.SS)
-- [海尔智家关于以集中竞价交易方式回购A股股份的进展公告](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1hbjRtSkI2NDdjYUkxdGRwR1FpaEVTZzM4N21WYi16M08tQ01oZE1iY0daM01xSERHTUFxTXYwRFhGMkFhWXlqN2RxOGdLQk11S0hveE5B?oc=5) — 中财网 · 2026-11-20
-  公司披露集中竞价回购A股进展，截至11月20日累计回购约1.14亿股、当日耗资约2149.76万元回购94万股，持续大额回购彰显管理层对自身价值的信心，影响股本与股东回报。
+- [海尔智家股份有限公司关于以集中竞价交易方式回购A股股份的进展公告](https://data.eastmoney.com/notices/detail/600690/AN202611201831901026.html) — 公告-回购进展情况 · 2026-11-21
+  公司披露集中竞价回购A股的最新进展，涉及真金白银的股东回报与股本变化，直接影响股价预期。（与S49-7同一回购事件，以官方公告为准并去重）
 
 ## 50. 格力电器 (000651.SZ)
-- [格力电器因150元成被执行人？最新回应：系公司作为原告的商标侵权案件受理费用](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9iaHI1cngxWEE5bzg1STB0THlxT0E2QTNuNkxkbUo2eWdGeWljNVF5aklQZEdOM2JETmJwUTBPX3FwZHJGV3U4cjlwWFZHYTlQa2ZTLTl0WFQyZkEtOV82WA?oc=5) — ThePaper.cn · 2026-11-20
-  针对"因150元成被执行人"的市场关注，公司澄清系其作为原告的商标侵权案受理费、已缴清，并非经营风险，消除外界对法律风险的疑虑；金额极小，实质影响有限。
+暂无重要新闻
 
 ## 51. 赣粤高速 (600269.SS)
 暂无重要新闻
@@ -219,75 +193,71 @@
 暂无重要新闻
 
 ## 53. 恒瑞医药 (600276.SS)
-- [恒瑞医药关于获得药品注册批准的公告](https://data.eastmoney.com/notices/detail/600276/AN202611191831862714.html) — 公告-其他 · 2026-11-20
-  公司获得药品注册批准（官方公告），新药获批上市将直接丰富产品管线并贡献业绩增量，属重大利好。
-- [恒瑞医药关于药品上市许可申请获受理的提示性公告](https://news.google.com/rss/articles/CBMiVkFVX3lxTE55WnpPUVVTeTliRUIyTGVPVXJvUE4zdmFqQV9YaVVpY3VuU2d1VzhLODhYWmNid3B5aTNGdklIVzRDajNBTDlHNDgzSU83LXhqeG9vMnNB?oc=5) — 中财网 · 2026-11-20
-  海曲泊帕乙醇胺片新适应症上市许可申请获国家药监局受理，若获批有望扩大产品适用范围与市场空间。
-- [2026 AASLD口头报告：HRS-4729Ⅰ期研究亚组结果，肝脏脂肪最高下降81.0%](https://news.google.com/rss/articles/CBMiYEFVX3lxTE41a0N1cDhVRk1jb1QwdDcwT1NHWmZ5ZEw4eFJLRFlXLWdpU3kwQ1BWRjhwbEJiZFMwOFpKWmwzbjFEWklUWFhjWXVnTU9SY1RrOEFHclJfa0toTVpYbUFsZw?oc=5) — 同花顺财经 · 2026-11-20
-  公司GLP-1/GIP/GCG三重受体激动剂HRS-4729早期临床数据积极，显示代谢性肝病管线潜力，影响研发估值预期。
+- [恒瑞医药关于药品上市许可申请获受理的提示性公告](https://data.eastmoney.com/notices/detail/600276/AN202611201831897687.html) — 公告-其他 · 2026-11-21
+  新药上市许可申请获受理，是研发管线的关键进展，有望丰富产品组合并贡献未来业绩，属影响基本面的重要事件。
 
 ## 54. 顺丰控股 (002352.SZ)
-- [顺丰控股2026年10月快递物流业务经营简报](https://data.eastmoney.com/notices/detail/002352/AN202611191831865599.html) — 公告-月度经营情况 · 2026-11-20
-  公司披露10月月度经营数据（官方披露），业务量与营收表现是跟踪业绩的核心高频指标，直接影响业绩预期。
-- [顺丰控股独立董事辞任暨补选独立董事候选人](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9GYklRcDRDZHpMbWZUbnhvbjVKMDJuOXBvczJ6T3FGUFJ0d2lyLWltRTgxTkplVExXX2dIYmw4U0hBejJYYm90T0VEVXRmYkJRWGRfemhB?oc=5) — 中财网 · 2026-11-20
-  公司独立董事发生辞任并补选候选人（马毅），属董事会/高管变动，影响公司治理结构。
+- [涉嫌违规，顺丰速运、八马茶业被暂停参加全军采购活动](https://news.google.com/rss/articles/CBMidkFVX3lxTE9fNnZxRElrbi1sRDJxNHZ3WHN4TUN6WWJPV3B1M1pKY1hfcFJzLUlqU1FNNnNIQU4tMGdBYnhqeGxhMTB6a3MyUGprOFhFSVBJcFhwQUJTT2w2YkdKdWRmVVFqSEJ3aE5sVW9lTnJBNE51V0dYOWc?oc=5) — 新浪财经 · 2026-11-21
+  顺丰因涉嫌违规被暂停参加全军物资工程服务采购活动，属监管处罚类重大事件，可能影响相关业务并损害品牌信任背书。（多家媒体报道同一事件，保留最具代表性一条）
+- [顺丰控股关于独立董事辞任暨补选独立董事候选人的公告](https://data.eastmoney.com/notices/detail/002352/AN202611201831905383.html) — 公告-高管人员任职变动 · 2026-11-21
+  公司独立董事辞任并补选候选人，属治理层人事变动，为官方披露的重要公司事件。
 
 ## 55. 保利发展 (600048.SS)
 暂无重要新闻
 
 ## 56. Grab Holdings (GRAB)
-- [4 — FORM 4（SEC EDGAR）](https://www.sec.gov/Archives/edgar/data/1855612/000185561226000162/xslF345X06/wk-form4_1795177959.xml) — SEC EDGAR · 2026-11-20
-  权威SEC Form 4披露：首席会计官John Pierantoni于11月18日出售28,153股、交易后直接持有541,223股，属内部人权益变动，为官方一级信源。
+暂无重要新闻
 
 ## 57. 布伦特原油 (BZmain)
-- [Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal](https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5) — EnergyNow.com · 2026-11-20
-  美伊和平协议后摩根士丹利下调油价预测，反映地缘政治风险溢价消退，对布伦特油价构成中期利空，是当日影响油价的核心宏观事件。
+- [高盛大幅上调油价预测：布油年底目标升至105美元，2027年供应或日减100万桶](https://news.google.com/rss/articles/CBMiT0FVX3lxTE92dWJZdHlrV25yeWg4TGd5alBUdngtQ0VEUUhCR2x4YjM5bUV4aFZiZGQzZUxONmhIaDBGWlFvbmF4S2FDalktdWhWUFBFR2c?oc=5) — 金十数据 · 2026-11-21
+  高盛上调布伦特目标价并预警2027年供应收紧，对油价中枢预期形成重要指引。（与S57-1、S57-11同一预测事件，去重）
+- [中东供应宽松信号浮现！四大产油国出口恢复战前水平，伊朗连续两月零装船](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9sXzEzeWxyeV82LWNvYjlGRkhjRnlUUW9OWm50MmlYYWxKbkVQclZNNXNkanMtQjJSWmk0aVJuNjJhVF9FcVp1V2NTdkhuZ28?oc=5) — 金十数据 · 2026-11-21
+  主要产油国出口恢复提供供应宽松信号，是压制油价的关键基本面因素。
+- [纪录新高：EIA称2026年美国原油产量将连续第四年创历史新高](https://news.google.com/rss/articles/CBMisAFBVV95cUxPeGtrcXB2OTNFRGtsbWNWejBqVS1BdlJmbllFdGctQW1tcmNKMTQ0T3RPQVdReUFGZEMzNU5BaVhZNnM2SWZJalRGY1BzWlhnQy12b0tvY2c5NXJjNVNHMnNQUjFYRXZVU0JsaTRKVnJSZW5VVzI1LWR4aTFDSlZXNDdwQl81d3VnSE5sUGVHMXlRS1QtdlFvNy1fSnJKMnJja1JGR0pzRWtBb182WGJ2cQ?oc=5) — EnergyNow.com · 2026-11-21
+  美国原油产量持续创纪录，供应端宽松对油价形成压制，属重要供需变化。
+- [原油周评：战争阴云VS供应过剩，油价周线三连跌](https://news.google.com/rss/articles/CBMiXkFVX3lxTFBfN095WWMzaDFkVzZrQkdRMWEwSDE4YnZZUVBJZF8xQkRVaS1zZWZpYTU2V1NrX1Z4OHZnS3lvY19tN1UtUnZqWDBrTVdWU3dmYzNZS3FLZkdpS1pYTUE?oc=5) — 同花顺 · 2026-11-21
+  地缘风险与供应过剩角力下油价周线三连跌，反映当前价格走势的核心驱动。
 
 ## 58. 西方石油 (OXY)
-- [Occidental Scraps New Oil Hedges as Iran War Fuels Price Volatility](https://news.google.com/rss/articles/CBMinwFBVV95cUxPQ1Yzd2IyUzdqUUNEd0t2ZVBtTHRIMVA1bzBVODdqbEVIQ1lpSW93cWdRM0ZmTy1mQjNibFlLWnVtS3kyWDYxZVdaZDJuU2V6MXVZamFWUkVzSmZQbGkteWtkTTBtRnJtUDJXZGdyN3Z6WFlsbjBIdDFoejZXdUFxVEVDeHRYLThNaUxMUDFkbm5GTUJtVGVZTU1hb0hnMUE?oc=5) — EnergyNow.com · 2026-11-20
-  面对油价剧烈波动，西方石油取消新的原油对冲安排，调整风险管理策略，将改变其业绩对油价的敞口与敏感度。
+- [西方石油：两笔债务要约涉及10亿美元](https://news.google.com/rss/articles/CBMivwFBVV95cUxPMHV2d3RPWDYyWXplbWpWM2lCTGRsZ3hkZjJ0ZGNmSzlBNTFyVGxoRm1nbkhaNGpLeE9KRUJrOG1ZTllSTUR1MUhWZV9ORngyZmt0WGdJVE14SzM2eW5Uc3E3ZHdmU2FSQVBQNzZhWUNGQldMYW5sR3FMeTY0Qkw5dWZLWFNzWHJZejh0U0JidDdzY0R1Tkt5M1BxSkhnYmJ0TXRNYm5XRUZ2VUROd3BKTFZ1VnZST3VDTGVjb0c3VQ?oc=5) — ad-hoc-news.de · 2026-11-21
+  公司发起两笔合计约10亿美元的债务要约，涉及资本结构与融资安排，属重大债务事件。
 
 ## 59. 京东 (JD)
-- [AI成为第二增长变量：京东利润现金流大幅向好，研发连续三季加速](https://news.google.com/rss/articles/CBMiSEFVX3lxTE00THpxZWgtcVNGR2VTNXdFSEQ2RHVIVGZ2U3c2NE9wMW1oRUdXTl9PMTZqTlpoeTgwOW91bnhoRXhHczdmSU5zMw?oc=5) — 财联社 · 2026-11-20
-  京东利润与现金流显著改善、研发投入连续三季加速，反映基本面与AI驱动的增长逻辑改善，是核心业绩利好。
-- [京东与VTC签署战略合作协议 在港投资超350亿港元](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1qcVNFTlRNTWQ0Wnhnb0g2U21LclNranlubUpCWmI4blBuekVaRGdxY1lhYVJfNTE2Q01Bbk9sMjc4RGU1QkcyeDViNVBjMk9EN0RVcW9XUzl5TGpmYlZaM01B?oc=5) — 观点网 · 2026-11-20
-  京东与VTC达成战略合作并计划在港投资超350亿港元，体现重大资本投入与区域扩张布局。
-- [京东与华为OSTA星芒达成战略合作 三年销售目标700亿元](https://news.google.com/rss/articles/CBMijAFBVV95cUxPb09lN1BqVUdRLW1uVi1Xc1ZORFpqZW8xRldGODRDQ1ZOTFMydGUyVERyZS02LWdrS2FZQTR3dl9Dc19BV3VpOGxHYWhDWjZhZ2UzbXZXOThrV0I0MnhuQl9kRzduOFhsLWUyckZhM0JUZXRudGRWRUFKMGFycElHenFMa3hmUnR6Vlc4TQ?oc=5) — Sohu · 2026-11-20
-  京东与华为星芒达成三年700亿元销售目标的战略合作，有望显著拉动平台GMV与营收。
+- [京东第三季度业绩不及预期，股价承压](https://news.google.com/rss/articles/CBMirgFBVV95cUxPcWdGM2tnY0FSRTlxMG13cE9OcEYycm9RaWZaalY0VUJQVmhfaFVjS1lJaHN5TnRtVTN3a3pMYm9fREFZa1NRSGN2R1NGRFVYckZpb2JjT2lFQmhmdEZDYnNOcm01Sjlnek9yVjhxdHdYQXA3OTVlRWh0TVMxUkRMWGh2dGpKbnh0SjBhYkUxbWlnWTRjSk5SRGJSS2ZFOEVrd0FzTUJ5aDRvVjA0WUE?oc=5) — Moomoo · 2026-11-21
+  三季度业绩低于市场预期并导致股价承压，直接影响基本面判断与估值。
+- [便宜商品、失业？京东收购震动德国电子零售市场](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1QOE44STFTcjZsNnNBZ200ZFJ0SUNxT1hRdWhINFZSX0pIdHZvUEtqeXVjQTJfdTZ5OVlHckZtQklqME5SaC1zWGxSMUVkOGJrR21yWjBCdm91MHVkS2RNYXFR?oc=5) — Ynetnews · 2026-11-21
+  京东收购德国电子零售资产引发行业震动，属重大海外并购事件，关乎其国际化布局。
+- [三年销售目标700亿！京东与华为OSTA星芒达成战略合作](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeXlIanh2ZWJIeXpGWVVaQ1Nmb25vckRqREIxdGZNS0J3ZVl4UUxlZ3dEdXk4emE3dTk1YU56SDMzclRRbUhoVTJUNnkwbXFVUjdsMVJVamdUSTIwVU5oNXhwVloxdEVtSEFGMkpYVnZIX3FqMlVOYk1LSjNiWW8wMzdLNE5XWnJr?oc=5) — Sohu · 2026-11-21
+  京东与华为星芒达成战略合作并设定三年700亿元销售目标，是重要的业务拓展。（与S59-6同一事件，去重）
 
 ## 60. 富途控股 (FUTU)
 暂无重要新闻
 
 ## 61. 招商银行 (600036.SS)
-- [招商银行温州分行因房地产贷款管理不审慎被监管处罚](https://news.google.com/rss/articles/CBMiX0FVX3lxTE9LTjFpSjUyNzN2UU01b2xFUVd4Z2xEZmR1TTFSS09BLXdWZTFva0Vta2VoU1pub0VqeGdvNk5GeWkyQjZYWTNudEVIbG50U1lVenVmZXNkaWZRNG42OVZJ?oc=5) — 面包财经 · 2026-11-20
-  温州分行因房贷管理不审慎遭监管处罚，属直接监管处罚事件，对合规经营形成压力，需关注后续整改与罚款影响。
-- [工商银行、建设银行、招商银行、宁波银行同日提示贵金属市场风险](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBvYUtCMjgyMHg2LU03bURYSFNXTFlqVzhxdGxBUEhUSlhGR1d0MVNUUV9tQ2ZlZUNiRkxDUVhCUUZZUWp5NHFoYjNWLXlLZktjWmUw?oc=5) — 华尔街见闻 · 2026-11-20
-  招行等四家银行同日就贵金属业务发布风险提示，背景是金价跌至14个月低位，反映贵金属业务风险上升，属行业性风险事件。
+- [年内少见！4家银行紧急提醒，工商银行、建设银行、招商银行、宁波银行集体提示贵金属市场波动风险](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQ2NRSTlOSlNKUUMxazNDM2dKekh6QmN5MzdjWW9EVFdLeE9lczBuampNaUoyd3AyTXpTalJxdzdmSXdONml0bjQzSExQMXZWVzJKQXpmQ3dhLTNrV2IxV0NINmZYZ3k4MGpCYkc3dXoyYzJZVGJfemw5UVBYT1Ixcm9nUk9tN3dn?oc=5) — Sohu · 2026-11-21
+  金价银价暴跌背景下，工行、建行、招行、宁波银行集体发布贵金属业务风险提示，提醒客户避免短期投机或跟风交易。此为年内少见的多家银行集体动作，反映贵金属剧烈波动对银行相关业务带来直接冲击。
 
 ## 62. 海螺水泥 (600585.SS)
-- [海螺水泥发布关于担保实施进展的公告](https://data.eastmoney.com/notices/detail/600585/AN202611191831863578.html) — 公告-其他担保公告 · 2026-11-20
-  公司披露对外担保实施进展，属官方权威披露的公司重大事项，涉及或有负债与资金安排。
-- [海螺水泥发布翌日披露报表](https://data.eastmoney.com/notices/detail/600585/AN202611191831865424.html) — 公告-其他 · 2026-11-20
-  港交所翌日披露报表为官方一级信源披露，通常与股份回购或股本变动相关，反映公司资本运作动态。
+- [海螺水泥：翌日披露报表](https://data.eastmoney.com/notices/detail/600585/AN202611201831897818.html) — 公告-其他 · 2026-11-21
+  公司发布港股次日披露报表，属交易所官方披露的权威一级信源，通常涉及股份回购或股份变动情况，与股东回报及股本结构相关。
 
 ## 63. 英科医疗 (300677.SZ)
 暂无重要新闻
 
 ## 64. 长江电力 (600900.SS)
-- [长江电力股价站稳30元，创历史新高](https://news.google.com/rss/articles/CBMiSEFVX3lxTE5CVEZ0RXVUdTNTVDNsb1FDOXk2RkQ5dGxKRm1UM1pJLWZGWVBVMzhBbFB3NTJCMjVkSVVLdXppU2JtaUY5S2Fhcg?oc=5) — 财联社 · 2026-11-20
-  股价创历史新高并站稳30元，在红利板块走强、资金偏好高股息的背景下属重大价格异动，反映市场对其稳定现金流的估值抬升。
+暂无重要新闻
 
 ## 65. 国投电力 (600886.SS)
-- [国投电力在昆明成立新能源公司，布局风力发电技术服务](https://news.google.com/rss/articles/CBMijAFBVV95cUxNWHFFLVpNQS1QT0lfZ052YndvdHRXT2Q5N3hMaDAwaVp4VU9UZjVyME1VUWhvdm1DY2RneGpjWEhRcUxRbC04U21IbDdCeWgySEZIZUU5TEZCclZGclpHVWxSdHo3STNjRVRHbzJZWG1VN2N1TTlxVkZrbm9MMlRuQnpmR29oZ0tKbWo1dw?oc=5) — Sohu · 2026-11-20
-  公司新设新能源公司并涉足风电技术服务，属业务扩张举措，契合能源转型方向，可能影响长期业务结构。
+- [国投电力控股股东增持彰显信心 清洁能源基本盘持续夯实](https://news.google.com/rss/articles/CBMiYEFVX3lxTE5LMlRpZFZIbnV2Wk1YbGVCZ2dvRzZCTldCWTV2bjdkT1VsZGM4MDBMYWJvUTE4ODRfTW9zOUh0UDl0WXh2X1phTms5dnN0NUl4Uy1JZjVNMkhaVUhyalM2cQ?oc=5) — 东方财富网 · 2026-11-21
+  控股股东增持公司股份，属重大公司事件，彰显大股东对公司的信心，并强化清洁能源基本盘预期。
+- [国投电力在昆明成立新能源公司，含风力发电技术服务业务](https://news.google.com/rss/articles/CBMickFVX3lxTFBTZFA0eEFfaW5sblJQdGIteWxGSEhza21md0lvaGU4cnd0aXZtSWZhSVdFbG9CLWx5LUY0MDI3eE0tQ3dZTWhWbmI0dE1yS2FEcWlQRjFXejY5TW02TXBtTVppbHA5MEQ0TVFyWnoxMFBtQQ?oc=5) — 手机新浪网 · 2026-11-21
+  公司在昆明新设新能源公司并涵盖风力发电技术服务，体现其加码新能源布局的战略动向。
 
 ## 66. 紫金矿业 (601899.SS)
-- [紫金矿业披露集中竞价回购A股方案暨回购报告书，并首次回购441.2万股](https://data.eastmoney.com/notices/detail/601899/AN202611191831868962.html) — 公告-回购预案 · 2026-11-20
-  公司发布官方回购报告书并落地首次回购、耗资约1亿元，回购彰显管理层对估值的信心，直接影响股本结构与股东回报。
-- [紫金矿业推进塞尔维亚Zajecar金铜矿勘探环境许可申请](https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSGk3eXRIbHcwN0RNRVpvS0RYLW9rSEJtbDZXU0x6ZkRHQzRNTUpPOVBVaDlsNXNHcFR2ZW5uVWtFTGtsREhsdGNHLTNhQ0NXOEVUOFNKWlIwRFU1d3hDTGRxaXhmT05jNGo2QmozcTVSZWpYd3B0ZW5YQm9pR1VJM0xBM3EtYlBFQWhTQjdaemg5c1NqUDRzaVJLajBRWkFtclZFUFpnVVJSWVZOTTE5MWxUaEl4M084Yy1Pc0tGTThSa3RiNHY2NXFFMEgwbWxUMVE?oc=5) — eKapija · 2026-11-20
-  公司就未来Malka Golaja矿区的金铜勘探提交环境许可申请，属海外资源扩张的重要进展，有望补充资源储备。
+- [紫金矿业关于以集中竞价交易方式首次回购公司A股股份的公告](https://data.eastmoney.com/notices/detail/601899/AN202611201831898666.html) — 公告-回购实施公告 · 2026-11-21
+  公司首次以集中竞价方式实施A股回购，属官方披露的回购实施公告，直接影响股东回报与每股收益，为基本面相关重要事项。
 
 ## 67. 三一重工 (600031.SS)
-- [三一重工披露回购A股股份进展公告](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBjRmt4T3BtTXM0N2E2MjUtb0ZiTEs3czBrZWJRakFjbEF4SVVWNkhnTm9WbTdGbWhzUmF0RGxSSzZ2c21DQXFTTjc0RGxGNWtXc3BoN3hR?oc=5) — 中财网 · 2026-11-20
-  公司当日斥资约2967万元回购160万股，累计回购1996.85万股、耗资3.63亿元，持续大额回购体现对自身价值的认可与股东回报力度。
+- [三一重工关于回购公司A股股份的进展公告](https://data.eastmoney.com/notices/detail/600031/AN202611201831901241.html) — 公告-回购进展情况 · 2026-11-21
+  公司披露A股回购进展，属官方公告，反映回购实际执行情况，与股东回报直接相关，为基本面重要事项。
 
